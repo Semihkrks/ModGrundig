@@ -1,0 +1,260 @@
+{
+  "ephemeral_noreturn_assumptions": [
+    {
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn",
+      "previous_noreturn": true,
+      "address": "EXTERNAL:00000005",
+      "name": "__assert_fail"
+    },
+    {
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn",
+      "previous_noreturn": true,
+      "address": "EXTERNAL:00000015",
+      "name": "_Unwind_Resume"
+    },
+    {
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn",
+      "previous_noreturn": true,
+      "address": "EXTERNAL:00000017",
+      "name": "abort"
+    },
+    {
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn",
+      "previous_noreturn": false,
+      "address": "EXTERNAL:0000002c",
+      "name": "__cxa_rethrow"
+    },
+    {
+      "kind": "selected_callsite_noreturn_override",
+      "function": "2e240534",
+      "instruction": "2e2405e8",
+      "got_slot": "2e2b3bc8",
+      "got_symbol": null,
+      "got_target_aliases": [
+        "abort"
+      ],
+      "noreturn_name": "abort",
+      "derived_gp_hex": "0x2e2bb8e0",
+      "original_flow_override": "NONE",
+      "flow_override": "CALL_RETURN",
+      "basis": "linear_same_block_gp_relative_t9_load_to_named_GOT_slot_then_jalr; explicit_standard_noreturn_assumption"
+    },
+    {
+      "kind": "selected_callsite_noreturn_override",
+      "function": "2e2408a0",
+      "instruction": "2e240920",
+      "got_slot": "2e2b3bc8",
+      "got_symbol": null,
+      "got_target_aliases": [
+        "abort"
+      ],
+      "noreturn_name": "abort",
+      "derived_gp_hex": "0x2e2bb8e0",
+      "original_flow_override": "NONE",
+      "flow_override": "CALL_RETURN",
+      "basis": "linear_same_block_gp_relative_t9_load_to_named_GOT_slot_then_jalr; explicit_standard_noreturn_assumption"
+    },
+    {
+      "kind": "selected_callsite_noreturn_override",
+      "function": "2e27141c",
+      "instruction": "2e271480",
+      "got_slot": "2e2b3bc8",
+      "got_symbol": null,
+      "got_target_aliases": [
+        "abort"
+      ],
+      "noreturn_name": "abort",
+      "derived_gp_hex": "0x2e2bb8e0",
+      "original_flow_override": "NONE",
+      "flow_override": "CALL_RETURN",
+      "basis": "linear_same_block_gp_relative_t9_load_to_named_GOT_slot_then_jalr; explicit_standard_noreturn_assumption"
+    },
+    {
+      "kind": "selected_callsite_noreturn_override",
+      "function": "2e22ff8c",
+      "instruction": "2e230064",
+      "got_slot": "2e2b3bc8",
+      "got_symbol": null,
+      "got_target_aliases": [
+        "abort"
+      ],
+      "noreturn_name": "abort",
+      "derived_gp_hex": "0x2e2bb8e0",
+      "original_flow_override": "NONE",
+      "flow_override": "CALL_RETURN",
+      "basis": "linear_same_block_gp_relative_t9_load_to_named_GOT_slot_then_jalr; explicit_standard_noreturn_assumption"
+    }
+  ],
+  "requested": [
+    {
+      "requested_address": "2e240534",
+      "function": {
+        "address": "2e240534",
+        "name": "MResourcePkg::BuildIndex",
+        "signature": "undefined __thiscall BuildIndex(MResourcePkg * this, ulong * param_1, ulong param_2, uchar * param_3)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 188
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e240534",
+      "original_body_max": "2e2405ef",
+      "supplied_function_bound": {
+        "end_exclusive": "0x2e2405f0",
+        "basis": "exact_ELF_dynsym_entry_and_size",
+        "symbol": "_ZN12MResourcePkg10BuildIndexEPmmPh"
+      },
+      "ephemeral_exact_body_applied": true,
+      "bounded_body": {
+        "address": "2e240534",
+        "name": "MResourcePkg::BuildIndex",
+        "signature": "undefined __thiscall BuildIndex(MResourcePkg * this, ulong * param_1, ulong param_2, uchar * param_3)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 188
+      },
+      "supplied_dynsym": {
+        "size": 188,
+        "symbol": "_ZN12MResourcePkg10BuildIndexEPmmPh"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e2405ef",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2e2408a0",
+      "function": {
+        "address": "2e2408a0",
+        "name": "MResourcePkg::GetSTR",
+        "signature": "undefined __stdcall GetSTR(ulong param_1, uchar * param_2, ulong param_3, ulong param_4, ulong * param_5, char * param_6)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 136
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e2408a0",
+      "original_body_max": "2e240927",
+      "supplied_function_bound": {
+        "end_exclusive": "0x2e240928",
+        "basis": "exact_ELF_dynsym_entry_and_size",
+        "symbol": "_ZN12MResourcePkg6GetSTREmPhmmPmPKc"
+      },
+      "ephemeral_exact_body_applied": true,
+      "bounded_body": {
+        "address": "2e2408a0",
+        "name": "MResourcePkg::GetSTR",
+        "signature": "undefined __stdcall GetSTR(ulong param_1, uchar * param_2, ulong param_3, ulong param_4, ulong * param_5, char * param_6)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 136
+      },
+      "supplied_dynsym": {
+        "size": 136,
+        "symbol": "_ZN12MResourcePkg6GetSTREmPhmmPmPKc"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e240927",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2e27141c",
+      "function": {
+        "address": "2e27141c",
+        "name": "GetRcEngine::RcGetNum",
+        "signature": "undefined __stdcall RcGetNum(uint param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 108
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e27141c",
+      "original_body_max": "2e271487",
+      "supplied_function_bound": {
+        "end_exclusive": "0x2e271488",
+        "basis": "exact_ELF_dynsym_entry_and_size",
+        "symbol": "_ZN11GetRcEngine8RcGetNumEj"
+      },
+      "ephemeral_exact_body_applied": true,
+      "bounded_body": {
+        "address": "2e27141c",
+        "name": "GetRcEngine::RcGetNum",
+        "signature": "undefined __stdcall RcGetNum(uint param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 108
+      },
+      "supplied_dynsym": {
+        "size": 108,
+        "symbol": "_ZN11GetRcEngine8RcGetNumEj"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e271487",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2e22ff8c",
+      "function": {
+        "address": "2e22ff8c",
+        "name": "MEvtHandle::SetTimer",
+        "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 224
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e22ff8c",
+      "original_body_max": "2e23006b",
+      "supplied_function_bound": {
+        "end_exclusive": "0x2e23006c",
+        "basis": "exact_ELF_dynsym_entry_and_size",
+        "symbol": "_ZN10MEvtHandle8SetTimerEmm13EN_TIMER_MODE"
+      },
+      "ephemeral_exact_body_applied": true,
+      "bounded_body": {
+        "address": "2e22ff8c",
+        "name": "MEvtHandle::SetTimer",
+        "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 224
+      },
+      "supplied_dynsym": {
+        "size": 224,
+        "symbol": "_ZN10MEvtHandle8SetTimerEmm13EN_TIMER_MODE"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e23006b",
+      "ephemeral_body_clamped": false
+    }
+  ],
+  "ephemeral_context_seeds": [
+    {
+      "register": "t9",
+      "address": "2e240534",
+      "value_hex": "2e240534",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    },
+    {
+      "register": "t9",
+      "address": "2e2408a0",
+      "value_hex": "2e2408a0",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    },
+    {
+      "register": "t9",
+      "address": "2e27141c",
+      "value_hex": "2e27141c",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    },
+    {
+      "register": "t9",
+      "address": "2e22ff8c",
+      "value_hex": "2e22ff8c",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    }
+  ]
+}

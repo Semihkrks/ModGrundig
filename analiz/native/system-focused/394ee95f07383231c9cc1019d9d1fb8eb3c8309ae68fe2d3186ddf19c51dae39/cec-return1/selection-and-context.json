@@ -1,0 +1,56 @@
+{
+  "ephemeral_noreturn_assumptions": [
+    {
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "__assert_fail",
+      "address": "EXTERNAL:00000027",
+      "previous_noreturn": true
+    },
+    {
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "_Unwind_Resume",
+      "address": "EXTERNAL:00000076",
+      "previous_noreturn": true
+    },
+    {
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "abort",
+      "address": "EXTERNAL:0000007c",
+      "previous_noreturn": true
+    }
+  ],
+  "ephemeral_context_seeds": [
+    {
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2df7d2f8",
+      "address": "2df7d2f8"
+    }
+  ],
+  "requested": [
+    {
+      "requested_address": "2df7d2f8",
+      "function": {
+        "address": "2df7d2f8",
+        "name": "MSrv_CEC_Customer::ProccessUserRCInput",
+        "signature": "undefined __thiscall ProccessUserRCInput(MSrv_CEC_Customer * this, uint param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 160
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2df7d2f8",
+      "original_body_max": "2df7d397",
+      "supplied_dynsym": {
+        "size": 196,
+        "symbol": "_ZN17MSrv_CEC_Customer19ProccessUserRCInputEj"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2df7d3bb",
+      "ephemeral_body_clamped": false
+    }
+  ]
+}

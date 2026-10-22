@@ -1,0 +1,61 @@
+{
+  "program": "5896e9f66231__libmsrv_dvbc.so",
+  "sha256": "5896e9f662314b5b1564eb7bbb5a2526c0f6258d64b6a03d33af95e4ea7031d1",
+  "language": "MIPS:LE:32:default",
+  "functions": 820,
+  "symbols": 2964,
+  "xrefs": 5882,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 996,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 6,
+  "sample_decompile_complete": 6,
+  "samples": [
+    {
+      "address": "2edd39d0",
+      "name": "MSrv_DTV_Player_DVBC::GetDefaultHomingChannelFrequency",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2edd6a9c",
+      "name": "CABLE_FREQ_RANGE::Init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2edd6ad8",
+      "name": "MW_DTV_FREQUENCYTABLE_DVBC::InitFreqTbl",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2edd367c",
+      "name": "_init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2edd3a2c",
+      "name": "MSrv_DTV_Player_DVBC::EnableChannelFrontEnd",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2edde610",
+      "name": "MW_DTV_Scan_DVBC::StartAutoUpdateScan",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

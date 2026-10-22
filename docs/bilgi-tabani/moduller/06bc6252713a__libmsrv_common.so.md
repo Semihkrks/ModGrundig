@@ -1,0 +1,43 @@
+# `07_MSLIB/libmsrv_common.so`
+
+SHA-256: `06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21`
+
+Durum: **Ghidra indeks tamam; analiz süre sınırlı**.
+
+Tür: DYN (Shared object file); ELF32 LE MIPS; 1504024 bayt.
+
+İşlev alanı **isim/bağımlılık çıkarımıdır**: `[{"category": "audio_volume_sound", "classification": "inferred", "confidence": "name_based_only", "filename_match": false, "matching_symbol_count": 409, "symbol_examples": ["MApi_AUDIO_GetCommAudioInfo", "MApi_AUDIO_SetCommAudioInfo", "MApi_AUDIO_UNI_Get_OutPCMLevel", "_ZN10MSrv_Video11UnmuteVideoEh", "_ZN10MSrv_Video11setUrsaMuteE14URSA_MUTE_TYPEt", "_ZN10MSrv_Video12SetFRCMuteMsEt", "_ZN10MSrv_Video9MuteVideoEh", "_ZN10mapi_audio10SPDIF_HWENEh", "_ZN10mapi_audio10SetPowerOnEh", "_ZN10mapi_audio11KTV_GetInfoE18KTV_GET_INFO_TYPE_", "_ZN10mapi_audio11KTV_SetInfoE18KTV_SET_INFO_TYPE_mm", "_ZN10mapi_audio11SetPreScaleEhh", "_ZN10mapi_audio12SND_GetParamE21Sound_GET_PARAM_Type_s", "_ZN10mapi_audio12SND_SetParamE21Sound_SET_PARAM_Type_ss", "_ZN10mapi_audio12SetHidevModeE16Sound_Hidev_mode", "_ZN10mapi_audio13AUDIO_PreInitEv"], "examples_are_complete": false}, {"category": "ir_key_remote", "classification": "inferred", "confidence": "name_based_only", "filename_match": false, "matching_symbol_count": 14, "symbol_examples": ["_ZN10MW_ISystem6getKeyEPhh", "_ZN11mapi_secure6GetKeyEmPK11ST_KEY_INFO", "_ZN12MW_Oemcrypto20OEMCrypto_GetKeyDataEPhm", "_ZN14MSrv_UartDebug25Uart_RecvCusHandlerForRC5Elth", "_ZN14MWindowManager14FlushKeyEventsEv", "_ZN18MSrv_MountNotifier16GetKeyboardCountEv", "_ZN6MW_TTX10KeyHandlerE19EN_TELETEXT_COMMAND", "_ZN8MSrv_CEC21SendCECKeyFromTVtoDevE13MUF_Keycode_t", "_ZN8MSrv_CEC21transferCecKeyToIrKeyE31_EN_MAPI_CEC_MSG_USER_CTRL_PARM", "_ZN8MSrv_CEC21transferIrKeyToCecKeyE13MUF_Keycode_t", "_ZN8MSrv_CEC25msHDMICecGetRCPassThroughE13MUF_Keycode_t", "_ZN9MW_Secure6GetKeyEmPK11ST_KEY_INFO", "_ZNK10MW_PVR_Key6GetKeyEv", "_ZNK8mapi_pvr12AESDMAGetKeyE19PVR_ENCRYPTION_TYPEPmS1_S1_S1_"], "examples_are_complete": true}, {"category": "cec_source_power", "classification": "inferred", "confidence": "name_based_only", "filename_match": false, "matching_symbol_count": 275, "symbol_examples": ["CECRxUICommandTable", "CECTxUICommandTable", "CEC_opCodeStr", "_ZN10MSrv_Timer16GetOADWakeUpTimeERm", "_ZN10MSrv_Timer16SetOADWakeUpTimeEm", "_ZN10MSrv_Timer17GetTVPowerOffFlagEv", "_ZN10MSrv_Timer19SetTVPowerDoneTimerEm", "_ZN10MSrv_Timer21GetIsTVReallyPowerOffEv", "_ZN10MSrv_Timer21GetStandbyRecordOnOffEv", "_ZN10MSrv_Timer21SetIsTVReallyPowerOffEh", "_ZN10mapi_audio10SetPowerOnEh", "_ZN10mapi_audio14HDMITx_SetModeE10HDMI_TYPE_", "_ZN10mapi_audio23SND_GetAudioInputSourceEv", "_ZN10mapi_audio25AUDIO_GetHDMItx_HD_BypassEv", "_ZN10mapi_audio25AUDIO_SetHDMItx_HD_BypassEh", "_ZN10mapi_audio36AUDIO_GetHDMItx_HD_Bypass_CapabilityEv"], "examples_are_complete": false}, {"category": "resource_brand_osd_directfb_muf", "classification": "inferred", "confidence": "name_based_only", "filename_match": false, "matching_symbol_count": 210, "symbol_examples": ["DirectFBCreate", "DirectFBGetGOPDst", "DirectFBInit", "DirectFBSetGOPDst", "_Z11CalDecFCWinhPN19mapi_video_datatype25ST_MAPI_VIDEO_WINDOW_TYPEES1_", "_Z12calculateAFDPKN18mapi_vdec_datatype10_VDEC_INFOEPN19mapi_video_datatype25ST_MAPI_VIDEO_WINDOW_TYPEES5_", "_Z15calculateUsrArcN19mapi_video_datatype19MAPI_VIDEO_ARC_TypeEPKN18mapi_vdec_datatype10_VDEC_INFOEPNS_25ST_MAPI_VIDEO_WINDOW_TYPEES6_", "_Z17calculateOverScanPN19mapi_video_datatype25ST_MAPI_VIDEO_WINDOW_TYPEEPKN18mapi_vdec_datatype10_VDEC_INFOENS_19MAPI_VIDEO_ARC_TypeEPP25ST_MAPI_VIDEO_WINDOW_INFO", "_ZN10MSrv_Video11ScaleWindowEv", "_ZN10MSrv_Video12EnableWindowEv", "_ZN10MSrv_Video12SelectWindowE15MAPI_SCALER_WIN", "_ZN10MSrv_Video12SetOSDTimingEi", "_ZN10MSrv_Video13DisableWindowEv", "_ZN10MSrv_Video13GetCaptureWinEP14MS_WINDOW_TYPE10SCALER_WIN", "_ZN10MSrv_Video13GetCropWindowEPN19mapi_video_datatype25ST_MAPI_VIDEO_WINDOW_TYPEE", "_ZN10MSrv_Video13SetCropWindowEPN19mapi_video_datatype25ST_MAPI_VIDEO_WINDOW_TYPEE"], "examples_are_complete": false}, {"category": "settings_database", "classification": "inferred", "confidence": "name_based_only", "filename_match": false, "matching_symbol_count": 58, "symbol_examples": ["_ZN10MSrv_Timer18IsCRIDSettingValidEPK18ST_CRID_TIMER_INFO", "_ZN10MSrv_Timer20ReconfigCRIDFromListEmh", "_ZN10MSrv_Timer21ReconfigTimerFromListEmh", "_ZN10MSrv_Timer22IsEPGTimerSettingValidERK23ST_EPG_EVENT_TIMER_INFO", "_ZN11mapi_secure13GetBootConfigEv", "_ZN12MSrv_SSSound20GetSkypeSoundSettingEh", "_ZN12MSrv_SSSound21ExitSkypeSoundSettingEv", "_ZN12MSrv_SSSound22EnterSkypeSoundSettingEv", "_ZN12MSrv_SSSound25DoDualWatchHPPathSettingsEh", "_ZN12MSrv_SSSound30UpdateSourceBasedAudioSettingsE22MAPI_INPUT_SOURCE_TYPE", "_ZN12MSrv_SSSound38SwapAudioContentsDualWatchPathSettingsEv", "_ZN13MSrv_DivX_DRM16ReadUserDatabaseEmPht", "_ZN13MSrv_DivX_DRM17GetDivXDRMSettingEP15ST_DIVXDRM_INFO", "_ZN13MSrv_DivX_DRM17SetDivXDRMSettingEP15ST_DIVXDRM_INFO", "_ZN13MSrv_DivX_DRM17WriteUserDatabaseEmPht", "_ZN14MSrv_PC_Player18reorderModeSettingEv"], "examples_are_complete": false}]`.
+Davranışın koddan anlamlandırılması bu sınıflandırmadan ayrı değerlendirilir.
+
+## Bağımlılık ve API beyanları
+
+- DT_NEEDED: `libmsrv_system_database.so`, `libmsrv_system_database_customer.so`, `libcusinfo.so`, `libsysteminfo.so`, `libcurl.so.4`, `libxml2.so.2`, `libz.so.1`, `libcares.so.2`, `libssl.so.0.9.8`, `libcrypto.so.0.9.8`, `libmsrv_atv_customer.so`, `libmsrv_dvb_customer.so`, `libmsrv_dvbc_customer.so`, `libmsrv_dvbs_customer.so`, `libmsrv_dvbt_customer.so`, `libmsrv_mmbrowser.so`, `libmsrv_autotest.so`, `libmsrv_common_customer.so`, `libmsrv_control.so`, `libmsrv_control_customer.so`, `libdevice_customer.so`, `libmsrv_network.so`, `libutilities.so`, `libdirectfb-1.4.so.0`, `librt.so.1`, `libpthread.so.0`, `libdirect-1.4.so.0`, `libMStarSDK.so`, `libMStarSDK_customer.so`, `libfreetype.so.6`, `libMLog.so`, `libmuf.so`, `libstdc++.so.6`, `libm.so.6`, `libc.so.6`, `libgcc_s.so.1`
+- Dynamic import/export: 931 / 3035.
+- Sembol adresleri ve relocation kayıtları: [güncel ELF envanteri](../../../analiz/envanter-v2/elf-envanteri.json).
+- Bağlama adayları: [sembol ilişkileri](../../../analiz/envanter-v2/sembol-baglantilari.json).
+
+## Ghidra kapsamı
+
+- Fonksiyon kayıtları: 3617; semboller: 29117.
+- Xref: 83388; analizde call tipli xref: 0.
+- Computed-call instruction: 18795 (runtime hedefi doğrulanmadı).
+- İlk örnek decompile: 6/6.
+- Analiz timeout: True.
+
+[Fonksiyonlar](../../../analiz/native/system-modules/06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21/functions.jsonl) · [Xref](../../../analiz/native/system-modules/06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21/xrefs.jsonl) · [Semboller](../../../analiz/native/system-modules/06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21/symbols.jsonl) · [Dolaylı çağrı noktaları](../../../analiz/native/system-modules/06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21/computed-calls.jsonl)
+
+### İlk decompile örnekleri
+
+| Adres | Fonksiyon | Çıktı |
+|---|---|---|
+| `2d9628cc` | `MSrv_CEC::CheckInputAMPExist` | [C](../../../analiz/native/system-modules/06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21/2d9628cc.c) |
+| `2d962b44` | `MSrv_CEC::CECSetPowerStatusStandby` | [C](../../../analiz/native/system-modules/06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21/2d962b44.c) |
+| `2d962ce0` | `MSrv_CEC::GetIsAMPExist` | [C](../../../analiz/native/system-modules/06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21/2d962ce0.c) |
+| `2d962d90` | `MSrv_CEC::CECIsAMPKey` | [C](../../../analiz/native/system-modules/06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21/2d962d90.c) |
+| `2d98ea34` | `ST_PVR_Recording_Info::IsInited` | [C](../../../analiz/native/system-modules/06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21/2d98ea34.c) |
+| `2da31d14` | `MW_TTX_VectorFontCharsMan::IsBitmapDRCSFont` | [C](../../../analiz/native/system-modules/06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21/2da31d14.c) |
+
+## Giriş/çıkış ve açık işler
+
+Import/export beyanı, API çağrısının gerçekleştiği veya parametrelerinin doğru çözüldüğü anlamına gelmez. Girdi/çıktı türleri, sınır kontrolleri, hata yolları ve servis yan etkileri kritik fonksiyon bazında assembly ile doğrulanmalıdır. İlk örnekler isim ve boyutla seçilir; tamamlanmış semantik inceleme sayılmaz.
+Dinamik loader kapsamı, sanal fonksiyon hedefleri, callback kaydı ve cihazın aktif koşulları açık kalabilir.

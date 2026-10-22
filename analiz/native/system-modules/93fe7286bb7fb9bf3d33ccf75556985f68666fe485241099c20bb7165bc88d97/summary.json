@@ -1,0 +1,61 @@
+{
+  "program": "93fe7286bb7f__libmsrv_dvb.so",
+  "sha256": "93fe7286bb7fb9bf3d33ccf75556985f68666fe485241099c20bb7165bc88d97",
+  "language": "MIPS:LE:32:default",
+  "functions": 4048,
+  "symbols": 32566,
+  "xrefs": 95317,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 19175,
+  "analysis_timeout": true,
+  "sample_decompile_attempted": 6,
+  "sample_decompile_complete": 6,
+  "samples": [
+    {
+      "address": "2d53af3c",
+      "name": "MW_DVB_EPG_UPDATE_CONTROL::ReConnectCM",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2d58540c",
+      "name": "WARB_State_WR_Scramble::ChannelChange_CheckCIConflict",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2d585418",
+      "name": "WARB_W_FTA_R_Scramble::ChannelChange_CheckCIConflict",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2d585424",
+      "name": "WARB_W_Scramble_R_Scramble::ChannelChange_CheckCIConflict",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2d496ce0",
+      "name": "MSrv_CIMMI::LockCimmiMutex",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2d496cf0",
+      "name": "MSrv_CIMMI::UnlockCimmiMutex",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

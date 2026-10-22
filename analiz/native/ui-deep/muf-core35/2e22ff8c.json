@@ -1,0 +1,2963 @@
+{
+  "address": "2e22ff8c",
+  "name": "MEvtHandle::SetTimer",
+  "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+  "external": false,
+  "thunk": false,
+  "body_bytes": 224,
+  "incoming_entry_xrefs": [
+    {
+      "from": "Entry Point",
+      "to": "2e22ff8c",
+      "type": "EXTERNAL",
+      "source_type": "DEFAULT",
+      "operand_index": -1,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MEvtHandle::SetTimer"
+    },
+    {
+      "from": "2e2b3c90",
+      "to": "2e22ff8c",
+      "type": "DATA",
+      "source_type": "DEFAULT",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MEvtHandle::SetTimer"
+    },
+    {
+      "from": "2e2910c4",
+      "to": "2e22ff8c",
+      "type": "INDIRECTION",
+      "source_type": "ANALYSIS",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MEvtHandle::SetTimer"
+    },
+    {
+      "from": "2e2a673c",
+      "to": "2e22ff8c",
+      "type": "DATA",
+      "source_type": "ANALYSIS",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MEvtHandle::SetTimer"
+    }
+  ],
+  "analyzed_callers": [],
+  "analyzed_callees": [],
+  "instruction_count": 56,
+  "computed_callsite_count": 4,
+  "instructions": [
+    {
+      "address": "2e22ff8c",
+      "instruction": "lui gp,0x9",
+      "mnemonic": "lui",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x9",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x9",
+              "unsigned_hex": "0x9",
+              "signed_decimal": 9,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22ff90",
+      "instruction": "addiu gp,gp,-0x46ac",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0x46ac",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x46ac",
+              "unsigned_hex": "0xffffb954",
+              "signed_decimal": -18092,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22ff94",
+      "instruction": "addu gp,gp,t9",
+      "mnemonic": "addu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22ff98",
+      "instruction": "addiu sp,sp,-0x38",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0x38",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x38",
+              "unsigned_hex": "0xffffffc8",
+              "signed_decimal": -56,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22ff9c",
+      "instruction": "sw ra,0x34(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x34(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x34",
+              "unsigned_hex": "0x34",
+              "signed_decimal": 52,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22ff9c",
+          "to": "Stack[-0x4]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e22ffa0",
+      "instruction": "sw s3,0x30(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s3"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x30(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x30",
+              "unsigned_hex": "0x30",
+              "signed_decimal": 48,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22ffa0",
+          "to": "Stack[-0x8]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e22ffa4",
+      "instruction": "sw s2,0x2c(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x2c(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x2c",
+              "unsigned_hex": "0x2c",
+              "signed_decimal": 44,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22ffa4",
+          "to": "Stack[-0xc]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e22ffa8",
+      "instruction": "sw s1,0x28(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x28(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x28",
+              "unsigned_hex": "0x28",
+              "signed_decimal": 40,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22ffa8",
+          "to": "Stack[-0x10]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e22ffac",
+      "instruction": "sw s0,0x24(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x24(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x24",
+              "unsigned_hex": "0x24",
+              "signed_decimal": 36,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22ffac",
+          "to": "Stack[-0x14]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e22ffb0",
+      "instruction": "sw gp,0x18(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x18(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x18",
+              "unsigned_hex": "0x18",
+              "signed_decimal": 24,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22ffb0",
+          "to": "Stack[-0x20]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e22ffb4",
+      "instruction": "move s0,a1",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22ffb8",
+      "instruction": "move s2,a0",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22ffbc",
+      "instruction": "move s3,a2",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s3"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22ffc0",
+      "instruction": "move s1,a3",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22ffc4",
+      "instruction": "bne a1,zero,0x2e22ffe8",
+      "mnemonic": "bne",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e22ffe8",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e22ffe8"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22ffc4",
+          "to": "2e22ffe8",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": "LAB_2e22ffe8"
+        }
+      ]
+    },
+    {
+      "address": "2e22ffc8",
+      "instruction": "_clear v0",
+      "mnemonic": "_clear",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22ffcc",
+      "instruction": "lw ra,0x34(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x34(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x34",
+              "unsigned_hex": "0x34",
+              "signed_decimal": 52,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22ffcc",
+          "to": "Stack[-0x4]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e22ffd0",
+      "instruction": "lw s3,0x30(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s3"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x30(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x30",
+              "unsigned_hex": "0x30",
+              "signed_decimal": 48,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22ffd0",
+          "to": "Stack[-0x8]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e22ffd4",
+      "instruction": "lw s2,0x2c(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x2c(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x2c",
+              "unsigned_hex": "0x2c",
+              "signed_decimal": 44,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22ffd4",
+          "to": "Stack[-0xc]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e22ffd8",
+      "instruction": "lw s1,0x28(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x28(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x28",
+              "unsigned_hex": "0x28",
+              "signed_decimal": 40,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22ffd8",
+          "to": "Stack[-0x10]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e22ffdc",
+      "instruction": "lw s0,0x24(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x24(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x24",
+              "unsigned_hex": "0x24",
+              "signed_decimal": 36,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22ffdc",
+          "to": "Stack[-0x14]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e22ffe0",
+      "instruction": "jr ra",
+      "mnemonic": "jr",
+      "flow_type": "TERMINATOR",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22ffe4",
+      "instruction": "_addiu sp,sp,0x38",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x38",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x38",
+              "unsigned_hex": "0x38",
+              "signed_decimal": 56,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22ffe8",
+      "instruction": "lw t9,-0x72d4(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x72d4(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x72d4",
+              "unsigned_hex": "0xffff8d2c",
+              "signed_decimal": -29396,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22ffec",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22fff0",
+      "instruction": "_nop",
+      "mnemonic": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [],
+      "references_from": []
+    },
+    {
+      "address": "2e22fff4",
+      "instruction": "beq v0,zero,0x2e230038",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e230038",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e230038"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22fff4",
+          "to": "2e230038",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": "LAB_2e230038"
+        }
+      ]
+    },
+    {
+      "address": "2e22fff8",
+      "instruction": "_lw gp,0x18(sp)",
+      "mnemonic": "_lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x18(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x18",
+              "unsigned_hex": "0x18",
+              "signed_decimal": 24,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22fff8",
+          "to": "Stack[-0x20]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e22fffc",
+      "instruction": "lw t9,-0x7730(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7730(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7730",
+              "unsigned_hex": "0xffff88d0",
+              "signed_decimal": -30512,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e230000",
+      "instruction": "sw s1,0x10(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x10(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x10",
+              "unsigned_hex": "0x10",
+              "signed_decimal": 16,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e230000",
+          "to": "Stack[-0x28]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e230004",
+      "instruction": "move a1,s2",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "s2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s2"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e230008",
+      "instruction": "move a2,s0",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "s0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23000c",
+      "instruction": "move a3,s3",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "s3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s3"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e230010",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e230014",
+      "instruction": "_move a0,v0",
+      "mnemonic": "_move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e230018",
+      "instruction": "lw ra,0x34(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x34(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x34",
+              "unsigned_hex": "0x34",
+              "signed_decimal": 52,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e230018",
+          "to": "Stack[-0x4]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23001c",
+      "instruction": "lw gp,0x18(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x18(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x18",
+              "unsigned_hex": "0x18",
+              "signed_decimal": 24,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23001c",
+          "to": "Stack[-0x20]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e230020",
+      "instruction": "lw s3,0x30(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s3"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x30(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x30",
+              "unsigned_hex": "0x30",
+              "signed_decimal": 48,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e230020",
+          "to": "Stack[-0x8]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e230024",
+      "instruction": "lw s2,0x2c(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x2c(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x2c",
+              "unsigned_hex": "0x2c",
+              "signed_decimal": 44,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e230024",
+          "to": "Stack[-0xc]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e230028",
+      "instruction": "lw s1,0x28(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x28(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x28",
+              "unsigned_hex": "0x28",
+              "signed_decimal": 40,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e230028",
+          "to": "Stack[-0x10]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23002c",
+      "instruction": "lw s0,0x24(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x24(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x24",
+              "unsigned_hex": "0x24",
+              "signed_decimal": 36,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23002c",
+          "to": "Stack[-0x14]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e230030",
+      "instruction": "jr ra",
+      "mnemonic": "jr",
+      "flow_type": "TERMINATOR",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e230034",
+      "instruction": "_addiu sp,sp,0x38",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x38",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x38",
+              "unsigned_hex": "0x38",
+              "signed_decimal": 56,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e230038",
+      "instruction": "lw a0,-0x7fd8(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7fd8(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7fd8",
+              "unsigned_hex": "0xffff8028",
+              "signed_decimal": -32728,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23003c",
+      "instruction": "lw a1,-0x7fd8(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7fd8(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7fd8",
+              "unsigned_hex": "0xffff8028",
+              "signed_decimal": -32728,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e230040",
+      "instruction": "lw a2,-0x7fd8(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7fd8(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7fd8",
+              "unsigned_hex": "0xffff8028",
+              "signed_decimal": -32728,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e230044",
+      "instruction": "lw t9,-0x7a00(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7a00(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7a00",
+              "unsigned_hex": "0xffff8600",
+              "signed_decimal": -31232,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e230048",
+      "instruction": "addiu a0,a0,-0x73a0",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0x73a0",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x73a0",
+              "unsigned_hex": "0xffff8c60",
+              "signed_decimal": -29600,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23004c",
+      "instruction": "addiu a1,a1,-0x5d04",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0x5d04",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x5d04",
+              "unsigned_hex": "0xffffa2fc",
+              "signed_decimal": -23812,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e230050",
+      "instruction": "addiu a2,a2,-0x5c6c",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0x5c6c",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x5c6c",
+              "unsigned_hex": "0xffffa394",
+              "signed_decimal": -23660,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e230054",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e230058",
+      "instruction": "_li a3,0x122",
+      "mnemonic": "_li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x122",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x122",
+              "unsigned_hex": "0x122",
+              "signed_decimal": 290,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23005c",
+      "instruction": "lw gp,0x18(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x18(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x18",
+              "unsigned_hex": "0x18",
+              "signed_decimal": 24,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23005c",
+          "to": "Stack[-0x20]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22ff8c",
+            "name": "MEvtHandle::SetTimer",
+            "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 224
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e230060",
+      "instruction": "lw t9,-0x7d18(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7d18(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7d18",
+              "unsigned_hex": "0xffff82e8",
+              "signed_decimal": -32024,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e230064",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL_TERMINATOR",
+      "ephemeral_flow_override": "CALL_RETURN",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e230068",
+      "instruction": "_nop",
+      "mnemonic": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [],
+      "references_from": []
+    }
+  ],
+  "immediate_scalar_candidates": [
+    {
+      "java_type": "Scalar",
+      "display": "0x9",
+      "unsigned_hex": "0x9",
+      "signed_decimal": 9,
+      "bits": 32,
+      "instruction_address": "2e22ff8c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x46ac",
+      "unsigned_hex": "0xffffb954",
+      "signed_decimal": -18092,
+      "bits": 32,
+      "instruction_address": "2e22ff90",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x38",
+      "unsigned_hex": "0xffffffc8",
+      "signed_decimal": -56,
+      "bits": 32,
+      "instruction_address": "2e22ff98",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x34",
+      "unsigned_hex": "0x34",
+      "signed_decimal": 52,
+      "bits": 32,
+      "instruction_address": "2e22ff9c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x30",
+      "unsigned_hex": "0x30",
+      "signed_decimal": 48,
+      "bits": 32,
+      "instruction_address": "2e22ffa0",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x2c",
+      "unsigned_hex": "0x2c",
+      "signed_decimal": 44,
+      "bits": 32,
+      "instruction_address": "2e22ffa4",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x28",
+      "unsigned_hex": "0x28",
+      "signed_decimal": 40,
+      "bits": 32,
+      "instruction_address": "2e22ffa8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x24",
+      "unsigned_hex": "0x24",
+      "signed_decimal": 36,
+      "bits": 32,
+      "instruction_address": "2e22ffac",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x18",
+      "unsigned_hex": "0x18",
+      "signed_decimal": 24,
+      "bits": 32,
+      "instruction_address": "2e22ffb0",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x34",
+      "unsigned_hex": "0x34",
+      "signed_decimal": 52,
+      "bits": 32,
+      "instruction_address": "2e22ffcc",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x30",
+      "unsigned_hex": "0x30",
+      "signed_decimal": 48,
+      "bits": 32,
+      "instruction_address": "2e22ffd0",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x2c",
+      "unsigned_hex": "0x2c",
+      "signed_decimal": 44,
+      "bits": 32,
+      "instruction_address": "2e22ffd4",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x28",
+      "unsigned_hex": "0x28",
+      "signed_decimal": 40,
+      "bits": 32,
+      "instruction_address": "2e22ffd8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x24",
+      "unsigned_hex": "0x24",
+      "signed_decimal": 36,
+      "bits": 32,
+      "instruction_address": "2e22ffdc",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x38",
+      "unsigned_hex": "0x38",
+      "signed_decimal": 56,
+      "bits": 32,
+      "instruction_address": "2e22ffe4",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x72d4",
+      "unsigned_hex": "0xffff8d2c",
+      "signed_decimal": -29396,
+      "bits": 32,
+      "instruction_address": "2e22ffe8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x18",
+      "unsigned_hex": "0x18",
+      "signed_decimal": 24,
+      "bits": 32,
+      "instruction_address": "2e22fff8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7730",
+      "unsigned_hex": "0xffff88d0",
+      "signed_decimal": -30512,
+      "bits": 32,
+      "instruction_address": "2e22fffc",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x10",
+      "unsigned_hex": "0x10",
+      "signed_decimal": 16,
+      "bits": 32,
+      "instruction_address": "2e230000",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x34",
+      "unsigned_hex": "0x34",
+      "signed_decimal": 52,
+      "bits": 32,
+      "instruction_address": "2e230018",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x18",
+      "unsigned_hex": "0x18",
+      "signed_decimal": 24,
+      "bits": 32,
+      "instruction_address": "2e23001c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x30",
+      "unsigned_hex": "0x30",
+      "signed_decimal": 48,
+      "bits": 32,
+      "instruction_address": "2e230020",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x2c",
+      "unsigned_hex": "0x2c",
+      "signed_decimal": 44,
+      "bits": 32,
+      "instruction_address": "2e230024",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x28",
+      "unsigned_hex": "0x28",
+      "signed_decimal": 40,
+      "bits": 32,
+      "instruction_address": "2e230028",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x24",
+      "unsigned_hex": "0x24",
+      "signed_decimal": 36,
+      "bits": 32,
+      "instruction_address": "2e23002c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x38",
+      "unsigned_hex": "0x38",
+      "signed_decimal": 56,
+      "bits": 32,
+      "instruction_address": "2e230034",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7fd8",
+      "unsigned_hex": "0xffff8028",
+      "signed_decimal": -32728,
+      "bits": 32,
+      "instruction_address": "2e230038",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7fd8",
+      "unsigned_hex": "0xffff8028",
+      "signed_decimal": -32728,
+      "bits": 32,
+      "instruction_address": "2e23003c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7fd8",
+      "unsigned_hex": "0xffff8028",
+      "signed_decimal": -32728,
+      "bits": 32,
+      "instruction_address": "2e230040",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7a00",
+      "unsigned_hex": "0xffff8600",
+      "signed_decimal": -31232,
+      "bits": 32,
+      "instruction_address": "2e230044",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x73a0",
+      "unsigned_hex": "0xffff8c60",
+      "signed_decimal": -29600,
+      "bits": 32,
+      "instruction_address": "2e230048",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x5d04",
+      "unsigned_hex": "0xffffa2fc",
+      "signed_decimal": -23812,
+      "bits": 32,
+      "instruction_address": "2e23004c",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x5c6c",
+      "unsigned_hex": "0xffffa394",
+      "signed_decimal": -23660,
+      "bits": 32,
+      "instruction_address": "2e230050",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x122",
+      "unsigned_hex": "0x122",
+      "signed_decimal": 290,
+      "bits": 32,
+      "instruction_address": "2e230058",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x18",
+      "unsigned_hex": "0x18",
+      "signed_decimal": 24,
+      "bits": 32,
+      "instruction_address": "2e23005c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7d18",
+      "unsigned_hex": "0xffff82e8",
+      "signed_decimal": -32024,
+      "bits": 32,
+      "instruction_address": "2e230060",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    }
+  ],
+  "directly_referenced_defined_strings": [],
+  "decompile_complete": true,
+  "decompile_error": "",
+  "pseudocode_file": "2e22ff8c.c",
+  "pcode_export_complete": true,
+  "decompiler_pcode_calls": [
+    {
+      "instruction_address": "2e22ffec",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2e247db0, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2e247db0",
+      "target_function": {
+        "address": "2e247db0",
+        "name": "MSystem::GetMTimerManager",
+        "signature": "undefined __stdcall GetMTimerManager(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 208
+      },
+      "target_symbol": "MSystem::GetMTimerManager",
+      "arguments": [],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    {
+      "instruction_address": "2e230010",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2e24c034, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2e24c034",
+      "target_function": {
+        "address": "2e24c034",
+        "name": "MTimerManager::AddTimer",
+        "signature": "undefined __thiscall AddTimer(MTimerManager * this, MEvtHandle * param_1, ulong param_2, ulong param_3, EN_TIMER_MODE param_4)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 720
+      },
+      "target_symbol": "MTimerManager::AddTimer",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x8, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(register, 0x10, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 2,
+          "expression": "(register, 0x14, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 3,
+          "expression": "(register, 0x18, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 4,
+          "expression": "(register, 0x1c, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    {
+      "instruction_address": "2e230054",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2c4a2770, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2c4a2770",
+      "target_function": {
+        "address": "2c4a2770",
+        "name": "<EXTERNAL>::printf",
+        "signature": "int printf(char * __format, ...)",
+        "external": false,
+        "thunk": true,
+        "body_bytes": 1
+      },
+      "target_symbol": "<EXTERNAL>::printf",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(unique, 0x10000016, 4)",
+          "constant_hex": "0x2e28a0e0",
+          "defined_string": {
+            "address": "2e28a0e0",
+            "reference_target": "2e28a0e0",
+            "datatype": "string",
+            "byte_length": 23,
+            "value": "ASSERT FAIL: %s %s %d\n",
+            "content_omitted_sensitive_material": false,
+            "pcode_source_address": "2e230054",
+            "basis": "decompiler_constant_or_read_of_analyzed_loaded_memory_not_runtime_value"
+          },
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(unique, 0x1000001a, 4)",
+          "constant_hex": "0x2e28b77c",
+          "defined_string": {
+            "address": "2e28b77c",
+            "reference_target": "2e28b77c",
+            "datatype": "string",
+            "byte_length": 24,
+            "value": "./base/MEvtHandle.cpp",
+            "content_omitted_sensitive_material": false,
+            "pcode_source_address": "2e230054",
+            "basis": "decompiler_constant_or_read_of_analyzed_loaded_memory_not_runtime_value"
+          },
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 2,
+          "expression": "(unique, 0x1000001e, 4)",
+          "constant_hex": "0x2e28b814",
+          "defined_string": {
+            "address": "2e28b814",
+            "reference_target": "2e28b814",
+            "datatype": "string",
+            "byte_length": 52,
+            "value": "BOOL MEvtHandle::SetTimer(U32, U32, EN_TIMER_MODE)",
+            "content_omitted_sensitive_material": false,
+            "pcode_source_address": "2e230054",
+            "basis": "decompiler_constant_or_read_of_analyzed_loaded_memory_not_runtime_value"
+          },
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 3,
+          "expression": "(const, 0x122, 4)",
+          "constant_hex": "0x122",
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    {
+      "instruction_address": "2e230064",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2c48a870, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2c48a870",
+      "target_function": {
+        "address": "2c48a870",
+        "name": "<EXTERNAL>::abort",
+        "signature": "noreturn void abort(void)",
+        "external": false,
+        "thunk": true,
+        "body_bytes": 1
+      },
+      "target_symbol": "<EXTERNAL>::abort",
+      "arguments": [],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    }
+  ],
+  "decompiler_pcode_addresses_outside_selected_body": [],
+  "decompiler_pcode_within_selected_body": true,
+  "decompiler_constant_defined_strings": [
+    {
+      "address": "2e28a0e0",
+      "reference_target": "2e28a0e0",
+      "datatype": "string",
+      "byte_length": 23,
+      "value": "ASSERT FAIL: %s %s %d\n",
+      "content_omitted_sensitive_material": false,
+      "pcode_source_address": "2e230054",
+      "basis": "decompiler_constant_or_read_of_analyzed_loaded_memory_not_runtime_value"
+    },
+    {
+      "address": "2e28b77c",
+      "reference_target": "2e28b77c",
+      "datatype": "string",
+      "byte_length": 24,
+      "value": "./base/MEvtHandle.cpp",
+      "content_omitted_sensitive_material": false,
+      "pcode_source_address": "2e230054",
+      "basis": "decompiler_constant_or_read_of_analyzed_loaded_memory_not_runtime_value"
+    },
+    {
+      "address": "2e28b814",
+      "reference_target": "2e28b814",
+      "datatype": "string",
+      "byte_length": 52,
+      "value": "BOOL MEvtHandle::SetTimer(U32, U32, EN_TIMER_MODE)",
+      "content_omitted_sensitive_material": false,
+      "pcode_source_address": "2e230054",
+      "basis": "decompiler_constant_or_read_of_analyzed_loaded_memory_not_runtime_value"
+    }
+  ]
+}

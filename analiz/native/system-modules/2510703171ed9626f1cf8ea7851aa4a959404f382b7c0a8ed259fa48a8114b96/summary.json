@@ -1,0 +1,55 @@
+{
+  "program": "2510703171ed__libPQ.so",
+  "sha256": "2510703171ed9626f1cf8ea7851aa4a959404f382b7c0a8ed259fa48a8114b96",
+  "language": "MIPS:LE:32:default",
+  "functions": 304,
+  "symbols": 1489,
+  "xrefs": 5123,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 1239,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 5,
+  "sample_decompile_complete": 5,
+  "samples": [
+    {
+      "address": "2f0231d0",
+      "name": "Hal_PQ_init_riu_base",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2f018c3c",
+      "name": "MDrv_PQ_Update_MemFormat",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2f014560",
+      "name": "_init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2f01f598",
+      "name": "MDrv_PQ_SetPowerState",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2f01f8b8",
+      "name": "MDrv_PQ_Init",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "program": "c7902e105402__x.ko",
+  "sha256": "c7902e105402ef86c184a0791c6f9361072cc6ac5a14a2a1cdb0e19c954dba78",
+  "language": "MIPS:LE:32:default",
+  "functions": 268,
+  "symbols": 6275,
+  "xrefs": 15929,
+  "analyzed_call_xrefs": 2,
+  "computed_call_instructions": 2916,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 6,
+  "sample_decompile_complete": 6,
+  "samples": [
+    {
+      "address": "0003ed64",
+      "name": "ntfs3g_big_inode_init_once",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0003f378",
+      "name": "ntfs_volume_free",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0003ed38",
+      "name": "ntfs_mount",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0003f398",
+      "name": "ntfs_volume_alloc",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0002b9b8",
+      "name": "ntfs_index_ctx_reinit",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0002ee88",
+      "name": "ntfs_init_locked_inode",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

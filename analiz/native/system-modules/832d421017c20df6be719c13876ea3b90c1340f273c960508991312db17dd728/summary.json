@@ -1,0 +1,61 @@
+{
+  "program": "832d421017c2__liblinux.so",
+  "sha256": "832d421017c20df6be719c13876ea3b90c1340f273c960508991312db17dd728",
+  "language": "MIPS:LE:32:default",
+  "functions": 833,
+  "symbols": 3200,
+  "xrefs": 11428,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 2219,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 6,
+  "sample_decompile_complete": 6,
+  "samples": [
+    {
+      "address": "2e872480",
+      "name": "MAsm_CPU_PowerDown",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2e86c910",
+      "name": "MHAL_MBXINT_CpuInit",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2e87f100",
+      "name": "dlinit",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2e872490",
+      "name": "MAsm_CPU_StatusBEV",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2e872624",
+      "name": "MAsm_CPU_TimerInit",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2e878810",
+      "name": "Cyg_Mempool_Status_init",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

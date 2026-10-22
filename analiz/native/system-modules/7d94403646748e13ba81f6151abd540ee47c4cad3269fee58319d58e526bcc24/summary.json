@@ -1,0 +1,61 @@
+{
+  "program": "7d9440364674__dbus-daemon",
+  "sha256": "7d94403646748e13ba81f6151abd540ee47c4cad3269fee58319d58e526bcc24",
+  "language": "MIPS:LE:32:default",
+  "functions": 1787,
+  "symbols": 7124,
+  "xrefs": 50877,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 7172,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 6,
+  "sample_decompile_complete": 6,
+  "samples": [
+    {
+      "address": "0003c0d4",
+      "name": "bus_selinux_pre_init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0003c0f8",
+      "name": "bus_selinux_full_init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0003c1fc",
+      "name": "bus_selinux_init_connection_id",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00066c3c",
+      "name": "dbus_watch_get_socket",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "000672ec",
+      "name": "_dbus_data_slot_list_init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00072818",
+      "name": "_dbus_pipe_init",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

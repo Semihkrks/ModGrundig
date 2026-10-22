@@ -1,0 +1,61 @@
+{
+  "program": "3a21983cdedb__gdbserver",
+  "sha256": "3a21983cdedba4933f513becd0e89c037cec05cb33078a556c5a870a161c9ec7",
+  "language": "MIPS:LE:32:default",
+  "functions": 289,
+  "symbols": 2071,
+  "xrefs": 4935,
+  "analyzed_call_xrefs": 173,
+  "computed_call_instructions": 850,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 6,
+  "sample_decompile_complete": 6,
+  "samples": [
+    {
+      "address": "00406488",
+      "name": "remote_close",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00406464",
+      "name": "check_remote_input_interrupt_request",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0040c130",
+      "name": "init_registers_mips_linux",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0040c180",
+      "name": "init_registers_mips64_linux",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00403028",
+      "name": "_init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00406280",
+      "name": "initialize_async_io",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

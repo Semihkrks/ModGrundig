@@ -1,0 +1,907 @@
+{
+  "schema_version": 1,
+  "functions_with_recorded_behavior": 8,
+  "records": [
+    {
+      "module": "07_MSLIB/libmsrv_network.so",
+      "sha256": "55b8009ddeff377b334d6e116472a837c07e695e86d5ff9ac308d4a2639139bf",
+      "address": "0x2e7ee354",
+      "symbol": "_ZN20MSrv_Network_Control24RegisterWanStatusCheckCbEPFhvE",
+      "declared_bytes": 12,
+      "claim": "a1 callback değerini this+0x1c64 alanına yazar ve 0 döndürür. Callback bu işlev içinde çağrılmaz.",
+      "C_file": "analiz/native/system-modules/55b8009ddeff377b334d6e116472a837c07e695e86d5ff9ac308d4a2639139bf/2e7ee354.c",
+      "C_sha256": "59950387a1a7096bf1ba542e9d272de451ef909394098b28da13b78888e34856",
+      "instructions": [
+        {
+          "va": "0x2e7ee354",
+          "file_offset": 58196,
+          "u32": "0xac851c64",
+          "decoded_subset": "sw a1,7268(a0)"
+        },
+        {
+          "va": "0x2e7ee358",
+          "file_offset": 58200,
+          "u32": "0x03e00008",
+          "decoded_subset": "jr ra"
+        },
+        {
+          "va": "0x2e7ee35c",
+          "file_offset": 58204,
+          "u32": "0x00001021",
+          "decoded_subset": "addu v0,zero,zero"
+        }
+      ],
+      "evidence": "manually_read_C_with_raw_instruction_crosscheck_not_runtime"
+    },
+    {
+      "module": "07_MSLIB/libmsrv_network.so",
+      "sha256": "55b8009ddeff377b334d6e116472a837c07e695e86d5ff9ac308d4a2639139bf",
+      "address": "0x2e7ee360",
+      "symbol": "_ZN20MSrv_Network_Control26UnregisterWanStatusCheckCbEv",
+      "declared_bytes": 12,
+      "claim": "this+0x1c64 alanına 0 yazar ve 0 döndürür.",
+      "C_file": "analiz/native/system-modules/55b8009ddeff377b334d6e116472a837c07e695e86d5ff9ac308d4a2639139bf/2e7ee360.c",
+      "C_sha256": "48eb0f67537c5025f2c6f175c9511172791ea86eb6ab2122da1607303805211b",
+      "instructions": [
+        {
+          "va": "0x2e7ee360",
+          "file_offset": 58208,
+          "u32": "0xac801c64",
+          "decoded_subset": "sw zero,7268(a0)"
+        },
+        {
+          "va": "0x2e7ee364",
+          "file_offset": 58212,
+          "u32": "0x03e00008",
+          "decoded_subset": "jr ra"
+        },
+        {
+          "va": "0x2e7ee368",
+          "file_offset": 58216,
+          "u32": "0x00001021",
+          "decoded_subset": "addu v0,zero,zero"
+        }
+      ],
+      "evidence": "manually_read_C_with_raw_instruction_crosscheck_not_runtime"
+    },
+    {
+      "module": "07_MSLIB/libmsrv_network.so",
+      "sha256": "55b8009ddeff377b334d6e116472a837c07e695e86d5ff9ac308d4a2639139bf",
+      "address": "0x2e830338",
+      "symbol": "_ZN15MSrv_Network_Ip15SetDefaultRouteE17network_if_info_s",
+      "declared_bytes": 20,
+      "claim": "Struct argüman registerlerini stack’e döküp 0 döndürür; burada syscall veya route değiştirme çağrısı yoktur. Decompiler prototipi bu spill argümanlarını göstermiyor. Diğer ağ yollarına genellenmez.",
+      "C_file": "analiz/native/system-modules/55b8009ddeff377b334d6e116472a837c07e695e86d5ff9ac308d4a2639139bf/2e830338.c",
+      "C_sha256": "f9357ee6801b47a76c2074d4653de5ebbb80f5dee62d17a80d48b68094c22c98",
+      "instructions": [
+        {
+          "va": "0x2e830338",
+          "file_offset": 328504,
+          "u32": "0xafa50004",
+          "decoded_subset": "sw a1,4(sp)"
+        },
+        {
+          "va": "0x2e83033c",
+          "file_offset": 328508,
+          "u32": "0xafa60008",
+          "decoded_subset": "sw a2,8(sp)"
+        },
+        {
+          "va": "0x2e830340",
+          "file_offset": 328512,
+          "u32": "0xafa7000c",
+          "decoded_subset": "sw a3,12(sp)"
+        },
+        {
+          "va": "0x2e830344",
+          "file_offset": 328516,
+          "u32": "0x03e00008",
+          "decoded_subset": "jr ra"
+        },
+        {
+          "va": "0x2e830348",
+          "file_offset": 328520,
+          "u32": "0x00001021",
+          "decoded_subset": "addu v0,zero,zero"
+        }
+      ],
+      "evidence": "manually_read_C_with_raw_instruction_crosscheck_not_runtime"
+    },
+    {
+      "module": "07_MSLIB/libmsrv_control.so",
+      "sha256": "0b154eba8a18cda242d3a1efafb74ca576bfb35bf0c6b9be38fc13fe16e518ea",
+      "address": "0x2ea9e8f4",
+      "symbol": "_ZN19MSrv_Control_common12APVolumeDownEv",
+      "declared_bytes": 64,
+      "claim": "PostEvent(this,0,0x14,0xf04d,0) çağrısı üretir. Bu wrapper doğrudan ses seviyesi yazmaz.",
+      "C_file": "analiz/native/system-modules/0b154eba8a18cda242d3a1efafb74ca576bfb35bf0c6b9be38fc13fe16e518ea/2ea9e8f4.c",
+      "C_sha256": "e2e30953685239052c775367f22fd7116ac8bcb5d2cb2f06a755899452f03ef5",
+      "instructions": [
+        {
+          "va": "0x2ea9e8f4",
+          "file_offset": 125172,
+          "u32": "0x3c1c0003",
+          "decoded_subset": "lui gp,0x3"
+        },
+        {
+          "va": "0x2ea9e8f8",
+          "file_offset": 125176,
+          "u32": "0x279c6b9c",
+          "decoded_subset": "addiu gp,gp,27548"
+        },
+        {
+          "va": "0x2ea9e8fc",
+          "file_offset": 125180,
+          "u32": "0x0399e021",
+          "decoded_subset": "addu gp,gp,t9"
+        },
+        {
+          "va": "0x2ea9e900",
+          "file_offset": 125184,
+          "u32": "0x27bdffd8",
+          "decoded_subset": "addiu sp,sp,-40"
+        },
+        {
+          "va": "0x2ea9e904",
+          "file_offset": 125188,
+          "u32": "0xafbf0024",
+          "decoded_subset": "sw ra,36(sp)"
+        },
+        {
+          "va": "0x2ea9e908",
+          "file_offset": 125192,
+          "u32": "0xafbc0018",
+          "decoded_subset": "sw gp,24(sp)"
+        },
+        {
+          "va": "0x2ea9e90c",
+          "file_offset": 125196,
+          "u32": "0x8f998414",
+          "decoded_subset": "lw t9,-31724(gp)"
+        },
+        {
+          "va": "0x2ea9e910",
+          "file_offset": 125200,
+          "u32": "0xafa00010",
+          "decoded_subset": "sw zero,16(sp)"
+        },
+        {
+          "va": "0x2ea9e914",
+          "file_offset": 125204,
+          "u32": "0x00002821",
+          "decoded_subset": "addu a1,zero,zero"
+        },
+        {
+          "va": "0x2ea9e918",
+          "file_offset": 125208,
+          "u32": "0x24060014",
+          "decoded_subset": "addiu a2,zero,20"
+        },
+        {
+          "va": "0x2ea9e91c",
+          "file_offset": 125212,
+          "u32": "0x0320f809",
+          "decoded_subset": "jalr t9"
+        },
+        {
+          "va": "0x2ea9e920",
+          "file_offset": 125216,
+          "u32": "0x3407f04d",
+          "decoded_subset": "ori a3,zero,0xf04d"
+        },
+        {
+          "va": "0x2ea9e924",
+          "file_offset": 125220,
+          "u32": "0x8fbf0024",
+          "decoded_subset": "lw ra,36(sp)"
+        },
+        {
+          "va": "0x2ea9e928",
+          "file_offset": 125224,
+          "u32": "0x8fbc0018",
+          "decoded_subset": "lw gp,24(sp)"
+        },
+        {
+          "va": "0x2ea9e92c",
+          "file_offset": 125228,
+          "u32": "0x03e00008",
+          "decoded_subset": "jr ra"
+        },
+        {
+          "va": "0x2ea9e930",
+          "file_offset": 125232,
+          "u32": "0x27bd0028",
+          "decoded_subset": "addiu sp,sp,40"
+        }
+      ],
+      "evidence": "manually_read_C_with_raw_instruction_crosscheck_not_runtime"
+    },
+    {
+      "module": "07_MSLIB/utopia/libdrvIR.so",
+      "sha256": "ce8942e58ad01c90dee6869aff2673a48ee6267d369597820b6670427e6b4529",
+      "address": "0x2f461044",
+      "symbol": "MDrv_IR_InitCfg",
+      "declared_bytes": 108,
+      "claim": "Girdi işaretçisinden beş 32-bit alan kopyalar, modül içindeki fd ile ioctl request 0x8014750b çağırır. Gerçek cihaz/fd ve ioctl kernel handler bağlantısı henüz doğrulanmadı.",
+      "C_file": "analiz/native/system-modules/ce8942e58ad01c90dee6869aff2673a48ee6267d369597820b6670427e6b4529/2f461044.c",
+      "C_sha256": "24de4e5be8168166fa05ec4a6f878ad624fefa56de41285746a4f8abef01ebca",
+      "instructions": [
+        {
+          "va": "0x2f461044",
+          "file_offset": 4164,
+          "u32": "0x3c1c0002",
+          "decoded_subset": "lui gp,0x2"
+        },
+        {
+          "va": "0x2f461048",
+          "file_offset": 4168,
+          "u32": "0x279c935c",
+          "decoded_subset": "addiu gp,gp,-27812"
+        },
+        {
+          "va": "0x2f46104c",
+          "file_offset": 4172,
+          "u32": "0x0399e021",
+          "decoded_subset": "addu gp,gp,t9"
+        },
+        {
+          "va": "0x2f461050",
+          "file_offset": 4176,
+          "u32": "0x27bdffc8",
+          "decoded_subset": "addiu sp,sp,-56"
+        },
+        {
+          "va": "0x2f461054",
+          "file_offset": 4180,
+          "u32": "0xafbf0034",
+          "decoded_subset": "sw ra,52(sp)"
+        },
+        {
+          "va": "0x2f461058",
+          "file_offset": 4184,
+          "u32": "0xafbc0010",
+          "decoded_subset": "sw gp,16(sp)"
+        },
+        {
+          "va": "0x2f46105c",
+          "file_offset": 4188,
+          "u32": "0x8c850004",
+          "decoded_subset": "lw a1,4(a0)"
+        },
+        {
+          "va": "0x2f461060",
+          "file_offset": 4192,
+          "u32": "0x8f828018",
+          "decoded_subset": "lw v0,-32744(gp)"
+        },
+        {
+          "va": "0x2f461064",
+          "file_offset": 4196,
+          "u32": "0x8c860008",
+          "decoded_subset": "lw a2,8(a0)"
+        },
+        {
+          "va": "0x2f461068",
+          "file_offset": 4200,
+          "u32": "0x8c880010",
+          "decoded_subset": "lw t0,16(a0)"
+        },
+        {
+          "va": "0x2f46106c",
+          "file_offset": 4204,
+          "u32": "0x8c830000",
+          "decoded_subset": "lw v1,0(a0)"
+        },
+        {
+          "va": "0x2f461070",
+          "file_offset": 4208,
+          "u32": "0x8c87000c",
+          "decoded_subset": "lw a3,12(a0)"
+        },
+        {
+          "va": "0x2f461074",
+          "file_offset": 4212,
+          "u32": "0x8f998064",
+          "decoded_subset": "lw t9,-32668(gp)"
+        },
+        {
+          "va": "0x2f461078",
+          "file_offset": 4216,
+          "u32": "0xafa5001c",
+          "decoded_subset": "sw a1,28(sp)"
+        },
+        {
+          "va": "0x2f46107c",
+          "file_offset": 4220,
+          "u32": "0x8c443010",
+          "decoded_subset": "lw a0,12304(v0)"
+        },
+        {
+          "va": "0x2f461080",
+          "file_offset": 4224,
+          "u32": "0x3c058014",
+          "decoded_subset": "lui a1,0x8014"
+        },
+        {
+          "va": "0x2f461084",
+          "file_offset": 4228,
+          "u32": "0xafa60020",
+          "decoded_subset": "sw a2,32(sp)"
+        },
+        {
+          "va": "0x2f461088",
+          "file_offset": 4232,
+          "u32": "0xafa30018",
+          "decoded_subset": "sw v1,24(sp)"
+        },
+        {
+          "va": "0x2f46108c",
+          "file_offset": 4236,
+          "u32": "0xafa70024",
+          "decoded_subset": "sw a3,36(sp)"
+        },
+        {
+          "va": "0x2f461090",
+          "file_offset": 4240,
+          "u32": "0xafa80028",
+          "decoded_subset": "sw t0,40(sp)"
+        },
+        {
+          "va": "0x2f461094",
+          "file_offset": 4244,
+          "u32": "0x27a60018",
+          "decoded_subset": "addiu a2,sp,24"
+        },
+        {
+          "va": "0x2f461098",
+          "file_offset": 4248,
+          "u32": "0x0320f809",
+          "decoded_subset": "jalr t9"
+        },
+        {
+          "va": "0x2f46109c",
+          "file_offset": 4252,
+          "u32": "0x34a5750b",
+          "decoded_subset": "ori a1,a1,0x750b"
+        },
+        {
+          "va": "0x2f4610a0",
+          "file_offset": 4256,
+          "u32": "0x8fbf0034",
+          "decoded_subset": "lw ra,52(sp)"
+        },
+        {
+          "va": "0x2f4610a4",
+          "file_offset": 4260,
+          "u32": "0x8fbc0010",
+          "decoded_subset": "lw gp,16(sp)"
+        },
+        {
+          "va": "0x2f4610a8",
+          "file_offset": 4264,
+          "u32": "0x03e00008",
+          "decoded_subset": "jr ra"
+        },
+        {
+          "va": "0x2f4610ac",
+          "file_offset": 4268,
+          "u32": "0x27bd0038",
+          "decoded_subset": "addiu sp,sp,56"
+        }
+      ],
+      "evidence": "manually_read_C_with_raw_instruction_crosscheck_not_runtime"
+    },
+    {
+      "module": "07_MSLIB/utopia/libdrvIR.so",
+      "sha256": "ce8942e58ad01c90dee6869aff2673a48ee6267d369597820b6670427e6b4529",
+      "address": "0x2f461e74",
+      "symbol": "MDrv_IR_SetPowerState",
+      "declared_bytes": 272,
+      "claim": "Girdi 1 durum kaydını 1 yapıp 0 döndürür. Girdi 2 ancak önceki kayıt 1 ise MDrv_IR_Init çağırıp kaydı 2 yapar; diğer yollar 1 döndürür. Sayısal durumlara suspend/resume enum adı henüz atanmadı.",
+      "C_file": "analiz/native/system-modules/ce8942e58ad01c90dee6869aff2673a48ee6267d369597820b6670427e6b4529/2f461e74.c",
+      "C_sha256": "112747b744a3406a63f15bb32b45d1b27e5860e30389d1f4e323d2ebb7d92ce3",
+      "instructions": [
+        {
+          "va": "0x2f461e74",
+          "file_offset": 7796,
+          "u32": "0x3c1c0002",
+          "decoded_subset": "lui gp,0x2"
+        },
+        {
+          "va": "0x2f461e78",
+          "file_offset": 7800,
+          "u32": "0x279c852c",
+          "decoded_subset": "addiu gp,gp,-31444"
+        },
+        {
+          "va": "0x2f461e7c",
+          "file_offset": 7804,
+          "u32": "0x0399e021",
+          "decoded_subset": "addu gp,gp,t9"
+        },
+        {
+          "va": "0x2f461e80",
+          "file_offset": 7808,
+          "u32": "0x27bdefd8",
+          "decoded_subset": "addiu sp,sp,-4136"
+        },
+        {
+          "va": "0x2f461e84",
+          "file_offset": 7812,
+          "u32": "0xafbf1024",
+          "decoded_subset": "sw ra,4132(sp)"
+        },
+        {
+          "va": "0x2f461e88",
+          "file_offset": 7816,
+          "u32": "0xafb11020",
+          "decoded_subset": "sw s1,4128(sp)"
+        },
+        {
+          "va": "0x2f461e8c",
+          "file_offset": 7820,
+          "u32": "0xafb0101c",
+          "decoded_subset": "sw s0,4124(sp)"
+        },
+        {
+          "va": "0x2f461e90",
+          "file_offset": 7824,
+          "u32": "0xafbc0010",
+          "decoded_subset": "sw gp,16(sp)"
+        },
+        {
+          "va": "0x2f461e94",
+          "file_offset": 7828,
+          "u32": "0x24030001",
+          "decoded_subset": "addiu v1,zero,1"
+        },
+        {
+          "va": "0x2f461e98",
+          "file_offset": 7832,
+          "u32": "0x10830025",
+          "decoded_subset": "beq a0,v1,0x2f461f30"
+        },
+        {
+          "va": "0x2f461e9c",
+          "file_offset": 7836,
+          "u32": "0x00808021",
+          "decoded_subset": "addu s0,a0,zero"
+        },
+        {
+          "va": "0x2f461ea0",
+          "file_offset": 7840,
+          "u32": "0x24020002",
+          "decoded_subset": "addiu v0,zero,2"
+        },
+        {
+          "va": "0x2f461ea4",
+          "file_offset": 7844,
+          "u32": "0x14820013",
+          "decoded_subset": "bne a0,v0,0x2f461ef4"
+        },
+        {
+          "va": "0x2f461ea8",
+          "file_offset": 7848,
+          "u32": "0x8f848024",
+          "decoded_subset": "lw a0,-32732(gp)"
+        },
+        {
+          "va": "0x2f461eac",
+          "file_offset": 7852,
+          "u32": "0x8f918018",
+          "decoded_subset": "lw s1,-32744(gp)"
+        },
+        {
+          "va": "0x2f461eb0",
+          "file_offset": 7856,
+          "u32": "0x8e222380",
+          "decoded_subset": "lw v0,9088(s1)"
+        },
+        {
+          "va": "0x2f461eb4",
+          "file_offset": 7860,
+          "u32": "0x10430027",
+          "decoded_subset": "beq v0,v1,0x2f461f54"
+        },
+        {
+          "va": "0x2f461eb8",
+          "file_offset": 7864,
+          "u32": "0x8f848024",
+          "decoded_subset": "lw a0,-32732(gp)"
+        },
+        {
+          "va": "0x2f461ebc",
+          "file_offset": 7868,
+          "u32": "0x8f858024",
+          "decoded_subset": "lw a1,-32732(gp)"
+        },
+        {
+          "va": "0x2f461ec0",
+          "file_offset": 7872,
+          "u32": "0x8f998054",
+          "decoded_subset": "lw t9,-32684(gp)"
+        },
+        {
+          "va": "0x2f461ec4",
+          "file_offset": 7876,
+          "u32": "0x248422d4",
+          "decoded_subset": "addiu a0,a0,8916"
+        },
+        {
+          "va": "0x2f461ec8",
+          "file_offset": 7880,
+          "u32": "0x24a52344",
+          "decoded_subset": "addiu a1,a1,9028"
+        },
+        {
+          "va": "0x2f461ecc",
+          "file_offset": 7884,
+          "u32": "0x0320f809",
+          "decoded_subset": "jalr t9"
+        },
+        {
+          "va": "0x2f461ed0",
+          "file_offset": 7888,
+          "u32": "0x240604b6",
+          "decoded_subset": "addiu a2,zero,1206"
+        },
+        {
+          "va": "0x2f461ed4",
+          "file_offset": 7892,
+          "u32": "0x8fbf1024",
+          "decoded_subset": "lw ra,4132(sp)"
+        },
+        {
+          "va": "0x2f461ed8",
+          "file_offset": 7896,
+          "u32": "0x24030001",
+          "decoded_subset": "addiu v1,zero,1"
+        },
+        {
+          "va": "0x2f461edc",
+          "file_offset": 7900,
+          "u32": "0x8fbc0010",
+          "decoded_subset": "lw gp,16(sp)"
+        },
+        {
+          "va": "0x2f461ee0",
+          "file_offset": 7904,
+          "u32": "0x00601021",
+          "decoded_subset": "addu v0,v1,zero"
+        },
+        {
+          "va": "0x2f461ee4",
+          "file_offset": 7908,
+          "u32": "0x8fb11020",
+          "decoded_subset": "lw s1,4128(sp)"
+        },
+        {
+          "va": "0x2f461ee8",
+          "file_offset": 7912,
+          "u32": "0x8fb0101c",
+          "decoded_subset": "lw s0,4124(sp)"
+        },
+        {
+          "va": "0x2f461eec",
+          "file_offset": 7916,
+          "u32": "0x03e00008",
+          "decoded_subset": "jr ra"
+        },
+        {
+          "va": "0x2f461ef0",
+          "file_offset": 7920,
+          "u32": "0x27bd1028",
+          "decoded_subset": "addiu sp,sp,4136"
+        },
+        {
+          "va": "0x2f461ef4",
+          "file_offset": 7924,
+          "u32": "0x8f858024",
+          "decoded_subset": "lw a1,-32732(gp)"
+        },
+        {
+          "va": "0x2f461ef8",
+          "file_offset": 7928,
+          "u32": "0x8f998054",
+          "decoded_subset": "lw t9,-32684(gp)"
+        },
+        {
+          "va": "0x2f461efc",
+          "file_offset": 7932,
+          "u32": "0x02003821",
+          "decoded_subset": "addu a3,s0,zero"
+        },
+        {
+          "va": "0x2f461f00",
+          "file_offset": 7936,
+          "u32": "0x2484230c",
+          "decoded_subset": "addiu a0,a0,8972"
+        },
+        {
+          "va": "0x2f461f04",
+          "file_offset": 7940,
+          "u32": "0x24a52344",
+          "decoded_subset": "addiu a1,a1,9028"
+        },
+        {
+          "va": "0x2f461f08",
+          "file_offset": 7944,
+          "u32": "0x0320f809",
+          "decoded_subset": "jalr t9"
+        },
+        {
+          "va": "0x2f461f0c",
+          "file_offset": 7948,
+          "u32": "0x240604bc",
+          "decoded_subset": "addiu a2,zero,1212"
+        },
+        {
+          "va": "0x2f461f10",
+          "file_offset": 7952,
+          "u32": "0x8fbf1024",
+          "decoded_subset": "lw ra,4132(sp)"
+        },
+        {
+          "va": "0x2f461f14",
+          "file_offset": 7956,
+          "u32": "0x24030001",
+          "decoded_subset": "addiu v1,zero,1"
+        },
+        {
+          "va": "0x2f461f18",
+          "file_offset": 7960,
+          "u32": "0x8fbc0010",
+          "decoded_subset": "lw gp,16(sp)"
+        },
+        {
+          "va": "0x2f461f1c",
+          "file_offset": 7964,
+          "u32": "0x00601021",
+          "decoded_subset": "addu v0,v1,zero"
+        },
+        {
+          "va": "0x2f461f20",
+          "file_offset": 7968,
+          "u32": "0x8fb11020",
+          "decoded_subset": "lw s1,4128(sp)"
+        },
+        {
+          "va": "0x2f461f24",
+          "file_offset": 7972,
+          "u32": "0x8fb0101c",
+          "decoded_subset": "lw s0,4124(sp)"
+        },
+        {
+          "va": "0x2f461f28",
+          "file_offset": 7976,
+          "u32": "0x03e00008",
+          "decoded_subset": "jr ra"
+        },
+        {
+          "va": "0x2f461f2c",
+          "file_offset": 7980,
+          "u32": "0x27bd1028",
+          "decoded_subset": "addiu sp,sp,4136"
+        },
+        {
+          "va": "0x2f461f30",
+          "file_offset": 7984,
+          "u32": "0x8f828018",
+          "decoded_subset": "lw v0,-32744(gp)"
+        },
+        {
+          "va": "0x2f461f34",
+          "file_offset": 7988,
+          "u32": "0x00001821",
+          "decoded_subset": "addu v1,zero,zero"
+        },
+        {
+          "va": "0x2f461f38",
+          "file_offset": 7992,
+          "u32": "0xac442380",
+          "decoded_subset": "sw a0,9088(v0)"
+        },
+        {
+          "va": "0x2f461f3c",
+          "file_offset": 7996,
+          "u32": "0x8fbf1024",
+          "decoded_subset": "lw ra,4132(sp)"
+        },
+        {
+          "va": "0x2f461f40",
+          "file_offset": 8000,
+          "u32": "0x00601021",
+          "decoded_subset": "addu v0,v1,zero"
+        },
+        {
+          "va": "0x2f461f44",
+          "file_offset": 8004,
+          "u32": "0x8fb11020",
+          "decoded_subset": "lw s1,4128(sp)"
+        },
+        {
+          "va": "0x2f461f48",
+          "file_offset": 8008,
+          "u32": "0x8fb0101c",
+          "decoded_subset": "lw s0,4124(sp)"
+        },
+        {
+          "va": "0x2f461f4c",
+          "file_offset": 8012,
+          "u32": "0x03e00008",
+          "decoded_subset": "jr ra"
+        },
+        {
+          "va": "0x2f461f50",
+          "file_offset": 8016,
+          "u32": "0x27bd1028",
+          "decoded_subset": "addiu sp,sp,4136"
+        },
+        {
+          "va": "0x2f461f54",
+          "file_offset": 8020,
+          "u32": "0x8f99805c",
+          "decoded_subset": "lw t9,-32676(gp)"
+        },
+        {
+          "va": "0x2f461f58",
+          "file_offset": 8024,
+          "u32": "0x0320f809",
+          "decoded_subset": "jalr t9"
+        },
+        {
+          "va": "0x2f461f5c",
+          "file_offset": 8028,
+          "u32": "0x27a40018",
+          "decoded_subset": "addiu a0,sp,24"
+        },
+        {
+          "va": "0x2f461f60",
+          "file_offset": 8032,
+          "u32": "0x8fbc0010",
+          "decoded_subset": "lw gp,16(sp)"
+        },
+        {
+          "va": "0x2f461f64",
+          "file_offset": 8036,
+          "u32": "0xae302380",
+          "decoded_subset": "sw s0,9088(s1)"
+        },
+        {
+          "va": "0x2f461f68",
+          "file_offset": 8040,
+          "u32": "0x8fbf1024",
+          "decoded_subset": "lw ra,4132(sp)"
+        },
+        {
+          "va": "0x2f461f6c",
+          "file_offset": 8044,
+          "u32": "0x00001821",
+          "decoded_subset": "addu v1,zero,zero"
+        },
+        {
+          "va": "0x2f461f70",
+          "file_offset": 8048,
+          "u32": "0x00601021",
+          "decoded_subset": "addu v0,v1,zero"
+        },
+        {
+          "va": "0x2f461f74",
+          "file_offset": 8052,
+          "u32": "0x8fb11020",
+          "decoded_subset": "lw s1,4128(sp)"
+        },
+        {
+          "va": "0x2f461f78",
+          "file_offset": 8056,
+          "u32": "0x8fb0101c",
+          "decoded_subset": "lw s0,4124(sp)"
+        },
+        {
+          "va": "0x2f461f7c",
+          "file_offset": 8060,
+          "u32": "0x03e00008",
+          "decoded_subset": "jr ra"
+        },
+        {
+          "va": "0x2f461f80",
+          "file_offset": 8064,
+          "u32": "0x27bd1028",
+          "decoded_subset": "addiu sp,sp,4136"
+        }
+      ],
+      "evidence": "manually_read_C_with_raw_instruction_crosscheck_not_runtime"
+    },
+    {
+      "module": "07_MSLIB/libar_cec.so",
+      "sha256": "6177c73cfd0cca039e1aacf2fb721f693812b18a9282f2980d5c255bd431bbd7",
+      "address": "0x2f045304",
+      "symbol": "_ZN14cec_Controller18IsCECInitCompletedEv",
+      "declared_bytes": 24,
+      "claim": "GOT üzerinden erişilen modül globalindeki word değerini döndürür. Bu okuma fiziksel CEC bağlantısının hazır olduğunun gözlemi değildir.",
+      "C_file": "analiz/native/system-modules/6177c73cfd0cca039e1aacf2fb721f693812b18a9282f2980d5c255bd431bbd7/2f045304.c",
+      "C_sha256": "11b5009cdabf43631c8ed099af6148242d4a6d9d6e89ff3301f76122b3ae443f",
+      "instructions": [
+        {
+          "va": "0x2f045304",
+          "file_offset": 21252,
+          "u32": "0x3c1c0002",
+          "decoded_subset": "lui gp,0x2"
+        },
+        {
+          "va": "0x2f045308",
+          "file_offset": 21256,
+          "u32": "0x279c61dc",
+          "decoded_subset": "addiu gp,gp,25052"
+        },
+        {
+          "va": "0x2f04530c",
+          "file_offset": 21260,
+          "u32": "0x0399e021",
+          "decoded_subset": "addu gp,gp,t9"
+        },
+        {
+          "va": "0x2f045310",
+          "file_offset": 21264,
+          "u32": "0x8f838018",
+          "decoded_subset": "lw v1,-32744(gp)"
+        },
+        {
+          "va": "0x2f045314",
+          "file_offset": 21268,
+          "u32": "0x03e00008",
+          "decoded_subset": "jr ra"
+        },
+        {
+          "va": "0x2f045318",
+          "file_offset": 21272,
+          "u32": "0x8c623834",
+          "decoded_subset": "lw v0,14388(v1)"
+        }
+      ],
+      "evidence": "manually_read_C_with_raw_instruction_crosscheck_not_runtime"
+    },
+    {
+      "module": "07_MSLIB/libmsrv_dvbs.so",
+      "sha256": "daa8f91f94a64431ec42d3e0681ced5297c28ba7f834991e79353c13990bf08d",
+      "address": "0x2ebea490",
+      "symbol": "_ZN20MSrv_DTV_Player_DVBS11SetLNBPowerE18MS_EN_LNBPWR_ONOFF",
+      "declared_bytes": 16,
+      "claim": "Nesnenin vtable slot +0x9b0 hedefine tail jump yapar. Nihai override ve donanım komutu bu gövdeden tek başına bilinmez.",
+      "C_file": "analiz/native/system-modules/daa8f91f94a64431ec42d3e0681ced5297c28ba7f834991e79353c13990bf08d/2ebea490.c",
+      "C_sha256": "72e320d77f9972a0447219d27adc53692e9deb9d70fe7ed68fe648779c627941",
+      "instructions": [
+        {
+          "va": "0x2ebea490",
+          "file_offset": 107664,
+          "u32": "0x8c820000",
+          "decoded_subset": "lw v0,0(a0)"
+        },
+        {
+          "va": "0x2ebea494",
+          "file_offset": 107668,
+          "u32": "0x8c5909b0",
+          "decoded_subset": "lw t9,2480(v0)"
+        },
+        {
+          "va": "0x2ebea498",
+          "file_offset": 107672,
+          "u32": "0x03200008",
+          "decoded_subset": "jr t9"
+        },
+        {
+          "va": "0x2ebea49c",
+          "file_offset": 107676,
+          "u32": "0x00000000",
+          "decoded_subset": "nop"
+        }
+      ],
+      "evidence": "manually_read_C_with_raw_instruction_crosscheck_not_runtime"
+    }
+  ],
+  "limitations": [
+    "Decompiled prototypes are candidates; raw instruction crosschecks constrain the stated facts.",
+    "The small verifier decodes a declared subset and retains other instructions as raw words.",
+    "Callback invocation, final vtable override, hardware side effects and device state remain separate research."
+  ]
+}

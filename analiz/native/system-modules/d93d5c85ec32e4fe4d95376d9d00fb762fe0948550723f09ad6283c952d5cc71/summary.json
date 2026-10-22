@@ -1,0 +1,43 @@
+{
+  "program": "d93d5c85ec32__libcswift.so",
+  "sha256": "d93d5c85ec32e4fe4d95376d9d00fb762fe0948550723f09ad6283c952d5cc71",
+  "language": "MIPS:LE:32:default",
+  "functions": 121,
+  "symbols": 391,
+  "xrefs": 918,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 256,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 3,
+  "sample_decompile_complete": 3,
+  "samples": [
+    {
+      "address": "00010f18",
+      "name": "_init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0001316c",
+      "name": "cswift_init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00011ad8",
+      "name": "cswift_dsa_verify",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

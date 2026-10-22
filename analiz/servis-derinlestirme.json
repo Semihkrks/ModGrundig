@@ -1,0 +1,376 @@
+{
+  "schema_version": 1,
+  "target_executed": false,
+  "target_bytes_written": false,
+  "behavior_groups": 8,
+  "records": [
+    {
+      "title": "CEC dönüş değeri ve kaybolan parametre",
+      "evidence_kind": "reviewed_static_C_and_assembly",
+      "finding": "Ana wrapper a0=servis nesnesi, a1=özgün RC kodu geçirir; decompiler ikinci argümanı düşürebilir. Customer wrapper callback ardından destructor ve operator_delete çağırır. Callback v0 değeri bunların üzerinden korunmaz. Önceki processed-bool yorumu desteklenmez.",
+      "open_questions": "MW_CEC_IrWrapper::UnmappedIrEventReceivedCallbackFunc 0x2dfb95c8 (980 bayt) ve gerçek çağıran koşulları incelenmeli.",
+      "artifacts": [
+        {
+          "json": "analiz/native/ui-targeted/system-critical14/00555350.json",
+          "json_sha256": "91a31c460a4d689c8d72317caad6faf14aaa1f19744edbdfb426148a210770f9",
+          "c": "analiz/native/ui-targeted/system-critical14/00555350.c",
+          "c_sha256": "2c6c8e639f11918039be008bdbd8cbae1d3e0fd79b3aa827352c58dde7ffd164",
+          "function_address": "00555350",
+          "name": "ArCecController::ProccessUserRCInput"
+        },
+        {
+          "json": "analiz/native/system-focused/394ee95f07383231c9cc1019d9d1fb8eb3c8309ae68fe2d3186ddf19c51dae39/cec-return1/2df7d2f8.json",
+          "json_sha256": "cb85cabc817b675e7153439e6b6fb365d4ce9225759a6b2d003c15dcbbe4cbb2",
+          "c": "analiz/native/system-focused/394ee95f07383231c9cc1019d9d1fb8eb3c8309ae68fe2d3186ddf19c51dae39/cec-return1/2df7d2f8.c",
+          "c_sha256": "38101d95b3ae1b787a5b85b447307ed0f7d61d475ddd93fd38a012852b210be5",
+          "function_address": "2df7d2f8",
+          "name": "MSrv_CEC_Customer::ProccessUserRCInput"
+        }
+      ],
+      "instruction_evidence": [
+        {
+          "address": "0055538c",
+          "instruction": "lw a0,0x18(s8)"
+        },
+        {
+          "address": "00555390",
+          "instruction": "lw a1,0x2c(s8)"
+        },
+        {
+          "address": "00555398",
+          "instruction": "jalr t9"
+        },
+        {
+          "address": "2df7d348",
+          "instruction": "jalr t9"
+        },
+        {
+          "address": "2df7d35c",
+          "instruction": "jalr t9"
+        },
+        {
+          "address": "2df7d37c",
+          "instruction": "jr t9"
+        }
+      ]
+    },
+    {
+      "title": "Standby ve iptal koşulları",
+      "evidence_kind": "reviewed_static_C_and_assembly",
+      "finding": "StartStandby aktif taramayı durdurabilir; SetPowerState(this,3,0), CEC standby, ses +0x1a0 ve DTV +0x724 sanal çağrılarını içerir. ASU nesnesi varsa StopExistingASUUpdate sonucu 1 olduğunda StartASU çağırmadan 0 döner; stop sonucu 1 değilse StartASU sonucu 1 için yine 0 döner. Diğer yollar 1. CancelStandby power-state=3 ve ASU-started=1 kapısından geçer; LED olayları ve ASU stop içerir.",
+      "open_questions": "Cancel wrapper içinde POWER_ON yazımı yok. Ses +0x1a0 hedefinin taban implementasyonu 8 baytlık jr ra/nop stub olabilir; bundan mute veya güç kesme sonucu çıkarılmaz. Aktif override bilinmiyor.",
+      "artifacts": [
+        {
+          "json": "analiz/native/ui-targeted/system-critical14/00532f24.json",
+          "json_sha256": "57a9d3f0df65397e520d9239a448028706e7f5450f88593aae4f94761953ffd8",
+          "c": "analiz/native/ui-targeted/system-critical14/00532f24.c",
+          "c_sha256": "ef85799e92e175324cfbd938a602c9df6e9d19063290c3321706d93aeda4648e",
+          "function_address": "00532f24",
+          "name": "ArTvManager::StartStandby"
+        },
+        {
+          "json": "analiz/native/ui-targeted/system-critical14/00532df4.json",
+          "json_sha256": "6a660b32cad4bd9c088a218d1c95eedcad85177bdf040078be3544dfb5f29761",
+          "c": "analiz/native/ui-targeted/system-critical14/00532df4.c",
+          "c_sha256": "084f8e0c6879fc341e420209b01bb2c6a9b650255c5eec23120ba91ed4d9b4ab",
+          "function_address": "00532df4",
+          "name": "ArTvManager::CancelStandby"
+        }
+      ],
+      "instruction_evidence": [
+        {
+          "address": "005330f8",
+          "instruction": "jalr t9"
+        },
+        {
+          "address": "00533104",
+          "instruction": "xori v0,v0,0x1"
+        },
+        {
+          "address": "00533110",
+          "instruction": "beq v0,zero,0x00533124"
+        },
+        {
+          "address": "00533118",
+          "instruction": "sw zero,0x20(s8)"
+        },
+        {
+          "address": "005331cc",
+          "instruction": "lw v0,0x20(s8)"
+        }
+      ]
+    },
+    {
+      "title": "Aktif anten girdi dönüşümü",
+      "evidence_kind": "reviewed_static_C_and_assembly",
+      "finding": "Özgün enum globalde saklanır; DB setter için değer input==1 olarak dönüştürülür. DB getter sonucu AdjustAntenna5V yoluna gider. Wrapper sabit 1 döndürür; bu donanım başarı durumu değildir.",
+      "open_questions": "Decompiler this/prototype ve düşen argümanları assembly ile yorumlanmalıdır; SDK/driver hata dönüşü henüz bağlanmadı.",
+      "artifacts": [
+        {
+          "json": "analiz/native/ui-targeted/system-critical14/0061d2a4.json",
+          "json_sha256": "293d3eab5f67db14543e7d7d38009b9969ba59677694a480c17d22ff69809789",
+          "c": "analiz/native/ui-targeted/system-critical14/0061d2a4.c",
+          "c_sha256": "ad47b814028be367f3000f3f04cd4aa3b59ea4a92bc3f7f0c22d94252ae42c09",
+          "function_address": "0061d2a4",
+          "name": "ArResourceManager::SetActiveAntennaPower"
+        }
+      ],
+      "instruction_evidence": [
+        {
+          "address": "0061d2ec",
+          "instruction": "lw v0,0x2c(s8)"
+        },
+        {
+          "address": "0061d304",
+          "instruction": "jalr t9"
+        },
+        {
+          "address": "0061d360",
+          "instruction": "lw t9,-0xce0(gp)"
+        },
+        {
+          "address": "0061d390",
+          "instruction": "jalr t9"
+        }
+      ]
+    },
+    {
+      "title": "LNB güç eşlemesi",
+      "evidence_kind": "reviewed_static_C_and_assembly",
+      "finding": "Girdi 1→1, 2→4, diğer→0. SatInfo+0x0f ve arSatTuningParams+0x16 byte alanlarına yazılır; +0x9b0 sanal çağrı, SatelliteUserInteraction(2), +0xa34 retune ve changed flag yolu vardır. Başarı wrapperı 1; cast failure assert/abort.",
+      "open_questions": "DVBS customer runtime override ve fiziksel voltaj etkisi doğrulanmadı.",
+      "artifacts": [
+        {
+          "json": "analiz/native/ui-targeted/system-critical14/00620940.json",
+          "json_sha256": "3c40874c614e7fedbaa0f40a7ca08d7db00076014cbd7ee946193ea516a5b10d",
+          "c": "analiz/native/ui-targeted/system-critical14/00620940.c",
+          "c_sha256": "5702315884d4358be80eb76d2565d90fe1bdb536972262f42871ba47218c5829",
+          "function_address": "00620940",
+          "name": "ArResourceManager::SetLNBPower"
+        }
+      ],
+      "instruction_evidence": [
+        {
+          "address": "00620974",
+          "instruction": "addiu v0,s8,0x20"
+        },
+        {
+          "address": "00620ae4",
+          "instruction": "sb v1,0x16(v0)"
+        },
+        {
+          "address": "00620af0",
+          "instruction": "sb v0,0x2f(s8)"
+        },
+        {
+          "address": "00620b08",
+          "instruction": "addiu v1,s8,0x20"
+        }
+      ]
+    },
+    {
+      "title": "Tarama durumu ve ATV indeks dönüşümü",
+      "evidence_kind": "reviewed_static_C_and_assembly",
+      "finding": "Pause/resume this+0x6c durumuna göre DTV +0x128/+0x12c veya ATV +0xe4/+0xe8 dispatch yapar; state=0 için +0x95 seçimi, geçersiz durumda assert vardır. ATV moveMode=0 kaydında ((input&255)-1)&255 geçirilir: 0 girdisi 255 olur; diğer mod SaveProgramToBack yoludur.",
+      "open_questions": "0→255 dönüşümünün ürün düzeyinde hata mı sentinel mı olduğu, çağıran sözleşmesi çözülmeden söylenemez.",
+      "artifacts": [
+        {
+          "json": "analiz/native/ui-targeted/system-critical14/004f1c3c.json",
+          "json_sha256": "a685d1c1907ef6a1b3bf07c4be7a606860aa86a7679d9d37b2cae699391d183f",
+          "c": "analiz/native/ui-targeted/system-critical14/004f1c3c.c",
+          "c_sha256": "7289d46ab32b41284347d403a41d05cebfd6d624afc09f3c3bf63842021b17fc",
+          "function_address": "004f1c3c",
+          "name": "ArScanManager::pauseAutoScan"
+        },
+        {
+          "json": "analiz/native/ui-targeted/system-critical14/004f1a20.json",
+          "json_sha256": "1a582908cfe6f37aace65aa0fb5fb7f447a785f026e84262da59f238ee3b7c18",
+          "c": "analiz/native/ui-targeted/system-critical14/004f1a20.c",
+          "c_sha256": "5d0528fff0eedb960997257a668005ec9f5cbe1d956d24f067c3da1e819bec1c",
+          "function_address": "004f1a20",
+          "name": "ArScanManager::resumeAutoScan"
+        },
+        {
+          "json": "analiz/native/ui-targeted/system-critical14/004f86bc.json",
+          "json_sha256": "3f9b50eeca20aa7d9c6c439ca72917a99b13c8aee18df76d4a812d12405f301e",
+          "c": "analiz/native/ui-targeted/system-critical14/004f86bc.c",
+          "c_sha256": "9d9cefc2af470e77954ad533aa97dab7a9c54fb125fbb0678a8266c443b201d4",
+          "function_address": "004f86bc",
+          "name": "ArScanManager::saveCurrentATVChannelToDB"
+        }
+      ],
+      "instruction_evidence": [
+        {
+          "address": "004f87c4",
+          "instruction": "lw v0,0x3c(s8)"
+        },
+        {
+          "address": "004f87dc",
+          "instruction": "jalr t9"
+        }
+      ]
+    },
+    {
+      "title": "OAD kabul wrapperlarının dönüşleri",
+      "evidence_kind": "reviewed_static_C_and_assembly",
+      "finding": "StartOADUpgrade sanal +0x610 çağrısından sonra sabit 1 döndürür. DVB taban vtable adayı +0x610→0x2d4e2b44; bu fonksiyon this+0x2b8 ve customer cast koşulunda customer kabul çağrısı ardından 1, diğer durumda 0 döndürür. Customer sonucu forward edilmez. CheckAfterWakeUp ise customer dönüşünü tail-forward eder.",
+      "open_questions": "Vtable eşlemesi statik primary-address-point adayıdır. Customer kabul 0x2e16aad0 ve wake-up check 0x2e1695fc koşulları henüz çözülmedi; firmware kabul/imza kanıtı değildir.",
+      "artifacts": [
+        {
+          "json": "analiz/native/ui-targeted/system-critical14/00642a50.json",
+          "json_sha256": "d5f8f4532213640d4e49821f0932491f0e2a31d7c43b01db00b05baf7756fd6f",
+          "c": "analiz/native/ui-targeted/system-critical14/00642a50.c",
+          "c_sha256": "cb39e7b0b9ba9b42030555d13070405172cacc32f80cee462c362322a89ba71e",
+          "function_address": "00642a50",
+          "name": "ArSoftwareUpdateManager::StartOADUpgrade"
+        },
+        {
+          "json": "analiz/native/system-focused/93fe7286bb7fb9bf3d33ccf75556985f68666fe485241099c20bb7165bc88d97/oad-path2/2d4e2b44.json",
+          "json_sha256": "a6e07ac4ef4392c606480877b954bf879810272e53a4b59c5fe0b65d3ef54731",
+          "c": "analiz/native/system-focused/93fe7286bb7fb9bf3d33ccf75556985f68666fe485241099c20bb7165bc88d97/oad-path2/2d4e2b44.c",
+          "c_sha256": "c1d55457cb4121ffac8eb59ddb146d8b82eee502dee46a600c08158e60453f50",
+          "function_address": "2d4e2b44",
+          "name": "MSrv_DTV_Player_DVB::OAD_AcceptStandbyDownload"
+        },
+        {
+          "json": "analiz/native/system-focused/93fe7286bb7fb9bf3d33ccf75556985f68666fe485241099c20bb7165bc88d97/oad-path2/2d4e2a78.json",
+          "json_sha256": "6bf59250361e2431a3a9f7f76294bf2cefbba6c87456d5ee1cfe2a9100e8b889",
+          "c": "analiz/native/system-focused/93fe7286bb7fb9bf3d33ccf75556985f68666fe485241099c20bb7165bc88d97/oad-path2/2d4e2a78.c",
+          "c_sha256": "73f2cdb09517a9572dbbb01fb41d1b412a0cc5d8b604b0403bc6f38b627c4488",
+          "function_address": "2d4e2a78",
+          "name": "MSrv_DTV_Player_DVB::OAD_CheckAfterWakeUp"
+        }
+      ],
+      "instruction_evidence": [
+        {
+          "address": "00642ae8",
+          "instruction": "li v0,0x1"
+        }
+      ]
+    },
+    {
+      "title": "Manuel OAD ve standby update parametreleri",
+      "evidence_kind": "reviewed_static_C_and_assembly",
+      "finding": "GetOadDownInfo stack üzerinde çıktı yapısı doldurur; TV mode 1/32/128 için yapı+0x11 byte→OadScanRF, diğer modlarda yapı+8 word→OadScanFreq; wrapper sabit 1. Standby update timer/on-timer/OAD schedule sorgularına a1=1200 verir; standby-scan flag OR 1, auto-OAD flag OR 4 yolları vardır.",
+      "open_questions": "1200 parametresinin zaman birimi ve GetOadDownInfo tam yapı prototipi açık. Decompiler sözde başlatılmamış stack değerlerini gerçek C hatası diye sunma.",
+      "artifacts": [
+        {
+          "json": "analiz/native/ui-targeted/system-critical14/006430b4.json",
+          "json_sha256": "72e3eee99189e600a857433cdbbb3de6a7c2a8582b89071d8112751d1c6836e9",
+          "c": "analiz/native/ui-targeted/system-critical14/006430b4.c",
+          "c_sha256": "d6928b90a7dabb2093e2f4d2b7b395c4113bf73df4bba2b5345a148c934356e1",
+          "function_address": "006430b4",
+          "name": "ArSoftwareUpdateManager::ManuelOadScan"
+        },
+        {
+          "json": "analiz/native/ui-targeted/system-critical14/00640ecc.json",
+          "json_sha256": "c2cf7287f2a89922b2249d7e0d657c67d7a12984b8fec573d139a2db72e6c9eb",
+          "c": "analiz/native/ui-targeted/system-critical14/00640ecc.c",
+          "c_sha256": "d3e8a11e76d64cc0541993815e52a9ff1752200d38dbc26292666c73a2ab146b",
+          "function_address": "00640ecc",
+          "name": "ArASUManager::_StartStandbyUpdate"
+        }
+      ],
+      "instruction_evidence": [
+        {
+          "address": "0064108c",
+          "instruction": "li a1,0x4b0"
+        },
+        {
+          "address": "006410d8",
+          "instruction": "li a1,0x4b0"
+        },
+        {
+          "address": "006412f4",
+          "instruction": "li a1,0x4b0"
+        },
+        {
+          "address": "0064142c",
+          "instruction": "ori v1,v0,0x1"
+        },
+        {
+          "address": "00641564",
+          "instruction": "ori v1,v0,0x4"
+        }
+      ]
+    },
+    {
+      "title": "Uygulama main callback ve UI başlangıcı",
+      "evidence_kind": "reviewed_static_C_and_assembly",
+      "finding": "ELF startup main callback adayı 0xfd0784, FDE [0xfd0784,0xfd2c0c). a0/a1 girişte stacke saklanır; C çıktısının float,float,int,char** prototipi güvenilir değildir. Build→MSystem Initialize→InitMSrvControl→StartMsrv→ReadResProfile sırası kodda bulunur. Profile sonucu 0 ise UI kurulmadan ortak return yoluna gider. Factory/GetDefault ve oluşturulan app null ise -1; başarılı dalda MApplet::Run(DefaultApp,0xfe,0), ardından NotifyBootUpCompleted. Console/test dalları MSystem::Run yolunu değiştirir.",
+      "open_questions": "Factory +8 callback hedefi ve aktif DefaultApp sınıfı henüz kanıtlanmadı. MApplet Run C prototipi a2=0 argümanını düşürür. Fonksiyon main callback olarak startup/PLT bağından güçlü adaydır; ISO C main prototipi iddia edilmez.",
+      "artifacts": [
+        {
+          "json": "analiz/native/ui-targeted/startup-main1/00fd0784.json",
+          "json_sha256": "d4337933893754a89e0c5e8b74fa69b4f3239c25297be7a3d9fd82429498e20f",
+          "c": "analiz/native/ui-targeted/startup-main1/00fd0784.c",
+          "c_sha256": "6f76813786d35b67496ab642f1ae04d56fb310f45cdbfcc379cf8ab847746ff2",
+          "function_address": "00fd0784",
+          "name": "FUN_00fd0784"
+        }
+      ],
+      "instruction_evidence": [
+        {
+          "address": "00fd07a8",
+          "instruction": "sw a0,0x550(s8)"
+        },
+        {
+          "address": "00fd07ac",
+          "instruction": "sw a1,0x554(s8)"
+        },
+        {
+          "address": "00fd0810",
+          "instruction": "jalr t9"
+        },
+        {
+          "address": "00fd0b70",
+          "instruction": "jalr t9"
+        },
+        {
+          "address": "00fd0d7c",
+          "instruction": "jalr t9"
+        },
+        {
+          "address": "00fd22a0",
+          "instruction": "jalr t9"
+        },
+        {
+          "address": "00fd22c8",
+          "instruction": "jalr t9"
+        },
+        {
+          "address": "00fd22dc",
+          "instruction": "beq v0,zero,0x00fd2308"
+        },
+        {
+          "address": "00fd2374",
+          "instruction": "jalr t9"
+        },
+        {
+          "address": "00fd2388",
+          "instruction": "bne v0,zero,0x00fd23b8"
+        },
+        {
+          "address": "00fd23cc",
+          "instruction": "jalr t9"
+        },
+        {
+          "address": "00fd23ec",
+          "instruction": "bne v0,zero,0x00fd241c"
+        },
+        {
+          "address": "00fd2434",
+          "instruction": "jalr t9"
+        },
+        {
+          "address": "00fd24e8",
+          "instruction": "jalr t9"
+        },
+        {
+          "address": "00fd2b98",
+          "instruction": "jalr t9"
+        }
+      ]
+    }
+  ]
+}

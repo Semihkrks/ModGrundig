@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-22",
+  "evidence_kind": "direct_Ghidra_static_query_not_REA_Evidence",
+  "canonical_run": "attempt1",
+  "target_sha256": "b05201025cab0dd8734708702a910ff54d24eb723e782c0994a26361194c5bf3",
+  "target_sha256_before_after_identical": true,
+  "target_executed": false,
+  "target_bytes_written": false,
+  "saved_ghidra_database_written": false,
+  "name_basis": "Method names occur as log string arguments inside these exact shipped callback bodies; constructor writes and actual body operations corroborate them. No external DirectFB version or ABI table was used.",
+  "boundary_basis": "All eight entries match MIPS .pdr procedure entries. The next .pdr procedure supplies the exclusive upper bound; constructor pointers corroborate entry identity. Every bounded word disassembled; every entry has a MIPS PIC gp setup and bounded return/control flow.",
+  "validation": {
+    "requested": 8,
+    "created_unsaved_functions": 8,
+    "completed_decompiles": 8,
+    "exact_pdr_matches": 8,
+    "overlapping_preexisting_functions": 0,
+    "undisassembled_words": 0,
+    "decompiler_pcode_addresses_outside_bounds": 0,
+    "instruction_count": 1218,
+    "decompiled_callsite_count": 88,
+    "decompiled_calls_with_unresolved_constant_target": 0
+  },
+  "callbacks": [
+    {
+      "entry": "0x2de506d0", "interface_byte_offset": "0x5c", "end_exclusive": "0x2de50928",
+      "shipped_method_name": "_IDirectFBSurface_SetSrcBlendFunction",
+      "inferred_arguments": ["interface pointer", "uint32 blend value"],
+      "behavior": "Normal values 1..12 update private+0x104 and dirty mask private+0xd4|=0x10; clear private+0x10c and dirty |=0x1000000 when needed. Other values require bit 0x100: force +0x104=2 and store full value at +0x10c. Reject otherwise with numeric status 9.",
+      "assembly_anchors": ["0x2de507dc", "0x2de507e0", "0x2de507e8", "0x2de50804", "0x2de508bc"],
+      "muf_use": "RenderImageToSurface +0x5c(interface,5) in local_48==0xffffffff branch"
+    },
+    {
+      "entry": "0x2de504e4", "interface_byte_offset": "0x60", "end_exclusive": "0x2de506d0",
+      "shipped_method_name": "_IDirectFBSurface_SetDstBlendFunction",
+      "inferred_arguments": ["interface pointer", "uint32 blend value"],
+      "behavior": "Accepts values 1..11; changed value updates private+0x108 and private+0xd4|=0x20. Invalid range returns numeric status 9.",
+      "muf_use": "RenderImageToSurface +0x60(interface,6) in local_48==0xffffffff branch"
+    },
+    {
+      "entry": "0x2de5c164", "interface_byte_offset": "0x68", "end_exclusive": "0x2de5c3b0",
+      "shipped_method_name": "_IDirectFBSurface_SetSrcColorKey",
+      "inferred_arguments": ["interface pointer", "uint8 red", "uint8 green", "uint8 blue"],
+      "behavior": "Masks a1/a2/a3 to 8 bits, stores RGB at private+0x29c..0x29e, checks core-surface pixel-format bit30. Palette path calls dfb_palette_search(palette,r,g,b,0x80); other path calls dfb_pixel_from_color(format,&{0,r,g,b}). Result saved at private+0x2a0.",
+      "assembly_anchors": ["0x2de5c1ac", "0x2de5c1b0", "0x2de5c1b8", "0x2de5c28c", "0x2de5c29c", "0x2de5c2c0", "0x2de5c374"],
+      "muf_use": "RenderImageToSurface calls SOURCE interface +0x68 with packed local_48 RGB components in non-0xffffffff branch"
+    },
+    {
+      "entry": "0x2de4f450", "interface_byte_offset": "0x78", "end_exclusive": "0x2de4f628",
+      "shipped_method_name": "_IDirectFBSurface_SetBlittingFlags",
+      "inferred_arguments": ["interface pointer", "uint32 flags"],
+      "behavior": "Changed flags saved at private+0xe0 and private+0xd4|=2.",
+      "muf_use": "Destination flags=1 for 0xffffffff branch; flags=8 for color-key branch. Exact enum labels not assigned from external headers. StretchBlit body explicitly tests bit8 for copying source key."
+    },
+    {
+      "entry": "0x2de5aac8", "interface_byte_offset": "0x88", "end_exclusive": "0x2de5afd0",
+      "shipped_method_name": "_IDirectFBSurface_StretchBlit",
+      "inferred_arguments": ["destination interface", "source interface", "source rectangle pointer or null", "destination rectangle pointer or null"],
+      "behavior": "Checks destination/source surface state and rectangle dimensions; builds rectangles with surface offsets; intersects source rectangle; proportionally adjusts destination for source clipping. dfb_state_set_source(destination private+0xa8,source core surface); when flags&8 copies source private+0x2a0 to destination private+0x118 and dirty|=0x40. Calls and returns dfb_gfxcard_stretchblit(sourceRect,destinationRect,state).",
+      "direct_named_calls": ["dfb_rectangle_intersect@0x2de96bac", "dfb_state_set_source@0x2deeac08", "dfb_gfxcard_stretchblit@0x2ded1998"],
+      "assembly_call_anchors": ["0x2de5acf4", "0x2de5ae68", "0x2de5aeac"],
+      "muf_use": "RenderImageToSurface calls destination +0x88(destination,cached-or-rendered source,&sourceRect,&destinationRect)"
+    },
+    {
+      "entry": "0x2de56064", "interface_byte_offset": "0xd8", "end_exclusive": "0x2de56244",
+      "shipped_method_name": "_IDirectFBSurface_ReleaseSource",
+      "inferred_arguments": ["interface pointer"],
+      "behavior": "Calls dfb_state_set_source(private+0xa8,0) then dfb_state_set_source_mask(private+0xa8,0).",
+      "muf_use": "RenderImageToSurface calls destination +0xd8 immediately after +0x88"
+    },
+    {
+      "entry": "0x2de50308", "interface_byte_offset": "0x100", "end_exclusive": "0x2de504e4",
+      "shipped_method_name": "_IDirectFBSurface_SetAlphaCmpMode",
+      "inferred_arguments": ["interface pointer", "uint32 mode"],
+      "behavior": "Changed value stored at private+0x110 and private+0xd4|=0x100000. No numeric range check in selected body.",
+      "assembly_anchors": ["0x2de50414", "0x2de50428", "0x2de5042c"],
+      "muf_use": "RenderImageToSurface +0x100(interface,1) in local_48==0xffffffff branch"
+    },
+    {
+      "entry": "0x2de5dde0", "interface_byte_offset": "0x0c", "end_exclusive": "0x2de5dfbc",
+      "shipped_method_name": "_IDirectFBSurface_Release",
+      "inferred_arguments": ["interface pointer"],
+      "behavior": "Decrements private+0x0c; calls IDirectFBSurface_Destruct(interface) if resulting reference count is zero.",
+      "assembly_anchors": ["0x2de5dee8", "0x2de5def0", "0x2de5def4", "0x2de5dfa4"],
+      "muf_use": "DoRenderImageToSurface error cleanup uses surface +0x0c. Its C output omits the call argument; the caller assembly must determine a0 rather than copying that decompiler prototype artifact."
+    }
+  ],
+  "shared_body_behavior": "Each wrapper guards g_dfb_lock_flag under g_dfb_lock_counter_mutex, waits with usleep(30000) while upper 16 bits are nonzero, increments then decrements low-side count. Numeric status 0x13 for null interface, 4 for null private data appears across wrappers; named status enums were not imported.",
+  "prototype_caveat": "Detailed exporter JSON signature is the newly created database default undefined callback(void), emitted before decompile inference. Use emitted C plus assembly argument save/use and v0 return for actual inferred shape. C is pseudocode, not original source.",
+  "explicit_unknown_count": 4,
+  "unknowns": [
+    "Exact enum labels for numeric blend values 5/6, blit flag1, alpha comparison mode1 and numeric return statuses were not established from this shipped artifact/header.",
+    "Runtime selection of these constructor instances and execution on a physical TV were not observed.",
+    "Internal state structs and full C API typedef/prototypes are inferred; saved project defaults and decompiler signatures are not authoritative source declarations.",
+    "Callee internals beyond the eight bounded callback bodies were not traversed here; complete render/device behavior remains outside this pass."
+  ]
+}

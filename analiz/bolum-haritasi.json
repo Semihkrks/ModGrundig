@@ -1,0 +1,817 @@
+{
+  "source": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\firmware-dogrulanmis\\Target_GM\\image\\GM_SWImage.bin",
+  "source_bytes": 42483736,
+  "source_sha256": "6d7614730c5f63b9e6727b8b329606b188b581efb366bffde6991aca123852c0",
+  "method": "ASCII command data parsing and stdlib LZMA-alone decompression; no target execution",
+  "limits": {
+    "section_output_bytes": 134217728,
+    "total_output_bytes": 536870912,
+    "lzma_memory_bytes": 167772160
+  },
+  "header": {
+    "declared_script_bytes": 16384,
+    "script_sha256": "ecd2294958f90e3a7a2843004f4f250d66991ed4948646f091f1df194029aaa4",
+    "commands_executed": false
+  },
+  "section_count": 14,
+  "decoded_bytes_total": 78561732,
+  "sections": [
+    {
+      "ordinal": 0,
+      "label": "mboot",
+      "script_offset": 3534,
+      "source_offset": 16384,
+      "compressed_bytes": 943,
+      "load_address": "0x85C00000",
+      "commands": [
+        "filepartload 0x85C00000 $(UpgradeImage) 0x4000 0x3af #mboot",
+        "mscompress7 d 0 0x85C00000 3af 0x84000000 #mboot",
+        "crc32 0x84000000 0x7c00 0x85C00000 #mboot",
+        "mw 0x85C00004 0x5E30077C 4 #mboot",
+        "cmp.b 0x85C00000 0x85C00004 4 #mboot"
+      ],
+      "decompress_destination": "0x84000000",
+      "mscompress7_declared_input_bytes": 943,
+      "crc32_declaration": {
+        "address": "0x84000000",
+        "bytes": 31744,
+        "destination": "0x85C00000"
+      },
+      "expected_crc32_hex": "5e30077c",
+      "compressed_sha256": "79f2bc951a568c4fd2f9c02a7edd9a3c5114c6734d985e6df50f33db56f58781",
+      "compressed_header_hex": "5d00000004007c000000000000002694c6bc82a0bd88885692204240e3811c19",
+      "lzma_alone": {
+        "property_byte": 93,
+        "dictionary_bytes": 67108864,
+        "declared_output_bytes": 31744
+      },
+      "status": "decoded",
+      "output_path": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\bolumler\\00_mboot.bin",
+      "output_bytes": 31744,
+      "output_sha256": "fd789c71170f27b411f6f33b1e21c4ac7295b866f60437d146bfdde8127a6922",
+      "lzma_eof": true,
+      "compressed_unused_bytes": 2,
+      "identification": {
+        "header_hex": "4d5354415253454d49554e46444349530592f1809540000000000000000000008e000000400000084000000400000000020019000c0a1414640064003c000000",
+        "format": "MSTAR-NAND-CIS"
+      },
+      "crc32_validation": {
+        "tested_algorithm": "Python zlib.crc32 (CRC-32/ISO-HDLC)",
+        "bytes": 31744,
+        "actual_hex": "5e30077c",
+        "matches_declaration": true,
+        "bootloader_implementation": "unknown; not executed or disassembled"
+      },
+      "boot_reference_comparison": {
+        "reference_offset": 0,
+        "compared_bytes": 31744,
+        "sha256_matches": true
+      }
+    },
+    {
+      "ordinal": 1,
+      "label": "mboot",
+      "script_offset": 3756,
+      "source_offset": 81920,
+      "compressed_bytes": 903,
+      "load_address": "0x85C10000",
+      "commands": [
+        "filepartload 0x85C10000 $(UpgradeImage) 0x14000 0x387 #mboot",
+        "mscompress7 d 0 0x85C10000 387 0x84010000 #mboot",
+        "crc32 0x84010000 0x2800 0x85C10000 #mboot",
+        "mw 0x85C10004 0x515DEEE1 4 #mboot",
+        "cmp.b 0x85C10000 0x85C10004 4 #mboot"
+      ],
+      "decompress_destination": "0x84010000",
+      "mscompress7_declared_input_bytes": 903,
+      "crc32_declaration": {
+        "address": "0x84010000",
+        "bytes": 10240,
+        "destination": "0x85C10000"
+      },
+      "expected_crc32_hex": "515deee1",
+      "compressed_sha256": "0b0e6cb0137dff505193c5f7d3d5fbfb8352c6650efa428987b3fc342e67954d",
+      "compressed_header_hex": "5d0000000400280000000000000000687ebf0282cd1ce65c818cf6d9477bccf9",
+      "lzma_alone": {
+        "property_byte": 93,
+        "dictionary_bytes": 67108864,
+        "declared_output_bytes": 10240
+      },
+      "status": "decoded",
+      "output_path": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\bolumler\\01_mboot.bin",
+      "output_bytes": 10240,
+      "output_sha256": "4e898df9c52f8d3714b0231389b36af97f153de2114c800807204faea0ea3e0e",
+      "lzma_eof": true,
+      "compressed_unused_bytes": 2,
+      "identification": {
+        "header_hex": "000000000100010002000200030003000400040005000500060006000700070008000800090009000a000a000b000b000c000c000d000d000e000e000f000f00",
+        "format": "unknown"
+      },
+      "crc32_validation": {
+        "tested_algorithm": "Python zlib.crc32 (CRC-32/ISO-HDLC)",
+        "bytes": 10240,
+        "actual_hex": "515deee1",
+        "matches_declaration": true,
+        "bootloader_implementation": "unknown; not executed or disassembled"
+      },
+      "boot_reference_comparison": {
+        "reference_offset": 65536,
+        "compared_bytes": 10240,
+        "sha256_matches": true
+      }
+    },
+    {
+      "ordinal": 2,
+      "label": "mboot",
+      "script_offset": 3979,
+      "source_offset": 147456,
+      "compressed_bytes": 137,
+      "load_address": "0x85C20000",
+      "commands": [
+        "filepartload 0x85C20000 $(UpgradeImage) 0x24000 0x89 #mboot",
+        "mscompress7 d 0 0x85C20000 89 0x84020000 #mboot",
+        "crc32 0x84020000 0x1a00 0x85C20000 #mboot",
+        "mw 0x85C20004 0x4635B451 4 #mboot",
+        "cmp.b 0x85C20000 0x85C20004 4 #mboot"
+      ],
+      "decompress_destination": "0x84020000",
+      "mscompress7_declared_input_bytes": 137,
+      "crc32_declaration": {
+        "address": "0x84020000",
+        "bytes": 6656,
+        "destination": "0x85C20000"
+      },
+      "expected_crc32_hex": "4635b451",
+      "compressed_sha256": "191a28631f054a454b86d044d1c2d38aeafc781dae328b54b942f7c52cbbff6c",
+      "compressed_header_hex": "5d00000004001a0000000000000023003c183a77fa48a0948f8db69af98aec13",
+      "lzma_alone": {
+        "property_byte": 93,
+        "dictionary_bytes": 67108864,
+        "declared_output_bytes": 6656
+      },
+      "status": "decoded",
+      "output_path": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\bolumler\\02_mboot.bin",
+      "output_bytes": 6656,
+      "output_sha256": "e00954a2ca55a6968a7e122efc60b03600fc5a9a60bb4e0cebf928f8ba62ae66",
+      "lzma_eof": true,
+      "compressed_unused_bytes": 2,
+      "identification": {
+        "header_hex": "460100004000000840000008020008000a0035000600030042001e00020002000000000000000000000000000000000000000000000000000000000000000000",
+        "format": "unknown"
+      },
+      "crc32_validation": {
+        "tested_algorithm": "Python zlib.crc32 (CRC-32/ISO-HDLC)",
+        "bytes": 6656,
+        "actual_hex": "4635b451",
+        "matches_declaration": true,
+        "bootloader_implementation": "unknown; not executed or disassembled"
+      },
+      "boot_reference_comparison": {
+        "reference_offset": 131072,
+        "compared_bytes": 6656,
+        "sha256_matches": true
+      }
+    },
+    {
+      "ordinal": 3,
+      "label": "mboot",
+      "script_offset": 4200,
+      "source_offset": 212992,
+      "compressed_bytes": 746,
+      "load_address": "0x85C30000",
+      "commands": [
+        "filepartload 0x85C30000 $(UpgradeImage) 0x34000 0x2ea #mboot",
+        "mscompress7 d 0 0x85C30000 2ea 0x84030000 #mboot",
+        "crc32 0x84030000 0x3800 0x85C30000 #mboot",
+        "mw 0x85C30004 0x0C379B92 4 #mboot",
+        "cmp.b 0x85C30000 0x85C30004 4 #mboot"
+      ],
+      "decompress_destination": "0x84030000",
+      "mscompress7_declared_input_bytes": 746,
+      "crc32_declaration": {
+        "address": "0x84030000",
+        "bytes": 14336,
+        "destination": "0x85C30000"
+      },
+      "expected_crc32_hex": "0c379b92",
+      "compressed_sha256": "0e00264efa848d39f74c215f5f3eb908ff5533acabc0d619d72505102853d18c",
+      "compressed_header_hex": "5d00000004003800000000000000551783eda6b4795990d2fb205c387211b7e0",
+      "lzma_alone": {
+        "property_byte": 93,
+        "dictionary_bytes": 67108864,
+        "declared_output_bytes": 14336
+      },
+      "status": "decoded",
+      "output_path": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\bolumler\\03_mboot.bin",
+      "output_bytes": 14336,
+      "output_sha256": "2a113e5cdac226c8941743f017b131555f0463d4fd070986c98c323eef01c7db",
+      "lzma_eof": true,
+      "compressed_unused_bytes": 2,
+      "identification": {
+        "header_hex": "aa5e3fdad01ddf4afafe67a1b53bbb8b931fecbaac0f0c0ed61a66ec04c416e5a4a69aafefb6ee7da3e7a559e4006bc5fce979b28b8e81136c8ab6cc11d9a7ce",
+        "format": "unknown"
+      },
+      "crc32_validation": {
+        "tested_algorithm": "Python zlib.crc32 (CRC-32/ISO-HDLC)",
+        "bytes": 14336,
+        "actual_hex": "0c379b92",
+        "matches_declaration": true,
+        "bootloader_implementation": "unknown; not executed or disassembled"
+      },
+      "boot_reference_comparison": {
+        "reference_offset": 196608,
+        "compared_bytes": 14336,
+        "sha256_matches": true
+      }
+    },
+    {
+      "ordinal": 4,
+      "label": "mboot",
+      "script_offset": 4423,
+      "source_offset": 278528,
+      "compressed_bytes": 562871,
+      "load_address": "0x85C33800",
+      "commands": [
+        "filepartload 0x85C33800 $(UpgradeImage) 0x44000 0x896b7 #mboot",
+        "mscompress7 d 0 0x85C33800 896b7 0x84033800 #mboot",
+        "crc32 0x84033800 0x1fb54c 0x85C33800 #mboot",
+        "mw 0x85C33804 0xFFC33E7C 4 #mboot",
+        "cmp.b 0x85C33800 0x85C33804 4 #mboot"
+      ],
+      "decompress_destination": "0x84033800",
+      "mscompress7_declared_input_bytes": 562871,
+      "crc32_declaration": {
+        "address": "0x84033800",
+        "bytes": 2078028,
+        "destination": "0x85C33800"
+      },
+      "expected_crc32_hex": "ffc33e7c",
+      "compressed_sha256": "392a45ee1d9bcba1dcc5e86d5cfaeeab11798d7b6bdfed3d0407f263dc4c9fc7",
+      "compressed_header_hex": "5d000000044cb51f00000000000000304238c406cca34e04a274b35994cba05a",
+      "lzma_alone": {
+        "property_byte": 93,
+        "dictionary_bytes": 67108864,
+        "declared_output_bytes": 2078028
+      },
+      "status": "decoded",
+      "output_path": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\bolumler\\04_mboot.bin",
+      "output_bytes": 2078028,
+      "output_sha256": "5c400ef10fccdfbfcd6e3fb2b2249b05150b0d03508c39761bb6284500fcaaa6",
+      "lzma_eof": true,
+      "compressed_unused_bytes": 2,
+      "identification": {
+        "header_hex": "00bf083cffff0934886009ad00bf083cffff09348c6009ad00bf083c00000924806009ad00bf083c01000924806009ad00bf083c00000924406009ad20bf083c",
+        "format": "unknown"
+      },
+      "crc32_validation": {
+        "tested_algorithm": "Python zlib.crc32 (CRC-32/ISO-HDLC)",
+        "bytes": 2078028,
+        "actual_hex": "ffc33e7c",
+        "matches_declaration": true,
+        "bootloader_implementation": "unknown; not executed or disassembled"
+      },
+      "boot_reference_comparison": {
+        "reference_offset": 210944,
+        "compared_bytes": 2078028,
+        "sha256_matches": true
+      }
+    },
+    {
+      "ordinal": 5,
+      "label": "kernel",
+      "script_offset": 4768,
+      "source_offset": 868352,
+      "compressed_bytes": 1780897,
+      "load_address": "0x81E00000",
+      "commands": [
+        "filepartload 0x81E00000 $(UpgradeImage) 0xd4000 0x1b2ca1 #kernel",
+        "mscompress7 d 0 0x81E00000 1b2ca1 0x80200000 #kernel",
+        "crc32 0x80200000 0x1ad678 0x81E00000 #kernel",
+        "mw 0x81E00004 0xF95821C3 4 #kernel",
+        "cmp.b 0x81E00000 0x81E00004 4 #kernel",
+        "nand write.e 0x80200000 KL $(filesize) #kernel"
+      ],
+      "decompress_destination": "0x80200000",
+      "mscompress7_declared_input_bytes": 1780897,
+      "crc32_declaration": {
+        "address": "0x80200000",
+        "bytes": 1758840,
+        "destination": "0x81E00000"
+      },
+      "expected_crc32_hex": "f95821c3",
+      "write_target": "KL",
+      "compressed_sha256": "ae1287301c089740480053a11e13c78ec69c4daf15cc887bebac4a918379174b",
+      "compressed_header_hex": "5d0000000478d61a00000000000013813f3e3ec0aad969ec8df4290272f38607",
+      "lzma_alone": {
+        "property_byte": 93,
+        "dictionary_bytes": 67108864,
+        "declared_output_bytes": 1758840
+      },
+      "status": "decoded",
+      "output_path": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\bolumler\\05_KL.bin",
+      "output_bytes": 1758840,
+      "output_sha256": "d96b0ec70d633751ba8750a1a80aee8cac3a9c5e825744650d749a8862550691",
+      "lzma_eof": true,
+      "compressed_unused_bytes": 2,
+      "identification": {
+        "header_hex": "270519561429e6e45b7bd422001ad6378000000084000000429327a0050502004c696e75782d332e312e31302d6d737461720000000000000000000000000000",
+        "format": "uImage",
+        "timestamp": 1534841890,
+        "payload_bytes": 1758775,
+        "load_address": "0x80000000",
+        "entry_address": "0x84000000",
+        "os_id": 5,
+        "architecture_id": 5,
+        "image_type_id": 2,
+        "compression_id": 0,
+        "name": "Linux-3.1.10-mstar",
+        "header_crc32_matches": true,
+        "payload_present": true,
+        "payload_crc32_matches": true
+      },
+      "crc32_validation": {
+        "tested_algorithm": "Python zlib.crc32 (CRC-32/ISO-HDLC)",
+        "bytes": 1758840,
+        "actual_hex": "f95821c3",
+        "matches_declaration": true,
+        "bootloader_implementation": "unknown; not executed or disassembled"
+      }
+    },
+    {
+      "ordinal": 6,
+      "label": "ROOTFS",
+      "script_offset": 5104,
+      "source_offset": 2703360,
+      "compressed_bytes": 3650196,
+      "load_address": "0x81E00000",
+      "commands": [
+        "filepartload 0x81E00000 $(UpgradeImage) 0x294000 0x37b294 #ROOTFS",
+        "mscompress7 d 0 0x81E00000 37b294 0x80200000 #ROOTFS",
+        "crc32 0x80200000 0x64c000 0x81E00000 #ROOTFS",
+        "mw 0x81E00004 0x4420BB02 4 #ROOTFS",
+        "cmp.b 0x81E00000 0x81E00004 4 #ROOTFS",
+        "ubi write 0x80200000 RFS 0x64c000 0x64c000 #ROOTFS"
+      ],
+      "decompress_destination": "0x80200000",
+      "mscompress7_declared_input_bytes": 3650196,
+      "crc32_declaration": {
+        "address": "0x80200000",
+        "bytes": 6602752,
+        "destination": "0x81E00000"
+      },
+      "expected_crc32_hex": "4420bb02",
+      "write_target": "RFS",
+      "write_bytes": 6602752,
+      "compressed_sha256": "ee62bf365a2e4ed848080bf3e76658ed2ea5c57a8afc661f5e9dd89208e6ce28",
+      "compressed_header_hex": "5d0000000400c0640000000000001885fe0feb394d7a752972a5731ee82b575f",
+      "lzma_alone": {
+        "property_byte": 93,
+        "dictionary_bytes": 67108864,
+        "declared_output_bytes": 6602752
+      },
+      "status": "decoded",
+      "output_path": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\bolumler\\06_RFS.bin",
+      "output_bytes": 6602752,
+      "output_sha256": "14b4b2753b2321ee34f34f5c6f49ab50a4ef1e78c4d5e8a2d90359603ea88dee",
+      "lzma_eof": true,
+      "compressed_unused_bytes": 2,
+      "identification": {
+        "header_hex": "311810064b63f7a50817000000000000001000000600000000000000000000000008000000f00100340000003c00000000a00b00000000000400000002000000",
+        "format": "UBIFS",
+        "node_type": 6,
+        "first_node": {
+          "length": 4096,
+          "stored_crc_hex": "a5f7634b",
+          "tested_crc_formula": "zlib.crc32(node[8:node_length]) XOR 0xffffffff",
+          "computed_crc_hex": "a5f7634b",
+          "crc_matches": true
+        }
+      },
+      "crc32_validation": {
+        "tested_algorithm": "Python zlib.crc32 (CRC-32/ISO-HDLC)",
+        "bytes": 6602752,
+        "actual_hex": "4420bb02",
+        "matches_declaration": true,
+        "bootloader_implementation": "unknown; not executed or disassembled"
+      }
+    },
+    {
+      "ordinal": 7,
+      "label": "mslib",
+      "script_offset": 5438,
+      "source_offset": 6373376,
+      "compressed_bytes": 17383849,
+      "load_address": "0x81E00000",
+      "commands": [
+        "filepartload 0x81E00000 $(UpgradeImage) 0x614000 0x10941a9 #mslib",
+        "mscompress7 d 0 0x81E00000 10941a9 0x80200000 #mslib",
+        "crc32 0x80200000 0x1bbb000 0x81E00000 #mslib",
+        "mw 0x81E00004 0x730B1A1E 4 #mslib",
+        "cmp.b 0x81E00000 0x81E00004 4 #mslib",
+        "ubi write 0x80200000 MSLIB 0x1bbb000 0x1bbb000 #mslib"
+      ],
+      "decompress_destination": "0x80200000",
+      "mscompress7_declared_input_bytes": 17383849,
+      "crc32_declaration": {
+        "address": "0x80200000",
+        "bytes": 29077504,
+        "destination": "0x81E00000"
+      },
+      "expected_crc32_hex": "730b1a1e",
+      "write_target": "MSLIB",
+      "write_bytes": 29077504,
+      "compressed_sha256": "5960fea2d39c40910090255fb24a35128d38f5ec0bfa3abb40274f808de037d3",
+      "compressed_header_hex": "5d0000000400b0bb0100000000001885fe0febd69acb3f07ea60192f68405b3b",
+      "lzma_alone": {
+        "property_byte": 93,
+        "dictionary_bytes": 67108864,
+        "declared_output_bytes": 29077504
+      },
+      "status": "decoded",
+      "output_path": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\bolumler\\07_MSLIB.bin",
+      "output_bytes": 29077504,
+      "output_sha256": "7d92780368b178854a46a8f2e2ee8b625d06c7292695929800e5ecbc56fb827b",
+      "lzma_eof": true,
+      "compressed_unused_bytes": 2,
+      "identification": {
+        "header_hex": "311810065c8b7b2d6841000000000000001000000600000000000000000000000008000000f00100e5000000e001000000507200000000000400000002000000",
+        "format": "UBIFS",
+        "node_type": 6,
+        "first_node": {
+          "length": 4096,
+          "stored_crc_hex": "2d7b8b5c",
+          "tested_crc_formula": "zlib.crc32(node[8:node_length]) XOR 0xffffffff",
+          "computed_crc_hex": "2d7b8b5c",
+          "crc_matches": true
+        }
+      },
+      "crc32_validation": {
+        "tested_algorithm": "Python zlib.crc32 (CRC-32/ISO-HDLC)",
+        "bytes": 29077504,
+        "actual_hex": "730b1a1e",
+        "matches_declaration": true,
+        "bootloader_implementation": "unknown; not executed or disassembled"
+      }
+    },
+    {
+      "ordinal": 8,
+      "label": "applications",
+      "script_offset": 5779,
+      "source_offset": 23805952,
+      "compressed_bytes": 17371399,
+      "load_address": "0x81E00000",
+      "commands": [
+        "filepartload 0x81E00000 $(UpgradeImage) 0x16b4000 0x1091107 #applications",
+        "mscompress7 d 0 0x81E00000 1091107 0x80200000 #applications",
+        "crc32 0x80200000 0x1bbb000 0x81E00000 #applications",
+        "mw 0x81E00004 0xA3743727 4 #applications",
+        "cmp.b 0x81E00000 0x81E00004 4 #applications",
+        "ubi write 0x80200000 APP 0x1bbb000 0x1bbb000 #applications"
+      ],
+      "decompress_destination": "0x80200000",
+      "mscompress7_declared_input_bytes": 17371399,
+      "crc32_declaration": {
+        "address": "0x80200000",
+        "bytes": 29077504,
+        "destination": "0x81E00000"
+      },
+      "expected_crc32_hex": "a3743727",
+      "write_target": "APP",
+      "write_bytes": 29077504,
+      "compressed_sha256": "ecd0958eb8bcc739b03f12120d3a6c03cf2055e5e0b0f2545ea6845c7d928837",
+      "compressed_header_hex": "5d0000000400b0bb0100000000001885fe0ff139f3b55be377b86b206991a784",
+      "lzma_alone": {
+        "property_byte": 93,
+        "dictionary_bytes": 67108864,
+        "declared_output_bytes": 29077504
+      },
+      "status": "decoded",
+      "output_path": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\bolumler\\08_APP.bin",
+      "output_bytes": 29077504,
+      "output_sha256": "353d4fbb6a255c86fcafb161e02218dab7d68fcc350092db31ef37c10791ad35",
+      "lzma_eof": true,
+      "compressed_unused_bytes": 2,
+      "identification": {
+        "header_hex": "31181006fcca5a0e4255000000000000001000000600000000000000000000000008000000f00100e50000004101000000904b00000000000400000002000000",
+        "format": "UBIFS",
+        "node_type": 6,
+        "first_node": {
+          "length": 4096,
+          "stored_crc_hex": "0e5acafc",
+          "tested_crc_formula": "zlib.crc32(node[8:node_length]) XOR 0xffffffff",
+          "computed_crc_hex": "0e5acafc",
+          "crc_matches": true
+        }
+      },
+      "crc32_validation": {
+        "tested_algorithm": "Python zlib.crc32 (CRC-32/ISO-HDLC)",
+        "bytes": 29077504,
+        "actual_hex": "a3743727",
+        "matches_declaration": true,
+        "bootloader_implementation": "unknown; not executed or disassembled"
+      }
+    },
+    {
+      "ordinal": 9,
+      "label": "config",
+      "script_offset": 6162,
+      "source_offset": 41238528,
+      "compressed_bytes": 709447,
+      "load_address": "0x81E00000",
+      "commands": [
+        "filepartload 0x81E00000 $(UpgradeImage) 0x2754000 0xad347 #config",
+        "mscompress7 d 0 0x81E00000 ad347 0x80200000 #config",
+        "crc32 0x80200000 0x2e8000 0x81E00000 #config",
+        "mw 0x81E00004 0x97D4B7DA 4 #config",
+        "cmp.b 0x81E00000 0x81E00004 4 #config",
+        "ubi write 0x80200000 CONFIG 0x400000 #config"
+      ],
+      "decompress_destination": "0x80200000",
+      "mscompress7_declared_input_bytes": 709447,
+      "crc32_declaration": {
+        "address": "0x80200000",
+        "bytes": 3047424,
+        "destination": "0x81E00000"
+      },
+      "expected_crc32_hex": "97d4b7da",
+      "write_target": "CONFIG",
+      "write_bytes": 4194304,
+      "compressed_sha256": "6c90a9f835e19a615ce9efcae486653d02c33ea234cb361ca522cf8aad7b082b",
+      "compressed_header_hex": "5d0000000400802e0000000000001885fe0fe81b2c883f780bc3dc4450f147f2",
+      "lzma_alone": {
+        "property_byte": 93,
+        "dictionary_bytes": 67108864,
+        "declared_output_bytes": 3047424
+      },
+      "status": "decoded",
+      "output_path": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\bolumler\\09_CONFIG.bin",
+      "output_bytes": 3047424,
+      "output_sha256": "965f11021a743004ef4727fc6adf98b615ad6ab41b9534afa7f4f7c6e59839a5",
+      "lzma_eof": true,
+      "compressed_unused_bytes": 2,
+      "identification": {
+        "header_hex": "3118100601192dbdca07000000000000001000000600000000000000000000000008000000f00100180000002400000000c00700000000000400000002000000",
+        "format": "UBIFS",
+        "node_type": 6,
+        "first_node": {
+          "length": 4096,
+          "stored_crc_hex": "bd2d1901",
+          "tested_crc_formula": "zlib.crc32(node[8:node_length]) XOR 0xffffffff",
+          "computed_crc_hex": "bd2d1901",
+          "crc_matches": true
+        }
+      },
+      "crc32_validation": {
+        "tested_algorithm": "Python zlib.crc32 (CRC-32/ISO-HDLC)",
+        "bytes": 3047424,
+        "actual_hex": "97d4b7da",
+        "matches_declaration": true,
+        "bootloader_implementation": "unknown; not executed or disassembled"
+      }
+    },
+    {
+      "ordinal": 10,
+      "label": "customer",
+      "script_offset": 6492,
+      "source_offset": 41959424,
+      "compressed_bytes": 182415,
+      "load_address": "0x81E00000",
+      "commands": [
+        "filepartload 0x81E00000 $(UpgradeImage) 0x2804000 0x2c88f #customer",
+        "mscompress7 d 0 0x81E00000 2c88f 0x80200000 #customer",
+        "crc32 0x80200000 0x1b2000 0x81E00000 #customer",
+        "mw 0x81E00004 0xC370B51E 4 #customer",
+        "cmp.b 0x81E00000 0x81E00004 4 #customer",
+        "ubi write 0x80200000 customer 0x1400000 #customer"
+      ],
+      "decompress_destination": "0x80200000",
+      "mscompress7_declared_input_bytes": 182415,
+      "crc32_declaration": {
+        "address": "0x80200000",
+        "bytes": 1777664,
+        "destination": "0x81E00000"
+      },
+      "expected_crc32_hex": "c370b51e",
+      "write_target": "customer",
+      "write_bytes": 20971520,
+      "compressed_sha256": "3c24dab13de4087bb293a2861a4612b2f96501092f29ae1603e26941ee5a7f98",
+      "compressed_header_hex": "5d0000000400201b0000000000001885fe0ff0b7eb6c381264bc85252dac9d16",
+      "lzma_alone": {
+        "property_byte": 93,
+        "dictionary_bytes": 67108864,
+        "declared_output_bytes": 1777664
+      },
+      "status": "decoded",
+      "output_path": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\bolumler\\10_customer.bin",
+      "output_bytes": 1777664,
+      "output_sha256": "1120e32847d7436be59fe5671fac7dd5d24af11ef08b263dc4d25f02afcf81a0",
+      "lzma_eof": true,
+      "compressed_unused_bytes": 2,
+      "identification": {
+        "header_hex": "31181006ed03fd06ab00000000000000001000000600000000000000000000000008000000f001000e000000a300000000d02400000000000400000002000000",
+        "format": "UBIFS",
+        "node_type": 6,
+        "first_node": {
+          "length": 4096,
+          "stored_crc_hex": "06fd03ed",
+          "tested_crc_formula": "zlib.crc32(node[8:node_length]) XOR 0xffffffff",
+          "computed_crc_hex": "06fd03ed",
+          "crc_matches": true
+        }
+      },
+      "crc32_validation": {
+        "tested_algorithm": "Python zlib.crc32 (CRC-32/ISO-HDLC)",
+        "bytes": 1777664,
+        "actual_hex": "c370b51e",
+        "matches_declaration": true,
+        "bootloader_implementation": "unknown; not executed or disassembled"
+      }
+    },
+    {
+      "ordinal": 11,
+      "label": "customer",
+      "script_offset": 6811,
+      "source_offset": 42156032,
+      "compressed_bytes": 184035,
+      "load_address": "0x81E00000",
+      "commands": [
+        "filepartload 0x81E00000 $(UpgradeImage) 0x2834000 0x2cee3 #customer",
+        "mscompress7 d 0 0x81E00000 2cee3 0x80200000 #customer",
+        "crc32 0x80200000 0x1b2000 0x81E00000 #customer",
+        "mw 0x81E00004 0xB6C892CF 4 #customer",
+        "cmp.b 0x81E00000 0x81E00004 4 #customer",
+        "ubi write 0x80200000 customer_update 0x300000 #customer"
+      ],
+      "decompress_destination": "0x80200000",
+      "mscompress7_declared_input_bytes": 184035,
+      "crc32_declaration": {
+        "address": "0x80200000",
+        "bytes": 1777664,
+        "destination": "0x81E00000"
+      },
+      "expected_crc32_hex": "b6c892cf",
+      "write_target": "customer_update",
+      "write_bytes": 3145728,
+      "compressed_sha256": "8ae03d48992de9c5f7b5980327789c5ba4557460a08c9bf9693ef68f7d14cd8e",
+      "compressed_header_hex": "5d0000000400201b0000000000001885fe0fed66926915772d61eaea77de8aa9",
+      "lzma_alone": {
+        "property_byte": 93,
+        "dictionary_bytes": 67108864,
+        "declared_output_bytes": 1777664
+      },
+      "status": "decoded",
+      "output_path": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\bolumler\\11_customer_update.bin",
+      "output_bytes": 1777664,
+      "output_sha256": "69719ccfe61ca51aa6570f18147bd5cb1f1a3185f05e8a6d00b4a38a38aeb495",
+      "lzma_eof": true,
+      "compressed_unused_bytes": 2,
+      "identification": {
+        "header_hex": "3118100688ca89bd9f00000000000000001000000600000000000000000000000008000000f001000e0000001c00000000c00700000000000400000002000000",
+        "format": "UBIFS",
+        "node_type": 6,
+        "first_node": {
+          "length": 4096,
+          "stored_crc_hex": "bd89ca88",
+          "tested_crc_formula": "zlib.crc32(node[8:node_length]) XOR 0xffffffff",
+          "computed_crc_hex": "bd89ca88",
+          "crc_matches": true
+        }
+      },
+      "crc32_validation": {
+        "tested_algorithm": "Python zlib.crc32 (CRC-32/ISO-HDLC)",
+        "bytes": 1777664,
+        "actual_hex": "b6c892cf",
+        "matches_declaration": true,
+        "bootloader_implementation": "unknown; not executed or disassembled"
+      }
+    },
+    {
+      "ordinal": 12,
+      "label": "certificate",
+      "script_offset": 7167,
+      "source_offset": 42352640,
+      "compressed_bytes": 6497,
+      "load_address": "0x81E00000",
+      "commands": [
+        "filepartload 0x81E00000 $(UpgradeImage) 0x2864000 0x1961 #certificate",
+        "mscompress7 d 0 0x81E00000 1961 0x80200000 #certificate",
+        "crc32 0x80200000 0x193000 0x81E00000 #certificate",
+        "mw 0x81E00004 0xBAEDB7C2 4 #certificate",
+        "cmp.b 0x81E00000 0x81E00004 4 #certificate",
+        "ubi write 0x80200000 certificate 0x300000 #certificate"
+      ],
+      "decompress_destination": "0x80200000",
+      "mscompress7_declared_input_bytes": 6497,
+      "crc32_declaration": {
+        "address": "0x80200000",
+        "bytes": 1650688,
+        "destination": "0x81E00000"
+      },
+      "expected_crc32_hex": "baedb7c2",
+      "write_target": "certificate",
+      "write_bytes": 3145728,
+      "compressed_sha256": "f9748d4efa9bb4ad68a103c39bccbb22352ab38079ec90e13bd1e081b32d4e26",
+      "compressed_header_hex": "5d000000040030190000000000001885fe0fecc5ef7259e4ae3437872d332462",
+      "lzma_alone": {
+        "property_byte": 93,
+        "dictionary_bytes": 67108864,
+        "declared_output_bytes": 1650688
+      },
+      "status": "decoded",
+      "output_path": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\bolumler\\12_certificate.bin",
+      "output_bytes": 1650688,
+      "output_sha256": "86b6e889cdb287198502c58672ffd987898d61f8d33799a68c321d8dabd5347b",
+      "lzma_eof": true,
+      "compressed_unused_bytes": 2,
+      "identification": {
+        "header_hex": "3118100676841c941600000000000000001000000600000000000000000000000008000000f001000d0000001c00000000c00700000000000400000002000000",
+        "format": "UBIFS",
+        "node_type": 6,
+        "first_node": {
+          "length": 4096,
+          "stored_crc_hex": "941c8476",
+          "tested_crc_formula": "zlib.crc32(node[8:node_length]) XOR 0xffffffff",
+          "computed_crc_hex": "941c8476",
+          "crc_matches": true
+        }
+      },
+      "crc32_validation": {
+        "tested_algorithm": "Python zlib.crc32 (CRC-32/ISO-HDLC)",
+        "bytes": 1650688,
+        "actual_hex": "baedb7c2",
+        "matches_declaration": true,
+        "bootloader_implementation": "unknown; not executed or disassembled"
+      }
+    },
+    {
+      "ordinal": 13,
+      "label": "oad",
+      "script_offset": 7532,
+      "source_offset": 42418176,
+      "compressed_bytes": 685,
+      "load_address": "0x81E00000",
+      "commands": [
+        "filepartload 0x81E00000 $(UpgradeImage) 0x2874000 0x2ad #oad",
+        "mscompress7 d 0 0x81E00000 2ad 0x80200000 #oad",
+        "crc32 0x80200000 0x193000 0x81E00000 #oad",
+        "mw 0x81E00004 0x4074058A 4 #oad",
+        "cmp.b 0x81E00000 0x81E00004 4 #oad",
+        "ubi write 0x80200000 oad 0x2800000 #oad"
+      ],
+      "decompress_destination": "0x80200000",
+      "mscompress7_declared_input_bytes": 685,
+      "crc32_declaration": {
+        "address": "0x80200000",
+        "bytes": 1650688,
+        "destination": "0x81E00000"
+      },
+      "expected_crc32_hex": "4074058a",
+      "write_target": "oad",
+      "write_bytes": 41943040,
+      "compressed_sha256": "72378c7d967910dca4e52482cb4bc8ad7c00dca5d36f3468fc953b45ab6abf68",
+      "compressed_header_hex": "5d000000040030190000000000001885fe0feb4343f5c7674094701ec6c6c503",
+      "lzma_alone": {
+        "property_byte": 93,
+        "dictionary_bytes": 67108864,
+        "declared_output_bytes": 1650688
+      },
+      "status": "decoded",
+      "output_path": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\bolumler\\13_oad.bin",
+      "output_bytes": 1650688,
+      "output_sha256": "bbfa0c9a92470a40cc86f3ead26bf820148b8a9fc7a7b0ebbb0102677360bce7",
+      "lzma_eof": true,
+      "compressed_unused_bytes": 2,
+      "identification": {
+        "header_hex": "311810064c8c45b00400000000000000001000000600000000000000000000000008000000f001000d000000b801000000a06800000000000400000002000000",
+        "format": "UBIFS",
+        "node_type": 6,
+        "first_node": {
+          "length": 4096,
+          "stored_crc_hex": "b0458c4c",
+          "tested_crc_formula": "zlib.crc32(node[8:node_length]) XOR 0xffffffff",
+          "computed_crc_hex": "b0458c4c",
+          "crc_matches": true
+        }
+      },
+      "crc32_validation": {
+        "tested_algorithm": "Python zlib.crc32 (CRC-32/ISO-HDLC)",
+        "bytes": 1650688,
+        "actual_hex": "4074058a",
+        "matches_declaration": true,
+        "bootloader_implementation": "unknown; not executed or disassembled"
+      }
+    }
+  ],
+  "boot_reference": {
+    "path": "C:\\Users\\Semih\\Desktop\\grundig\\analiz\\firmware-dogrulanmis\\Target_GM\\image\\GM_Boot.bin",
+    "bytes": 2288972,
+    "sha256": "2a4e909696163e947ceed9106b00ac5512c4c8890a253a623307acd10a7885a1",
+    "comparison": "decompression destination minus first boot destination"
+  },
+  "limitations": [
+    "No device compatibility or active-OSD conclusion",
+    "No update commands executed",
+    "No key files read",
+    "Only declared filepartload ranges extracted"
+  ]
+}

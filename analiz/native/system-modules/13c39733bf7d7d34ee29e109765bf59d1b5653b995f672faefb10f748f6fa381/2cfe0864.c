@@ -1,0 +1,7 @@
+
+void xmlInitializePredefinedEntities(void)
+
+{
+  return;
+}
+

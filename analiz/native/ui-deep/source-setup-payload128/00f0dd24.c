@@ -1,0 +1,7886 @@
+
+undefined4 FUN_00f0dd24(MWidget *param_1)
+
+{
+  char cVar1;
+  bool bVar2;
+  undefined2 uVar3;
+  long lVar4;
+  long lVar5;
+  long lVar6;
+  long lVar7;
+  undefined4 uVar8;
+  ulong uVar9;
+  ulong uVar10;
+  ulong uVar11;
+  int *piVar12;
+  MEvtHandle *pMVar13;
+  ArTvManager *pAVar14;
+  char *pcVar15;
+  undefined3 extraout_var;
+  MenuBackgroundFrame *this;
+  MMainFrame *pMVar16;
+  int iVar17;
+  ulong uVar18;
+  byte bStack_ecf;
+  allocator aaStack_ec0 [4];
+  string asStack_ebc [4];
+  allocator aaStack_eb8 [4];
+  string asStack_eb4 [4];
+  allocator aaStack_eb0 [4];
+  string asStack_eac [4];
+  string asStack_ea8 [4];
+  string asStack_ea4 [4];
+  string asStack_ea0 [4];
+  string asStack_e9c [4];
+  MImg aMStack_e98 [20];
+  MImg aMStack_e84 [20];
+  MImg aMStack_e70 [20];
+  MImg aMStack_e5c [20];
+  ArResourceManager aAStack_e48 [4];
+  MImg aMStack_e44 [20];
+  MImg aMStack_e30 [20];
+  MImg aMStack_e1c [20];
+  MImg aMStack_e08 [20];
+  MImg aMStack_df4 [20];
+  MImg aMStack_de0 [20];
+  MImg aMStack_dcc [20];
+  MImg aMStack_db8 [20];
+  MImg aMStack_da4 [20];
+  MImg aMStack_d90 [20];
+  MImg aMStack_d7c [20];
+  MImg aMStack_d68 [20];
+  MImg aMStack_d54 [20];
+  MImg aMStack_d40 [20];
+  MImg aMStack_d2c [20];
+  MImg aMStack_d18 [20];
+  MImg aMStack_d04 [20];
+  MImg aMStack_cf0 [20];
+  MImg aMStack_cdc [20];
+  MImg aMStack_cc8 [20];
+  MImg aMStack_cb4 [20];
+  MImg aMStack_ca0 [20];
+  MImg aMStack_c8c [20];
+  MImg aMStack_c78 [20];
+  MImg aMStack_c64 [20];
+  MImg aMStack_c50 [20];
+  MImg aMStack_c3c [20];
+  MImg aMStack_c28 [20];
+  MImg aMStack_c14 [20];
+  MImg aMStack_c00 [20];
+  MImg aMStack_bec [20];
+  MImg aMStack_bd8 [20];
+  MImg aMStack_bc4 [20];
+  MImg aMStack_bb0 [20];
+  MImg aMStack_b9c [20];
+  MImg aMStack_b88 [20];
+  MImg aMStack_b74 [20];
+  MImg aMStack_b60 [20];
+  MImg aMStack_b4c [20];
+  MImg aMStack_b38 [20];
+  MImg aMStack_b24 [20];
+  MImg aMStack_b10 [20];
+  MImg aMStack_afc [20];
+  MImg aMStack_ae8 [20];
+  MImg aMStack_ad4 [20];
+  MImg aMStack_ac0 [20];
+  MImg aMStack_aac [20];
+  MImg aMStack_a98 [20];
+  MImg aMStack_a84 [20];
+  MImg aMStack_a70 [20];
+  MImg aMStack_a5c [20];
+  MImg aMStack_a48 [20];
+  MImg aMStack_a34 [20];
+  MImg aMStack_a20 [20];
+  MImg aMStack_a0c [20];
+  MImg aMStack_9f8 [20];
+  MImg aMStack_9e4 [20];
+  MImg aMStack_9d0 [20];
+  MImg aMStack_9bc [20];
+  MImg aMStack_9a8 [20];
+  MImg aMStack_994 [20];
+  MImg aMStack_980 [20];
+  MImg aMStack_96c [20];
+  MImg aMStack_958 [20];
+  MImg aMStack_944 [20];
+  MImg aMStack_930 [20];
+  MImg aMStack_91c [20];
+  MImg aMStack_908 [20];
+  MImg aMStack_8f4 [20];
+  MImg aMStack_8e0 [20];
+  MImg aMStack_8cc [20];
+  MImg aMStack_8b8 [20];
+  MImg aMStack_8a4 [20];
+  MImg aMStack_890 [20];
+  MImg aMStack_87c [20];
+  MImg aMStack_868 [20];
+  MImg aMStack_854 [20];
+  MImg aMStack_840 [20];
+  MImg aMStack_82c [20];
+  MImg aMStack_818 [20];
+  MImg aMStack_804 [20];
+  MImg aMStack_7f0 [20];
+  MImg aMStack_7dc [20];
+  MImg aMStack_7c8 [20];
+  MImg aMStack_7b4 [20];
+  MImg aMStack_7a0 [20];
+  MImg aMStack_78c [20];
+  MImg aMStack_778 [20];
+  MImg aMStack_764 [20];
+  MImg aMStack_750 [20];
+  MImg aMStack_73c [20];
+  MImg aMStack_728 [20];
+  MImg aMStack_714 [20];
+  MImg aMStack_700 [20];
+  MImg aMStack_6ec [20];
+  MImg aMStack_6d8 [20];
+  MImg aMStack_6c4 [20];
+  MImg aMStack_6b0 [20];
+  MImg aMStack_69c [20];
+  MImg aMStack_688 [20];
+  MImg aMStack_674 [20];
+  MImg aMStack_660 [20];
+  MImg aMStack_64c [20];
+  MImg aMStack_638 [20];
+  MImg aMStack_624 [20];
+  MImg aMStack_610 [20];
+  MImg aMStack_5fc [20];
+  MImg aMStack_5e8 [20];
+  MImg aMStack_5d4 [20];
+  MImg aMStack_5c0 [20];
+  MImg aMStack_5ac [20];
+  MImg aMStack_598 [20];
+  MImg aMStack_584 [20];
+  MImg aMStack_570 [20];
+  MImg aMStack_55c [20];
+  MImg aMStack_548 [20];
+  MImg aMStack_534 [20];
+  MImg aMStack_520 [20];
+  MImg aMStack_50c [20];
+  MImg aMStack_4f8 [20];
+  MImg aMStack_4e4 [20];
+  MImg aMStack_4d0 [20];
+  MImg aMStack_4bc [20];
+  MImg aMStack_4a8 [20];
+  MImg aMStack_494 [20];
+  MImg aMStack_480 [20];
+  MImg aMStack_46c [20];
+  MImg aMStack_458 [20];
+  MImg aMStack_444 [20];
+  MImg aMStack_430 [20];
+  MImg aMStack_41c [20];
+  MImg aMStack_408 [20];
+  MImg aMStack_3f4 [20];
+  MImg aMStack_3e0 [20];
+  MImg aMStack_3cc [20];
+  MImg aMStack_3b8 [20];
+  _Rect a_Stack_3a4 [16];
+  undefined4 uStack_394;
+  undefined4 uStack_390;
+  undefined4 uStack_38c;
+  undefined4 uStack_388;
+  string asStack_384 [4];
+  string asStack_380 [4];
+  char acStack_37c [60];
+  ostringstream aoStack_340 [244];
+  int iStack_24c;
+  string *psStack_248;
+  string *psStack_244;
+  string *psStack_240;
+  int iStack_23c;
+  MString *pMStack_238;
+  MString *pMStack_234;
+  undefined4 uStack_230;
+  int iStack_22c;
+  MenuBackgroundFrame *pMStack_228;
+  int iStack_224;
+  char *pcStack_220;
+  char *pcStack_21c;
+  char *pcStack_218;
+  char *pcStack_214;
+  int iStack_210;
+  char *pcStack_20c;
+  string *psStack_208;
+  int iStack_204;
+  MString *pMStack_200;
+  MString *pMStack_1fc;
+  undefined4 uStack_1f8;
+  char *pcStack_1f4;
+  char *pcStack_1f0;
+  int iStack_1ec;
+  int iStack_1e8;
+  int iStack_1e4;
+  MImg *pMStack_1e0;
+  ArResourceManager *pAStack_1dc;
+  int iStack_1d8;
+  MString *pMStack_1d4;
+  MString *pMStack_1d0;
+  undefined4 uStack_1cc;
+  MImg *pMStack_1c8;
+  ImageButton *pIStack_1c4;
+  MImg *pMStack_1c0;
+  ImageButton *pIStack_1bc;
+  ComboButton *pCStack_1b8;
+  ComboButton *pCStack_1b4;
+  ComboButton *pCStack_1b0;
+  MImg *pMStack_1ac;
+  ImageButton *pIStack_1a8;
+  ComboButton *pCStack_1a4;
+  MImg *pMStack_1a0;
+  ImageButton *pIStack_19c;
+  MImg *pMStack_198;
+  ImageButton *pIStack_194;
+  ComboButton *pCStack_190;
+  ComboButton *pCStack_18c;
+  MImg *pMStack_188;
+  ImageButton *pIStack_184;
+  MImg *pMStack_180;
+  ImageButton *pIStack_17c;
+  MImg *pMStack_178;
+  ImageButton *pIStack_174;
+  ComboButton *pCStack_170;
+  ComboButton *pCStack_16c;
+  ComboButton *pCStack_168;
+  ComboButton *pCStack_164;
+  ComboButton *pCStack_160;
+  ComboButton *pCStack_15c;
+  ComboButton *pCStack_158;
+  ComboButton *pCStack_154;
+  MImg *pMStack_150;
+  NumberEdit *pNStack_14c;
+  ComboButton *pCStack_148;
+  ComboButton *pCStack_144;
+  ComboButton *pCStack_140;
+  ComboButton *pCStack_13c;
+  TextBox *pTStack_138;
+  TextBox *pTStack_134;
+  TextBox *pTStack_130;
+  TextBox *pTStack_12c;
+  TextBox *pTStack_128;
+  TextBox *pTStack_124;
+  Image *pIStack_120;
+  TextBox *pTStack_11c;
+  TextBox *pTStack_118;
+  Image *pIStack_114;
+  TextBox *pTStack_110;
+  TextBox *pTStack_10c;
+  MImg *pMStack_108;
+  MImg *pMStack_104;
+  MImg *pMStack_100;
+  MImg *pMStack_fc;
+  ScrollListContainer *pSStack_f8;
+  AbsContainer *pAStack_f4;
+  AbsContainer *pAStack_f0;
+  AbsContainer *pAStack_ec;
+  AbsContainer *pAStack_e8;
+  AbsContainer *pAStack_e4;
+  TextBox *pTStack_e0;
+  ComboButton *pCStack_dc;
+  ComboButton *pCStack_d8;
+  ComboButton *pCStack_d4;
+  MImg *pMStack_d0;
+  ImageButton *pIStack_cc;
+  ComboButton *pCStack_c8;
+  ComboButton *pCStack_c4;
+  ComboButton *pCStack_c0;
+  ComboButton *pCStack_bc;
+  MImg *pMStack_b8;
+  ImageButton *pIStack_b4;
+  MImg *pMStack_b0;
+  ImageButton *pIStack_ac;
+  AbsContainer *pAStack_a8;
+  MImg *pMStack_a4;
+  ImageButton *pIStack_a0;
+  ComboButton *pCStack_9c;
+  MImg *pMStack_98;
+  ImageButton *pIStack_94;
+  MImg *pMStack_90;
+  ImageButton *pIStack_8c;
+  MImg *pMStack_88;
+  ImageButton *pIStack_84;
+  MImg *pMStack_80;
+  ImageButton *pIStack_7c;
+  MImg *pMStack_78;
+  ImageButton *pIStack_74;
+  MImg *pMStack_70;
+  MImg *pMStack_6c;
+  MImg *pMStack_68;
+  MImg *pMStack_64;
+  ScrollListContainer *pSStack_60;
+  MImg *pMStack_5c;
+  MImg *pMStack_58;
+  MImg *pMStack_54;
+  MImg *pMStack_50;
+  ScrollListContainer *pSStack_4c;
+  AbsContainer *pAStack_48;
+  Image *pIStack_44;
+  Image *pIStack_40;
+  MImg *pMStack_3c;
+  MImg *pMStack_38;
+  MImg *pMStack_34;
+  MImg *pMStack_30;
+  ScrollListContainer *pSStack_2c;
+  Button *pBStack_28;
+  
+  lVar4 = GetRcEngine::RcGetNum(0x5243);
+  lVar5 = GetRcEngine::RcGetNum(0x5244);
+  lVar6 = GetRcEngine::RcGetNum(0x5242);
+  lVar7 = GetRcEngine::RcGetNum(0x5241);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pBStack_28 = operator_new(0x250);
+                    /* try { // try from 00f0de24 to 00f0de2b has its CatchHandler @ 00f0de54 */
+  Button::Button(pBStack_28,*(MWidget **)(param_1 + 0x38),a_Stack_3a4,0,0);
+  *(Button **)(param_1 + 0x180) = pBStack_28;
+  if (*(int *)(param_1 + 0x180) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x152);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x180) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x180) + 0x39) = 0;
+  iVar17 = *(int *)(param_1 + 0x180);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x180);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x180);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x180);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x180);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x180);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x180) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x180) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x180) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x180) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x180) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x180) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x180) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x180) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x180);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x180);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x180);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x180);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x38) + 0x34))
+            (*(undefined4 *)(param_1 + 0x38),*(undefined4 *)(param_1 + 0x180));
+  lVar4 = GetRcEngine::RcGetNum(0x5896);
+  lVar5 = GetRcEngine::RcGetNum(0x5897);
+  lVar6 = GetRcEngine::RcGetNum(0x5895);
+  lVar7 = GetRcEngine::RcGetNum(0x5894);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pSStack_2c = operator_new(0xbf8);
+                    /* try { // try from 00f0e234 to 00f0e23b has its CatchHandler @ 00f0e264 */
+  ScrollListContainer::ScrollListContainer(pSStack_2c,*(MWidget **)(param_1 + 0x38),a_Stack_3a4,0,1)
+  ;
+  *(ScrollListContainer **)(param_1 + 0x184) = pSStack_2c;
+  if (*(int *)(param_1 + 0x184) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x16b);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x184) + 0x39) = 0;
+  iVar17 = *(int *)(param_1 + 0x184);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x184);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x184);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x184);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x184);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x184);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x184) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x184) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x184) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x184) + 0xf4);
+  ScrollListContainer::SetScrollBarWidth(*(ulong *)(param_1 + 0x184));
+  ScrollListContainer::SetScrollBarWindSize(*(ulong *)(param_1 + 0x184));
+  pMStack_30 = *(MImg **)(param_1 + 0x184);
+  MImg::MImg(aMStack_3b8,0x5cd);
+                    /* try { // try from 00f0e4c8 to 00f0e4cf has its CatchHandler @ 00f0e6cc */
+  MImg::MImg(aMStack_3cc,0x5cd);
+                    /* try { // try from 00f0e4e4 to 00f0e4eb has its CatchHandler @ 00f0e66c */
+  MImg::MImg(aMStack_3e0,0x5cd);
+                    /* try { // try from 00f0e500 to 00f0e507 has its CatchHandler @ 00f0e5cc */
+  MImg::MImg(aMStack_3f4,0x5cd);
+                    /* try { // try from 00f0e52c to 00f0e533 has its CatchHandler @ 00f0e570 */
+  ScrollListContainer::SetScrollbarImage(pMStack_30,aMStack_3b8,aMStack_3cc,aMStack_3e0);
+                    /* try { // try from 00f0e544 to 00f0e54b has its CatchHandler @ 00f0e5cc */
+  MImg::~MImg(aMStack_3f4);
+                    /* try { // try from 00f0e55c to 00f0e563 has its CatchHandler @ 00f0e66c */
+  MImg::~MImg(aMStack_3e0);
+                    /* try { // try from 00f0e5b8 to 00f0e5bf has its CatchHandler @ 00f0e6cc */
+  MImg::~MImg(aMStack_3cc);
+  MImg::~MImg(aMStack_3b8);
+  pMStack_34 = *(MImg **)(param_1 + 0x184);
+  MImg::MImg(aMStack_408,0x5cd);
+                    /* try { // try from 00f0e658 to 00f0e65f has its CatchHandler @ 00f0e8ec */
+  MImg::MImg(aMStack_41c,0x5cd);
+                    /* try { // try from 00f0e6b8 to 00f0e6bf has its CatchHandler @ 00f0e88c */
+  MImg::MImg(aMStack_430,0x5cd);
+                    /* try { // try from 00f0e720 to 00f0e727 has its CatchHandler @ 00f0e7ec */
+  MImg::MImg(aMStack_444,0x5cd);
+                    /* try { // try from 00f0e74c to 00f0e753 has its CatchHandler @ 00f0e790 */
+  ScrollListContainer::SetScrollbarUpImage(pMStack_34,aMStack_408,aMStack_41c,aMStack_430);
+                    /* try { // try from 00f0e764 to 00f0e76b has its CatchHandler @ 00f0e7ec */
+  MImg::~MImg(aMStack_444);
+                    /* try { // try from 00f0e77c to 00f0e783 has its CatchHandler @ 00f0e88c */
+  MImg::~MImg(aMStack_430);
+                    /* try { // try from 00f0e7d8 to 00f0e7df has its CatchHandler @ 00f0e8ec */
+  MImg::~MImg(aMStack_41c);
+  MImg::~MImg(aMStack_408);
+  pMStack_38 = *(MImg **)(param_1 + 0x184);
+  MImg::MImg(aMStack_458,0x5cd);
+                    /* try { // try from 00f0e878 to 00f0e87f has its CatchHandler @ 00f0eb0c */
+  MImg::MImg(aMStack_46c,0x5cd);
+                    /* try { // try from 00f0e8d8 to 00f0e8df has its CatchHandler @ 00f0eaac */
+  MImg::MImg(aMStack_480,0x5cd);
+                    /* try { // try from 00f0e940 to 00f0e947 has its CatchHandler @ 00f0ea0c */
+  MImg::MImg(aMStack_494,0x5cd);
+                    /* try { // try from 00f0e96c to 00f0e973 has its CatchHandler @ 00f0e9b0 */
+  ScrollListContainer::SetScrollbarMiddleImage(pMStack_38,aMStack_458,aMStack_46c,aMStack_480);
+                    /* try { // try from 00f0e984 to 00f0e98b has its CatchHandler @ 00f0ea0c */
+  MImg::~MImg(aMStack_494);
+                    /* try { // try from 00f0e99c to 00f0e9a3 has its CatchHandler @ 00f0eaac */
+  MImg::~MImg(aMStack_480);
+                    /* try { // try from 00f0e9f8 to 00f0e9ff has its CatchHandler @ 00f0eb0c */
+  MImg::~MImg(aMStack_46c);
+  MImg::~MImg(aMStack_458);
+  pMStack_3c = *(MImg **)(param_1 + 0x184);
+  MImg::MImg(aMStack_4a8,0x5cd);
+                    /* try { // try from 00f0ea98 to 00f0ea9f has its CatchHandler @ 00f0ee18 */
+  MImg::MImg(aMStack_4bc,0x5cd);
+                    /* try { // try from 00f0eaf8 to 00f0eaff has its CatchHandler @ 00f0edb8 */
+  MImg::MImg(aMStack_4d0,0x5cd);
+                    /* try { // try from 00f0eb60 to 00f0eb67 has its CatchHandler @ 00f0ec2c */
+  MImg::MImg(aMStack_4e4,0x5cd);
+                    /* try { // try from 00f0eb8c to 00f0eb93 has its CatchHandler @ 00f0ebd0 */
+  ScrollListContainer::SetScrollbarBottomImage(pMStack_3c,aMStack_4a8,aMStack_4bc,aMStack_4d0);
+                    /* try { // try from 00f0eba4 to 00f0ebab has its CatchHandler @ 00f0ec2c */
+  MImg::~MImg(aMStack_4e4);
+                    /* try { // try from 00f0ebbc to 00f0ebc3 has its CatchHandler @ 00f0edb8 */
+  MImg::~MImg(aMStack_4d0);
+                    /* try { // try from 00f0ec18 to 00f0ec1f has its CatchHandler @ 00f0ee18 */
+  MImg::~MImg(aMStack_4bc);
+  MImg::~MImg(aMStack_4a8);
+  MWidget::SetFlag(*(undefined4 *)(param_1 + 0x184),2,0);
+  (**(code **)(**(int **)(param_1 + 0x38) + 0x34))
+            (*(undefined4 *)(param_1 + 0x38),*(undefined4 *)(param_1 + 0x184));
+  lVar4 = GetRcEngine::RcGetNum(0x5329);
+  lVar5 = GetRcEngine::RcGetNum(0x532a);
+  lVar6 = GetRcEngine::RcGetNum(0x5328);
+  lVar7 = GetRcEngine::RcGetNum(0x5327);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_40 = operator_new(0x2b4);
+                    /* try { // try from 00f0eda4 to 00f0edab has its CatchHandler @ 00f0ee5c */
+  Image::Image(pIStack_40,*(MWidget **)(param_1 + 0x38),a_Stack_3a4,0,2);
+  *(Image **)(param_1 + 0x188) = pIStack_40;
+  if (*(int *)(param_1 + 0x188) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x182);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x188) + 0x260);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x188) + 0x274);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x188) + 0x288);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x188) + 0x29c);
+  iVar17 = *(int *)(param_1 + 0x188);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x188);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x188);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x188);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x188);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x188);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x188) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x188) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x188) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x188) + 0xf4);
+  MWidget::SetFlag(*(undefined4 *)(param_1 + 0x188),2,0);
+  (**(code **)(**(int **)(param_1 + 0x38) + 0x34))
+            (*(undefined4 *)(param_1 + 0x38),*(undefined4 *)(param_1 + 0x188));
+  lVar4 = GetRcEngine::RcGetNum(0x5321);
+  lVar5 = GetRcEngine::RcGetNum(0x5326);
+  lVar6 = GetRcEngine::RcGetNum(0x5320);
+  lVar7 = GetRcEngine::RcGetNum(0x531f);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_44 = operator_new(0x2b4);
+                    /* try { // try from 00f0f1f0 to 00f0f1f7 has its CatchHandler @ 00f0f220 */
+  Image::Image(pIStack_44,*(MWidget **)(param_1 + 0x38),a_Stack_3a4,0,3);
+  *(Image **)(param_1 + 0x18c) = pIStack_44;
+  if (*(int *)(param_1 + 0x18c) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x196);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x18c) + 0x260);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x18c) + 0x274);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x18c) + 0x288);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x18c) + 0x29c);
+  iVar17 = *(int *)(param_1 + 0x18c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x18c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x18c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x18c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x18c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x18c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x18c) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x18c) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x18c) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x18c) + 0xf4);
+  MWidget::SetFlag(*(undefined4 *)(param_1 + 0x18c),2,0);
+  (**(code **)(**(int **)(param_1 + 0x38) + 0x34))
+            (*(undefined4 *)(param_1 + 0x38),*(undefined4 *)(param_1 + 0x18c));
+  lVar4 = GetRcEngine::RcGetNum(0x4ee1);
+  lVar5 = GetRcEngine::RcGetNum(0x4ee2);
+  lVar6 = GetRcEngine::RcGetNum(0x4ee0);
+  lVar7 = GetRcEngine::RcGetNum(0x4edb);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pAStack_48 = operator_new(0x264);
+                    /* try { // try from 00f0f5b4 to 00f0f5bb has its CatchHandler @ 00f0f5e4 */
+  AbsContainer::AbsContainer(pAStack_48,*(MWidget **)(param_1 + 0x38),a_Stack_3a4,0,4);
+  *(AbsContainer **)(param_1 + 400) = pAStack_48;
+  if (*(int *)(param_1 + 400) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x1aa);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 400) + 0x39) = 0;
+  iVar17 = *(int *)(param_1 + 400);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 400);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 400);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 400);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 400);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 400);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 400) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 400) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 400) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 400) + 0xf4);
+  (**(code **)(**(int **)(param_1 + 0x38) + 0x34))
+            (*(undefined4 *)(param_1 + 0x38),*(undefined4 *)(param_1 + 400));
+  lVar4 = GetRcEngine::RcGetNum(0x5335);
+  lVar5 = GetRcEngine::RcGetNum(0x5336);
+  lVar6 = GetRcEngine::RcGetNum(0x5334);
+  lVar7 = GetRcEngine::RcGetNum(0x5333);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pSStack_4c = operator_new(0xbf8);
+                    /* try { // try from 00f0f8d0 to 00f0f8d7 has its CatchHandler @ 00f0f900 */
+  ScrollListContainer::ScrollListContainer(pSStack_4c,*(MWidget **)(param_1 + 0x38),a_Stack_3a4,0,5)
+  ;
+  *(ScrollListContainer **)(param_1 + 0x194) = pSStack_4c;
+  if (*(int *)(param_1 + 0x194) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x1ba);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x194) + 0x39) = 0;
+  iVar17 = *(int *)(param_1 + 0x194);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x194);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x194);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x194);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x194);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x194);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x194) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x194) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x194) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x194) + 0xf4);
+  ScrollListContainer::SetScrollBarWidth(*(ulong *)(param_1 + 0x194));
+  ScrollListContainer::SetScrollBarWindSize(*(ulong *)(param_1 + 0x194));
+  pMStack_50 = *(MImg **)(param_1 + 0x194);
+  MImg::MImg(aMStack_4f8,0x5cd);
+                    /* try { // try from 00f0fb64 to 00f0fb6b has its CatchHandler @ 00f0fd68 */
+  MImg::MImg(aMStack_50c,0x5cd);
+                    /* try { // try from 00f0fb80 to 00f0fb87 has its CatchHandler @ 00f0fd08 */
+  MImg::MImg(aMStack_520,0x5cd);
+                    /* try { // try from 00f0fb9c to 00f0fba3 has its CatchHandler @ 00f0fc68 */
+  MImg::MImg(aMStack_534,0x5cd);
+                    /* try { // try from 00f0fbc8 to 00f0fbcf has its CatchHandler @ 00f0fc0c */
+  ScrollListContainer::SetScrollbarImage(pMStack_50,aMStack_4f8,aMStack_50c,aMStack_520);
+                    /* try { // try from 00f0fbe0 to 00f0fbe7 has its CatchHandler @ 00f0fc68 */
+  MImg::~MImg(aMStack_534);
+                    /* try { // try from 00f0fbf8 to 00f0fbff has its CatchHandler @ 00f0fd08 */
+  MImg::~MImg(aMStack_520);
+                    /* try { // try from 00f0fc54 to 00f0fc5b has its CatchHandler @ 00f0fd68 */
+  MImg::~MImg(aMStack_50c);
+  MImg::~MImg(aMStack_4f8);
+  pMStack_54 = *(MImg **)(param_1 + 0x194);
+  MImg::MImg(aMStack_548,0x5cd);
+                    /* try { // try from 00f0fcf4 to 00f0fcfb has its CatchHandler @ 00f0ff88 */
+  MImg::MImg(aMStack_55c,0x5cd);
+                    /* try { // try from 00f0fd54 to 00f0fd5b has its CatchHandler @ 00f0ff28 */
+  MImg::MImg(aMStack_570,0x5cd);
+                    /* try { // try from 00f0fdbc to 00f0fdc3 has its CatchHandler @ 00f0fe88 */
+  MImg::MImg(aMStack_584,0x5cd);
+                    /* try { // try from 00f0fde8 to 00f0fdef has its CatchHandler @ 00f0fe2c */
+  ScrollListContainer::SetScrollbarUpImage(pMStack_54,aMStack_548,aMStack_55c,aMStack_570);
+                    /* try { // try from 00f0fe00 to 00f0fe07 has its CatchHandler @ 00f0fe88 */
+  MImg::~MImg(aMStack_584);
+                    /* try { // try from 00f0fe18 to 00f0fe1f has its CatchHandler @ 00f0ff28 */
+  MImg::~MImg(aMStack_570);
+                    /* try { // try from 00f0fe74 to 00f0fe7b has its CatchHandler @ 00f0ff88 */
+  MImg::~MImg(aMStack_55c);
+  MImg::~MImg(aMStack_548);
+  pMStack_58 = *(MImg **)(param_1 + 0x194);
+  MImg::MImg(aMStack_598,0x5cd);
+                    /* try { // try from 00f0ff14 to 00f0ff1b has its CatchHandler @ 00f101a8 */
+  MImg::MImg(aMStack_5ac,0x5cd);
+                    /* try { // try from 00f0ff74 to 00f0ff7b has its CatchHandler @ 00f10148 */
+  MImg::MImg(aMStack_5c0,0x5cd);
+                    /* try { // try from 00f0ffdc to 00f0ffe3 has its CatchHandler @ 00f100a8 */
+  MImg::MImg(aMStack_5d4,0x5cd);
+                    /* try { // try from 00f10008 to 00f1000f has its CatchHandler @ 00f1004c */
+  ScrollListContainer::SetScrollbarMiddleImage(pMStack_58,aMStack_598,aMStack_5ac,aMStack_5c0);
+                    /* try { // try from 00f10020 to 00f10027 has its CatchHandler @ 00f100a8 */
+  MImg::~MImg(aMStack_5d4);
+                    /* try { // try from 00f10038 to 00f1003f has its CatchHandler @ 00f10148 */
+  MImg::~MImg(aMStack_5c0);
+                    /* try { // try from 00f10094 to 00f1009b has its CatchHandler @ 00f101a8 */
+  MImg::~MImg(aMStack_5ac);
+  MImg::~MImg(aMStack_598);
+  pMStack_5c = *(MImg **)(param_1 + 0x194);
+  MImg::MImg(aMStack_5e8,0x5cd);
+                    /* try { // try from 00f10134 to 00f1013b has its CatchHandler @ 00f104b4 */
+  MImg::MImg(aMStack_5fc,0x5cd);
+                    /* try { // try from 00f10194 to 00f1019b has its CatchHandler @ 00f10454 */
+  MImg::MImg(aMStack_610,0x5cd);
+                    /* try { // try from 00f101fc to 00f10203 has its CatchHandler @ 00f102c8 */
+  MImg::MImg(aMStack_624,0x5cd);
+                    /* try { // try from 00f10228 to 00f1022f has its CatchHandler @ 00f1026c */
+  ScrollListContainer::SetScrollbarBottomImage(pMStack_5c,aMStack_5e8,aMStack_5fc,aMStack_610);
+                    /* try { // try from 00f10240 to 00f10247 has its CatchHandler @ 00f102c8 */
+  MImg::~MImg(aMStack_624);
+                    /* try { // try from 00f10258 to 00f1025f has its CatchHandler @ 00f10454 */
+  MImg::~MImg(aMStack_610);
+                    /* try { // try from 00f102b4 to 00f102bb has its CatchHandler @ 00f104b4 */
+  MImg::~MImg(aMStack_5fc);
+  MImg::~MImg(aMStack_5e8);
+  MWidget::SetFlag(*(undefined4 *)(param_1 + 0x194),2,0);
+  (**(code **)(**(int **)(param_1 + 0x38) + 0x34))
+            (*(undefined4 *)(param_1 + 0x38),*(undefined4 *)(param_1 + 0x194));
+  lVar4 = GetRcEngine::RcGetNum(0x533d);
+  lVar5 = GetRcEngine::RcGetNum(0x533e);
+  lVar6 = GetRcEngine::RcGetNum(0x533c);
+  lVar7 = GetRcEngine::RcGetNum(0x533b);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pSStack_60 = operator_new(0xbf8);
+                    /* try { // try from 00f10440 to 00f10447 has its CatchHandler @ 00f104f8 */
+  ScrollListContainer::ScrollListContainer(pSStack_60,*(MWidget **)(param_1 + 0x38),a_Stack_3a4,0,6)
+  ;
+  *(ScrollListContainer **)(param_1 + 0x198) = pSStack_60;
+  if (*(int *)(param_1 + 0x198) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x1d1);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x198) + 0x39) = 0;
+  iVar17 = *(int *)(param_1 + 0x198);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x198);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x198);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x198);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x198);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x198);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x198) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x198) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x198) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x198) + 0xf4);
+  ScrollListContainer::SetScrollBarWidth(*(ulong *)(param_1 + 0x198));
+  ScrollListContainer::SetScrollBarWindSize(*(ulong *)(param_1 + 0x198));
+  pMStack_64 = *(MImg **)(param_1 + 0x198);
+  MImg::MImg(aMStack_638,0x5cd);
+                    /* try { // try from 00f1075c to 00f10763 has its CatchHandler @ 00f10960 */
+  MImg::MImg(aMStack_64c,0x5cd);
+                    /* try { // try from 00f10778 to 00f1077f has its CatchHandler @ 00f10900 */
+  MImg::MImg(aMStack_660,0x5cd);
+                    /* try { // try from 00f10794 to 00f1079b has its CatchHandler @ 00f10860 */
+  MImg::MImg(aMStack_674,0x5cd);
+                    /* try { // try from 00f107c0 to 00f107c7 has its CatchHandler @ 00f10804 */
+  ScrollListContainer::SetScrollbarImage(pMStack_64,aMStack_638,aMStack_64c,aMStack_660);
+                    /* try { // try from 00f107d8 to 00f107df has its CatchHandler @ 00f10860 */
+  MImg::~MImg(aMStack_674);
+                    /* try { // try from 00f107f0 to 00f107f7 has its CatchHandler @ 00f10900 */
+  MImg::~MImg(aMStack_660);
+                    /* try { // try from 00f1084c to 00f10853 has its CatchHandler @ 00f10960 */
+  MImg::~MImg(aMStack_64c);
+  MImg::~MImg(aMStack_638);
+  pMStack_68 = *(MImg **)(param_1 + 0x198);
+  MImg::MImg(aMStack_688,0x5cd);
+                    /* try { // try from 00f108ec to 00f108f3 has its CatchHandler @ 00f10b80 */
+  MImg::MImg(aMStack_69c,0x5cd);
+                    /* try { // try from 00f1094c to 00f10953 has its CatchHandler @ 00f10b20 */
+  MImg::MImg(aMStack_6b0,0x5cd);
+                    /* try { // try from 00f109b4 to 00f109bb has its CatchHandler @ 00f10a80 */
+  MImg::MImg(aMStack_6c4,0x5cd);
+                    /* try { // try from 00f109e0 to 00f109e7 has its CatchHandler @ 00f10a24 */
+  ScrollListContainer::SetScrollbarUpImage(pMStack_68,aMStack_688,aMStack_69c,aMStack_6b0);
+                    /* try { // try from 00f109f8 to 00f109ff has its CatchHandler @ 00f10a80 */
+  MImg::~MImg(aMStack_6c4);
+                    /* try { // try from 00f10a10 to 00f10a17 has its CatchHandler @ 00f10b20 */
+  MImg::~MImg(aMStack_6b0);
+                    /* try { // try from 00f10a6c to 00f10a73 has its CatchHandler @ 00f10b80 */
+  MImg::~MImg(aMStack_69c);
+  MImg::~MImg(aMStack_688);
+  pMStack_6c = *(MImg **)(param_1 + 0x198);
+  MImg::MImg(aMStack_6d8,0x5cd);
+                    /* try { // try from 00f10b0c to 00f10b13 has its CatchHandler @ 00f10da0 */
+  MImg::MImg(aMStack_6ec,0x5cd);
+                    /* try { // try from 00f10b6c to 00f10b73 has its CatchHandler @ 00f10d40 */
+  MImg::MImg(aMStack_700,0x5cd);
+                    /* try { // try from 00f10bd4 to 00f10bdb has its CatchHandler @ 00f10ca0 */
+  MImg::MImg(aMStack_714,0x5cd);
+                    /* try { // try from 00f10c00 to 00f10c07 has its CatchHandler @ 00f10c44 */
+  ScrollListContainer::SetScrollbarMiddleImage(pMStack_6c,aMStack_6d8,aMStack_6ec,aMStack_700);
+                    /* try { // try from 00f10c18 to 00f10c1f has its CatchHandler @ 00f10ca0 */
+  MImg::~MImg(aMStack_714);
+                    /* try { // try from 00f10c30 to 00f10c37 has its CatchHandler @ 00f10d40 */
+  MImg::~MImg(aMStack_700);
+                    /* try { // try from 00f10c8c to 00f10c93 has its CatchHandler @ 00f10da0 */
+  MImg::~MImg(aMStack_6ec);
+  MImg::~MImg(aMStack_6d8);
+  pMStack_70 = *(MImg **)(param_1 + 0x198);
+  MImg::MImg(aMStack_728,0x5cd);
+                    /* try { // try from 00f10d2c to 00f10d33 has its CatchHandler @ 00f110ac */
+  MImg::MImg(aMStack_73c,0x5cd);
+                    /* try { // try from 00f10d8c to 00f10d93 has its CatchHandler @ 00f1104c */
+  MImg::MImg(aMStack_750,0x5cd);
+                    /* try { // try from 00f10df4 to 00f10dfb has its CatchHandler @ 00f10ec0 */
+  MImg::MImg(aMStack_764,0x5cd);
+                    /* try { // try from 00f10e20 to 00f10e27 has its CatchHandler @ 00f10e64 */
+  ScrollListContainer::SetScrollbarBottomImage(pMStack_70,aMStack_728,aMStack_73c,aMStack_750);
+                    /* try { // try from 00f10e38 to 00f10e3f has its CatchHandler @ 00f10ec0 */
+  MImg::~MImg(aMStack_764);
+                    /* try { // try from 00f10e50 to 00f10e57 has its CatchHandler @ 00f1104c */
+  MImg::~MImg(aMStack_750);
+                    /* try { // try from 00f10eac to 00f10eb3 has its CatchHandler @ 00f110ac */
+  MImg::~MImg(aMStack_73c);
+  MImg::~MImg(aMStack_728);
+  MWidget::SetFlag(*(undefined4 *)(param_1 + 0x198),2,0);
+  (**(code **)(**(int **)(param_1 + 0x38) + 0x34))
+            (*(undefined4 *)(param_1 + 0x38),*(undefined4 *)(param_1 + 0x198));
+  lVar4 = GetRcEngine::RcGetNum(0x587a);
+  lVar5 = GetRcEngine::RcGetNum(0x587b);
+  lVar6 = GetRcEngine::RcGetNum(0x5879);
+  lVar7 = GetRcEngine::RcGetNum(0x5876);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_74 = operator_new(0x514);
+                    /* try { // try from 00f11038 to 00f1103f has its CatchHandler @ 00f110f0 */
+  ImageButton::ImageButton(pIStack_74,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,7);
+  *(ImageButton **)(param_1 + 0x19c) = pIStack_74;
+  if (*(int *)(param_1 + 0x19c) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x1e8);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x19c) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x19c) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x19c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x19c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x19c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x19c);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x19c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x19c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x19c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x19c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x19c) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x19c) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x19c) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x19c) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x19c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x19c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x19c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x19c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x19c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x19c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x19c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x19c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x19c) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x19c) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x19c);
+  uVar9 = GetRcEngine::RcGetNum(0x5878);
+  GetRcEngine::RcGetNum(0x5877);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_78 = *(MImg **)(param_1 + 0x19c);
+  MImg::MImg(aMStack_778,0x5cd);
+                    /* try { // try from 00f114c0 to 00f114c7 has its CatchHandler @ 00f1178c */
+  MImg::MImg(aMStack_78c,0x5cd);
+                    /* try { // try from 00f114dc to 00f114e3 has its CatchHandler @ 00f1172c */
+  MImg::MImg(aMStack_7a0,0x5cd);
+                    /* try { // try from 00f114f8 to 00f114ff has its CatchHandler @ 00f115c4 */
+  MImg::MImg(aMStack_7b4,0x5cd);
+                    /* try { // try from 00f11524 to 00f1152b has its CatchHandler @ 00f11568 */
+  ImageButton::SetImg(pMStack_78,aMStack_778,aMStack_78c,aMStack_7a0);
+                    /* try { // try from 00f1153c to 00f11543 has its CatchHandler @ 00f115c4 */
+  MImg::~MImg(aMStack_7b4);
+                    /* try { // try from 00f11554 to 00f1155b has its CatchHandler @ 00f1172c */
+  MImg::~MImg(aMStack_7a0);
+                    /* try { // try from 00f115b0 to 00f115b7 has its CatchHandler @ 00f1178c */
+  MImg::~MImg(aMStack_78c);
+  MImg::~MImg(aMStack_778);
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x19c));
+  lVar4 = GetRcEngine::RcGetNum(0x5886);
+  lVar5 = GetRcEngine::RcGetNum(0x5887);
+  lVar6 = GetRcEngine::RcGetNum(0x5885);
+  lVar7 = GetRcEngine::RcGetNum(0x5882);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_7c = operator_new(0x514);
+                    /* try { // try from 00f11718 to 00f1171f has its CatchHandler @ 00f117d0 */
+  ImageButton::ImageButton(pIStack_7c,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,8);
+  *(ImageButton **)(param_1 + 0x1a0) = pIStack_7c;
+  if (*(int *)(param_1 + 0x1a0) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x207);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1a0) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1a0) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1a0);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1a0);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1a0);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1a0);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a0);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1a0) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1a0) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1a0) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1a0) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1a0) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1a0) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1a0) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1a0) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1a0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x1a0) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x1a0) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x1a0);
+  uVar9 = GetRcEngine::RcGetNum(0x5884);
+  GetRcEngine::RcGetNum(0x5883);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_80 = *(MImg **)(param_1 + 0x1a0);
+  MImg::MImg(aMStack_7c8,0x5cd);
+                    /* try { // try from 00f11bc0 to 00f11bc7 has its CatchHandler @ 00f11e8c */
+  MImg::MImg(aMStack_7dc,0x5cd);
+                    /* try { // try from 00f11bdc to 00f11be3 has its CatchHandler @ 00f11e2c */
+  MImg::MImg(aMStack_7f0,0x5cd);
+                    /* try { // try from 00f11bf8 to 00f11bff has its CatchHandler @ 00f11cc4 */
+  MImg::MImg(aMStack_804,0x5cd);
+                    /* try { // try from 00f11c24 to 00f11c2b has its CatchHandler @ 00f11c68 */
+  ImageButton::SetImg(pMStack_80,aMStack_7c8,aMStack_7dc,aMStack_7f0);
+                    /* try { // try from 00f11c3c to 00f11c43 has its CatchHandler @ 00f11cc4 */
+  MImg::~MImg(aMStack_804);
+                    /* try { // try from 00f11c54 to 00f11c5b has its CatchHandler @ 00f11e2c */
+  MImg::~MImg(aMStack_7f0);
+                    /* try { // try from 00f11cb0 to 00f11cb7 has its CatchHandler @ 00f11e8c */
+  MImg::~MImg(aMStack_7dc);
+  MImg::~MImg(aMStack_7c8);
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1a0));
+  lVar4 = GetRcEngine::RcGetNum(0x52e7);
+  lVar5 = GetRcEngine::RcGetNum(0x52e8);
+  lVar6 = GetRcEngine::RcGetNum(0x52e6);
+  lVar7 = GetRcEngine::RcGetNum(0x52e3);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_84 = operator_new(0x514);
+                    /* try { // try from 00f11e18 to 00f11e1f has its CatchHandler @ 00f11ed0 */
+  ImageButton::ImageButton(pIStack_84,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,9);
+  *(ImageButton **)(param_1 + 0x1a4) = pIStack_84;
+  if (*(int *)(param_1 + 0x1a4) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x227);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1a4) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1a4) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1a4);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1a4);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1a4);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a4);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1a4) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1a4) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1a4) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1a4) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1a4) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1a4) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1a4) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1a4) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1a4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x1a4) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x1a4) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x1a4);
+  uVar9 = GetRcEngine::RcGetNum(0x52e5);
+  GetRcEngine::RcGetNum(0x52e4);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_88 = *(MImg **)(param_1 + 0x1a4);
+  MImg::MImg(aMStack_818,0x5cd);
+                    /* try { // try from 00f122a0 to 00f122a7 has its CatchHandler @ 00f1256c */
+  MImg::MImg(aMStack_82c,0x5cd);
+                    /* try { // try from 00f122bc to 00f122c3 has its CatchHandler @ 00f1250c */
+  MImg::MImg(aMStack_840,0x5cd);
+                    /* try { // try from 00f122d8 to 00f122df has its CatchHandler @ 00f123a4 */
+  MImg::MImg(aMStack_854,0x5cd);
+                    /* try { // try from 00f12304 to 00f1230b has its CatchHandler @ 00f12348 */
+  ImageButton::SetImg(pMStack_88,aMStack_818,aMStack_82c,aMStack_840);
+                    /* try { // try from 00f1231c to 00f12323 has its CatchHandler @ 00f123a4 */
+  MImg::~MImg(aMStack_854);
+                    /* try { // try from 00f12334 to 00f1233b has its CatchHandler @ 00f1250c */
+  MImg::~MImg(aMStack_840);
+                    /* try { // try from 00f12390 to 00f12397 has its CatchHandler @ 00f1256c */
+  MImg::~MImg(aMStack_82c);
+  MImg::~MImg(aMStack_818);
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1a4));
+  lVar4 = GetRcEngine::RcGetNum(0x5311);
+  lVar5 = GetRcEngine::RcGetNum(0x5312);
+  lVar6 = GetRcEngine::RcGetNum(0x5310);
+  lVar7 = GetRcEngine::RcGetNum(0x5301);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_8c = operator_new(0x514);
+                    /* try { // try from 00f124f8 to 00f124ff has its CatchHandler @ 00f125b0 */
+  ImageButton::ImageButton(pIStack_8c,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,10);
+  *(ImageButton **)(param_1 + 0x1a8) = pIStack_8c;
+  if (*(int *)(param_1 + 0x1a8) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x246);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1a8) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1a8) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1a8);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1a8);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1a8);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a8);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1a8) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1a8) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1a8) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1a8) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1a8) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1a8) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1a8) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1a8) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1a8);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a8);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a8);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1a8);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x1a8) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x1a8) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x1a8);
+  uVar9 = GetRcEngine::RcGetNum(0x5309);
+  GetRcEngine::RcGetNum(0x5308);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_90 = *(MImg **)(param_1 + 0x1a8);
+  MImg::MImg(aMStack_868,0x5cd);
+                    /* try { // try from 00f12980 to 00f12987 has its CatchHandler @ 00f12c4c */
+  MImg::MImg(aMStack_87c,0x5cd);
+                    /* try { // try from 00f1299c to 00f129a3 has its CatchHandler @ 00f12bec */
+  MImg::MImg(aMStack_890,0x5cd);
+                    /* try { // try from 00f129b8 to 00f129bf has its CatchHandler @ 00f12a84 */
+  MImg::MImg(aMStack_8a4,0x5cd);
+                    /* try { // try from 00f129e4 to 00f129eb has its CatchHandler @ 00f12a28 */
+  ImageButton::SetImg(pMStack_90,aMStack_868,aMStack_87c,aMStack_890);
+                    /* try { // try from 00f129fc to 00f12a03 has its CatchHandler @ 00f12a84 */
+  MImg::~MImg(aMStack_8a4);
+                    /* try { // try from 00f12a14 to 00f12a1b has its CatchHandler @ 00f12bec */
+  MImg::~MImg(aMStack_890);
+                    /* try { // try from 00f12a70 to 00f12a77 has its CatchHandler @ 00f12c4c */
+  MImg::~MImg(aMStack_87c);
+  MImg::~MImg(aMStack_868);
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1a8));
+  lVar4 = GetRcEngine::RcGetNum(0x5880);
+  lVar5 = GetRcEngine::RcGetNum(0x5881);
+  lVar6 = GetRcEngine::RcGetNum(0x587f);
+  lVar7 = GetRcEngine::RcGetNum(0x587c);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_94 = operator_new(0x514);
+                    /* try { // try from 00f12bd8 to 00f12bdf has its CatchHandler @ 00f12c90 */
+  ImageButton::ImageButton(pIStack_94,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,0xb);
+  *(ImageButton **)(param_1 + 0x1ac) = pIStack_94;
+  if (*(int *)(param_1 + 0x1ac) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x265);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1ac) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1ac) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1ac);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1ac);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1ac);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1ac);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1ac);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1ac);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1ac);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1ac);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1ac) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1ac) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1ac) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1ac) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1ac) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1ac) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1ac) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1ac) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1ac);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1ac);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1ac);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1ac);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x1ac) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x1ac) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x1ac);
+  uVar9 = GetRcEngine::RcGetNum(0x587e);
+  GetRcEngine::RcGetNum(0x587d);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_98 = *(MImg **)(param_1 + 0x1ac);
+  MImg::MImg(aMStack_8b8,0x5cd);
+                    /* try { // try from 00f13060 to 00f13067 has its CatchHandler @ 00f1332c */
+  MImg::MImg(aMStack_8cc,0x5cd);
+                    /* try { // try from 00f1307c to 00f13083 has its CatchHandler @ 00f132cc */
+  MImg::MImg(aMStack_8e0,0x5cd);
+                    /* try { // try from 00f13098 to 00f1309f has its CatchHandler @ 00f13164 */
+  MImg::MImg(aMStack_8f4,0x5cd);
+                    /* try { // try from 00f130c4 to 00f130cb has its CatchHandler @ 00f13108 */
+  ImageButton::SetImg(pMStack_98,aMStack_8b8,aMStack_8cc,aMStack_8e0);
+                    /* try { // try from 00f130dc to 00f130e3 has its CatchHandler @ 00f13164 */
+  MImg::~MImg(aMStack_8f4);
+                    /* try { // try from 00f130f4 to 00f130fb has its CatchHandler @ 00f132cc */
+  MImg::~MImg(aMStack_8e0);
+                    /* try { // try from 00f13150 to 00f13157 has its CatchHandler @ 00f1332c */
+  MImg::~MImg(aMStack_8cc);
+  MImg::~MImg(aMStack_8b8);
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1ac));
+  lVar4 = GetRcEngine::RcGetNum(0x52cb);
+  lVar5 = GetRcEngine::RcGetNum(0x52cc);
+  lVar6 = GetRcEngine::RcGetNum(0x52ca);
+  lVar7 = GetRcEngine::RcGetNum(0x52c9);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_9c = operator_new(0x270);
+                    /* try { // try from 00f132b8 to 00f132bf has its CatchHandler @ 00f13370 */
+  ComboButton::ComboButton(pCStack_9c,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,0xc);
+  *(ComboButton **)(param_1 + 0x1b0) = pCStack_9c;
+  if (*(int *)(param_1 + 0x1b0) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x284);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x1b0) + 600) = 1;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1b0) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1b0) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1b0) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1b0) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x1b0) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x55);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1b0) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1b0) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1b0) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1b0) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1b0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1b0) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1b0) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1b0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1b0) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1b0) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1b0) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1b0) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1b0) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1b0) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1b0) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1b0) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1b0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1b0));
+  lVar4 = GetRcEngine::RcGetNum(0x52d5);
+  lVar5 = GetRcEngine::RcGetNum(0x52d6);
+  lVar6 = GetRcEngine::RcGetNum(0x52d4);
+  lVar7 = GetRcEngine::RcGetNum(0x52d1);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_a0 = operator_new(0x514);
+                    /* try { // try from 00f13c24 to 00f13c2b has its CatchHandler @ 00f13c54 */
+  ImageButton::ImageButton(pIStack_a0,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,0xd);
+  *(ImageButton **)(param_1 + 0x1b4) = pIStack_a0;
+  if (*(int *)(param_1 + 0x1b4) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x2c1);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1b4) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1b4) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1b4);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1b4);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1b4);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1b4);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b4);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1b4) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1b4) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1b4) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1b4) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1b4) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1b4) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1b4) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1b4) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1b4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x1b4) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x1b4) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x1b4);
+  uVar9 = GetRcEngine::RcGetNum(0x52d3);
+  GetRcEngine::RcGetNum(0x52d2);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_a4 = *(MImg **)(param_1 + 0x1b4);
+  MImg::MImg(aMStack_908,0x5cd);
+                    /* try { // try from 00f14044 to 00f1404b has its CatchHandler @ 00f14310 */
+  MImg::MImg(aMStack_91c,0x5cd);
+                    /* try { // try from 00f14060 to 00f14067 has its CatchHandler @ 00f142b0 */
+  MImg::MImg(aMStack_930,0x5cd);
+                    /* try { // try from 00f1407c to 00f14083 has its CatchHandler @ 00f14148 */
+  MImg::MImg(aMStack_944,0x5cd);
+                    /* try { // try from 00f140a8 to 00f140af has its CatchHandler @ 00f140ec */
+  ImageButton::SetImg(pMStack_a4,aMStack_908,aMStack_91c,aMStack_930);
+                    /* try { // try from 00f140c0 to 00f140c7 has its CatchHandler @ 00f14148 */
+  MImg::~MImg(aMStack_944);
+                    /* try { // try from 00f140d8 to 00f140df has its CatchHandler @ 00f142b0 */
+  MImg::~MImg(aMStack_930);
+                    /* try { // try from 00f14134 to 00f1413b has its CatchHandler @ 00f14310 */
+  MImg::~MImg(aMStack_91c);
+  MImg::~MImg(aMStack_908);
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1b4));
+  lVar4 = GetRcEngine::RcGetNum(0x5247);
+  lVar5 = GetRcEngine::RcGetNum(0x5248);
+  lVar6 = GetRcEngine::RcGetNum(0x5246);
+  lVar7 = GetRcEngine::RcGetNum(0x5245);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pAStack_a8 = operator_new(0x264);
+                    /* try { // try from 00f1429c to 00f142a3 has its CatchHandler @ 00f14354 */
+  AbsContainer::AbsContainer(pAStack_a8,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,0xe);
+  *(AbsContainer **)(param_1 + 0x1b8) = pAStack_a8;
+  if (*(int *)(param_1 + 0x1b8) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x2e1);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x1b8) + 0x3a) = 1;
+  *(undefined1 *)(*(int *)(param_1 + 0x1b8) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x1b8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1b8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1b8) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1b8) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1b8) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1b8) + 0xf4);
+  MWidget::SetFlag(*(undefined4 *)(param_1 + 0x1b8),2,0);
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1b8));
+  lVar4 = GetRcEngine::RcGetNum(0x588c);
+  lVar5 = GetRcEngine::RcGetNum(0x588d);
+  lVar6 = GetRcEngine::RcGetNum(0x588b);
+  lVar7 = GetRcEngine::RcGetNum(0x5888);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_ac = operator_new(0x514);
+                    /* try { // try from 00f14674 to 00f1467b has its CatchHandler @ 00f146a4 */
+  ImageButton::ImageButton(pIStack_ac,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,0xf);
+  *(ImageButton **)(param_1 + 0x1bc) = pIStack_ac;
+  if (*(int *)(param_1 + 0x1bc) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x2f3);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1bc) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1bc) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1bc);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1bc);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1bc);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1bc);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1bc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1bc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1bc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1bc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1bc) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1bc) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1bc) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1bc) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1bc) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1bc) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1bc) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1bc) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1bc);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1bc);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1bc);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1bc);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x1bc) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x1bc) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x1bc);
+  uVar9 = GetRcEngine::RcGetNum(0x588a);
+  GetRcEngine::RcGetNum(0x5889);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_b0 = *(MImg **)(param_1 + 0x1bc);
+  MImg::MImg(aMStack_958,0x5cd);
+                    /* try { // try from 00f14a74 to 00f14a7b has its CatchHandler @ 00f14d40 */
+  MImg::MImg(aMStack_96c,0x5cd);
+                    /* try { // try from 00f14a90 to 00f14a97 has its CatchHandler @ 00f14ce0 */
+  MImg::MImg(aMStack_980,0x5cd);
+                    /* try { // try from 00f14aac to 00f14ab3 has its CatchHandler @ 00f14b78 */
+  MImg::MImg(aMStack_994,0x5cd);
+                    /* try { // try from 00f14ad8 to 00f14adf has its CatchHandler @ 00f14b1c */
+  ImageButton::SetImg(pMStack_b0,aMStack_958,aMStack_96c,aMStack_980);
+                    /* try { // try from 00f14af0 to 00f14af7 has its CatchHandler @ 00f14b78 */
+  MImg::~MImg(aMStack_994);
+                    /* try { // try from 00f14b08 to 00f14b0f has its CatchHandler @ 00f14ce0 */
+  MImg::~MImg(aMStack_980);
+                    /* try { // try from 00f14b64 to 00f14b6b has its CatchHandler @ 00f14d40 */
+  MImg::~MImg(aMStack_96c);
+  MImg::~MImg(aMStack_958);
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1bc));
+  lVar4 = GetRcEngine::RcGetNum(0x5874);
+  lVar5 = GetRcEngine::RcGetNum(0x5875);
+  lVar6 = GetRcEngine::RcGetNum(0x5873);
+  lVar7 = GetRcEngine::RcGetNum(0x5870);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_b4 = operator_new(0x514);
+                    /* try { // try from 00f14ccc to 00f14cd3 has its CatchHandler @ 00f14d84 */
+  ImageButton::ImageButton(pIStack_b4,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,0x10);
+  *(ImageButton **)(param_1 + 0x1c0) = pIStack_b4;
+  if (*(int *)(param_1 + 0x1c0) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x312);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1c0) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1c0) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1c0);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1c0);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1c0);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c0);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1c0) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1c0) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1c0) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1c0) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1c0) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1c0) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1c0) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1c0) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1c0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x1c0) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x1c0) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x1c0);
+  uVar9 = GetRcEngine::RcGetNum(0x5872);
+  GetRcEngine::RcGetNum(0x5871);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_b8 = *(MImg **)(param_1 + 0x1c0);
+  MImg::MImg(aMStack_9a8,0x5cd);
+                    /* try { // try from 00f15154 to 00f1515b has its CatchHandler @ 00f15420 */
+  MImg::MImg(aMStack_9bc,0x5cd);
+                    /* try { // try from 00f15170 to 00f15177 has its CatchHandler @ 00f153c0 */
+  MImg::MImg(aMStack_9d0,0x5cd);
+                    /* try { // try from 00f1518c to 00f15193 has its CatchHandler @ 00f15258 */
+  MImg::MImg(aMStack_9e4,0x5cd);
+                    /* try { // try from 00f151b8 to 00f151bf has its CatchHandler @ 00f151fc */
+  ImageButton::SetImg(pMStack_b8,aMStack_9a8,aMStack_9bc,aMStack_9d0);
+                    /* try { // try from 00f151d0 to 00f151d7 has its CatchHandler @ 00f15258 */
+  MImg::~MImg(aMStack_9e4);
+                    /* try { // try from 00f151e8 to 00f151ef has its CatchHandler @ 00f153c0 */
+  MImg::~MImg(aMStack_9d0);
+                    /* try { // try from 00f15244 to 00f1524b has its CatchHandler @ 00f15420 */
+  MImg::~MImg(aMStack_9bc);
+  MImg::~MImg(aMStack_9a8);
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1c0));
+  lVar4 = GetRcEngine::RcGetNum(0x526b);
+  lVar5 = GetRcEngine::RcGetNum(0x526c);
+  lVar6 = GetRcEngine::RcGetNum(0x526a);
+  lVar7 = GetRcEngine::RcGetNum(0x5269);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_bc = operator_new(0x270);
+                    /* try { // try from 00f153ac to 00f153b3 has its CatchHandler @ 00f15464 */
+  ComboButton::ComboButton(pCStack_bc,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,0x11);
+  *(ComboButton **)(param_1 + 0x1c4) = pCStack_bc;
+  if (*(int *)(param_1 + 0x1c4) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x331);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x1c4) + 600) = 1;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c4) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c4) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c4) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c4) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x1c4) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x55);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c4) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c4) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c4) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c4) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c4) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1c4) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1c4) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1c4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1c4) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1c4) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1c4) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1c4) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1c4) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1c4) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1c4) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1c4) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1c4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1c4));
+  lVar4 = GetRcEngine::RcGetNum(0x526f);
+  lVar5 = GetRcEngine::RcGetNum(0x5270);
+  lVar6 = GetRcEngine::RcGetNum(0x526e);
+  lVar7 = GetRcEngine::RcGetNum(0x526d);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_c0 = operator_new(0x270);
+                    /* try { // try from 00f15cf4 to 00f15cfb has its CatchHandler @ 00f15d24 */
+  ComboButton::ComboButton(pCStack_c0,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,0x12);
+  *(ComboButton **)(param_1 + 0x1c8) = pCStack_c0;
+  if (*(int *)(param_1 + 0x1c8) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x36d);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x1c8) + 600) = 1;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c8) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c8) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c8) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c8) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x1c8) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x55);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c8) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c8) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c8) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c8) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1c8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1c8) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1c8) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1c8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1c8) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1c8) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1c8) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1c8) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1c8) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1c8) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1c8) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1c8) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1c8);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c8);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c8);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1c8);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1c8));
+  lVar4 = GetRcEngine::RcGetNum(0x5866);
+  lVar5 = GetRcEngine::RcGetNum(0x5867);
+  lVar6 = GetRcEngine::RcGetNum(0x5865);
+  lVar7 = GetRcEngine::RcGetNum(0x5864);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_c4 = operator_new(0x270);
+                    /* try { // try from 00f165b4 to 00f165bb has its CatchHandler @ 00f165e4 */
+  ComboButton::ComboButton(pCStack_c4,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,0x13);
+  *(ComboButton **)(param_1 + 0x1cc) = pCStack_c4;
+  if (*(int *)(param_1 + 0x1cc) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x3a9);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x1cc) + 600) = 1;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1cc) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1cc) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1cc) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1cc) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x1cc) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x55);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1cc) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1cc) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1cc) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1cc) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1cc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1cc) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1cc) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1cc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1cc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1cc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1cc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1cc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1cc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1cc) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1cc) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1cc) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1cc) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1cc) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1cc) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1cc) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1cc) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1cc);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1cc);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1cc);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1cc);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1cc));
+  lVar4 = GetRcEngine::RcGetNum(0x52a7);
+  lVar5 = GetRcEngine::RcGetNum(0x52a8);
+  lVar6 = GetRcEngine::RcGetNum(0x52a6);
+  lVar7 = GetRcEngine::RcGetNum(0x52a5);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_c8 = operator_new(0x270);
+                    /* try { // try from 00f16e98 to 00f16e9f has its CatchHandler @ 00f16ec8 */
+  ComboButton::ComboButton(pCStack_c8,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,0x14);
+  *(ComboButton **)(param_1 + 0x1d0) = pCStack_c8;
+  if (*(int *)(param_1 + 0x1d0) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x3e6);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x1d0) + 600) = 1;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d0) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d0) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d0) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d0) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x1d0) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x55);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d0) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d0) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d0) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d0) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1d0) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1d0) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1d0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1d0) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1d0) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1d0) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1d0) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1d0) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1d0) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1d0) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1d0) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1d0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1d0));
+  lVar4 = GetRcEngine::RcGetNum(0x52e1);
+  lVar5 = GetRcEngine::RcGetNum(0x52e2);
+  lVar6 = GetRcEngine::RcGetNum(0x52e0);
+  lVar7 = GetRcEngine::RcGetNum(0x52dd);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_cc = operator_new(0x514);
+                    /* try { // try from 00f1777c to 00f17783 has its CatchHandler @ 00f177ac */
+  ImageButton::ImageButton(pIStack_cc,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,0x15);
+  *(ImageButton **)(param_1 + 0x1d4) = pIStack_cc;
+  if (*(int *)(param_1 + 0x1d4) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x423);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1d4) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1d4) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1d4);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1d4);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1d4);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1d4);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1d4);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d4);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1d4) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1d4) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1d4) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1d4) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1d4) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1d4) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1d4) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1d4) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1d4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x1d4) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x1d4) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x1d4);
+  uVar9 = GetRcEngine::RcGetNum(0x52df);
+  GetRcEngine::RcGetNum(0x52de);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_d0 = *(MImg **)(param_1 + 0x1d4);
+  MImg::MImg(aMStack_9f8,0x5cd);
+                    /* try { // try from 00f17bbc to 00f17bc3 has its CatchHandler @ 00f17e88 */
+  MImg::MImg(aMStack_a0c,0x5cd);
+                    /* try { // try from 00f17bd8 to 00f17bdf has its CatchHandler @ 00f17e28 */
+  MImg::MImg(aMStack_a20,0x5cd);
+                    /* try { // try from 00f17bf4 to 00f17bfb has its CatchHandler @ 00f17cc0 */
+  MImg::MImg(aMStack_a34,0x5cd);
+                    /* try { // try from 00f17c20 to 00f17c27 has its CatchHandler @ 00f17c64 */
+  ImageButton::SetImg(pMStack_d0,aMStack_9f8,aMStack_a0c,aMStack_a20);
+                    /* try { // try from 00f17c38 to 00f17c3f has its CatchHandler @ 00f17cc0 */
+  MImg::~MImg(aMStack_a34);
+                    /* try { // try from 00f17c50 to 00f17c57 has its CatchHandler @ 00f17e28 */
+  MImg::~MImg(aMStack_a20);
+                    /* try { // try from 00f17cac to 00f17cb3 has its CatchHandler @ 00f17e88 */
+  MImg::~MImg(aMStack_a0c);
+  MImg::~MImg(aMStack_9f8);
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1d4));
+  lVar4 = GetRcEngine::RcGetNum(0x5862);
+  lVar5 = GetRcEngine::RcGetNum(0x5863);
+  lVar6 = GetRcEngine::RcGetNum(0x5861);
+  lVar7 = GetRcEngine::RcGetNum(0x5860);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_d4 = operator_new(0x270);
+                    /* try { // try from 00f17e14 to 00f17e1b has its CatchHandler @ 00f17ecc */
+  ComboButton::ComboButton(pCStack_d4,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,0x16);
+  *(ComboButton **)(param_1 + 0x1d8) = pCStack_d4;
+  if (*(int *)(param_1 + 0x1d8) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x444);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x1d8) + 600) = 1;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d8) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d8) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d8) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d8) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x1d8) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x55);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d8) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d8) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d8) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1d8) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1d8) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1d8) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1d8) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1d8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1d8) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1d8) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1d8) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1d8) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1d8) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1d8) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1d8) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1d8) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1d8);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d8);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d8);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1d8);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1d8));
+  lVar4 = GetRcEngine::RcGetNum(0x586e);
+  lVar5 = GetRcEngine::RcGetNum(0x586f);
+  lVar6 = GetRcEngine::RcGetNum(0x586d);
+  lVar7 = GetRcEngine::RcGetNum(0x586c);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_d8 = operator_new(0x270);
+                    /* try { // try from 00f1875c to 00f18763 has its CatchHandler @ 00f1878c */
+  ComboButton::ComboButton(pCStack_d8,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,0x17);
+  *(ComboButton **)(param_1 + 0x1dc) = pCStack_d8;
+  if (*(int *)(param_1 + 0x1dc) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x480);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x1dc) + 600) = 1;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1dc) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1dc) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1dc) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1dc) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x1dc) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x55);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1dc) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1dc) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1dc) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1dc) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1dc) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1dc) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1dc) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1dc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1dc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1dc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1dc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1dc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1dc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1dc) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1dc) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1dc) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1dc) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1dc) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1dc) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1dc) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1dc) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1dc);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1dc);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1dc);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1dc);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1dc));
+  lVar4 = GetRcEngine::RcGetNum(0x586a);
+  lVar5 = GetRcEngine::RcGetNum(0x586b);
+  lVar6 = GetRcEngine::RcGetNum(0x5869);
+  lVar7 = GetRcEngine::RcGetNum(0x5868);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_dc = operator_new(0x270);
+                    /* try { // try from 00f1901c to 00f19023 has its CatchHandler @ 00f1904c */
+  ComboButton::ComboButton(pCStack_dc,*(MWidget **)(param_1 + 0x184),a_Stack_3a4,0,0x18);
+  *(ComboButton **)(param_1 + 0x1e0) = pCStack_dc;
+  if (*(int *)(param_1 + 0x1e0) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x4bc);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x1e0) + 600) = 1;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1e0) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1e0) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1e0) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1e0) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x1e0) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x55);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1e0) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1e0) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1e0) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1e0) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x1e0) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1e0) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1e0) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x1e0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1e0) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1e0) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1e0) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1e0) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1e0) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1e0) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1e0) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1e0) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1e0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e0);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x34))
+            (*(undefined4 *)(param_1 + 0x184),*(undefined4 *)(param_1 + 0x1e0));
+  lVar4 = GetRcEngine::RcGetNum(0x5341);
+  lVar5 = GetRcEngine::RcGetNum(0x5342);
+  lVar6 = GetRcEngine::RcGetNum(0x5340);
+  lVar7 = GetRcEngine::RcGetNum(0x533f);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pTStack_e0 = operator_new(0x250);
+                    /* try { // try from 00f198dc to 00f198e3 has its CatchHandler @ 00f1990c */
+  TextBox::TextBox(pTStack_e0,*(MWidget **)(param_1 + 0x1b8),a_Stack_3a4,0,0x19);
+  *(TextBox **)(param_1 + 0x1e4) = pTStack_e0;
+  if (*(int *)(param_1 + 0x1e4) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x4f8);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x1e4) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x1e4) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x1e4);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x4c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1e4);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x54) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1e4);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1e4);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x1e4);
+  uVar3 = GetRcEngine::RcGetNum(0x45de);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e4);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1e4) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1e4) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1e4) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1e4) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x1e4) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1e4) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1e4) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x1e4) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x1e4);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e4);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e4);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1b8) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1b8),*(undefined4 *)(param_1 + 0x1e4));
+  lVar4 = GetRcEngine::RcGetNum(0x4ede);
+  lVar5 = GetRcEngine::RcGetNum(0x4edf);
+  lVar6 = GetRcEngine::RcGetNum(0x4edd);
+  lVar7 = GetRcEngine::RcGetNum(0x4edc);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pAStack_e4 = operator_new(0x264);
+                    /* try { // try from 00f19d6c to 00f19d73 has its CatchHandler @ 00f19d9c */
+  AbsContainer::AbsContainer(pAStack_e4,*(MWidget **)(param_1 + 400),a_Stack_3a4,0,0x1a);
+  *(AbsContainer **)(param_1 + 0x1e8) = pAStack_e4;
+  if (*(int *)(param_1 + 0x1e8) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x515);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x1e8) + 0x39) = 0;
+  *(undefined1 *)(*(int *)(param_1 + 0x1e8) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x1e8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1e8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1e8) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1e8) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1e8) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1e8) + 0xf4);
+  (**(code **)(**(int **)(param_1 + 400) + 0x34))
+            (*(undefined4 *)(param_1 + 400),*(undefined4 *)(param_1 + 0x1e8));
+  lVar4 = GetRcEngine::RcGetNum(0x4ed9);
+  lVar5 = GetRcEngine::RcGetNum(0x4eda);
+  lVar6 = GetRcEngine::RcGetNum(0x4ed8);
+  lVar7 = GetRcEngine::RcGetNum(0x4ed7);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pAStack_e8 = operator_new(0x264);
+                    /* try { // try from 00f1a094 to 00f1a09b has its CatchHandler @ 00f1a0c4 */
+  AbsContainer::AbsContainer(pAStack_e8,*(MWidget **)(param_1 + 400),a_Stack_3a4,0,0x1b);
+  *(AbsContainer **)(param_1 + 0x1ec) = pAStack_e8;
+  if (*(int *)(param_1 + 0x1ec) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x526);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x1ec) + 0x39) = 0;
+  *(undefined1 *)(*(int *)(param_1 + 0x1ec) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x1ec);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1ec);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1ec);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1ec);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1ec);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1ec);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1ec) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1ec) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1ec) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1ec) + 0xf4);
+  (**(code **)(**(int **)(param_1 + 400) + 0x34))
+            (*(undefined4 *)(param_1 + 400),*(undefined4 *)(param_1 + 0x1ec));
+  lVar4 = GetRcEngine::RcGetNum(0x5257);
+  lVar5 = GetRcEngine::RcGetNum(0x5258);
+  lVar6 = GetRcEngine::RcGetNum(0x5256);
+  lVar7 = GetRcEngine::RcGetNum(0x5255);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pAStack_ec = operator_new(0x264);
+                    /* try { // try from 00f1a3bc to 00f1a3c3 has its CatchHandler @ 00f1a3ec */
+  AbsContainer::AbsContainer(pAStack_ec,*(MWidget **)(param_1 + 400),a_Stack_3a4,0,0x1c);
+  *(AbsContainer **)(param_1 + 0x1f0) = pAStack_ec;
+  if (*(int *)(param_1 + 0x1f0) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x537);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x1f0) + 0x39) = 0;
+  iVar17 = *(int *)(param_1 + 0x1f0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1f0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1f0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1f0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1f0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1f0);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1f0) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1f0) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1f0) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1f0) + 0xf4);
+  (**(code **)(**(int **)(param_1 + 400) + 0x34))
+            (*(undefined4 *)(param_1 + 400),*(undefined4 *)(param_1 + 0x1f0));
+  lVar4 = GetRcEngine::RcGetNum(0x525b);
+  lVar5 = GetRcEngine::RcGetNum(0x525c);
+  lVar6 = GetRcEngine::RcGetNum(0x525a);
+  lVar7 = GetRcEngine::RcGetNum(0x5259);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pAStack_f0 = operator_new(0x264);
+                    /* try { // try from 00f1a6d8 to 00f1a6df has its CatchHandler @ 00f1a708 */
+  AbsContainer::AbsContainer(pAStack_f0,*(MWidget **)(param_1 + 400),a_Stack_3a4,0,0x1d);
+  *(AbsContainer **)(param_1 + 500) = pAStack_f0;
+  if (*(int *)(param_1 + 500) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x547);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 500) + 0x39) = 0;
+  iVar17 = *(int *)(param_1 + 500);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 500);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 500);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 500);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 500);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 500);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 500) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 500) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 500) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 500) + 0xf4);
+  (**(code **)(**(int **)(param_1 + 400) + 0x34))
+            (*(undefined4 *)(param_1 + 400),*(undefined4 *)(param_1 + 500));
+  lVar4 = GetRcEngine::RcGetNum(0x5253);
+  lVar5 = GetRcEngine::RcGetNum(0x5254);
+  lVar6 = GetRcEngine::RcGetNum(0x5252);
+  lVar7 = GetRcEngine::RcGetNum(0x5251);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pAStack_f4 = operator_new(0x264);
+                    /* try { // try from 00f1a9f4 to 00f1a9fb has its CatchHandler @ 00f1aa24 */
+  AbsContainer::AbsContainer(pAStack_f4,*(MWidget **)(param_1 + 400),a_Stack_3a4,0,0x1e);
+  *(AbsContainer **)(param_1 + 0x1f8) = pAStack_f4;
+  if (*(int *)(param_1 + 0x1f8) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x557);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x1f8) + 0x39) = 0;
+  iVar17 = *(int *)(param_1 + 0x1f8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1f8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1f8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1f8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1f8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1f8);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1f8) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1f8) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1f8) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1f8) + 0xf4);
+  (**(code **)(**(int **)(param_1 + 400) + 0x34))
+            (*(undefined4 *)(param_1 + 400),*(undefined4 *)(param_1 + 0x1f8));
+  lVar4 = GetRcEngine::RcGetNum(0x5339);
+  lVar5 = GetRcEngine::RcGetNum(0x533a);
+  lVar6 = GetRcEngine::RcGetNum(0x5338);
+  lVar7 = GetRcEngine::RcGetNum(0x5337);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pSStack_f8 = operator_new(0xbf8);
+                    /* try { // try from 00f1ad10 to 00f1ad17 has its CatchHandler @ 00f1ad40 */
+  ScrollListContainer::ScrollListContainer
+            (pSStack_f8,*(MWidget **)(param_1 + 400),a_Stack_3a4,0,0x1f);
+  *(ScrollListContainer **)(param_1 + 0x1fc) = pSStack_f8;
+  if (*(int *)(param_1 + 0x1fc) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x567);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x1fc) + 0x39) = 0;
+  iVar17 = *(int *)(param_1 + 0x1fc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1fc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1fc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1fc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1fc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x1fc);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1fc) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1fc) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1fc) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x1fc) + 0xf4);
+  ScrollListContainer::SetScrollBarWidth(*(ulong *)(param_1 + 0x1fc));
+  ScrollListContainer::SetScrollBarWindSize(*(ulong *)(param_1 + 0x1fc));
+  pMStack_fc = *(MImg **)(param_1 + 0x1fc);
+  MImg::MImg(aMStack_a48,0x5cd);
+                    /* try { // try from 00f1afa4 to 00f1afab has its CatchHandler @ 00f1b1a8 */
+  MImg::MImg(aMStack_a5c,0x5cd);
+                    /* try { // try from 00f1afc0 to 00f1afc7 has its CatchHandler @ 00f1b148 */
+  MImg::MImg(aMStack_a70,0x5cd);
+                    /* try { // try from 00f1afdc to 00f1afe3 has its CatchHandler @ 00f1b0a8 */
+  MImg::MImg(aMStack_a84,0x5cd);
+                    /* try { // try from 00f1b008 to 00f1b00f has its CatchHandler @ 00f1b04c */
+  ScrollListContainer::SetScrollbarImage(pMStack_fc,aMStack_a48,aMStack_a5c,aMStack_a70);
+                    /* try { // try from 00f1b020 to 00f1b027 has its CatchHandler @ 00f1b0a8 */
+  MImg::~MImg(aMStack_a84);
+                    /* try { // try from 00f1b038 to 00f1b03f has its CatchHandler @ 00f1b148 */
+  MImg::~MImg(aMStack_a70);
+                    /* try { // try from 00f1b094 to 00f1b09b has its CatchHandler @ 00f1b1a8 */
+  MImg::~MImg(aMStack_a5c);
+  MImg::~MImg(aMStack_a48);
+  pMStack_100 = *(MImg **)(param_1 + 0x1fc);
+  MImg::MImg(aMStack_a98,0x5cd);
+                    /* try { // try from 00f1b134 to 00f1b13b has its CatchHandler @ 00f1b3c8 */
+  MImg::MImg(aMStack_aac,0x5cd);
+                    /* try { // try from 00f1b194 to 00f1b19b has its CatchHandler @ 00f1b368 */
+  MImg::MImg(aMStack_ac0,0x5cd);
+                    /* try { // try from 00f1b1fc to 00f1b203 has its CatchHandler @ 00f1b2c8 */
+  MImg::MImg(aMStack_ad4,0x5cd);
+                    /* try { // try from 00f1b228 to 00f1b22f has its CatchHandler @ 00f1b26c */
+  ScrollListContainer::SetScrollbarUpImage(pMStack_100,aMStack_a98,aMStack_aac,aMStack_ac0);
+                    /* try { // try from 00f1b240 to 00f1b247 has its CatchHandler @ 00f1b2c8 */
+  MImg::~MImg(aMStack_ad4);
+                    /* try { // try from 00f1b258 to 00f1b25f has its CatchHandler @ 00f1b368 */
+  MImg::~MImg(aMStack_ac0);
+                    /* try { // try from 00f1b2b4 to 00f1b2bb has its CatchHandler @ 00f1b3c8 */
+  MImg::~MImg(aMStack_aac);
+  MImg::~MImg(aMStack_a98);
+  pMStack_104 = *(MImg **)(param_1 + 0x1fc);
+  MImg::MImg(aMStack_ae8,0x5cd);
+                    /* try { // try from 00f1b354 to 00f1b35b has its CatchHandler @ 00f1b5e8 */
+  MImg::MImg(aMStack_afc,0x5cd);
+                    /* try { // try from 00f1b3b4 to 00f1b3bb has its CatchHandler @ 00f1b588 */
+  MImg::MImg(aMStack_b10,0x5cd);
+                    /* try { // try from 00f1b41c to 00f1b423 has its CatchHandler @ 00f1b4e8 */
+  MImg::MImg(aMStack_b24,0x5cd);
+                    /* try { // try from 00f1b448 to 00f1b44f has its CatchHandler @ 00f1b48c */
+  ScrollListContainer::SetScrollbarMiddleImage(pMStack_104,aMStack_ae8,aMStack_afc,aMStack_b10);
+                    /* try { // try from 00f1b460 to 00f1b467 has its CatchHandler @ 00f1b4e8 */
+  MImg::~MImg(aMStack_b24);
+                    /* try { // try from 00f1b478 to 00f1b47f has its CatchHandler @ 00f1b588 */
+  MImg::~MImg(aMStack_b10);
+                    /* try { // try from 00f1b4d4 to 00f1b4db has its CatchHandler @ 00f1b5e8 */
+  MImg::~MImg(aMStack_afc);
+  MImg::~MImg(aMStack_ae8);
+  pMStack_108 = *(MImg **)(param_1 + 0x1fc);
+  MImg::MImg(aMStack_b38,0x5cd);
+                    /* try { // try from 00f1b574 to 00f1b57b has its CatchHandler @ 00f1b8d0 */
+  MImg::MImg(aMStack_b4c,0x5cd);
+                    /* try { // try from 00f1b5d4 to 00f1b5db has its CatchHandler @ 00f1b870 */
+  MImg::MImg(aMStack_b60,0x5cd);
+                    /* try { // try from 00f1b63c to 00f1b643 has its CatchHandler @ 00f1b708 */
+  MImg::MImg(aMStack_b74,0x5cd);
+                    /* try { // try from 00f1b668 to 00f1b66f has its CatchHandler @ 00f1b6ac */
+  ScrollListContainer::SetScrollbarBottomImage(pMStack_108,aMStack_b38,aMStack_b4c,aMStack_b60);
+                    /* try { // try from 00f1b680 to 00f1b687 has its CatchHandler @ 00f1b708 */
+  MImg::~MImg(aMStack_b74);
+                    /* try { // try from 00f1b698 to 00f1b69f has its CatchHandler @ 00f1b870 */
+  MImg::~MImg(aMStack_b60);
+                    /* try { // try from 00f1b6f4 to 00f1b6fb has its CatchHandler @ 00f1b8d0 */
+  MImg::~MImg(aMStack_b4c);
+  MImg::~MImg(aMStack_b38);
+  (**(code **)(**(int **)(param_1 + 400) + 0x34))
+            (*(undefined4 *)(param_1 + 400),*(undefined4 *)(param_1 + 0x1fc));
+  lVar4 = GetRcEngine::RcGetNum(0x4f19);
+  lVar5 = GetRcEngine::RcGetNum(0x4f1a);
+  lVar6 = GetRcEngine::RcGetNum(0x4f18);
+  lVar7 = GetRcEngine::RcGetNum(0x4f17);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pTStack_10c = operator_new(0x250);
+                    /* try { // try from 00f1b85c to 00f1b863 has its CatchHandler @ 00f1b914 */
+  TextBox::TextBox(pTStack_10c,*(MWidget **)(param_1 + 0x1e8),a_Stack_3a4,0,0x20);
+  *(TextBox **)(param_1 + 0x200) = pTStack_10c;
+  if (*(int *)(param_1 + 0x200) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x57d);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x200) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x200) + 0x39) = 0;
+  *(undefined1 *)(*(int *)(param_1 + 0x200) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x200);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x200);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x200);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x200);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x200);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x200);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x200);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x200);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x200);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x200);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x200) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x200) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x200) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x200) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x200) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x200) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x200) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x200) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x200);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x200);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x200);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x200);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1e8) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1e8),*(undefined4 *)(param_1 + 0x200));
+  lVar4 = GetRcEngine::RcGetNum(0x4f1d);
+  lVar5 = GetRcEngine::RcGetNum(0x4f1e);
+  lVar6 = GetRcEngine::RcGetNum(0x4f1c);
+  lVar7 = GetRcEngine::RcGetNum(0x4f1b);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pTStack_110 = operator_new(0x250);
+                    /* try { // try from 00f1bd80 to 00f1bd87 has its CatchHandler @ 00f1bdb0 */
+  TextBox::TextBox(pTStack_110,*(MWidget **)(param_1 + 0x1e8),a_Stack_3a4,0,0x21);
+  *(TextBox **)(param_1 + 0x204) = pTStack_110;
+  if (*(int *)(param_1 + 0x204) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x59b);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x204) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x204) + 0x39) = 0;
+  *(undefined1 *)(*(int *)(param_1 + 0x204) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x204);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x204);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x204);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x204);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x204);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x204);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x204);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x204);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x204);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x204);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x204) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x204) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x204) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x204) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x204) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x204) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x204) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x204) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x204);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x204);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x204);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x204);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x204) + 0x128) = 0x44;
+  (**(code **)(**(int **)(param_1 + 0x1e8) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1e8),*(undefined4 *)(param_1 + 0x204));
+  lVar4 = GetRcEngine::RcGetNum(0x4eed);
+  lVar5 = GetRcEngine::RcGetNum(0x4eee);
+  lVar6 = GetRcEngine::RcGetNum(0x4eec);
+  lVar7 = GetRcEngine::RcGetNum(0x4eeb);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_114 = operator_new(0x2b4);
+                    /* try { // try from 00f1c22c to 00f1c233 has its CatchHandler @ 00f1c25c */
+  Image::Image(pIStack_114,*(MWidget **)(param_1 + 0x1e8),a_Stack_3a4,0,0x22);
+  *(Image **)(param_1 + 0x208) = pIStack_114;
+  if (*(int *)(param_1 + 0x208) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x5ba);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x208) + 0x260);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x208) + 0x274);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x208) + 0x288);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x208) + 0x29c);
+  *(undefined1 *)(*(int *)(param_1 + 0x208) + 0x39) = 0;
+  *(undefined1 *)(*(int *)(param_1 + 0x208) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x208);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x208);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x208);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x208);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x208);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x208);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x208) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x208) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x208) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x208) + 0xf4);
+  (**(code **)(**(int **)(param_1 + 0x1e8) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1e8),*(undefined4 *)(param_1 + 0x208));
+  lVar4 = GetRcEngine::RcGetNum(0x4f11);
+  lVar5 = GetRcEngine::RcGetNum(0x4f12);
+  lVar6 = GetRcEngine::RcGetNum(0x4f10);
+  lVar7 = GetRcEngine::RcGetNum(0x4f0f);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pTStack_118 = operator_new(0x250);
+                    /* try { // try from 00f1c5e4 to 00f1c5eb has its CatchHandler @ 00f1c614 */
+  TextBox::TextBox(pTStack_118,*(MWidget **)(param_1 + 0x1ec),a_Stack_3a4,0,0x23);
+  *(TextBox **)(param_1 + 0x20c) = pTStack_118;
+  if (*(int *)(param_1 + 0x20c) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x5cf);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x20c) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x20c) + 0x39) = 0;
+  *(undefined1 *)(*(int *)(param_1 + 0x20c) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x20c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x20c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x20c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x20c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x20c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x20c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x20c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x20c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x20c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x20c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x20c) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x20c) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x20c) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x20c) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x20c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x20c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x20c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x20c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x20c);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x20c);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x20c);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x20c);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1ec) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1ec),*(undefined4 *)(param_1 + 0x20c));
+  lVar4 = GetRcEngine::RcGetNum(0x4f15);
+  lVar5 = GetRcEngine::RcGetNum(0x4f16);
+  lVar6 = GetRcEngine::RcGetNum(0x4f14);
+  lVar7 = GetRcEngine::RcGetNum(0x4f13);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pTStack_11c = operator_new(0x250);
+                    /* try { // try from 00f1ca80 to 00f1ca87 has its CatchHandler @ 00f1cab0 */
+  TextBox::TextBox(pTStack_11c,*(MWidget **)(param_1 + 0x1ec),a_Stack_3a4,0,0x24);
+  *(TextBox **)(param_1 + 0x210) = pTStack_11c;
+  if (*(int *)(param_1 + 0x210) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x5ed);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x210) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x210) + 0x39) = 0;
+  *(undefined1 *)(*(int *)(param_1 + 0x210) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x210);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x210);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x210);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x210);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x210);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x210);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x210);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x210);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x210);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x210);
+  uVar3 = GetRcEngine::RcGetNum(0x45dd);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x210) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x210) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x210) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x210) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x210) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x210) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x210) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x210) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x210);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x210);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x210);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x210);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x210) + 0x128) = 0x44;
+  (**(code **)(**(int **)(param_1 + 0x1ec) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1ec),*(undefined4 *)(param_1 + 0x210));
+  lVar4 = GetRcEngine::RcGetNum(0x4ee9);
+  lVar5 = GetRcEngine::RcGetNum(0x4eea);
+  lVar6 = GetRcEngine::RcGetNum(0x4ee8);
+  lVar7 = GetRcEngine::RcGetNum(0x4ee7);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_120 = operator_new(0x2b4);
+                    /* try { // try from 00f1cf2c to 00f1cf33 has its CatchHandler @ 00f1cf5c */
+  Image::Image(pIStack_120,*(MWidget **)(param_1 + 0x1ec),a_Stack_3a4,0,0x25);
+  *(Image **)(param_1 + 0x214) = pIStack_120;
+  if (*(int *)(param_1 + 0x214) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x60c);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x214) + 0x260);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x214) + 0x274);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x214) + 0x288);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x214) + 0x29c);
+  *(undefined1 *)(*(int *)(param_1 + 0x214) + 0x39) = 0;
+  *(undefined1 *)(*(int *)(param_1 + 0x214) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x214);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x214);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x214);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x214);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x214);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x214);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x214) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x214) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x214) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x214) + 0xf4);
+  (**(code **)(**(int **)(param_1 + 0x1ec) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1ec),*(undefined4 *)(param_1 + 0x214));
+  lVar4 = GetRcEngine::RcGetNum(0x534d);
+  lVar5 = GetRcEngine::RcGetNum(0x534e);
+  lVar6 = GetRcEngine::RcGetNum(0x534c);
+  lVar7 = GetRcEngine::RcGetNum(0x534b);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pTStack_124 = operator_new(0x250);
+                    /* try { // try from 00f1d2e4 to 00f1d2eb has its CatchHandler @ 00f1d314 */
+  TextBox::TextBox(pTStack_124,*(MWidget **)(param_1 + 0x1f0),a_Stack_3a4,0,0x26);
+  *(TextBox **)(param_1 + 0x218) = pTStack_124;
+  if (*(int *)(param_1 + 0x218) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x621);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x218) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x218) + 0x39) = 0;
+  iVar17 = *(int *)(param_1 + 0x218);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x218);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x218);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x218);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x218);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x218);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x218);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x218);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x218);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x218);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x218) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x218) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x218) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x218) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x218) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x218) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x218) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x218) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x218);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x218);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x218);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x218);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1f0) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1f0),*(undefined4 *)(param_1 + 0x218));
+  lVar4 = GetRcEngine::RcGetNum(0x4f21);
+  lVar5 = GetRcEngine::RcGetNum(0x4f22);
+  lVar6 = GetRcEngine::RcGetNum(0x4f20);
+  lVar7 = GetRcEngine::RcGetNum(0x4f1f);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pTStack_128 = operator_new(0x250);
+                    /* try { // try from 00f1d774 to 00f1d77b has its CatchHandler @ 00f1d7a4 */
+  TextBox::TextBox(pTStack_128,*(MWidget **)(param_1 + 0x1f0),a_Stack_3a4,0,0x27);
+  *(TextBox **)(param_1 + 0x21c) = pTStack_128;
+  if (*(int *)(param_1 + 0x21c) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x63e);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x21c) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x21c) + 0x39) = 0;
+  iVar17 = *(int *)(param_1 + 0x21c);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x21c);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x21c);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x21c);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x21c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x21c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x21c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x21c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x21c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x21c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x21c) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x21c) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x21c) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x21c) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x21c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x21c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x21c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x21c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x21c);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x21c);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x21c);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x21c);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1f0) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1f0),*(undefined4 *)(param_1 + 0x21c));
+  lVar4 = GetRcEngine::RcGetNum(0x5351);
+  lVar5 = GetRcEngine::RcGetNum(0x5352);
+  lVar6 = GetRcEngine::RcGetNum(0x5350);
+  lVar7 = GetRcEngine::RcGetNum(0x534f);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pTStack_12c = operator_new(0x250);
+                    /* try { // try from 00f1dc04 to 00f1dc0b has its CatchHandler @ 00f1dc34 */
+  TextBox::TextBox(pTStack_12c,*(MWidget **)(param_1 + 500),a_Stack_3a4,0,0x28);
+  *(TextBox **)(param_1 + 0x220) = pTStack_12c;
+  if (*(int *)(param_1 + 0x220) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x65b);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x220) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x220) + 0x39) = 0;
+  iVar17 = *(int *)(param_1 + 0x220);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x220);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x220);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x220);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x220);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x220);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x220);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x220);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x220);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x220);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x220) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x220) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x220) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x220) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x220) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x220) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x220) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x220) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x220);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x220);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x220);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x220);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 500) + 0x34))
+            (*(undefined4 *)(param_1 + 500),*(undefined4 *)(param_1 + 0x220));
+  lVar4 = GetRcEngine::RcGetNum(0x5355);
+  lVar5 = GetRcEngine::RcGetNum(0x5356);
+  lVar6 = GetRcEngine::RcGetNum(0x5354);
+  lVar7 = GetRcEngine::RcGetNum(0x5353);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pTStack_130 = operator_new(0x250);
+                    /* try { // try from 00f1e094 to 00f1e09b has its CatchHandler @ 00f1e0c4 */
+  TextBox::TextBox(pTStack_130,*(MWidget **)(param_1 + 500),a_Stack_3a4,0,0x29);
+  *(TextBox **)(param_1 + 0x224) = pTStack_130;
+  if (*(int *)(param_1 + 0x224) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x678);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x224) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x224) + 0x39) = 0;
+  iVar17 = *(int *)(param_1 + 0x224);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x224);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x224);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x224);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x224);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x224);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x224);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x224);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x224);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x224);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x224) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x224) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x224) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x224) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x224) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x224) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x224) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x224) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x224);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x224);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x224);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x224);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 500) + 0x34))
+            (*(undefined4 *)(param_1 + 500),*(undefined4 *)(param_1 + 0x224));
+  lVar4 = GetRcEngine::RcGetNum(0x5345);
+  lVar5 = GetRcEngine::RcGetNum(0x5346);
+  lVar6 = GetRcEngine::RcGetNum(0x5344);
+  lVar7 = GetRcEngine::RcGetNum(0x5343);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pTStack_134 = operator_new(0x250);
+                    /* try { // try from 00f1e524 to 00f1e52b has its CatchHandler @ 00f1e554 */
+  TextBox::TextBox(pTStack_134,*(MWidget **)(param_1 + 0x1f8),a_Stack_3a4,0,0x2a);
+  *(TextBox **)(param_1 + 0x228) = pTStack_134;
+  if (*(int *)(param_1 + 0x228) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x695);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x228) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x228) + 0x39) = 0;
+  iVar17 = *(int *)(param_1 + 0x228);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x228);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x228);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x228);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x228);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x228);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x228);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x228);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x228);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x228);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x228) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x228) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x228) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x228) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x228) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x228) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x228) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x228) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x228);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x228);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x228);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x228);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1f8) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1f8),*(undefined4 *)(param_1 + 0x228));
+  lVar4 = GetRcEngine::RcGetNum(0x5349);
+  lVar5 = GetRcEngine::RcGetNum(0x534a);
+  lVar6 = GetRcEngine::RcGetNum(0x5348);
+  lVar7 = GetRcEngine::RcGetNum(0x5347);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pTStack_138 = operator_new(0x250);
+                    /* try { // try from 00f1e9b4 to 00f1e9bb has its CatchHandler @ 00f1e9e4 */
+  TextBox::TextBox(pTStack_138,*(MWidget **)(param_1 + 0x1f8),a_Stack_3a4,0,0x2b);
+  *(TextBox **)(param_1 + 0x22c) = pTStack_138;
+  if (*(int *)(param_1 + 0x22c) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x6b2);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x22c) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x22c) + 0x39) = 0;
+  iVar17 = *(int *)(param_1 + 0x22c);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x22c);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x22c);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x22c);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x22c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x22c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x22c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x22c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x22c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x22c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x22c) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x22c) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x22c) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x22c) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x22c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x22c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x22c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x22c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x22c);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x22c);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x22c);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x22c);
+  uVar3 = GetRcEngine::RcGetNum(0x320f);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1f8) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1f8),*(undefined4 *)(param_1 + 0x22c));
+  lVar4 = GetRcEngine::RcGetNum(0x527f);
+  lVar5 = GetRcEngine::RcGetNum(0x5280);
+  lVar6 = GetRcEngine::RcGetNum(0x527e);
+  lVar7 = GetRcEngine::RcGetNum(0x527d);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_13c = operator_new(0x270);
+                    /* try { // try from 00f1ee44 to 00f1ee4b has its CatchHandler @ 00f1ee74 */
+  ComboButton::ComboButton(pCStack_13c,*(MWidget **)(param_1 + 0x1fc),a_Stack_3a4,0,0x2c);
+  *(ComboButton **)(param_1 + 0x230) = pCStack_13c;
+  if (*(int *)(param_1 + 0x230) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x6cf);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x230) + 600) = 1;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x230) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x230) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x230) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x230) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x230) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x55);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x230) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x230) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x230) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x230) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x230) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x230) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x230) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x230);
+  uVar8 = GetRcEngine::RcGetColor(0x4c);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x230);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x230);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x230);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x230);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x230);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x230);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x230) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x230) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x230) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x230) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x230) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x230) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x230) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x230) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x230);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x230);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x230);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x230);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1fc) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1fc),*(undefined4 *)(param_1 + 0x230));
+  lVar4 = GetRcEngine::RcGetNum(0x5273);
+  lVar5 = GetRcEngine::RcGetNum(0x5274);
+  lVar6 = GetRcEngine::RcGetNum(0x5272);
+  lVar7 = GetRcEngine::RcGetNum(0x5271);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_140 = operator_new(0x270);
+                    /* try { // try from 00f1f748 to 00f1f74f has its CatchHandler @ 00f1f778 */
+  ComboButton::ComboButton(pCStack_140,*(MWidget **)(param_1 + 0x1fc),a_Stack_3a4,0,0x2d);
+  *(ComboButton **)(param_1 + 0x234) = pCStack_140;
+  if (*(int *)(param_1 + 0x234) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x70d);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x234) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x234) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x234) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x234) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x234) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x234) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x234) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x234) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x234) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x234) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x234) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x234) + 0x3a) = 1;
+  *(undefined1 *)(*(int *)(param_1 + 0x234) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x234);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x234);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x234);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x234);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x234);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x234);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x234) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x234) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x234) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x234) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x234) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x234) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x234) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x234) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x234);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x234);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x234);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x234);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1fc) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1fc),*(undefined4 *)(param_1 + 0x234));
+  lVar4 = GetRcEngine::RcGetNum(0x52b7);
+  lVar5 = GetRcEngine::RcGetNum(0x52b8);
+  lVar6 = GetRcEngine::RcGetNum(0x52b6);
+  lVar7 = GetRcEngine::RcGetNum(0x52b5);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_144 = operator_new(0x270);
+                    /* try { // try from 00f20070 to 00f20077 has its CatchHandler @ 00f200a0 */
+  ComboButton::ComboButton(pCStack_144,*(MWidget **)(param_1 + 0x1fc),a_Stack_3a4,0,0x2e);
+  *(ComboButton **)(param_1 + 0x238) = pCStack_144;
+  if (*(int *)(param_1 + 0x238) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x74c);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x238) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x238) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x238) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x238) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x238) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x238) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x238) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x238) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x238) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x238) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x238) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x238) + 0x3a) = 1;
+  *(undefined1 *)(*(int *)(param_1 + 0x238) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x238);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x238);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x238);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x238);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x238);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x238);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x238) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x238) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x238) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x238) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x238) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x238) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x238) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x238) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x238);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x238);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x238);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x238);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1fc) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1fc),*(undefined4 *)(param_1 + 0x238));
+  lVar4 = GetRcEngine::RcGetNum(0x52af);
+  lVar5 = GetRcEngine::RcGetNum(0x52b0);
+  lVar6 = GetRcEngine::RcGetNum(0x52ae);
+  lVar7 = GetRcEngine::RcGetNum(0x52ad);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_148 = operator_new(0x270);
+                    /* try { // try from 00f20998 to 00f2099f has its CatchHandler @ 00f209c8 */
+  ComboButton::ComboButton(pCStack_148,*(MWidget **)(param_1 + 0x1fc),a_Stack_3a4,0,0x2f);
+  *(ComboButton **)(param_1 + 0x23c) = pCStack_148;
+  if (*(int *)(param_1 + 0x23c) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x78b);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x23c) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x23c) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x23c) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x23c) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x23c) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x23c) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x23c) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x23c) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x23c) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x23c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x23c) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x23c) + 0x3a) = 1;
+  *(undefined1 *)(*(int *)(param_1 + 0x23c) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x23c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x23c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x23c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x23c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x23c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x23c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x23c) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x23c) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x23c) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x23c) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x23c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x23c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x23c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x23c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x23c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x23c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x23c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x23c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1fc) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1fc),*(undefined4 *)(param_1 + 0x23c));
+  lVar4 = GetRcEngine::RcGetNum(0x532d);
+  lVar5 = GetRcEngine::RcGetNum(0x532e);
+  lVar6 = GetRcEngine::RcGetNum(0x532c);
+  lVar7 = GetRcEngine::RcGetNum(0x532b);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pNStack_14c = operator_new(0x2c4);
+                    /* try { // try from 00f212c0 to 00f212c7 has its CatchHandler @ 00f212f0 */
+  NumberEdit::NumberEdit(pNStack_14c,*(MWidget **)(param_1 + 0x1fc),a_Stack_3a4,0,0x30);
+  *(NumberEdit **)(param_1 + 0x240) = pNStack_14c;
+  if (*(int *)(param_1 + 0x240) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x7ca);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x240) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x240);
+  uVar8 = GetRcEngine::RcGetColor(1);
+  *(undefined4 *)(iVar17 + 0x54) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x240);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x240);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x240);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x240);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x240);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x240);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x240) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x240) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x240) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x240) + 0xf4);
+  NumberEdit::SetDigits(*(ulong *)(param_1 + 0x240));
+  NumberEdit::SetDigitsFont(*(ulong *)(param_1 + 0x240),0x4ae,0x4ae,0x4ae);
+  uVar18 = *(ulong *)(param_1 + 0x240);
+  uVar9 = GetRcEngine::RcGetColor(0x52);
+  uVar10 = GetRcEngine::RcGetColor(0x52);
+  uVar11 = GetRcEngine::RcGetColor(0x4e);
+  GetRcEngine::RcGetColor(0x5e);
+  NumberEdit::SetDigitsFontColor(uVar18,uVar9,uVar10,uVar11);
+  NumberEdit::SetDigitsUseBGImage((uchar)*(undefined4 *)(param_1 + 0x240));
+  pMStack_150 = *(MImg **)(param_1 + 0x240);
+  MImg::MImg(aMStack_b88,0x5cd);
+                    /* try { // try from 00f21630 to 00f21637 has its CatchHandler @ 00f218fc */
+  MImg::MImg(aMStack_b9c,0x5cd);
+                    /* try { // try from 00f2164c to 00f21653 has its CatchHandler @ 00f2189c */
+  MImg::MImg(aMStack_bb0,0x5cd);
+                    /* try { // try from 00f21668 to 00f2166f has its CatchHandler @ 00f21734 */
+  MImg::MImg(aMStack_bc4,0x1ab);
+                    /* try { // try from 00f21694 to 00f2169b has its CatchHandler @ 00f216d8 */
+  NumberEdit::SetDigitsBGImage(pMStack_150,aMStack_b88,aMStack_b9c,aMStack_bb0);
+                    /* try { // try from 00f216ac to 00f216b3 has its CatchHandler @ 00f21734 */
+  MImg::~MImg(aMStack_bc4);
+                    /* try { // try from 00f216c4 to 00f216cb has its CatchHandler @ 00f2189c */
+  MImg::~MImg(aMStack_bb0);
+                    /* try { // try from 00f21720 to 00f21727 has its CatchHandler @ 00f218fc */
+  MImg::~MImg(aMStack_b9c);
+  MImg::~MImg(aMStack_b88);
+  (**(code **)(**(int **)(param_1 + 0x1fc) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1fc),*(undefined4 *)(param_1 + 0x240));
+  lVar4 = GetRcEngine::RcGetNum(0x52a3);
+  lVar5 = GetRcEngine::RcGetNum(0x52a4);
+  lVar6 = GetRcEngine::RcGetNum(0x52a2);
+  lVar7 = GetRcEngine::RcGetNum(0x52a1);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_154 = operator_new(0x270);
+                    /* try { // try from 00f21888 to 00f2188f has its CatchHandler @ 00f21940 */
+  ComboButton::ComboButton(pCStack_154,*(MWidget **)(param_1 + 0x1fc),a_Stack_3a4,0,0x31);
+  *(ComboButton **)(param_1 + 0x244) = pCStack_154;
+  if (*(int *)(param_1 + 0x244) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x7e0);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x244) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x244) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x244) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x244) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x244) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x244) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x244) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x244) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x244) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x244) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x244) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x244) + 0x3a) = 1;
+  *(undefined1 *)(*(int *)(param_1 + 0x244) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x244);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x244);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x244);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x244);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x244);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x244);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x244) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x244) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x244) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x244) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x244) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x244) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x244) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x244) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x244);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x244);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x244);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x244);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1fc) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1fc),*(undefined4 *)(param_1 + 0x244));
+  lVar4 = GetRcEngine::RcGetNum(0x5267);
+  lVar5 = GetRcEngine::RcGetNum(0x5268);
+  lVar6 = GetRcEngine::RcGetNum(0x5266);
+  lVar7 = GetRcEngine::RcGetNum(0x5265);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_158 = operator_new(0x270);
+                    /* try { // try from 00f22238 to 00f2223f has its CatchHandler @ 00f22268 */
+  ComboButton::ComboButton(pCStack_158,*(MWidget **)(param_1 + 0x1fc),a_Stack_3a4,0,0x32);
+  *(ComboButton **)(param_1 + 0x248) = pCStack_158;
+  if (*(int *)(param_1 + 0x248) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x81f);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x248) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x248) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x248) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x248) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x248) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x248) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x248) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x248) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x248) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x248) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x248) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x248) + 0x3a) = 1;
+  *(undefined1 *)(*(int *)(param_1 + 0x248) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x248);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x248);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x248);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x248);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x248);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x248);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x248) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x248) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x248) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x248) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x248) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x248) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x248) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x248) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x248);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x248);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x248);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x248);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1fc) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1fc),*(undefined4 *)(param_1 + 0x248));
+  lVar4 = GetRcEngine::RcGetNum(0x529f);
+  lVar5 = GetRcEngine::RcGetNum(0x52a0);
+  lVar6 = GetRcEngine::RcGetNum(0x529e);
+  lVar7 = GetRcEngine::RcGetNum(0x529d);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_15c = operator_new(0x270);
+                    /* try { // try from 00f22b60 to 00f22b67 has its CatchHandler @ 00f22b90 */
+  ComboButton::ComboButton(pCStack_15c,*(MWidget **)(param_1 + 0x1fc),a_Stack_3a4,0,0x33);
+  *(ComboButton **)(param_1 + 0x24c) = pCStack_15c;
+  if (*(int *)(param_1 + 0x24c) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x85e);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x24c) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x24c) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x24c) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x24c) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x24c) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x24c) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x24c) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x24c) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x24c) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x24c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x24c) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x24c) + 0x3a) = 1;
+  *(undefined1 *)(*(int *)(param_1 + 0x24c) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x24c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x24c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x24c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x24c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x24c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x24c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x24c) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x24c) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x24c) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x24c) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x24c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x24c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x24c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x24c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x24c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x24c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x24c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x24c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1fc) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1fc),*(undefined4 *)(param_1 + 0x24c));
+  lVar4 = GetRcEngine::RcGetNum(0x525f);
+  lVar5 = GetRcEngine::RcGetNum(0x5260);
+  lVar6 = GetRcEngine::RcGetNum(0x525e);
+  lVar7 = GetRcEngine::RcGetNum(0x525d);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_160 = operator_new(0x270);
+                    /* try { // try from 00f23488 to 00f2348f has its CatchHandler @ 00f234b8 */
+  ComboButton::ComboButton(pCStack_160,*(MWidget **)(param_1 + 0x1fc),a_Stack_3a4,0,0x34);
+  *(ComboButton **)(param_1 + 0x250) = pCStack_160;
+  if (*(int *)(param_1 + 0x250) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x89d);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x250) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x250) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x250) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x250) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x250) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x250) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x250) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x250) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x250) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x250) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x250) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x250) + 0x3a) = 1;
+  *(undefined1 *)(*(int *)(param_1 + 0x250) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x250);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x250);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x250);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x250);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x250);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x250);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x250) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x250) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x250) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x250) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x250) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x250) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x250) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x250) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x250);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x250);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x250);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x250);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1fc) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1fc),*(undefined4 *)(param_1 + 0x250));
+  lVar4 = GetRcEngine::RcGetNum(0x5283);
+  lVar5 = GetRcEngine::RcGetNum(0x5284);
+  lVar6 = GetRcEngine::RcGetNum(0x5282);
+  lVar7 = GetRcEngine::RcGetNum(0x5281);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_164 = operator_new(0x270);
+                    /* try { // try from 00f23db0 to 00f23db7 has its CatchHandler @ 00f23de0 */
+  ComboButton::ComboButton(pCStack_164,*(MWidget **)(param_1 + 0x1fc),a_Stack_3a4,0,0x35);
+  *(ComboButton **)(param_1 + 0x254) = pCStack_164;
+  if (*(int *)(param_1 + 0x254) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x8dc);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x254) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x254) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x254) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x254) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x254) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x254) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x254) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x254) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x254) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x254) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x254) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x254) + 0x3a) = 1;
+  *(undefined1 *)(*(int *)(param_1 + 0x254) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x254);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x254);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x254);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x254);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x254);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x254);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x254) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x254) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x254) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x254) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x254) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x254) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x254) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x254) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x254);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x254);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x254);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x254);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1fc) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1fc),*(undefined4 *)(param_1 + 0x254));
+  lVar4 = GetRcEngine::RcGetNum(0x528f);
+  lVar5 = GetRcEngine::RcGetNum(0x5290);
+  lVar6 = GetRcEngine::RcGetNum(0x528e);
+  lVar7 = GetRcEngine::RcGetNum(0x528d);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_168 = operator_new(0x270);
+                    /* try { // try from 00f246d8 to 00f246df has its CatchHandler @ 00f24708 */
+  ComboButton::ComboButton(pCStack_168,*(MWidget **)(param_1 + 0x1fc),a_Stack_3a4,0,0x36);
+  *(ComboButton **)(param_1 + 600) = pCStack_168;
+  if (*(int *)(param_1 + 600) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x91b);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 600) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 600) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 600) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 600) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 600) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 600) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 600) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 600) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 600) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 600) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 600) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 600) + 0x3a) = 1;
+  *(undefined1 *)(*(int *)(param_1 + 600) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 600);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 600);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 600);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 600);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 600);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 600);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 600) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 600) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 600) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 600) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 600) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 600) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 600) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 600) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 600);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 600);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 600);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 600);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1fc) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1fc),*(undefined4 *)(param_1 + 600));
+  lVar4 = GetRcEngine::RcGetNum(0x52bb);
+  lVar5 = GetRcEngine::RcGetNum(0x52bc);
+  lVar6 = GetRcEngine::RcGetNum(0x52ba);
+  lVar7 = GetRcEngine::RcGetNum(0x52b9);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_16c = operator_new(0x270);
+                    /* try { // try from 00f25000 to 00f25007 has its CatchHandler @ 00f25030 */
+  ComboButton::ComboButton(pCStack_16c,*(MWidget **)(param_1 + 0x1fc),a_Stack_3a4,0,0x37);
+  *(ComboButton **)(param_1 + 0x25c) = pCStack_16c;
+  if (*(int *)(param_1 + 0x25c) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x95a);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x25c) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x25c) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x25c) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x25c) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x25c) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x25c) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x25c) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x25c) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x25c) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x25c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x25c) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x25c) + 0x3a) = 1;
+  *(undefined1 *)(*(int *)(param_1 + 0x25c) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x25c) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x25c) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x25c) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x25c) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1fc) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1fc),*(undefined4 *)(param_1 + 0x25c));
+  lVar4 = GetRcEngine::RcGetNum(0x5277);
+  lVar5 = GetRcEngine::RcGetNum(0x5278);
+  lVar6 = GetRcEngine::RcGetNum(0x5276);
+  lVar7 = GetRcEngine::RcGetNum(0x5275);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_170 = operator_new(0x270);
+                    /* try { // try from 00f25928 to 00f2592f has its CatchHandler @ 00f25958 */
+  ComboButton::ComboButton(pCStack_170,*(MWidget **)(param_1 + 0x1fc),a_Stack_3a4,0,0x38);
+  *(ComboButton **)(param_1 + 0x260) = pCStack_170;
+  if (*(int *)(param_1 + 0x260) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x999);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x260) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x260) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x260) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x260) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x260) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x5c);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x88) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x260) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x260) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x260) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x260) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x260) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x260) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x260) + 0x3a) = 1;
+  *(undefined1 *)(*(int *)(param_1 + 0x260) + 0x38) = 0;
+  iVar17 = *(int *)(param_1 + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x260) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x260) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x260) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x260) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x1fc) + 0x34))
+            (*(undefined4 *)(param_1 + 0x1fc),*(undefined4 *)(param_1 + 0x260));
+  lVar4 = GetRcEngine::RcGetNum(0x52f3);
+  lVar5 = GetRcEngine::RcGetNum(0x52f4);
+  lVar6 = GetRcEngine::RcGetNum(0x52f2);
+  lVar7 = GetRcEngine::RcGetNum(0x52ef);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_174 = operator_new(0x514);
+                    /* try { // try from 00f26250 to 00f26257 has its CatchHandler @ 00f26280 */
+  ImageButton::ImageButton(pIStack_174,*(MWidget **)(param_1 + 0x194),a_Stack_3a4,0,0x39);
+  *(ImageButton **)(param_1 + 0x264) = pIStack_174;
+  if (*(int *)(param_1 + 0x264) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x9d8);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x264) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x264) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x264);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x264);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x264);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x264);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x264);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x264);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x264);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x264);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x264) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x264) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x264) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x264) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x264) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x264) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x264) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x264) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x264);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x264);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x264);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x264);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x264) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x264) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x264);
+  uVar9 = GetRcEngine::RcGetNum(0x52f1);
+  GetRcEngine::RcGetNum(0x52f0);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_178 = *(MImg **)(param_1 + 0x264);
+  MImg::MImg(aMStack_bd8,0x5cd);
+                    /* try { // try from 00f26650 to 00f26657 has its CatchHandler @ 00f2691c */
+  MImg::MImg(aMStack_bec,0x5cd);
+                    /* try { // try from 00f2666c to 00f26673 has its CatchHandler @ 00f268bc */
+  MImg::MImg(aMStack_c00,0x5cd);
+                    /* try { // try from 00f26688 to 00f2668f has its CatchHandler @ 00f26754 */
+  MImg::MImg(aMStack_c14,0x5cd);
+                    /* try { // try from 00f266b4 to 00f266bb has its CatchHandler @ 00f266f8 */
+  ImageButton::SetImg(pMStack_178,aMStack_bd8,aMStack_bec,aMStack_c00);
+                    /* try { // try from 00f266cc to 00f266d3 has its CatchHandler @ 00f26754 */
+  MImg::~MImg(aMStack_c14);
+                    /* try { // try from 00f266e4 to 00f266eb has its CatchHandler @ 00f268bc */
+  MImg::~MImg(aMStack_c00);
+                    /* try { // try from 00f26740 to 00f26747 has its CatchHandler @ 00f2691c */
+  MImg::~MImg(aMStack_bec);
+  MImg::~MImg(aMStack_bd8);
+  (**(code **)(**(int **)(param_1 + 0x194) + 0x34))
+            (*(undefined4 *)(param_1 + 0x194),*(undefined4 *)(param_1 + 0x264));
+  lVar4 = GetRcEngine::RcGetNum(0x52ff);
+  lVar5 = GetRcEngine::RcGetNum(0x5300);
+  lVar6 = GetRcEngine::RcGetNum(0x52fe);
+  lVar7 = GetRcEngine::RcGetNum(0x52fb);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_17c = operator_new(0x514);
+                    /* try { // try from 00f268a8 to 00f268af has its CatchHandler @ 00f26960 */
+  ImageButton::ImageButton(pIStack_17c,*(MWidget **)(param_1 + 0x194),a_Stack_3a4,0,0x3a);
+  *(ImageButton **)(param_1 + 0x268) = pIStack_17c;
+  if (*(int *)(param_1 + 0x268) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0x9f7);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x268) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x268) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x268);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x268);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x268);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x268);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x268);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x268);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x268);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x268);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x268);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x268) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x268) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x268) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x268) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x268) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x268) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x268) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x268) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x268);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x268);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x268);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x268);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x268) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x268) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x268);
+  uVar9 = GetRcEngine::RcGetNum(0x52fd);
+  GetRcEngine::RcGetNum(0x52fc);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_180 = *(MImg **)(param_1 + 0x268);
+  MImg::MImg(aMStack_c28,0x5cd);
+                    /* try { // try from 00f26d50 to 00f26d57 has its CatchHandler @ 00f2701c */
+  MImg::MImg(aMStack_c3c,0x5cd);
+                    /* try { // try from 00f26d6c to 00f26d73 has its CatchHandler @ 00f26fbc */
+  MImg::MImg(aMStack_c50,0x5cd);
+                    /* try { // try from 00f26d88 to 00f26d8f has its CatchHandler @ 00f26e54 */
+  MImg::MImg(aMStack_c64,0x5cd);
+                    /* try { // try from 00f26db4 to 00f26dbb has its CatchHandler @ 00f26df8 */
+  ImageButton::SetImg(pMStack_180,aMStack_c28,aMStack_c3c,aMStack_c50);
+                    /* try { // try from 00f26dcc to 00f26dd3 has its CatchHandler @ 00f26e54 */
+  MImg::~MImg(aMStack_c64);
+                    /* try { // try from 00f26de4 to 00f26deb has its CatchHandler @ 00f26fbc */
+  MImg::~MImg(aMStack_c50);
+                    /* try { // try from 00f26e40 to 00f26e47 has its CatchHandler @ 00f2701c */
+  MImg::~MImg(aMStack_c3c);
+  MImg::~MImg(aMStack_c28);
+  (**(code **)(**(int **)(param_1 + 0x194) + 0x34))
+            (*(undefined4 *)(param_1 + 0x194),*(undefined4 *)(param_1 + 0x268));
+  lVar4 = GetRcEngine::RcGetNum(0x52ed);
+  lVar5 = GetRcEngine::RcGetNum(0x52ee);
+  lVar6 = GetRcEngine::RcGetNum(0x52ec);
+  lVar7 = GetRcEngine::RcGetNum(0x52e9);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_184 = operator_new(0x514);
+                    /* try { // try from 00f26fa8 to 00f26faf has its CatchHandler @ 00f27060 */
+  ImageButton::ImageButton(pIStack_184,*(MWidget **)(param_1 + 0x194),a_Stack_3a4,0,0x3b);
+  *(ImageButton **)(param_1 + 0x26c) = pIStack_184;
+  if (*(int *)(param_1 + 0x26c) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0xa17);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x26c) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x26c) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x26c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x26c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x26c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x26c);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x26c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x26c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x26c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x26c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x26c) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x26c) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x26c) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x26c) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x26c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x26c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x26c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x26c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x26c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x26c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x26c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x26c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x26c) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x26c) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x26c);
+  uVar9 = GetRcEngine::RcGetNum(0x52eb);
+  GetRcEngine::RcGetNum(0x52ea);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_188 = *(MImg **)(param_1 + 0x26c);
+  MImg::MImg(aMStack_c78,0x5cd);
+                    /* try { // try from 00f27430 to 00f27437 has its CatchHandler @ 00f276fc */
+  MImg::MImg(aMStack_c8c,0x5cd);
+                    /* try { // try from 00f2744c to 00f27453 has its CatchHandler @ 00f2769c */
+  MImg::MImg(aMStack_ca0,0x5cd);
+                    /* try { // try from 00f27468 to 00f2746f has its CatchHandler @ 00f27534 */
+  MImg::MImg(aMStack_cb4,0x5cd);
+                    /* try { // try from 00f27494 to 00f2749b has its CatchHandler @ 00f274d8 */
+  ImageButton::SetImg(pMStack_188,aMStack_c78,aMStack_c8c,aMStack_ca0);
+                    /* try { // try from 00f274ac to 00f274b3 has its CatchHandler @ 00f27534 */
+  MImg::~MImg(aMStack_cb4);
+                    /* try { // try from 00f274c4 to 00f274cb has its CatchHandler @ 00f2769c */
+  MImg::~MImg(aMStack_ca0);
+                    /* try { // try from 00f27520 to 00f27527 has its CatchHandler @ 00f276fc */
+  MImg::~MImg(aMStack_c8c);
+  MImg::~MImg(aMStack_c78);
+  (**(code **)(**(int **)(param_1 + 0x194) + 0x34))
+            (*(undefined4 *)(param_1 + 0x194),*(undefined4 *)(param_1 + 0x26c));
+  lVar4 = GetRcEngine::RcGetNum(0x5287);
+  lVar5 = GetRcEngine::RcGetNum(0x5288);
+  lVar6 = GetRcEngine::RcGetNum(0x5286);
+  lVar7 = GetRcEngine::RcGetNum(0x5285);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_18c = operator_new(0x270);
+                    /* try { // try from 00f27688 to 00f2768f has its CatchHandler @ 00f27740 */
+  ComboButton::ComboButton(pCStack_18c,*(MWidget **)(param_1 + 0x194),a_Stack_3a4,0,0x3c);
+  *(ComboButton **)(param_1 + 0x270) = pCStack_18c;
+  if (*(int *)(param_1 + 0x270) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0xa36);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x270) + 600) = 1;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x270) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x270) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x270) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x270) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x270) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x55);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x270) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x270) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x270) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x270) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x270) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x270) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x270) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x270);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x270);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x270);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x270);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x270);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x270);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x270) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x270) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x270) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x270) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x270) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x270) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x270) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x270) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x270);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x270);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x270);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x270);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x194) + 0x34))
+            (*(undefined4 *)(param_1 + 0x194),*(undefined4 *)(param_1 + 0x270));
+  lVar4 = GetRcEngine::RcGetNum(0x528b);
+  lVar5 = GetRcEngine::RcGetNum(0x528c);
+  lVar6 = GetRcEngine::RcGetNum(0x528a);
+  lVar7 = GetRcEngine::RcGetNum(0x5289);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_190 = operator_new(0x270);
+                    /* try { // try from 00f27fd0 to 00f27fd7 has its CatchHandler @ 00f28000 */
+  ComboButton::ComboButton(pCStack_190,*(MWidget **)(param_1 + 0x194),a_Stack_3a4,0,0x3d);
+  *(ComboButton **)(param_1 + 0x274) = pCStack_190;
+  if (*(int *)(param_1 + 0x274) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0xa72);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x274) + 600) = 1;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x274) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x274) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x274) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x274) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x274) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x55);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x274) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x274) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x274) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x274) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x274) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x274) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x274) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x274);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x274);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x274);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x274);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x274);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x274);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x274) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x274) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x274) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x274) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x274) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x274) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x274) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x274) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x274);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x274);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x274);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x274);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x194) + 0x34))
+            (*(undefined4 *)(param_1 + 0x194),*(undefined4 *)(param_1 + 0x274));
+  lVar4 = GetRcEngine::RcGetNum(0x531d);
+  lVar5 = GetRcEngine::RcGetNum(0x531e);
+  lVar6 = GetRcEngine::RcGetNum(0x531c);
+  lVar7 = GetRcEngine::RcGetNum(0x5319);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_194 = operator_new(0x514);
+                    /* try { // try from 00f28890 to 00f28897 has its CatchHandler @ 00f288c0 */
+  ImageButton::ImageButton(pIStack_194,*(MWidget **)(param_1 + 0x194),a_Stack_3a4,0,0x3e);
+  *(ImageButton **)(param_1 + 0x278) = pIStack_194;
+  if (*(int *)(param_1 + 0x278) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0xaae);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x278) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x278) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x278);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x278);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x278);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x278);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x278);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x278);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x278);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x278);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x278);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x278) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x278) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x278) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x278) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x278) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x278) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x278) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x278) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x278);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x278);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x278);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x278);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x278) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x278) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x278);
+  uVar9 = GetRcEngine::RcGetNum(0x531b);
+  GetRcEngine::RcGetNum(0x531a);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_198 = *(MImg **)(param_1 + 0x278);
+  MImg::MImg(aMStack_cc8,0x5cd);
+                    /* try { // try from 00f28cb0 to 00f28cb7 has its CatchHandler @ 00f28f7c */
+  MImg::MImg(aMStack_cdc,0x5cd);
+                    /* try { // try from 00f28ccc to 00f28cd3 has its CatchHandler @ 00f28f1c */
+  MImg::MImg(aMStack_cf0,0x5cd);
+                    /* try { // try from 00f28ce8 to 00f28cef has its CatchHandler @ 00f28db4 */
+  MImg::MImg(aMStack_d04,0x5cd);
+                    /* try { // try from 00f28d14 to 00f28d1b has its CatchHandler @ 00f28d58 */
+  ImageButton::SetImg(pMStack_198,aMStack_cc8,aMStack_cdc,aMStack_cf0);
+                    /* try { // try from 00f28d2c to 00f28d33 has its CatchHandler @ 00f28db4 */
+  MImg::~MImg(aMStack_d04);
+                    /* try { // try from 00f28d44 to 00f28d4b has its CatchHandler @ 00f28f1c */
+  MImg::~MImg(aMStack_cf0);
+                    /* try { // try from 00f28da0 to 00f28da7 has its CatchHandler @ 00f28f7c */
+  MImg::~MImg(aMStack_cdc);
+  MImg::~MImg(aMStack_cc8);
+  (**(code **)(**(int **)(param_1 + 0x194) + 0x34))
+            (*(undefined4 *)(param_1 + 0x194),*(undefined4 *)(param_1 + 0x278));
+  lVar4 = GetRcEngine::RcGetNum(0x52f9);
+  lVar5 = GetRcEngine::RcGetNum(0x52fa);
+  lVar6 = GetRcEngine::RcGetNum(0x52f8);
+  lVar7 = GetRcEngine::RcGetNum(0x52f5);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_19c = operator_new(0x514);
+                    /* try { // try from 00f28f08 to 00f28f0f has its CatchHandler @ 00f28fc0 */
+  ImageButton::ImageButton(pIStack_19c,*(MWidget **)(param_1 + 0x198),a_Stack_3a4,0,0x3f);
+  *(ImageButton **)(param_1 + 0x27c) = pIStack_19c;
+  if (*(int *)(param_1 + 0x27c) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0xace);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x27c) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x27c) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x27c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x27c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x27c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x27c);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x27c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x27c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x27c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x27c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x27c) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x27c) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x27c) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x27c) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x27c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x27c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x27c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x27c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x27c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x27c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x27c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x27c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x27c) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x27c) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x27c);
+  uVar9 = GetRcEngine::RcGetNum(0x52f7);
+  GetRcEngine::RcGetNum(0x52f6);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_1a0 = *(MImg **)(param_1 + 0x27c);
+  MImg::MImg(aMStack_d18,0x5cd);
+                    /* try { // try from 00f29390 to 00f29397 has its CatchHandler @ 00f2965c */
+  MImg::MImg(aMStack_d2c,0x5cd);
+                    /* try { // try from 00f293ac to 00f293b3 has its CatchHandler @ 00f295fc */
+  MImg::MImg(aMStack_d40,0x5cd);
+                    /* try { // try from 00f293c8 to 00f293cf has its CatchHandler @ 00f29494 */
+  MImg::MImg(aMStack_d54,0x5cd);
+                    /* try { // try from 00f293f4 to 00f293fb has its CatchHandler @ 00f29438 */
+  ImageButton::SetImg(pMStack_1a0,aMStack_d18,aMStack_d2c,aMStack_d40);
+                    /* try { // try from 00f2940c to 00f29413 has its CatchHandler @ 00f29494 */
+  MImg::~MImg(aMStack_d54);
+                    /* try { // try from 00f29424 to 00f2942b has its CatchHandler @ 00f295fc */
+  MImg::~MImg(aMStack_d40);
+                    /* try { // try from 00f29480 to 00f29487 has its CatchHandler @ 00f2965c */
+  MImg::~MImg(aMStack_d2c);
+  MImg::~MImg(aMStack_d18);
+  (**(code **)(**(int **)(param_1 + 0x198) + 0x34))
+            (*(undefined4 *)(param_1 + 0x198),*(undefined4 *)(param_1 + 0x27c));
+  lVar4 = GetRcEngine::RcGetNum(0x52ab);
+  lVar5 = GetRcEngine::RcGetNum(0x52ac);
+  lVar6 = GetRcEngine::RcGetNum(0x52aa);
+  lVar7 = GetRcEngine::RcGetNum(0x52a9);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_1a4 = operator_new(0x270);
+                    /* try { // try from 00f295e8 to 00f295ef has its CatchHandler @ 00f296a0 */
+  ComboButton::ComboButton(pCStack_1a4,*(MWidget **)(param_1 + 0x198),a_Stack_3a4,0,0x40);
+  *(ComboButton **)(param_1 + 0x280) = pCStack_1a4;
+  if (*(int *)(param_1 + 0x280) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0xaed);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x280) + 600) = 1;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x280) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x280) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x280) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x280) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x280) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x55);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x280) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x280) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x280) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x280) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x280) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x280) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x280) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x280);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x280);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x280);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x280);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x280);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x280);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x280) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x280) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x280) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x280) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x280) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x280) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x280) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x280) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x280);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x280);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x280);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x280);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x198) + 0x34))
+            (*(undefined4 *)(param_1 + 0x198),*(undefined4 *)(param_1 + 0x280));
+  lVar4 = GetRcEngine::RcGetNum(0x5317);
+  lVar5 = GetRcEngine::RcGetNum(0x5318);
+  lVar6 = GetRcEngine::RcGetNum(0x5316);
+  lVar7 = GetRcEngine::RcGetNum(0x5313);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_1a8 = operator_new(0x514);
+                    /* try { // try from 00f29f30 to 00f29f37 has its CatchHandler @ 00f29f60 */
+  ImageButton::ImageButton(pIStack_1a8,*(MWidget **)(param_1 + 0x198),a_Stack_3a4,0,0x41);
+  *(ImageButton **)(param_1 + 0x284) = pIStack_1a8;
+  if (*(int *)(param_1 + 0x284) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0xb29);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x284) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x284) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x284);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x284);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x284);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x284);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x284);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x284);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x284);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x284);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x284) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x284) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x284) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x284) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x284) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x284) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x284) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x284) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x284);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x284);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x284);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x284);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x284) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x284) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x284);
+  uVar9 = GetRcEngine::RcGetNum(0x5315);
+  GetRcEngine::RcGetNum(0x5314);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_1ac = *(MImg **)(param_1 + 0x284);
+  MImg::MImg(aMStack_d68,0x5cd);
+                    /* try { // try from 00f2a330 to 00f2a337 has its CatchHandler @ 00f2a5fc */
+  MImg::MImg(aMStack_d7c,0x5cd);
+                    /* try { // try from 00f2a34c to 00f2a353 has its CatchHandler @ 00f2a59c */
+  MImg::MImg(aMStack_d90,0x5cd);
+                    /* try { // try from 00f2a368 to 00f2a36f has its CatchHandler @ 00f2a434 */
+  MImg::MImg(aMStack_da4,0x5cd);
+                    /* try { // try from 00f2a394 to 00f2a39b has its CatchHandler @ 00f2a3d8 */
+  ImageButton::SetImg(pMStack_1ac,aMStack_d68,aMStack_d7c,aMStack_d90);
+                    /* try { // try from 00f2a3ac to 00f2a3b3 has its CatchHandler @ 00f2a434 */
+  MImg::~MImg(aMStack_da4);
+                    /* try { // try from 00f2a3c4 to 00f2a3cb has its CatchHandler @ 00f2a59c */
+  MImg::~MImg(aMStack_d90);
+                    /* try { // try from 00f2a420 to 00f2a427 has its CatchHandler @ 00f2a5fc */
+  MImg::~MImg(aMStack_d7c);
+  MImg::~MImg(aMStack_d68);
+  (**(code **)(**(int **)(param_1 + 0x198) + 0x34))
+            (*(undefined4 *)(param_1 + 0x198),*(undefined4 *)(param_1 + 0x284));
+  lVar4 = GetRcEngine::RcGetNum(0x52c3);
+  lVar5 = GetRcEngine::RcGetNum(0x52c4);
+  lVar6 = GetRcEngine::RcGetNum(0x52c2);
+  lVar7 = GetRcEngine::RcGetNum(0x52c1);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_1b0 = operator_new(0x270);
+                    /* try { // try from 00f2a588 to 00f2a58f has its CatchHandler @ 00f2a640 */
+  ComboButton::ComboButton(pCStack_1b0,*(MWidget **)(param_1 + 0x198),a_Stack_3a4,0,0x42);
+  *(ComboButton **)(param_1 + 0x288) = pCStack_1b0;
+  if (*(int *)(param_1 + 0x288) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0xb48);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x288) + 600) = 1;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x288) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x288) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x288) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x288) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x288) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x55);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x288) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x288) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x288) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x288) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x288) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x288) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x288) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x288);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x288);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x288);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x288);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x288);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x288);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x288) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x288) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x288) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x288) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x288) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x288) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x288) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x288) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x288);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x288);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x288);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x288);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x198) + 0x34))
+            (*(undefined4 *)(param_1 + 0x198),*(undefined4 *)(param_1 + 0x288));
+  lVar4 = GetRcEngine::RcGetNum(0x52bf);
+  lVar5 = GetRcEngine::RcGetNum(0x52c0);
+  lVar6 = GetRcEngine::RcGetNum(0x52be);
+  lVar7 = GetRcEngine::RcGetNum(0x52bd);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_1b4 = operator_new(0x270);
+                    /* try { // try from 00f2aed0 to 00f2aed7 has its CatchHandler @ 00f2af00 */
+  ComboButton::ComboButton(pCStack_1b4,*(MWidget **)(param_1 + 0x198),a_Stack_3a4,0,0x43);
+  *(ComboButton **)(param_1 + 0x28c) = pCStack_1b4;
+  if (*(int *)(param_1 + 0x28c) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0xb84);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x28c) + 600) = 1;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x28c) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x28c) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x28c) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x28c) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x28c) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x55);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x28c) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x28c) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x28c) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x28c) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x28c) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x28c) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x28c) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x28c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x28c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x28c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x28c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x28c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x28c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x28c) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x28c) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x28c) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x28c) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x28c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x28c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x28c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x28c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x28c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x28c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x28c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x28c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x198) + 0x34))
+            (*(undefined4 *)(param_1 + 0x198),*(undefined4 *)(param_1 + 0x28c));
+  lVar4 = GetRcEngine::RcGetNum(0x52c7);
+  lVar5 = GetRcEngine::RcGetNum(0x52c8);
+  lVar6 = GetRcEngine::RcGetNum(0x52c6);
+  lVar7 = GetRcEngine::RcGetNum(0x52c5);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pCStack_1b8 = operator_new(0x270);
+                    /* try { // try from 00f2b790 to 00f2b797 has its CatchHandler @ 00f2b7c0 */
+  ComboButton::ComboButton(pCStack_1b8,*(MWidget **)(param_1 + 0x198),a_Stack_3a4,0,0x44);
+  *(ComboButton **)(param_1 + 0x290) = pCStack_1b8;
+  if (*(int *)(param_1 + 0x290) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0xbc0);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  *(undefined1 *)(*(int *)(param_1 + 0x290) + 600) = 1;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x25c);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x290) + 0x25c) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x290) + 0x25c) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x290) + 0x25c) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x290) + 0x25c) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x25c);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x290) + 0x25c) + 0x170);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x52);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x260);
+  uVar8 = GetRcEngine::RcGetColor(0x55);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x290) + 0x260) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x290) + 0x260) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x290) + 0x260) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x290) + 0x260) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(*(int *)(param_1 + 0x290) + 0x260);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  MString::Set((short)*(undefined4 *)(param_1 + 0x290) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x290) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x290);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x290);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x290);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x290);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x290);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x290);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x290) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x290) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x290) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x290) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x290) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x290) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x290) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x290) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x290);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x290);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x290);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x290);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  (**(code **)(**(int **)(param_1 + 0x198) + 0x34))
+            (*(undefined4 *)(param_1 + 0x198),*(undefined4 *)(param_1 + 0x290));
+  lVar4 = GetRcEngine::RcGetNum(0x530e);
+  lVar5 = GetRcEngine::RcGetNum(0x530f);
+  lVar6 = GetRcEngine::RcGetNum(0x530d);
+  lVar7 = GetRcEngine::RcGetNum(0x530a);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_1bc = operator_new(0x514);
+                    /* try { // try from 00f2c050 to 00f2c057 has its CatchHandler @ 00f2c080 */
+  ImageButton::ImageButton(pIStack_1bc,*(MWidget **)(param_1 + 0x198),a_Stack_3a4,0,0x45);
+  *(ImageButton **)(param_1 + 0x294) = pIStack_1bc;
+  if (*(int *)(param_1 + 0x294) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0xbfc);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x294) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x294) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x294);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x294);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x294);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x294);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x294);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x294);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x294);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x294);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x294);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x294) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x294) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x294) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x294) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x294) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x294) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x294) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x294) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x294);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x294);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x294);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x294);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x294) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x294) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x294);
+  uVar9 = GetRcEngine::RcGetNum(0x530c);
+  GetRcEngine::RcGetNum(0x530b);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_1c0 = *(MImg **)(param_1 + 0x294);
+  MImg::MImg(aMStack_db8,0x5cd);
+                    /* try { // try from 00f2c470 to 00f2c477 has its CatchHandler @ 00f2c73c */
+  MImg::MImg(aMStack_dcc,0x5cd);
+                    /* try { // try from 00f2c48c to 00f2c493 has its CatchHandler @ 00f2c6dc */
+  MImg::MImg(aMStack_de0,0x5cd);
+                    /* try { // try from 00f2c4a8 to 00f2c4af has its CatchHandler @ 00f2c574 */
+  MImg::MImg(aMStack_df4,0x5cd);
+                    /* try { // try from 00f2c4d4 to 00f2c4db has its CatchHandler @ 00f2c518 */
+  ImageButton::SetImg(pMStack_1c0,aMStack_db8,aMStack_dcc,aMStack_de0);
+                    /* try { // try from 00f2c4ec to 00f2c4f3 has its CatchHandler @ 00f2c574 */
+  MImg::~MImg(aMStack_df4);
+                    /* try { // try from 00f2c504 to 00f2c50b has its CatchHandler @ 00f2c6dc */
+  MImg::~MImg(aMStack_de0);
+                    /* try { // try from 00f2c560 to 00f2c567 has its CatchHandler @ 00f2c73c */
+  MImg::~MImg(aMStack_dcc);
+  MImg::~MImg(aMStack_db8);
+  (**(code **)(**(int **)(param_1 + 0x198) + 0x34))
+            (*(undefined4 *)(param_1 + 0x198),*(undefined4 *)(param_1 + 0x294));
+  lVar4 = GetRcEngine::RcGetNum(0x5306);
+  lVar5 = GetRcEngine::RcGetNum(0x5307);
+  lVar6 = GetRcEngine::RcGetNum(0x5305);
+  lVar7 = GetRcEngine::RcGetNum(0x5302);
+  _Rect::set(a_Stack_3a4,lVar4,lVar5,lVar6,lVar7);
+  pIStack_1c4 = operator_new(0x514);
+                    /* try { // try from 00f2c6c8 to 00f2c6cf has its CatchHandler @ 00f2c780 */
+  ImageButton::ImageButton(pIStack_1c4,*(MWidget **)(param_1 + 0x198),a_Stack_3a4,0,0x46);
+  *(ImageButton **)(param_1 + 0x298) = pIStack_1c4;
+  if (*(int *)(param_1 + 0x298) == 0) {
+    printf("UI CREATE FAIL: %s %s %d\n",&UNK_0100a61c,&UNK_0100ab10,0xc1c);
+                    /* WARNING: Subroutine does not return */
+    abort();
+  }
+  MString::Set((short)*(undefined4 *)(param_1 + 0x298) + 0x170);
+  *(undefined1 *)(*(int *)(param_1 + 0x298) + 0x3a) = 1;
+  iVar17 = *(int *)(param_1 + 0x298);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x298);
+  uVar8 = GetRcEngine::RcGetColor(0x54);
+  *(undefined4 *)(iVar17 + 0x80) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x298);
+  uVar8 = GetRcEngine::RcGetColor(0x4e);
+  *(undefined4 *)(iVar17 + 0x84) = uVar8;
+  iVar17 = *(int *)(param_1 + 0x298);
+  uVar3 = GetRcEngine::RcGetNum(0x4606);
+  *(undefined2 *)(iVar17 + 0x9c) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x298);
+  uVar3 = GetRcEngine::RcGetNum(0x4605);
+  *(undefined2 *)(iVar17 + 0x9e) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x298);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa0) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x298);
+  uVar3 = GetRcEngine::RcGetNum(0x45f5);
+  *(undefined2 *)(iVar17 + 0xa2) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x298);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa4) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x298);
+  uVar3 = GetRcEngine::RcGetNum(0x45f9);
+  *(undefined2 *)(iVar17 + 0xa6) = uVar3;
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x298) + 0xb8);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x298) + 0xcc);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x298) + 0xe0);
+  MImg::Set((short)*(undefined4 *)(param_1 + 0x298) + 0xf4);
+  *(undefined4 *)(*(int *)(param_1 + 0x298) + 0x130) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x298) + 0x13c) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x298) + 0x148) = 0x4ae;
+  *(undefined4 *)(*(int *)(param_1 + 0x298) + 0x154) = 0x4ae;
+  iVar17 = *(int *)(param_1 + 0x298);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x13a) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x298);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x146) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x298);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x152) = uVar3;
+  iVar17 = *(int *)(param_1 + 0x298);
+  uVar3 = GetRcEngine::RcGetNum(0x3215);
+  *(undefined2 *)(iVar17 + 0x15e) = uVar3;
+  *(undefined4 *)(*(int *)(param_1 + 0x298) + 0x128) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 0x298) + 300) = 4;
+  uVar8 = *(undefined4 *)(param_1 + 0x298);
+  uVar9 = GetRcEngine::RcGetNum(0x5304);
+  GetRcEngine::RcGetNum(0x5303);
+  ImageButton::SetImgExpandProperty((uchar)uVar8,0,uVar9);
+  pMStack_1c8 = *(MImg **)(param_1 + 0x298);
+  MImg::MImg(aMStack_e08,0x5cd);
+                    /* try { // try from 00f2cb70 to 00f2cb77 has its CatchHandler @ 00f2cd94 */
+  MImg::MImg(aMStack_e1c,0x5cd);
+                    /* try { // try from 00f2cb8c to 00f2cb93 has its CatchHandler @ 00f2cd58 */
+  MImg::MImg(aMStack_e30,0x5cd);
+                    /* try { // try from 00f2cba8 to 00f2cbaf has its CatchHandler @ 00f2cc74 */
+  MImg::MImg(aMStack_e44,0x5cd);
+                    /* try { // try from 00f2cbd4 to 00f2cbdb has its CatchHandler @ 00f2cc18 */
+  ImageButton::SetImg(pMStack_1c8,aMStack_e08,aMStack_e1c,aMStack_e30);
+                    /* try { // try from 00f2cbec to 00f2cbf3 has its CatchHandler @ 00f2cc74 */
+  MImg::~MImg(aMStack_e44);
+                    /* try { // try from 00f2cc04 to 00f2cc0b has its CatchHandler @ 00f2cd58 */
+  MImg::~MImg(aMStack_e30);
+                    /* try { // try from 00f2cc60 to 00f2cc67 has its CatchHandler @ 00f2cd94 */
+  MImg::~MImg(aMStack_e1c);
+  MImg::~MImg(aMStack_e08);
+  (**(code **)(**(int **)(param_1 + 0x198) + 0x34))
+            (*(undefined4 *)(param_1 + 0x198),*(undefined4 *)(param_1 + 0x298));
+  piVar12 = (int *)MSrv_Control::GetInstance();
+  iVar17 = (**(code **)(*piVar12 + 0xa0))(piVar12);
+  if (*(int *)(iVar17 + 0x150) != 0) {
+    for (bStack_ecf = 0; bStack_ecf < 4; bStack_ecf = bStack_ecf + 1) {
+      iVar17 = MSrv_Control_common::GetRouteTVMode(bStack_ecf);
+      if (iVar17 != 0) {
+        piVar12 = (int *)MSrv_Control::GetInstance();
+        pMVar13 = (MEvtHandle *)(**(code **)(*piVar12 + 0x1b4))(piVar12,bStack_ecf);
+        MSrv::AddEventRecipient(pMVar13);
+      }
+    }
+  }
+  if ((cRam010d8e68 == '\0') && (iVar17 = __cxa_guard_acquire(&cRam010d8e68), iVar17 != 0)) {
+    uStack_1cc = 0;
+    pMStack_1d4 = (MString *)0x10d8ec8;
+    pMStack_1d0 = pMStack_1d4;
+    for (iStack_1d8 = 1; iStack_1d8 != -1; iStack_1d8 = iStack_1d8 + -1) {
+                    /* try { // try from 00f2cee8 to 00f2ceef has its CatchHandler @ 00f2cf60 */
+      MString::MString(pMStack_1d4);
+      pMStack_1d4 = pMStack_1d4 + 0xc;
+    }
+    __cxa_guard_release(&cRam010d8e68);
+    __cxa_atexit(FUN_00efe0d8,0,&DAT_010cd2a8);
+  }
+  MString::Set(0x8ed4);
+  MString::Set(0x8ec8);
+  *(undefined4 *)(*(int *)(param_1 + 0x1b0) + 0x250) = 0x10d8ec8;
+  *(undefined4 *)(*(int *)(param_1 + 0x1b0) + 0x254) = 2;
+  iVar17 = *(int *)(param_1 + 0x1b0);
+  ArTvManager::getInstance();
+  uVar8 = ArTvManager::GetWebEPGEnabledState();
+  *(undefined4 *)(iVar17 + 0x264) = uVar8;
+  *(undefined4 *)(*(int *)(param_1 + 0x1cc) + 0x250) = 0x10d8ec8;
+  *(undefined4 *)(*(int *)(param_1 + 0x1cc) + 0x254) = 2;
+  iVar17 = *(int *)(param_1 + 0x1cc);
+  ArTvManager::getInstance();
+  uVar8 = ArTvManager::GetASUEnabledState();
+  *(undefined4 *)(iVar17 + 0x264) = uVar8;
+  iVar17 = ArTvSettingsManager::IsTvInFirstTime();
+  if (iVar17 == 0) {
+    MImg::Set((short)*(undefined4 *)(param_1 + 0x214) + 0x260);
+    MImg::Set((short)*(undefined4 *)(param_1 + 0x214) + 0x274);
+    MImg::Set((short)*(undefined4 *)(param_1 + 0x214) + 0x288);
+    MImg::Set((short)*(undefined4 *)(param_1 + 0x214) + 0x29c);
+    MImg::Set((short)*(undefined4 *)(param_1 + 0x208) + 0x260);
+    MImg::Set((short)*(undefined4 *)(param_1 + 0x208) + 0x274);
+    MImg::Set((short)*(undefined4 *)(param_1 + 0x208) + 0x288);
+    MImg::Set((short)*(undefined4 *)(param_1 + 0x208) + 0x29c);
+  }
+  MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x240) + 0x250) + 0x170);
+  pAVar14 = (ArTvManager *)ArTvManager::getInstance();
+  iVar17 = ArTvManager::GetCurrentInputSourceType(pAVar14);
+  if (iVar17 == 0) {
+    pAStack_1dc = (ArResourceManager *)ArResourceManager::getInstance();
+    ArResourceManager::getInstance();
+    ArResourceManager::GetChannelValueNum(aAStack_e48);
+                    /* try { // try from 00f2d314 to 00f2d347 has its CatchHandler @ 00f2d37c */
+    pcVar15 = (char *)std::string::c_str();
+    uVar9 = atoi(pcVar15);
+    cVar1 = ArResourceManager::IsVHFChannel(pAStack_1dc,uVar9);
+    std::string::~string((string *)aAStack_e48);
+    if (cVar1 != '\0') {
+      MString::Set((short)*(undefined4 *)(*(int *)(param_1 + 0x240) + 0x250) + 0x170);
+    }
+  }
+  NumberEdit::SetDigitProperties(*(ulong *)(param_1 + 0x240),0x18);
+  iVar17 = *(int *)(*(int *)(param_1 + 0x240) + 0x250);
+  uVar8 = GetRcEngine::RcGetColor(0x5e);
+  *(undefined4 *)(iVar17 + 0x7c) = uVar8;
+  NumberEdit::SetRightToLeftFlag();
+  NumberEdit::SetDefaultDigits(*(ulong *)(param_1 + 0x240));
+  pMStack_1e0 = *(MImg **)(param_1 + 0x240);
+  MImg::MImg(aMStack_e5c,0x5cd);
+                    /* try { // try from 00f2d4a4 to 00f2d4ab has its CatchHandler @ 00f2d760 */
+  MImg::MImg(aMStack_e70,0x5cd);
+                    /* try { // try from 00f2d4c0 to 00f2d4c7 has its CatchHandler @ 00f2d724 */
+  MImg::MImg(aMStack_e84,0x5cd);
+                    /* try { // try from 00f2d4dc to 00f2d4e3 has its CatchHandler @ 00f2d5a8 */
+  MImg::MImg(aMStack_e98,0x1ab);
+                    /* try { // try from 00f2d508 to 00f2d50f has its CatchHandler @ 00f2d54c */
+  NumberEdit::SetDigitsBGImage(pMStack_1e0,aMStack_e5c,aMStack_e70,aMStack_e84);
+                    /* try { // try from 00f2d520 to 00f2d527 has its CatchHandler @ 00f2d5a8 */
+  MImg::~MImg(aMStack_e98);
+                    /* try { // try from 00f2d538 to 00f2d53f has its CatchHandler @ 00f2d724 */
+  MImg::~MImg(aMStack_e84);
+                    /* try { // try from 00f2d594 to 00f2d59b has its CatchHandler @ 00f2d760 */
+  MImg::~MImg(aMStack_e70);
+  MImg::~MImg(aMStack_e5c);
+  NumberEdit::SetSelectFocusedDigit((uchar)*(undefined4 *)(param_1 + 0x240));
+  *(undefined4 *)(*(int *)(param_1 + 0x1d0) + 0x250) = 0x10d8ec8;
+  *(undefined4 *)(*(int *)(param_1 + 0x1d0) + 0x254) = 2;
+  iVar17 = *(int *)(param_1 + 0x1d0);
+  ArTvManager::getInstance();
+  uVar8 = ArTvManager::GetOADEnabledState();
+  *(undefined4 *)(iVar17 + 0x264) = uVar8;
+  *(undefined4 *)(*(int *)(param_1 + 0x1d8) + 0x250) = 0x10d8ec8;
+  *(undefined4 *)(*(int *)(param_1 + 0x1d8) + 0x254) = 2;
+  ArResourceManager::getInstance();
+  iVar17 = *(int *)(param_1 + 0x1d8);
+  uVar8 = ArResourceManager::GetActiveAntennaPower();
+  *(undefined4 *)(iVar17 + 0x264) = uVar8;
+  *(undefined4 *)(*(int *)(param_1 + 0x1dc) + 0x250) = 0x10d8ec8;
+  *(undefined4 *)(*(int *)(param_1 + 0x1dc) + 0x254) = 2;
+  MSrv_Control_common::GetMSrvSystemDatabase();
+  iVar17 = MSrv_System_Database::GetHbbTVEnable();
+  if (iVar17 == 1) {
+    *(undefined4 *)(*(int *)(param_1 + 0x1dc) + 0x264) = 1;
+  }
+  else {
+    *(undefined4 *)(*(int *)(param_1 + 0x1dc) + 0x264) = 0;
+  }
+  *(undefined4 *)(*(int *)(param_1 + 0x1e0) + 0x250) = 0x10d8ec8;
+  *(undefined4 *)(*(int *)(param_1 + 0x1e0) + 0x254) = 2;
+  ArTvManager::getInstance();
+  iVar17 = ArTvManager::GetTTXEnabledState();
+  if (iVar17 == 1) {
+    *(undefined4 *)(*(int *)(param_1 + 0x1e0) + 0x264) = 1;
+  }
+  else {
+    *(undefined4 *)(*(int *)(param_1 + 0x1e0) + 0x264) = 0;
+  }
+  ArTvManager::getInstance();
+  iVar17 = ArTvManager::GetCurrentDvbAntennaType();
+  if (iVar17 == 3) {
+    ArScanManager::getInstance();
+    iVar17 = ArScanManager::GetDBSatScanOperatorUIType();
+    if (iVar17 != 1) {
+      ArScanManager::getInstance();
+      iVar17 = ArScanManager::GetDBSatScanOperatorUIType();
+      if (iVar17 != 2) goto LAB_00f2d8f4;
+    }
+    iStack_1e4 = 1;
+  }
+  else {
+LAB_00f2d8f4:
+    iStack_1e4 = 0;
+  }
+  if (iStack_1e4 != 0) {
+    pAVar14 = (ArTvManager *)ArTvManager::getInstance();
+    ArTvManager::SetASUEnabledState(pAVar14,'\x01');
+    MWidget::SetFlag(*(undefined4 *)(param_1 + 0x1cc),1,0);
+    pAVar14 = (ArTvManager *)ArTvManager::getInstance();
+    ArTvManager::SetOADEnabledState(pAVar14,'\x01');
+    MWidget::SetFlag(*(undefined4 *)(param_1 + 0x1d0),1,0);
+  }
+  ArTvManager::getInstance();
+  iVar17 = ArTvManager::GetCurrentDvbAntennaType();
+  if (iVar17 == 3) {
+    ArScanManager::getInstance();
+    iVar17 = ArScanManager::GetDBSatScanOperatorUIType();
+    if (iVar17 != 7) goto LAB_00f2da14;
+    iStack_1e8 = 1;
+  }
+  else {
+LAB_00f2da14:
+    iStack_1e8 = 0;
+  }
+  if (iStack_1e8 == 0) {
+    MWidget::SetFlag(*(undefined4 *)(param_1 + 0x1a4),2,0);
+  }
+  else {
+    MWidget::SetFlag(*(undefined4 *)(param_1 + 0x1a4),2,1);
+  }
+  ArTvManager::getInstance();
+  iVar17 = ArTvManager::GetCurrentDvbAntennaType();
+  if (iVar17 == 3) {
+    ArScanManager::getInstance();
+    iVar17 = ArScanManager::GetDBSatScanOperatorUIType();
+    if (iVar17 != 3) goto LAB_00f2daec;
+    iStack_1ec = 1;
+  }
+  else {
+LAB_00f2daec:
+    iStack_1ec = 0;
+  }
+  if (iStack_1ec == 0) {
+    MWidget::SetFlag(*(undefined4 *)(param_1 + 0x1a8),2,0);
+  }
+  else {
+    MWidget::SetFlag(*(undefined4 *)(param_1 + 0x1a8),2,1);
+  }
+  pAVar14 = (ArTvManager *)ArTvManager::getInstance();
+  iVar17 = ArTvManager::GetCurrentInputSourceType(pAVar14);
+  if (iVar17 != 0) {
+    MWidget::SetFlag(*(undefined4 *)(param_1 + 0x1bc),1,0);
+  }
+  piVar12 = (int *)MSrv_Control_DVB::GetMSrvCIMMI('\0');
+  iVar17 = (**(code **)(*piVar12 + 0x108))(piVar12);
+  if (iVar17 == 2) {
+    std::string::string(asStack_384);
+                    /* try { // try from 00f2dc24 to 00f2dd23 has its CatchHandler @ 00f2dd48 */
+    (**(code **)(*piVar12 + 0x54))(piVar12,asStack_384);
+    iVar17 = std::string::empty();
+    if (iVar17 == 0) {
+      pcStack_1f0 = *(char **)(*(int *)(param_1 + 0x1c4) + 0x260);
+      std::string::c_str();
+      MWidget::SetText(pcStack_1f0);
+      pcStack_1f4 = *(char **)(*(int *)(param_1 + 0x270) + 0x260);
+      std::string::c_str();
+      MWidget::SetText(pcStack_1f4);
+    }
+    else {
+      MWidget::SetText(*(char **)(*(int *)(param_1 + 0x1c4) + 0x260));
+      MWidget::SetText(*(char **)(*(int *)(param_1 + 0x270) + 0x260));
+    }
+    std::string::~string(asStack_384);
+  }
+  else {
+    MWidget::SetText((ushort)*(undefined4 *)(*(int *)(param_1 + 0x1c4) + 0x260));
+    MWidget::SetText((ushort)*(undefined4 *)(*(int *)(param_1 + 0x270) + 0x260));
+  }
+  if ((cRam010d8e70 == '\0') && (iVar17 = __cxa_guard_acquire(&cRam010d8e70), iVar17 != 0)) {
+    uStack_1f8 = 0;
+    pMStack_200 = (MString *)0x10d8ea4;
+    pMStack_1fc = pMStack_200;
+    for (iStack_204 = 2; iStack_204 != -1; iStack_204 = iStack_204 + -1) {
+                    /* try { // try from 00f2de40 to 00f2de47 has its CatchHandler @ 00f2deb8 */
+      MString::MString(pMStack_200);
+      pMStack_200 = pMStack_200 + 0xc;
+    }
+    __cxa_guard_release(&cRam010d8e70);
+    __cxa_atexit(FUN_00efe054,0,&DAT_010cd2a8);
+  }
+  MString::Set(0x8ebc);
+  MString::Set(0x8eb0);
+  MString::Set(0x8ea4);
+  *(undefined4 *)(*(int *)(param_1 + 0x280) + 0x250) = 0x10d8ea4;
+  *(undefined4 *)(*(int *)(param_1 + 0x280) + 0x254) = 3;
+  iVar17 = *(int *)(param_1 + 0x280);
+  ArResourceManager::getInstance();
+  uVar8 = ArResourceManager::GetTKGSMode();
+  *(undefined4 *)(iVar17 + 0x264) = uVar8;
+  ArResourceManager::getInstance();
+  iVar17 = ArResourceManager::GetTKGSVersion();
+  std::ostringstream::ostringstream(aoStack_340,0x10);
+  if (iVar17 == 0xff) {
+                    /* try { // try from 00f2e0b8 to 00f2e117 has its CatchHandler @ 00f2f9b8 */
+    std::operator<<((ostream *)aoStack_340," ");
+  }
+  else {
+    std::ostream::operator<<((ostream *)aoStack_340,iVar17);
+  }
+  psStack_208 = (string *)(*(int *)(*(int *)(param_1 + 0x290) + 0x260) + 0x170);
+  std::ostringstream::str();
+                    /* try { // try from 00f2e12c to 00f2e133 has its CatchHandler @ 00f2e178 */
+  MString::Set(psStack_208);
+                    /* try { // try from 00f2e144 to 00f2e16b has its CatchHandler @ 00f2f9b8 */
+  std::string::~string(asStack_e9c);
+  pcStack_20c = *(char **)(*(int *)(param_1 + 0x288) + 0x260);
+  ArResourceManager::getInstance();
+                    /* try { // try from 00f2e1c4 to 00f2e1cb has its CatchHandler @ 00f2f9b8 */
+  ArResourceManager::GetTKGSSelectedServiceListText();
+                    /* try { // try from 00f2e1dc to 00f2e1fb has its CatchHandler @ 00f2e230 */
+  std::string::c_str();
+  MWidget::SetText(pcStack_20c);
+                    /* try { // try from 00f2e20c to 00f2e223 has its CatchHandler @ 00f2f9b8 */
+  std::string::~string(asStack_ea0);
+  ArResourceManager::getInstance();
+                    /* try { // try from 00f2e27c to 00f2e283 has its CatchHandler @ 00f2f9b8 */
+  ArResourceManager::GetTKGSSelectedCategoryItemText();
+                    /* try { // try from 00f2e29c to 00f2e2a3 has its CatchHandler @ 00f2e2d8 */
+  bVar2 = std::operator==(asStack_ea4,"");
+  iStack_210 = CONCAT31(extraout_var,bVar2);
+                    /* try { // try from 00f2e2b8 to 00f2e2bf has its CatchHandler @ 00f2f9b8 */
+  std::string::~string(asStack_ea4);
+  if (iStack_210 == 0) {
+    pcStack_218 = *(char **)(*(int *)(param_1 + 0x28c) + 0x260);
+    ArResourceManager::getInstance();
+    ArResourceManager::GetTKGSSelectedCategoryItemText();
+                    /* try { // try from 00f2e3a0 to 00f2e3bf has its CatchHandler @ 00f2e3e4 */
+    std::string::c_str();
+    MWidget::SetText(pcStack_218);
+                    /* try { // try from 00f2e3d0 to 00f2e3d7 has its CatchHandler @ 00f2f9b8 */
+    std::string::~string(asStack_ea8);
+  }
+  else {
+    pcStack_214 = *(char **)(*(int *)(param_1 + 0x28c) + 0x260);
+                    /* try { // try from 00f2e32c to 00f2e38f has its CatchHandler @ 00f2f9b8 */
+    GetRcEngine::RcGetString(0xe4c);
+    MWidget::SetText(pcStack_214);
+  }
+                    /* try { // try from 00f2e424 to 00f2e5b7 has its CatchHandler @ 00f2f9b8 */
+  iVar17 = ArCIModuleManager::IsSecondCIAvailable();
+  if (iVar17 != 0) {
+    uVar8 = GetRcEngine::RcGetString(0xbcd);
+    sprintf(acStack_37c,"%s 1",uVar8);
+    MWidget::SetText(*(char **)(*(int *)(param_1 + 0x1c4) + 0x25c));
+    MWidget::SetText(*(char **)(*(int *)(param_1 + 0x270) + 0x25c));
+    uVar8 = GetRcEngine::RcGetString(0xbcd);
+    sprintf(acStack_37c,"%s 2",uVar8);
+    MWidget::SetText(*(char **)(*(int *)(param_1 + 0x1c8) + 0x25c));
+    MWidget::SetText(*(char **)(*(int *)(param_1 + 0x274) + 0x25c));
+    piVar12 = (int *)MSrv_Control_DVB::GetMSrvCIMMI('\x01');
+    iVar17 = (**(code **)(*piVar12 + 0x108))(piVar12);
+    if (iVar17 == 2) {
+      std::string::string(asStack_380);
+                    /* try { // try from 00f2e5d8 to 00f2e6d7 has its CatchHandler @ 00f2e6fc */
+      (**(code **)(*piVar12 + 0x54))(piVar12,asStack_380);
+      iVar17 = std::string::empty();
+      if (iVar17 == 0) {
+        pcStack_21c = *(char **)(*(int *)(param_1 + 0x1c8) + 0x260);
+        std::string::c_str();
+        MWidget::SetText(pcStack_21c);
+        pcStack_220 = *(char **)(*(int *)(param_1 + 0x274) + 0x260);
+        std::string::c_str();
+        MWidget::SetText(pcStack_220);
+      }
+      else {
+        MWidget::SetText(*(char **)(*(int *)(param_1 + 0x1c8) + 0x260));
+        MWidget::SetText(*(char **)(*(int *)(param_1 + 0x274) + 0x260));
+      }
+                    /* try { // try from 00f2e6e8 to 00f2e6ef has its CatchHandler @ 00f2f9b8 */
+      std::string::~string(asStack_380);
+    }
+    else {
+                    /* try { // try from 00f2e750 to 00f2f2c3 has its CatchHandler @ 00f2f9b8 */
+      MWidget::SetText((ushort)*(undefined4 *)(*(int *)(param_1 + 0x1c8) + 0x260));
+      MWidget::SetText((ushort)*(undefined4 *)(*(int *)(param_1 + 0x274) + 0x260));
+    }
+  }
+  iVar17 = MenuBackgroundFrame::getMenuBackgroundFrame();
+  HelpWidget::HideAllButtons(*(HelpWidget **)(iVar17 + 0x1cc));
+  iVar17 = MenuBackgroundFrame::getMenuBackgroundFrame();
+  HelpWidget::ShowButton(*(HelpWidget **)(iVar17 + 0x1cc),0xf,0xd41);
+  iVar17 = MenuBackgroundFrame::getMenuBackgroundFrame();
+  HelpWidget::ShowButton(*(HelpWidget **)(iVar17 + 0x1cc),0xe,0xc42);
+  iVar17 = MenuBackgroundFrame::getMenuBackgroundFrame();
+  HelpWidget::ShowButton(*(HelpWidget **)(iVar17 + 0x1cc),6,0x10c6);
+  iVar17 = MenuBackgroundFrame::getMenuBackgroundFrame();
+  HelpWidget::Refresh(*(HelpWidget **)(iVar17 + 0x1cc));
+  *(undefined4 *)(param_1 + 0x2a0) = 0;
+  MWidget::Hide();
+  MWidget::Hide();
+  MWidget::Hide();
+  MWidget::Hide();
+  MWidget::Hide();
+  MWidget::Hide();
+  MWidget::Hide();
+  MWidget::Hide();
+  MWidget::Hide();
+  MWidget::Hide();
+  MWidget::Hide();
+  MWidget::Hide();
+  MWidget::Hide();
+  MWidget::Hide();
+  iVar17 = ArCIModuleManager::IsSecondCIAvailable();
+  if (iVar17 == 0) {
+    MWidget::Hide();
+  }
+  MWidget::Hide();
+  MWidget::Hide();
+  MWidget::Hide();
+  MWidget::SetFlag(*(undefined4 *)(param_1 + 400),2,0);
+  pAVar14 = (ArTvManager *)ArTvManager::getInstance();
+  ArTvManager::LockParental(pAVar14);
+  pAVar14 = (ArTvManager *)ArTvManager::getInstance();
+  iVar17 = ArTvManager::GetCurrentInputSourceType(pAVar14);
+  if (iVar17 == 0) {
+    MWidget::SetFlag(*(undefined4 *)(param_1 + 0x1b4),1,1);
+  }
+  else {
+    MWidget::SetFlag(*(undefined4 *)(param_1 + 0x1b4),1,0);
+  }
+  (**(code **)(**(int **)(param_1 + 0x184) + 0x48))(*(undefined4 *)(param_1 + 0x184));
+  MWnd::GetParentApp();
+  iVar17 = MApplet::GetPrivateData();
+  if (iVar17 == 0) {
+    MMainFrame::SetInitialFocus(param_1);
+    MWidget::Hide();
+    MEvtHandle::PostEvent((MEvtHandle *)param_1,(ulong)param_1,0xc0000020,0);
+  }
+  else {
+    this = (MenuBackgroundFrame *)MenuBackgroundFrame::getMenuBackgroundFrame();
+    MenuBackgroundFrame::focusToBar(this,'\0');
+    MWnd::GetParentApp();
+    iStack_224 = MApplet::GetPrivateData();
+    if (iStack_224 == 0x10) {
+      SourceSetupFrame::ShowAdvancedItems((SourceSetupFrame *)param_1);
+      MMainFrame::SetInitialFocus(param_1);
+      MWidget::Hide();
+      MEvtHandle::PostEvent((MEvtHandle *)param_1,(ulong)param_1,0xc0000020,0);
+    }
+    else if (iStack_224 == 0x39) {
+      MMainFrame::SetInitialFocus(param_1);
+      MWidget::Hide();
+      SourceSetupFrame::HideAllShowSubmenu
+                ((SourceSetupFrame *)param_1,5,*(MWidget **)(param_1 + 0x194));
+      pMStack_228 = (MenuBackgroundFrame *)MenuBackgroundFrame::getMenuBackgroundFrame();
+      pcVar15 = (char *)GetRcEngine::RcGetString(0xd63);
+      MenuBackgroundFrame::showBarSubmenuTitle(pMStack_228,pcVar15);
+    }
+    else {
+      MMainFrame::SetInitialFocus(param_1);
+      MWidget::Hide();
+      MEvtHandle::PostEvent((MEvtHandle *)param_1,(ulong)param_1,0xc0000020,0);
+    }
+  }
+  ArTvManager::getInstance();
+  iVar17 = ArTvManager::GetCurrentDvbAntennaType();
+  if (iVar17 == 2) {
+    ArScanManager::getInstance();
+    iVar17 = ArScanManager::GetDBCableScanOperatorUIType();
+    if (iVar17 == 0xe) {
+      MWidget::SetFlag(*(undefined4 *)(param_1 + 0x1a0),1,0);
+      MWidget::Show();
+      (**(code **)(**(int **)(param_1 + 0x184) + 0x48))(*(undefined4 *)(param_1 + 0x184));
+    }
+    else {
+      ArScanManager::getInstance();
+      iVar17 = ArScanManager::GetDBCableScanOperatorUIType();
+      if (iVar17 == 0xf) {
+LAB_00f2efcc:
+        iStack_22c = 1;
+      }
+      else {
+        ArScanManager::getInstance();
+        iVar17 = ArScanManager::GetDBCableScanOperatorUIType();
+        if (iVar17 == 5) goto LAB_00f2efcc;
+        ArScanManager::getInstance();
+        iVar17 = ArScanManager::GetDBCableScanOperatorUIType();
+        if (iVar17 == 0x10) goto LAB_00f2efcc;
+        iStack_22c = 0;
+      }
+      if (iStack_22c != 0) {
+        ArServiceSettingsManager::getInstance();
+        iVar17 = ArServiceSettingsManager::ArTvConf_GetNonConnectedEnabled();
+        if (iVar17 == 1) {
+          MWidget::Hide();
+        }
+        else {
+          MWidget::Show();
+        }
+        (**(code **)(**(int **)(param_1 + 0x184) + 0x48))(*(undefined4 *)(param_1 + 0x184));
+      }
+    }
+  }
+  else {
+    ArTvManager::getInstance();
+    iVar17 = ArTvManager::GetCurrentDvbAntennaType();
+    if (iVar17 == 3) {
+      ArScanManager::getInstance();
+      iVar17 = ArScanManager::GetDBSatScanOperatorUIType();
+      if (iVar17 == 5) {
+        ArServiceSettingsManager::getInstance();
+        iVar17 = ArServiceSettingsManager::ArTvConf_GetNonConnectedEnabled();
+        if (iVar17 == 1) {
+          MWidget::Hide();
+        }
+        else {
+          MWidget::Show();
+        }
+        (**(code **)(**(int **)(param_1 + 0x184) + 0x48))(*(undefined4 *)(param_1 + 0x184));
+      }
+    }
+  }
+  MWidget::SetFlag(*(undefined4 *)(param_1 + 0x180),2,0);
+  pMVar16 = (MMainFrame *)ArUIManager::getInstance();
+  ArUIManager::NewUI_Settings(pMVar16);
+  CommonFrame::EnableShadows((uchar)param_1);
+  uStack_394 = 0x17;
+  uStack_390 = 0x1097;
+  std::vector<bubblehelppair,std::allocator<bubblehelppair>>::push_back
+            ((vector<bubblehelppair,std::allocator<bubblehelppair>> *)(param_1 + 0x10c),
+             (bubblehelppair *)&uStack_394);
+  uStack_38c = 0xb;
+  uStack_388 = 0x1091;
+  std::vector<bubblehelppair,std::allocator<bubblehelppair>>::push_back
+            ((vector<bubblehelppair,std::allocator<bubblehelppair>> *)(param_1 + 0x10c),
+             (bubblehelppair *)&uStack_38c);
+  MWidget::SetFlag(*(undefined4 *)(param_1 + 0x230),2,0);
+  MWidget::SetFlag(*(undefined4 *)(param_1 + 0x230),1,0);
+  if ((cRam010d8e78 == '\0') && (iVar17 = __cxa_guard_acquire(&cRam010d8e78), iVar17 != 0)) {
+    uStack_230 = 0;
+    pMStack_238 = (MString *)0x10d8e80;
+    pMStack_234 = pMStack_238;
+    for (iStack_23c = 2; iStack_23c != -1; iStack_23c = iStack_23c + -1) {
+                    /* try { // try from 00f2f334 to 00f2f33b has its CatchHandler @ 00f2f3ac */
+      MString::MString(pMStack_238);
+      pMStack_238 = pMStack_238 + 0xc;
+    }
+    __cxa_guard_release(&cRam010d8e78);
+    __cxa_atexit(FUN_00efdfd0,0,&DAT_010cd2a8);
+  }
+  std::allocator<char>::allocator();
+                    /* try { // try from 00f2f4c8 to 00f2f4cf has its CatchHandler @ 00f2f5d8 */
+  std::string::string(asStack_eac,"D",aaStack_eb0);
+                    /* try { // try from 00f2f4e8 to 00f2f4ef has its CatchHandler @ 00f2f570 */
+  MString::Set((string *)0x10d8e80);
+  psStack_240 = asStack_eac;
+                    /* try { // try from 00f2f504 to 00f2f50b has its CatchHandler @ 00f2f5d8 */
+  std::string::~string(psStack_240);
+  std::allocator<char>::~allocator((allocator<char> *)aaStack_eb0);
+  std::allocator<char>::allocator();
+                    /* try { // try from 00f2f55c to 00f2f563 has its CatchHandler @ 00f2f6f8 */
+  std::string::string(asStack_eb4,"S",aaStack_eb8);
+                    /* try { // try from 00f2f5c4 to 00f2f5cb has its CatchHandler @ 00f2f690 */
+  MString::Set((string *)0x10d8e8c);
+  psStack_244 = asStack_eb4;
+                    /* try { // try from 00f2f624 to 00f2f62b has its CatchHandler @ 00f2f6f8 */
+  std::string::~string(psStack_244);
+  std::allocator<char>::~allocator((allocator<char> *)aaStack_eb8);
+  std::allocator<char>::allocator();
+                    /* try { // try from 00f2f67c to 00f2f683 has its CatchHandler @ 00f2f800 */
+  std::string::string(asStack_ebc,"K",aaStack_ec0);
+                    /* try { // try from 00f2f6e4 to 00f2f6eb has its CatchHandler @ 00f2f7a4 */
+  MString::Set((string *)0x10d8e98);
+  psStack_248 = asStack_ebc;
+                    /* try { // try from 00f2f744 to 00f2f74b has its CatchHandler @ 00f2f800 */
+  std::string::~string(psStack_248);
+  std::allocator<char>::~allocator((allocator<char> *)aaStack_ec0);
+  *(undefined4 *)(*(int *)(param_1 + 0x230) + 0x250) = 0x10d8e80;
+  *(undefined4 *)(*(int *)(param_1 + 0x230) + 0x254) = 3;
+                    /* try { // try from 00f2f790 to 00f2f797 has its CatchHandler @ 00f2f9b8 */
+  ArResourceManager::getInstance();
+                    /* try { // try from 00f2f7ec to 00f2f96b has its CatchHandler @ 00f2f9b8 */
+  iVar17 = ArResourceManager::IsNordigCountry();
+  if (iVar17 != 0) {
+    MWidget::SetFlag(*(undefined4 *)(param_1 + 0x230),2,1);
+    MWidget::SetFlag(*(undefined4 *)(param_1 + 0x230),1,1);
+  }
+  ArServiceSettingsManager::getInstance();
+  iVar17 = ArServiceSettingsManager::ArTvConf_GetBasicMode();
+  if (iVar17 == 1) {
+    ArTvSettingsManager::getInstance();
+    iVar17 = ArTvSettingsManager::GetBasicMode();
+    if (iVar17 == 1) {
+      iStack_24c = 1;
+      goto LAB_00f2f910;
+    }
+  }
+  iStack_24c = 0;
+LAB_00f2f910:
+  if (iStack_24c != 0) {
+    MWidget::Hide();
+    MWidget::Hide();
+    MWidget::Hide();
+  }
+  std::ostringstream::~ostringstream(aoStack_340);
+  return 0;
+}
+

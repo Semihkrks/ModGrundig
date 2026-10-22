@@ -1,0 +1,29 @@
+{
+  "program": "b05201025cab__libdirectfb-1.4.so.0.2.0",
+  "project_program_path": "/inputs/b05201025cab__libdirectfb-1.4.so.0.2.0",
+  "stored_executable_sha256": "b05201025cab0dd8734708702a910ff54d24eb723e782c0994a26361194c5bf3",
+  "language": "MIPS:LE:32:default",
+  "selection_file": "/mnt/c/Users/Semih/Desktop/grundig/analiz/native/system-focused/b05201025cab0dd8734708702a910ff54d24eb723e782c0994a26361194c5bf3/interface-abi3/selection.json",
+  "requested_count": 3,
+  "processed_count": 3,
+  "decompile_complete_count": 3,
+  "ephemeral_context_seed_count": 3,
+  "ephemeral_noreturn_change_count": 0,
+  "decompile_timeout_seconds_per_function": 30,
+  "decompiler_max_payload_mbytes": 50,
+  "target_executed": false,
+  "target_bytes_written": false,
+  "evidence_kind": "direct_Ghidra_static_query_not_REA_Evidence",
+  "limitations": [
+    "Wrapper must use -process -noanalysis -readOnly; no import or database save is requested.",
+    "Selected MIPS PIC t9=entry and optional gp values are explicit ephemeral analysis assumptions, not runtime observations.",
+    "Optional standard abort/throw noreturn semantics, selected GOT callsite overrides, and caller-supplied FDE/symbol bounds modify only unsaved analysis metadata; inspect selection-and-context.json.",
+    "Only existing exact function entries are selected; no functions, instructions or data are created.",
+    "Decompiler opens after context seeding and its cache is flushed before queries.",
+    "Existing analyzed xrefs/caller/callee inventories can remain incomplete; no new auto-analysis is run.",
+    "Only direct references to already-defined string data are emitted; GOT/pointer indirection can hide strings.",
+    "Instruction immediates are candidates, not established resource IDs; PIC address calculations require interpretation.",
+    "Pcode constants fold selected arithmetic and reads from analyzed loaded memory; these are static derivations and do not establish runtime argument values.",
+    "C++ indirect calls, function boundaries, prototypes and device behavior may remain unresolved."
+  ]
+}

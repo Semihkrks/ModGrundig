@@ -1,0 +1,120 @@
+{
+  "ephemeral_noreturn_assumptions": [
+    {
+      "previous_noreturn": true,
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "__assert_fail",
+      "address": "EXTERNAL:00000005"
+    },
+    {
+      "previous_noreturn": true,
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "_Unwind_Resume",
+      "address": "EXTERNAL:00000015"
+    },
+    {
+      "previous_noreturn": true,
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "abort",
+      "address": "EXTERNAL:00000017"
+    },
+    {
+      "previous_noreturn": false,
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "__cxa_rethrow",
+      "address": "EXTERNAL:0000002c"
+    },
+    {
+      "kind": "selected_callsite_noreturn_override",
+      "function": "2e23b90c",
+      "instruction": "2e23b9fc",
+      "got_slot": "2e2b3bc8",
+      "got_symbol": null,
+      "got_target_aliases": [
+        "abort"
+      ],
+      "noreturn_name": "abort",
+      "derived_gp_hex": "0x2e2bb8e0",
+      "original_flow_override": "NONE",
+      "flow_override": "CALL_RETURN",
+      "basis": "linear_same_block_gp_relative_t9_load_to_named_GOT_slot_then_jalr; explicit_standard_noreturn_assumption"
+    },
+    {
+      "kind": "selected_callsite_noreturn_override",
+      "function": "2e23b688",
+      "instruction": "2e23b81c",
+      "got_slot": "2e2b3bc8",
+      "got_symbol": null,
+      "got_target_aliases": [
+        "abort"
+      ],
+      "noreturn_name": "abort",
+      "derived_gp_hex": "0x2e2bb8e0",
+      "original_flow_override": "NONE",
+      "flow_override": "CALL_RETURN",
+      "basis": "linear_same_block_gp_relative_t9_load_to_named_GOT_slot_then_jalr; explicit_standard_noreturn_assumption"
+    }
+  ],
+  "ephemeral_context_seeds": [
+    {
+      "address": "2e23b90c",
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2e23b90c"
+    },
+    {
+      "address": "2e23b688",
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2e23b688"
+    }
+  ],
+  "requested": [
+    {
+      "requested_address": "2e23b90c",
+      "function": {
+        "address": "2e23b90c",
+        "name": "MResourceManager::GetDFBImage",
+        "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, ulong param_1, ulong * param_2)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 332
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e23b90c",
+      "original_body_max": "2e23ba57",
+      "supplied_dynsym": {
+        "size": 368,
+        "symbol": "MResourceManager_GetDFBImage_ID"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e23ba7b",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2e23b688",
+      "function": {
+        "address": "2e23b688",
+        "name": "MResourceManager::GetDFBImage",
+        "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 580
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e23b688",
+      "original_body_max": "2e23b8cb",
+      "supplied_dynsym": {
+        "size": 644,
+        "symbol": "MResourceManager_GetDFBImage_MImg"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e23b90b",
+      "ephemeral_body_clamped": false
+    }
+  ]
+}

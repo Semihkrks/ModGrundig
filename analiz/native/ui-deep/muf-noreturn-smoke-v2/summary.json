@@ -1,0 +1,27 @@
+{
+  "program": "libmuf.so",
+  "project_program_path": "/libmuf.so",
+  "stored_executable_sha256": "494d4aa45a3c8d8e10760388d8d30111e9127a0357d38cdf97979b9f9bb16d96",
+  "language": "MIPS:LE:32:default",
+  "selection_file": "/mnt/c/Users/Semih/Desktop/grundig/analiz/native/ui-deep/muf-smoke-selection.json",
+  "requested_count": 4,
+  "processed_count": 4,
+  "decompile_complete_count": 4,
+  "ephemeral_context_seed_count": 4,
+  "ephemeral_noreturn_change_count": 8,
+  "target_executed": false,
+  "target_bytes_written": false,
+  "evidence_kind": "direct_Ghidra_static_query_not_REA_Evidence",
+  "limitations": [
+    "Wrapper must use -process -noanalysis -readOnly; no import or database save is requested.",
+    "Selected MIPS PIC t9=entry and optional gp values are explicit ephemeral analysis assumptions, not runtime observations.",
+    "Optional standard abort/throw noreturn semantics, selected GOT callsite overrides, and caller-supplied FDE/symbol bounds modify only unsaved analysis metadata; inspect selection-and-context.json.",
+    "Only existing exact function entries are selected; no functions, instructions or data are created.",
+    "Decompiler opens after context seeding and its cache is flushed before queries.",
+    "Existing analyzed xrefs/caller/callee inventories can remain incomplete; no new auto-analysis is run.",
+    "Only direct references to already-defined string data are emitted; GOT/pointer indirection can hide strings.",
+    "Instruction immediates are candidates, not established resource IDs; PIC address calculations require interpretation.",
+    "Pcode constants fold selected arithmetic and reads from analyzed loaded memory; these are static derivations and do not establish runtime argument values.",
+    "C++ indirect calls, function boundaries, prototypes and device behavior may remain unresolved."
+  ]
+}

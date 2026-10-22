@@ -1,0 +1,61 @@
+{
+  "program": "91a7701524f5__usbhid.ko",
+  "sha256": "91a7701524f53ff3df05645ecd72f53980379cdedd7e359e802e0c4375edb7ce",
+  "language": "MIPS:LE:32:default",
+  "functions": 41,
+  "symbols": 578,
+  "xrefs": 1175,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 289,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 6,
+  "sample_decompile_complete": 6,
+  "samples": [
+    {
+      "address": "000126f0",
+      "name": "usbhid_find_interface",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0001103c",
+      "name": "usbhid_disconnect",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00010148",
+      "name": "usbhid_get_raw_report",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00014094",
+      "name": "usbhid_quirks_exit",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0001287c",
+      "name": "usbhid_open",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "000143c8",
+      "name": "init_module",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

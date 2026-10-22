@@ -1,0 +1,8 @@
+
+void MDrv_AUDIO_update_DspUsage(void)
+
+{
+  (*(code *)PTR_HAL_AUDIO_update_DspUsage_001eb258)();
+  return;
+}
+

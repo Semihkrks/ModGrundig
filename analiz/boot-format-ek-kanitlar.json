@@ -1,0 +1,796 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-22",
+  "method": "Read-only raw-byte/ELF32 parsing, selected MIPS32 instruction decoding, and existing static-index queries. No firmware execution or Ghidra project opened by this worker.",
+  "firmware_executed": false,
+  "firmware_modified": false,
+  "repacked": false,
+  "device_accessed": false,
+  "inputs": {
+    "swimage": {
+      "path": "analiz\\firmware-dogrulanmis\\Target_GM\\image\\GM_SWImage.bin",
+      "bytes": 42483736,
+      "sha256": "6d7614730c5f63b9e6727b8b329606b188b581efb366bffde6991aca123852c0"
+    },
+    "mboot4": {
+      "path": "analiz\\bolumler\\04_mboot.bin",
+      "bytes": 2078028,
+      "sha256": "5c400ef10fccdfbfcd6e3fb2b2249b05150b0d03508c39761bb6284500fcaaa6"
+    },
+    "kernel_wrapper": {
+      "path": "analiz\\bolumler\\05_KL.bin",
+      "bytes": 1758840,
+      "sha256": "d96b0ec70d633751ba8750a1a80aee8cac3a9c5e825744650d749a8862550691"
+    },
+    "kernel_unpacked": {
+      "path": "analiz\\kernel-mips-unpacked.bin",
+      "bytes": 5306304,
+      "sha256": "43e9cf9a68cefafb14beb936cd37f801a69412b69cfc127bd7c866fe431c3426"
+    },
+    "busybox": {
+      "path": "analiz\\dosya-sistemleri-tam\\06_RFS\\bin\\busybox",
+      "bytes": 914036,
+      "sha256": "8cff67625e6003a82128cecf17749a792309395c4e05b90625107318bcb3aae2"
+    },
+    "dvbt_board": {
+      "path": "analiz\\dosya-sistemleri-tam\\08_APP\\bin\\dvbt_board",
+      "bytes": 13836676,
+      "sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916"
+    }
+  },
+  "source_header": {
+    "declared_script_bytes": 16384,
+    "script_sha256": "ecd2294958f90e3a7a2843004f4f250d66991ed4948646f091f1df194029aaa4",
+    "selected_lines": [
+      {
+        "source": "swimage",
+        "file_offset": "0x39",
+        "line": "wdt_enable 0"
+      },
+      {
+        "source": "swimage",
+        "file_offset": "0xe3b",
+        "line": "crc32 0x84000000 0x7c00 0x85C00000 #mboot"
+      },
+      {
+        "source": "swimage",
+        "file_offset": "0xe87",
+        "line": "cmp.b 0x85C00000 0x85C00004 4 #mboot"
+      },
+      {
+        "source": "swimage",
+        "file_offset": "0x11b9",
+        "line": "crc32 0x84033800 0x1fb54c 0x85C33800 #mboot"
+      },
+      {
+        "source": "swimage",
+        "file_offset": "0x1207",
+        "line": "cmp.b 0x85C33800 0x85C33804 4 #mboot"
+      },
+      {
+        "source": "swimage",
+        "file_offset": "0x122c",
+        "line": "ncishash 0x84000000 0x84010000 0x84020000 0x84030000 0x3800 0x84033800 $(filesize) #mboot"
+      },
+      {
+        "source": "swimage",
+        "file_offset": "0x208a",
+        "line": "setenv bootcmd nand read.e 0x83FFFFC0 KL 0x1AD6C1\\; bootm 0x83FFFFC0 #set_config"
+      },
+      {
+        "source": "swimage",
+        "file_offset": "0x20db",
+        "line": "setenv MS_RFS ubi.mtd=UBI ubi.mtd=UBIRO root=ubi:RFS ubi.mtd=UBILD rootfstype=ubifs ro ubi.mtd=UBI_ARCELIK #set_config"
+      },
+      {
+        "source": "swimage",
+        "file_offset": "0x2152",
+        "line": "setenv bootargs quiet console=ttyS0,115200 $(MS_RFS) $(MS_MEM) $(mtdparts) panel_path=/ norandmaps #set_config"
+      },
+      {
+        "source": "swimage",
+        "file_offset": "0x21de",
+        "line": "setenv verify n #set_config"
+      },
+      {
+        "source": "swimage",
+        "file_offset": "0x22a4",
+        "line": "setenv MstarUpgrade_complete 1"
+      },
+      {
+        "source": "swimage",
+        "file_offset": "0x22da",
+        "line": "% <- this is end of script symbol"
+      }
+    ],
+    "parser_gap": "scripts/unpack_mstar.py only records selected command prefixes; ncishash at 0x122c is omitted from section.commands. This is a parser coverage gap, not absence from the package."
+  },
+  "lzma_trailing_bytes": {
+    "records": [
+      {
+        "ordinal": 0,
+        "label": "mboot",
+        "source_offset": "0x4000",
+        "compressed_bytes": 943,
+        "trailing_file_offset": "0x43ad",
+        "trailing_hex": "beef",
+        "decoder_unused_bytes_recorded": 2,
+        "output_sha256": "fd789c71170f27b411f6f33b1e21c4ac7295b866f60437d146bfdde8127a6922",
+        "recorded_crc32_match": true
+      },
+      {
+        "ordinal": 1,
+        "label": "mboot",
+        "source_offset": "0x14000",
+        "compressed_bytes": 903,
+        "trailing_file_offset": "0x14385",
+        "trailing_hex": "beef",
+        "decoder_unused_bytes_recorded": 2,
+        "output_sha256": "4e898df9c52f8d3714b0231389b36af97f153de2114c800807204faea0ea3e0e",
+        "recorded_crc32_match": true
+      },
+      {
+        "ordinal": 2,
+        "label": "mboot",
+        "source_offset": "0x24000",
+        "compressed_bytes": 137,
+        "trailing_file_offset": "0x24087",
+        "trailing_hex": "beef",
+        "decoder_unused_bytes_recorded": 2,
+        "output_sha256": "e00954a2ca55a6968a7e122efc60b03600fc5a9a60bb4e0cebf928f8ba62ae66",
+        "recorded_crc32_match": true
+      },
+      {
+        "ordinal": 3,
+        "label": "mboot",
+        "source_offset": "0x34000",
+        "compressed_bytes": 746,
+        "trailing_file_offset": "0x342e8",
+        "trailing_hex": "beef",
+        "decoder_unused_bytes_recorded": 2,
+        "output_sha256": "2a113e5cdac226c8941743f017b131555f0463d4fd070986c98c323eef01c7db",
+        "recorded_crc32_match": true
+      },
+      {
+        "ordinal": 4,
+        "label": "mboot",
+        "source_offset": "0x44000",
+        "compressed_bytes": 562871,
+        "trailing_file_offset": "0xcd6b5",
+        "trailing_hex": "beef",
+        "decoder_unused_bytes_recorded": 2,
+        "output_sha256": "5c400ef10fccdfbfcd6e3fb2b2249b05150b0d03508c39761bb6284500fcaaa6",
+        "recorded_crc32_match": true
+      },
+      {
+        "ordinal": 5,
+        "label": "kernel",
+        "source_offset": "0xd4000",
+        "compressed_bytes": 1780897,
+        "trailing_file_offset": "0x286c9f",
+        "trailing_hex": "beef",
+        "decoder_unused_bytes_recorded": 2,
+        "output_sha256": "d96b0ec70d633751ba8750a1a80aee8cac3a9c5e825744650d749a8862550691",
+        "recorded_crc32_match": true
+      },
+      {
+        "ordinal": 6,
+        "label": "ROOTFS",
+        "source_offset": "0x294000",
+        "compressed_bytes": 3650196,
+        "trailing_file_offset": "0x60f292",
+        "trailing_hex": "beef",
+        "decoder_unused_bytes_recorded": 2,
+        "output_sha256": "14b4b2753b2321ee34f34f5c6f49ab50a4ef1e78c4d5e8a2d90359603ea88dee",
+        "recorded_crc32_match": true
+      },
+      {
+        "ordinal": 7,
+        "label": "mslib",
+        "source_offset": "0x614000",
+        "compressed_bytes": 17383849,
+        "trailing_file_offset": "0x16a81a7",
+        "trailing_hex": "beef",
+        "decoder_unused_bytes_recorded": 2,
+        "output_sha256": "7d92780368b178854a46a8f2e2ee8b625d06c7292695929800e5ecbc56fb827b",
+        "recorded_crc32_match": true
+      },
+      {
+        "ordinal": 8,
+        "label": "applications",
+        "source_offset": "0x16b4000",
+        "compressed_bytes": 17371399,
+        "trailing_file_offset": "0x2745105",
+        "trailing_hex": "beef",
+        "decoder_unused_bytes_recorded": 2,
+        "output_sha256": "353d4fbb6a255c86fcafb161e02218dab7d68fcc350092db31ef37c10791ad35",
+        "recorded_crc32_match": true
+      },
+      {
+        "ordinal": 9,
+        "label": "config",
+        "source_offset": "0x2754000",
+        "compressed_bytes": 709447,
+        "trailing_file_offset": "0x2801345",
+        "trailing_hex": "beef",
+        "decoder_unused_bytes_recorded": 2,
+        "output_sha256": "965f11021a743004ef4727fc6adf98b615ad6ab41b9534afa7f4f7c6e59839a5",
+        "recorded_crc32_match": true
+      },
+      {
+        "ordinal": 10,
+        "label": "customer",
+        "source_offset": "0x2804000",
+        "compressed_bytes": 182415,
+        "trailing_file_offset": "0x283088d",
+        "trailing_hex": "beef",
+        "decoder_unused_bytes_recorded": 2,
+        "output_sha256": "1120e32847d7436be59fe5671fac7dd5d24af11ef08b263dc4d25f02afcf81a0",
+        "recorded_crc32_match": true
+      },
+      {
+        "ordinal": 11,
+        "label": "customer",
+        "source_offset": "0x2834000",
+        "compressed_bytes": 184035,
+        "trailing_file_offset": "0x2860ee1",
+        "trailing_hex": "beef",
+        "decoder_unused_bytes_recorded": 2,
+        "output_sha256": "69719ccfe61ca51aa6570f18147bd5cb1f1a3185f05e8a6d00b4a38a38aeb495",
+        "recorded_crc32_match": true
+      },
+      {
+        "ordinal": 12,
+        "label": "certificate",
+        "source_offset": "0x2864000",
+        "compressed_bytes": 6497,
+        "trailing_file_offset": "0x286595f",
+        "trailing_hex": "beef",
+        "decoder_unused_bytes_recorded": 2,
+        "output_sha256": "86b6e889cdb287198502c58672ffd987898d61f8d33799a68c321d8dabd5347b",
+        "recorded_crc32_match": true
+      },
+      {
+        "ordinal": 13,
+        "label": "oad",
+        "source_offset": "0x2874000",
+        "compressed_bytes": 685,
+        "trailing_file_offset": "0x28742ab",
+        "trailing_hex": "beef",
+        "decoder_unused_bytes_recorded": 2,
+        "output_sha256": "bbfa0c9a92470a40cc86f3ead26bf820148b8a9fc7a7b0ebbb0102677360bce7",
+        "recorded_crc32_match": true
+      }
+    ],
+    "interpretation": "All 14 recorded decoder-unused two-byte tails are BE EF. Meaning and loader enforcement remain unverified."
+  },
+  "kernel_uimage_extra_byte": {
+    "payload_bytes_from_header": 1758775,
+    "header_bytes": 64,
+    "payload_end_exclusive": "0x1ad677",
+    "wrapper_file_bytes": 1758840,
+    "extra_hex": "ff",
+    "recorded_header_crc_matches": true,
+    "recorded_payload_crc_matches": true,
+    "meaning_unknown": true
+  },
+  "mboot_command_tables": {
+    "candidate_va_minus_file_offset": "0x8e1efd80",
+    "basis": "Six command records have coherent string pointers and handler code at the derived offsets. This is a raw-format candidate map, not a validated runtime relocation base.",
+    "records": [
+      {
+        "name": "filepartload",
+        "table_file_offset": "0x1fa20c",
+        "words_le_hex": [
+          "8e389b3c",
+          "00000005",
+          "00000000",
+          "8e213628",
+          "8e389b4c",
+          "8e389b68"
+        ],
+        "stored_handler_pointer": "0x8e213628",
+        "candidate_handler_file_offset": "0x238a8",
+        "candidate_name_file_offset": "0x199dbc",
+        "maxargs": 5,
+        "repeatable": 0
+      },
+      {
+        "name": "mscompress7",
+        "table_file_offset": "0x1fa3cc",
+        "words_le_hex": [
+          "8e38a11c",
+          "00000006",
+          "00000000",
+          "8e215c80",
+          "8e38a128",
+          "8e38a14c"
+        ],
+        "stored_handler_pointer": "0x8e215c80",
+        "candidate_handler_file_offset": "0x25f00",
+        "candidate_name_file_offset": "0x19a39c",
+        "maxargs": 6,
+        "repeatable": 0
+      },
+      {
+        "name": "crc32",
+        "table_file_offset": "0x1faebc",
+        "words_le_hex": [
+          "8e3a07e0",
+          "00000004",
+          "00000001",
+          "8e2465cc",
+          "8e3a07e8",
+          "8e3a0800"
+        ],
+        "stored_handler_pointer": "0x8e2465cc",
+        "candidate_handler_file_offset": "0x5684c",
+        "candidate_name_file_offset": "0x1b0a60",
+        "maxargs": 4,
+        "repeatable": 1
+      },
+      {
+        "name": "ncishash",
+        "table_file_offset": "0x1fb098",
+        "words_le_hex": [
+          "8e3a3c30",
+          "00000009",
+          "00000001",
+          "8e24b22c",
+          "8e3a3c3c",
+          "8e3a3c68"
+        ],
+        "stored_handler_pointer": "0x8e24b22c",
+        "candidate_handler_file_offset": "0x5b4ac",
+        "candidate_name_file_offset": "0x1b3eb0",
+        "maxargs": 9,
+        "repeatable": 1
+      },
+      {
+        "name": "ncisbl",
+        "table_file_offset": "0x1fb0b4",
+        "words_le_hex": [
+          "8e3a384c",
+          "0000000a",
+          "00000001",
+          "8e24a4d0",
+          "8e3a3dec",
+          "8e3a3e28"
+        ],
+        "stored_handler_pointer": "0x8e24a4d0",
+        "candidate_handler_file_offset": "0x5a750",
+        "candidate_name_file_offset": "0x1b3acc",
+        "maxargs": 10,
+        "repeatable": 1
+      },
+      {
+        "name": "bootm",
+        "table_file_offset": "0x1facfc",
+        "words_le_hex": [
+          "8e39f998",
+          "00000020",
+          "00000001",
+          "8e243e68",
+          "8e39f9a0",
+          "8e39f9c4"
+        ],
+        "stored_handler_pointer": "0x8e243e68",
+        "candidate_handler_file_offset": "0x540e8",
+        "candidate_name_file_offset": "0x1afc18",
+        "maxargs": 32,
+        "repeatable": 1
+      }
+    ],
+    "ncishash_name_file_offset": "0x1b3eb0",
+    "ncishash_description_file_offset": "0x1b3ebc",
+    "ncishash_description": "write cis and hash[0-2] for Secure ROM boot",
+    "ncishash_help_file_offset": "0x1b3ee8",
+    "limit": "Command label/help and handler presence do not prove the cryptographic algorithm or the update accept/reject policy."
+  },
+  "crc32_raw_code": {
+    "command_call": {
+      "source": "mboot4",
+      "file_offset": "0x568d0",
+      "words_le_hex": [
+        "0f8a17f8"
+      ]
+    },
+    "wrapper_file_offset": "0x96260",
+    "wrapper": {
+      "source": "mboot4",
+      "file_offset": "0x96260",
+      "words_le_hex": [
+        "27bdffe0",
+        "afbf001c",
+        "0f8a17ac",
+        "00042027",
+        "8fbf001c",
+        "00021027",
+        "03e00008",
+        "27bd0020"
+      ]
+    },
+    "core_file_offset": "0x96130",
+    "core_table_address_instructions": {
+      "source": "mboot4",
+      "file_offset": "0x96144",
+      "words_le_hex": [
+        "3c048e3b",
+        "2484fe20"
+      ]
+    },
+    "table_candidate_va": "0x8e3afe20",
+    "table_file_offset": "0x1c00a0",
+    "table_bytes": 1024,
+    "table_sha256": "12f3e0576d447eb37b36d82ba0c1c5481b8f0d12fdc70347ce4a076b229d4c86",
+    "polynomial_reflected_hex": "edb88320",
+    "all_256_entries_match_generated_table": true,
+    "interpretation": "Wrapper complements seed and result around a table-driven reflected CRC32 core; the crc32 command and two whole-image CRC paths call this wrapper.",
+    "whole_image_paths": [
+      {
+        "call": {
+          "source": "mboot4",
+          "file_offset": "0x24288",
+          "words_le_hex": [
+            "0f8a17f8"
+          ]
+        },
+        "compare": {
+          "source": "mboot4",
+          "file_offset": "0x24294",
+          "words_le_hex": [
+            "12550021"
+          ]
+        },
+        "equal_target_file_offset": "0x2431c",
+        "mismatch_jump": {
+          "source": "mboot4",
+          "file_offset": "0x24314",
+          "words_le_hex": [
+            "0b884f1a"
+          ]
+        },
+        "failure_assignment": {
+          "source": "mboot4",
+          "file_offset": "0x23ee8",
+          "words_le_hex": [
+            "0b88503d",
+            "2412ffff"
+          ]
+        },
+        "return_value_move": {
+          "source": "mboot4",
+          "file_offset": "0x24378",
+          "words_le_hex": [
+            "02401021"
+          ]
+        }
+      },
+      {
+        "call": {
+          "source": "mboot4",
+          "file_offset": "0x2482c",
+          "words_le_hex": [
+            "0f8a17f8"
+          ]
+        },
+        "compare": {
+          "source": "mboot4",
+          "file_offset": "0x24838",
+          "words_le_hex": [
+            "12710022"
+          ]
+        },
+        "equal_target_file_offset": "0x248c4",
+        "mismatch_jump": {
+          "source": "mboot4",
+          "file_offset": "0x248bc",
+          "words_le_hex": [
+            "0b88507a"
+          ]
+        },
+        "failure_assignment": {
+          "source": "mboot4",
+          "file_offset": "0x24468",
+          "words_le_hex": [
+            "0b8851af",
+            "2411ffff"
+          ]
+        },
+        "return_value_move": {
+          "source": "mboot4",
+          "file_offset": "0x24940",
+          "words_le_hex": [
+            "02201021"
+          ]
+        }
+      }
+    ],
+    "limits": [
+      "Whole-image validator entry/callers are not connected to every USB/OAD/boot acceptance path.",
+      "Expected-value provenance, encrypted-image branches, and complete success/failure CFG remain unresolved.",
+      "No claim of signature absence or bypass is made."
+    ]
+  },
+  "kernel_handoff": {
+    "mapping_basis": "uImage entry 0x84000000 corresponds to wrapper file offset 0x40. Raw unpacked kernel address base candidate 0x80000000 matches direct code addresses.",
+    "wrapper_decompress_jump": {
+      "source": "kernel_wrapper",
+      "file_offset": "0x1a8",
+      "words_le_hex": [
+        "3c1f8400",
+        "27ff0180",
+        "3c1a8400",
+        "275a0438",
+        "03400008",
+        "00000000"
+      ]
+    },
+    "decompress_candidate_va": "0x84000438",
+    "decompress_file_offset": "0x478",
+    "return_candidate_va": "0x84000180",
+    "wrapper_kernel_jump": {
+      "source": "kernel_wrapper",
+      "file_offset": "0x1c0",
+      "words_le_hex": [
+        "02002021",
+        "02202821",
+        "02403021",
+        "02603821",
+        "3c1a803a",
+        "375af190",
+        "03400008",
+        "00000000"
+      ]
+    },
+    "kernel_branch_target_candidate_va": "0x803af190",
+    "unpacked_kernel_target_file_offset": "0x3af190",
+    "kernel_entry_words": {
+      "source": "kernel_unpacked",
+      "file_offset": "0x3af190",
+      "words_le_hex": [
+        "40086000",
+        "3c011000",
+        "3421001f",
+        "01014025",
+        "3908001f",
+        "40886000",
+        "000000c0",
+        "3c08803b",
+        "2508f1bc",
+        "01000008",
+        "00000000",
+        "3c088051"
+      ]
+    },
+    "kernel_entry_next_jump": {
+      "source": "kernel_unpacked",
+      "file_offset": "0x3af224",
+      "words_le_hex": [
+        "08138d61",
+        "00000000"
+      ]
+    },
+    "next_jump_candidate_va": "0x804e3584",
+    "limits": [
+      "Raw Ghidra kernel analysis was not performed here.",
+      "0x804e3584 has not been identified as start_kernel.",
+      "Bootloader bootm relocation semantics and kernel init selection remain open."
+    ]
+  },
+  "elf_main_callbacks": [
+    {
+      "source": "dvbt_board",
+      "entry_va": "0x4aa570",
+      "entry_file_offset": "0xaa570",
+      "callback_setup": {
+        "source": "dvbt_board",
+        "file_offset": "0xaa57c",
+        "words_le_hex": [
+          "3c0400fd",
+          "24840784"
+        ]
+      },
+      "callback_candidate_va": "0xfd0784",
+      "entry_call": {
+        "source": "dvbt_board",
+        "file_offset": "0xaa5b0",
+        "words_le_hex": [
+          "0c12a8cc"
+        ]
+      },
+      "plt_stub": {
+        "source": "dvbt_board",
+        "file_offset": "0xaa330",
+        "words_le_hex": [
+          "3c0f010c",
+          "8df93e1c",
+          "34180001",
+          "03200008"
+        ]
+      },
+      "plt_stub_va": "0x4aa330",
+      "relocation_file_offset": "0xaa170",
+      "relocation_target_va": "0x10c3e1c",
+      "relocation_type": 127,
+      "dynsym_index": 5,
+      "dynsym_symbol": "__libc_start_main"
+    },
+    {
+      "source": "busybox",
+      "entry_va": "0x4059f0",
+      "entry_file_offset": "0x59f0",
+      "callback_setup": {
+        "source": "busybox",
+        "file_offset": "0x59fc",
+        "words_le_hex": [
+          "3c040041",
+          "24848020"
+        ]
+      },
+      "callback_candidate_va": "0x408020",
+      "entry_call": {
+        "source": "busybox",
+        "file_offset": "0x5a30",
+        "words_le_hex": [
+          "0c101228"
+        ]
+      },
+      "plt_stub": {
+        "source": "busybox",
+        "file_offset": "0x48a0",
+        "words_le_hex": [
+          "3c0f004f",
+          "8df9d1f0",
+          "3418005e",
+          "03200008"
+        ]
+      },
+      "plt_stub_va": "0x4048a0",
+      "relocation_file_offset": "0x3994",
+      "relocation_target_va": "0x4ed1f0",
+      "relocation_type": 127,
+      "dynsym_index": 97,
+      "dynsym_symbol": "__libc_start_main"
+    }
+  ],
+  "busybox_shell_profile": {
+    "applet_names_file_offset": "0xd40ce",
+    "applet_count": 261,
+    "function_pointer_table_file_offset": "0xc12e0",
+    "entries": [
+      {
+        "name": "ash",
+        "index": 7,
+        "target_va": "0x453d70"
+      },
+      {
+        "name": "sh",
+        "index": 187,
+        "target_va": "0x453d70"
+      },
+      {
+        "name": "init",
+        "index": 97,
+        "target_va": "0x4af9c8"
+      },
+      {
+        "name": "linuxrc",
+        "index": 109,
+        "target_va": "0x4af9c8"
+      }
+    ],
+    "dispatcher_table_use": {
+      "source": "busybox",
+      "file_offset": "0x7af0",
+      "words_le_hex": [
+        "3c02004c",
+        "244212e0",
+        "00171880",
+        "00621821",
+        "8c790000",
+        "02c02021",
+        "0320f809",
+        "03c02821"
+      ]
+    },
+    "login_marker_compare": {
+      "source": "busybox",
+      "file_offset": "0x5437c",
+      "words_le_hex": [
+        "90430000",
+        "2402002d",
+        "14620004",
+        "8fa503e8",
+        "24020001",
+        "a0a20023"
+      ]
+    },
+    "profile_condition_and_call": {
+      "source": "busybox",
+      "file_offset": "0x54398",
+      "words_le_hex": [
+        "80c20023",
+        "10400018",
+        "24020001",
+        "3c04004d",
+        "2484a854",
+        "0c114f4a",
+        "a3a20010"
+      ]
+    },
+    "profile_path_va": "0x4ca854",
+    "profile_path_file_offset": "0xca854",
+    "profile_reader_candidate_va": "0x453d28",
+    "inittab_reference": {
+      "source": "busybox",
+      "file_offset": "0xaef50",
+      "words_le_hex": [
+        "24843088"
+      ]
+    },
+    "inittab_path_va": "0x4d3088",
+    "default_rcS_reference": {
+      "source": "busybox",
+      "file_offset": "0xaef78",
+      "words_le_hex": [
+        "24a53098"
+      ]
+    },
+    "default_rcS_path_va": "0x4d3098",
+    "limits": [
+      "The init action parser and argv0 construction from -/bin/sh have not been fully followed.",
+      "Ash login-shell flag and /etc/profile call are statically visible; actual device execution is not observed."
+    ]
+  },
+  "dvbt_main_static_call_candidates": {
+    "source": "analiz/ui-kod-cagrilari.json",
+    "function_address": "0xfd0784",
+    "items": [
+      {
+        "site": "0xfd0810",
+        "symbol": "MSrv_Control_TV::Build()"
+      },
+      {
+        "site": "0xfd0b70",
+        "symbol": "MSystem::Initialize(int, char**, unsigned char, unsigned char)"
+      },
+      {
+        "site": "0xfd0d7c",
+        "symbol": "InitMSrvControl()"
+      },
+      {
+        "site": "0xfd22a0",
+        "symbol": "StartMsrv()"
+      },
+      {
+        "site": "0xfd22c8",
+        "symbol": "MResourcePkg::ReadResProfile()"
+      },
+      {
+        "site": "0xfd2364",
+        "symbol": "RegisterAllHotKey()"
+      },
+      {
+        "site": "0xfd2434",
+        "symbol": "MApplet::Run(unsigned long, void*)"
+      },
+      {
+        "site": "0xfd24e8",
+        "symbol": "ArTvManager::NotifyBootUpCompleted()"
+      },
+      {
+        "site": "0xfd2b98",
+        "symbol": "MSystem::Run()"
+      }
+    ],
+    "evidence_level": "Static instruction/GOT-symbol candidates, not proven runtime bindings or unconditional execution; branch conditions were not fully decoded."
+  },
+  "outstanding": [
+    "Boot reset and relocation path from all five mboot fragments to bootm.",
+    "Raw handler decompilation and complete script executor fail policy.",
+    "Header/whole-image CRC expectation provenance and cryptographic validation accept/reject paths.",
+    "Kernel init selection, init action parsing, and root mount success conditions.",
+    "Full main-to-UI branch feasibility and virtual dispatch resolution."
+  ]
+}

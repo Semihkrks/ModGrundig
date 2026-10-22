@@ -1,0 +1,61 @@
+{
+  "program": "a922be14f2d5__libssl.so.0.9.8",
+  "sha256": "a922be14f2d5c0c28ab95d7bc7a287798d524075309233a058b3b033a4f873d4",
+  "language": "MIPS:LE:32:default",
+  "functions": 835,
+  "symbols": 5934,
+  "xrefs": 17936,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 3838,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 6,
+  "sample_decompile_complete": 6,
+  "samples": [
+    {
+      "address": "2e9e2d3c",
+      "name": "SSL_CTX_set_cert_verify_callback",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2e9e2d48",
+      "name": "SSL_CTX_set_verify",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2e9e2970",
+      "name": "SSL_set_verify",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2e9e31d8",
+      "name": "SSL_CTX_load_verify_locations",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2e9e31f0",
+      "name": "SSL_CTX_set_default_verify_paths",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2e9e47d0",
+      "name": "SSL_CTX_set_verify_depth",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

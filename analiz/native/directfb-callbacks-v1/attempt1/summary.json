@@ -1,0 +1,33 @@
+{
+  "program": "b05201025cab__libdirectfb-1.4.so.0.2.0",
+  "project_program_path": "/inputs/b05201025cab__libdirectfb-1.4.so.0.2.0",
+  "stored_executable_sha256": "b05201025cab0dd8734708702a910ff54d24eb723e782c0994a26361194c5bf3",
+  "language": "MIPS:LE:32:default",
+  "selection_file": "/mnt/c/Users/Semih/Desktop/grundig/analiz/native/directfb-callbacks-v1/attempt1/selection.json",
+  "requested_count": 8,
+  "processed_count": 8,
+  "decompile_complete_count": 8,
+  "ephemeral_context_seed_count": 8,
+  "ephemeral_noreturn_change_count": 0,
+  "decompile_timeout_seconds_per_function": 45,
+  "decompiler_max_payload_mbytes": 8,
+  "target_executed": false,
+  "target_bytes_written": false,
+  "evidence_kind": "direct_Ghidra_static_query_not_REA_Evidence",
+  "limitations": [
+    "Wrapper must use -process -noanalysis -readOnly; no import or database save is requested.",
+    "Selected MIPS PIC t9=entry and optional gp values are explicit ephemeral analysis assumptions, not runtime observations.",
+    "Optional standard abort/throw noreturn semantics, selected GOT callsite overrides, and caller-supplied FDE/symbol bounds modify only unsaved analysis metadata; inspect selection-and-context.json.",
+    "Decompiler opens after context seeding and its cache is flushed before queries.",
+    "Existing analyzed xrefs/caller/callee inventories can remain incomplete; no new auto-analysis is run.",
+    "Only direct references to already-defined string data are emitted; GOT/pointer indirection can hide strings.",
+    "Instruction immediates are candidates, not established resource IDs; PIC address calculations require interpretation.",
+    "Pcode constants fold selected arithmetic and reads from analyzed loaded memory; these are static derivations and do not establish runtime argument values.",
+    "C++ indirect calls, function boundaries, prototypes and device behavior may remain unresolved.",
+    "This script first clears selected bounded code units, disassembles and creates functions in unsaved analysis metadata; original bytes and saved database are not written."
+  ],
+  "ephemeral_created_callback_count": 8,
+  "recovery_file": "callback-recovery.json",
+  "boundary_basis": "Exact MIPS .pdr procedure entry and next .pdr entry, corroborated by constructor pointer and assembly PIC prologue; contiguous body is an analysis assumption, not recovered source extent.",
+  "target_sha256_before_after_identical": true
+}

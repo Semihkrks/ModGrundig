@@ -1,0 +1,528 @@
+{
+  "address": "2e22b1f0",
+  "name": "MAccelerateInterpolator::getInterpolator",
+  "signature": "undefined __thiscall getInterpolator(MAccelerateInterpolator * this, ulong param_1, ulong param_2, long param_3, long param_4)",
+  "external": false,
+  "thunk": false,
+  "body_bytes": 52,
+  "incoming_entry_xrefs": [
+    {
+      "from": "Entry Point",
+      "to": "2e22b1f0",
+      "type": "EXTERNAL",
+      "source_type": "DEFAULT",
+      "operand_index": -1,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MAccelerateInterpolator::getInterpolator"
+    },
+    {
+      "from": "2e2b4334",
+      "to": "2e22b1f0",
+      "type": "DATA",
+      "source_type": "DEFAULT",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MAccelerateInterpolator::getInterpolator"
+    },
+    {
+      "from": "2e290d5c",
+      "to": "2e22b1f0",
+      "type": "INDIRECTION",
+      "source_type": "ANALYSIS",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MAccelerateInterpolator::getInterpolator"
+    },
+    {
+      "from": "2e2a5a64",
+      "to": "2e22b1f0",
+      "type": "DATA",
+      "source_type": "ANALYSIS",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MAccelerateInterpolator::getInterpolator"
+    },
+    {
+      "from": "2e2b2300",
+      "to": "2e22b1f0",
+      "type": "DATA",
+      "source_type": "DEFAULT",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MAccelerateInterpolator::getInterpolator"
+    }
+  ],
+  "analyzed_callers": [],
+  "analyzed_callees": [],
+  "instruction_count": 13,
+  "computed_callsite_count": 0,
+  "instructions": [
+    {
+      "address": "2e22b1f0",
+      "instruction": "beq a2,zero,0x2e22b21c",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e22b21c",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e22b21c"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22b1f0",
+          "to": "2e22b21c",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22b1f0",
+            "name": "MAccelerateInterpolator::getInterpolator",
+            "signature": "undefined __thiscall getInterpolator(MAccelerateInterpolator * this, ulong param_1, ulong param_2, long param_3, long param_4)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 52
+          },
+          "target_symbol": "LAB_2e22b21c"
+        }
+      ]
+    },
+    {
+      "address": "2e22b1f4",
+      "instruction": "_lw v1,0x10(sp)",
+      "mnemonic": "_lw",
+      "flow_type": "FALL_THROUGH",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x10(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x10",
+              "unsigned_hex": "0x10",
+              "signed_decimal": 16,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e22b1f4",
+          "to": "Stack[0x10]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e22b1f0",
+            "name": "MAccelerateInterpolator::getInterpolator",
+            "signature": "undefined __thiscall getInterpolator(MAccelerateInterpolator * this, ulong param_1, ulong param_2, long param_3, long param_4)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 52
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e22b1f8",
+      "instruction": "mul v0,a1,a1",
+      "mnemonic": "mul",
+      "flow_type": "FALL_THROUGH",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22b1fc",
+      "instruction": "mul v0,v0,a3",
+      "mnemonic": "mul",
+      "flow_type": "FALL_THROUGH",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "a3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22b200",
+      "instruction": "div v0,a2",
+      "mnemonic": "div",
+      "flow_type": "FALL_THROUGH",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22b204",
+      "instruction": "teq a2,zero",
+      "mnemonic": "teq",
+      "flow_type": "FALL_THROUGH",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22b208",
+      "instruction": "mflo v0",
+      "mnemonic": "mflo",
+      "flow_type": "FALL_THROUGH",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22b20c",
+      "instruction": "div v0,a2",
+      "mnemonic": "div",
+      "flow_type": "FALL_THROUGH",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22b210",
+      "instruction": "teq a2,zero",
+      "mnemonic": "teq",
+      "flow_type": "FALL_THROUGH",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22b214",
+      "instruction": "mflo v0",
+      "mnemonic": "mflo",
+      "flow_type": "FALL_THROUGH",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22b218",
+      "instruction": "addu v1,v1,v0",
+      "mnemonic": "addu",
+      "flow_type": "FALL_THROUGH",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22b21c",
+      "instruction": "jr ra",
+      "mnemonic": "jr",
+      "flow_type": "TERMINATOR",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e22b220",
+      "instruction": "_move v0,v1",
+      "mnemonic": "_move",
+      "flow_type": "FALL_THROUGH",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    }
+  ],
+  "immediate_scalar_candidates": [
+    {
+      "java_type": "Scalar",
+      "display": "0x10",
+      "unsigned_hex": "0x10",
+      "signed_decimal": 16,
+      "bits": 32,
+      "instruction_address": "2e22b1f4",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    }
+  ],
+  "directly_referenced_defined_strings": [],
+  "decompile_complete": true,
+  "decompile_error": "",
+  "pseudocode_file": "2e22b1f0.c",
+  "pcode_export_complete": true,
+  "decompiler_pcode_calls": [],
+  "decompiler_constant_defined_strings": []
+}

@@ -1,0 +1,49 @@
+{
+  "program": "32a4abe1d652__libdrvPWM.so",
+  "sha256": "32a4abe1d652c026090e8dc92a540bb60980af14294ea1f9541a1f17acae7001",
+  "language": "MIPS:LE:32:default",
+  "functions": 108,
+  "symbols": 250,
+  "xrefs": 884,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 197,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 4,
+  "sample_decompile_complete": 4,
+  "samples": [
+    {
+      "address": "2f4e1580",
+      "name": "_init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2f4e291c",
+      "name": "MDrv_PWM_SetPowerState",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2f4e46a0",
+      "name": "HAL_PWM_Init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2f4e27f0",
+      "name": "MDrv_PWM_Init",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

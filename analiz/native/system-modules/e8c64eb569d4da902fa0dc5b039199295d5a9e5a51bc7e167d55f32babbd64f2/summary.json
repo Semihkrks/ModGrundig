@@ -1,0 +1,61 @@
+{
+  "program": "e8c64eb569d4__libapiMHL.so",
+  "sha256": "e8c64eb569d4da902fa0dc5b039199295d5a9e5a51bc7e167d55f32babbd64f2",
+  "language": "MIPS:LE:32:default",
+  "functions": 304,
+  "symbols": 1039,
+  "xrefs": 3065,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 527,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 6,
+  "sample_decompile_complete": 6,
+  "samples": [
+    {
+      "address": "00018390",
+      "name": "_mhal_mhl_IsCbusBusy",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "000157cc",
+      "name": "mdrv_mhl_PowerDown",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00015800",
+      "name": "mdrv_mhl_PowerStandby",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00015834",
+      "name": "mdrv_mhl_PowerOn",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00017dec",
+      "name": "mdrv_mhl_LoadDeviceCapability",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0001b688",
+      "name": "mapi_mhl_LoadDeviceCapability",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

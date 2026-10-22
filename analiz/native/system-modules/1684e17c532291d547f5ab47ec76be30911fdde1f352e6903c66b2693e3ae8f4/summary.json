@@ -1,0 +1,61 @@
+{
+  "program": "1684e17c5322__libcrypto.so.0.9.8",
+  "sha256": "1684e17c532291d547f5ab47ec76be30911fdde1f352e6903c66b2693e3ae8f4",
+  "language": "MIPS:LE:32:default",
+  "functions": 3820,
+  "symbols": 21802,
+  "xrefs": 83062,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 14259,
+  "analysis_timeout": true,
+  "sample_decompile_attempted": 6,
+  "sample_decompile_complete": 6,
+  "samples": [
+    {
+      "address": "2d80afa8",
+      "name": "ec_GFp_simple_is_at_infinity",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2d817a18",
+      "name": "ec_GF2m_simple_is_at_infinity",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2d82bd14",
+      "name": "ENGINE_set_init_function",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2d8bfb60",
+      "name": "STORE_method_set_initialise_function",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2d8bfbe4",
+      "name": "STORE_method_set_update_store_function",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2d825960",
+      "name": "DSA_do_verify",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

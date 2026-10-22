@@ -1,0 +1,12 @@
+
+/* MW_DVB_EPG_UPDATE_CONTROL::ReConnectCM(MW_DTV_CM_DB<_DVB_PROGRAMINFO, _DVB_MUXINFO,
+   _ST_DVB_SAT_INFO, _ST_DVB_NETWORK_INFO>*) */
+
+undefined4 __thiscall
+MW_DVB_EPG_UPDATE_CONTROL::ReConnectCM(MW_DVB_EPG_UPDATE_CONTROL *this,MW_DTV_CM_DB *param_1)
+
+{
+  *(MW_DTV_CM_DB **)this = param_1;
+  return 1;
+}
+

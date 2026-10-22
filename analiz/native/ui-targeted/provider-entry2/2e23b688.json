@@ -1,0 +1,7436 @@
+{
+  "address": "2e23b688",
+  "name": "MResourceManager::GetDFBImage",
+  "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+  "external": false,
+  "thunk": false,
+  "body_bytes": 580,
+  "incoming_entry_xrefs": [
+    {
+      "from": "Entry Point",
+      "to": "2e23b688",
+      "type": "EXTERNAL",
+      "source_type": "DEFAULT",
+      "operand_index": -1,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MResourceManager::GetDFBImage"
+    },
+    {
+      "from": "2e2b4ab4",
+      "to": "2e23b688",
+      "type": "DATA",
+      "source_type": "DEFAULT",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MResourceManager::GetDFBImage"
+    },
+    {
+      "from": "2e2915cc",
+      "to": "2e23b688",
+      "type": "INDIRECTION",
+      "source_type": "ANALYSIS",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MResourceManager::GetDFBImage"
+    },
+    {
+      "from": "2e2a7af8",
+      "to": "2e23b688",
+      "type": "DATA",
+      "source_type": "ANALYSIS",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MResourceManager::GetDFBImage"
+    },
+    {
+      "from": "2e2b01c9",
+      "to": "2e23b688",
+      "type": "DATA",
+      "source_type": "ANALYSIS",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MResourceManager::GetDFBImage"
+    }
+  ],
+  "analyzed_callers": [],
+  "analyzed_callees": [],
+  "instruction_count": 145,
+  "computed_callsite_count": 11,
+  "instructions": [
+    {
+      "address": "2e23b688",
+      "instruction": "lui gp,0x8",
+      "mnemonic": "lui",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x8",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x8",
+              "unsigned_hex": "0x8",
+              "signed_decimal": 8,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b68c",
+      "instruction": "addiu gp,gp,0x258",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x258",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x258",
+              "unsigned_hex": "0x258",
+              "signed_decimal": 600,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b690",
+      "instruction": "addu gp,gp,t9",
+      "mnemonic": "addu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b694",
+      "instruction": "addiu sp,sp,-0x58",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0x58",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x58",
+              "unsigned_hex": "0xffffffa8",
+              "signed_decimal": -88,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b698",
+      "instruction": "sw ra,0x54(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x54(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x54",
+              "unsigned_hex": "0x54",
+              "signed_decimal": 84,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b698",
+          "to": "Stack[-0x4]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b69c",
+      "instruction": "sw s5,0x50(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s5",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s5"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x50(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x50",
+              "unsigned_hex": "0x50",
+              "signed_decimal": 80,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b69c",
+          "to": "Stack[-0x8]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b6a0",
+      "instruction": "sw s4,0x4c(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s4",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s4"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x4c(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x4c",
+              "unsigned_hex": "0x4c",
+              "signed_decimal": 76,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b6a0",
+          "to": "Stack[-0xc]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b6a4",
+      "instruction": "sw s3,0x48(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s3"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x48(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x48",
+              "unsigned_hex": "0x48",
+              "signed_decimal": 72,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b6a4",
+          "to": "Stack[-0x10]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b6a8",
+      "instruction": "sw s2,0x44(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x44(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x44",
+              "unsigned_hex": "0x44",
+              "signed_decimal": 68,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b6a8",
+          "to": "Stack[-0x14]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b6ac",
+      "instruction": "sw s1,0x40(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x40(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x40",
+              "unsigned_hex": "0x40",
+              "signed_decimal": 64,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b6ac",
+          "to": "Stack[-0x18]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b6b0",
+      "instruction": "sw s0,0x3c(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x3c(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x3c",
+              "unsigned_hex": "0x3c",
+              "signed_decimal": 60,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b6b0",
+          "to": "Stack[-0x1c]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b6b4",
+      "instruction": "sw gp,0x10(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x10(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x10",
+              "unsigned_hex": "0x10",
+              "signed_decimal": 16,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b6b4",
+          "to": "Stack[-0x48]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b6b8",
+      "instruction": "lw s4,-0x6c50(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s4",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s4"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x6c50(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x6c50",
+              "unsigned_hex": "0xffff93b0",
+              "signed_decimal": -27728,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b6bc",
+      "instruction": "lw t9,-0x7f88(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7f88(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7f88",
+              "unsigned_hex": "0xffff8078",
+              "signed_decimal": -32648,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b6c0",
+      "instruction": "move s3,a1",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s3"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b6c4",
+      "instruction": "addiu s0,s4,0xc",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "s4",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s4"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0xc",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0xc",
+              "unsigned_hex": "0xc",
+              "signed_decimal": 12,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b6c8",
+      "instruction": "sw s0,0x30(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x30(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x30",
+              "unsigned_hex": "0x30",
+              "signed_decimal": 48,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b6c8",
+          "to": "Stack[-0x28]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b6cc",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b6d0",
+      "instruction": "_move s5,a2",
+      "mnemonic": "_move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s5",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s5"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b6d4",
+      "instruction": "lw s2,0x4(v0)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x4(v0)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x4",
+              "unsigned_hex": "0x4",
+              "signed_decimal": 4,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b6d8",
+      "instruction": "beq s2,zero,0x2e23b7f0",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e23b7f0",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b7f0"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b6d8",
+          "to": "2e23b7f0",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b7f0"
+        }
+      ]
+    },
+    {
+      "address": "2e23b6dc",
+      "instruction": "_lw gp,0x10(sp)",
+      "mnemonic": "_lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x10(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x10",
+              "unsigned_hex": "0x10",
+              "signed_decimal": 16,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b6dc",
+          "to": "Stack[-0x48]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b6e0",
+      "instruction": "lw t9,-0x7d2c(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7d2c(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7d2c",
+              "unsigned_hex": "0xffff82d4",
+              "signed_decimal": -32044,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b6e4",
+      "instruction": "li v0,-0x1",
+      "mnemonic": "li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x1",
+              "unsigned_hex": "0xffffffff",
+              "signed_decimal": -1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b6e8",
+      "instruction": "sw s0,0x24(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x24(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x24",
+              "unsigned_hex": "0x24",
+              "signed_decimal": 36,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b6e8",
+          "to": "Stack[-0x34]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b6ec",
+      "instruction": "sw v0,0x28(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x28(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x28",
+              "unsigned_hex": "0x28",
+              "signed_decimal": 40,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b6ec",
+          "to": "Stack[-0x30]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b6f0",
+      "instruction": "sw zero,0x20(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x20(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x20",
+              "unsigned_hex": "0x20",
+              "signed_decimal": 32,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b6f0",
+          "to": "Stack[-0x38]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b6f4",
+      "instruction": "move a0,s3",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "s3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s3"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b6f8",
+      "instruction": "li a1,0x1",
+      "mnemonic": "li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1",
+              "unsigned_hex": "0x1",
+              "signed_decimal": 1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b6fc",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b700",
+      "instruction": "_addiu s1,sp,0x24",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x24",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x24",
+              "unsigned_hex": "0x24",
+              "signed_decimal": 36,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b704",
+      "instruction": "bne v0,zero,0x2e23b7a4",
+      "mnemonic": "bne",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e23b7a4",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b7a4"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b704",
+          "to": "2e23b7a4",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b7a4"
+        }
+      ]
+    },
+    {
+      "address": "2e23b708",
+      "instruction": "_lw gp,0x10(sp)",
+      "mnemonic": "_lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x10(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x10",
+              "unsigned_hex": "0x10",
+              "signed_decimal": 16,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b708",
+          "to": "Stack[-0x48]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b70c",
+      "instruction": "lw t9,-0x77d0(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x77d0(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x77d0",
+              "unsigned_hex": "0xffff8830",
+              "signed_decimal": -30672,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b710",
+      "instruction": "addiu s1,sp,0x24",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x24",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x24",
+              "unsigned_hex": "0x24",
+              "signed_decimal": 36,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b714",
+      "instruction": "addiu a1,s3,0x4",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "s3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s3"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x4",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x4",
+              "unsigned_hex": "0x4",
+              "signed_decimal": 4,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b718",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b71c",
+      "instruction": "_move a0,s1",
+      "mnemonic": "_move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "s1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b720",
+      "instruction": "lw a1,0x24(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x24(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x24",
+              "unsigned_hex": "0x24",
+              "signed_decimal": 36,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b720",
+          "to": "Stack[-0x34]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b724",
+      "instruction": "lw v0,0x28(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x28(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x28",
+              "unsigned_hex": "0x28",
+              "signed_decimal": 40,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b724",
+          "to": "Stack[-0x30]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b728",
+      "instruction": "lw gp,0x10(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x10(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x10",
+              "unsigned_hex": "0x10",
+              "signed_decimal": 16,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b728",
+          "to": "Stack[-0x48]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b72c",
+      "instruction": "lw v1,-0xc(a1)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0xc(a1)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0xc",
+              "unsigned_hex": "0xfffffff4",
+              "signed_decimal": -12,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b730",
+      "instruction": "clear s0",
+      "mnemonic": "clear",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b734",
+      "instruction": "sw v0,0x0(s5)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x0(s5)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x0",
+              "unsigned_hex": "0x0",
+              "signed_decimal": 0,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "s5"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b738",
+      "instruction": "beq v1,zero,0x2e23b764",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e23b764",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b764"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b738",
+          "to": "2e23b764",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b764"
+        }
+      ]
+    },
+    {
+      "address": "2e23b73c",
+      "instruction": "_addiu a0,a1,-0xc",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0xc",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0xc",
+              "unsigned_hex": "0xfffffff4",
+              "signed_decimal": -12,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b740",
+      "instruction": "lw t9,0x48(s2)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x48(s2)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x48",
+              "unsigned_hex": "0x48",
+              "signed_decimal": 72,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "s2"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b744",
+      "instruction": "move a0,s2",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "s2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s2"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b748",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b74c",
+      "instruction": "_addiu a2,sp,0x20",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x20",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x20",
+              "unsigned_hex": "0x20",
+              "signed_decimal": 32,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b750",
+      "instruction": "bne v0,zero,0x2e23b75c",
+      "mnemonic": "bne",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e23b75c",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b75c"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b750",
+          "to": "2e23b75c",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b75c"
+        }
+      ]
+    },
+    {
+      "address": "2e23b754",
+      "instruction": "_lw gp,0x10(sp)",
+      "mnemonic": "_lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x10(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x10",
+              "unsigned_hex": "0x10",
+              "signed_decimal": 16,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b754",
+          "to": "Stack[-0x48]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b758",
+      "instruction": "lw s0,0x20(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x20(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x20",
+              "unsigned_hex": "0x20",
+              "signed_decimal": 32,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b758",
+          "to": "Stack[-0x38]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b75c",
+      "instruction": "lw v0,0x24(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x24(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x24",
+              "unsigned_hex": "0x24",
+              "signed_decimal": 36,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b75c",
+          "to": "Stack[-0x34]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b760",
+      "instruction": "addiu a0,v0,-0xc",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0xc",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0xc",
+              "unsigned_hex": "0xfffffff4",
+              "signed_decimal": -12,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b764",
+      "instruction": "bne s4,a0,0x2e23b868",
+      "mnemonic": "bne",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s4",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s4"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e23b868",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b868"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b764",
+          "to": "2e23b868",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b868"
+        }
+      ]
+    },
+    {
+      "address": "2e23b768",
+      "instruction": "_lw v0,-0x6d48(gp)",
+      "mnemonic": "_lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x6d48(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x6d48",
+              "unsigned_hex": "0xffff92b8",
+              "signed_decimal": -27976,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b76c",
+      "instruction": "lw v0,0x30(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x30(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x30",
+              "unsigned_hex": "0x30",
+              "signed_decimal": 48,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b76c",
+          "to": "Stack[-0x28]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b770",
+      "instruction": "addiu a0,v0,-0xc",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0xc",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0xc",
+              "unsigned_hex": "0xfffffff4",
+              "signed_decimal": -12,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b774",
+      "instruction": "bne s4,a0,0x2e23b824",
+      "mnemonic": "bne",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s4",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s4"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e23b824",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b824"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b774",
+          "to": "2e23b824",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b824"
+        }
+      ]
+    },
+    {
+      "address": "2e23b778",
+      "instruction": "_lw v0,-0x6d48(gp)",
+      "mnemonic": "_lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x6d48(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x6d48",
+              "unsigned_hex": "0xffff92b8",
+              "signed_decimal": -27976,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b77c",
+      "instruction": "lw ra,0x54(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x54(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x54",
+              "unsigned_hex": "0x54",
+              "signed_decimal": 84,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b77c",
+          "to": "Stack[-0x4]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b780",
+      "instruction": "move v0,s0",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "s0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b784",
+      "instruction": "lw s5,0x50(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s5",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s5"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x50(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x50",
+              "unsigned_hex": "0x50",
+              "signed_decimal": 80,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b784",
+          "to": "Stack[-0x8]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b788",
+      "instruction": "lw s4,0x4c(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s4",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s4"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x4c(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x4c",
+              "unsigned_hex": "0x4c",
+              "signed_decimal": 76,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b788",
+          "to": "Stack[-0xc]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b78c",
+      "instruction": "lw s3,0x48(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s3"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x48(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x48",
+              "unsigned_hex": "0x48",
+              "signed_decimal": 72,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b78c",
+          "to": "Stack[-0x10]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b790",
+      "instruction": "lw s2,0x44(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x44(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x44",
+              "unsigned_hex": "0x44",
+              "signed_decimal": 68,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b790",
+          "to": "Stack[-0x14]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b794",
+      "instruction": "lw s1,0x40(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x40(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x40",
+              "unsigned_hex": "0x40",
+              "signed_decimal": 64,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b794",
+          "to": "Stack[-0x18]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b798",
+      "instruction": "lw s0,0x3c(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x3c(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x3c",
+              "unsigned_hex": "0x3c",
+              "signed_decimal": 60,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b798",
+          "to": "Stack[-0x1c]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b79c",
+      "instruction": "jr ra",
+      "mnemonic": "jr",
+      "flow_type": "TERMINATOR",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7a0",
+      "instruction": "_addiu sp,sp,0x58",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x58",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x58",
+              "unsigned_hex": "0x58",
+              "signed_decimal": 88,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7a4",
+      "instruction": "lhu a0,0x0(s3)",
+      "mnemonic": "lhu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x0(s3)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x0",
+              "unsigned_hex": "0x0",
+              "signed_decimal": 0,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "s3"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7a8",
+      "instruction": "lw t9,-0x7174(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7174(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7174",
+              "unsigned_hex": "0xffff8e8c",
+              "signed_decimal": -29044,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7ac",
+      "instruction": "addiu a1,sp,0x28",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x28",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x28",
+              "unsigned_hex": "0x28",
+              "signed_decimal": 40,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7b0",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7b4",
+      "instruction": "_addiu s1,sp,0x24",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x24",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x24",
+              "unsigned_hex": "0x24",
+              "signed_decimal": 36,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7b8",
+      "instruction": "lw gp,0x10(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x10(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x10",
+              "unsigned_hex": "0x10",
+              "signed_decimal": 16,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b7b8",
+          "to": "Stack[-0x48]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b7bc",
+      "instruction": "move a0,v0",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7c0",
+      "instruction": "move s0,v0",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7c4",
+      "instruction": "lw t9,-0x6f6c(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x6f6c(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x6f6c",
+              "unsigned_hex": "0xffff9094",
+              "signed_decimal": -28524,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7c8",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7cc",
+      "instruction": "_addiu s1,sp,0x24",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "s1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x24",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x24",
+              "unsigned_hex": "0x24",
+              "signed_decimal": 36,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7d0",
+      "instruction": "lw gp,0x10(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x10(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x10",
+              "unsigned_hex": "0x10",
+              "signed_decimal": 16,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b7d0",
+          "to": "Stack[-0x48]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b7d4",
+      "instruction": "move a1,s0",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "s0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7d8",
+      "instruction": "move a2,v0",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7dc",
+      "instruction": "lw t9,-0x6da4(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x6da4(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x6da4",
+              "unsigned_hex": "0xffff925c",
+              "signed_decimal": -28068,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7e0",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7e4",
+      "instruction": "_move a0,s1",
+      "mnemonic": "_move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "s1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "s1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7e8",
+      "instruction": "b 0x2e23b724",
+      "mnemonic": "b",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "0x2e23b724",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b724"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b7e8",
+          "to": "2e23b724",
+          "type": "UNCONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 0,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b724"
+        }
+      ]
+    },
+    {
+      "address": "2e23b7ec",
+      "instruction": "_lw a1,0x24(sp)",
+      "mnemonic": "_lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x24(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x24",
+              "unsigned_hex": "0x24",
+              "signed_decimal": 36,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b7ec",
+          "to": "Stack[-0x34]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b7f0",
+      "instruction": "lw a0,-0x7fd8(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7fd8(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7fd8",
+              "unsigned_hex": "0xffff8028",
+              "signed_decimal": -32728,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7f4",
+      "instruction": "lw a1,-0x7fd8(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7fd8(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7fd8",
+              "unsigned_hex": "0xffff8028",
+              "signed_decimal": -32728,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7f8",
+      "instruction": "lw a2,-0x7fd8(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7fd8(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7fd8",
+              "unsigned_hex": "0xffff8028",
+              "signed_decimal": -32728,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b7fc",
+      "instruction": "lw t9,-0x7a00(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7a00(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7a00",
+              "unsigned_hex": "0xffff8600",
+              "signed_decimal": -31232,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b800",
+      "instruction": "addiu a0,a0,-0x73a0",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0x73a0",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x73a0",
+              "unsigned_hex": "0xffff8c60",
+              "signed_decimal": -29600,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b804",
+      "instruction": "addiu a1,a1,-0x5610",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0x5610",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x5610",
+              "unsigned_hex": "0xffffa9f0",
+              "signed_decimal": -22032,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b808",
+      "instruction": "addiu a2,a2,-0x5574",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0x5574",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x5574",
+              "unsigned_hex": "0xffffaa8c",
+              "signed_decimal": -21876,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b80c",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b810",
+      "instruction": "_li a3,0x4f5",
+      "mnemonic": "_li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x4f5",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x4f5",
+              "unsigned_hex": "0x4f5",
+              "signed_decimal": 1269,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b814",
+      "instruction": "lw gp,0x10(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x10(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x10",
+              "unsigned_hex": "0x10",
+              "signed_decimal": 16,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b814",
+          "to": "Stack[-0x48]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b818",
+      "instruction": "lw t9,-0x7d18(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7d18(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7d18",
+              "unsigned_hex": "0xffff82e8",
+              "signed_decimal": -32024,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b81c",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL_TERMINATOR",
+      "ephemeral_flow_override": "CALL_RETURN",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b820",
+      "instruction": "_nop",
+      "mnemonic": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [],
+      "references_from": []
+    },
+    {
+      "address": "2e23b824",
+      "instruction": "beq v0,zero,0x2e23b8bc",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e23b8bc",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b8bc"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b824",
+          "to": "2e23b8bc",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b8bc"
+        }
+      ]
+    },
+    {
+      "address": "2e23b828",
+      "instruction": "_nop",
+      "mnemonic": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [],
+      "references_from": []
+    },
+    {
+      "address": "2e23b82c",
+      "instruction": "sync 0x0",
+      "mnemonic": "sync",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "0x0",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x0",
+              "unsigned_hex": "0x0",
+              "signed_decimal": 0,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b830",
+      "instruction": "ll v0,0x8(a0)",
+      "mnemonic": "ll",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x8(a0)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x8",
+              "unsigned_hex": "0x8",
+              "signed_decimal": 8,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b834",
+      "instruction": "addiu at,v0,-0x1",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "at",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "at"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x1",
+              "unsigned_hex": "0xffffffff",
+              "signed_decimal": -1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b838",
+      "instruction": "sc at,0x8(a0)",
+      "mnemonic": "sc",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "at",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "at"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x8(a0)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x8",
+              "unsigned_hex": "0x8",
+              "signed_decimal": 8,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b83c",
+      "instruction": "beq at,zero,0x2e23b830",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "at",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "at"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e23b830",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b830"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b83c",
+          "to": "2e23b830",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b830"
+        }
+      ]
+    },
+    {
+      "address": "2e23b840",
+      "instruction": "_nop",
+      "mnemonic": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [],
+      "references_from": []
+    },
+    {
+      "address": "2e23b844",
+      "instruction": "sync 0x0",
+      "mnemonic": "sync",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "0x0",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x0",
+              "unsigned_hex": "0x0",
+              "signed_decimal": 0,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b848",
+      "instruction": "move v1,v0",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b84c",
+      "instruction": "bgtz v1,0x2e23b780",
+      "mnemonic": "bgtz",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x2e23b780",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b780"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b84c",
+          "to": "2e23b780",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b780"
+        }
+      ]
+    },
+    {
+      "address": "2e23b850",
+      "instruction": "_lw ra,0x54(sp)",
+      "mnemonic": "_lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x54(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x54",
+              "unsigned_hex": "0x54",
+              "signed_decimal": 84,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b850",
+          "to": "Stack[-0x4]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b854",
+      "instruction": "lw t9,-0x7208(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7208(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7208",
+              "unsigned_hex": "0xffff8df8",
+              "signed_decimal": -29192,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b858",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b85c",
+      "instruction": "_addiu a1,sp,0x1c",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x1c",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1c",
+              "unsigned_hex": "0x1c",
+              "signed_decimal": 28,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b860",
+      "instruction": "b 0x2e23b77c",
+      "mnemonic": "b",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "0x2e23b77c",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b77c"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b860",
+          "to": "2e23b77c",
+          "type": "UNCONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 0,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b77c"
+        }
+      ]
+    },
+    {
+      "address": "2e23b864",
+      "instruction": "_lw gp,0x10(sp)",
+      "mnemonic": "_lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x10(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x10",
+              "unsigned_hex": "0x10",
+              "signed_decimal": 16,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b864",
+          "to": "Stack[-0x48]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b868",
+      "instruction": "beq v0,zero,0x2e23b8ac",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e23b8ac",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b8ac"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b868",
+          "to": "2e23b8ac",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b8ac"
+        }
+      ]
+    },
+    {
+      "address": "2e23b86c",
+      "instruction": "_nop",
+      "mnemonic": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [],
+      "references_from": []
+    },
+    {
+      "address": "2e23b870",
+      "instruction": "sync 0x0",
+      "mnemonic": "sync",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "0x0",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x0",
+              "unsigned_hex": "0x0",
+              "signed_decimal": 0,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b874",
+      "instruction": "ll v0,0x8(a0)",
+      "mnemonic": "ll",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x8(a0)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x8",
+              "unsigned_hex": "0x8",
+              "signed_decimal": 8,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b878",
+      "instruction": "addiu at,v0,-0x1",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "at",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "at"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x1",
+              "unsigned_hex": "0xffffffff",
+              "signed_decimal": -1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b87c",
+      "instruction": "sc at,0x8(a0)",
+      "mnemonic": "sc",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "at",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "at"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x8(a0)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x8",
+              "unsigned_hex": "0x8",
+              "signed_decimal": 8,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b880",
+      "instruction": "beq at,zero,0x2e23b874",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "at",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "at"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e23b874",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b874"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b880",
+          "to": "2e23b874",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b874"
+        }
+      ]
+    },
+    {
+      "address": "2e23b884",
+      "instruction": "_nop",
+      "mnemonic": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [],
+      "references_from": []
+    },
+    {
+      "address": "2e23b888",
+      "instruction": "sync 0x0",
+      "mnemonic": "sync",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "0x0",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x0",
+              "unsigned_hex": "0x0",
+              "signed_decimal": 0,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b88c",
+      "instruction": "move v1,v0",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b890",
+      "instruction": "bgtz v1,0x2e23b770",
+      "mnemonic": "bgtz",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x2e23b770",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b770"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b890",
+          "to": "2e23b770",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b770"
+        }
+      ]
+    },
+    {
+      "address": "2e23b894",
+      "instruction": "_lw v0,0x30(sp)",
+      "mnemonic": "_lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x30(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x30",
+              "unsigned_hex": "0x30",
+              "signed_decimal": 48,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b894",
+          "to": "Stack[-0x28]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b898",
+      "instruction": "lw t9,-0x7208(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7208(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7208",
+              "unsigned_hex": "0xffff8df8",
+              "signed_decimal": -29192,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b89c",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b8a0",
+      "instruction": "_addiu a1,sp,0x18",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x18",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x18",
+              "unsigned_hex": "0x18",
+              "signed_decimal": 24,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b8a4",
+      "instruction": "b 0x2e23b76c",
+      "mnemonic": "b",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "0x2e23b76c",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b76c"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b8a4",
+          "to": "2e23b76c",
+          "type": "UNCONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 0,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b76c"
+        }
+      ]
+    },
+    {
+      "address": "2e23b8a8",
+      "instruction": "_lw gp,0x10(sp)",
+      "mnemonic": "_lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x10(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x10",
+              "unsigned_hex": "0x10",
+              "signed_decimal": 16,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b8a8",
+          "to": "Stack[-0x48]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2e23b8ac",
+      "instruction": "lw v1,0x8(a0)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x8(a0)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x8",
+              "unsigned_hex": "0x8",
+              "signed_decimal": 8,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b8b0",
+      "instruction": "addiu v0,v1,-0x1",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x1",
+              "unsigned_hex": "0xffffffff",
+              "signed_decimal": -1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b8b4",
+      "instruction": "b 0x2e23b890",
+      "mnemonic": "b",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "0x2e23b890",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b890"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b8b4",
+          "to": "2e23b890",
+          "type": "UNCONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 0,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b890"
+        }
+      ]
+    },
+    {
+      "address": "2e23b8b8",
+      "instruction": "_sw v0,0x8(a0)",
+      "mnemonic": "_sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x8(a0)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x8",
+              "unsigned_hex": "0x8",
+              "signed_decimal": 8,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b8bc",
+      "instruction": "lw v1,0x8(a0)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x8(a0)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x8",
+              "unsigned_hex": "0x8",
+              "signed_decimal": 8,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b8c0",
+      "instruction": "addiu v0,v1,-0x1",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x1",
+              "unsigned_hex": "0xffffffff",
+              "signed_decimal": -1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e23b8c4",
+      "instruction": "b 0x2e23b84c",
+      "mnemonic": "b",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "0x2e23b84c",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e23b84c"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e23b8c4",
+          "to": "2e23b84c",
+          "type": "UNCONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 0,
+          "is_call": false,
+          "from_function": {
+            "address": "2e23b688",
+            "name": "MResourceManager::GetDFBImage",
+            "signature": "undefined __thiscall GetDFBImage(MResourceManager * this, MImg * param_1, ulong * param_2)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 580
+          },
+          "target_symbol": "LAB_2e23b84c"
+        }
+      ]
+    },
+    {
+      "address": "2e23b8c8",
+      "instruction": "_sw v0,0x8(a0)",
+      "mnemonic": "_sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x8(a0)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x8",
+              "unsigned_hex": "0x8",
+              "signed_decimal": 8,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    }
+  ],
+  "immediate_scalar_candidates": [
+    {
+      "java_type": "Scalar",
+      "display": "0x8",
+      "unsigned_hex": "0x8",
+      "signed_decimal": 8,
+      "bits": 32,
+      "instruction_address": "2e23b688",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x258",
+      "unsigned_hex": "0x258",
+      "signed_decimal": 600,
+      "bits": 32,
+      "instruction_address": "2e23b68c",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x58",
+      "unsigned_hex": "0xffffffa8",
+      "signed_decimal": -88,
+      "bits": 32,
+      "instruction_address": "2e23b694",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x54",
+      "unsigned_hex": "0x54",
+      "signed_decimal": 84,
+      "bits": 32,
+      "instruction_address": "2e23b698",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x50",
+      "unsigned_hex": "0x50",
+      "signed_decimal": 80,
+      "bits": 32,
+      "instruction_address": "2e23b69c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x4c",
+      "unsigned_hex": "0x4c",
+      "signed_decimal": 76,
+      "bits": 32,
+      "instruction_address": "2e23b6a0",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x48",
+      "unsigned_hex": "0x48",
+      "signed_decimal": 72,
+      "bits": 32,
+      "instruction_address": "2e23b6a4",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x44",
+      "unsigned_hex": "0x44",
+      "signed_decimal": 68,
+      "bits": 32,
+      "instruction_address": "2e23b6a8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x40",
+      "unsigned_hex": "0x40",
+      "signed_decimal": 64,
+      "bits": 32,
+      "instruction_address": "2e23b6ac",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x3c",
+      "unsigned_hex": "0x3c",
+      "signed_decimal": 60,
+      "bits": 32,
+      "instruction_address": "2e23b6b0",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x10",
+      "unsigned_hex": "0x10",
+      "signed_decimal": 16,
+      "bits": 32,
+      "instruction_address": "2e23b6b4",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x6c50",
+      "unsigned_hex": "0xffff93b0",
+      "signed_decimal": -27728,
+      "bits": 32,
+      "instruction_address": "2e23b6b8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7f88",
+      "unsigned_hex": "0xffff8078",
+      "signed_decimal": -32648,
+      "bits": 32,
+      "instruction_address": "2e23b6bc",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0xc",
+      "unsigned_hex": "0xc",
+      "signed_decimal": 12,
+      "bits": 32,
+      "instruction_address": "2e23b6c4",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x30",
+      "unsigned_hex": "0x30",
+      "signed_decimal": 48,
+      "bits": 32,
+      "instruction_address": "2e23b6c8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x4",
+      "unsigned_hex": "0x4",
+      "signed_decimal": 4,
+      "bits": 32,
+      "instruction_address": "2e23b6d4",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x10",
+      "unsigned_hex": "0x10",
+      "signed_decimal": 16,
+      "bits": 32,
+      "instruction_address": "2e23b6dc",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7d2c",
+      "unsigned_hex": "0xffff82d4",
+      "signed_decimal": -32044,
+      "bits": 32,
+      "instruction_address": "2e23b6e0",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x1",
+      "unsigned_hex": "0xffffffff",
+      "signed_decimal": -1,
+      "bits": 32,
+      "instruction_address": "2e23b6e4",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x24",
+      "unsigned_hex": "0x24",
+      "signed_decimal": 36,
+      "bits": 32,
+      "instruction_address": "2e23b6e8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x28",
+      "unsigned_hex": "0x28",
+      "signed_decimal": 40,
+      "bits": 32,
+      "instruction_address": "2e23b6ec",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x20",
+      "unsigned_hex": "0x20",
+      "signed_decimal": 32,
+      "bits": 32,
+      "instruction_address": "2e23b6f0",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1",
+      "unsigned_hex": "0x1",
+      "signed_decimal": 1,
+      "bits": 32,
+      "instruction_address": "2e23b6f8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x24",
+      "unsigned_hex": "0x24",
+      "signed_decimal": 36,
+      "bits": 32,
+      "instruction_address": "2e23b700",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x10",
+      "unsigned_hex": "0x10",
+      "signed_decimal": 16,
+      "bits": 32,
+      "instruction_address": "2e23b708",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x77d0",
+      "unsigned_hex": "0xffff8830",
+      "signed_decimal": -30672,
+      "bits": 32,
+      "instruction_address": "2e23b70c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x24",
+      "unsigned_hex": "0x24",
+      "signed_decimal": 36,
+      "bits": 32,
+      "instruction_address": "2e23b710",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x4",
+      "unsigned_hex": "0x4",
+      "signed_decimal": 4,
+      "bits": 32,
+      "instruction_address": "2e23b714",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x24",
+      "unsigned_hex": "0x24",
+      "signed_decimal": 36,
+      "bits": 32,
+      "instruction_address": "2e23b720",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x28",
+      "unsigned_hex": "0x28",
+      "signed_decimal": 40,
+      "bits": 32,
+      "instruction_address": "2e23b724",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x10",
+      "unsigned_hex": "0x10",
+      "signed_decimal": 16,
+      "bits": 32,
+      "instruction_address": "2e23b728",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0xc",
+      "unsigned_hex": "0xfffffff4",
+      "signed_decimal": -12,
+      "bits": 32,
+      "instruction_address": "2e23b72c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x0",
+      "unsigned_hex": "0x0",
+      "signed_decimal": 0,
+      "bits": 32,
+      "instruction_address": "2e23b734",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0xc",
+      "unsigned_hex": "0xfffffff4",
+      "signed_decimal": -12,
+      "bits": 32,
+      "instruction_address": "2e23b73c",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x48",
+      "unsigned_hex": "0x48",
+      "signed_decimal": 72,
+      "bits": 32,
+      "instruction_address": "2e23b740",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x20",
+      "unsigned_hex": "0x20",
+      "signed_decimal": 32,
+      "bits": 32,
+      "instruction_address": "2e23b74c",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x10",
+      "unsigned_hex": "0x10",
+      "signed_decimal": 16,
+      "bits": 32,
+      "instruction_address": "2e23b754",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x20",
+      "unsigned_hex": "0x20",
+      "signed_decimal": 32,
+      "bits": 32,
+      "instruction_address": "2e23b758",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x24",
+      "unsigned_hex": "0x24",
+      "signed_decimal": 36,
+      "bits": 32,
+      "instruction_address": "2e23b75c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0xc",
+      "unsigned_hex": "0xfffffff4",
+      "signed_decimal": -12,
+      "bits": 32,
+      "instruction_address": "2e23b760",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x6d48",
+      "unsigned_hex": "0xffff92b8",
+      "signed_decimal": -27976,
+      "bits": 32,
+      "instruction_address": "2e23b768",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x30",
+      "unsigned_hex": "0x30",
+      "signed_decimal": 48,
+      "bits": 32,
+      "instruction_address": "2e23b76c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0xc",
+      "unsigned_hex": "0xfffffff4",
+      "signed_decimal": -12,
+      "bits": 32,
+      "instruction_address": "2e23b770",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x6d48",
+      "unsigned_hex": "0xffff92b8",
+      "signed_decimal": -27976,
+      "bits": 32,
+      "instruction_address": "2e23b778",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x54",
+      "unsigned_hex": "0x54",
+      "signed_decimal": 84,
+      "bits": 32,
+      "instruction_address": "2e23b77c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x50",
+      "unsigned_hex": "0x50",
+      "signed_decimal": 80,
+      "bits": 32,
+      "instruction_address": "2e23b784",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x4c",
+      "unsigned_hex": "0x4c",
+      "signed_decimal": 76,
+      "bits": 32,
+      "instruction_address": "2e23b788",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x48",
+      "unsigned_hex": "0x48",
+      "signed_decimal": 72,
+      "bits": 32,
+      "instruction_address": "2e23b78c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x44",
+      "unsigned_hex": "0x44",
+      "signed_decimal": 68,
+      "bits": 32,
+      "instruction_address": "2e23b790",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x40",
+      "unsigned_hex": "0x40",
+      "signed_decimal": 64,
+      "bits": 32,
+      "instruction_address": "2e23b794",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x3c",
+      "unsigned_hex": "0x3c",
+      "signed_decimal": 60,
+      "bits": 32,
+      "instruction_address": "2e23b798",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x58",
+      "unsigned_hex": "0x58",
+      "signed_decimal": 88,
+      "bits": 32,
+      "instruction_address": "2e23b7a0",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x0",
+      "unsigned_hex": "0x0",
+      "signed_decimal": 0,
+      "bits": 32,
+      "instruction_address": "2e23b7a4",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7174",
+      "unsigned_hex": "0xffff8e8c",
+      "signed_decimal": -29044,
+      "bits": 32,
+      "instruction_address": "2e23b7a8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x28",
+      "unsigned_hex": "0x28",
+      "signed_decimal": 40,
+      "bits": 32,
+      "instruction_address": "2e23b7ac",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x24",
+      "unsigned_hex": "0x24",
+      "signed_decimal": 36,
+      "bits": 32,
+      "instruction_address": "2e23b7b4",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x10",
+      "unsigned_hex": "0x10",
+      "signed_decimal": 16,
+      "bits": 32,
+      "instruction_address": "2e23b7b8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x6f6c",
+      "unsigned_hex": "0xffff9094",
+      "signed_decimal": -28524,
+      "bits": 32,
+      "instruction_address": "2e23b7c4",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x24",
+      "unsigned_hex": "0x24",
+      "signed_decimal": 36,
+      "bits": 32,
+      "instruction_address": "2e23b7cc",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x10",
+      "unsigned_hex": "0x10",
+      "signed_decimal": 16,
+      "bits": 32,
+      "instruction_address": "2e23b7d0",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x6da4",
+      "unsigned_hex": "0xffff925c",
+      "signed_decimal": -28068,
+      "bits": 32,
+      "instruction_address": "2e23b7dc",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x24",
+      "unsigned_hex": "0x24",
+      "signed_decimal": 36,
+      "bits": 32,
+      "instruction_address": "2e23b7ec",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7fd8",
+      "unsigned_hex": "0xffff8028",
+      "signed_decimal": -32728,
+      "bits": 32,
+      "instruction_address": "2e23b7f0",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7fd8",
+      "unsigned_hex": "0xffff8028",
+      "signed_decimal": -32728,
+      "bits": 32,
+      "instruction_address": "2e23b7f4",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7fd8",
+      "unsigned_hex": "0xffff8028",
+      "signed_decimal": -32728,
+      "bits": 32,
+      "instruction_address": "2e23b7f8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7a00",
+      "unsigned_hex": "0xffff8600",
+      "signed_decimal": -31232,
+      "bits": 32,
+      "instruction_address": "2e23b7fc",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x73a0",
+      "unsigned_hex": "0xffff8c60",
+      "signed_decimal": -29600,
+      "bits": 32,
+      "instruction_address": "2e23b800",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x5610",
+      "unsigned_hex": "0xffffa9f0",
+      "signed_decimal": -22032,
+      "bits": 32,
+      "instruction_address": "2e23b804",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x5574",
+      "unsigned_hex": "0xffffaa8c",
+      "signed_decimal": -21876,
+      "bits": 32,
+      "instruction_address": "2e23b808",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x4f5",
+      "unsigned_hex": "0x4f5",
+      "signed_decimal": 1269,
+      "bits": 32,
+      "instruction_address": "2e23b810",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x10",
+      "unsigned_hex": "0x10",
+      "signed_decimal": 16,
+      "bits": 32,
+      "instruction_address": "2e23b814",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7d18",
+      "unsigned_hex": "0xffff82e8",
+      "signed_decimal": -32024,
+      "bits": 32,
+      "instruction_address": "2e23b818",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x0",
+      "unsigned_hex": "0x0",
+      "signed_decimal": 0,
+      "bits": 32,
+      "instruction_address": "2e23b82c",
+      "operand_index": 0,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x8",
+      "unsigned_hex": "0x8",
+      "signed_decimal": 8,
+      "bits": 32,
+      "instruction_address": "2e23b830",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x1",
+      "unsigned_hex": "0xffffffff",
+      "signed_decimal": -1,
+      "bits": 32,
+      "instruction_address": "2e23b834",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x8",
+      "unsigned_hex": "0x8",
+      "signed_decimal": 8,
+      "bits": 32,
+      "instruction_address": "2e23b838",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x0",
+      "unsigned_hex": "0x0",
+      "signed_decimal": 0,
+      "bits": 32,
+      "instruction_address": "2e23b844",
+      "operand_index": 0,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x54",
+      "unsigned_hex": "0x54",
+      "signed_decimal": 84,
+      "bits": 32,
+      "instruction_address": "2e23b850",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7208",
+      "unsigned_hex": "0xffff8df8",
+      "signed_decimal": -29192,
+      "bits": 32,
+      "instruction_address": "2e23b854",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1c",
+      "unsigned_hex": "0x1c",
+      "signed_decimal": 28,
+      "bits": 32,
+      "instruction_address": "2e23b85c",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x10",
+      "unsigned_hex": "0x10",
+      "signed_decimal": 16,
+      "bits": 32,
+      "instruction_address": "2e23b864",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x0",
+      "unsigned_hex": "0x0",
+      "signed_decimal": 0,
+      "bits": 32,
+      "instruction_address": "2e23b870",
+      "operand_index": 0,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x8",
+      "unsigned_hex": "0x8",
+      "signed_decimal": 8,
+      "bits": 32,
+      "instruction_address": "2e23b874",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x1",
+      "unsigned_hex": "0xffffffff",
+      "signed_decimal": -1,
+      "bits": 32,
+      "instruction_address": "2e23b878",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x8",
+      "unsigned_hex": "0x8",
+      "signed_decimal": 8,
+      "bits": 32,
+      "instruction_address": "2e23b87c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x0",
+      "unsigned_hex": "0x0",
+      "signed_decimal": 0,
+      "bits": 32,
+      "instruction_address": "2e23b888",
+      "operand_index": 0,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x30",
+      "unsigned_hex": "0x30",
+      "signed_decimal": 48,
+      "bits": 32,
+      "instruction_address": "2e23b894",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7208",
+      "unsigned_hex": "0xffff8df8",
+      "signed_decimal": -29192,
+      "bits": 32,
+      "instruction_address": "2e23b898",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x18",
+      "unsigned_hex": "0x18",
+      "signed_decimal": 24,
+      "bits": 32,
+      "instruction_address": "2e23b8a0",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x10",
+      "unsigned_hex": "0x10",
+      "signed_decimal": 16,
+      "bits": 32,
+      "instruction_address": "2e23b8a8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x8",
+      "unsigned_hex": "0x8",
+      "signed_decimal": 8,
+      "bits": 32,
+      "instruction_address": "2e23b8ac",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x1",
+      "unsigned_hex": "0xffffffff",
+      "signed_decimal": -1,
+      "bits": 32,
+      "instruction_address": "2e23b8b0",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x8",
+      "unsigned_hex": "0x8",
+      "signed_decimal": 8,
+      "bits": 32,
+      "instruction_address": "2e23b8b8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x8",
+      "unsigned_hex": "0x8",
+      "signed_decimal": 8,
+      "bits": 32,
+      "instruction_address": "2e23b8bc",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x1",
+      "unsigned_hex": "0xffffffff",
+      "signed_decimal": -1,
+      "bits": 32,
+      "instruction_address": "2e23b8c0",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x8",
+      "unsigned_hex": "0x8",
+      "signed_decimal": 8,
+      "bits": 32,
+      "instruction_address": "2e23b8c8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    }
+  ],
+  "directly_referenced_defined_strings": [],
+  "decompile_complete": true,
+  "decompile_error": "",
+  "pseudocode_file": "2e23b688.c",
+  "pcode_export_complete": true,
+  "decompiler_pcode_calls": [
+    {
+      "instruction_address": "2e23b6cc",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2e2480f0, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2e2480f0",
+      "target_function": {
+        "address": "2e2480f0",
+        "name": "MSystem::GetInstance",
+        "signature": "undefined __stdcall GetInstance(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 204
+      },
+      "target_symbol": "MSystem::GetInstance",
+      "arguments": [],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    {
+      "instruction_address": "2e23b6fc",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2e2312c0, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2e2312c0",
+      "target_function": {
+        "address": "2e2312c0",
+        "name": "MImg::QueryFlag",
+        "signature": "undefined __thiscall QueryFlag(MImg * this, uchar param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 24
+      },
+      "target_symbol": "MImg::QueryFlag",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x14, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(const, 0x1, 1)",
+          "constant_hex": "0x1",
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    {
+      "instruction_address": "2e23b718",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2c7c43e8, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2c7c43e8",
+      "target_function": {
+        "address": "2c7c43e8",
+        "name": "<EXTERNAL>::std::string::assign",
+        "signature": "undefined assign(string * param_1)",
+        "external": false,
+        "thunk": true,
+        "body_bytes": 1
+      },
+      "target_symbol": "<EXTERNAL>::std::string::assign",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x44, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    {
+      "instruction_address": "2e23b748",
+      "pcode_opcode": "CALLIND",
+      "target_expression": "(register, 0x64, 4)",
+      "target_interpretation": "pcode_CALLIND_pointer_value_static_derivation",
+      "direct_target_address_space": null,
+      "constant_target_hex": null,
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x48, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(stack, 0xffffffffffffffcc, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 2,
+          "expression": "(register, 0x18, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    {
+      "instruction_address": "2e23b7b0",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2e271658, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2e271658",
+      "target_function": {
+        "address": "2e271658",
+        "name": "GetRcEngine::RcGetImage",
+        "signature": "undefined __stdcall RcGetImage(uint param_1, uint * param_2)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 228
+      },
+      "target_symbol": "GetRcEngine::RcGetImage",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x10, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(register, 0x14, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    {
+      "instruction_address": "2e23b7c8",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2c4d2e00, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2c4d2e00",
+      "target_function": {
+        "address": "2c4d2e00",
+        "name": "<EXTERNAL>::strlen",
+        "signature": "size_t strlen(char * __s)",
+        "external": false,
+        "thunk": true,
+        "body_bytes": 1
+      },
+      "target_symbol": "<EXTERNAL>::strlen",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x8, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    {
+      "instruction_address": "2e23b7e0",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2c7c52e8, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2c7c52e8",
+      "target_function": {
+        "address": "2c7c52e8",
+        "name": "<EXTERNAL>::std::string::assign",
+        "signature": "undefined assign(char * param_1, uint param_2)",
+        "external": false,
+        "thunk": true,
+        "body_bytes": 1
+      },
+      "target_symbol": "<EXTERNAL>::std::string::assign",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(unique, 0x10000084, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(unique, 0x10000088, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    {
+      "instruction_address": "2e23b80c",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2c4a2770, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2c4a2770",
+      "target_function": {
+        "address": "2c4a2770",
+        "name": "<EXTERNAL>::printf",
+        "signature": "int printf(char * __format, ...)",
+        "external": false,
+        "thunk": true,
+        "body_bytes": 1
+      },
+      "target_symbol": "<EXTERNAL>::printf",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(unique, 0x10000046, 4)",
+          "constant_hex": "0x2e28a0e0",
+          "defined_string": {
+            "address": "2e28a0e0",
+            "reference_target": "2e28a0e0",
+            "datatype": "string",
+            "byte_length": 23,
+            "value": "ASSERT FAIL: %s %s %d\n",
+            "content_omitted_sensitive_material": false,
+            "pcode_source_address": "2e23b80c",
+            "basis": "decompiler_constant_or_read_of_analyzed_loaded_memory_not_runtime_value"
+          },
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(unique, 0x1000004a, 4)",
+          "constant_hex": "0x2e28be70",
+          "defined_string": {
+            "address": "2e28be70",
+            "reference_target": "2e28be70",
+            "datatype": "string",
+            "byte_length": 28,
+            "value": "./base/MResourceManager.cpp",
+            "content_omitted_sensitive_material": false,
+            "pcode_source_address": "2e23b80c",
+            "basis": "decompiler_constant_or_read_of_analyzed_loaded_memory_not_runtime_value"
+          },
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 2,
+          "expression": "(unique, 0x1000004e, 4)",
+          "constant_hex": "0x2e28bf0c",
+          "defined_string": {
+            "address": "2e28bf0c",
+            "reference_target": "2e28bf0c",
+            "datatype": "string",
+            "byte_length": 80,
+            "value": "IDirectFBImageProvider* MResourceManager::GetDFBImage(const MImg&, U32&) const",
+            "content_omitted_sensitive_material": false,
+            "pcode_source_address": "2e23b80c",
+            "basis": "decompiler_constant_or_read_of_analyzed_loaded_memory_not_runtime_value"
+          },
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 3,
+          "expression": "(const, 0x4f5, 4)",
+          "constant_hex": "0x4f5",
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    {
+      "instruction_address": "2e23b81c",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2c48a870, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2c48a870",
+      "target_function": {
+        "address": "2c48a870",
+        "name": "<EXTERNAL>::abort",
+        "signature": "noreturn void abort(void)",
+        "external": false,
+        "thunk": true,
+        "body_bytes": 1
+      },
+      "target_symbol": "<EXTERNAL>::abort",
+      "arguments": [],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    {
+      "instruction_address": "2e23b858",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2c7c25f4, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2c7c25f4",
+      "target_function": {
+        "address": "2c7c25f4",
+        "name": "<EXTERNAL>::std::string::_Rep::_M_destroy",
+        "signature": "undefined _M_destroy(allocator * param_1)",
+        "external": false,
+        "thunk": true,
+        "body_bytes": 1
+      },
+      "target_symbol": "<EXTERNAL>::std::string::_Rep::_M_destroy",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x10, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    {
+      "instruction_address": "2e23b89c",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2c7c25f4, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2c7c25f4",
+      "target_function": {
+        "address": "2c7c25f4",
+        "name": "<EXTERNAL>::std::string::_Rep::_M_destroy",
+        "signature": "undefined _M_destroy(allocator * param_1)",
+        "external": false,
+        "thunk": true,
+        "body_bytes": 1
+      },
+      "target_symbol": "<EXTERNAL>::std::string::_Rep::_M_destroy",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x10, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    }
+  ],
+  "decompiler_pcode_addresses_outside_selected_body": [],
+  "decompiler_pcode_within_selected_body": true,
+  "decompiler_constant_defined_strings": [
+    {
+      "address": "2e28a0e0",
+      "reference_target": "2e28a0e0",
+      "datatype": "string",
+      "byte_length": 23,
+      "value": "ASSERT FAIL: %s %s %d\n",
+      "content_omitted_sensitive_material": false,
+      "pcode_source_address": "2e23b80c",
+      "basis": "decompiler_constant_or_read_of_analyzed_loaded_memory_not_runtime_value"
+    },
+    {
+      "address": "2e28be70",
+      "reference_target": "2e28be70",
+      "datatype": "string",
+      "byte_length": 28,
+      "value": "./base/MResourceManager.cpp",
+      "content_omitted_sensitive_material": false,
+      "pcode_source_address": "2e23b80c",
+      "basis": "decompiler_constant_or_read_of_analyzed_loaded_memory_not_runtime_value"
+    },
+    {
+      "address": "2e28bf0c",
+      "reference_target": "2e28bf0c",
+      "datatype": "string",
+      "byte_length": 80,
+      "value": "IDirectFBImageProvider* MResourceManager::GetDFBImage(const MImg&, U32&) const",
+      "content_omitted_sensitive_material": false,
+      "pcode_source_address": "2e23b80c",
+      "basis": "decompiler_constant_or_read_of_analyzed_loaded_memory_not_runtime_value"
+    }
+  ]
+}

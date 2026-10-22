@@ -1,0 +1,61 @@
+{
+  "program": "459394fa3756__sed-v4.2.1",
+  "sha256": "459394fa3756ccaa197853c07e88fab67d4762232ab3ede36e3abf8030f85ef1",
+  "language": "MIPS:LE:32:default",
+  "functions": 440,
+  "symbols": 3204,
+  "xrefs": 18572,
+  "analyzed_call_xrefs": 4,
+  "computed_call_instructions": 1631,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 6,
+  "sample_decompile_complete": 6,
+  "samples": [
+    {
+      "address": "00401f70",
+      "name": "_init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00410190",
+      "name": "init_buffer",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0040e85c",
+      "name": "initialize_mbcs",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0042f3cc",
+      "name": "sift_ctx_init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00431268",
+      "name": "__libc_csu_init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00416588",
+      "name": "re_node_set_init_1",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

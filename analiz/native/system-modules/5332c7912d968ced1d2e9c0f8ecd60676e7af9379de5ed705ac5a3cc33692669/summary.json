@@ -1,0 +1,43 @@
+{
+  "program": "5332c7912d96__mdrv-ir_BK.ko",
+  "sha256": "5332c7912d968ced1d2e9c0f8ecd60676e7af9379de5ed705ac5a3cc33692669",
+  "language": "MIPS:LE:32:default",
+  "functions": 39,
+  "symbols": 573,
+  "xrefs": 807,
+  "analyzed_call_xrefs": 2,
+  "computed_call_instructions": 70,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 3,
+  "sample_decompile_complete": 3,
+  "samples": [
+    {
+      "address": "00011cdc",
+      "name": "init_module",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00010174",
+      "name": "MDrv_IR_InitCfg",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00010a74",
+      "name": "MDrv_IR_Init",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

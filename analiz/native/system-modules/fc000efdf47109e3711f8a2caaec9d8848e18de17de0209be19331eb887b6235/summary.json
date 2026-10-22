@@ -1,0 +1,37 @@
+{
+  "program": "fc000efdf471__libnss_hesiod-2.8.so",
+  "sha256": "fc000efdf47109e3711f8a2caaec9d8848e18de17de0209be19331eb887b6235",
+  "language": "MIPS:LE:32:default",
+  "functions": 94,
+  "symbols": 344,
+  "xrefs": 758,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 152,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 2,
+  "sample_decompile_complete": 2,
+  "samples": [
+    {
+      "address": "00010d5c",
+      "name": "_DT_INIT",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00011e70",
+      "name": "_nss_hesiod_initgroups_dyn",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "program": "b6139c29b604__libhook.so",
+  "sha256": "b6139c29b60438fd33c8fee9a9836fb286aa609500e8b43291796798a2833366",
+  "language": "MIPS:LE:32:default",
+  "functions": 200,
+  "symbols": 1448,
+  "xrefs": 4981,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 703,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 3,
+  "sample_decompile_complete": 3,
+  "samples": [
+    {
+      "address": "00019638",
+      "name": "initList",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00012a48",
+      "name": "_init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0001a86c",
+      "name": "MSystem_Init",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

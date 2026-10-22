@@ -1,0 +1,167 @@
+{
+  "source_sha256": "5c400ef10fccdfbfcd6e3fb2b2249b05150b0d03508c39761bb6284500fcaaa6",
+  "source_bytes": 2078028,
+  "language": "MIPS:LE:32:default",
+  "compiler_spec": "default",
+  "source_manifest_sha256": "5571ce333b481fc66f2ebf4b74b6eec4fe9a1318d728c36a856357b89d1269b1",
+  "candidate_va_minus_file_offset": "0x8e1efd80",
+  "program_image_base_metadata": "00000000",
+  "memory_blocks": [
+    {
+      "execute_assumed": true,
+      "bytes": 2078028,
+      "end": "8e3eb2cb",
+      "start": "8e1efd80"
+    }
+  ],
+  "commands": [
+    {
+      "command": "filepartload",
+      "table_file_offset": "0x1fa20c",
+      "record_u32le": [
+        "0x8e389b3c",
+        "0x5",
+        "0x0",
+        "0x8e213628",
+        "0x8e389b4c",
+        "0x8e389b68"
+      ],
+      "entry_file_offset": "0x238a8",
+      "candidate_va": "8e213628",
+      "usage": "load part of a file to RAM",
+      "help": "<addr> <filename> [bytes]\n    - load file 'filename' to address 'addr'\n",
+      "disassemble_result": true,
+      "function_created": true,
+      "disassembly_window_bytes": 8192,
+      "body_bytes": 284
+    },
+    {
+      "command": "mscompress7",
+      "table_file_offset": "0x1fa3cc",
+      "record_u32le": [
+        "0x8e38a11c",
+        "0x6",
+        "0x0",
+        "0x8e215c80",
+        "0x8e38a128",
+        "0x8e38a14c"
+      ],
+      "entry_file_offset": "0x25f00",
+      "candidate_va": "8e215c80",
+      "usage": "Compress or decompress lzma files",
+      "help": "\nUsage:  lzma <e|d> <index> Src_Address Src_Length Dst_Address\n      e: encode file\n      d: decode file\n      <index> start to (de)compress position\n",
+      "disassemble_result": true,
+      "function_created": true,
+      "disassembly_window_bytes": 8192,
+      "body_bytes": 260
+    },
+    {
+      "command": "crc32",
+      "table_file_offset": "0x1faebc",
+      "record_u32le": [
+        "0x8e3a07e0",
+        "0x4",
+        "0x1",
+        "0x8e2465cc",
+        "0x8e3a07e8",
+        "0x8e3a0800"
+      ],
+      "entry_file_offset": "0x5684c",
+      "candidate_va": "8e2465cc",
+      "usage": "checksum calculation",
+      "help": "address count [addr]\n    - compute CRC32 checksum [save at addr]",
+      "disassemble_result": true,
+      "function_created": true,
+      "disassembly_window_bytes": 8192,
+      "body_bytes": 240
+    },
+    {
+      "command": "ncishash",
+      "table_file_offset": "0x1fb098",
+      "record_u32le": [
+        "0x8e3a3c30",
+        "0x9",
+        "0x1",
+        "0x8e24b22c",
+        "0x8e3a3c3c",
+        "0x8e3a3c68"
+      ],
+      "entry_file_offset": "0x5b4ac",
+      "candidate_va": "8e24b22c",
+      "usage": "write cis and hash[0-2] for Secure ROM boot",
+      "help": "<CISAddr> <PPMAddr> <PNIAddr> <Hash0Addr> <Hash0Size> <MbootAddr> <MbootSize> [<Hash1Size>]\nCISAddr   DRAM address of CIS\nPPMAddr   DRAM address of PPM\nPNIAddr   DRAM address of PNI\nHash0Addr DRAM address of hash0\nHash0Size Total size of the hash0\nMbootAddr DRAM address of MbootAddr [Hash1 + Bootram + uboot]\nMbootSize Total size of the MbootSize\n[Hash1Size Total size of the hash1]\n",
+      "disassemble_result": true,
+      "function_created": true,
+      "disassembly_window_bytes": 8192,
+      "body_bytes": 2404
+    },
+    {
+      "command": "ncisbl",
+      "table_file_offset": "0x1fb0b4",
+      "record_u32le": [
+        "0x8e3a384c",
+        "0xa",
+        "0x1",
+        "0x8e24a4d0",
+        "0x8e3a3dec",
+        "0x8e3a3e28"
+      ],
+      "entry_file_offset": "0x5a750",
+      "candidate_va": "8e24a4d0",
+      "usage": "write cis, bootloader and uboot or only CIS for ROM boot",
+      "help": "ncisbl CISAddr PPMAddr [PNIAddr] [bootloaderAddr] [bootloaderSize] [ubootAddr] [ubootSize]\n  -write CIS, PPM, PNI, bootloader, uboot from those memory address, CISaddr, PPMaddr, bootloaderAddr\n\tand ubootAddr respectively with 'bootloaderSize' and 'ubootSize' bytes \n\tassigned for bootloader and uboot programming.",
+      "disassemble_result": true,
+      "function_created": true,
+      "disassembly_window_bytes": 8192,
+      "body_bytes": 3420
+    }
+  ],
+  "selected_handlers": 5,
+  "instruction_count": 1652,
+  "xref_count": 317,
+  "call_xref_count": 170,
+  "decompile_attempted": 5,
+  "decompile_complete": 5,
+  "decompiles": [
+    {
+      "command": "candidate_cmd_filepartload",
+      "candidate_va": "8e213628",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "command": "candidate_cmd_mscompress7",
+      "candidate_va": "8e215c80",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "command": "candidate_cmd_crc32",
+      "candidate_va": "8e2465cc",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "command": "candidate_cmd_ncishash",
+      "candidate_va": "8e24b22c",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "command": "candidate_cmd_ncisbl",
+      "candidate_va": "8e24a4d0",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "context_assumptions": [
+    "Raw BinaryLoader image base 0x8e1efd80 is a command-pointer-derived candidate, not device loader evidence.",
+    "MIPS:LE:32:default, default compiler spec; raw memory marked executable only in this new analysis DB.",
+    "No whole-program auto-analysis; branch disassembly restricted to 8 KiB per handler; helper functions are not discovered or decompiled.",
+    "No gp/t9 values forced; decompiler types/prototypes and unresolved helper names are inferred, not source symbols.",
+    "Function boundaries, indirect calls, absolute data references and coverage may be incomplete; no runtime acceptance or signature behavior follows from command names."
+  ]
+}

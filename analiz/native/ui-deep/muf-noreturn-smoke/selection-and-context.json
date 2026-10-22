@@ -1,0 +1,200 @@
+{
+  "ephemeral_noreturn_assumptions": [
+    {
+      "address": "EXTERNAL:00000005",
+      "previous_noreturn": true,
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "__assert_fail"
+    },
+    {
+      "address": "EXTERNAL:00000015",
+      "previous_noreturn": true,
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "_Unwind_Resume"
+    },
+    {
+      "address": "EXTERNAL:00000017",
+      "previous_noreturn": true,
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "abort"
+    },
+    {
+      "address": "EXTERNAL:0000002c",
+      "previous_noreturn": false,
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "__cxa_rethrow"
+    }
+  ],
+  "ephemeral_context_seeds": [
+    {
+      "value_hex": "2e240534",
+      "address": "2e240534",
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    },
+    {
+      "value_hex": "2e2408a0",
+      "address": "2e2408a0",
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    },
+    {
+      "value_hex": "2e27141c",
+      "address": "2e27141c",
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    },
+    {
+      "value_hex": "2e22ff8c",
+      "address": "2e22ff8c",
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    }
+  ],
+  "requested": [
+    {
+      "requested_address": "2e240534",
+      "function": {
+        "address": "2e240534",
+        "name": "MResourcePkg::BuildIndex",
+        "signature": "undefined __thiscall BuildIndex(MResourcePkg * this, ulong * param_1, ulong param_2, uchar * param_3)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 188
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e240534",
+      "original_body_max": "2e2405ef",
+      "supplied_function_bound": {
+        "end_exclusive": "0x2e2405f0",
+        "basis": "exact_ELF_dynsym_entry_and_size",
+        "symbol": "_ZN12MResourcePkg10BuildIndexEPmmPh"
+      },
+      "ephemeral_exact_body_applied": true,
+      "bounded_body": {
+        "address": "2e240534",
+        "name": "MResourcePkg::BuildIndex",
+        "signature": "undefined __thiscall BuildIndex(MResourcePkg * this, ulong * param_1, ulong param_2, uchar * param_3)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 188
+      },
+      "supplied_dynsym": {
+        "size": 188,
+        "symbol": "_ZN12MResourcePkg10BuildIndexEPmmPh"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e2405ef",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2e2408a0",
+      "function": {
+        "address": "2e2408a0",
+        "name": "MResourcePkg::GetSTR",
+        "signature": "undefined __stdcall GetSTR(ulong param_1, uchar * param_2, ulong param_3, ulong param_4, ulong * param_5, char * param_6)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 136
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e2408a0",
+      "original_body_max": "2e240927",
+      "supplied_function_bound": {
+        "end_exclusive": "0x2e240928",
+        "basis": "exact_ELF_dynsym_entry_and_size",
+        "symbol": "_ZN12MResourcePkg6GetSTREmPhmmPmPKc"
+      },
+      "ephemeral_exact_body_applied": true,
+      "bounded_body": {
+        "address": "2e2408a0",
+        "name": "MResourcePkg::GetSTR",
+        "signature": "undefined __stdcall GetSTR(ulong param_1, uchar * param_2, ulong param_3, ulong param_4, ulong * param_5, char * param_6)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 136
+      },
+      "supplied_dynsym": {
+        "size": 136,
+        "symbol": "_ZN12MResourcePkg6GetSTREmPhmmPmPKc"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e240927",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2e27141c",
+      "function": {
+        "address": "2e27141c",
+        "name": "GetRcEngine::RcGetNum",
+        "signature": "undefined __stdcall RcGetNum(uint param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 108
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e27141c",
+      "original_body_max": "2e271487",
+      "supplied_function_bound": {
+        "end_exclusive": "0x2e271488",
+        "basis": "exact_ELF_dynsym_entry_and_size",
+        "symbol": "_ZN11GetRcEngine8RcGetNumEj"
+      },
+      "ephemeral_exact_body_applied": true,
+      "bounded_body": {
+        "address": "2e27141c",
+        "name": "GetRcEngine::RcGetNum",
+        "signature": "undefined __stdcall RcGetNum(uint param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 108
+      },
+      "supplied_dynsym": {
+        "size": 108,
+        "symbol": "_ZN11GetRcEngine8RcGetNumEj"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e271487",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2e22ff8c",
+      "function": {
+        "address": "2e22ff8c",
+        "name": "MEvtHandle::SetTimer",
+        "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 224
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e22ff8c",
+      "original_body_max": "2e23006b",
+      "supplied_function_bound": {
+        "end_exclusive": "0x2e23006c",
+        "basis": "exact_ELF_dynsym_entry_and_size",
+        "symbol": "_ZN10MEvtHandle8SetTimerEmm13EN_TIMER_MODE"
+      },
+      "ephemeral_exact_body_applied": true,
+      "bounded_body": {
+        "address": "2e22ff8c",
+        "name": "MEvtHandle::SetTimer",
+        "signature": "undefined __stdcall SetTimer(ulong param_1, ulong param_2, EN_TIMER_MODE param_3)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 224
+      },
+      "supplied_dynsym": {
+        "size": 224,
+        "symbol": "_ZN10MEvtHandle8SetTimerEmm13EN_TIMER_MODE"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e23006b",
+      "ephemeral_body_clamped": false
+    }
+  ]
+}

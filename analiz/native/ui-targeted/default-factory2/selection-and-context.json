@@ -1,0 +1,91 @@
+{
+  "requested": [
+    {
+      "requested_address": "00daf324",
+      "function": {
+        "address": "00daf324",
+        "name": "MAppFactory::GetDefault",
+        "signature": "undefined __stdcall GetDefault(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 184
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "00daf324",
+      "original_body_max": "00daf3db",
+      "supplied_dynsym": {
+        "size": 184,
+        "symbol": "_ZN11MAppFactory10GetDefaultEv"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "00daf3db",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "00d6401c",
+      "function": {
+        "address": "00d6401c",
+        "name": "FUN_00d6401c",
+        "signature": "undefined FUN_00d6401c(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 124
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "00d6401c",
+      "original_body_max": "00d64097",
+      "dynsym_boundary_status": "no_exact_positive_symbol_size_supplied"
+    }
+  ],
+  "ephemeral_context_seeds": [
+    {
+      "register": "t9",
+      "address": "00daf324",
+      "value_hex": "daf324",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    },
+    {
+      "register": "t9",
+      "address": "00d6401c",
+      "value_hex": "d6401c",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    }
+  ],
+  "ephemeral_noreturn_assumptions": [
+    {
+      "previous_noreturn": false,
+      "address": "EXTERNAL:00000295",
+      "name": "__cxa_rethrow",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn"
+    },
+    {
+      "previous_noreturn": true,
+      "address": "EXTERNAL:0000037f",
+      "name": "_Unwind_Resume",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn"
+    },
+    {
+      "previous_noreturn": true,
+      "address": "EXTERNAL:00000391",
+      "name": "__assert_fail",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn"
+    },
+    {
+      "previous_noreturn": true,
+      "address": "EXTERNAL:000003a6",
+      "name": "__cxa_throw",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn"
+    },
+    {
+      "previous_noreturn": true,
+      "address": "EXTERNAL:000005fc",
+      "name": "abort",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn"
+    }
+  ]
+}

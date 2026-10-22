@@ -1,0 +1,43 @@
+{
+  "program": "16c9d8f23f71__libar_unicable.so",
+  "sha256": "16c9d8f23f71bc7b0a8589997c56a6835a5f132d41a4f0b6bdef203438ce92aa",
+  "language": "MIPS:LE:32:default",
+  "functions": 22,
+  "symbols": 91,
+  "xrefs": 212,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 17,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 3,
+  "sample_decompile_complete": 3,
+  "samples": [
+    {
+      "address": "000109fc",
+      "name": "UnicablePowerOFF",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "000107b4",
+      "name": "_init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00010c38",
+      "name": "UnicableChannelChange",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

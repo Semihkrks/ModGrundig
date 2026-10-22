@@ -1,0 +1,61 @@
+{
+  "program": "f59ed384e5cb__usbserial.ko",
+  "sha256": "f59ed384e5cb49fb3addc9bf9e02097b1a716903e65a434e08629440fc9ca447",
+  "language": "MIPS:LE:32:default",
+  "functions": 67,
+  "symbols": 820,
+  "xrefs": 1503,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 381,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 6,
+  "sample_decompile_complete": 6,
+  "samples": [
+    {
+      "address": "00011814",
+      "name": "usb_serial_port_softint",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "000134d0",
+      "name": "usb_serial_generic_register",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00011824",
+      "name": "usb_serial_put",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00015180",
+      "name": "usb_serial_device_match",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "00015558",
+      "name": "usb_serial_bus_register",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "000134f0",
+      "name": "usb_serial_handle_break",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

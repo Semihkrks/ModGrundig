@@ -1,0 +1,49 @@
+{
+  "program": "8254aa2fc566__libm-2.8.so",
+  "sha256": "8254aa2fc5663729aff53394fc1d740f1dccd071d0c5004940cdc0f1e2dc2e7d",
+  "language": "MIPS:LE:32:default",
+  "functions": 255,
+  "symbols": 4385,
+  "xrefs": 9226,
+  "analyzed_call_xrefs": 2,
+  "computed_call_instructions": 1132,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 4,
+  "sample_decompile_complete": 4,
+  "samples": [
+    {
+      "address": "2c6bc700",
+      "name": "finitel",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2c6c9d10",
+      "name": "finitef",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2c695f30",
+      "name": "feupdateenv",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2c693084",
+      "name": "_DT_INIT",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

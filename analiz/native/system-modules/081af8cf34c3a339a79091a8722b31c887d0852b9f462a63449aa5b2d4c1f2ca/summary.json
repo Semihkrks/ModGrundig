@@ -1,0 +1,61 @@
+{
+  "program": "081af8cf34c3__libdrvSC.so",
+  "sha256": "081af8cf34c3a339a79091a8722b31c887d0852b9f462a63449aa5b2d4c1f2ca",
+  "language": "MIPS:LE:32:default",
+  "functions": 98,
+  "symbols": 583,
+  "xrefs": 2003,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 326,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 6,
+  "sample_decompile_complete": 6,
+  "samples": [
+    {
+      "address": "2f561ad4",
+      "name": "MDrv_SC_PowerOff",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2f561348",
+      "name": "_init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2f5673bc",
+      "name": "HAL_SC_PowerCtrl",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2f5675c8",
+      "name": "HAL_SC_Init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2f566e90",
+      "name": "OS_SC_Init",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "2f566778",
+      "name": "MDrv_SC_SetPowerState",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}

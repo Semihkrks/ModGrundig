@@ -1,0 +1,49 @@
+{
+  "program": "5f7a96cfd0d6__ehci-hcd.ko",
+  "sha256": "5f7a96cfd0d63c69847d05a8c480faafdda24c877904456e72730816ba3ba4ca",
+  "language": "MIPS:LE:32:default",
+  "functions": 69,
+  "symbols": 1283,
+  "xrefs": 2831,
+  "analyzed_call_xrefs": 0,
+  "computed_call_instructions": 529,
+  "analysis_timeout": false,
+  "sample_decompile_attempted": 4,
+  "sample_decompile_complete": 4,
+  "samples": [
+    {
+      "address": "0001ae10",
+      "name": "usb_ehci_mstar_remove",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0001b2a4",
+      "name": "init_module",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0001aea0",
+      "name": "usb_ehci_mstar_probe",
+      "complete": true,
+      "error": ""
+    },
+    {
+      "address": "0001a4e4",
+      "name": "ehci_init",
+      "complete": true,
+      "error": ""
+    }
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "evidence_kind": "direct_Ghidra_static_analysis_not_REA_Evidence",
+  "limitations": [
+    "MIPS constant analyzer disabled; indirect references and function discovery can be incomplete.",
+    "8-second decompile samples are selected by name and size, not established critical-function coverage.",
+    "t9\u003dentry is an explicit PIC analysis assumption in newly created analysis databases.",
+    "Decompiler prototypes, runtime bindings, vtable dispatch and device state are unverified.",
+    "No original source recovery or runtime execution is claimed."
+  ]
+}
