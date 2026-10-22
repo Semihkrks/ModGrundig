@@ -1,17 +1,15 @@
-# Local originals can contain certificates, keys and unique device identifiers.
+# Handover package and photos stay local. They can carry a device identity.
 /Grundig_Tum_Proje_Devir_Paketi.zip
 /devir-paketi/
-/analiz/dosya-sistemleri/
-/analiz/dosya-sistemleri-tam/
-/analiz/firmware-orijinal/
-/analiz/firmware-dogrulanmis/
-/analiz/bolumler/
-/analiz/ic-arsivler/
+
+# Tool downloads stay local. Wrappers and notes are tracked.
 /tools/*
 !/tools/*.sh
 !/tools/*.md
 !/tools/*.json
 !/tools/*.sha256
+
+# Archives and binaries outside the analysis tree.
 *.bin
 *.tar
 *.tar.gz
@@ -20,11 +18,30 @@
 *.exe
 *.dll
 *.class
-__pycache__/
-node_modules/
-.env
-.env.*
+!/analiz/**/*.bin
+!/analiz/**/*.tar
+!/analiz/**/*.tar.gz
+!/analiz/**/*.zip
+!/analiz/**/*.class
+
+# First NTFS extract has special files Windows git cannot index.
+# Readable files are in dosya-sistemleri-tam; symlinks are in the tar.
+/analiz/dosya-sistemleri/
+
+# Keys, certificates, and the certificate partition stay local.
 *.pem
 *.key
 *.p12
 *.pfx
+/analiz/bolumler/12_certificate.bin
+# Packed MSLIB image trips GitHub push protection on a C++ type string.
+# Extracted MSLIB files stay in analiz/dosya-sistemleri-tam/07_MSLIB/.
+/analiz/bolumler/07_MSLIB.bin
+/analiz/dosya-sistemleri-tam/12_certificate/
+/analiz/dosya-sistemleri/**/certificate/
+/analiz/loglar/linux-12_certificate.log
+
+__pycache__/
+node_modules/
+.env
+.env.*

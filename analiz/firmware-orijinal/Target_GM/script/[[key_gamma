@@ -1,0 +1,15 @@
+# <- this is for comment / total file size must be less than 4KB
+
+#HDCP
+setenv startAddr 0x80200000
+saveenv
+fatload usb 0 0x80200000 /Target_GM/BIN_FILES/keys/gamma.bin
+
+setenv tmp_cmd 'setenv gammasize $filesize'
+run tmp_cmd
+saveenv
+
+writePrKey 1 /Target_GM/BIN_FILES/keys/gamma.bin
+
+% <- this is end of file symbol
+

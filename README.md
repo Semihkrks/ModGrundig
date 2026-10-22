@@ -4,7 +4,7 @@ Eski nesil Grundig, Beko ve Arçelik televizyonlarının firmware’ini çevrimd
 
 İnceleme [Reverse Engineer Anything](https://github.com/morluto/rea) ile yürür. `rea/` bu depoda sabit commit’e bağlı bir alt depodur. REA’nın kendi kaynağı, README’si ve lisansı [morluto/rea](https://github.com/morluto/rea) üzerindedir.
 
-Ham firmware, orijinal ZIP/RAR/BIN paketleri, çıkarılmış dosya sistemleri ve cihaz kimliği içerebilen görseller bu repoda yoktur. Onlar yerel analiz kaynağıdır. Burada araştırma notları, scriptler ve kanıt kayıtları durur.
+`analiz/` araştırma notlarını, kanıt JSON’larını, açılmış bölümleri, iki dosya sistemi görünümünü ve firmware imajlarını içerir. Orijinal devir ZIP’i, devir görselleri, sertifika bölümü, PEM ve anahtar dosyaları repoda yoktur.
 
 Lisans: [MIT](LICENSE). REA alt deposu kendi lisansına tabidir.
 
@@ -16,7 +16,7 @@ cd ModGrundig
 git lfs pull
 ```
 
-Git LFS, büyük çağrı indeksi `analiz/ui-kod-cagrilari.json` içindir. Alt depo gelmezse `git submodule update --init rea`.
+Git LFS, `analiz/ui-kod-cagrilari.json` ve `analiz/dosya-sistemleri-tam.tar` içindir. Alt depo gelmezse `git submodule update --init rea`.
 
 ## Nereden başlanır
 
@@ -33,13 +33,13 @@ Git LFS, büyük çağrı indeksi `analiz/ui-kod-cagrilari.json` içindir. Alt d
 |---|---|
 | `docs/` | Bulgular, UI haritası, modül notları |
 | `scripts/` | Yalnız çevrimdışı veri işleyen araştırma araçları |
-| `analiz/` | Kanıt JSON’ları, envanterler, REA/Ghidra notları. Ham BIN ve dosya sistemi ağacı yok |
+| `analiz/` | Kanıt JSON’ları, açılmış bölümler, dosya sistemi görünümleri, firmware imajları, REA/Ghidra notları |
 | `tools/` | Yerel araç sarmalayıcıları |
 | `rea/` | Sabitlenmiş [REA](https://github.com/morluto/rea) alt deposu |
 
 Yerel Linux ağacı, Ghidra veritabanı ve araç kurulumları analiz makinesinde kalır. Yollar [kurulum notunda](docs/KURULUM.md).
 
-`analiz/dosya-sistemleri/` ilk NTFS denemesidir. `analiz/firmware-orijinal/` ilk RAR denemesidir. Bu iki ağaç tamamlanmış kaynak diye kullanılmamalıdır; ikisi de GitHub’da yoktur.
+`analiz/dosya-sistemleri/` ilk NTFS denemesidir ve özel dosyalar yüzünden repoda yoktur. `analiz/firmware-orijinal/` ilk RAR denemesidir; tamamlanmış kaynak diye kullanılmamalıdır. Güncel okuma görünümü `analiz/dosya-sistemleri-tam/`, doğrulanmış imaj `analiz/firmware-dogrulanmis/` altındadır.
 
 ## Kanıt kayıtları
 

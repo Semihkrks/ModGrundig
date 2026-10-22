@@ -1,0 +1,116 @@
+# /etc/profile
+export MSLIB_PATH=/mslib
+#export CURL_CA_BUNDLE_PATH=/applications/MWB/certificates/cacert.pem
+
+#export LD_PRELOAD=$MSLIB_PATH/preloadable_libiconv.so
+export LD_LIBRARY_PATH=$MSLIB_PATH:$MSLIB_PATH/utopia:$MSLIB_PATH/gstreamer-0.10:/config:$MSLIB_PATH/directfb-1.4-0/inputdrivers/:/mslib/ginga/jvm/lib/
+export PATH=/bin/tools:$PATH
+export TERM=vt100
+export TERMINFO=/terminfo
+export FONTCONFIG_PATH=/etc/fonts
+#export TMPDIR=/dev/shm
+
+#Bluetooth DB Path
+#export BT_DB_PATH=/Customer/bluetooth
+#export BT_DB_FILE=$BT_DB_PATH/devdb
+#Arcelik_G6
+
+#CagatayS: Perseus lib folder should be always defined at the end!
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/applications/Network/lib
+#export GST_PLUGIN_PATH=$MSLIB_PATH/gstreamer-0.10
+#export GST_PLUGIN_SCANNER=$MSLIB_PATH/gstreamer-0.10/bin/gst-plugin-scanner
+#export GST_REGISTRY_FORK=no
+#export MBAL_SHM_PATH=/applications/MWB/config.xml
+
+
+#export HBBTVTEST_CERT=/Customer/.owb/conf/certificates/cert.pem
+#export HBBTVTEST_KEY=/Customer/.owb/conf/certificates/key.pem
+
+#0 means no output, 1 prints out to console, 2 prints out to tmp folder
+#export PERSEUS_DEBUG=0
+#export PERSEUS_ROOT=/applications/Network
+#export MWB_ERROR_PAGE=/applications/MWB/error-updated.html
+#export MWB_VKA_PAGE="file:///applications/MWB/HbbTV_vka/vka.html"
+
+#for MStar SN random walk tester
+#export RWALK_ENABLE=1
+#export RWALK_INI_DELAY=75
+#export RWALK_MIN_DELAY=1800
+#export RWALK_MAX_DELAY=3000
+#export RWALK_EVTFILE=/Customer/key.auto3
+#export RWALK_SEQ=1
+
+if [ -x /Customer/setup.sh ]
+then
+    /Customer/setup.sh&
+fi
+
+# the IP range is 172.16.88.200-230 and 172.16.90.200-230
+#ifconfig eth0 172.16.xx.yyy netmask 255.255.255.0
+#route add default gw 172.16.xx.254
+
+#echo "Mounting mslib"
+mount -t ubifs -o ro ubi:MSLIB /mslib
+
+#echo "Mounting USR_DB"
+mount -t ubifs ubi:USR_DB /USR_DB
+
+#echo "Mounting apps"
+#mount -t ubifs -o ro ubi:APP /applications
+mount -t ubifs ubi:APP /applications
+
+#echo "Mounting conf"
+mount -t ubifs -o ro ubi:CONFIG /config
+
+if [ -x /config/ramtmp.sh ]
+then
+    /config/ramtmp.sh
+fi
+
+/config/ubiMknod.sh
+/config/mknode.sh&
+/config/tunenetwork.sh&
+/config/delaymount.sh
+
+#mount -t nfs -o nolock 172.16.xx.zzz:/home/ssg /mnt/ssg
+
+insmod /lib/modules/ir/mdrv-ir.ko
+
+#mkdir /dev/shm/tmp
+#mkdir /dev/shm/lib
+#ln -sf /Customer/bluetooth /dev/shm/lib/bluetooth
+
+#Coredump requirement
+ulimit -c unlimited
+
+/etc/init.d/nscd
+
+#echo ""
+#echo ""
+#echo "Please press Ctrl-C TWICE to leave auto run mode."
+#for i in 1 ; do
+#    echo -e -n $i" "
+#    sleep 1
+#done
+
+#udhcpc -t 1 -T 3 -n
+
+ulimit -s 4196
+
+#mkdir /var/run
+#echo 0 > /proc/sys/net/ipv4/icmp_echo_ignore_all
+
+#Hamdican|11.09.2014: Since TV app connects to Perseus IPC, IPC daemon have to start before TV app
+#$PERSEUS_ROOT/scripts/appstarter/start-connected-daemon.sh &
+
+sh /applications/backup_restore_ini.sh
+
+echo "cd to applications/bin"
+cd applications/bin
+export UART_ENABLE=FALSE
+if [ "$UART_ENABLE" == "TRUE" ]
+then
+./autorun signal
+else
+./autorun signal >/dev/null 2>&1
+fi

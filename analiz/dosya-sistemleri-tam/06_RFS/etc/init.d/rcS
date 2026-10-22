@@ -1,0 +1,22 @@
+#!/bin/sh
+
+mount /proc
+mount /sys
+mount   /dev/shm
+
+#echo "Mounting Customer ini"
+mount -t  ubifs ubi:customer_update /Customer_Update
+mount -t  ubifs ubi:customer /Customer
+
+#boot logo
+
+mount   /dev/pts
+
+#uncomment following line to start telnetd service
+#/bin/telnetd -l /bin/sh
+
+#ignore all icmp echo
+echo 1 > /proc/sys/net/ipv4/icmp_echo_ignore_all
+
+echo /sbin/mdev > /proc/sys/kernel/hotplug
+

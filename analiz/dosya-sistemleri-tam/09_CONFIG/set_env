@@ -1,0 +1,27 @@
+# <- this is for comment / total file size must be less than 4KB
+setenv protect_UBI_ARCELIK 1
+setenv protect_UBIRO 1
+#dynpart edb64M-nand:0x300000(KL),0x600000(UBIRO),0x500000(UBI_ARCELIK),-(UBI)
+setenv tmp_cmd 'if test $update_partition -eq 1; then dynpart edb64M-nand:0x300000(KL),0x600000(UBIRO),0x500000(UBI_ARCELIK),-(UBI); else echo "skip dynpart"; fi'
+setenv tmp_cmd 'if test $update_partition -eq 1; then ubi part UBIRO; else echo "skip"; fi'
+setenv tmp_cmd 'if test $update_partition -eq 1; then ubi part UBI_ARCELIK; else echo "skip"; fi'
+setenv tmp_cmd 'if test $update_partition -eq 1; then ubi part UBI; else echo "skip"; fi'
+setenv bootcmd nand read.e 0x83FFFFC0 KL 0x1AD6C1\; bootm 0x83FFFFC0
+setenv MS_RFS ubi.mtd=UBI ubi.mtd=UBIRO root=ubi:RFS ubi.mtd=UBILD rootfstype=ubifs ro ubi.mtd=UBI_ARCELIK
+setenv bootargs quiet console=ttyS0,115200 $(MS_RFS) $(MS_MEM) $(mtdparts) panel_path=/ norandmaps
+setenv str_crc 2
+setenv verify n
+setenv sync_mmap 1
+setenv db_table 0
+setenv bootupdated 1
+setenv OSD_BufferAddr E_DFB_FRAMEBUFFER_ADR
+setenv COREDUMP_PATH CORE_DUMP_PATH=/Customer/Coredump.%%p.gz
+setenv MIU0_GROUP_PRIORITY                        1:0:2:3
+setenv MIU1_GROUP_PRIORITY                        1:0:2:3
+setenv MIU0_GROUP_SELMIU                        0000:0000:0000
+setenv MIU1_GROUP_SELMIU                        0000:0000:0000
+setenv mboot_default_env 0
+saveenv
+printenv
+reset
+% <- this is end of file symbol
