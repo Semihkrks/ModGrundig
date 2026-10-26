@@ -1,0 +1,34 @@
+import {createRequire} from 'node:module';
+import fs from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const require=createRequire(import.meta.url);
+const {chromium}=require('C:/Users/Semih/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
+const page=await browser.newPage({viewport:{width:1920,height:1080}});const errors=[],checks=[];
+page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+page.on('response',r=>{if(r.status()>=400)errors.push(`HTTP ${r.status()} ${r.url()}`);});
+const settled=()=>page.waitForFunction(()=>!busy&&renderedRevision===desired&&document.querySelector('#frame').complete&&document.querySelector('#frame').naturalWidth===1920);
+try{
+ await page.goto('http://127.0.0.1:4174/');await settled();
+ assert.equal(await page.locator('#variant').inputValue(),'v7.1-tv');assert.equal(await page.locator('#scene').inputValue(),'volume');
+ assert.equal(await page.locator('#frame').evaluate(n=>n.src.startsWith('blob:')),true);
+ assert.equal(await page.locator('#variant option[value="v8"]').count(),0);
+ assert.equal(await page.locator('#scene option[value="resources"]').count(),0);
+ checks.push('Current V7.1 TV profile paints only volume/numeric native frames; cancelled menu experiment is absent');
+ await page.keyboard.press('ArrowRight');await settled();assert.match(await page.locator('#status').innerText(),/Ses 36/);
+ await page.keyboard.press('m');await settled();assert.match(await page.locator('#status').innerText(),/mute/);await page.keyboard.press('m');await settled();
+ for(let i=0;i<110;i++)await page.keyboard.press('ArrowRight');await settled();assert.equal(await page.locator('#status').innerText(),'Ses 100');
+ for(let i=0;i<110;i++)await page.keyboard.press('ArrowLeft');await settled();assert.equal(await page.locator('#status').innerText(),'Ses 0');
+ checks.push('Real keyboard native frame requests, mute toggle, rapid repeats and 0/100 limits');
+ await page.keyboard.type('12');await settled();assert.equal(await page.locator('#status').innerText(),'Numara 12');
+ const numeric=await page.evaluate(()=>fetch('/frame.json?variant=v7.1-tv&scene=numeric&digits=12').then(r=>r.json()));assert.equal(numeric.channel_resolution,null);
+ await page.keyboard.press('Enter');assert.equal(await page.locator('#status').innerText(),'Bu sürümde kanal adı eşleştirmesi yok');
+ checks.push('V7.1 TV numeric paints actual widget only; no proposed demo channel name or fake tune success');
+ await page.locator('#scene').selectOption('volume');await settled();
+ assert.equal(await page.locator('#variant').inputValue(),'v7.1-tv');
+ checks.push('Returning to volume retains final profile and the current package scope');
+ assert.equal(await page.locator('#error').innerText(),'');assert.deepEqual(errors,[]);
+ await page.screenshot({path:'analiz/native-frame-rehost/v71/native-browser.png'});
+ const result={status:'pass',date:new Date().toISOString(),checks,errors,televisionTested:false,fullNativeMenuExecuted:false};
+ await fs.writeFile('analiz/native-frame-rehost/v71/native-browser-tests.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
+}finally{await browser.close();}

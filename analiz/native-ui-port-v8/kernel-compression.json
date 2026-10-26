@@ -1,0 +1,695 @@
+{
+  "date": "2026-10-25",
+  "method": "offline_original_uImage_nested_LZMA_and_static_MIPS_data_code",
+  "source": {
+    "path": "analiz/bolumler/05_KL.bin",
+    "sha256": "d96b0ec70d633751ba8750a1a80aee8cac3a9c5e825744650d749a8862550691",
+    "bytes": 1758840,
+    "uimage_header_crc_match": true,
+    "uimage_data_crc_match": true,
+    "uimage_compression": 0,
+    "self_decompressor_text": "LZMA data is corrupt"
+  },
+  "nested_kernel": {
+    "lzma_file_offset": "0x13c0",
+    "lzma_payload_offset": "0x1380",
+    "properties_hex": "5d00000004",
+    "decoded_bytes": 5306304,
+    "decoded_sha256": "43e9cf9a68cefafb14beb936cd37f801a69412b69cfc127bd7c866fe431c3426",
+    "lzma_eof": true,
+    "trailing_bytes": 4,
+    "path": "analiz/native-ui-port-v8/kernel-linux-flat.bin",
+    "IKCONFIG_present": false,
+    "static_address_base": "0x80000000",
+    "address_basis": "multiple exact string/data pointer matches; UBIFS struct and callsite pointer construction agree"
+  },
+  "ubifs_zlib_descriptor": {
+    "file_offset": "0x4b91b0",
+    "va": "0x804b91b0",
+    "type": 2,
+    "name_ptr": "0x804574b4",
+    "name": "zlib",
+    "capi_name_ptr": "0x804623f0",
+    "capi_name": "deflate",
+    "capi_name_is_nonnull": true,
+    "compile_support_evidence": "non-null deflate capi name, registration in compressor[type], initialized by original code"
+  },
+  "deflate_algorithm": {
+    "descriptor_va": "0x804b96a0",
+    "name_offset": "0x4b96c8",
+    "name": "deflate",
+    "init_va": "0x804f11e0",
+    "registration_call_target_va": "0x801ce788",
+    "registration_target_name": "inferred crypto algorithm registration; stripped kernel has no recovered ELF symbol",
+    "initcall_pointer_file_offset": "0x50e05c"
+  },
+  "code_regions": [
+    {
+      "label_inferred_from_behavior": "ubifs_compressor_init_helper",
+      "offset": "0x4f0ca4",
+      "va": "0x804f0ca4",
+      "bytes_sha256": "f3d5159d7167d331db9c25375fc74f6a3a4ccbb508d97d47907bb9123aa078a3",
+      "assembly": [
+        {
+          "address": "0x804f0ca4",
+          "instruction": "addiu $sp, $sp, -0x20"
+        },
+        {
+          "address": "0x804f0ca8",
+          "instruction": "sw $s0, 0x18($sp)"
+        },
+        {
+          "address": "0x804f0cac",
+          "instruction": "sw $ra, 0x1c($sp)"
+        },
+        {
+          "address": "0x804f0cb0",
+          "instruction": "move $s0, $a0"
+        },
+        {
+          "address": "0x804f0cb4",
+          "instruction": "lw $a0, 0x14($a0)"
+        },
+        {
+          "address": "0x804f0cb8",
+          "instruction": "beqz $a0, 0x804f0d00"
+        },
+        {
+          "address": "0x804f0cbc",
+          "instruction": "addiu $a1, $zero, 2"
+        },
+        {
+          "address": "0x804f0cc0",
+          "instruction": "jal 0x801cccdc"
+        },
+        {
+          "address": "0x804f0cc4",
+          "instruction": "addiu $a2, $zero, 0xf"
+        },
+        {
+          "address": "0x804f0cc8",
+          "instruction": "sltiu $v1, $v0, -0xfff"
+        },
+        {
+          "address": "0x804f0ccc",
+          "instruction": "bnez $v1, 0x804f0d00"
+        },
+        {
+          "address": "0x804f0cd0",
+          "instruction": "sw $v0, 4($s0)"
+        },
+        {
+          "address": "0x804f0cd4",
+          "instruction": "lw $v1, ($gp)"
+        },
+        {
+          "address": "0x804f0cd8",
+          "instruction": "lw $a3, 0x10($s0)"
+        },
+        {
+          "address": "0x804f0cdc",
+          "instruction": "lui $a0, 0x8046"
+        },
+        {
+          "address": "0x804f0ce0",
+          "instruction": "lw $a1, 0xf0($v1)"
+        },
+        {
+          "address": "0x804f0ce4",
+          "instruction": "lui $a2, 0x803f"
+        },
+        {
+          "address": "0x804f0ce8",
+          "instruction": "sw $v0, 0x10($sp)"
+        },
+        {
+          "address": "0x804f0cec",
+          "instruction": "addiu $a0, $a0, 0x2268"
+        },
+        {
+          "address": "0x804f0cf0",
+          "instruction": "jal 0x803b1324"
+        },
+        {
+          "address": "0x804f0cf4",
+          "instruction": "addiu $a2, $a2, 0x2e80"
+        },
+        {
+          "address": "0x804f0cf8",
+          "instruction": "j 0x804f0d1c"
+        },
+        {
+          "address": "0x804f0cfc",
+          "instruction": "lw $v0, 4($s0)"
+        },
+        {
+          "address": "0x804f0d00",
+          "instruction": "lw $v1, ($s0)"
+        },
+        {
+          "address": "0x804f0d04",
+          "instruction": "lui $v0, 0x8057"
+        },
+        {
+          "address": "0x804f0d08",
+          "instruction": "addiu $v0, $v0, -0x720"
+        },
+        {
+          "address": "0x804f0d0c",
+          "instruction": "sll $v1, $v1, 2"
+        },
+        {
+          "address": "0x804f0d10",
+          "instruction": "addu $v0, $v1, $v0"
+        },
+        {
+          "address": "0x804f0d14",
+          "instruction": "sw $s0, ($v0)"
+        },
+        {
+          "address": "0x804f0d18",
+          "instruction": "move $v0, $zero"
+        },
+        {
+          "address": "0x804f0d1c",
+          "instruction": "lw $ra, 0x1c($sp)"
+        },
+        {
+          "address": "0x804f0d20",
+          "instruction": "lw $s0, 0x18($sp)"
+        },
+        {
+          "address": "0x804f0d24",
+          "instruction": "jr $ra"
+        },
+        {
+          "address": "0x804f0d28",
+          "instruction": "addiu $sp, $sp, 0x20"
+        }
+      ]
+    },
+    {
+      "label_inferred_from_behavior": "ubifs_compressors_init",
+      "offset": "0x4f0d2c",
+      "va": "0x804f0d2c",
+      "bytes_sha256": "04f90c2c81b9ecb40a56b185c01bb1eaf4472a8ab6a1fc4a6990c00bf23d3f27",
+      "assembly": [
+        {
+          "address": "0x804f0d2c",
+          "instruction": "addiu $sp, $sp, -0x20"
+        },
+        {
+          "address": "0x804f0d30",
+          "instruction": "sw $s1, 0x14($sp)"
+        },
+        {
+          "address": "0x804f0d34",
+          "instruction": "lui $s1, 0x804c"
+        },
+        {
+          "address": "0x804f0d38",
+          "instruction": "addiu $a0, $s1, -0x6e20"
+        },
+        {
+          "address": "0x804f0d3c",
+          "instruction": "sw $s0, 0x10($sp)"
+        },
+        {
+          "address": "0x804f0d40",
+          "instruction": "sw $ra, 0x1c($sp)"
+        },
+        {
+          "address": "0x804f0d44",
+          "instruction": "jal 0x804f0ca4"
+        },
+        {
+          "address": "0x804f0d48",
+          "instruction": "sw $s2, 0x18($sp)"
+        },
+        {
+          "address": "0x804f0d4c",
+          "instruction": "bnez $v0, 0x804f0da0"
+        },
+        {
+          "address": "0x804f0d50",
+          "instruction": "move $s0, $v0"
+        },
+        {
+          "address": "0x804f0d54",
+          "instruction": "lui $a0, 0x804c"
+        },
+        {
+          "address": "0x804f0d58",
+          "instruction": "jal 0x804f0ca4"
+        },
+        {
+          "address": "0x804f0d5c",
+          "instruction": "addiu $a0, $a0, -0x6e50"
+        },
+        {
+          "address": "0x804f0d60",
+          "instruction": "bnez $v0, 0x804f0d7c"
+        },
+        {
+          "address": "0x804f0d64",
+          "instruction": "move $s2, $v0"
+        },
+        {
+          "address": "0x804f0d68",
+          "instruction": "lui $v1, 0x804c"
+        },
+        {
+          "address": "0x804f0d6c",
+          "instruction": "addiu $v1, $v1, -0x6dfc"
+        },
+        {
+          "address": "0x804f0d70",
+          "instruction": "lui $v0, 0x8057"
+        },
+        {
+          "address": "0x804f0d74",
+          "instruction": "j 0x804f0da0"
+        },
+        {
+          "address": "0x804f0d78",
+          "instruction": "sw $v1, -0x720($v0)"
+        },
+        {
+          "address": "0x804f0d7c",
+          "instruction": "addiu $s1, $s1, -0x6e20"
+        },
+        {
+          "address": "0x804f0d80",
+          "instruction": "lw $v1, 0x14($s1)"
+        },
+        {
+          "address": "0x804f0d84",
+          "instruction": "beqz $v1, 0x804f0d9c"
+        },
+        {
+          "address": "0x804f0d88",
+          "instruction": "lw $a0, 4($s1)"
+        },
+        {
+          "address": "0x804f0d8c",
+          "instruction": "jal 0x801cca18"
+        },
+        {
+          "address": "0x804f0d90",
+          "instruction": "move $a1, $a0"
+        },
+        {
+          "address": "0x804f0d94",
+          "instruction": "j 0x804f0da0"
+        },
+        {
+          "address": "0x804f0d98",
+          "instruction": "move $s0, $s2"
+        },
+        {
+          "address": "0x804f0d9c",
+          "instruction": "move $s0, $v0"
+        },
+        {
+          "address": "0x804f0da0",
+          "instruction": "lw $ra, 0x1c($sp)"
+        },
+        {
+          "address": "0x804f0da4",
+          "instruction": "move $v0, $s0"
+        },
+        {
+          "address": "0x804f0da8",
+          "instruction": "lw $s2, 0x18($sp)"
+        },
+        {
+          "address": "0x804f0dac",
+          "instruction": "lw $s1, 0x14($sp)"
+        },
+        {
+          "address": "0x804f0db0",
+          "instruction": "lw $s0, 0x10($sp)"
+        },
+        {
+          "address": "0x804f0db4",
+          "instruction": "jr $ra"
+        }
+      ]
+    },
+    {
+      "label_inferred_from_behavior": "ubifs_decompress_path",
+      "offset": "0x1b7700",
+      "va": "0x801b7700",
+      "bytes_sha256": "abc94d228420a657e840d993a5a9f6856815fb6b1e3e600610b795f47b524d4f",
+      "assembly": [
+        {
+          "address": "0x801b7700",
+          "instruction": "addiu $sp, $sp, -0x30"
+        },
+        {
+          "address": "0x801b7704",
+          "instruction": "lw $v0, 0x40($sp)"
+        },
+        {
+          "address": "0x801b7708",
+          "instruction": "sw $ra, 0x2c($sp)"
+        },
+        {
+          "address": "0x801b770c",
+          "instruction": "sw $s4, 0x28($sp)"
+        },
+        {
+          "address": "0x801b7710",
+          "instruction": "sltiu $v1, $v0, 3"
+        },
+        {
+          "address": "0x801b7714",
+          "instruction": "sw $s3, 0x24($sp)"
+        },
+        {
+          "address": "0x801b7718",
+          "instruction": "sw $s2, 0x20($sp)"
+        },
+        {
+          "address": "0x801b771c",
+          "instruction": "sw $s1, 0x1c($sp)"
+        },
+        {
+          "address": "0x801b7720",
+          "instruction": "beqz $v1, 0x801b782c"
+        },
+        {
+          "address": "0x801b7724",
+          "instruction": "sw $s0, 0x18($sp)"
+        },
+        {
+          "address": "0x801b7728",
+          "instruction": "lui $v1, 0x8057"
+        },
+        {
+          "address": "0x801b772c",
+          "instruction": "move $s3, $a0"
+        },
+        {
+          "address": "0x801b7730",
+          "instruction": "addiu $v1, $v1, -0x720"
+        },
+        {
+          "address": "0x801b7734",
+          "instruction": "sll $a0, $v0, 2"
+        },
+        {
+          "address": "0x801b7738",
+          "instruction": "addu $v1, $a0, $v1"
+        },
+        {
+          "address": "0x801b773c",
+          "instruction": "lw $s0, ($v1)"
+        },
+        {
+          "address": "0x801b7740",
+          "instruction": "lw $v1, 0x14($s0)"
+        },
+        {
+          "address": "0x801b7744",
+          "instruction": "beqz $v1, 0x801b7804"
+        },
+        {
+          "address": "0x801b7748",
+          "instruction": "move $s2, $a1"
+        },
+        {
+          "address": "0x801b774c",
+          "instruction": "move $s1, $a2"
+        },
+        {
+          "address": "0x801b7750",
+          "instruction": "beqz $v0, 0x801b77c8"
+        },
+        {
+          "address": "0x801b7754",
+          "instruction": "move $s4, $a3"
+        },
+        {
+          "address": "0x801b7758",
+          "instruction": "lw $a0, 0xc($s0)"
+        },
+        {
+          "address": "0x801b775c",
+          "instruction": "beqz $a0, 0x801b776c"
+        },
+        {
+          "address": "0x801b7760",
+          "instruction": "nop "
+        },
+        {
+          "address": "0x801b7764",
+          "instruction": "jal 0x803b5d80"
+        },
+        {
+          "address": "0x801b7768",
+          "instruction": "nop "
+        },
+        {
+          "address": "0x801b776c",
+          "instruction": "lw $a0, 4($s0)"
+        },
+        {
+          "address": "0x801b7770",
+          "instruction": "sw $s4, 0x10($sp)"
+        },
+        {
+          "address": "0x801b7774",
+          "instruction": "move $a3, $s1"
+        },
+        {
+          "address": "0x801b7778",
+          "instruction": "lw $v1, 8($a0)"
+        },
+        {
+          "address": "0x801b777c",
+          "instruction": "move $a1, $s3"
+        },
+        {
+          "address": "0x801b7780",
+          "instruction": "jalr $v1"
+        },
+        {
+          "address": "0x801b7784",
+          "instruction": "move $a2, $s2"
+        },
+        {
+          "address": "0x801b7788",
+          "instruction": "lw $a0, 0xc($s0)"
+        },
+        {
+          "address": "0x801b778c",
+          "instruction": "beqz $a0, 0x801b779c"
+        },
+        {
+          "address": "0x801b7790",
+          "instruction": "move $s1, $v0"
+        },
+        {
+          "address": "0x801b7794",
+          "instruction": "jal 0x803b5bc8"
+        },
+        {
+          "address": "0x801b7798",
+          "instruction": "nop "
+        },
+        {
+          "address": "0x801b779c",
+          "instruction": "bnez $s1, 0x801b7854"
+        },
+        {
+          "address": "0x801b77a0",
+          "instruction": "lui $a0, 0x8046"
+        },
+        {
+          "address": "0x801b77a4",
+          "instruction": "lw $ra, 0x2c($sp)"
+        },
+        {
+          "address": "0x801b77a8",
+          "instruction": "move $v0, $s1"
+        },
+        {
+          "address": "0x801b77ac",
+          "instruction": "lw $s4, 0x28($sp)"
+        },
+        {
+          "address": "0x801b77b0",
+          "instruction": "lw $s3, 0x24($sp)"
+        },
+        {
+          "address": "0x801b77b4",
+          "instruction": "lw $s2, 0x20($sp)"
+        },
+        {
+          "address": "0x801b77b8",
+          "instruction": "lw $s1, 0x1c($sp)"
+        },
+        {
+          "address": "0x801b77bc",
+          "instruction": "lw $s0, 0x18($sp)"
+        },
+        {
+          "address": "0x801b77c0",
+          "instruction": "jr $ra"
+        },
+        {
+          "address": "0x801b77c4",
+          "instruction": "addiu $sp, $sp, 0x30"
+        }
+      ]
+    },
+    {
+      "label_inferred_from_behavior": "deflate_algorithm_registration",
+      "offset": "0x4f11e0",
+      "va": "0x804f11e0",
+      "bytes_sha256": "70abb2496143ab62031956cbbdd3639f7839a2bfa985189fb652d6df680e00d9",
+      "assembly": [
+        {
+          "address": "0x804f11e0",
+          "instruction": "lui $a0, 0x804c"
+        },
+        {
+          "address": "0x804f11e4",
+          "instruction": "j 0x801ce788"
+        },
+        {
+          "address": "0x804f11e8",
+          "instruction": "addiu $a0, $a0, -0x6960"
+        }
+      ]
+    },
+    {
+      "label_inferred_from_behavior": "deflate_crypto_code",
+      "offset": "0x1cf0a0",
+      "va": "0x801cf0a0",
+      "bytes_sha256": "dc4387fddc9791e063fed7c764afa2c729a23ca9bec514ef567a5273caedce07",
+      "assembly": [
+        {
+          "address": "0x801cf0a0",
+          "instruction": "addiu $sp, $sp, -0x18"
+        },
+        {
+          "address": "0x801cf0a4",
+          "instruction": "sw $s0, 0x10($sp)"
+        },
+        {
+          "address": "0x801cf0a8",
+          "instruction": "move $s0, $a0"
+        },
+        {
+          "address": "0x801cf0ac",
+          "instruction": "sw $ra, 0x14($sp)"
+        },
+        {
+          "address": "0x801cf0b0",
+          "instruction": "jal 0x801f8ad8"
+        },
+        {
+          "address": "0x801cf0b4",
+          "instruction": "addiu $a0, $a0, 0x80"
+        },
+        {
+          "address": "0x801cf0b8",
+          "instruction": "jal 0x800cf854"
+        },
+        {
+          "address": "0x801cf0bc",
+          "instruction": "lw $a0, 0xa0($s0)"
+        },
+        {
+          "address": "0x801cf0c0",
+          "instruction": "jal 0x801f69e8"
+        },
+        {
+          "address": "0x801cf0c4",
+          "instruction": "addiu $a0, $s0, 0xb0"
+        },
+        {
+          "address": "0x801cf0c8",
+          "instruction": "lw $a0, 0xd0($s0)"
+        },
+        {
+          "address": "0x801cf0cc",
+          "instruction": "lw $ra, 0x14($sp)"
+        },
+        {
+          "address": "0x801cf0d0",
+          "instruction": "lw $s0, 0x10($sp)"
+        },
+        {
+          "address": "0x801cf0d4",
+          "instruction": "j 0x800cf854"
+        },
+        {
+          "address": "0x801cf0d8",
+          "instruction": "addiu $sp, $sp, 0x18"
+        },
+        {
+          "address": "0x801cf0dc",
+          "instruction": "addiu $sp, $sp, -0x28"
+        },
+        {
+          "address": "0x801cf0e0",
+          "instruction": "addiu $a1, $zero, 8"
+        },
+        {
+          "address": "0x801cf0e4",
+          "instruction": "sw $s0, 0x18($sp)"
+        },
+        {
+          "address": "0x801cf0e8",
+          "instruction": "move $s0, $a0"
+        },
+        {
+          "address": "0x801cf0ec",
+          "instruction": "addiu $a0, $zero, -0xb"
+        },
+        {
+          "address": "0x801cf0f0",
+          "instruction": "sw $ra, 0x24($sp)"
+        },
+        {
+          "address": "0x801cf0f4",
+          "instruction": "sw $s2, 0x20($sp)"
+        },
+        {
+          "address": "0x801cf0f8",
+          "instruction": "jal 0x801f8b28"
+        },
+        {
+          "address": "0x801cf0fc",
+          "instruction": "sw $s1, 0x1c($sp)"
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "original_kernel_UBIFS_zlib_support": "statically_supported",
+    "stock_kernel_executed": false,
+    "device_observed": false,
+    "zlib_APP_mount_tested": false,
+    "certainty_boundary": "compiled descriptor/registration/decompression paths proven, runtime crypto init and physical mount not executed"
+  },
+  "sensitive_partitions_read": false,
+  "original_data_node_observations": {
+    "images": [
+      "analiz/bolumler/06_RFS.bin",
+      "analiz/bolumler/08_APP.bin",
+      "analiz/bolumler/09_CONFIG.bin"
+    ],
+    "type_mapping": {
+      "0": "none",
+      "1": "lzo",
+      "2": "zlib"
+    },
+    "zlib_data_nodes_seen": false,
+    "counts_source": "analiz/native-ui-port-v8/kernel-compression.node-counts.json",
+    "important_limit": "Original sampled images use LZO/none only; ZLIB support conclusion comes from original kernel compiled code/data, not an existing ZLIB filesystem sample."
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "generated_probe_only": true,
+  "firmware_executed": false,
+  "libraries": {
+    "ld-2.8.so": "fe601ae62268ecc106ea09dcf91cf4843aeaff03a9b0955991ba58c0047dca4e",
+    "libc-2.8.so": "7c0e5900f24a19e374d81693dbb233cd9cf161b9da2f9707b79ed522b6bbad84"
+  },
+  "isolation": {
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.01,
+    "checks": [
+      "absent /host-sentinel 1",
+      "absent /mnt/c/Users 1",
+      "absent /home/semih 1",
+      "absent /dev/mem 1",
+      "absent /dev/mtd0 1",
+      "absent /dev/sda 1",
+      "absent /dev/fb0 1",
+      "absent /certificate 1",
+      "root_readonly 1",
+      "private_tmp_writable 1",
+      "network_unreachable 1",
+      "pid_namespace 1"
+    ],
+    "passed": true,
+    "probe_sha256": "4ba5da966196fe2491e1ad052bd441175fad85da47810506e0a13cc5159b68db"
+  },
+  "results": {
+    "probe-original": {
+      "exit_code": 74,
+      "timeout": false,
+      "seconds": 0.035,
+      "raw": ""
+    },
+    "probe-relocated": {
+      "exit_code": 75,
+      "timeout": false,
+      "seconds": 0.035,
+      "raw": ""
+    }
+  },
+  "generated_elf_load_base": 65536,
+  "relocated_phdr_va": 14090240,
+  "relocated_phdr_file_offset": 14024704,
+  "generated_phnum": 10,
+  "firmware_static_placement": {
+    "input_sha256": "8918a9a426521d7af2124a2358586c6021038c4eccde750b8105d914d7cf2a3b",
+    "output_sha256": "49ca6b57e79acef2f0ba7eeb798200e382c5b7bba42bafb2fe57b13fc3b977f7",
+    "file_offset": 14024704,
+    "segment_va": 18219008,
+    "create_va": 18219264,
+    "update_va": 18221056,
+    "segment_size": 2056,
+    "phnum": 8,
+    "original_phdr_bytes_preserved": true,
+    "at_phdr": 18219008,
+    "original_load_changes": [
+      {
+        "offset": 28,
+        "size": 4
+      },
+      {
+        "offset": 44,
+        "size": 2
+      }
+    ],
+    "section_table_unchanged": true,
+    "dynamic_and_mips_got_untouched": true,
+    "unwind": null,
+    "device_tested": false
+  },
+  "limitation": "Generated probe accepts relocated PHDR and new RX entry under QEMU plus firmware ld-2.8. This is not TV kernel or firmware-app execution."
+}

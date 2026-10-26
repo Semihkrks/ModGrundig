@@ -1,0 +1,141 @@
+{
+  "requested": [
+    {
+      "requested_address": "0089552c",
+      "function": {
+        "address": "0089552c",
+        "name": "ChannelControlFrame::TenKeyHandle",
+        "signature": "undefined __thiscall TenKeyHandle(ChannelControlFrame * this, ulong param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 1320
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "0089552c",
+      "original_body_max": "00895b23",
+      "supplied_function_bound": {
+        "end_exclusive": "0x895b24",
+        "basis": "exact_ELF_eh_frame_FDE_entry_range"
+      },
+      "ephemeral_exact_body_applied": true,
+      "bounded_body": {
+        "address": "0089552c",
+        "name": "ChannelControlFrame::TenKeyHandle",
+        "signature": "undefined __thiscall TenKeyHandle(ChannelControlFrame * this, ulong param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 1528
+      },
+      "dynsym_boundary_status": "no_exact_positive_symbol_size_supplied"
+    },
+    {
+      "requested_address": "00895b24",
+      "function": {
+        "address": "00895b24",
+        "name": "ChannelControlFrame::ChangeChannel",
+        "signature": "undefined __stdcall ChangeChannel(ushort param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 96
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "00895b24",
+      "original_body_max": "00895b83",
+      "supplied_function_bound": {
+        "end_exclusive": "0x895b84",
+        "basis": "exact_ELF_eh_frame_FDE_entry_range"
+      },
+      "ephemeral_exact_body_applied": true,
+      "bounded_body": {
+        "address": "00895b24",
+        "name": "ChannelControlFrame::ChangeChannel",
+        "signature": "undefined __stdcall ChangeChannel(ushort param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 96
+      },
+      "dynsym_boundary_status": "no_exact_positive_symbol_size_supplied"
+    }
+  ],
+  "ephemeral_context_seeds": [
+    {
+      "register": "t9",
+      "address": "0089552c",
+      "value_hex": "89552c",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    },
+    {
+      "register": "t9",
+      "address": "00895b24",
+      "value_hex": "895b24",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    }
+  ],
+  "ephemeral_noreturn_assumptions": [
+    {
+      "kind": "external_function_noreturn",
+      "previous_noreturn": false,
+      "address": "EXTERNAL:00000295",
+      "name": "__cxa_rethrow",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution"
+    },
+    {
+      "kind": "external_function_noreturn",
+      "previous_noreturn": true,
+      "address": "EXTERNAL:0000037f",
+      "name": "_Unwind_Resume",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution"
+    },
+    {
+      "kind": "external_function_noreturn",
+      "previous_noreturn": true,
+      "address": "EXTERNAL:00000391",
+      "name": "__assert_fail",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution"
+    },
+    {
+      "kind": "external_function_noreturn",
+      "previous_noreturn": true,
+      "address": "EXTERNAL:000003a6",
+      "name": "__cxa_throw",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution"
+    },
+    {
+      "kind": "external_function_noreturn",
+      "previous_noreturn": true,
+      "address": "EXTERNAL:000005fc",
+      "name": "abort",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution"
+    },
+    {
+      "kind": "selected_callsite_noreturn_override",
+      "function": "0089552c",
+      "instruction": "0089578c",
+      "got_slot": "010c918c",
+      "got_symbol": null,
+      "got_target_aliases": [
+        "_Unwind_Resume"
+      ],
+      "noreturn_name": "_Unwind_Resume",
+      "derived_gp_hex": "0x10cc310",
+      "original_flow_override": "NONE",
+      "flow_override": "CALL_RETURN",
+      "basis": "linear_same_block_gp_relative_t9_load_to_named_GOT_slot_then_jalr; explicit_standard_noreturn_assumption"
+    },
+    {
+      "kind": "selected_callsite_noreturn_override",
+      "function": "0089552c",
+      "instruction": "00895a2c",
+      "got_slot": "010c918c",
+      "got_symbol": null,
+      "got_target_aliases": [
+        "_Unwind_Resume"
+      ],
+      "noreturn_name": "_Unwind_Resume",
+      "derived_gp_hex": "0x10cc310",
+      "original_flow_override": "NONE",
+      "flow_override": "CALL_RETURN",
+      "basis": "linear_same_block_gp_relative_t9_load_to_named_GOT_slot_then_jalr; explicit_standard_noreturn_assumption"
+    }
+  ]
+}

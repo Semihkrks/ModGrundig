@@ -1,0 +1,126 @@
+{
+  "date": "2026-10-25",
+  "focused_tests": {
+    "command": "python -m unittest scripts/test_native_frame_v73.py scripts/test_native_frame_v72.py scripts/test_native_frame_v71.py",
+    "passed": 15
+  },
+  "http_transitions": [
+    {
+      "volume": 0,
+      "mute": 0,
+      "panel": 2180,
+      "png_sha256": "c16925c2be1e35e982f4733dd1cc69ab2651140cbde71ddb3b213a30260877f6",
+      "variant": "v7.3-tv"
+    },
+    {
+      "volume": 100,
+      "mute": 0,
+      "panel": 674,
+      "png_sha256": "0630a94d5b3e474a21d900273498ae6e2f9ce23c4ae7fe467da3f17dd1525757",
+      "variant": "v7.3-tv"
+    },
+    {
+      "volume": 35,
+      "mute": 1,
+      "panel": 2180,
+      "png_sha256": "7a9f24ca4663034dc019fde94ec4a917e8ba2868d174181141457d339ad4dac0",
+      "variant": "v7.3-tv"
+    },
+    {
+      "volume": 35,
+      "mute": 0,
+      "panel": 674,
+      "png_sha256": "848d82e7ce6dfb53e8102f9006d5e3acb9a9b03abbce71812f4c9bdc9c6c0693",
+      "variant": "v7.3-tv"
+    },
+    {
+      "volume": 35,
+      "mute": 1,
+      "panel": 2180,
+      "png_sha256": "7a9f24ca4663034dc019fde94ec4a917e8ba2868d174181141457d339ad4dac0",
+      "variant": "v7.3-tv"
+    },
+    {
+      "volume": 35,
+      "mute": 0,
+      "panel": 674,
+      "png_sha256": "848d82e7ce6dfb53e8102f9006d5e3acb9a9b03abbce71812f4c9bdc9c6c0693",
+      "variant": "v7.3-tv"
+    }
+  ],
+  "http_existing_badge": {
+    "variant": "v7.3-tv",
+    "scene": "mute",
+    "volume": 35,
+    "mute": false,
+    "digits": "123",
+    "channel_resolution": null,
+    "specimen_layout": null,
+    "full_native_menu_executed": false,
+    "surface_geometry": {
+      "outer_frame": [
+        0,
+        435,
+        160,
+        230
+      ],
+      "root": [
+        0,
+        435,
+        165,
+        230
+      ],
+      "panel": [
+        0,
+        460,
+        158,
+        165
+      ],
+      "icon": [
+        0,
+        490,
+        100,
+        100
+      ]
+    },
+    "panel_style": null,
+    "lifecycle_executed": false,
+    "lifecycle_provenance": {
+      "timer": "0xfb7aec",
+      "application_id": "0x10ff",
+      "rule": "Existing timer checks IsMuted before closing Volume and running MuteControl; zero alone does not launch standalone"
+    },
+    "omitted": [
+      "Existing shadow and border composition",
+      "Timer, visibility and application lifecycle",
+      "Full device compositor"
+    ],
+    "verified_pins": {
+      "manifest_sha256": "dcb828e9dd732e7c89091f241b412d34de3018346722687ef2a016560107f296",
+      "overlay_files": 14
+    },
+    "native_instructions": {
+      "DrawBackground": 104,
+      "RenderImageToSurface": 187,
+      "DrawBorders": 17,
+      "DrawString": 0,
+      "CalculateTextDrawFlags": 0
+    },
+    "boundaries": "Bounded MUF instructions, Pillow framebuffer, modeled parent clipping and mocked services; no running TV, tuner or GOP driver"
+  },
+  "browser_keyboard": "Not attempted: prior CUA policy stop remains in effect",
+  "scope": "Bounded Refresh and MUF with host Pillow. Existing standalone image isolated at static OnCreate geometry; timer/lifecycle/shadow/borders not executed.",
+  "regression_tests": {
+    "command": "python -m unittest scripts/test_native_frame_viewer.py scripts/test_native_frame_rehost.py scripts/test_native_volume_state_rehost.py scripts/test_native_frame_v73.py",
+    "ran": 35,
+    "passed": 34,
+    "skipped": 1,
+    "skip_reason": "Historical cancelled V8 menu experiment"
+  },
+  "visual_inspection": [
+    "normal35.png",
+    "mute35.png",
+    "zero0.png",
+    "badge.png"
+  ]
+}

@@ -5,7 +5,7 @@
 | Öncelik | İş | Tamamlanma ölçütü / gerekçe |
 |---|---|---|
 | 1 | 226 modülün Ghidra temel indeksi | Her hash için fonksiyon/xref/symbol/computed-call çıktısı; aliaslar ayrı yol, tek artifact sayılır. Timeout ve loader uyarıları açık tutulur. |
-| 2 | Önceki UI incelemesini birleştirme | UI sınıfları, event map, ID tablosu, timer ve gate davranışları adresli; 4 büyük C boşluğu takipte. |
+| 2 | UI incelemesini birleştirme | Dört büyük gövdenin C çıktısı mevcut; Settings sınırlanmış çıkarımla tamamlandı. Prototip, EH ve dolaylı hedeflerin kalan belirsizlikleri takipte. [Güncel rapor](UI_DORT_BUYUK_FONKSIYON.md). |
 | 3 | Servis yolları | Audio, CEC/IR, görüntü/tuner/kanal, ağ/depolama/güç için giriş→servis→SDK/driver code yolu ve yan etki/hata dalları. İsim benzerliği yeterli değildir. |
 | 4 | 7.583 eşleşmeyen import | Weak hook, closure-dışı sağlayıcı, version/loader ve gerçek eksik aday ayrı sınıflandırılır; runtime eksikliği diye ilan edilmez. |
 | 5 | Sanal/dinamik bağlantılar | Vtable address-point, override seçimi, callback kaydı, dlopen/dlsym argümanları ve koşullar. |
@@ -14,7 +14,7 @@
 
 ## Bilinen UI boşlukları
 
-`dvbt_board`: `0x55b6c0`, `0xd01710`, `0xd42150` 90 saniyelik decompiler limitine; `0xf60a64` payload sınırına takıldı. Bunlarda exact beyan aralığı, instruction ve call-site indeksleri var. Tekrar aynı işlemi çalıştırmak yerine event/resource bloklarını ayrı CFG ve assembly incelemesine bölmek gerekir. SourceSetup `0xf0dd24` 128 MB payload ile çözüldü; LayoutItems `0xd29500` süre artırılarak çözüldü.
+23 Ekim güncellemesi: önceki dört C boşluğu için bütün FDE aralığından çıktı alındı: General `0xd01710`, Home `0xd42150`, Tools `0xf60a64` varsayılan çıkarımla; Settings `0x55b6c0` protorecovery/protorecovery_b/localrecovery kapatılarak. Settings'in varsayılan çıkarımla tamamlanması, eksik argüman/türler, EH landing-pad/LSDA yolları ve 281 ham dolaylı hedef açık kalır. Ayrıca 12 sınırlı fragment C çıktısı ve ayrı firstpass pcode tutulur; eşdeğer kaynak sayılmaz. [Dört gövde ve kanıtları](UI_DORT_BUYUK_FONKSIYON.md). SourceSetup `0xf0dd24` ve LayoutItems `0xd29500` önceki aşamada tamamlandı.
 
 Bool resource header count/payload uyumsuzluğu ve flag-1/8 adlandırması açık. Focus flag-4 kodla doğrulandı. Aktif fiziksel cihaz profili/dil ve dinamik dispatch seçimi gözlenmedi.
 

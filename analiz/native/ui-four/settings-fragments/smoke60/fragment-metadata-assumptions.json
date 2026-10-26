@@ -1,0 +1,207 @@
+[
+  {
+    "original": {
+      "signature": "undefined NewUI_Settings(MMainFrame * param_1)",
+      "entry": "0055b6c0",
+      "body_bytes": 103000
+    },
+    "target_bytes_modified": false,
+    "kind": "original_function_metadata_removed"
+  },
+  {
+    "kind": "fragment_context",
+    "t9_seed": "original_function_entry_0x55b6c0",
+    "gp_hex": "0x10cc310",
+    "fragment": "entry_position",
+    "s8_input": "original_prologue_sets_s8"
+  },
+  {
+    "kind": "sequential_boundary_fallthrough_removed",
+    "fragment": "entry_position",
+    "original": {
+      "address": "0055b730",
+      "instruction": "lw gp,0x20(s8)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055b734",
+      "delay_slots": 0
+    },
+    "modified": {
+      "address": "0055b730",
+      "instruction": "lw gp,0x20(s8)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 0
+    },
+    "assumption": "Fragment terminates here; original next-phase edge retained in manifest and original instruction inventory"
+  },
+  {
+    "kind": "fragment_context",
+    "t9_seed": "none_fragment_not_PIC_entry",
+    "gp_hex": "0x10cc310",
+    "fragment": "antenna_initial",
+    "s8_input": "explicit_original_frame_context_parameter_unknown_runtime_pointer"
+  },
+  {
+    "kind": "external_or_unknown_jump_return_abstraction",
+    "fragment": "antenna_initial",
+    "original": {
+      "address": "00562ef0",
+      "instruction": "beq v0,zero,0x005635f4",
+      "flow_type": "CONDITIONAL_JUMP",
+      "flow_override": "NONE",
+      "flows": [
+        "005635f4"
+      ],
+      "fallthrough": "00562ef8",
+      "delay_slots": 1
+    },
+    "assumption": "Return at fragment boundary abstracts continuation; not original standalone function behavior",
+    "modified": {
+      "address": "00562ef0",
+      "instruction": "beq v0,zero,0x005635f4",
+      "flow_type": "CONDITIONAL_TERMINATOR",
+      "flow_override": "RETURN",
+      "flows": [],
+      "fallthrough": "00562ef8",
+      "delay_slots": 1
+    }
+  },
+  {
+    "kind": "sequential_boundary_fallthrough_removed",
+    "fragment": "antenna_initial",
+    "original": {
+      "address": "005635f0",
+      "instruction": "lw gp,0x20(s8)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005635f4",
+      "delay_slots": 0
+    },
+    "modified": {
+      "address": "005635f0",
+      "instruction": "lw gp,0x20(s8)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 0
+    },
+    "assumption": "Fragment terminates here; original next-phase edge retained in manifest and original instruction inventory"
+  },
+  {
+    "original": {
+      "address": "0056303c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00563044",
+      "delay_slots": 1
+    },
+    "fragment": "antenna_initial",
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume"
+  },
+  {
+    "original": {
+      "address": "00563074",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0056307c",
+      "delay_slots": 1
+    },
+    "fragment": "antenna_initial",
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "abort"
+  },
+  {
+    "kind": "fragment_context",
+    "t9_seed": "none_fragment_not_PIC_entry",
+    "gp_hex": "0x10cc310",
+    "fragment": "source_initial",
+    "s8_input": "explicit_original_frame_context_parameter_unknown_runtime_pointer"
+  },
+  {
+    "kind": "external_or_unknown_jump_return_abstraction",
+    "fragment": "source_initial",
+    "original": {
+      "address": "00563644",
+      "instruction": "beq v0,zero,0x005642dc",
+      "flow_type": "CONDITIONAL_JUMP",
+      "flow_override": "NONE",
+      "flows": [
+        "005642dc"
+      ],
+      "fallthrough": "0056364c",
+      "delay_slots": 1
+    },
+    "assumption": "Return at fragment boundary abstracts continuation; not original standalone function behavior",
+    "modified": {
+      "address": "00563644",
+      "instruction": "beq v0,zero,0x005642dc",
+      "flow_type": "CONDITIONAL_TERMINATOR",
+      "flow_override": "RETURN",
+      "flows": [],
+      "fallthrough": "0056364c",
+      "delay_slots": 1
+    }
+  },
+  {
+    "kind": "sequential_boundary_fallthrough_removed",
+    "fragment": "source_initial",
+    "original": {
+      "address": "005642d8",
+      "instruction": "lw gp,0x20(s8)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005642dc",
+      "delay_slots": 0
+    },
+    "modified": {
+      "address": "005642d8",
+      "instruction": "lw gp,0x20(s8)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 0
+    },
+    "assumption": "Fragment terminates here; original next-phase edge retained in manifest and original instruction inventory"
+  },
+  {
+    "original": {
+      "address": "00563844",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0056384c",
+      "delay_slots": 1
+    },
+    "fragment": "source_initial",
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume"
+  },
+  {
+    "original": {
+      "address": "0056387c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00563884",
+      "delay_slots": 1
+    },
+    "fragment": "source_initial",
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "abort"
+  }
+]

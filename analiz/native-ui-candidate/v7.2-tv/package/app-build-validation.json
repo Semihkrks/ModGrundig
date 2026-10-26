@@ -1,0 +1,149 @@
+{
+  "status": "offline_app_candidate_roundtrip_verified",
+  "television_tested": false,
+  "flash_ready": false,
+  "original_app_sha256": "353d4fbb6a255c86fcafb161e02218dab7d68fcc350092db31ef37c10791ad35",
+  "app_sha256": "b3efa736b4b5a808690b970b1f2a15d5ba361b4e97e28171d9d9923f96446d4d",
+  "app_bytes": 39108608,
+  "command": [
+    "/home/semih/.local/share/grundig-analysis/native-build-v1/tools/mtd/usr/sbin/mkfs.ubifs",
+    "-r",
+    "/home/semih/.local/share/grundig-analysis/native-build-v1/app-stage-v7.2-tv-lzo-raw-elf",
+    "-m",
+    "2048",
+    "-e",
+    "126976",
+    "-c",
+    "321",
+    "-o",
+    "/home/semih/.local/share/grundig-analysis/native-build-v1/08_APP-v7.2-tv-lzo-raw-elf.ubifs",
+    "-x",
+    "none",
+    "-f",
+    "8",
+    "-l",
+    "4",
+    "-p",
+    "1"
+  ],
+  "filesystem_compressor": "lzo-raw-elf",
+  "compressor_evidence": "analiz/native-ui-port-v8/selective-compression-probe.json",
+  "mkfs_sha256": "f424c5cb122bc24a10858512926fbe5a29c74b4b6a80c5e347bd7e9aa07f48bb",
+  "original_superblock": {
+    "leb_size": 126976,
+    "min_io_size": 2048,
+    "leb_cnt": 229,
+    "flags": 0,
+    "fmt_version": 4
+  },
+  "candidate_superblock": {
+    "leb_size": 126976,
+    "min_io_size": 2048,
+    "leb_cnt": 308,
+    "flags": 0,
+    "fmt_version": 4
+  },
+  "files_verified": 2373,
+  "metadata_entries_verified": 2776,
+  "committed_node_crc": {
+    "committed_nodes_crc_verified": 19063,
+    "node_type_counts": {
+      "9": 2385,
+      "1": 11127,
+      "0": 2776,
+      "2": 2775
+    },
+    "journal_replay": false
+  },
+  "directories_verified": 402,
+  "symlinks_verified": 1,
+  "unreachable_indexed_inodes": 0,
+  "original_metadata_entries_verified": 2773,
+  "declared_added_inodes": [
+    "/rc/ARimages/Grundig/modern",
+    "/rc/ARimages/Grundig/modern/numeric_bg.png",
+    "/rc/ARimages/Grundig/modern/volume_muted_bg.png"
+  ],
+  "original_directory_nlink_policy": "increased only for explicitly added immediate child directories",
+  "changed_files": [
+    {
+      "path": "/bin/dvbt_board",
+      "original_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+      "candidate_sha256": "6d2f5119002ec74b5f4dc706a29c5cc4f23b993e6a56d5196be4b0c136eade44"
+    },
+    {
+      "path": "/rc/ARimages/Common/popups/volumeControl/arc_soundDown.png",
+      "original_sha256": "0124768c82ed9e51c614b2928ee97c5b628960bdac6ac683416531da0f48a532",
+      "candidate_sha256": "e454ec06b221cd7c28c9453568d189a5c735255cbeff41545f625b74ce5bb2f4"
+    },
+    {
+      "path": "/rc/ARimages/Common/popups/volumeControl/arc_soundMute.png",
+      "original_sha256": "96a0e524ed1e8167d0d3ddd22b36656c99930d33653e0ea390b295c1f13cca01",
+      "candidate_sha256": "3b9bf1124dbfbdd64f8d4761f31649607ccff27bd25541ea4a0aed9db3bed842"
+    },
+    {
+      "path": "/rc/ARimages/Common/popups/volumeControl/arc_soundUp.png",
+      "original_sha256": "6fa4da20137eadb2da83ff64d0804036a58368a16df1dbadf3aa1eec4b5eb71e",
+      "candidate_sha256": "5e7f435949124eb16ea609a04a54a031c5e37ee23f96a1bad65763313ad03a8f"
+    },
+    {
+      "path": "/rc/ARimages/Common/popups/volumeControl/bg.png",
+      "original_sha256": "347c72138107e1dfae24068eb9ed50141ac958d65b7e4765697b85dd7d95db18",
+      "candidate_sha256": "3bc46a137594635ca1a2c47bcd820d6d619c3a850d58f9fc6db1908d1011169d"
+    },
+    {
+      "path": "/rc/ARimages/Common/popups/volumeControl/volume_shadow.png",
+      "original_sha256": "9a095d761869c488870b5f8fd6d179a222e3293cd443f96fdbb43845b5c946f4",
+      "candidate_sha256": "38278e73d42c9ee28205a3191ac6f653491e509a9d7fbb5b6beea068105ec069"
+    },
+    {
+      "path": "/rc/ARimages/Grundig/modern/numeric_bg.png",
+      "original_sha256": null,
+      "candidate_sha256": "6144405871b839f29d6be99b7696f678400a415f06c5893d43fd61937801547c"
+    },
+    {
+      "path": "/rc/ARimages/Grundig/modern/volume_muted_bg.png",
+      "original_sha256": null,
+      "candidate_sha256": "a4db1acfd57658d2f41b6d4ee8313c0d3b386c6cf5f9d575f3e2d24954b6161e"
+    },
+    {
+      "path": "/rc/ARimages/Grundig/volume/mute_icon.png",
+      "original_sha256": "b5a061e1b756cdb160a3685e9baaea0fdc1aad3a1f6af245828037447dd429ff",
+      "candidate_sha256": "89b03c6404b99cb14160a4d6398ca96f89e6cbc6d5b1b3df30ee848f47fe30b8"
+    },
+    {
+      "path": "/rc/ARimages/Grundig/volume/volume_ellipse.png",
+      "original_sha256": "856419dba36067ee7d55c469e1b46fbdfb922bee5b893a482c6c164f2a975bf5",
+      "candidate_sha256": "09e0029db7a9d95051831cd1953f4944d651308dad70a9a7d7abf3085c87955a"
+    },
+    {
+      "path": "/rc/ARimages/Grundig/volume/volume_icon.png",
+      "original_sha256": "0899f126b8139430eb7ee8b86482efdb0c9730460e7900f9fe523086d584f446",
+      "candidate_sha256": "aa1c3918d73338f4065285fbc634fe56169dcc7019af99753b907a897796b099"
+    },
+    {
+      "path": "/rc/rc/bin/Image_res.bin",
+      "original_sha256": "d6b1b9fde60c9cc4624f264a8e75da4245e6fb3e9dab7534ddce01706fbcd2f3",
+      "candidate_sha256": "f864d0f10fb040cce2967acc55accf0cb5ca3a47ab108d1e9f7d57f7b03e24f2"
+    },
+    {
+      "path": "/rc/rc/bin/Num_res.bin",
+      "original_sha256": "e20c03cd212f548eb8154e8e49d6cf4daafc5fd5842887c51590bf76cfe613ff",
+      "candidate_sha256": "45b981fcd6b5971dcdb1ce01957d1d4067aceea31ca10cade53dd82e3a613e97"
+    }
+  ],
+  "unchanged_regular_files": 2360,
+  "checks": [
+    "source hash pinned",
+    "canonical source compared with fresh pinned-original APP extraction",
+    "all original inode modes/uid/gid/mtime restored",
+    "committed index paths/types/metadata roundtrip",
+    "all reextracted file bytes and symlink targets match staging",
+    "original source hashes unchanged"
+  ],
+  "limitations": [
+    "No kernel mount, target execution or television test.",
+    "New UBIFS node placement, inode numbers, UUID, and generated filesystem bookkeeping are not byte-identical.",
+    "No firmware signature/boot acceptance claim. Native rendering must be checked on target before installation approval."
+  ]
+}

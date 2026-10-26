@@ -1,0 +1,86 @@
+{
+  "static_only": true,
+  "firmware_executed": false,
+  "evidence_kind": "direct_Ghidra_static_query_and_OEM_resource_parse_not_REA_Evidence",
+  "main_target_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+  "discovery_function": "ArTvSettingsManager::CheckUSBUpdate",
+  "discovery_entry": "0x005432f8",
+  "ui_handler_entry": "0x00ed09ac",
+  "relative_path_appended_to_each_mounted_path": "/Target_GM/image/GM_SWImage.bin",
+  "file_access": "fopen(path,\"rb\"); fclose if found; no header/content/version read in discovery function",
+  "return_codes": {
+    "0": "No mounted entries; UI string0x1018",
+    "1": "No readable expected file on eligible mounted entries; UI string0xe44",
+    "2": "Expected file found but IEnvManager::Instance returned null; UI string0xe44",
+    "3": "Expected file found, env values set and save called; UI string0x105a"
+  },
+  "success_environment_values": {
+    "upgrade_mode": "usb",
+    "usb_update": "1",
+    "customer_sw_update": "1"
+  },
+  "failure_message_interpretation": "The newer-version message also represents file-not-found; it does not prove a same-version rejection. No version change required by the confirmed pre-reboot discovery function. Bootloader checks after restart are outside this evidence.",
+  "ui_error_resource_callsite": "0x00ed0b90 loads0xe44; 0x00ed0b98 calls RcGetString",
+  "resources": [
+    {
+      "language": "Turkish",
+      "id": 4120,
+      "id_hex": "0x1018",
+      "table": "analiz/dosya-sistemleri-tam/08_APP/rc/rc_Turkish/bin/Str_res.bin",
+      "table_sha256": "6649c2771f4de6ea4db9f7b8b8b8b384c1929ab2dabe2f834b215e28a666de1b",
+      "payload_offset": 74615,
+      "text": "USB Disk Yok",
+      "table_parse_status": "fully_parsed"
+    },
+    {
+      "language": "Turkish",
+      "id": 4186,
+      "id_hex": "0x105a",
+      "table": "analiz/dosya-sistemleri-tam/08_APP/rc/rc_Turkish/bin/Str_res.bin",
+      "table_sha256": "6649c2771f4de6ea4db9f7b8b8b8b384c1929ab2dabe2f834b215e28a666de1b",
+      "payload_offset": 76669,
+      "text": "SW yükleniyor ve TV bir süre sonra kendiliğinden açılacaktır, lütfen TV’nizi kapatmayınız.",
+      "table_parse_status": "fully_parsed"
+    },
+    {
+      "language": "Turkish",
+      "id": 3652,
+      "id_hex": "0xe44",
+      "table": "analiz/dosya-sistemleri-tam/08_APP/rc/rc_Turkish/bin/Str_res.bin",
+      "table_sha256": "6649c2771f4de6ea4db9f7b8b8b8b384c1929ab2dabe2f834b215e28a666de1b",
+      "payload_offset": 62431,
+      "text": "Daha yeni sürümün güncelleme verisi yoktur.",
+      "table_parse_status": "fully_parsed"
+    },
+    {
+      "language": "English",
+      "id": 4120,
+      "id_hex": "0x1018",
+      "table": "analiz/dosya-sistemleri-tam/08_APP/rc/rc_English/bin/Str_res.bin",
+      "table_sha256": "4c26a3f70b893f8191723383785ce88dd52fb1a0c9c3403938bb55ca1f1638d4",
+      "payload_offset": 72316,
+      "text": "No USB Disk",
+      "table_parse_status": "fully_parsed"
+    },
+    {
+      "language": "English",
+      "id": 4186,
+      "id_hex": "0x105a",
+      "table": "analiz/dosya-sistemleri-tam/08_APP/rc/rc_English/bin/Str_res.bin",
+      "table_sha256": "4c26a3f70b893f8191723383785ce88dd52fb1a0c9c3403938bb55ca1f1638d4",
+      "payload_offset": 74120,
+      "text": "Please Wait while new software is installed. Don't turn off your device...",
+      "table_parse_status": "fully_parsed"
+    },
+    {
+      "language": "English",
+      "id": 3652,
+      "id_hex": "0xe44",
+      "table": "analiz/dosya-sistemleri-tam/08_APP/rc/rc_English/bin/Str_res.bin",
+      "table_sha256": "4c26a3f70b893f8191723383785ce88dd52fb1a0c9c3403938bb55ca1f1638d4",
+      "payload_offset": 61107,
+      "text": "Update data of newer version is not detected.",
+      "table_parse_status": "fully_parsed"
+    }
+  ]
+}

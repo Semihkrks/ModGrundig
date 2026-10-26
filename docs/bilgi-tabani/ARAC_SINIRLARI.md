@@ -2,6 +2,16 @@
 
 Ham ELF adresi ile Ghidra adresi, image-base farkı kontrol edilmeden karşılaştırılmaz. ET_REL nesnelerinde bölüm kimliği gerekir; tek VA üretilmez.
 
+## 23 Ekim: C, C-only ve diagnostic çıktılar
+
+Decompiler'ın bir native isteği tamamlaması, C dosyası üretmesi veya prototipleri doğru çözmesi ayrı ölçümlerdir. Settings `firstpass90` tam aralıktaki ham pcode isteğini tamamladı; **C istenmedi ve üretilmedi**. Bu başarı standart C sayısına katılmaz. `normalize` da tip kurtarma/final sadeleştirmeyi değiştiren ayrı tanısal yöntemdir. Ayrım [Ghidra 12.1.4 DecompInterface dokümantasyonuna](https://github.com/NationalSecurityAgency/ghidra/blob/Ghidra_12.1.4_build/Ghidra/Features/Decompiler/src/main/java/ghidra/app/decompiler/DecompInterface.java) dayanır.
+
+Syntax-tree kapalı C-only modunda boş/prototip HighFunction nesnesi yine dönebilir. `getHighFunction()!=null` veya boş outside-body listesi pcode doğrulaması değildir. Exporter bu durumda `pcode_export_complete=false`, `decompiler_pcode_within_selected_body=null` yazar. Küçük GetID denemesiyle gerçek C çıktısı ve bu unavailable/null davranışı kontrol edildi. İlk probe'daki yanıltıcı true alanı kaynak kaydı olarak tutuldu; v2 düzeltmesi esas alınır.
+
+Settings için ayrıca predication/split seçenekleri ve açık analysis-group kontrolleri denenir. Grup seçenekleri [sürüme sabitlenmiş DecompileOptions encoding API'si](https://github.com/NationalSecurityAgency/ghidra/blob/Ghidra_12.1.4_build/Ghidra/Features/Decompiler/src/main/java/ghidra/app/decompiler/DecompileOptions.java) üzerinden native seçenek akışına eklenir. Çıkarım grubu kapatılan C'de parametre/tür kurtarma daha sınırlı olabilir; bu seçenekler raporda saklanır ve C/assembly kontrolünün yerini tutmaz. Bunlar analiz işlemleridir; firmware byte'larını değiştirmez.
+
+Settings'in doğal blokları üzerinde üretilen fragment C'leri ayrıca soyutlamadır. Kesilen gerçek CFG kenarları, eklenen tail-return metadata'sı ve atlanan GP-restore gibi instruction'lar ayrı tutulur. Fragment C veya tam raw listing, standart bütün-fonksiyon C başarısı diye sayılmaz.
+
 ```json
 {
   "artifacts": 222,

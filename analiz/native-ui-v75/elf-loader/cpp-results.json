@@ -1,0 +1,57 @@
+{
+  "generated_only": true,
+  "firmware_app_executed": false,
+  "expected_exit": 75,
+  "result": {
+    "exit_code": 75,
+    "timeout": false,
+    "seconds": 0.068,
+    "raw": ""
+  },
+  "negative_control_without_fde": {
+    "exit_code": 134,
+    "timeout": false,
+    "seconds": 0.068,
+    "raw": "terminate called after throwing an instance of 'int'\nqemu: uncaught target signal 6 (Aborted) - core dumped\n"
+  },
+  "extra_library_sha256": {
+    "libstdc++.so.6.0.10": "11427a71b958e7422cc736c9f16810a66595e0e19ca69966f6a1cdd2dc9a0e5c",
+    "libgcc_s.so.1": "e12aeecb32628a1e5e11b51fc03945c91d5b9a573114425208dafad070d50f29",
+    "libm-2.8.so": "8254aa2fc5663729aff53394fc1d740f1dccd071d0c5004940cdc0f1e2dc2e7d"
+  },
+  "unwind": {
+    "original_entries": 2,
+    "merged_entries": 3,
+    "old_entries_preserved": true,
+    "header_va": 18227276,
+    "new_frames": [
+      {
+        "start": 18219264,
+        "size": 36,
+        "events": [
+          {
+            "pc": 4,
+            "cfa_offset": 160
+          },
+          {
+            "pc": 8,
+            "offsets": {
+              "31": -4
+            }
+          },
+          {
+            "pc": 28,
+            "restores": [
+              31
+            ]
+          },
+          {
+            "pc": 36,
+            "cfa_offset": 0
+          }
+        ]
+      }
+    ],
+    "temporary_cleanup_on_exception": false
+  }
+}

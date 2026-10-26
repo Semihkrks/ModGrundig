@@ -1,0 +1,71 @@
+{
+  "status": "PASS_HOST_ONLY",
+  "host_validation": {
+    "capstone_version": "5.0.6",
+    "unicorn_version": "2.1.4",
+    "decoded": [
+      {
+        "address": "0xfb81f8",
+        "mnemonic": "lbu",
+        "operands": "$s0, 0x29($fp)",
+        "bytes": "2900d093"
+      },
+      {
+        "address": "0xfb81fc",
+        "mnemonic": "lw",
+        "operands": "$v0, 0x2c($fp)",
+        "bytes": "2c00c28f"
+      },
+      {
+        "address": "0xfb8200",
+        "mnemonic": "movn",
+        "operands": "$v0, $zero, $s0",
+        "bytes": "0b101000"
+      },
+      {
+        "address": "0xfb8204",
+        "mnemonic": "bnez",
+        "operands": "$v0, 0xfb82a4",
+        "bytes": "27004014"
+      },
+      {
+        "address": "0xfb8208",
+        "mnemonic": "lw",
+        "operands": "$gp, 0x18($fp)",
+        "bytes": "1800dc8f"
+      }
+    ],
+    "emulator_cases": 202,
+    "volume_range": [
+      0,
+      100
+    ],
+    "mute_states": [
+      0,
+      1
+    ],
+    "delay_slots_verified": true,
+    "virtual_call_arguments_preserved": true,
+    "volatile_register_clobber_test": true,
+    "gp_restore_verified": true,
+    "saved_s0_and_epilogue_verified": true,
+    "original_state_unchanged": true,
+    "hardware_or_service_code_executed": false,
+    "limitation": "Synthetic callee preserves MIPS ABI s0; actual widget callee not emulated"
+  },
+  "changed_bytes_allowlist_pass": true,
+  "original_sha256_unchanged": true,
+  "direct_entry_check": {
+    "executable_bytes_scanned": 11757380,
+    "direct_incoming": [],
+    "literal_va_counts": {
+      "0xfb81f8": 0,
+      "0xfb81fc": 0,
+      "0xfb8200": 0,
+      "0xfb8204": 0,
+      "0xfb8208": 0
+    },
+    "computed_entries_resolved": false
+  },
+  "TV_tested": false
+}

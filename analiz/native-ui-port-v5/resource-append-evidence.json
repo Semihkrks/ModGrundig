@@ -1,0 +1,2069 @@
+{
+  "schema": 1,
+  "date": "2026-10-24",
+  "status": "static_parser_compatible",
+  "scope": "Offline byte and native instruction inspection; native resource loading was not executed.",
+  "sources": {
+    "Image_res": {
+      "path": "analiz\\dosya-sistemleri-tam\\08_APP\\rc\\rc\\bin\\Image_res.bin",
+      "sha256": "d6b1b9fde60c9cc4624f264a8e75da4245e6fb3e9dab7534ddce01706fbcd2f3",
+      "bytes": 129475,
+      "header_words": [
+        1836282975,
+        129475,
+        5,
+        3220679072,
+        8716,
+        56,
+        56,
+        2179,
+        179596512,
+        182539256,
+        3061238757,
+        11,
+        3220679072,
+        3063980032
+      ]
+    },
+    "Clrkey_res": {
+      "path": "analiz\\dosya-sistemleri-tam\\08_APP\\rc\\rc\\bin\\Clrkey_res.bin",
+      "sha256": "d0bde94872a0e32113a94c084b6893b10c1f8239eed5d2cdd0a43cd28eb18e60",
+      "bytes": 8772,
+      "count": 2179
+    },
+    "libmuf": {
+      "path": "analiz\\dosya-sistemleri-tam\\07_MSLIB\\libmuf.so",
+      "sha256": "494d4aa45a3c8d8e10760388d8d30111e9127a0357d38cdf97979b9f9bb16d96"
+    }
+  },
+  "append": {
+    "new_id": 2179,
+    "count": 2180,
+    "path": "../rc/ARimages/Grundig/modern/numeric_bg.png",
+    "record_offset": 129475,
+    "length_word": 45,
+    "record_bytes": 49,
+    "candidate_bytes": 129524,
+    "candidate_sha256": "4c7936af201a77418d00e333fe548c32f198785821b8aa9884d40ea3e47ed87b",
+    "candidate_header_words": [
+      1836282975,
+      129524,
+      5,
+      3220679072,
+      8720,
+      56,
+      56,
+      2180,
+      179596512,
+      182539256,
+      3061238757,
+      11,
+      3220679072,
+      3063980032
+    ],
+    "index_offset_relative_to_payload": 129423,
+    "old_records_preserved": true,
+    "old_index_offsets_preserved": true,
+    "old_payload_bytes_preserved": true,
+    "final_nul": true,
+    "end_at_eof": true,
+    "candidate_on_disk_matches": true
+  },
+  "native_parser": {
+    "prepare": {
+      "va": "0x2e240cf4",
+      "reads_header_bytes": 56,
+      "magic": "0x6d73745f",
+      "required_type": 5
+    },
+    "build_data": {
+      "va": "0x2e240ea4",
+      "header_base_stack_offset": "0x18",
+      "file_length_header_offset": 4,
+      "payload_start_header_offset": 20,
+      "count_header_offset": 28,
+      "payload_size": "file_length - payload_start; nonzero and <0x1000000",
+      "count_limit": "<0x1000000",
+      "image_payload_member": "this+0x44",
+      "image_count_member": "this+0x14",
+      "image_payload_length_member": "this+0x64",
+      "index_bytes_header_offset_16": "Not consumed by inspected Prepare/BuildData/index path; changed to preserve the original count*4 header invariant.",
+      "switch_resolution": {
+        "gp": "0x2e2bb8e0",
+        "rodata_got_pointer": "0x2e291480",
+        "table_va": "0x2e28c630",
+        "targets": [
+          "0x2e241194",
+          "0x2e241180",
+          "0x2e24116c",
+          "0x2e24114c",
+          "0x2e24112c",
+          "0x2e24110c",
+          "0x2e2410f8",
+          "0x2e2410d8"
+        ],
+        "type5_target": "0x2e24110c",
+        "index_builder_got_target": "0x2e24069c"
+      }
+    },
+    "build_index": {
+      "va": "0x2e240534",
+      "walk": "offset += 4 + uint32_le(record_length); nonzero record index = offset + 4",
+      "allocation": "BuildImgPathIndex allocates count*4"
+    },
+    "get_img_path": {
+      "va": "0x2e24097c",
+      "id_limit": "id <0xffff; then GetSTR id<count and indexed_offset<payload_length",
+      "new_id_in_range": true
+    },
+    "clrkey": {
+      "GetColorKey_va": "0x2e240464",
+      "GetU32_va": "0x2e2403a4",
+      "new_id": 2179,
+      "existing_count": 2179,
+      "result": "0xffffffff",
+      "append_required": false
+    }
+  },
+  "retained_decompilation_references": [
+    {
+      "path": "analiz/native/libmuf/2e240cf4.c",
+      "sha256": "e116f68e6bda51b17ec0ae029c5dcdfdf758ef2c99c547ab73afac2f4df2e3be",
+      "provenance": "retained direct Ghidra pseudocode, not REA Evidence"
+    },
+    {
+      "path": "analiz/native/libmuf/2e240ea4.c",
+      "sha256": "d9769ac42be79034d6559855098c3e22a3c9268c689c61c448c9a9d63cd1ccef",
+      "provenance": "retained direct Ghidra pseudocode, not REA Evidence"
+    },
+    {
+      "path": "analiz/native/ui-deep/muf-core35/2e24069c.c",
+      "sha256": "4847f2cd71714d7a6171951a25ac805a3da7b7c4c6e2815620ee6c986a49126c",
+      "provenance": "retained direct Ghidra pseudocode, not REA Evidence"
+    },
+    {
+      "path": "analiz/native/ui-deep/muf-core35/2e240534.c",
+      "sha256": "9ab9db0686785439a4761b70e9f34aaeaa9318645d9d6f3b4a9d7f68535bb98d",
+      "provenance": "retained direct Ghidra pseudocode, not REA Evidence"
+    },
+    {
+      "path": "analiz/native/ui-deep/muf-core35/2e2408a0.c",
+      "sha256": "81950d9b83523e8496bdba3adb67fde3a704da196de6f5519d2bf749aeba74c0",
+      "provenance": "retained direct Ghidra pseudocode, not REA Evidence"
+    },
+    {
+      "path": "analiz/native/ui-deep/muf-core35/2e24097c.c",
+      "sha256": "f491d4eaf540e8fcc6324ee7aa95f9fd8c994dc740ebdab108a2db3f198439f3",
+      "provenance": "retained direct Ghidra pseudocode, not REA Evidence"
+    },
+    {
+      "path": "analiz/native/ui-deep/muf-core35/2e240464.c",
+      "sha256": "54da3cde924243d728eb16b541ba4b5a2c95b72acc9ed29fb057cdad657c214a",
+      "provenance": "retained direct Ghidra pseudocode, not REA Evidence"
+    },
+    {
+      "path": "analiz/native/ui-deep/muf-core35/2e2403a4.c",
+      "sha256": "e93da59c817c1fb90c91fe9844e2f511104bc43016e91ce955de3ac861d0815a",
+      "provenance": "retained direct Ghidra pseudocode, not REA Evidence"
+    },
+    {
+      "path": "analiz/native/ui-deep/muf-core35/2e271658.c",
+      "sha256": "61347f7dc54ac5943abd35025289228c5bf82b9feed7798404a47153ef7245a0",
+      "provenance": "retained direct Ghidra pseudocode, not REA Evidence"
+    }
+  ],
+  "static_disassembler": "Capstone 5.0.6; raw bytes mapped through ELF PT_LOAD; no binary execution",
+  "instructions": {
+    "Prepare": [
+      {
+        "va": "0x2e240cf4",
+        "instruction": "lui $gp, 8"
+      },
+      {
+        "va": "0x2e240cf8",
+        "instruction": "addiu $gp, $gp, -0x5414"
+      },
+      {
+        "va": "0x2e240cfc",
+        "instruction": "addu $gp, $gp, $t9"
+      },
+      {
+        "va": "0x2e240d00",
+        "instruction": "addiu $sp, $sp, -0x30"
+      },
+      {
+        "va": "0x2e240d04",
+        "instruction": "sw $ra, 0x2c($sp)"
+      },
+      {
+        "va": "0x2e240d08",
+        "instruction": "sw $s3, 0x28($sp)"
+      },
+      {
+        "va": "0x2e240d0c",
+        "instruction": "sw $s2, 0x24($sp)"
+      },
+      {
+        "va": "0x2e240d10",
+        "instruction": "sw $s1, 0x20($sp)"
+      },
+      {
+        "va": "0x2e240d14",
+        "instruction": "sw $s0, 0x1c($sp)"
+      },
+      {
+        "va": "0x2e240d18",
+        "instruction": "sw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240d1c",
+        "instruction": "move $s3, $a0"
+      },
+      {
+        "va": "0x2e240d20",
+        "instruction": "move $a0, $a1"
+      },
+      {
+        "va": "0x2e240d24",
+        "instruction": "lw $a1, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240d28",
+        "instruction": "lw $t9, -0x6cfc($gp)"
+      },
+      {
+        "va": "0x2e240d2c",
+        "instruction": "move $s1, $a2"
+      },
+      {
+        "va": "0x2e240d30",
+        "instruction": "addiu $a1, $a1, -0x5160"
+      },
+      {
+        "va": "0x2e240d34",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240d38",
+        "instruction": "move $s2, $a3"
+      },
+      {
+        "va": "0x2e240d3c",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240d40",
+        "instruction": "beqz $v0, 0x2e240dac"
+      },
+      {
+        "va": "0x2e240d44",
+        "instruction": "move $s0, $v0"
+      },
+      {
+        "va": "0x2e240d48",
+        "instruction": "lw $t9, -0x6ae0($gp)"
+      },
+      {
+        "va": "0x2e240d4c",
+        "instruction": "move $a0, $s1"
+      },
+      {
+        "va": "0x2e240d50",
+        "instruction": "addiu $a1, $zero, 0x38"
+      },
+      {
+        "va": "0x2e240d54",
+        "instruction": "addiu $a2, $zero, 1"
+      },
+      {
+        "va": "0x2e240d58",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240d5c",
+        "instruction": "move $a3, $v0"
+      },
+      {
+        "va": "0x2e240d60",
+        "instruction": "addiu $v1, $zero, 1"
+      },
+      {
+        "va": "0x2e240d64",
+        "instruction": "bne $v0, $v1, 0x2e240e10"
+      },
+      {
+        "va": "0x2e240d68",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240d6c",
+        "instruction": "lw $v1, ($s1)"
+      },
+      {
+        "va": "0x2e240d70",
+        "instruction": "lui $v0, 0x6d73"
+      },
+      {
+        "va": "0x2e240d74",
+        "instruction": "ori $v0, $v0, 0x745f"
+      },
+      {
+        "va": "0x2e240d78",
+        "instruction": "bne $v1, $v0, 0x2e240e44"
+      },
+      {
+        "va": "0x2e240d7c",
+        "instruction": "lw $t9, -0x71fc($gp)"
+      },
+      {
+        "va": "0x2e240d80",
+        "instruction": "lw $v0, 8($s1)"
+      },
+      {
+        "va": "0x2e240d84",
+        "instruction": "bne $v0, $s2, 0x2e240e74"
+      },
+      {
+        "va": "0x2e240d88",
+        "instruction": "nop "
+      },
+      {
+        "va": "0x2e240d8c",
+        "instruction": "lw $ra, 0x2c($sp)"
+      },
+      {
+        "va": "0x2e240d90",
+        "instruction": "move $v0, $s0"
+      },
+      {
+        "va": "0x2e240d94",
+        "instruction": "lw $s3, 0x28($sp)"
+      },
+      {
+        "va": "0x2e240d98",
+        "instruction": "lw $s2, 0x24($sp)"
+      },
+      {
+        "va": "0x2e240d9c",
+        "instruction": "lw $s1, 0x20($sp)"
+      },
+      {
+        "va": "0x2e240da0",
+        "instruction": "lw $s0, 0x1c($sp)"
+      },
+      {
+        "va": "0x2e240da4",
+        "instruction": "jr $ra"
+      },
+      {
+        "va": "0x2e240da8",
+        "instruction": "addiu $sp, $sp, 0x30"
+      },
+      {
+        "va": "0x2e240dac",
+        "instruction": "lbu $v0, 0x2c($s3)"
+      },
+      {
+        "va": "0x2e240db0",
+        "instruction": "beqz $v0, 0x2e240d90"
+      },
+      {
+        "va": "0x2e240db4",
+        "instruction": "lw $ra, 0x2c($sp)"
+      },
+      {
+        "va": "0x2e240db8",
+        "instruction": "lw $v1, -0x7fe8($gp)"
+      },
+      {
+        "va": "0x2e240dbc",
+        "instruction": "lw $v0, 0x28($s3)"
+      },
+      {
+        "va": "0x2e240dc0",
+        "instruction": "lw $t9, -0x7164($gp)"
+      },
+      {
+        "va": "0x2e240dc4",
+        "instruction": "lw $a1, 0x3a90($v1)"
+      },
+      {
+        "va": "0x2e240dc8",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240dcc",
+        "instruction": "lw $a0, ($v0)"
+      },
+      {
+        "va": "0x2e240dd0",
+        "instruction": "bnez $v0, 0x2e240d8c"
+      },
+      {
+        "va": "0x2e240dd4",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240dd8",
+        "instruction": "lw $a0, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240ddc",
+        "instruction": "lw $a1, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240de0",
+        "instruction": "lw $a2, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240de4",
+        "instruction": "lw $t9, -0x7a00($gp)"
+      },
+      {
+        "va": "0x2e240de8",
+        "instruction": "addiu $a0, $a0, -0x73a0"
+      },
+      {
+        "va": "0x2e240dec",
+        "instruction": "addiu $a1, $a1, -0x51fc"
+      },
+      {
+        "va": "0x2e240df0",
+        "instruction": "addiu $a2, $a2, -0x4cf0"
+      },
+      {
+        "va": "0x2e240df4",
+        "instruction": "addiu $a3, $zero, 0x293"
+      },
+      {
+        "va": "0x2e240df8",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240dfc",
+        "instruction": "nop "
+      },
+      {
+        "va": "0x2e240e00",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240e04",
+        "instruction": "lw $t9, -0x7d18($gp)"
+      },
+      {
+        "va": "0x2e240e08",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240e0c",
+        "instruction": "nop "
+      },
+      {
+        "va": "0x2e240e10",
+        "instruction": "lw $t9, -0x71fc($gp)"
+      },
+      {
+        "va": "0x2e240e14",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240e18",
+        "instruction": "move $a0, $s0"
+      },
+      {
+        "va": "0x2e240e1c",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240e20",
+        "instruction": "addiu $a3, $zero, 0x2a2"
+      },
+      {
+        "va": "0x2e240e24",
+        "instruction": "lw $a0, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240e28",
+        "instruction": "lw $a1, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240e2c",
+        "instruction": "lw $a2, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240e30",
+        "instruction": "lw $t9, -0x7a00($gp)"
+      },
+      {
+        "va": "0x2e240e34",
+        "instruction": "addiu $a0, $a0, -0x73a0"
+      },
+      {
+        "va": "0x2e240e38",
+        "instruction": "addiu $a1, $a1, -0x51fc"
+      },
+      {
+        "va": "0x2e240e3c",
+        "instruction": "b 0x2e240df8"
+      },
+      {
+        "va": "0x2e240e40",
+        "instruction": "addiu $a2, $a2, -0x4cf0"
+      },
+      {
+        "va": "0x2e240e44",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240e48",
+        "instruction": "move $a0, $s0"
+      },
+      {
+        "va": "0x2e240e4c",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240e50",
+        "instruction": "addiu $a3, $zero, 0x2aa"
+      },
+      {
+        "va": "0x2e240e54",
+        "instruction": "lw $a0, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240e58",
+        "instruction": "lw $a1, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240e5c",
+        "instruction": "lw $a2, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240e60",
+        "instruction": "lw $t9, -0x7a00($gp)"
+      },
+      {
+        "va": "0x2e240e64",
+        "instruction": "addiu $a0, $a0, -0x73a0"
+      },
+      {
+        "va": "0x2e240e68",
+        "instruction": "addiu $a1, $a1, -0x51fc"
+      },
+      {
+        "va": "0x2e240e6c",
+        "instruction": "b 0x2e240df8"
+      },
+      {
+        "va": "0x2e240e70",
+        "instruction": "addiu $a2, $a2, -0x4cf0"
+      },
+      {
+        "va": "0x2e240e74",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240e78",
+        "instruction": "move $a0, $s0"
+      },
+      {
+        "va": "0x2e240e7c",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240e80",
+        "instruction": "addiu $a3, $zero, 0x2b4"
+      },
+      {
+        "va": "0x2e240e84",
+        "instruction": "lw $a0, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240e88",
+        "instruction": "lw $a1, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240e8c",
+        "instruction": "lw $a2, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240e90",
+        "instruction": "lw $t9, -0x7a00($gp)"
+      },
+      {
+        "va": "0x2e240e94",
+        "instruction": "addiu $a0, $a0, -0x73a0"
+      },
+      {
+        "va": "0x2e240e98",
+        "instruction": "addiu $a1, $a1, -0x51fc"
+      },
+      {
+        "va": "0x2e240e9c",
+        "instruction": "b 0x2e240df8"
+      },
+      {
+        "va": "0x2e240ea0",
+        "instruction": "addiu $a2, $a2, -0x4cf0"
+      }
+    ],
+    "BuildData": [
+      {
+        "va": "0x2e240ea4",
+        "instruction": "lui $gp, 8"
+      },
+      {
+        "va": "0x2e240ea8",
+        "instruction": "addiu $gp, $gp, -0x55c4"
+      },
+      {
+        "va": "0x2e240eac",
+        "instruction": "addu $gp, $gp, $t9"
+      },
+      {
+        "va": "0x2e240eb0",
+        "instruction": "addiu $sp, $sp, -0x70"
+      },
+      {
+        "va": "0x2e240eb4",
+        "instruction": "sw $ra, 0x6c($sp)"
+      },
+      {
+        "va": "0x2e240eb8",
+        "instruction": "sw $s6, 0x68($sp)"
+      },
+      {
+        "va": "0x2e240ebc",
+        "instruction": "sw $s5, 0x64($sp)"
+      },
+      {
+        "va": "0x2e240ec0",
+        "instruction": "sw $s4, 0x60($sp)"
+      },
+      {
+        "va": "0x2e240ec4",
+        "instruction": "sw $s3, 0x5c($sp)"
+      },
+      {
+        "va": "0x2e240ec8",
+        "instruction": "sw $s2, 0x58($sp)"
+      },
+      {
+        "va": "0x2e240ecc",
+        "instruction": "sw $s1, 0x54($sp)"
+      },
+      {
+        "va": "0x2e240ed0",
+        "instruction": "sw $s0, 0x50($sp)"
+      },
+      {
+        "va": "0x2e240ed4",
+        "instruction": "sw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240ed8",
+        "instruction": "lw $t9, -0x72e0($gp)"
+      },
+      {
+        "va": "0x2e240edc",
+        "instruction": "move $a3, $a2"
+      },
+      {
+        "va": "0x2e240ee0",
+        "instruction": "move $s2, $a2"
+      },
+      {
+        "va": "0x2e240ee4",
+        "instruction": "addiu $a2, $sp, 0x18"
+      },
+      {
+        "va": "0x2e240ee8",
+        "instruction": "move $s4, $a0"
+      },
+      {
+        "va": "0x2e240eec",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240ef0",
+        "instruction": "move $s6, $a1"
+      },
+      {
+        "va": "0x2e240ef4",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240ef8",
+        "instruction": "beqz $v0, 0x2e24105c"
+      },
+      {
+        "va": "0x2e240efc",
+        "instruction": "move $s0, $v0"
+      },
+      {
+        "va": "0x2e240f00",
+        "instruction": "lw $a0, 0x1c($sp)"
+      },
+      {
+        "va": "0x2e240f04",
+        "instruction": "lw $a1, 0x2c($sp)"
+      },
+      {
+        "va": "0x2e240f08",
+        "instruction": "sltu $v0, $a1, $a0"
+      },
+      {
+        "va": "0x2e240f0c",
+        "instruction": "beqz $v0, 0x2e240fcc"
+      },
+      {
+        "va": "0x2e240f10",
+        "instruction": "lw $t9, -0x71fc($gp)"
+      },
+      {
+        "va": "0x2e240f14",
+        "instruction": "beqz $a0, 0x2e240fcc"
+      },
+      {
+        "va": "0x2e240f18",
+        "instruction": "subu $s1, $a0, $a1"
+      },
+      {
+        "va": "0x2e240f1c",
+        "instruction": "lui $s5, 0x100"
+      },
+      {
+        "va": "0x2e240f20",
+        "instruction": "sltu $v0, $s1, $s5"
+      },
+      {
+        "va": "0x2e240f24",
+        "instruction": "beqz $v0, 0x2e241004"
+      },
+      {
+        "va": "0x2e240f28",
+        "instruction": "lw $a0, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240f2c",
+        "instruction": "lw $t9, -0x7210($gp)"
+      },
+      {
+        "va": "0x2e240f30",
+        "instruction": "lw $a1, -0x6c64($gp)"
+      },
+      {
+        "va": "0x2e240f34",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240f38",
+        "instruction": "move $a0, $s1"
+      },
+      {
+        "va": "0x2e240f3c",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240f40",
+        "instruction": "beqz $v0, 0x2e2411a8"
+      },
+      {
+        "va": "0x2e240f44",
+        "instruction": "move $s3, $v0"
+      },
+      {
+        "va": "0x2e240f48",
+        "instruction": "lw $t9, -0x6ae0($gp)"
+      },
+      {
+        "va": "0x2e240f4c",
+        "instruction": "move $a0, $v0"
+      },
+      {
+        "va": "0x2e240f50",
+        "instruction": "move $a1, $s1"
+      },
+      {
+        "va": "0x2e240f54",
+        "instruction": "addiu $a2, $zero, 1"
+      },
+      {
+        "va": "0x2e240f58",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240f5c",
+        "instruction": "move $a3, $s0"
+      },
+      {
+        "va": "0x2e240f60",
+        "instruction": "addiu $v1, $zero, 1"
+      },
+      {
+        "va": "0x2e240f64",
+        "instruction": "bne $v0, $v1, 0x2e2411f0"
+      },
+      {
+        "va": "0x2e240f68",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240f6c",
+        "instruction": "lw $t9, -0x71fc($gp)"
+      },
+      {
+        "va": "0x2e240f70",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240f74",
+        "instruction": "move $a0, $s0"
+      },
+      {
+        "va": "0x2e240f78",
+        "instruction": "lw $a3, 0x34($sp)"
+      },
+      {
+        "va": "0x2e240f7c",
+        "instruction": "sltu $v0, $a3, $s5"
+      },
+      {
+        "va": "0x2e240f80",
+        "instruction": "beqz $v0, 0x2e2410a4"
+      },
+      {
+        "va": "0x2e240f84",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240f88",
+        "instruction": "sltiu $v0, $s2, 8"
+      },
+      {
+        "va": "0x2e240f8c",
+        "instruction": "bnez $v0, 0x2e241088"
+      },
+      {
+        "va": "0x2e240f90",
+        "instruction": "lw $v1, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240f94",
+        "instruction": "lw $a0, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240f98",
+        "instruction": "lw $a1, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240f9c",
+        "instruction": "lw $a2, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240fa0",
+        "instruction": "lw $t9, -0x7a00($gp)"
+      },
+      {
+        "va": "0x2e240fa4",
+        "instruction": "addiu $a0, $a0, -0x73a0"
+      },
+      {
+        "va": "0x2e240fa8",
+        "instruction": "addiu $a1, $a1, -0x51fc"
+      },
+      {
+        "va": "0x2e240fac",
+        "instruction": "addiu $a2, $a2, -0x4d60"
+      },
+      {
+        "va": "0x2e240fb0",
+        "instruction": "addiu $a3, $zero, 0x356"
+      },
+      {
+        "va": "0x2e240fb4",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240fb8",
+        "instruction": "nop "
+      },
+      {
+        "va": "0x2e240fbc",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240fc0",
+        "instruction": "lw $t9, -0x7d18($gp)"
+      },
+      {
+        "va": "0x2e240fc4",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240fc8",
+        "instruction": "nop "
+      },
+      {
+        "va": "0x2e240fcc",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240fd0",
+        "instruction": "move $a0, $s0"
+      },
+      {
+        "va": "0x2e240fd4",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240fd8",
+        "instruction": "addiu $v0, $zero, 1"
+      },
+      {
+        "va": "0x2e240fdc",
+        "instruction": "lw $ra, 0x6c($sp)"
+      },
+      {
+        "va": "0x2e240fe0",
+        "instruction": "lw $s6, 0x68($sp)"
+      },
+      {
+        "va": "0x2e240fe4",
+        "instruction": "lw $s5, 0x64($sp)"
+      },
+      {
+        "va": "0x2e240fe8",
+        "instruction": "lw $s4, 0x60($sp)"
+      },
+      {
+        "va": "0x2e240fec",
+        "instruction": "lw $s3, 0x5c($sp)"
+      },
+      {
+        "va": "0x2e240ff0",
+        "instruction": "lw $s2, 0x58($sp)"
+      },
+      {
+        "va": "0x2e240ff4",
+        "instruction": "lw $s1, 0x54($sp)"
+      },
+      {
+        "va": "0x2e240ff8",
+        "instruction": "lw $s0, 0x50($sp)"
+      },
+      {
+        "va": "0x2e240ffc",
+        "instruction": "jr $ra"
+      },
+      {
+        "va": "0x2e241000",
+        "instruction": "addiu $sp, $sp, 0x70"
+      },
+      {
+        "va": "0x2e241004",
+        "instruction": "lw $t9, -0x7a00($gp)"
+      },
+      {
+        "va": "0x2e241008",
+        "instruction": "move $a1, $s6"
+      },
+      {
+        "va": "0x2e24100c",
+        "instruction": "move $a2, $s2"
+      },
+      {
+        "va": "0x2e241010",
+        "instruction": "move $a3, $s1"
+      },
+      {
+        "va": "0x2e241014",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e241018",
+        "instruction": "addiu $a0, $a0, -0x5158"
+      },
+      {
+        "va": "0x2e24101c",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e241020",
+        "instruction": "lw $t9, -0x71fc($gp)"
+      },
+      {
+        "va": "0x2e241024",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e241028",
+        "instruction": "move $a0, $s0"
+      },
+      {
+        "va": "0x2e24102c",
+        "instruction": "lw $ra, 0x6c($sp)"
+      },
+      {
+        "va": "0x2e241030",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e241034",
+        "instruction": "move $v0, $zero"
+      },
+      {
+        "va": "0x2e241038",
+        "instruction": "lw $s6, 0x68($sp)"
+      },
+      {
+        "va": "0x2e24103c",
+        "instruction": "lw $s5, 0x64($sp)"
+      },
+      {
+        "va": "0x2e241040",
+        "instruction": "lw $s4, 0x60($sp)"
+      },
+      {
+        "va": "0x2e241044",
+        "instruction": "lw $s3, 0x5c($sp)"
+      },
+      {
+        "va": "0x2e241048",
+        "instruction": "lw $s2, 0x58($sp)"
+      },
+      {
+        "va": "0x2e24104c",
+        "instruction": "lw $s1, 0x54($sp)"
+      },
+      {
+        "va": "0x2e241050",
+        "instruction": "lw $s0, 0x50($sp)"
+      },
+      {
+        "va": "0x2e241054",
+        "instruction": "jr $ra"
+      },
+      {
+        "va": "0x2e241058",
+        "instruction": "addiu $sp, $sp, 0x70"
+      },
+      {
+        "va": "0x2e24105c",
+        "instruction": "lw $ra, 0x6c($sp)"
+      },
+      {
+        "va": "0x2e241060",
+        "instruction": "addiu $v0, $zero, 1"
+      },
+      {
+        "va": "0x2e241064",
+        "instruction": "lw $s6, 0x68($sp)"
+      },
+      {
+        "va": "0x2e241068",
+        "instruction": "lw $s5, 0x64($sp)"
+      },
+      {
+        "va": "0x2e24106c",
+        "instruction": "lw $s4, 0x60($sp)"
+      },
+      {
+        "va": "0x2e241070",
+        "instruction": "lw $s3, 0x5c($sp)"
+      },
+      {
+        "va": "0x2e241074",
+        "instruction": "lw $s2, 0x58($sp)"
+      },
+      {
+        "va": "0x2e241078",
+        "instruction": "lw $s1, 0x54($sp)"
+      },
+      {
+        "va": "0x2e24107c",
+        "instruction": "lw $s0, 0x50($sp)"
+      },
+      {
+        "va": "0x2e241080",
+        "instruction": "jr $ra"
+      },
+      {
+        "va": "0x2e241084",
+        "instruction": "addiu $sp, $sp, 0x70"
+      },
+      {
+        "va": "0x2e241088",
+        "instruction": "sll $v0, $s2, 2"
+      },
+      {
+        "va": "0x2e24108c",
+        "instruction": "addiu $v1, $v1, -0x4e50"
+      },
+      {
+        "va": "0x2e241090",
+        "instruction": "addu $v1, $v1, $v0"
+      },
+      {
+        "va": "0x2e241094",
+        "instruction": "lw $a0, ($v1)"
+      },
+      {
+        "va": "0x2e241098",
+        "instruction": "addu $a0, $a0, $gp"
+      },
+      {
+        "va": "0x2e24109c",
+        "instruction": "jr $a0"
+      },
+      {
+        "va": "0x2e2410a0",
+        "instruction": "nop "
+      },
+      {
+        "va": "0x2e2410a4",
+        "instruction": "lw $a0, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e2410a8",
+        "instruction": "lw $t9, -0x7a00($gp)"
+      },
+      {
+        "va": "0x2e2410ac",
+        "instruction": "move $a1, $s6"
+      },
+      {
+        "va": "0x2e2410b0",
+        "instruction": "addiu $a0, $a0, -0x5158"
+      },
+      {
+        "va": "0x2e2410b4",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e2410b8",
+        "instruction": "move $a2, $s2"
+      },
+      {
+        "va": "0x2e2410bc",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e2410c0",
+        "instruction": "lw $t9, -0x77b4($gp)"
+      },
+      {
+        "va": "0x2e2410c4",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e2410c8",
+        "instruction": "move $a0, $s3"
+      },
+      {
+        "va": "0x2e2410cc",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e2410d0",
+        "instruction": "b 0x2e240fdc"
+      },
+      {
+        "va": "0x2e2410d4",
+        "instruction": "addiu $v0, $zero, 1"
+      },
+      {
+        "va": "0x2e2410d8",
+        "instruction": "lw $t9, -0x7a78($gp)"
+      },
+      {
+        "va": "0x2e2410dc",
+        "instruction": "sw $s3, 0x4c($s4)"
+      },
+      {
+        "va": "0x2e2410e0",
+        "instruction": "sw $a3, 0x1c($s4)"
+      },
+      {
+        "va": "0x2e2410e4",
+        "instruction": "sw $s1, 0x6c($s4)"
+      },
+      {
+        "va": "0x2e2410e8",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e2410ec",
+        "instruction": "move $a0, $s4"
+      },
+      {
+        "va": "0x2e2410f0",
+        "instruction": "b 0x2e240fdc"
+      },
+      {
+        "va": "0x2e2410f4",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e2410f8",
+        "instruction": "sw $s1, 0x68($s4)"
+      },
+      {
+        "va": "0x2e2410fc",
+        "instruction": "sw $s3, 0x48($s4)"
+      },
+      {
+        "va": "0x2e241100",
+        "instruction": "sw $a3, 0x18($s4)"
+      },
+      {
+        "va": "0x2e241104",
+        "instruction": "b 0x2e240fdc"
+      },
+      {
+        "va": "0x2e241108",
+        "instruction": "addiu $v0, $zero, 1"
+      },
+      {
+        "va": "0x2e24110c",
+        "instruction": "lw $t9, -0x72c4($gp)"
+      },
+      {
+        "va": "0x2e241110",
+        "instruction": "sw $s3, 0x44($s4)"
+      },
+      {
+        "va": "0x2e241114",
+        "instruction": "sw $a3, 0x14($s4)"
+      },
+      {
+        "va": "0x2e241118",
+        "instruction": "sw $s1, 0x64($s4)"
+      },
+      {
+        "va": "0x2e24111c",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e241120",
+        "instruction": "move $a0, $s4"
+      },
+      {
+        "va": "0x2e241124",
+        "instruction": "b 0x2e240fdc"
+      },
+      {
+        "va": "0x2e241128",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e24112c",
+        "instruction": "lw $t9, -0x7888($gp)"
+      },
+      {
+        "va": "0x2e241130",
+        "instruction": "sw $s3, 0x40($s4)"
+      },
+      {
+        "va": "0x2e241134",
+        "instruction": "sw $a3, 0x10($s4)"
+      },
+      {
+        "va": "0x2e241138",
+        "instruction": "sw $s1, 0x60($s4)"
+      },
+      {
+        "va": "0x2e24113c",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e241140",
+        "instruction": "move $a0, $s4"
+      },
+      {
+        "va": "0x2e241144",
+        "instruction": "b 0x2e240fdc"
+      },
+      {
+        "va": "0x2e241148",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e24114c",
+        "instruction": "lw $t9, -0x7cf4($gp)"
+      },
+      {
+        "va": "0x2e241150",
+        "instruction": "sw $s3, 0x3c($s4)"
+      },
+      {
+        "va": "0x2e241154",
+        "instruction": "sw $a3, 0xc($s4)"
+      },
+      {
+        "va": "0x2e241158",
+        "instruction": "sw $s1, 0x5c($s4)"
+      },
+      {
+        "va": "0x2e24115c",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e241160",
+        "instruction": "move $a0, $s4"
+      }
+    ],
+    "BuildImgPathIndex": [
+      {
+        "va": "0x2e24069c",
+        "instruction": "lui $gp, 8"
+      },
+      {
+        "va": "0x2e2406a0",
+        "instruction": "addiu $gp, $gp, -0x4dbc"
+      },
+      {
+        "va": "0x2e2406a4",
+        "instruction": "addu $gp, $gp, $t9"
+      },
+      {
+        "va": "0x2e2406a8",
+        "instruction": "addiu $sp, $sp, -0x20"
+      },
+      {
+        "va": "0x2e2406ac",
+        "instruction": "sw $ra, 0x1c($sp)"
+      },
+      {
+        "va": "0x2e2406b0",
+        "instruction": "sw $s0, 0x18($sp)"
+      },
+      {
+        "va": "0x2e2406b4",
+        "instruction": "sw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e2406b8",
+        "instruction": "move $s0, $a0"
+      },
+      {
+        "va": "0x2e2406bc",
+        "instruction": "lw $a0, 0x14($a0)"
+      },
+      {
+        "va": "0x2e2406c0",
+        "instruction": "lw $t9, -0x7210($gp)"
+      },
+      {
+        "va": "0x2e2406c4",
+        "instruction": "lw $a1, -0x6c64($gp)"
+      },
+      {
+        "va": "0x2e2406c8",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e2406cc",
+        "instruction": "sll $a0, $a0, 2"
+      },
+      {
+        "va": "0x2e2406d0",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e2406d4",
+        "instruction": "beqz $v0, 0x2e240700"
+      },
+      {
+        "va": "0x2e2406d8",
+        "instruction": "sw $v0, 0x78($s0)"
+      },
+      {
+        "va": "0x2e2406dc",
+        "instruction": "lw $a2, 0x14($s0)"
+      },
+      {
+        "va": "0x2e2406e0",
+        "instruction": "lw $a3, 0x44($s0)"
+      },
+      {
+        "va": "0x2e2406e4",
+        "instruction": "lw $t9, -0x7cb4($gp)"
+      },
+      {
+        "va": "0x2e2406e8",
+        "instruction": "move $a0, $s0"
+      },
+      {
+        "va": "0x2e2406ec",
+        "instruction": "lw $ra, 0x1c($sp)"
+      },
+      {
+        "va": "0x2e2406f0",
+        "instruction": "lw $s0, 0x18($sp)"
+      },
+      {
+        "va": "0x2e2406f4",
+        "instruction": "move $a1, $v0"
+      },
+      {
+        "va": "0x2e2406f8",
+        "instruction": "jr $t9"
+      },
+      {
+        "va": "0x2e2406fc",
+        "instruction": "addiu $sp, $sp, 0x20"
+      },
+      {
+        "va": "0x2e240700",
+        "instruction": "lw $a0, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240704",
+        "instruction": "lw $t9, -0x7aa0($gp)"
+      },
+      {
+        "va": "0x2e240708",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e24070c",
+        "instruction": "addiu $a0, $a0, -0x51e4"
+      },
+      {
+        "va": "0x2e240710",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e240714",
+        "instruction": "addiu $a3, $zero, 0x43c"
+      },
+      {
+        "va": "0x2e240718",
+        "instruction": "lw $a0, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e24071c",
+        "instruction": "lw $a1, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240720",
+        "instruction": "lw $a2, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240724",
+        "instruction": "lw $t9, -0x7a00($gp)"
+      },
+      {
+        "va": "0x2e240728",
+        "instruction": "addiu $a0, $a0, -0x73a0"
+      },
+      {
+        "va": "0x2e24072c",
+        "instruction": "addiu $a1, $a1, -0x51fc"
+      },
+      {
+        "va": "0x2e240730",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240734",
+        "instruction": "addiu $a2, $a2, -0x4e08"
+      },
+      {
+        "va": "0x2e240738",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e24073c",
+        "instruction": "lw $t9, -0x7d18($gp)"
+      },
+      {
+        "va": "0x2e240740",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240744",
+        "instruction": "nop "
+      }
+    ],
+    "BuildIndex": [
+      {
+        "va": "0x2e240534",
+        "instruction": "lui $gp, 8"
+      },
+      {
+        "va": "0x2e240538",
+        "instruction": "addiu $gp, $gp, -0x4c54"
+      },
+      {
+        "va": "0x2e24053c",
+        "instruction": "addu $gp, $gp, $t9"
+      },
+      {
+        "va": "0x2e240540",
+        "instruction": "addiu $sp, $sp, -0x20"
+      },
+      {
+        "va": "0x2e240544",
+        "instruction": "sw $ra, 0x1c($sp)"
+      },
+      {
+        "va": "0x2e240548",
+        "instruction": "sw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e24054c",
+        "instruction": "beqz $a1, 0x2e2405c0"
+      },
+      {
+        "va": "0x2e240550",
+        "instruction": "lw $a0, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240554",
+        "instruction": "beqz $a3, 0x2e2405c0"
+      },
+      {
+        "va": "0x2e240558",
+        "instruction": "nop "
+      },
+      {
+        "va": "0x2e24055c",
+        "instruction": "beqz $a2, 0x2e2405b4"
+      },
+      {
+        "va": "0x2e240560",
+        "instruction": "lw $ra, 0x1c($sp)"
+      },
+      {
+        "va": "0x2e240564",
+        "instruction": "move $v1, $zero"
+      },
+      {
+        "va": "0x2e240568",
+        "instruction": "b 0x2e24058c"
+      },
+      {
+        "va": "0x2e24056c",
+        "instruction": "move $a0, $zero"
+      },
+      {
+        "va": "0x2e240570",
+        "instruction": "addiu $a0, $a0, 1"
+      },
+      {
+        "va": "0x2e240574",
+        "instruction": "sltu $v0, $a0, $a2"
+      },
+      {
+        "va": "0x2e240578",
+        "instruction": "sw $v1, ($a1)"
+      },
+      {
+        "va": "0x2e24057c",
+        "instruction": "beqz $v0, 0x2e2405b0"
+      },
+      {
+        "va": "0x2e240580",
+        "instruction": "addiu $a1, $a1, 4"
+      },
+      {
+        "va": "0x2e240584",
+        "instruction": "addiu $v0, $t0, 4"
+      },
+      {
+        "va": "0x2e240588",
+        "instruction": "addu $v1, $v1, $v0"
+      },
+      {
+        "va": "0x2e24058c",
+        "instruction": "addu $v0, $a3, $v1"
+      },
+      {
+        "va": "0x2e240590",
+        "instruction": "lw $t0, ($v0)"
+      },
+      {
+        "va": "0x2e240594",
+        "instruction": "beqz $t0, 0x2e240570"
+      },
+      {
+        "va": "0x2e240598",
+        "instruction": "addiu $v0, $v1, 4"
+      },
+      {
+        "va": "0x2e24059c",
+        "instruction": "addiu $a0, $a0, 1"
+      },
+      {
+        "va": "0x2e2405a0",
+        "instruction": "sw $v0, ($a1)"
+      },
+      {
+        "va": "0x2e2405a4",
+        "instruction": "sltu $v0, $a0, $a2"
+      },
+      {
+        "va": "0x2e2405a8",
+        "instruction": "bnez $v0, 0x2e240584"
+      },
+      {
+        "va": "0x2e2405ac",
+        "instruction": "addiu $a1, $a1, 4"
+      },
+      {
+        "va": "0x2e2405b0",
+        "instruction": "lw $ra, 0x1c($sp)"
+      },
+      {
+        "va": "0x2e2405b4",
+        "instruction": "addiu $v0, $zero, 1"
+      },
+      {
+        "va": "0x2e2405b8",
+        "instruction": "jr $ra"
+      },
+      {
+        "va": "0x2e2405bc",
+        "instruction": "addiu $sp, $sp, 0x20"
+      },
+      {
+        "va": "0x2e2405c0",
+        "instruction": "lw $a1, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e2405c4",
+        "instruction": "lw $a2, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e2405c8",
+        "instruction": "lw $t9, -0x7a00($gp)"
+      },
+      {
+        "va": "0x2e2405cc",
+        "instruction": "addiu $a0, $a0, -0x73a0"
+      },
+      {
+        "va": "0x2e2405d0",
+        "instruction": "addiu $a1, $a1, -0x51fc"
+      },
+      {
+        "va": "0x2e2405d4",
+        "instruction": "addiu $a2, $a2, -0x4d90"
+      },
+      {
+        "va": "0x2e2405d8",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e2405dc",
+        "instruction": "addiu $a3, $zero, 0x400"
+      },
+      {
+        "va": "0x2e2405e0",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e2405e4",
+        "instruction": "lw $t9, -0x7d18($gp)"
+      },
+      {
+        "va": "0x2e2405e8",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e2405ec",
+        "instruction": "nop "
+      }
+    ],
+    "GetSTR": [
+      {
+        "va": "0x2e2408a0",
+        "instruction": "lui $gp, 8"
+      },
+      {
+        "va": "0x2e2408a4",
+        "instruction": "addiu $gp, $gp, -0x4fc0"
+      },
+      {
+        "va": "0x2e2408a8",
+        "instruction": "addu $gp, $gp, $t9"
+      },
+      {
+        "va": "0x2e2408ac",
+        "instruction": "addiu $sp, $sp, -0x20"
+      },
+      {
+        "va": "0x2e2408b0",
+        "instruction": "sw $ra, 0x1c($sp)"
+      },
+      {
+        "va": "0x2e2408b4",
+        "instruction": "sw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e2408b8",
+        "instruction": "bnez $a2, 0x2e2408d0"
+      },
+      {
+        "va": "0x2e2408bc",
+        "instruction": "sltu $v0, $a1, $a3"
+      },
+      {
+        "va": "0x2e2408c0",
+        "instruction": "move $v0, $zero"
+      },
+      {
+        "va": "0x2e2408c4",
+        "instruction": "lw $ra, 0x1c($sp)"
+      },
+      {
+        "va": "0x2e2408c8",
+        "instruction": "jr $ra"
+      },
+      {
+        "va": "0x2e2408cc",
+        "instruction": "addiu $sp, $sp, 0x20"
+      },
+      {
+        "va": "0x2e2408d0",
+        "instruction": "beqz $v0, 0x2e2408c0"
+      },
+      {
+        "va": "0x2e2408d4",
+        "instruction": "lw $v1, 0x34($sp)"
+      },
+      {
+        "va": "0x2e2408d8",
+        "instruction": "sll $v0, $a1, 2"
+      },
+      {
+        "va": "0x2e2408dc",
+        "instruction": "addu $v0, $v1, $v0"
+      },
+      {
+        "va": "0x2e2408e0",
+        "instruction": "lw $v1, ($v0)"
+      },
+      {
+        "va": "0x2e2408e4",
+        "instruction": "lw $v0, 0x30($sp)"
+      },
+      {
+        "va": "0x2e2408e8",
+        "instruction": "sltu $a0, $v1, $v0"
+      },
+      {
+        "va": "0x2e2408ec",
+        "instruction": "bnez $a0, 0x2e2408c4"
+      },
+      {
+        "va": "0x2e2408f0",
+        "instruction": "addu $v0, $a2, $v1"
+      },
+      {
+        "va": "0x2e2408f4",
+        "instruction": "lw $a0, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e2408f8",
+        "instruction": "lw $a1, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e2408fc",
+        "instruction": "lw $a2, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240900",
+        "instruction": "lw $t9, -0x7a00($gp)"
+      },
+      {
+        "va": "0x2e240904",
+        "instruction": "addiu $a0, $a0, -0x73a0"
+      },
+      {
+        "va": "0x2e240908",
+        "instruction": "addiu $a1, $a1, -0x51fc"
+      },
+      {
+        "va": "0x2e24090c",
+        "instruction": "addiu $a2, $a2, -0x4c84"
+      },
+      {
+        "va": "0x2e240910",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240914",
+        "instruction": "addiu $a3, $zero, 0x261"
+      },
+      {
+        "va": "0x2e240918",
+        "instruction": "lw $gp, 0x10($sp)"
+      },
+      {
+        "va": "0x2e24091c",
+        "instruction": "lw $t9, -0x7d18($gp)"
+      },
+      {
+        "va": "0x2e240920",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e240924",
+        "instruction": "nop "
+      }
+    ],
+    "GetImgPath": [
+      {
+        "va": "0x2e24097c",
+        "instruction": "lui $gp, 8"
+      },
+      {
+        "va": "0x2e240980",
+        "instruction": "addiu $gp, $gp, -0x509c"
+      },
+      {
+        "va": "0x2e240984",
+        "instruction": "addu $gp, $gp, $t9"
+      },
+      {
+        "va": "0x2e240988",
+        "instruction": "addiu $sp, $sp, -0x30"
+      },
+      {
+        "va": "0x2e24098c",
+        "instruction": "sw $ra, 0x2c($sp)"
+      },
+      {
+        "va": "0x2e240990",
+        "instruction": "sw $gp, 0x20($sp)"
+      },
+      {
+        "va": "0x2e240994",
+        "instruction": "ori $v0, $zero, 0xffff"
+      },
+      {
+        "va": "0x2e240998",
+        "instruction": "sltu $v1, $a1, $v0"
+      },
+      {
+        "va": "0x2e24099c",
+        "instruction": "beqz $v1, 0x2e2409d4"
+      },
+      {
+        "va": "0x2e2409a0",
+        "instruction": "move $v0, $zero"
+      },
+      {
+        "va": "0x2e2409a4",
+        "instruction": "lw $v0, 0x64($a0)"
+      },
+      {
+        "va": "0x2e2409a8",
+        "instruction": "lw $v1, 0x78($a0)"
+      },
+      {
+        "va": "0x2e2409ac",
+        "instruction": "lw $a2, 0x44($a0)"
+      },
+      {
+        "va": "0x2e2409b0",
+        "instruction": "lw $a3, 0x14($a0)"
+      },
+      {
+        "va": "0x2e2409b4",
+        "instruction": "sw $v0, 0x10($sp)"
+      },
+      {
+        "va": "0x2e2409b8",
+        "instruction": "lw $v0, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e2409bc",
+        "instruction": "lw $t9, -0x7034($gp)"
+      },
+      {
+        "va": "0x2e2409c0",
+        "instruction": "sw $v1, 0x14($sp)"
+      },
+      {
+        "va": "0x2e2409c4",
+        "instruction": "addiu $v0, $v0, -0x517c"
+      },
+      {
+        "va": "0x2e2409c8",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e2409cc",
+        "instruction": "sw $v0, 0x18($sp)"
+      },
+      {
+        "va": "0x2e2409d0",
+        "instruction": "lw $gp, 0x20($sp)"
+      },
+      {
+        "va": "0x2e2409d4",
+        "instruction": "lw $ra, 0x2c($sp)"
+      },
+      {
+        "va": "0x2e2409d8",
+        "instruction": "jr $ra"
+      },
+      {
+        "va": "0x2e2409dc",
+        "instruction": "addiu $sp, $sp, 0x30"
+      }
+    ],
+    "GetColorKey": [
+      {
+        "va": "0x2e240464",
+        "instruction": "lui $gp, 8"
+      },
+      {
+        "va": "0x2e240468",
+        "instruction": "addiu $gp, $gp, -0x4b84"
+      },
+      {
+        "va": "0x2e24046c",
+        "instruction": "addu $gp, $gp, $t9"
+      },
+      {
+        "va": "0x2e240470",
+        "instruction": "addiu $sp, $sp, -0x28"
+      },
+      {
+        "va": "0x2e240474",
+        "instruction": "sw $ra, 0x24($sp)"
+      },
+      {
+        "va": "0x2e240478",
+        "instruction": "sw $gp, 0x18($sp)"
+      },
+      {
+        "va": "0x2e24047c",
+        "instruction": "ori $v0, $zero, 0xffff"
+      },
+      {
+        "va": "0x2e240480",
+        "instruction": "sltu $v1, $a1, $v0"
+      },
+      {
+        "va": "0x2e240484",
+        "instruction": "beqz $v1, 0x2e2404b4"
+      },
+      {
+        "va": "0x2e240488",
+        "instruction": "addiu $v0, $zero, -1"
+      },
+      {
+        "va": "0x2e24048c",
+        "instruction": "lw $v0, -0x7fd8($gp)"
+      },
+      {
+        "va": "0x2e240490",
+        "instruction": "lw $a3, 0x18($a0)"
+      },
+      {
+        "va": "0x2e240494",
+        "instruction": "lw $a2, 0x48($a0)"
+      },
+      {
+        "va": "0x2e240498",
+        "instruction": "lw $t9, -0x7b64($gp)"
+      },
+      {
+        "va": "0x2e24049c",
+        "instruction": "addiu $v0, $v0, -0x5214"
+      },
+      {
+        "va": "0x2e2404a0",
+        "instruction": "addiu $v1, $zero, -1"
+      },
+      {
+        "va": "0x2e2404a4",
+        "instruction": "sw $v0, 0x10($sp)"
+      },
+      {
+        "va": "0x2e2404a8",
+        "instruction": "jalr $t9"
+      },
+      {
+        "va": "0x2e2404ac",
+        "instruction": "sw $v1, 0x14($sp)"
+      },
+      {
+        "va": "0x2e2404b0",
+        "instruction": "lw $gp, 0x18($sp)"
+      },
+      {
+        "va": "0x2e2404b4",
+        "instruction": "lw $ra, 0x24($sp)"
+      },
+      {
+        "va": "0x2e2404b8",
+        "instruction": "jr $ra"
+      },
+      {
+        "va": "0x2e2404bc",
+        "instruction": "addiu $sp, $sp, 0x28"
+      }
+    ],
+    "GetU32": [
+      {
+        "va": "0x2e2403a4",
+        "instruction": "move $v1, $a1"
+      },
+      {
+        "va": "0x2e2403a8",
+        "instruction": "beqz $a2, 0x2e2403c8"
+      },
+      {
+        "va": "0x2e2403ac",
+        "instruction": "lw $a1, 0x14($sp)"
+      },
+      {
+        "va": "0x2e2403b0",
+        "instruction": "sltu $v0, $v1, $a3"
+      },
+      {
+        "va": "0x2e2403b4",
+        "instruction": "beqz $v0, 0x2e2403c8"
+      },
+      {
+        "va": "0x2e2403b8",
+        "instruction": "nop "
+      },
+      {
+        "va": "0x2e2403bc",
+        "instruction": "sll $v0, $v1, 2"
+      },
+      {
+        "va": "0x2e2403c0",
+        "instruction": "addu $v0, $a2, $v0"
+      },
+      {
+        "va": "0x2e2403c4",
+        "instruction": "lw $a1, ($v0)"
+      },
+      {
+        "va": "0x2e2403c8",
+        "instruction": "jr $ra"
+      },
+      {
+        "va": "0x2e2403cc",
+        "instruction": "move $v0, $a1"
+      }
+    ]
+  },
+  "limitations": [
+    "No full native LoadResource symbol exists in the inspected exports; real package parser is Prepare -> BuildData -> BuildImgPathIndex -> BuildIndex.",
+    "This proves static resource format and lookup compatibility, not hardware/DirectFB runtime acceptance.",
+    "BuildData original retained decompilation has unresolved t9/switch; type5 assignment confirmed independently from pinned raw ELF instructions and resolved switch table.",
+    "Only Grundig rc profile Image_res is appended; other brand tables remain outside this append verification.",
+    "No TV, update script, firmware process or flash command executed."
+  ]
+}

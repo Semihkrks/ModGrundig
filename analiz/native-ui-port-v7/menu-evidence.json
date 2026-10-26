@@ -1,0 +1,603 @@
+{
+  "date": "2026-10-24",
+  "skill": "reverse-engineer-anything",
+  "method": "read_only_retained_exports_and_UI_resource_comparison",
+  "notREA_Evidence": true,
+  "targetExecuted": false,
+  "deviceObserved": false,
+  "nativeMenuParityVerified": false,
+  "table": {
+    "path": "analiz/dosya-sistemleri-tam/08_APP/rc/rc_Turkish/bin/Str_res.bin",
+    "sha256": "6649c2771f4de6ea4db9f7b8b8b8b384c1929ab2dabe2f834b215e28a666de1b",
+    "records": 4618
+  },
+  "anchors": [
+    {
+      "item": "Home: Ayarlar",
+      "resource": {
+        "id": 3913,
+        "offset": 68758,
+        "text": "Ayarlar"
+      },
+      "function": "0xd29500",
+      "callsite": "0xd2f594",
+      "basis": "retained_static_MIPS_string_argument_candidate",
+      "source": "analiz/native-ui-port-v3/home-layout/raw-calls.json"
+    },
+    {
+      "item": "Home: Medya Merkezi",
+      "resource": {
+        "id": 4430,
+        "offset": 89609,
+        "text": "Medya Merkezi"
+      },
+      "function": "0xd29500",
+      "callsite": "0xd2f258",
+      "basis": "retained_static_MIPS_string_argument_candidate",
+      "source": "analiz/native-ui-port-v3/home-layout/raw-calls.json"
+    },
+    {
+      "item": "Home: Plan Listesi",
+      "resource": {
+        "id": 3862,
+        "offset": 67675,
+        "text": "Plan Listesi"
+      },
+      "function": "0xd29500",
+      "callsite": "0xd31230",
+      "basis": "retained_static_MIPS_string_argument_candidate",
+      "source": "analiz/native-ui-port-v3/home-layout/raw-calls.json"
+    },
+    {
+      "item": "Home: Kaydedilenler",
+      "resource": {
+        "id": 4502,
+        "offset": 92121,
+        "text": "Kaydedilenler"
+      },
+      "function": "0xd29500",
+      "callsite": "0xd315d4",
+      "basis": "retained_static_MIPS_string_argument_candidate",
+      "source": "analiz/native-ui-port-v3/home-layout/raw-calls.json"
+    },
+    {
+      "item": "Kanal filtre: Tümü",
+      "resource": {
+        "id": 3087,
+        "offset": 47536,
+        "text": "Tümü"
+      },
+      "function": "0x7995b0",
+      "callsite": "0x7a9e54",
+      "basis": "retained_static_MIPS_string_argument_candidate",
+      "source": "analiz/native-ui-port-v3/channel-list/raw-calls.json"
+    },
+    {
+      "item": "Kanal filtre: Radyo",
+      "resource": {
+        "id": 3790,
+        "offset": 66040,
+        "text": "Radyo"
+      },
+      "function": "0x7995b0",
+      "callsite": "0x7aa7bc",
+      "basis": "retained_static_MIPS_string_argument_candidate",
+      "source": "analiz/native-ui-port-v3/channel-list/raw-calls.json"
+    },
+    {
+      "item": "TV Ayarları: Dil & Klavye",
+      "resource": {
+        "id": 4423,
+        "offset": 89420,
+        "text": "Dil & Klavye"
+      },
+      "function": "0xd01710",
+      "callsite": "0xd07094",
+      "widgetId": 10,
+      "constructor": "0xd06fd4",
+      "basis": "retained_widget_string_binding_candidate",
+      "source": "analiz/native/ui-four/general/widget-resource-groups.json"
+    },
+    {
+      "item": "TV Ayarları: Erişilebilirlik Ayarları",
+      "resource": {
+        "id": 3058,
+        "offset": 46782,
+        "text": "Erişilebilirlik Ayarları"
+      },
+      "function": "0xd01710",
+      "callsite": "0xd07774",
+      "widgetId": 11,
+      "constructor": "0xd0762c",
+      "basis": "retained_widget_string_binding_candidate",
+      "source": "analiz/native/ui-four/general/widget-resource-groups.json"
+    },
+    {
+      "item": "TV Ayarları: Aksesuarlar",
+      "resource": {
+        "id": 4209,
+        "offset": 77341,
+        "text": "Aksesuarlar"
+      },
+      "function": "0xd01710",
+      "callsite": "0xd07e54",
+      "widgetId": 12,
+      "constructor": "0xd07d0c",
+      "basis": "retained_widget_string_binding_candidate",
+      "source": "analiz/native/ui-four/general/widget-resource-groups.json"
+    },
+    {
+      "item": "TV Ayarları: Hakkında",
+      "resource": {
+        "id": 4206,
+        "offset": 77286,
+        "text": "Hakkında"
+      },
+      "function": "0xd01710",
+      "callsite": "0xd08c14",
+      "widgetId": 14,
+      "constructor": "0xd08acc",
+      "basis": "retained_widget_string_binding_candidate",
+      "source": "analiz/native/ui-four/general/widget-resource-groups.json"
+    }
+  ],
+  "categoryLabels": [
+    {
+      "id": 3747,
+      "offset": 65034,
+      "text": "Görüntü Ayarları"
+    },
+    {
+      "id": 3997,
+      "offset": 71521,
+      "text": "Ses Ayarları"
+    },
+    {
+      "id": 4091,
+      "offset": 73879,
+      "text": "Kaynak Ayarları"
+    },
+    {
+      "id": 3735,
+      "offset": 64737,
+      "text": "Ebeveyn Ayarları"
+    },
+    {
+      "id": 4568,
+      "offset": 93877,
+      "text": "Zamanlayıcı"
+    },
+    {
+      "id": 141,
+      "offset": 2095,
+      "text": "TV Ayarları"
+    }
+  ],
+  "categoryLabelLimit": "Exact strings; order, visibility, device support and Home navigation edges are not thereby proved. PROFILE has only four original card bindings; host adds parental/timer categories.",
+  "nativeChannelFilterCandidates": [
+    {
+      "resource": {
+        "id": 3087,
+        "offset": 47536,
+        "text": "Tümü"
+      },
+      "callsite": "0x7a9e54"
+    },
+    {
+      "resource": {
+        "id": 3293,
+        "offset": 52778,
+        "text": "Dijital"
+      },
+      "callsite": "0x7aa308"
+    },
+    {
+      "resource": {
+        "id": 3790,
+        "offset": 66040,
+        "text": "Radyo"
+      },
+      "callsite": "0x7aa7bc"
+    },
+    {
+      "resource": {
+        "id": 3095,
+        "offset": 47749,
+        "text": "Analog"
+      },
+      "callsite": "0x7aac70"
+    },
+    {
+      "resource": {
+        "id": 3428,
+        "offset": 57063,
+        "text": "Ücretsiz"
+      },
+      "callsite": "0x7ab124"
+    },
+    {
+      "resource": {
+        "id": 3868,
+        "offset": 67775,
+        "text": "Şifreli"
+      },
+      "callsite": "0x7ab5d8"
+    },
+    {
+      "resource": {
+        "id": 3847,
+        "offset": 67346,
+        "text": "Uydu"
+      },
+      "callsite": "0x7aba8c"
+    }
+  ],
+  "hostCatalogue": {
+    "menus": 24,
+    "rows": 156,
+    "brokenSubmenuTargets": [],
+    "nonExactResourceLabels": [
+      {
+        "menu": "source",
+        "row": "source-ca",
+        "hostLabel": "CA-Modülü",
+        "resource": {
+          "id": 3021,
+          "offset": 45591,
+          "text": "CA - Modülü"
+        },
+        "labelBasis": "retained_static_string_call"
+      },
+      {
+        "menu": "source",
+        "row": "source-auto-update",
+        "hostLabel": "Oto Servis Güncelleme",
+        "resource": {
+          "id": 3020,
+          "offset": 45563,
+          "text": "Oto. Servis Güncelleme"
+        },
+        "labelBasis": "retained_static_string_call"
+      },
+      {
+        "menu": "source",
+        "row": "source-tkgs",
+        "hostLabel": "Türksat TKGS",
+        "resource": {
+          "id": 4045,
+          "offset": 72730,
+          "text": "Türksat TKGS Ayarları"
+        },
+        "labelBasis": "retained_static_string_call"
+      },
+      {
+        "menu": "timer",
+        "row": "timer-clock",
+        "hostLabel": "Tarih & Saat",
+        "resource": {
+          "id": 3264,
+          "offset": 52118,
+          "text": "Tarih & Saat Ayarı"
+        },
+        "labelBasis": "retained_static_string_call"
+      },
+      {
+        "menu": "accessories",
+        "row": "accessories-cec",
+        "hostLabel": "DIGI LINK",
+        "resource": {
+          "id": 36,
+          "offset": 507,
+          "text": "Digilink"
+        },
+        "labelBasis": "retained_static_string_call"
+      },
+      {
+        "menu": "accessories",
+        "row": "accessories-device-list",
+        "hostLabel": "DIGI LINK Aygıtları",
+        "resource": {
+          "id": 36,
+          "offset": 507,
+          "text": "Digilink"
+        },
+        "labelBasis": "retained_static_string_call"
+      },
+      {
+        "menu": "accessories",
+        "row": "accessories-digilink",
+        "hostLabel": "DIGI LINK Ayarları",
+        "resource": {
+          "id": 36,
+          "offset": 507,
+          "text": "Digilink"
+        },
+        "labelBasis": "retained_static_string_call"
+      },
+      {
+        "menu": "recovery",
+        "row": "recovery-save",
+        "hostLabel": "Ayarları Yedekle",
+        "resource": {
+          "id": 4532,
+          "offset": 93111,
+          "text": "Ayar Yedekleme"
+        },
+        "labelBasis": "simulator_subdivision_of_retained_family"
+      },
+      {
+        "menu": "recovery",
+        "row": "recovery-restore",
+        "hostLabel": "Ayarları Geri Yükle",
+        "resource": {
+          "id": 4532,
+          "offset": 93111,
+          "text": "Ayar Yedekleme"
+        },
+        "labelBasis": "simulator_subdivision_of_retained_family"
+      },
+      {
+        "menu": "antenna",
+        "row": "antenna-mode",
+        "hostLabel": "Anten / Kablo / Uydu",
+        "resource": {
+          "id": 3018,
+          "offset": 45523,
+          "text": "Anten Ayarları"
+        },
+        "labelBasis": "simulator_subdivision_of_retained_family"
+      },
+      {
+        "menu": "antenna",
+        "row": "antenna-manual",
+        "hostLabel": "Elle Kanal Arama",
+        "resource": {
+          "id": 3018,
+          "offset": 45523,
+          "text": "Anten Ayarları"
+        },
+        "labelBasis": "simulator_subdivision_of_retained_family"
+      },
+      {
+        "menu": "antenna",
+        "row": "antenna-diseqc12",
+        "hostLabel": "DiSEqC 1.2 Ayarları",
+        "resource": {
+          "id": 3765,
+          "offset": 65357,
+          "text": "DiSEqC 1.2 AYARLARI"
+        },
+        "labelBasis": "retained_static_string_call"
+      },
+      {
+        "menu": "antenna",
+        "row": "antenna-lnb-frequency",
+        "hostLabel": "LNB Frekansı",
+        "resource": {
+          "id": 3524,
+          "offset": 59147,
+          "text": "LNB Frekansı (MHz)"
+        },
+        "labelBasis": "retained_static_string_call"
+      },
+      {
+        "menu": "digilink",
+        "row": "digilink-standby",
+        "hostLabel": "Aygıtı Beklemeye Al",
+        "resource": {
+          "id": 119,
+          "offset": 1658,
+          "text": "Aygıtı beklemeye al"
+        },
+        "labelBasis": "retained_static_string_call"
+      },
+      {
+        "menu": "clock",
+        "row": "clock-current",
+        "hostLabel": "Tarih Saat",
+        "resource": {
+          "id": 3265,
+          "offset": 52142,
+          "text": "Tarih ve Saat"
+        },
+        "labelBasis": "retained_static_string_call"
+      },
+      {
+        "menu": "programTimer",
+        "row": "program-repeat",
+        "hostLabel": "Tekrar",
+        "resource": {
+          "id": 4073,
+          "offset": 73551,
+          "text": "Bir kez"
+        },
+        "labelBasis": "retained_static_string_call"
+      },
+      {
+        "menu": "programTimer",
+        "row": "program-delay",
+        "hostLabel": "Başlangıç",
+        "resource": {
+          "id": 3084,
+          "offset": 47475,
+          "text": "Alarm"
+        },
+        "labelBasis": "simulator_subdivision_of_retained_family"
+      },
+      {
+        "menu": "programTimer",
+        "row": "program-add",
+        "hostLabel": "Alarmı Ekle",
+        "resource": {
+          "id": 3084,
+          "offset": 47475,
+          "text": "Alarm"
+        },
+        "labelBasis": "simulator_subdivision_of_retained_family"
+      },
+      {
+        "menu": "programTimer",
+        "row": "program-list",
+        "hostLabel": "Zamanlayıcı Listesi",
+        "resource": {
+          "id": 3084,
+          "offset": 47475,
+          "text": "Alarm"
+        },
+        "labelBasis": "simulator_subdivision_of_retained_family"
+      },
+      {
+        "menu": "recording",
+        "row": "recording-duration",
+        "hostLabel": "Kayıt Süresi",
+        "resource": {
+          "id": 3795,
+          "offset": 66115,
+          "text": "Kayıt Süresi (dk.)"
+        },
+        "labelBasis": "retained_static_string_call"
+      },
+      {
+        "menu": "recording",
+        "row": "recording-standby",
+        "hostLabel": "Beklemede Kayda Devam",
+        "resource": {
+          "id": 3688,
+          "offset": 63331,
+          "text": "Bekleme Modunda Kayda Devam Edilsin mi?"
+        },
+        "labelBasis": "retained_static_string_call"
+      },
+      {
+        "menu": "recording",
+        "row": "recording-list",
+        "hostLabel": "Kayıt Listesi",
+        "resource": {
+          "id": 4501,
+          "offset": 92097,
+          "text": "Kayıt Listesi Boş"
+        },
+        "labelBasis": "retained_static_string_call"
+      },
+      {
+        "menu": "manualSearch",
+        "row": "search-frequency",
+        "hostLabel": "Frekans (MHz)",
+        "resource": {
+          "id": 3018,
+          "offset": 45523,
+          "text": "Anten Ayarları"
+        },
+        "labelBasis": "simulator_subdivision_of_retained_family"
+      },
+      {
+        "menu": "manualSearch",
+        "row": "search-symbol-rate",
+        "hostLabel": "Sembol Oranı (kSym/s)",
+        "resource": {
+          "id": 3018,
+          "offset": 45523,
+          "text": "Anten Ayarları"
+        },
+        "labelBasis": "simulator_subdivision_of_retained_family"
+      },
+      {
+        "menu": "manualSearch",
+        "row": "search-polarization",
+        "hostLabel": "Polarizasyon",
+        "resource": {
+          "id": 3018,
+          "offset": 45523,
+          "text": "Anten Ayarları"
+        },
+        "labelBasis": "simulator_subdivision_of_retained_family"
+      },
+      {
+        "menu": "manualSearch",
+        "row": "search-start",
+        "hostLabel": "Aramayı Başlat",
+        "resource": {
+          "id": 3018,
+          "offset": 45523,
+          "text": "Anten Ayarları"
+        },
+        "labelBasis": "simulator_subdivision_of_retained_family"
+      }
+    ]
+  },
+  "issues": [
+    {
+      "id": "direct-filter-toggle",
+      "severity": "behavior",
+      "finding": "Both channel tab buttons dispatch filter without index; reducer flips current filter. Clicking selected tab switches away.",
+      "action": "Dispatch explicit filter index for direct tab activation; retain arrows as toggle.",
+      "source": [
+        "ui-preview/app.js",
+        "ui-preview/tv-model.js"
+      ],
+      "status": "fixed_by_frontend_agent_source_verified_browser_check_pending",
+      "resolution": "app.js now sends requested index and ignores clicks on the active tab; keyboard toggle behavior remains unchanged."
+    },
+    {
+      "id": "repeat-label-basis",
+      "severity": "evidence",
+      "finding": "program-repeat uses string0xfe9 Bir kez as source for Tekrar label. This is an option string, not exact label recovery.",
+      "action": "Mark label as host subdivision/adaptation, or find an exact label callsite before claiming retained label.",
+      "source": [
+        "ui-preview/extra-menu-data.js"
+      ]
+    },
+    {
+      "id": "recording-list-label-basis",
+      "severity": "evidence",
+      "finding": "recording-list uses string0x1195 Kayıt Listesi Boş for Kayıt Listesi; empty-state string does not recover action label.",
+      "action": "Mark host adaptation or link exact Kayıt Listesi resource+callsite.",
+      "source": [
+        "ui-preview/extra-menu-data.js"
+      ]
+    },
+    {
+      "id": "digilink-expanded-labels",
+      "severity": "evidence",
+      "finding": "DIGI LINK Aygıtları and DIGI LINK Ayarları reuse string0x24 Digilink; expanded host labels are not exact string recovery.",
+      "action": "Use host subdivision/adaptation label basis.",
+      "source": [
+        "ui-preview/extra-menu-data.js"
+      ]
+    },
+    {
+      "id": "channel-filter-scope",
+      "severity": "scope",
+      "finding": "Tüm Kanallar/Favoriler is a host simplification; retained channel create contains seven native filter labels.",
+      "action": "Preserve useful two-tab host policy, but do not claim recovered original tabs or complete navigation parity.",
+      "source": [
+        "ui-preview/app.js",
+        "analiz/native-ui-port-v3/channel-list/raw-calls.json"
+      ]
+    },
+    {
+      "id": "network-device-scope",
+      "severity": "scope",
+      "finding": "Shared package Home includes APP/WEB and connection strings; user device network/web support is explicitly excluded.",
+      "action": "Keep network/Web/APP disabled; do not promote these package strings to supported device features.",
+      "source": [
+        "ui-preview/native-profile.js",
+        "docs/UI_OZELLIK_KAPSAMI.md"
+      ]
+    }
+  ],
+  "limits": [
+    "Ranges, defaults, port count, program metadata and option grouping are host policy unless separately addressed.",
+    "Informational hardware actions are intentional limits, not evidence of working RF/CEC/PVR/update support.",
+    "Home label Medya Oynatıcı exists in package but retained LayoutItems uses Medya Merkezi at listed sites; host Home assembly/order remains a design adaptation.",
+    "Settings 0x55b6c0 recovery is bounded and does not establish complete dynamic menu semantics.",
+    "No firmware, binary or device command executed; no original source binary modified."
+  ],
+  "continuation_resolution": {
+    "date": "2026-10-24",
+    "metadata_labels": "host_adaptation clarified for program-repeat, recording-list and two DIGI LINK labels",
+    "filter": "explicit index is idempotent",
+    "browser_report": "analiz/ui-modernizasyon/menu-v7/browser-tests.json",
+    "nativeMenuParityVerified": false
+  }
+}

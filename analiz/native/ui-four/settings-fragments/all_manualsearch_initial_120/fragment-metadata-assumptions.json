@@ -1,0 +1,144 @@
+[
+  {
+    "original": {
+      "signature": "undefined NewUI_Settings(MMainFrame * param_1)",
+      "body_bytes": 103000,
+      "entry": "0055b6c0"
+    },
+    "kind": "original_function_metadata_removed",
+    "target_bytes_modified": false
+  },
+  {
+    "natural_end_exclusive": "00562ea0",
+    "assumption": "Additional original instructions from next phase preserve final stores/loop exits before a metadata-only terminating call. Prefix is not owned by this natural phase.",
+    "fragment": "manualsearch_initial",
+    "terminal_call": "00562ed4",
+    "analysis_end_exclusive": "00562edc",
+    "kind": "next_phase_prefix_exit_adapter"
+  },
+  {
+    "gp_hex": "0x10cc310",
+    "t9_seed": "none_fragment_not_PIC_entry",
+    "kind": "fragment_context",
+    "s8_input": "explicit_original_frame_context_parameter_unknown_runtime_pointer",
+    "fragment": "manualsearch_initial"
+  },
+  {
+    "kind": "external_or_unknown_jump_return_abstraction",
+    "fragment": "manualsearch_initial",
+    "original": {
+      "address": "00562eb8",
+      "instruction": "b 0x00562ee4",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "flow_override": "NONE",
+      "flows": [
+        "00562ee4"
+      ],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Return at fragment boundary abstracts continuation; not original standalone function behavior",
+    "modified": {
+      "address": "00562eb8",
+      "instruction": "b 0x00562ee4",
+      "flow_type": "TERMINATOR",
+      "flow_override": "RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    }
+  },
+  {
+    "kind": "adapter_call_return_boundary_abstraction",
+    "fragment": "manualsearch_initial",
+    "original_call": {
+      "address": "00562ed4",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00562edc",
+      "delay_slots": 1
+    },
+    "modified_call": {
+      "address": "00562ed4",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL_TERMINATOR",
+      "flow_override": "CALL_RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Next-phase prefix call terminates the analysis adapter; continuation is retained only in raw CFG."
+  },
+  {
+    "fragment": "manualsearch_initial",
+    "original": {
+      "address": "00561520",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00561528",
+      "delay_slots": 1
+    },
+    "name": "_Unwind_Resume",
+    "kind": "standard_noreturn_callsite_assumption"
+  },
+  {
+    "fragment": "manualsearch_initial",
+    "original": {
+      "address": "005619cc",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005619d4",
+      "delay_slots": 1
+    },
+    "name": "_Unwind_Resume",
+    "kind": "standard_noreturn_callsite_assumption"
+  },
+  {
+    "fragment": "manualsearch_initial",
+    "original": {
+      "address": "00562740",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00562748",
+      "delay_slots": 1
+    },
+    "name": "_Unwind_Resume",
+    "kind": "standard_noreturn_callsite_assumption"
+  },
+  {
+    "fragment": "manualsearch_initial",
+    "original": {
+      "address": "00562780",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00562788",
+      "delay_slots": 1
+    },
+    "name": "_Unwind_Resume",
+    "kind": "standard_noreturn_callsite_assumption"
+  },
+  {
+    "fragment": "manualsearch_initial",
+    "original": {
+      "address": "005627b8",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005627c0",
+      "delay_slots": 1
+    },
+    "name": "abort",
+    "kind": "standard_noreturn_callsite_assumption"
+  }
+]

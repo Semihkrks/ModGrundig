@@ -1,0 +1,41 @@
+# <- this is for comment / total file size must be less than 4KB
+
+#Burn all keys
+
+setenv tmp_cmd 'setenv totalkeycount 12'
+run tmp_cmd
+saveenv
+writeKeyCount
+
+udstar_prkey /Target_GM/script/[[key_hdcp
+
+udstar_prkey /Target_GM/script/[[key_gamma
+
+udstar_prkey /Target_GM/script/[[key_panel
+
+udstar_prkey /Target_GM/script/[[key_mac
+
+udstar_prkey /Target_GM/script/[[key_chasis
+
+udstar_prkey /Target_GM/script/[[key_productserial
+
+udstar_prkey /Target_GM/script/[[key_productcode
+
+udstar_prkey /Target_GM/script/[[key_ci
+
+udstar_prkey /Target_GM/script/[[key_acoustic
+
+udstar_prkey /Target_GM/script/[[key_hdmi13
+
+udstar_prkey /Target_GM/script/[[key_hdmi23
+
+udstar_prkey /Target_GM/script/[[key_hdmi33
+
+setenv tmp_cmd 'setenv productkey 1'
+run tmp_cmd
+setenv tmp_cmd 'setenv restoreProductKeys 1'
+run tmp_cmd
+saveenv
+
+% <- this is end of file symbol
+

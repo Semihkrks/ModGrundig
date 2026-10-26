@@ -1,0 +1,20 @@
+{
+  "name": "ubi-mpool-empty",
+  "synthetic": true,
+  "private_sys_root": "/home/semih/.local/share/grundig-analysis/emulation-lab-v1/topology-fixtures/ubi-mpool-empty/sys",
+  "modeled_directories": [
+    "sys/class/ubi",
+    "sys/class/ubi/ubi0_0"
+  ],
+  "modeled_files": {
+    "class/ubi/ubi0_0/name": "MPOOL",
+    "class/ubi/ubi0_0/data_bytes": "0",
+    "class/ubi/ubi0_0/usable_eb_size": "126976"
+  },
+  "topology_proof": "ubi-model-static.json",
+  "device_nodes_exposed": 0,
+  "ioctl_results_faked": false,
+  "physical_volume_contents": false,
+  "data_bytes_semantics": "zero models a deliberately empty synthetic volume; no device content",
+  "leb_size_semantics": "126976 is fixture geometry matching original UBIFS LEB, not a probed device"
+}

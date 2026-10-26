@@ -1,5 +1,7 @@
 # UI kod yapısı ve davranış kanıtları
 
+23 Ekim devamı: [dört büyük UI gövdesi ve tasarıma geçiş](bilgi-tabani/UI_DORT_BUYUK_FONKSIYON.md). Önceki dört büyük C boşluğunun çıktıları alındı; Settings sınırlanmış çıkarım kullanır. Aşağıdaki sayaçlar 22 Ekim aşamasının tarihsel kapsamıdır.
+
 22 Ekim 2026. Bu belge UI araştırmasının genişletilmiş aşamasıdır. Kaynak firmware değiştirilmedi. Statik kod, kaynak tablosu ve çalışma zamanı gözlemi farklı kanıt türleridir; cihaz gözlemi yoktur.
 
 ## Ölçülen kapsam

@@ -1,0 +1,53 @@
+{
+  "laboratory_contract_tests": {
+    "passed": 14,
+    "failed": 0,
+    "target_execution_in_unit_tests": false,
+    "substitution_regressions": [
+      "setup rejects substituted executable before --version",
+      "prepare rejects before copying",
+      "run ignores editable tool-report SHA authority"
+    ]
+  },
+  "actual_isolation_probe": true,
+  "original_and_v2": {
+    "exit_codes": [
+      134,
+      134
+    ],
+    "syscall_counts_equal": true,
+    "library_paths_equal": true,
+    "shared_library_opened_count": 112,
+    "last_path": {
+      "call": "open",
+      "path": "/sys/class/ubi",
+      "result": "-1 errno=2 (No such file or directory)"
+    },
+    "ui_validated": false,
+    "patch_validated_by_startup": false
+  },
+  "powershell_launcher_tested": true,
+  "original_v2_v3": {
+    "exit_codes": {
+      "original": 134,
+      "v2": 134,
+      "v3": 134
+    },
+    "syscall_counts_equal": true,
+    "library_paths_equal": true,
+    "shared_library_opened_counts": {
+      "original": 112,
+      "v2": 112,
+      "v3": 112
+    },
+    "v3_last_path": {
+      "call": "open",
+      "path": "/sys/class/ubi",
+      "result": "-1 errno=2 (No such file or directory)"
+    },
+    "ui_validated": false,
+    "patch_validated_by_startup": false
+  },
+  "qemu_executable_authority": "compiled-in fixed SHA, checked before execution and before copying; host-tools.json is informational only",
+  "powershell_v3_launcher_tested": true
+}

@@ -1,0 +1,264 @@
+{
+  "C_source": "analiz/native/ui-four/settings/reduced-recovery180/0055b6c0.c",
+  "C_sha256": "6a4f362e3e7ccc398d78d84178e6163c91eb20930db920f3415f3061df5fd68e",
+  "C_bytes": 345653,
+  "C_lines": 7291,
+  "classification": "full-range C control-flow artifact with protorecovery/protorecovery_b/localrecovery disabled; not fully typed original source or default full-recovery C",
+  "input_signature": {
+    "C_line": 4,
+    "text": "void ArUIManager::NewUI_Settings(ArUIManager *manager,MMainFrame *frame)",
+    "raw_evidence": [
+      "0x55b6e8 saves manager a0",
+      "0x55b6ec saves frame a1",
+      "0x55b718 loads saved frame as MoveWindowTo receiver"
+    ]
+  },
+  "focus_condition": {
+    "C_line": 2100,
+    "text": "if (*(int *)(iStack_1590 + 0x3c) == *(int *)(iStack_1590 + 0x180)) {",
+    "raw_branch": "0x55f868",
+    "raw_call": "0x55f884",
+    "C_call_GOT_index": "-0xda8",
+    "comparison": "frame+0x3c == frame+0x180"
+  },
+  "critical_GOT_call_counts": [
+    {
+      "target": "__dynamic_cast",
+      "GOT_slot": "0x10c6984",
+      "C_GP_index": "-0x1663",
+      "raw_call_candidates": 35,
+      "C_slot_occurrences": 35,
+      "count_matches": true,
+      "interpretation": "static slot occurrence count; argument/type recovery remains disabled"
+    },
+    {
+      "target": "MMainFrame::SwitchFocusTo(MWidget*)",
+      "GOT_slot": "0x10c8c70",
+      "C_GP_index": "-0xda8",
+      "raw_call_candidates": 1,
+      "C_slot_occurrences": 1,
+      "count_matches": true,
+      "interpretation": "static slot occurrence count; argument/type recovery remains disabled"
+    },
+    {
+      "target": "MWidget::Hide()",
+      "GOT_slot": "0x10c5068",
+      "C_GP_index": "-0x1caa",
+      "raw_call_candidates": 8,
+      "C_slot_occurrences": 8,
+      "count_matches": true,
+      "interpretation": "static slot occurrence count; argument/type recovery remains disabled"
+    },
+    {
+      "target": "MWidget::QueryFlag(unsigned char)",
+      "GOT_slot": "0x10ca574",
+      "C_GP_index": "-0x767",
+      "raw_call_candidates": 8,
+      "C_slot_occurrences": 8,
+      "count_matches": true,
+      "interpretation": "static slot occurrence count; argument/type recovery remains disabled"
+    },
+    {
+      "target": "MImg::Set(unsigned short)",
+      "GOT_slot": "0x10cba00",
+      "C_GP_index": "-0x244",
+      "raw_call_candidates": 341,
+      "C_slot_occurrences": 341,
+      "count_matches": true,
+      "interpretation": "static slot occurrence count; argument/type recovery remains disabled"
+    },
+    {
+      "target": "ArUIManager::FindScrollLists(Container*, std::vector<ScrollListContainer*, std::allocator<ScrollListContainer*> >*, std::vector<AbsContainer*, std::allocator<AbsContainer*> >*)",
+      "GOT_slot": "0x10c70b0",
+      "C_GP_index": "-0x1498",
+      "raw_call_candidates": 1,
+      "C_slot_occurrences": 1,
+      "count_matches": true,
+      "interpretation": "static slot occurrence count; argument/type recovery remains disabled"
+    },
+    {
+      "target": "abort",
+      "GOT_slot": "0x10cc6c0",
+      "C_GP_index": "0xec",
+      "raw_call_candidates": 78,
+      "C_slot_occurrences": 78,
+      "count_matches": true,
+      "interpretation": "static slot occurrence count; argument/type recovery remains disabled"
+    },
+    {
+      "target": "_Unwind_Resume",
+      "GOT_slot": "0x10c918c",
+      "C_GP_index": "-0xc61",
+      "raw_call_candidates": 37,
+      "C_slot_occurrences": 0,
+      "count_matches": false,
+      "interpretation": "EH transfer absent from printed normal C; original LSDA/exception semantics are not reconstructed"
+    }
+  ],
+  "switch_cases": [
+    {
+      "raw_dispatch": "0x55e82c",
+      "case_entry": "0x55e834",
+      "widget_id_from_raw_selector": "0x50",
+      "image_id_from_raw_arguments": "0x127",
+      "C_line": 1897,
+      "C_MImg_Set_slot_occurrences": 4,
+      "raw_call_sites": [
+        "0x55e848",
+        "0x55e868",
+        "0x55e888",
+        "0x55e8a8"
+      ],
+      "argument_limit": "C prints no arguments for these GOT calls; image ID is established by raw instruction arguments, not inferred from empty C call syntax"
+    },
+    {
+      "raw_dispatch": "0x55e82c",
+      "case_entry": "0x55e8bc",
+      "widget_id_from_raw_selector": "0x51",
+      "image_id_from_raw_arguments": "0x129",
+      "C_line": 1903,
+      "C_MImg_Set_slot_occurrences": 4,
+      "raw_call_sites": [
+        "0x55e8d0",
+        "0x55e8f0",
+        "0x55e910",
+        "0x55e930"
+      ],
+      "argument_limit": "C prints no arguments for these GOT calls; image ID is established by raw instruction arguments, not inferred from empty C call syntax"
+    },
+    {
+      "raw_dispatch": "0x55e82c",
+      "case_entry": "0x55e944",
+      "widget_id_from_raw_selector": "0x52",
+      "image_id_from_raw_arguments": "0x124",
+      "C_line": 1909,
+      "C_MImg_Set_slot_occurrences": 4,
+      "raw_call_sites": [
+        "0x55e958",
+        "0x55e978",
+        "0x55e998",
+        "0x55e9b8"
+      ],
+      "argument_limit": "C prints no arguments for these GOT calls; image ID is established by raw instruction arguments, not inferred from empty C call syntax"
+    },
+    {
+      "raw_dispatch": "0x55e82c",
+      "case_entry": "0x55e9cc",
+      "widget_id_from_raw_selector": "0x53",
+      "image_id_from_raw_arguments": "0x128",
+      "C_line": 1915,
+      "C_MImg_Set_slot_occurrences": 4,
+      "raw_call_sites": [
+        "0x55e9e0",
+        "0x55ea00",
+        "0x55ea20",
+        "0x55ea40"
+      ],
+      "argument_limit": "C prints no arguments for these GOT calls; image ID is established by raw instruction arguments, not inferred from empty C call syntax"
+    },
+    {
+      "raw_dispatch": "0x55e82c",
+      "case_entry": "0x55ea54",
+      "widget_id_from_raw_selector": "0x54",
+      "image_id_from_raw_arguments": "0x12b",
+      "C_line": 1921,
+      "C_MImg_Set_slot_occurrences": 4,
+      "raw_call_sites": [
+        "0x55ea68",
+        "0x55ea88",
+        "0x55eaa8",
+        "0x55eac8"
+      ],
+      "argument_limit": "C prints no arguments for these GOT calls; image ID is established by raw instruction arguments, not inferred from empty C call syntax"
+    },
+    {
+      "raw_dispatch": "0x55f590",
+      "case_entry": "0x55f598",
+      "widget_id_from_raw_selector": "0x50",
+      "image_id_from_raw_arguments": "0x127",
+      "C_line": 2068,
+      "C_MImg_Set_slot_occurrences": 4,
+      "raw_call_sites": [
+        "0x55f5ac",
+        "0x55f5cc",
+        "0x55f5ec",
+        "0x55f60c"
+      ],
+      "argument_limit": "C prints no arguments for these GOT calls; image ID is established by raw instruction arguments, not inferred from empty C call syntax"
+    },
+    {
+      "raw_dispatch": "0x55f590",
+      "case_entry": "0x55f620",
+      "widget_id_from_raw_selector": "0x51",
+      "image_id_from_raw_arguments": "0x129",
+      "C_line": 2074,
+      "C_MImg_Set_slot_occurrences": 4,
+      "raw_call_sites": [
+        "0x55f634",
+        "0x55f654",
+        "0x55f674",
+        "0x55f694"
+      ],
+      "argument_limit": "C prints no arguments for these GOT calls; image ID is established by raw instruction arguments, not inferred from empty C call syntax"
+    },
+    {
+      "raw_dispatch": "0x55f590",
+      "case_entry": "0x55f6a8",
+      "widget_id_from_raw_selector": "0x52",
+      "image_id_from_raw_arguments": "0x124",
+      "C_line": 2080,
+      "C_MImg_Set_slot_occurrences": 4,
+      "raw_call_sites": [
+        "0x55f6bc",
+        "0x55f6dc",
+        "0x55f6fc",
+        "0x55f71c"
+      ],
+      "argument_limit": "C prints no arguments for these GOT calls; image ID is established by raw instruction arguments, not inferred from empty C call syntax"
+    },
+    {
+      "raw_dispatch": "0x55f590",
+      "case_entry": "0x55f730",
+      "widget_id_from_raw_selector": "0x53",
+      "image_id_from_raw_arguments": "0x128",
+      "C_line": 2086,
+      "C_MImg_Set_slot_occurrences": 4,
+      "raw_call_sites": [
+        "0x55f744",
+        "0x55f764",
+        "0x55f784",
+        "0x55f7a4"
+      ],
+      "argument_limit": "C prints no arguments for these GOT calls; image ID is established by raw instruction arguments, not inferred from empty C call syntax"
+    },
+    {
+      "raw_dispatch": "0x55f590",
+      "case_entry": "0x55f7b8",
+      "widget_id_from_raw_selector": "0x54",
+      "image_id_from_raw_arguments": "0x12b",
+      "C_line": 2092,
+      "C_MImg_Set_slot_occurrences": 4,
+      "raw_call_sites": [
+        "0x55f7cc",
+        "0x55f7ec",
+        "0x55f80c",
+        "0x55f82c"
+      ],
+      "argument_limit": "C prints no arguments for these GOT calls; image ID is established by raw instruction arguments, not inferred from empty C call syntax"
+    }
+  ],
+  "goto_Antenna_labels": {
+    "LAB_00566240": "0x566240 fallback test",
+    "LAB_005662d4": "0x5662d4 accepted +0x184/+0x188 child identity"
+  },
+  "normal_return_C_lines": [
+    6794
+  ],
+  "limitations": [
+    "No statement establishes runtime device observations.",
+    "C callees often retain zero printed arguments and extraout temporaries; raw assembly/resource map is primary for argument values.",
+    "C declares void, but input ABI helper preserved undefined return metadata; original return semantics are not proven by printer inference.",
+    "37 raw _Unwind_Resume sites are not printed as normal C calls; implicit exception/LSDA edges remain separate.",
+    "C-only mode has no usable HighFunction/pcode; the firstpass flow result is a separate diagnostic query."
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-25",
+  "native_tests": {
+    "command": "python -m unittest scripts/test_native_frame_v72.py scripts/test_native_frame_v71.py",
+    "passed": 11
+  },
+  "http_default": {
+    "variant": "v7.2-tv",
+    "scene": "volume",
+    "volume": 0,
+    "mute": false,
+    "digits": "123",
+    "channel_resolution": null,
+    "specimen_layout": null,
+    "full_native_menu_executed": false,
+    "surface_geometry": {
+      "outer_frame": [
+        0,
+        160,
+        160,
+        725
+      ],
+      "root_local": [
+        80,
+        126,
+        68,
+        490
+      ],
+      "root": [
+        80,
+        286,
+        68,
+        490
+      ],
+      "panel": [
+        80,
+        306,
+        68,
+        450
+      ],
+      "speaker": [
+        92,
+        699,
+        44,
+        44
+      ],
+      "track": [
+        111,
+        392,
+        6,
+        276
+      ],
+      "thumb": [
+        117,
+        658,
+        25,
+        25
+      ]
+    },
+    "panel_style": {
+      "image_resource_id": 2180,
+      "image_enabled": true,
+      "normal_color_resource_id": 1,
+      "root_final_image_resource_id": 1485,
+      "root_image_is_null": true,
+      "flag_source": "Static constructor words0xfbb550/0xfbb55c and retained default flag; OnCreate not executed"
+    },
+    "verified_pins": {
+      "manifest_sha256": "e5ea9a518c57265c15be3d3cf57bce569abbc4fe8ea9b94dfe7dca13b117657c",
+      "overlay_files": 13
+    },
+    "native_instructions": {
+      "DrawBackground": 212,
+      "RenderImageToSurface": 187,
+      "DrawBorders": 17,
+      "DrawString": 157,
+      "CalculateTextDrawFlags": 66
+    },
+    "boundaries": "Bounded MUF instructions, Pillow framebuffer, modeled parent clipping and mocked services; no running TV, tuner or GOP driver"
+  },
+  "browser": {
+    "keyboard_0_100_mute_quick_toggle": "not_executed",
+    "chrome_devtools": "Existing browser profile lock error",
+    "computer_use": "Stopped by tool policy: current browser URL could not be determined confidently on Windows",
+    "attempted_action": "cua.getApp({windowId:2491964})",
+    "policy_stop_exact": "Computer Use has been stopped for this turn because it could not determine the current browser URL on Windows with enough confidence to enforce policy. Stop your work and send a final message noting why Computer Use ended."
+  },
+  "visual_inspection": [
+    "normal35.png",
+    "mute35.png",
+    "zero0.png"
+  ],
+  "scope": "Bounded native RefreshVolumeUI and MUF paint, host Pillow; no full TV process",
+  "http_transition_sequence": [
+    {
+      "volume": 0,
+      "mute": 0,
+      "panel": 2180,
+      "png_sha256": "d41eb08766e9d42c9a96eb1f6e726029d2e55a225aab35e83d185341811f4af8"
+    },
+    {
+      "volume": 100,
+      "mute": 0,
+      "panel": 674,
+      "png_sha256": "0630a94d5b3e474a21d900273498ae6e2f9ce23c4ae7fe467da3f17dd1525757"
+    },
+    {
+      "volume": 35,
+      "mute": 1,
+      "panel": 2180,
+      "png_sha256": "252a5a8be9628e8e311534ef6a6f6582395cfd00e2c7a3cf118875ad062d51ec"
+    },
+    {
+      "volume": 35,
+      "mute": 0,
+      "panel": 674,
+      "png_sha256": "848d82e7ce6dfb53e8102f9006d5e3acb9a9b03abbce71812f4c9bdc9c6c0693"
+    },
+    {
+      "volume": 35,
+      "mute": 1,
+      "panel": 2180,
+      "png_sha256": "252a5a8be9628e8e311534ef6a6f6582395cfd00e2c7a3cf118875ad062d51ec"
+    },
+    {
+      "volume": 35,
+      "mute": 0,
+      "panel": 674,
+      "png_sha256": "848d82e7ce6dfb53e8102f9006d5e3acb9a9b03abbce71812f4c9bdc9c6c0693"
+    }
+  ],
+  "regression_tests": {
+    "command": "python -m unittest scripts/test_native_frame_viewer.py scripts/test_native_frame_rehost.py scripts/test_native_volume_state_rehost.py",
+    "ran": 31,
+    "passed": 30,
+    "skipped": 1
+  }
+}

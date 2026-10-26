@@ -1,0 +1,118 @@
+0x2e21a2d0
+2e21a2d0: lui $gp, 0xa
+2e21a2d4: addiu $gp, $gp, 0x1610
+2e21a2d8: addu $gp, $gp, $t9
+2e21a2dc: addiu $sp, $sp, -0x28
+2e21a2e0: sw $ra, 0x24($sp)
+2e21a2e4: sw $s2, 0x20($sp)
+2e21a2e8: sw $s1, 0x1c($sp)
+2e21a2ec: sw $s0, 0x18($sp)
+2e21a2f0: sw $gp, 0x10($sp)
+2e21a2f4: lw $t9, -0x7698($gp)
+2e21a2f8: move $s1, $a1
+2e21a2fc: addiu $a1, $zero, 2
+2e21a300: andi $s0, $a2, 0xff
+2e21a304: jalr $t9
+2e21a308: move $s2, $a0
+2e21a30c: beqz $v0, 0x2e21a320
+2e21a310: lw $gp, 0x10($sp)
+2e21a314: lw $v0, 0x24($s2)
+2e21a318: bnez $v0, 0x2e21a338
+2e21a31c: nop 
+2e21a320: lw $ra, 0x24($sp)
+2e21a324: lw $s2, 0x20($sp)
+2e21a328: lw $s1, 0x1c($sp)
+2e21a32c: lw $s0, 0x18($sp)
+2e21a330: jr $ra
+2e21a334: addiu $sp, $sp, 0x28
+2e21a338: lw $v0, 0x28($s2)
+2e21a33c: beqz $v0, 0x2e21a324
+2e21a340: lw $ra, 0x24($sp)
+2e21a344: lw $v0, ($s2)
+2e21a348: move $a1, $s1
+2e21a34c: move $a2, $s0
+2e21a350: lw $t9, 0x30($v0)
+2e21a354: jalr $t9
+2e21a358: move $a0, $s2
+2e21a35c: lbu $v0, 0x261($s2)
+2e21a360: beqz $v0, 0x2e21a320
+2e21a364: lw $gp, 0x10($sp)
+2e21a368: lw $t9, -0x6f98($gp)
+2e21a36c: jalr $t9
+2e21a370: move $a0, $s2
+2e21a374: lbu $v1, 0x262($s2)
+2e21a378: beq $v1, $v0, 0x2e21a320
+2e21a37c: lw $gp, 0x10($sp)
+2e21a380: lw $s0, 0x250($s2)
+2e21a384: lw $v0, 0x254($s2)
+2e21a388: beq $s0, $v0, 0x2e21a3c4
+2e21a38c: move $s1, $s0
+2e21a390: lw $t9, -0x6f98($gp)
+2e21a394: move $a0, $s2
+2e21a398: jalr $t9
+2e21a39c: lw $s0, ($s1)
+2e21a3a0: lw $gp, 0x10($sp)
+2e21a3a4: move $a1, $v0
+2e21a3a8: move $a0, $s0
+2e21a3ac: lw $t9, -0x7d88($gp)
+2e21a3b0: jalr $t9
+2e21a3b4: addiu $s1, $s1, 4
+2e21a3b8: lw $v0, 0x254($s2)
+2e21a3bc: bne $s1, $v0, 0x2e21a390
+2e21a3c0: lw $gp, 0x10($sp)
+2e21a3c4: lw $t9, -0x6f98($gp)
+2e21a3c8: jalr $t9
+2e21a3cc: move $a0, $s2
+2e21a3d0: lw $gp, 0x10($sp)
+2e21a3d4: b 0x2e21a320
+2e21a3d8: sb $v0, 0x262($s2)
+0x2e281f14
+2e281f14: lui $gp, 4
+2e281f18: addiu $gp, $gp, -0x6634
+2e281f1c: addu $gp, $gp, $t9
+2e281f20: addiu $sp, $sp, -0x28
+2e281f24: sw $ra, 0x24($sp)
+2e281f28: sw $s2, 0x20($sp)
+2e281f2c: sw $s1, 0x1c($sp)
+2e281f30: sw $s0, 0x18($sp)
+2e281f34: sw $gp, 0x10($sp)
+2e281f38: lw $t9, -0x7698($gp)
+2e281f3c: move $s2, $a1
+2e281f40: addiu $a1, $zero, 2
+2e281f44: andi $s1, $a2, 0xff
+2e281f48: jalr $t9
+2e281f4c: move $s0, $a0
+2e281f50: beqz $v0, 0x2e281f64
+2e281f54: lw $gp, 0x10($sp)
+2e281f58: lw $v0, 0x24($s0)
+2e281f5c: bnez $v0, 0x2e281f7c
+2e281f60: nop 
+2e281f64: lw $ra, 0x24($sp)
+2e281f68: lw $s2, 0x20($sp)
+2e281f6c: lw $s1, 0x1c($sp)
+2e281f70: lw $s0, 0x18($sp)
+2e281f74: jr $ra
+2e281f78: addiu $sp, $sp, 0x28
+2e281f7c: lw $v0, 0x28($s0)
+2e281f80: beqz $v0, 0x2e281f68
+2e281f84: lw $ra, 0x24($sp)
+2e281f88: lw $v0, ($s0)
+2e281f8c: move $a2, $s1
+2e281f90: move $a0, $s0
+2e281f94: lw $t9, 0x30($v0)
+2e281f98: jalr $t9
+2e281f9c: move $a1, $s2
+2e281fa0: lbu $v0, 0x17e($s0)
+2e281fa4: bnez $v0, 0x2e281fd0
+2e281fa8: lw $gp, 0x10($sp)
+2e281fac: lw $t9, -0x6f24($gp)
+2e281fb0: move $a0, $s0
+2e281fb4: move $a1, $s2
+2e281fb8: lw $ra, 0x24($sp)
+2e281fbc: lw $s2, 0x20($sp)
+2e281fc0: lw $s1, 0x1c($sp)
+2e281fc4: lw $s0, 0x18($sp)
+2e281fc8: jr $t9
+2e281fcc: addiu $sp, $sp, 0x28
+2e281fd0: b 0x2e281fb0
+2e281fd4: lw $t9, -0x7a88($gp)

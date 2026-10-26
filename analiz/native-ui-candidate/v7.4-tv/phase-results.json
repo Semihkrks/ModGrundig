@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-26",
+  "revision": "v7.4-tv",
+  "source_revision": "v7.1-tv",
+  "status": "PASS_OFFLINE_REVIEW_CANDIDATE_ONLY",
+  "working_device_baseline": "v7.1-tv",
+  "rejected_device_revision": "v7.3-tv",
+  "source_v73_binary_used": false,
+  "root_cause_candidate": "Missing GP restore after virtual MoveRect; reproduced ABI failure; no device dump to establish exclusivity",
+  "required_gp_restore": {
+    "va": "0xfb8200",
+    "word": "0x8fdc0018"
+  },
+  "overlay_files": 14,
+  "changed_original_files": 11,
+  "new_private_png_files": 3,
+  "app_files_verified": 2374,
+  "app_metadata_verified": 2777,
+  "unchanged_regular_files": 2360,
+  "app_sha256": "05cde89f70003ede4cba731b03076352fa2b3513dac9fb0e1531f580ee847f9d",
+  "bin_sha256": "a5c50fe6fafdf9e7c697811c25f2b4b5e2fea98a0d199c1401bf1cfc88a41b2b",
+  "bin_bytes": 42483736,
+  "rar_sha256": "d50f5e227baab35243995869c2c913eacd72a13dc572f3a034fa436548a4a883",
+  "rar_bytes": 43141176,
+  "payloads_checked": 14,
+  "unchanged_payloads": 13,
+  "committed_crc_nodes": 19067,
+  "slot_free_bytes": 672411,
+  "tests": {
+    "regression_suites_passed": 6,
+    "exhaustive_volume_mute_cases": 202,
+    "all_import_abi_poison_cases": 10,
+    "arc_state_comparisons": 12,
+    "native_pixel_cases": 4,
+    "http_routes": 6,
+    "v73_rejected_in_viewer": true,
+    "rar_readers": [
+      "7-Zip PASS",
+      "WinRAR PASS"
+    ]
+  },
+  "badge_screen_rect": [
+    1784,
+    74,
+    52,
+    52
+  ],
+  "badge_outer_rect": [
+    1728,
+    19,
+    160,
+    230
+  ],
+  "normal_fill": "0xff0082d4",
+  "muted_fill": "0xff898989",
+  "tv_tested": false,
+  "flash_ready": false,
+  "usb_written": false,
+  "original_firmware_modified": false,
+  "skills": [
+    "reverse-engineer-anything"
+  ],
+  "subagents": "Initial research; quota exhausted; primary completed GP diagnosis, safe-base integration and validation",
+  "pending": [
+    "Physical device GP fix confirmation",
+    "Real timer/badge and ARC visual check",
+    "Numeric-popup badge collision handling",
+    "Actual numeric destination channel-name widget/DB bridge"
+  ],
+  "numeric_channel_name_installed": false
+}

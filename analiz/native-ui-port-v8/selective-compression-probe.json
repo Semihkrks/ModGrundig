@@ -1,0 +1,43 @@
+{
+  "status": "pass",
+  "host_mkfs_sha256": "f424c5cb122bc24a10858512926fbe5a29c74b4b6a80c5e347bd7e9aa07f48bb",
+  "command": [
+    "/home/semih/.local/share/grundig-analysis/native-build-v1/tools/mtd/usr/sbin/mkfs.ubifs",
+    "-r",
+    "/home/semih/.local/share/grundig-analysis/native-build-v1/selective-compression-probe-v8/files",
+    "-m",
+    "2048",
+    "-e",
+    "126976",
+    "-c",
+    "321",
+    "-o",
+    "/home/semih/.local/share/grundig-analysis/native-build-v1/selective-compression-probe-v8/probe.ubifs",
+    "-x",
+    "none",
+    "-f",
+    "8",
+    "-l",
+    "4",
+    "-p",
+    "1"
+  ],
+  "compression_types": {
+    "1": 8,
+    "0": 8
+  },
+  "index_crc": {
+    "committed_nodes_crc_verified": 25,
+    "node_type_counts": {
+      "9": 4,
+      "1": 16,
+      "0": 3,
+      "2": 2
+    },
+    "journal_replay": false
+  },
+  "method": "Default none; FS_COMPR_FL set only on compressed.dat; actual committed DATA_NODE codecs checked",
+  "originals_modified": false,
+  "target_executed": false,
+  "upstream_source": "https://kernel.googlesource.com/pub/scm/linux/kernel/git/rw/mtd-utils/+/refs/heads/master/mkfs.ubifs/mkfs.ubifs.c"
+}

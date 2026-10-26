@@ -1,0 +1,199 @@
+[
+  {
+    "kind": "original_function_metadata_removed",
+    "target_bytes_modified": false,
+    "original": {
+      "body_bytes": 103000,
+      "entry": "0055b6c0",
+      "signature": "undefined NewUI_Settings(MMainFrame * param_1)"
+    }
+  },
+  {
+    "terminal_call": "00568684",
+    "analysis_end_exclusive": "0056868c",
+    "kind": "next_phase_prefix_exit_adapter",
+    "natural_end_exclusive": "00568650",
+    "assumption": "Additional original instructions from next phase preserve final stores/loop exits before a metadata-only terminating call. Prefix is not owned by this natural phase.",
+    "fragment": "scroll_collection_and_children"
+  },
+  {
+    "s8_input": "explicit_original_frame_context_parameter_unknown_runtime_pointer",
+    "fragment": "scroll_collection_and_children",
+    "gp_hex": "0x10cc310",
+    "t9_seed": "none_fragment_not_PIC_entry",
+    "kind": "fragment_context"
+  },
+  {
+    "kind": "external_or_unknown_jump_return_abstraction",
+    "fragment": "scroll_collection_and_children",
+    "original": {
+      "address": "00566ccc",
+      "instruction": "b 0x005792c4",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "flow_override": "NONE",
+      "flows": [
+        "005792c4"
+      ],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Return at fragment boundary abstracts continuation; not original standalone function behavior",
+    "modified": {
+      "address": "00566ccc",
+      "instruction": "b 0x005792c4",
+      "flow_type": "TERMINATOR",
+      "flow_override": "RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    }
+  },
+  {
+    "kind": "external_or_unknown_jump_return_abstraction",
+    "fragment": "scroll_collection_and_children",
+    "original": {
+      "address": "00566f58",
+      "instruction": "b 0x005792c4",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "flow_override": "NONE",
+      "flows": [
+        "005792c4"
+      ],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Return at fragment boundary abstracts continuation; not original standalone function behavior",
+    "modified": {
+      "address": "00566f58",
+      "instruction": "b 0x005792c4",
+      "flow_type": "TERMINATOR",
+      "flow_override": "RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    }
+  },
+  {
+    "kind": "external_or_unknown_jump_return_abstraction",
+    "fragment": "scroll_collection_and_children",
+    "original": {
+      "address": "005671e4",
+      "instruction": "b 0x005792c4",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "flow_override": "NONE",
+      "flows": [
+        "005792c4"
+      ],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Return at fragment boundary abstracts continuation; not original standalone function behavior",
+    "modified": {
+      "address": "005671e4",
+      "instruction": "b 0x005792c4",
+      "flow_type": "TERMINATOR",
+      "flow_override": "RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    }
+  },
+  {
+    "kind": "external_or_unknown_jump_return_abstraction",
+    "fragment": "scroll_collection_and_children",
+    "original": {
+      "address": "00567470",
+      "instruction": "b 0x005792c4",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "flow_override": "NONE",
+      "flows": [
+        "005792c4"
+      ],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Return at fragment boundary abstracts continuation; not original standalone function behavior",
+    "modified": {
+      "address": "00567470",
+      "instruction": "b 0x005792c4",
+      "flow_type": "TERMINATOR",
+      "flow_override": "RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    }
+  },
+  {
+    "kind": "external_or_unknown_jump_return_abstraction",
+    "fragment": "scroll_collection_and_children",
+    "original": {
+      "address": "00567fa8",
+      "instruction": "b 0x005792c4",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "flow_override": "NONE",
+      "flows": [
+        "005792c4"
+      ],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Return at fragment boundary abstracts continuation; not original standalone function behavior",
+    "modified": {
+      "address": "00567fa8",
+      "instruction": "b 0x005792c4",
+      "flow_type": "TERMINATOR",
+      "flow_override": "RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    }
+  },
+  {
+    "kind": "external_or_unknown_jump_return_abstraction",
+    "fragment": "scroll_collection_and_children",
+    "original": {
+      "address": "00568668",
+      "instruction": "b 0x00568694",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "flow_override": "NONE",
+      "flows": [
+        "00568694"
+      ],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Return at fragment boundary abstracts continuation; not original standalone function behavior",
+    "modified": {
+      "address": "00568668",
+      "instruction": "b 0x00568694",
+      "flow_type": "TERMINATOR",
+      "flow_override": "RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    }
+  },
+  {
+    "kind": "adapter_call_return_boundary_abstraction",
+    "fragment": "scroll_collection_and_children",
+    "original_call": {
+      "address": "00568684",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0056868c",
+      "delay_slots": 1
+    },
+    "modified_call": {
+      "address": "00568684",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL_TERMINATOR",
+      "flow_override": "CALL_RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Next-phase prefix call terminates the analysis adapter; continuation is retained only in raw CFG."
+  }
+]

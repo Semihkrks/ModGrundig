@@ -65,7 +65,7 @@ def main():
                  'Girdi/çıktı türleri, sınır kontrolleri, hata yolları ve servis yan etkileri kritik fonksiyon bazında assembly ile doğrulanmalıdır. '
                  'İlk örnekler isim ve boyutla seçilir; tamamlanmış semantik inceleme sayılmaz.',
                  'Dinamik loader kapsamı, sanal fonksiyon hedefleri, callback kaydı ve cihazın aktif koşulları açık kalabilir.','']
-        (modules/module_name).write_text('\n'.join(body),encoding='utf-8')
+        (modules/module_name).write_text('\n'.join(body),encoding='utf-8',newline='\n')
         rows.append(f"| [`{e['path']}`](moduller/{module_name}) | {status} | {s['functions'] if s else 'önceki UI indeksi' if existing else '—'} | {str(s['sample_decompile_complete'])+'/'+str(s['sample_decompile_attempted']) if s else 'odaklı UI' if existing else '—'} |")
     summaries=[read(p) for p in (A/'native/system-modules').glob('*/summary.json')]
     totals.update(module_paths=len(inventory['elfs']),unique_artifacts=len(by_sha),
@@ -85,6 +85,10 @@ def main():
     if focused_file.is_file():
         focused=read(focused_file)
         status['focused_analysis']={k:focused[k] for k in ['unique_selected_entries','unique_complete_entries','records']}
+    four_file=A/'ui-dort-buyuk-durum.json'
+    if four_file.is_file():
+        four=read(four_file)
+        status['four_large_UI']={k:four[k] for k in ['full_function_C_complete','default_full_inference_C_complete','modified_inference_C_complete','requested_functions']}
     partition_file=A/'native/analysis-partitions/manifest.json'
     if partition_file.is_file():
         partition=read(partition_file)
@@ -92,7 +96,7 @@ def main():
             'chunks':sum(len(m['chunks']) for m in partition['modules']),
             'internal_functions':sum(m['internal_non_thunk_records'] for m in partition['modules']),
             'queue_executed':False}
-    (A/'asama-durum.json').write_text(json.dumps(status,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (A/'asama-durum.json').write_text(json.dumps(status,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     overview=['# Grundig firmware bilgi tabanı','',
               'Öncelik: özgün firmware’i değiştirmeden mimariyi ve davranışları kanıtlarıyla çözmek. '
               'Cihazda çalıştırma, repack veya yükleme yapılmadı.','',
@@ -101,6 +105,8 @@ def main():
               '[Servis davranışları](SERVISLER.md) · [Bağımlılık araştırması](BAGIMLILIKLAR.md) · '
               '[Servis derinleştirme](SERVIS_DERINLESTIRME.md) · [DirectFB callback çözümü](DIRECTFB_CALLBACK.md) · '
               '[Dar UI devamı](UI_DAR_DEVAM.md) · '
+              '[Factory kaydı ve UI hazırlığı](UI_FACTORY_KAYDI.md) · '
+              '[Dört büyük UI gövdesi ve tasarıma geçiş](UI_DORT_BUYUK_FONKSIYON.md) · '
               '[Araç sınırları](ARAC_SINIRLARI.md) · [Aşama raporu](ASAMA_2026-10-22.md) · '
               '[Araştırma takibi](TAKIP.md) · [Ölçülebilir durum](../../analiz/asama-durum.json)','',
               '## Kapsam','',
@@ -108,12 +114,12 @@ def main():
               f"- Ghidra indeksi mevcut dosya yolu: {totals['module_paths_with_Ghidra_index']}/{len(inventory['elfs'])}.",
               f"- Bu sistem taramasında {len(summaries)} yeni artifact, {totals['new_Ghidra_functions']} fonksiyon kaydı, {totals['new_Ghidra_xrefs']} xref.",
               f"- İlk örnek decompile: {totals['new_sample_decompile_complete']}/{totals['new_sample_decompile_attempted']}; analiz timeout: {totals['new_analysis_timeouts']}.",
-              f"- Güncel odaklı sorgular: {focused['unique_selected_entries']} benzersiz giriş / {focused['unique_complete_entries']} tamamlanmış C; dört büyük UI gövdesi ayrıca takipte." if focused_file.is_file() else '- Önceki UI aşaması: 136 odaklı giriş / 132 tamamlanmış C.',
+              f"- Güncel odaklı sorgular: {focused['unique_selected_entries']} benzersiz giriş / {focused['unique_complete_entries']} tamamlanmış C; Settings sınırlanmış çıkarım profiliyle bu sayıya dahildir." if focused_file.is_file() else '- Önceki UI aşaması: 136 odaklı giriş / 132 tamamlanmış C.',
               '- Ham bootloader komutları ayrı kapsam: 5/5 decompile; [bulgular](../../analiz/native/boot-candidate-v1/FINDINGS.md).',
               '- Decompile tamamlanması doğruluk veya semantik inceleme tamamlanması değildir. '
               'Fonksiyon sayıları external/thunk kayıtları içerebilir. Dolaylı hedefler açıkça adaydır.','',
               '## Modüller','', '| Modül | Aşama durumu | Fonksiyon | İlk örnek C |','|---|---|---:|---:|']+rows+['']
-    (DOC/'README.md').write_text('\n'.join(overview),encoding='utf-8')
+    (DOC/'README.md').write_text('\n'.join(overview),encoding='utf-8',newline='\n')
     print(json.dumps(dict(totals)))
 
 if __name__=='__main__':main()

@@ -1,0 +1,27 @@
+{
+  "target_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+  "original_function": {
+    "body_bytes": 103000,
+    "entry": "0055b6c0",
+    "signature": "undefined NewUI_Settings(MMainFrame * param_1)"
+  },
+  "phase_ids": [
+    "normal_cleanup"
+  ],
+  "fragment_count": 1,
+  "fragment_C_complete_count": 1,
+  "valid_bounded_fragment_C_count": 1,
+  "whole_function_C_complete_count": 0,
+  "timeout_seconds_per_fragment": 120,
+  "target_executed": false,
+  "target_bytes_modified": false,
+  "analysis_database_saved": false,
+  "auto_analysis": false,
+  "limitations": [
+    "Natural phases are not standalone original functions. Boundary exits and unknown jumps are explicit metadata-only abstractions.",
+    "GP is an original PIC invariant assumption; only original prologue entry receives t9=original entry. Other fragments use explicit unknown original s8 frame pointer context.",
+    "Original stack values, aliased objects, incoming cross-phase register values and exception entries remain context requirements.",
+    "Final-call termination omits only the separately recorded trailing GP restore from fragment C; raw phase inventory and original continuation edge remain intact.",
+    "C completion applies to fragments only, not NewUI_Settings. No branch/call/target bytes are patched."
+  ]
+}

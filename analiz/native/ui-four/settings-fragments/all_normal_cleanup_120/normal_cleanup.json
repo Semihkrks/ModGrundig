@@ -1,0 +1,622 @@
+{
+  "id": "normal_cleanup",
+  "natural_phase": {
+    "id": "normal_cleanup",
+    "start": "0x579250",
+    "end_exclusive": "0x5792b8",
+    "bytes": 104,
+    "instruction_count": 26,
+    "common_context": [
+      "s8 is original function stack-frame base, allocated size 0x16e0",
+      "gp=0x10cc310 under PIC entry invariant; saved at stack+0x20"
+    ],
+    "register_inputs": [],
+    "stack_reads_conservative_context_superset": [
+      {
+        "offset": "0x20",
+        "known_role": "saved PIC gp"
+      },
+      {
+        "offset": "0x16d0",
+        "known_role": null
+      },
+      {
+        "offset": "0x16d4",
+        "known_role": null
+      },
+      {
+        "offset": "0x16d8",
+        "known_role": null
+      },
+      {
+        "offset": "0x16dc",
+        "known_role": null
+      }
+    ],
+    "stack_writes": [],
+    "stack_addresses_taken": [
+      {
+        "offset": "0x11f4",
+        "known_role": "AbsContainer vector A"
+      },
+      {
+        "offset": "0x1240",
+        "known_role": "AbsContainer vector B"
+      },
+      {
+        "offset": "0x124c",
+        "known_role": "ScrollListContainer vector"
+      },
+      {
+        "offset": "0x16e0",
+        "known_role": "original manager input a0"
+      }
+    ],
+    "linear_reads_before_first_direct_store_candidates": [
+      {
+        "offset": "0x20",
+        "known_role": "saved PIC gp"
+      },
+      {
+        "offset": "0x16d0",
+        "known_role": null
+      },
+      {
+        "offset": "0x16d4",
+        "known_role": null
+      },
+      {
+        "offset": "0x16d8",
+        "known_role": null
+      },
+      {
+        "offset": "0x16dc",
+        "known_role": null
+      }
+    ],
+    "input_limitations": "All stack reads retained as a conservative context superset; linear early-read candidates are NOT path-sensitive liveness. Pointer-output calls and aliased frame/object memory require original context. Exception landing-pad entries from LSDA are not reconstructed.",
+    "outgoing_branches": [
+      {
+        "from": "0x5792b0",
+        "to": null,
+        "from_phase": "normal_cleanup",
+        "to_phase": null,
+        "kind": "return",
+        "instruction": "jr ra"
+      }
+    ],
+    "incoming_branches": [
+      {
+        "from": "0x570b00",
+        "to": "0x579250",
+        "from_phase": "manualsearch_results",
+        "to_phase": "normal_cleanup",
+        "kind": "branch",
+        "instruction": "beq v0,zero,0x00579250"
+      },
+      {
+        "from": "0x57920c",
+        "to": "0x579250",
+        "from_phase": "manualsearch_results",
+        "to_phase": "normal_cleanup",
+        "kind": "branch",
+        "instruction": "b 0x00579250"
+      }
+    ],
+    "raw_call_candidate_count": 3,
+    "unresolved_call_count": 0,
+    "noreturn_call_candidates": []
+  },
+  "entry": "00579250",
+  "analysis_end_exclusive": "005792b8",
+  "body_bytes": 104,
+  "signature": "undefined4 __stdcall Settings_fragment_normal_cleanup(uint boundary_a0, uint boundary_a1, uint boundary_a2, uint boundary_a3, byte * original_frame_context)",
+  "instruction_count": 26,
+  "original_instructions": [
+    {
+      "address": "00579250",
+      "instruction": "addiu v0,s8,0x124c",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579254",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579254",
+      "instruction": "move a0,v0",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579258",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579258",
+      "instruction": "lw t9,-0x2dec(gp)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0057925c",
+      "delay_slots": 0
+    },
+    {
+      "address": "0057925c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579264",
+      "delay_slots": 1
+    },
+    {
+      "address": "00579260",
+      "instruction": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579264",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579264",
+      "instruction": "lw gp,0x20(s8)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579268",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579268",
+      "instruction": "addiu v0,s8,0x1240",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0057926c",
+      "delay_slots": 0
+    },
+    {
+      "address": "0057926c",
+      "instruction": "move a0,v0",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579270",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579270",
+      "instruction": "lw t9,-0x6a30(gp)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579274",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579274",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0057927c",
+      "delay_slots": 1
+    },
+    {
+      "address": "00579278",
+      "instruction": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0057927c",
+      "delay_slots": 0
+    },
+    {
+      "address": "0057927c",
+      "instruction": "lw gp,0x20(s8)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579280",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579280",
+      "instruction": "addiu v0,s8,0x11f4",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579284",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579284",
+      "instruction": "move a0,v0",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579288",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579288",
+      "instruction": "lw t9,-0x6a30(gp)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0057928c",
+      "delay_slots": 0
+    },
+    {
+      "address": "0057928c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579294",
+      "delay_slots": 1
+    },
+    {
+      "address": "00579290",
+      "instruction": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579294",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579294",
+      "instruction": "lw gp,0x20(s8)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579298",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579298",
+      "instruction": "move sp,s8",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0057929c",
+      "delay_slots": 0
+    },
+    {
+      "address": "0057929c",
+      "instruction": "lw ra,0x16dc(sp)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005792a0",
+      "delay_slots": 0
+    },
+    {
+      "address": "005792a0",
+      "instruction": "lw s8,0x16d8(sp)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005792a4",
+      "delay_slots": 0
+    },
+    {
+      "address": "005792a4",
+      "instruction": "lw s1,0x16d4(sp)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005792a8",
+      "delay_slots": 0
+    },
+    {
+      "address": "005792a8",
+      "instruction": "lw s0,0x16d0(sp)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005792ac",
+      "delay_slots": 0
+    },
+    {
+      "address": "005792ac",
+      "instruction": "addiu sp,sp,0x16e0",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005792b0",
+      "delay_slots": 0
+    },
+    {
+      "address": "005792b0",
+      "instruction": "jr ra",
+      "flow_type": "TERMINATOR",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    {
+      "address": "005792b4",
+      "instruction": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005792b8",
+      "delay_slots": 0
+    }
+  ],
+  "analysis_instruction_count": 26,
+  "analysis_instructions_before_metadata_overrides": [
+    {
+      "address": "00579250",
+      "instruction": "addiu v0,s8,0x124c",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579254",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579254",
+      "instruction": "move a0,v0",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579258",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579258",
+      "instruction": "lw t9,-0x2dec(gp)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0057925c",
+      "delay_slots": 0
+    },
+    {
+      "address": "0057925c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579264",
+      "delay_slots": 1
+    },
+    {
+      "address": "00579260",
+      "instruction": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579264",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579264",
+      "instruction": "lw gp,0x20(s8)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579268",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579268",
+      "instruction": "addiu v0,s8,0x1240",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0057926c",
+      "delay_slots": 0
+    },
+    {
+      "address": "0057926c",
+      "instruction": "move a0,v0",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579270",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579270",
+      "instruction": "lw t9,-0x6a30(gp)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579274",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579274",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0057927c",
+      "delay_slots": 1
+    },
+    {
+      "address": "00579278",
+      "instruction": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0057927c",
+      "delay_slots": 0
+    },
+    {
+      "address": "0057927c",
+      "instruction": "lw gp,0x20(s8)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579280",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579280",
+      "instruction": "addiu v0,s8,0x11f4",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579284",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579284",
+      "instruction": "move a0,v0",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579288",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579288",
+      "instruction": "lw t9,-0x6a30(gp)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0057928c",
+      "delay_slots": 0
+    },
+    {
+      "address": "0057928c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579294",
+      "delay_slots": 1
+    },
+    {
+      "address": "00579290",
+      "instruction": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579294",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579294",
+      "instruction": "lw gp,0x20(s8)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00579298",
+      "delay_slots": 0
+    },
+    {
+      "address": "00579298",
+      "instruction": "move sp,s8",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0057929c",
+      "delay_slots": 0
+    },
+    {
+      "address": "0057929c",
+      "instruction": "lw ra,0x16dc(sp)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005792a0",
+      "delay_slots": 0
+    },
+    {
+      "address": "005792a0",
+      "instruction": "lw s8,0x16d8(sp)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005792a4",
+      "delay_slots": 0
+    },
+    {
+      "address": "005792a4",
+      "instruction": "lw s1,0x16d4(sp)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005792a8",
+      "delay_slots": 0
+    },
+    {
+      "address": "005792a8",
+      "instruction": "lw s0,0x16d0(sp)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005792ac",
+      "delay_slots": 0
+    },
+    {
+      "address": "005792ac",
+      "instruction": "addiu sp,sp,0x16e0",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005792b0",
+      "delay_slots": 0
+    },
+    {
+      "address": "005792b0",
+      "instruction": "jr ra",
+      "flow_type": "TERMINATOR",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    {
+      "address": "005792b4",
+      "instruction": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005792b8",
+      "delay_slots": 0
+    }
+  ],
+  "fragment_decompile_complete": true,
+  "decompile_error": "",
+  "fragment_C_file": "normal_cleanup.c",
+  "high_function_present": true,
+  "pcode_calls": [
+    {
+      "site": "0057925c",
+      "opcode": "CALL",
+      "target_expression": "(ram, 0x558264, 8)",
+      "arguments": [
+        "(register, 0x8, 4)"
+      ]
+    },
+    {
+      "site": "00579274",
+      "opcode": "CALLIND",
+      "target_expression": "(register, 0x64, 4)",
+      "arguments": [
+        "(register, 0x8, 4)"
+      ]
+    },
+    {
+      "site": "0057928c",
+      "opcode": "CALLIND",
+      "target_expression": "(register, 0x64, 4)",
+      "arguments": [
+        "(register, 0x8, 4)"
+      ]
+    }
+  ],
+  "pcode_addresses_outside_fragment": [],
+  "pcode_within_fragment": true,
+  "valid_bounded_fragment_C": true,
+  "evidence_kind": "bounded_analysis_fragment_C_with_explicit_metadata_exit_abstractions_not_whole_function_C"
+}

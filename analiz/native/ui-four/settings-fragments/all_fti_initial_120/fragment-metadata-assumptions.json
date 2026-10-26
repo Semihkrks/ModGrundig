@@ -1,0 +1,124 @@
+[
+  {
+    "kind": "original_function_metadata_removed",
+    "target_bytes_modified": false,
+    "original": {
+      "body_bytes": 103000,
+      "entry": "0055b6c0",
+      "signature": "undefined NewUI_Settings(MMainFrame * param_1)"
+    }
+  },
+  {
+    "s8_input": "explicit_original_frame_context_parameter_unknown_runtime_pointer",
+    "fragment": "fti_initial",
+    "gp_hex": "0x10cc310",
+    "t9_seed": "none_fragment_not_PIC_entry",
+    "kind": "fragment_context"
+  },
+  {
+    "kind": "external_or_unknown_jump_return_abstraction",
+    "fragment": "fti_initial",
+    "original": {
+      "address": "0056432c",
+      "instruction": "beq v0,zero,0x00565e04",
+      "flow_type": "CONDITIONAL_JUMP",
+      "flow_override": "NONE",
+      "flows": [
+        "00565e04"
+      ],
+      "fallthrough": "00564334",
+      "delay_slots": 1
+    },
+    "assumption": "Return at fragment boundary abstracts continuation; not original standalone function behavior",
+    "modified": {
+      "address": "0056432c",
+      "instruction": "beq v0,zero,0x00565e04",
+      "flow_type": "CONDITIONAL_TERMINATOR",
+      "flow_override": "RETURN",
+      "flows": [],
+      "fallthrough": "00564334",
+      "delay_slots": 1
+    }
+  },
+  {
+    "kind": "external_or_unknown_jump_return_abstraction",
+    "fragment": "fti_initial",
+    "original": {
+      "address": "00565d7c",
+      "instruction": "b 0x00565e04",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "flow_override": "NONE",
+      "flows": [
+        "00565e04"
+      ],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Return at fragment boundary abstracts continuation; not original standalone function behavior",
+    "modified": {
+      "address": "00565d7c",
+      "instruction": "b 0x00565e04",
+      "flow_type": "TERMINATOR",
+      "flow_override": "RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    }
+  },
+  {
+    "name": "_Unwind_Resume",
+    "kind": "standard_noreturn_callsite_assumption",
+    "fragment": "fti_initial",
+    "original": {
+      "address": "00564c54",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00564c5c",
+      "delay_slots": 1
+    }
+  },
+  {
+    "name": "_Unwind_Resume",
+    "kind": "standard_noreturn_callsite_assumption",
+    "fragment": "fti_initial",
+    "original": {
+      "address": "00565264",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0056526c",
+      "delay_slots": 1
+    }
+  },
+  {
+    "name": "_Unwind_Resume",
+    "kind": "standard_noreturn_callsite_assumption",
+    "fragment": "fti_initial",
+    "original": {
+      "address": "0056573c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00565744",
+      "delay_slots": 1
+    }
+  },
+  {
+    "name": "_Unwind_Resume",
+    "kind": "standard_noreturn_callsite_assumption",
+    "fragment": "fti_initial",
+    "original": {
+      "address": "00565dfc",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00565e04",
+      "delay_slots": 1
+    }
+  }
+]

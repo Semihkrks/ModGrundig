@@ -24,4 +24,6 @@ Bu nedenle **IdleAppApp predicate üzerinden seçilmiş default diye ilan edilem
 
 Öncelikli devam: `MAppFactory::root` yazımları/kayıt sırası, provider oluşturucu `2de47608` ve plugin constructor'ları. Mevcut 226 modül indeksi veya eski büyük UI timeout sorguları bu dar çalışma için tekrar çalıştırılmadı.
 
+23 Ekim devamı: [factory constructor, Next ve static init zinciri](UI_FACTORY_KAYDI.md) beş ek C gövdesiyle bağlandı. Global Idle factory kaydı bulunmuştur; aktif root sırası ve CRT yürüyüşü açık kalır.
+
 Son kontrol: dört yeni C gövdesinin sınır dışı pcode adresi yok; C hash'leri, kaynak ELF hash'i ve predicate'in on ham word'ü kaydedildi. Factory/provider yorumu ayrı ajan tarafından doğrulandı. [Kontrol kaydı](../../analiz/ui-dar-devam-dogrulama.json).

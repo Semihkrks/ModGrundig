@@ -1,0 +1,2980 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "skill": "reverse-engineer-anything",
+  "targetExecuted": false,
+  "targetModified": false,
+  "deviceObserved": false,
+  "method": "local_UI_string_table_and_retained_static_analysis",
+  "notREA_Evidence": true,
+  "table": {
+    "path": "analiz/dosya-sistemleri-tam/08_APP/rc/rc_Turkish/bin/Str_res.bin",
+    "sha256": "6649c2771f4de6ea4db9f7b8b8b8b384c1929ab2dabe2f834b215e28a666de1b",
+    "records": 4618
+  },
+  "scope": "Base UI labels only; extended active catalogue and callsite checks are in feature-coverage.json. No keys, certificates or device identifiers read.",
+  "limits": [
+    "All initial values, slider limits, units and option groupings are offline simulator policy, not recovered calibration.",
+    "A string label alone does not prove its row is enabled on the physical TV.",
+    "resource_text_only rows retain string evidence and menu context; a specific row call address is not asserted.",
+    "Options with null optionStringIds are explicitly demo text, not firmware enum recovery.",
+    "Timer selections describe relative demo delays; native timer scheduling semantics are not claimed.",
+    "This is the generated 68-row base. Host-only extensions add recording/update paths via extra-menu-data.js; network, Web, apps and unverified hardware modes stay excluded."
+  ],
+  "counts": {
+    "menus": 12,
+    "rows": 68,
+    "nativeLabelBindings": 53
+  },
+  "menus": {
+    "picture": {
+      "title": "Görüntü Ayarları",
+      "source": {
+        "function": "PictureSettingsFrame",
+        "address": "0xe28b14",
+        "file": "analiz/native/ui-targeted/dvbt_board/00e28b14.c"
+      },
+      "rows": [
+        {
+          "id": "picture-mode",
+          "label": "Resim Modu",
+          "type": "choice",
+          "value": "Kullanıcı",
+          "evidence": {
+            "stringId": 3745,
+            "stringOffset": 65000,
+            "sourceFunction": "PictureSettingsFrame",
+            "sourceAddress": "0xe28b14",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00e28b14.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              794
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00e28b14",
+                "functionAddress": "0xe28b14",
+                "site": "0xe2c230",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              4000,
+              4169,
+              4097,
+              3119
+            ]
+          },
+          "options": [
+            "Kullanıcı",
+            "Canlı",
+            "Film",
+            "Spor"
+          ]
+        },
+        {
+          "id": "picture-backlight",
+          "label": "Arka Işık",
+          "type": "range",
+          "value": 70,
+          "evidence": {
+            "stringId": 3141,
+            "stringOffset": 48794,
+            "sourceFunction": "PictureSettingsFrame",
+            "sourceAddress": "0xe28b14",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00e28b14.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              938
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00e28b14",
+                "functionAddress": "0xe28b14",
+                "site": "0xe2cb14",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "id": "picture-brightness",
+          "label": "Parlaklık",
+          "type": "range",
+          "value": 50,
+          "evidence": {
+            "stringId": 3749,
+            "stringOffset": 65083,
+            "sourceFunction": "PictureSettingsFrame",
+            "sourceAddress": "0xe28b14",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00e28b14.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              1582
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00e28b14",
+                "functionAddress": "0xe28b14",
+                "site": "0xe2f6dc",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "id": "picture-contrast",
+          "label": "Kontrast",
+          "type": "range",
+          "value": 70,
+          "evidence": {
+            "stringId": 3751,
+            "stringOffset": 65107,
+            "sourceFunction": "PictureSettingsFrame",
+            "sourceAddress": "0xe28b14",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00e28b14.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              1723
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00e28b14",
+                "functionAddress": "0xe28b14",
+                "site": "0xe2ffb0",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "id": "picture-color",
+          "label": "Renk",
+          "type": "range",
+          "value": 50,
+          "evidence": {
+            "stringId": 3750,
+            "stringOffset": 65098,
+            "sourceFunction": "PictureSettingsFrame",
+            "sourceAddress": "0xe28b14",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00e28b14.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              1864
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00e28b14",
+                "functionAddress": "0xe28b14",
+                "site": "0xe30884",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "id": "picture-sharpness",
+          "label": "Netlik",
+          "type": "range",
+          "value": 40,
+          "evidence": {
+            "stringId": 3752,
+            "stringOffset": 65120,
+            "sourceFunction": "PictureSettingsFrame",
+            "sourceAddress": "0xe28b14",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00e28b14.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              3518
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00e28b14",
+                "functionAddress": "0xe28b14",
+                "site": "0xe370e0",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "id": "picture-temperature",
+          "label": "Renk Sıcaklığı",
+          "type": "choice",
+          "value": "Orta",
+          "evidence": {
+            "stringId": 3203,
+            "stringOffset": 50489,
+            "sourceFunction": "PictureSettingsFrame",
+            "sourceAddress": "0xe28b14",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00e28b14.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              2149
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00e28b14",
+                "functionAddress": "0xe28b14",
+                "site": "0xe31a4c",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              3205,
+              3204,
+              3206
+            ]
+          },
+          "options": [
+            "Orta",
+            "Soğuk",
+            "Sıcak"
+          ]
+        },
+        {
+          "id": "picture-format",
+          "label": "Resim Formatı",
+          "type": "choice",
+          "value": "Otomatik",
+          "evidence": {
+            "stringId": 4485,
+            "stringOffset": 91767,
+            "sourceFunction": "PictureSettingsFrame",
+            "sourceAddress": "0xe28b14",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00e28b14.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              653
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00e28b14",
+                "functionAddress": "0xe28b14",
+                "site": "0xe2b970",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              3054,
+              2214,
+              2215
+            ]
+          },
+          "options": [
+            "Otomatik",
+            "16:9",
+            "4:3"
+          ]
+        },
+        {
+          "id": "picture-noise",
+          "label": "Gürültü Azaltımı",
+          "type": "choice",
+          "value": "Kapalı",
+          "evidence": {
+            "stringId": 65,
+            "stringOffset": 897,
+            "sourceFunction": "PictureSettingsFrame",
+            "sourceAddress": "0xe28b14",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00e28b14.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              3661
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00e28b14",
+                "functionAddress": "0xe28b14",
+                "site": "0xe379c4",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              3654,
+              3528,
+              3681,
+              3478
+            ]
+          },
+          "options": [
+            "Kapalı",
+            "Düşük",
+            "Orta",
+            "Yüksek"
+          ]
+        },
+        {
+          "id": "picture-dynamic-contrast",
+          "label": "Dinamik Kontrast",
+          "type": "choice",
+          "value": "Kapalı",
+          "evidence": {
+            "stringId": 3340,
+            "stringOffset": 54794,
+            "sourceFunction": "PictureSettingsFrame",
+            "sourceAddress": "0xe28b14",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00e28b14.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              2763
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00e28b14",
+                "functionAddress": "0xe28b14",
+                "site": "0xe3412c",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              3654,
+              3528,
+              3681,
+              3478
+            ]
+          },
+          "options": [
+            "Kapalı",
+            "Düşük",
+            "Orta",
+            "Yüksek"
+          ]
+        },
+        {
+          "id": "picture-reset",
+          "label": "Öntanımlı Görüntü Ayarlarına Dön",
+          "type": "action",
+          "value": null,
+          "evidence": {
+            "stringId": 72,
+            "stringOffset": 1011,
+            "sourceFunction": "PictureSettingsFrame",
+            "sourceAddress": "0xe28b14",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00e28b14.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              1415
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00e28b14",
+                "functionAddress": "0xe28b14",
+                "site": "0xe2ea80",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "action": "reset-picture"
+        }
+      ]
+    },
+    "sound": {
+      "title": "Ses Ayarları",
+      "source": {
+        "function": "SoundSettingsFrame",
+        "address": "0xee9afc",
+        "file": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c"
+      },
+      "rows": [
+        {
+          "id": "sound-volume",
+          "label": "Ses Ayarı",
+          "type": "range",
+          "value": 32,
+          "evidence": {
+            "stringId": 4174,
+            "stringOffset": 76296,
+            "sourceFunction": "SoundSettingsFrame",
+            "sourceAddress": "0xee9afc",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c",
+            "labelBasis": "resource_text_only",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [],
+            "otherUIStringCallCandidates": [
+              {
+                "function": "FUN_00f404b8",
+                "functionAddress": "0xf404b8",
+                "site": "0xf4be54",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "id": "sound-mode",
+          "label": "Ses Modu",
+          "type": "choice",
+          "value": "Kullanıcı",
+          "evidence": {
+            "stringId": 3994,
+            "stringOffset": 71459,
+            "sourceFunction": "SoundSettingsFrame",
+            "sourceAddress": "0xee9afc",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              509
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00ee9afc",
+                "functionAddress": "0xee9afc",
+                "site": "0xeeba60",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              4000,
+              3115,
+              4097,
+              3119,
+              3120
+            ]
+          },
+          "options": [
+            "Kullanıcı",
+            "Müzik",
+            "Film",
+            "Spor",
+            "Konuşma"
+          ]
+        },
+        {
+          "id": "sound-balance",
+          "label": "Balans",
+          "type": "range",
+          "value": 0,
+          "evidence": {
+            "stringId": 3142,
+            "stringOffset": 48810,
+            "sourceFunction": "SoundSettingsFrame",
+            "sourceAddress": "0xee9afc",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c",
+            "labelBasis": "resource_text_only",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "min": -50,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "id": "sound-avl",
+          "label": "AVL",
+          "type": "toggle",
+          "value": false,
+          "evidence": {
+            "stringId": 2193,
+            "stringOffset": 32080,
+            "sourceFunction": "SoundSettingsFrame",
+            "sourceAddress": "0xee9afc",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              1630
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00ee9afc",
+                "functionAddress": "0xee9afc",
+                "site": "0xef02dc",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          }
+        },
+        {
+          "id": "sound-night",
+          "label": "Gece Modu",
+          "type": "toggle",
+          "value": false,
+          "evidence": {
+            "stringId": 3631,
+            "stringOffset": 61694,
+            "sourceFunction": "SoundSettingsFrame",
+            "sourceAddress": "0xee9afc",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              658
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00ee9afc",
+                "functionAddress": "0xee9afc",
+                "site": "0xeec370",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          }
+        },
+        {
+          "id": "sound-equalizer",
+          "label": "Ekolayzer",
+          "type": "submenu",
+          "value": null,
+          "evidence": {
+            "stringId": 3389,
+            "stringOffset": 56192,
+            "sourceFunction": "SoundSettingsFrame",
+            "sourceAddress": "0xee9afc",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              1495,
+              3209
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00ee9afc",
+                "functionAddress": "0xee9afc",
+                "site": "0xeef94c",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "FUN_00ee9afc",
+                "functionAddress": "0xee9afc",
+                "site": "0xef6694",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "menu": "equalizer"
+        },
+        {
+          "id": "sound-headphones",
+          "label": "Kulaklık Sesi",
+          "type": "range",
+          "value": 30,
+          "evidence": {
+            "stringId": 92,
+            "stringOffset": 1308,
+            "sourceFunction": "SoundSettingsFrame",
+            "sourceAddress": "0xee9afc",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              1974
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00ee9afc",
+                "functionAddress": "0xee9afc",
+                "site": "0xef189c",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "id": "sound-speakers",
+          "label": "TV Hoparlörü",
+          "type": "toggle",
+          "value": true,
+          "evidence": {
+            "stringId": 4058,
+            "stringOffset": 73277,
+            "sourceFunction": "SoundSettingsFrame",
+            "sourceAddress": "0xee9afc",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              2124
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00ee9afc",
+                "functionAddress": "0xee9afc",
+                "site": "0xef21c4",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          }
+        },
+        {
+          "id": "sound-digital-output",
+          "label": "Dijital Çıkış",
+          "type": "choice",
+          "value": "PCM",
+          "evidence": {
+            "stringId": 3671,
+            "stringOffset": 63063,
+            "sourceFunction": "SoundSettingsFrame",
+            "sourceAddress": "0xee9afc",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              2874
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00ee9afc",
+                "functionAddress": "0xee9afc",
+                "site": "0xef4f94",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              109,
+              3054
+            ]
+          },
+          "options": [
+            "PCM",
+            "Otomatik"
+          ]
+        },
+        {
+          "id": "sound-reset",
+          "label": "Öntanımlı Ses Ayarlarına Dön",
+          "type": "action",
+          "value": null,
+          "evidence": {
+            "stringId": 124,
+            "stringOffset": 1795,
+            "sourceFunction": "SoundSettingsFrame",
+            "sourceAddress": "0xee9afc",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              2981
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00ee9afc",
+                "functionAddress": "0xee9afc",
+                "site": "0xef5668",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "action": "reset-sound"
+        }
+      ]
+    },
+    "equalizer": {
+      "title": "Ekolayzer",
+      "source": {
+        "function": "SoundSettingsFrame",
+        "address": "0xee9afc",
+        "file": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c"
+      },
+      "rows": [
+        {
+          "id": "equalizer-120",
+          "label": "120Hz",
+          "type": "range",
+          "value": 0,
+          "evidence": {
+            "stringId": 2042,
+            "stringOffset": 30325,
+            "sourceFunction": "SoundSettingsFrame",
+            "sourceAddress": "0xee9afc",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              3687
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00ee9afc",
+                "functionAddress": "0xee9afc",
+                "site": "0xef8cb8",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "min": -12,
+          "max": 12,
+          "step": 1,
+          "unit": "dB"
+        },
+        {
+          "id": "equalizer-500",
+          "label": "500Hz",
+          "type": "range",
+          "value": 0,
+          "evidence": {
+            "stringId": 2130,
+            "stringOffset": 31231,
+            "sourceFunction": "SoundSettingsFrame",
+            "sourceAddress": "0xee9afc",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              3887
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00ee9afc",
+                "functionAddress": "0xee9afc",
+                "site": "0xef9964",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "min": -12,
+          "max": 12,
+          "step": 1,
+          "unit": "dB"
+        },
+        {
+          "id": "equalizer-1500",
+          "label": "1.5KHz",
+          "type": "range",
+          "value": 0,
+          "evidence": {
+            "stringId": 2074,
+            "stringOffset": 30652,
+            "sourceFunction": "SoundSettingsFrame",
+            "sourceAddress": "0xee9afc",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              4088
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00ee9afc",
+                "functionAddress": "0xee9afc",
+                "site": "0xefa610",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "min": -12,
+          "max": 12,
+          "step": 1,
+          "unit": "dB"
+        },
+        {
+          "id": "equalizer-5000",
+          "label": "5KHz",
+          "type": "range",
+          "value": 0,
+          "evidence": {
+            "stringId": 2135,
+            "stringOffset": 31300,
+            "sourceFunction": "SoundSettingsFrame",
+            "sourceAddress": "0xee9afc",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              4289
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00ee9afc",
+                "functionAddress": "0xee9afc",
+                "site": "0xefb2bc",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "min": -12,
+          "max": 12,
+          "step": 1,
+          "unit": "dB"
+        },
+        {
+          "id": "equalizer-10000",
+          "label": "10KHz",
+          "type": "range",
+          "value": 0,
+          "evidence": {
+            "stringId": 2034,
+            "stringOffset": 30232,
+            "sourceFunction": "SoundSettingsFrame",
+            "sourceAddress": "0xee9afc",
+            "sourceFile": "analiz/native/ui-targeted/dvbt_board/00ee9afc.c",
+            "labelBasis": "retained_C_string_assignment",
+            "C_lines": [
+              4491
+            ],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00ee9afc",
+                "functionAddress": "0xee9afc",
+                "site": "0xefbf68",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "min": -12,
+          "max": 12,
+          "step": 1,
+          "unit": "dB"
+        }
+      ]
+    },
+    "source": {
+      "title": "Kaynak Ayarları",
+      "source": {
+        "function": "SourceSetupFrame",
+        "address": "0xf0dd24",
+        "file": "analiz/native/ui-deep/source-setup-payload128/00f0dd24.c"
+      },
+      "rows": [
+        {
+          "id": "source-input",
+          "label": "Kaynak",
+          "type": "choice",
+          "value": "Dijital",
+          "evidence": {
+            "stringId": 4001,
+            "stringOffset": 71585,
+            "sourceFunction": "SourceSetupFrame",
+            "sourceAddress": "0xf0dd24",
+            "sourceFile": "analiz/native/ui-deep/source-setup-payload128/00f0dd24.c",
+            "labelBasis": "resource_text_only",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [],
+            "otherUIStringCallCandidates": [
+              {
+                "function": "ArUIManager::NewUI_Settings",
+                "functionAddress": "0x55b6c0",
+                "site": "0x56eee8",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "ArUIManager::NewUI_Settings",
+                "functionAddress": "0x55b6c0",
+                "site": "0x576d38",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "ManualSearchFrame::ShowSearchingNotificationPopup",
+                "functionAddress": "0x72bdd0",
+                "site": "0x72d83c",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "ManualSearchFrame::ShowSearchingNotificationPopup",
+                "functionAddress": "0x72bdd0",
+                "site": "0x72da18",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "AutoSearchFrame::OpenMenu",
+                "functionAddress": "0x82ce4c",
+                "site": "0x8356f8",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "AutoSearchFrame::OpenMenu",
+                "functionAddress": "0x82ce4c",
+                "site": "0x835980",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "AutoSearchFrame::OpenMenu",
+                "functionAddress": "0x82ce4c",
+                "site": "0x835c64",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "FUN_00838168",
+                "functionAddress": "0x838168",
+                "site": "0x83d184",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "FUN_00838168",
+                "functionAddress": "0x838168",
+                "site": "0x83d408",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "FUN_00838168",
+                "functionAddress": "0x838168",
+                "site": "0x83d6e8",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              3293,
+              3847,
+              3169,
+              393,
+              394,
+              395,
+              396,
+              3857
+            ]
+          },
+          "options": [
+            "Dijital",
+            "Uydu",
+            "Kablo",
+            "HDMI 1",
+            "HDMI 2",
+            "HDMI 3",
+            "HDMI 4",
+            "Scart"
+          ]
+        },
+        {
+          "id": "source-channels",
+          "label": "Program Tablosu",
+          "type": "submenu",
+          "value": null,
+          "evidence": {
+            "stringId": 3022,
+            "stringOffset": 45609,
+            "sourceFunction": "SourceSetupFrame",
+            "sourceAddress": "0xf0dd24",
+            "sourceFile": "analiz/native/ui-deep/source-setup-payload128/00f0dd24.c",
+            "labelBasis": "resource_text_only",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "menu": "channels"
+        },
+        {
+          "id": "source-antenna",
+          "label": "Anten Tipi",
+          "type": "choice",
+          "value": "Anten",
+          "evidence": {
+            "stringId": 4216,
+            "stringOffset": 77593,
+            "sourceFunction": "SourceSetupFrame",
+            "sourceAddress": "0xf0dd24",
+            "sourceFile": "analiz/native/ui-deep/source-setup-payload128/00f0dd24.c",
+            "labelBasis": "resource_text_only",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [],
+            "otherUIStringCallCandidates": [
+              {
+                "function": "FUN_007995b0",
+                "functionAddress": "0x7995b0",
+                "site": "0x7acb38",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "FUN_008aeb30",
+                "functionAddress": "0x8aeb30",
+                "site": "0x8bc7fc",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "FUN_008aeb30",
+                "functionAddress": "0x8aeb30",
+                "site": "0x8c71f4",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              3083,
+              3169,
+              3847
+            ]
+          },
+          "options": [
+            "Anten",
+            "Kablo",
+            "Uydu"
+          ]
+        },
+        {
+          "id": "source-auto-search",
+          "label": "Otomatik Kanal Arama",
+          "type": "action",
+          "value": null,
+          "evidence": {
+            "stringId": 3850,
+            "stringOffset": 67380,
+            "sourceFunction": "SourceSetupFrame",
+            "sourceAddress": "0xf0dd24",
+            "sourceFile": "analiz/native/ui-deep/source-setup-payload128/00f0dd24.c",
+            "labelBasis": "resource_text_only",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "action": "scan-channels"
+        },
+        {
+          "id": "source-manual-search",
+          "label": "Elle Kanal Arama",
+          "type": "action",
+          "value": null,
+          "evidence": {
+            "stringId": 4429,
+            "stringOffset": 89588,
+            "sourceFunction": "SourceSetupFrame",
+            "sourceAddress": "0xf0dd24",
+            "sourceFile": "analiz/native/ui-deep/source-setup-payload128/00f0dd24.c",
+            "labelBasis": "retained_static_string_call",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00f0dd24",
+                "functionAddress": "0xf0dd24",
+                "site": "0xf11860",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "action": "manual-scan"
+        }
+      ]
+    },
+    "tv": {
+      "title": "Ayarlar",
+      "source": {
+        "function": "GeneralSettingsFrame",
+        "address": "0xd01710",
+        "file": "analiz/native/ui-four/general/bounded300/00d01710.c"
+      },
+      "rows": [
+        {
+          "id": "tv-language",
+          "label": "Dil & Klavye",
+          "type": "submenu",
+          "value": null,
+          "evidence": {
+            "stringId": 4423,
+            "stringOffset": 89420,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 10,
+                "constructor": "0xd06fd4",
+                "stringCall": "0xd07094",
+                "handlers": []
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd07094",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "menu": "language"
+        },
+        {
+          "id": "tv-accessibility",
+          "label": "Erişilebilirlik Ayarları",
+          "type": "submenu",
+          "value": null,
+          "evidence": {
+            "stringId": 3058,
+            "stringOffset": 46782,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 11,
+                "constructor": "0xd0762c",
+                "stringCall": "0xd07774",
+                "handlers": []
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd07774",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "menu": "accessibility"
+        },
+        {
+          "id": "tv-advanced",
+          "label": "Gelişmiş",
+          "type": "submenu",
+          "value": null,
+          "evidence": {
+            "stringId": 128,
+            "stringOffset": 1884,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 13,
+                "constructor": "0xd083ec",
+                "stringCall": "0xd08534",
+                "handlers": []
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd08534",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "menu": "advanced"
+        },
+        {
+          "id": "tv-about",
+          "label": "Hakkında",
+          "type": "submenu",
+          "value": null,
+          "evidence": {
+            "stringId": 4206,
+            "stringOffset": 77286,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 14,
+                "constructor": "0xd08acc",
+                "stringCall": "0xd08c14",
+                "handlers": []
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd08c14",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "menu": "about"
+        }
+      ]
+    },
+    "language": {
+      "title": "Dil & Klavye",
+      "source": {
+        "function": "GeneralSettingsFrame",
+        "address": "0xd01710",
+        "file": "analiz/native/ui-four/general/bounded300/00d01710.c"
+      },
+      "rows": [
+        {
+          "id": "language-menu",
+          "label": "Menü Dili",
+          "type": "choice",
+          "value": "Türkçe",
+          "evidence": {
+            "stringId": 4431,
+            "stringOffset": 89627,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 20,
+                "constructor": "0xd0b250",
+                "stringCall": "0xd0b310",
+                "handlers": [
+                  {
+                    "record_va": "0x010be178",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      19,
+                      20,
+                      20,
+                      0
+                    ],
+                    "handler_va": "0x00cfca08"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd0b310",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              2598,
+              509
+            ]
+          },
+          "options": [
+            "Türkçe",
+            "English"
+          ]
+        },
+        {
+          "id": "language-audio",
+          "label": "Ses Dili",
+          "type": "choice",
+          "value": "Türkçe",
+          "evidence": {
+            "stringId": 4221,
+            "stringOffset": 77690,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 21,
+                "constructor": "0xd0b8a8",
+                "stringCall": "0xd0b9f0",
+                "handlers": [
+                  {
+                    "record_va": "0x010be194",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      19,
+                      21,
+                      21,
+                      0
+                    ],
+                    "handler_va": "0x00cfc514"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd0b9f0",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              2598,
+              509
+            ]
+          },
+          "options": [
+            "Türkçe",
+            "English"
+          ]
+        },
+        {
+          "id": "language-subtitle",
+          "label": "Altyazı Dili",
+          "type": "choice",
+          "value": "Türkçe",
+          "evidence": {
+            "stringId": 4553,
+            "stringOffset": 93576,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 22,
+                "constructor": "0xd0bf88",
+                "stringCall": "0xd0c0d0",
+                "handlers": [
+                  {
+                    "record_va": "0x010be1b0",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      19,
+                      22,
+                      22,
+                      0
+                    ],
+                    "handler_va": "0x00cfaf24"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd0c0d0",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              2598,
+              509
+            ]
+          },
+          "options": [
+            "Türkçe",
+            "English"
+          ]
+        },
+        {
+          "id": "language-keyboard",
+          "label": "Klavye Dili",
+          "type": "choice",
+          "value": "Türkçe",
+          "evidence": {
+            "stringId": 4421,
+            "stringOffset": 89396,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 23,
+                "constructor": "0xd0c668",
+                "stringCall": "0xd0c7b0",
+                "handlers": [
+                  {
+                    "record_va": "0x010be1cc",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      19,
+                      23,
+                      23,
+                      0
+                    ],
+                    "handler_va": "0x00cf70d8"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd0c7b0",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              2598,
+              509
+            ]
+          },
+          "options": [
+            "Türkçe",
+            "English"
+          ]
+        }
+      ]
+    },
+    "accessibility": {
+      "title": "Erişilebilirlik Ayarları",
+      "source": {
+        "function": "GeneralSettingsFrame",
+        "address": "0xd01710",
+        "file": "analiz/native/ui-four/general/bounded300/00d01710.c"
+      },
+      "rows": [
+        {
+          "id": "accessibility-audio-description",
+          "label": "Sesli Anlatım",
+          "type": "toggle",
+          "value": false,
+          "evidence": {
+            "stringId": 3111,
+            "stringOffset": 48182,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "resource_text_only",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          }
+        },
+        {
+          "id": "accessibility-subtitle-mode",
+          "label": "Altyazı Modu",
+          "type": "choice",
+          "value": "Kapalı",
+          "evidence": {
+            "stringId": 4025,
+            "stringOffset": 72083,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 25,
+                "constructor": "0xd0d6d8",
+                "stringCall": "0xd0d9d4",
+                "handlers": [
+                  {
+                    "record_va": "0x010be2e4",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      16,
+                      25,
+                      25,
+                      0
+                    ],
+                    "handler_va": "0x00cfc194"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd0d9d4",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              3654,
+              3330
+            ]
+          },
+          "options": [
+            "Kapalı",
+            "Normal"
+          ]
+        },
+        {
+          "id": "accessibility-description-volume",
+          "label": "Sesli Anlatım Sesi",
+          "type": "range",
+          "value": 50,
+          "evidence": {
+            "stringId": 4219,
+            "stringOffset": 77647,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 27,
+                "constructor": "0xd0e87c",
+                "stringCall": "0xd0eb8c",
+                "handlers": [
+                  {
+                    "record_va": "0x010be31c",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      16,
+                      27,
+                      27,
+                      0
+                    ],
+                    "handler_va": "0x00cfbef4"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd0eb8c",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "id": "accessibility-subtitles",
+          "label": "Altyazı",
+          "type": "toggle",
+          "value": false,
+          "evidence": {
+            "stringId": 4024,
+            "stringOffset": 72070,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "resource_text_only",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [],
+            "otherUIStringCallCandidates": [
+              {
+                "function": "FUN_00dec0a0",
+                "functionAddress": "0xdec0a0",
+                "site": "0xdf5ae0",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "PictureSettingsFrame::InitializeMenuItems",
+                "functionAddress": "0xe229f4",
+                "site": "0xe2324c",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          }
+        }
+      ]
+    },
+    "advanced": {
+      "title": "Gelişmiş",
+      "source": {
+        "function": "GeneralSettingsFrame",
+        "address": "0xd01710",
+        "file": "analiz/native/ui-four/general/bounded300/00d01710.c"
+      },
+      "rows": [
+        {
+          "id": "advanced-auto-off",
+          "label": "Otomatik Kapanma",
+          "type": "choice",
+          "value": "Kapalı",
+          "evidence": {
+            "stringId": 3128,
+            "stringOffset": 48509,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 48,
+                "constructor": "0xd168d0",
+                "stringCall": "0xd16bcc",
+                "handlers": [
+                  {
+                    "record_va": "0x010be2c8",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      16,
+                      48,
+                      48,
+                      0
+                    ],
+                    "handler_va": "0x00cf59e8"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd16bcc",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              3654,
+              4564,
+              4565,
+              4566,
+              4567
+            ]
+          },
+          "options": [
+            "Kapalı",
+            "2 saat",
+            "4 saat",
+            "6 saat",
+            "8 saat"
+          ]
+        },
+        {
+          "id": "advanced-fast-channel",
+          "label": "Hızlı Kanal Geçişi",
+          "type": "toggle",
+          "value": true,
+          "evidence": {
+            "stringId": 3408,
+            "stringOffset": 56600,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 49,
+                "constructor": "0xd17190",
+                "stringCall": "0xd1748c",
+                "handlers": [
+                  {
+                    "record_va": "0x010be354",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      16,
+                      49,
+                      49,
+                      0
+                    ],
+                    "handler_va": "0x00cf58d8"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd1748c",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          }
+        },
+        {
+          "id": "advanced-power-led",
+          "label": "Güç LED'i Parlaklığı",
+          "type": "choice",
+          "value": "Orta",
+          "evidence": {
+            "stringId": 3767,
+            "stringOffset": 65392,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 51,
+                "constructor": "0xd18310",
+                "stringCall": "0xd1860c",
+                "handlers": [
+                  {
+                    "record_va": "0x010be220",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      16,
+                      51,
+                      51,
+                      0
+                    ],
+                    "handler_va": "0x00cf67c4"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd1860c",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              3681,
+              3654,
+              3528,
+              3478
+            ]
+          },
+          "options": [
+            "Orta",
+            "Kapalı",
+            "Düşük",
+            "Yüksek"
+          ]
+        },
+        {
+          "id": "advanced-power-save",
+          "label": "Güç Koruma Modu",
+          "type": "toggle",
+          "value": false,
+          "evidence": {
+            "stringId": 3771,
+            "stringOffset": 65613,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 52,
+                "constructor": "0xd18bd0",
+                "stringCall": "0xd18ecc",
+                "handlers": [
+                  {
+                    "record_va": "0x010be2ac",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      16,
+                      52,
+                      52,
+                      0
+                    ],
+                    "handler_va": "0x00cfc48c"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd18ecc",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          }
+        },
+        {
+          "id": "advanced-help",
+          "label": "Yardım",
+          "type": "toggle",
+          "value": true,
+          "evidence": {
+            "stringId": 4288,
+            "stringOffset": 82540,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 55,
+                "constructor": "0xd1a610",
+                "stringCall": "0xd1a90c",
+                "handlers": [
+                  {
+                    "record_va": "0x010be3a8",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      16,
+                      55,
+                      55,
+                      0
+                    ],
+                    "handler_va": "0x00cf56e4"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd1a90c",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          }
+        },
+        {
+          "id": "advanced-fast-start",
+          "label": "Hızlı Açılma",
+          "type": "toggle",
+          "value": false,
+          "evidence": {
+            "stringId": 4357,
+            "stringOffset": 84778,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 56,
+                "constructor": "0xd1aed0",
+                "stringCall": "0xd1b1cc",
+                "handlers": [
+                  {
+                    "record_va": "0x010be3c4",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      16,
+                      56,
+                      56,
+                      0
+                    ],
+                    "handler_va": "0x00cf576c"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd1b1cc",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          }
+        }
+      ]
+    },
+    "about": {
+      "title": "Hakkında",
+      "source": {
+        "function": "GeneralSettingsFrame",
+        "address": "0xd01710",
+        "file": "analiz/native/ui-four/general/bounded300/00d01710.c"
+      },
+      "rows": [
+        {
+          "id": "about-product",
+          "label": "Ürün Bilgisi",
+          "type": "info",
+          "value": "Çevrimdışı TV simülatörü",
+          "evidence": {
+            "stringId": 4499,
+            "stringOffset": 92058,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 57,
+                "constructor": "0xd1b790",
+                "stringCall": "0xd1b850",
+                "handlers": [
+                  {
+                    "record_va": "0x010be204",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      19,
+                      57,
+                      57,
+                      0
+                    ],
+                    "handler_va": "0x00cf4a38"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd1b850",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          }
+        },
+        {
+          "id": "about-version",
+          "label": "Yazılım Sürümü",
+          "type": "info",
+          "value": "GMGRMR V03.017.04 · kaynak paket",
+          "evidence": {
+            "stringId": 3838,
+            "stringOffset": 67084,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "resource_text_only",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [],
+            "otherUIStringCallCandidates": [
+              {
+                "function": "FUN_00a8b85c",
+                "functionAddress": "0xa8b85c",
+                "site": "0xb888a0",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          }
+        },
+        {
+          "id": "about-tv-name",
+          "label": "TV Adı",
+          "type": "info",
+          "value": "Grundig TV · demo",
+          "evidence": {
+            "stringId": 4057,
+            "stringOffset": 73265,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 58,
+                "constructor": "0xd1bde8",
+                "stringCall": "0xd1c190",
+                "handlers": [
+                  {
+                    "record_va": "0x010be1e8",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      19,
+                      58,
+                      58,
+                      0
+                    ],
+                    "handler_va": "0x00cf3b3c"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd1c190",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          }
+        },
+        {
+          "id": "about-clear-history",
+          "label": "Kanal Geçmişini Temizle",
+          "type": "action",
+          "value": null,
+          "evidence": {
+            "stringId": 4506,
+            "stringOffset": 92229,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 61,
+                "constructor": "0xd1d48c",
+                "stringCall": "0xd1d5d4",
+                "handlers": [
+                  {
+                    "record_va": "0x010be258",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      19,
+                      61,
+                      61,
+                      0
+                    ],
+                    "handler_va": "0x00cf3c70"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd1d5d4",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "action": "clear-history"
+        },
+        {
+          "id": "about-factory-reset",
+          "label": "Fabrika Ayarlarına Dönüş",
+          "type": "action",
+          "value": null,
+          "evidence": {
+            "stringId": 3811,
+            "stringOffset": 66461,
+            "sourceFunction": "GeneralSettingsFrame",
+            "sourceAddress": "0xd01710",
+            "sourceFile": "analiz/native/ui-four/general/bounded300/00d01710.c",
+            "labelBasis": "retained_widget_binding",
+            "C_lines": [],
+            "widgetBindings": [
+              {
+                "widgetId": 60,
+                "constructor": "0xd1cdac",
+                "stringCall": "0xd1cef4",
+                "handlers": [
+                  {
+                    "record_va": "0x010be23c",
+                    "event_value": "0x00000016",
+                    "selector_fields_raw": [
+                      19,
+                      60,
+                      60,
+                      0
+                    ],
+                    "handler_va": "0x00cf62f4"
+                  }
+                ]
+              }
+            ],
+            "stringCallsites": [
+              {
+                "function": "FUN_00d01710",
+                "functionAddress": "0xd01710",
+                "site": "0xd1cef4",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "action": "reset-all"
+        }
+      ]
+    },
+    "parental": {
+      "title": "Ebeveyn Ayarları",
+      "source": {
+        "function": "ParentalControlFrame constructor-body candidate",
+        "address": "0xe001bc",
+        "file": "analiz/ui-kod-cagrilari.json"
+      },
+      "rows": [
+        {
+          "id": "parental-menu-lock",
+          "label": "Menü Kilidi",
+          "type": "toggle",
+          "value": false,
+          "evidence": {
+            "stringId": 3734,
+            "stringOffset": 64720,
+            "sourceFunction": "ParentalControlFrame constructor-body candidate",
+            "sourceAddress": "0xe001bc",
+            "sourceFile": "analiz/ui-kod-cagrilari.json",
+            "labelBasis": "retained_static_string_call",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00e001bc",
+                "functionAddress": "0xe001bc",
+                "site": "0xe025e0",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          }
+        },
+        {
+          "id": "parental-source-lock",
+          "label": "Kaynak Kilidi",
+          "type": "toggle",
+          "value": false,
+          "evidence": {
+            "stringId": 4004,
+            "stringOffset": 71657,
+            "sourceFunction": "ParentalControlFrame constructor-body candidate",
+            "sourceAddress": "0xe001bc",
+            "sourceFile": "analiz/ui-kod-cagrilari.json",
+            "labelBasis": "retained_static_string_call",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00e001bc",
+                "functionAddress": "0xe001bc",
+                "site": "0xe04020",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          }
+        },
+        {
+          "id": "parental-channel-lock",
+          "label": "Kanal Kilidi",
+          "type": "toggle",
+          "value": false,
+          "evidence": {
+            "stringId": 3187,
+            "stringOffset": 49918,
+            "sourceFunction": "ParentalControlFrame constructor-body candidate",
+            "sourceAddress": "0xe001bc",
+            "sourceFile": "analiz/ui-kod-cagrilari.json",
+            "labelBasis": "retained_static_string_call",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00e001bc",
+                "functionAddress": "0xe001bc",
+                "site": "0xe03760",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          }
+        },
+        {
+          "id": "parental-rating",
+          "label": "Yaş Sınırlandırması",
+          "type": "choice",
+          "value": "Kapalı",
+          "evidence": {
+            "stringId": 3835,
+            "stringOffset": 67020,
+            "sourceFunction": "ParentalControlFrame constructor-body candidate",
+            "sourceAddress": "0xe001bc",
+            "sourceFile": "analiz/ui-kod-cagrilari.json",
+            "labelBasis": "resource_text_only",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [],
+            "otherUIStringCallCandidates": [
+              {
+                "function": "IdleAppFrame::ShowPopUp",
+                "functionAddress": "0xd77d44",
+                "site": "0xd78cd4",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              3654,
+              4579,
+              4577,
+              4578
+            ]
+          },
+          "options": [
+            "Kapalı",
+            "7 yaş ve altı",
+            "13 yaş ve altı",
+            "18 yaş ve altı"
+          ]
+        },
+        {
+          "id": "parental-change-pin",
+          "label": "PIN'i Değiştir",
+          "type": "action",
+          "value": null,
+          "evidence": {
+            "stringId": 3182,
+            "stringOffset": 49718,
+            "sourceFunction": "ParentalControlFrame constructor-body candidate",
+            "sourceAddress": "0xe001bc",
+            "sourceFile": "analiz/ui-kod-cagrilari.json",
+            "labelBasis": "retained_static_string_call",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00e001bc",
+                "functionAddress": "0xe001bc",
+                "site": "0xe04f64",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "action": "change-pin"
+        }
+      ]
+    },
+    "timer": {
+      "title": "Zamanlayıcı Ayarları",
+      "source": {
+        "function": "Timer settings constructor-body candidate",
+        "address": "0xf404b8",
+        "file": "analiz/ui-kod-cagrilari.json"
+      },
+      "rows": [
+        {
+          "id": "timer-sleep",
+          "label": "Uyku Zamanlayıcısı",
+          "type": "choice",
+          "value": "Kapalı",
+          "evidence": {
+            "stringId": 3981,
+            "stringOffset": 70975,
+            "sourceFunction": "Timer settings constructor-body candidate",
+            "sourceAddress": "0xf404b8",
+            "sourceFile": "analiz/ui-kod-cagrilari.json",
+            "labelBasis": "resource_text_only",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [],
+            "otherUIStringCallCandidates": [
+              {
+                "function": "FUN_00ea4118",
+                "functionAddress": "0xea4118",
+                "site": "0xea9170",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "FUN_00f5e390",
+                "functionAddress": "0xf5e390",
+                "site": "0xf5e5f0",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "FUN_00f5e390",
+                "functionAddress": "0xf5e390",
+                "site": "0xf5e914",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "FUN_00f5e390",
+                "functionAddress": "0xf5e390",
+                "site": "0xf5f224",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "FUN_00f60a64",
+                "functionAddress": "0xf60a64",
+                "site": "0xf6ae10",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              3654,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "options": [
+            "Kapalı",
+            "15 dk.",
+            "30 dk.",
+            "60 dk.",
+            "90 dk.",
+            "120 dk."
+          ]
+        },
+        {
+          "id": "timer-shutdown",
+          "label": "Kapanma Zamanlayıcısı",
+          "type": "choice",
+          "value": "Kapalı",
+          "evidence": {
+            "stringId": 3129,
+            "stringOffset": 48530,
+            "sourceFunction": "Timer settings constructor-body candidate",
+            "sourceAddress": "0xf404b8",
+            "sourceFile": "analiz/ui-kod-cagrilari.json",
+            "labelBasis": "retained_static_string_call",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00f404b8",
+                "functionAddress": "0xf404b8",
+                "site": "0xf451d0",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              3654,
+              null,
+              null,
+              null
+            ]
+          },
+          "options": [
+            "Kapalı",
+            "30 dk.",
+            "60 dk.",
+            "120 dk."
+          ]
+        },
+        {
+          "id": "timer-startup",
+          "label": "Açılma Zamanlayıcısı",
+          "type": "choice",
+          "value": "Kapalı",
+          "evidence": {
+            "stringId": 3130,
+            "stringOffset": 48559,
+            "sourceFunction": "Timer settings constructor-body candidate",
+            "sourceAddress": "0xf404b8",
+            "sourceFile": "analiz/ui-kod-cagrilari.json",
+            "labelBasis": "retained_static_string_call",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00f404b8",
+                "functionAddress": "0xf404b8",
+                "site": "0xf44ad0",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              3654,
+              null,
+              null,
+              null
+            ]
+          },
+          "options": [
+            "Kapalı",
+            "15 dk.",
+            "30 dk.",
+            "60 dk."
+          ]
+        },
+        {
+          "id": "timer-start-volume",
+          "label": "Başlangıç Ses Seviyesi",
+          "type": "range",
+          "value": 20,
+          "evidence": {
+            "stringId": 4013,
+            "stringOffset": 71858,
+            "sourceFunction": "Timer settings constructor-body candidate",
+            "sourceAddress": "0xf404b8",
+            "sourceFile": "analiz/ui-kod-cagrilari.json",
+            "labelBasis": "resource_text_only",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [],
+            "otherUIStringCallCandidates": [
+              {
+                "function": "FUN_00d59e8c",
+                "functionAddress": "0xd59e8c",
+                "site": "0xd5bb50",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "min": 0,
+          "max": 100,
+          "step": 1
+        }
+      ]
+    },
+    "channels": {
+      "title": "KANAL LİSTESİ",
+      "source": {
+        "function": "SourceSetupFrame",
+        "address": "0xf0dd24",
+        "file": "analiz/native/ui-deep/source-setup-payload128/00f0dd24.c"
+      },
+      "rows": [
+        {
+          "id": "channels-open-list",
+          "label": "KANAL LİSTESİ",
+          "type": "action",
+          "value": null,
+          "evidence": {
+            "stringId": 4059,
+            "stringOffset": 73296,
+            "sourceFunction": "SourceSetupFrame",
+            "sourceAddress": "0xf0dd24",
+            "sourceFile": "analiz/native/ui-deep/source-setup-payload128/00f0dd24.c",
+            "labelBasis": "resource_text_only",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "action": "open-channels"
+        },
+        {
+          "id": "channels-favorites",
+          "label": "Favoriler",
+          "type": "action",
+          "value": null,
+          "evidence": {
+            "stringId": 3415,
+            "stringOffset": 56715,
+            "sourceFunction": "SourceSetupFrame",
+            "sourceAddress": "0xf0dd24",
+            "sourceFile": "analiz/native/ui-deep/source-setup-payload128/00f0dd24.c",
+            "labelBasis": "resource_text_only",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [],
+            "otherUIStringCallCandidates": [
+              {
+                "function": "FUN_00cce500",
+                "functionAddress": "0xcce500",
+                "site": "0xcd201c",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "HomePageFrame::LayoutItems",
+                "functionAddress": "0xd29500",
+                "site": "0xd2c16c",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "HomePageFrame::LayoutItems",
+                "functionAddress": "0xd29500",
+                "site": "0xd36e38",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "HomePageFrame::LayoutItems",
+                "functionAddress": "0xd29500",
+                "site": "0xd3e37c",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "action": "open-favorites"
+        },
+        {
+          "id": "channels-service-type",
+          "label": "TV / Radyo",
+          "type": "choice",
+          "value": "TV",
+          "evidence": {
+            "stringId": 4576,
+            "stringOffset": 94058,
+            "sourceFunction": "SourceSetupFrame",
+            "sourceAddress": "0xf0dd24",
+            "sourceFile": "analiz/native/ui-deep/source-setup-payload128/00f0dd24.c",
+            "labelBasis": "resource_text_only",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [],
+            "otherUIStringCallCandidates": [
+              {
+                "function": "HomePageFrame::LayoutItems",
+                "functionAddress": "0xd29500",
+                "site": "0xd2e718",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              },
+              {
+                "function": "HomePageFrame::LayoutItems",
+                "functionAddress": "0xd29500",
+                "site": "0xd37174",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false,
+            "optionStringIds": [
+              null,
+              null
+            ]
+          },
+          "options": [
+            "TV",
+            "Radyo"
+          ]
+        },
+        {
+          "id": "channels-auto-search",
+          "label": "Otomatik Kanal Arama",
+          "type": "action",
+          "value": null,
+          "evidence": {
+            "stringId": 3133,
+            "stringOffset": 48625,
+            "sourceFunction": "SourceSetupFrame",
+            "sourceAddress": "0xf0dd24",
+            "sourceFile": "analiz/native/ui-deep/source-setup-payload128/00f0dd24.c",
+            "labelBasis": "retained_static_string_call",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00f0dd24",
+                "functionAddress": "0xf0dd24",
+                "site": "0xf11180",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "action": "scan-channels"
+        },
+        {
+          "id": "channels-signal",
+          "label": "Sinyal Bilgileri",
+          "type": "action",
+          "value": null,
+          "evidence": {
+            "stringId": 3972,
+            "stringOffset": 70816,
+            "sourceFunction": "SourceSetupFrame",
+            "sourceAddress": "0xf0dd24",
+            "sourceFile": "analiz/native/ui-deep/source-setup-payload128/00f0dd24.c",
+            "labelBasis": "retained_static_string_call",
+            "C_lines": [],
+            "widgetBindings": [],
+            "stringCallsites": [
+              {
+                "function": "FUN_00f0dd24",
+                "functionAddress": "0xf0dd24",
+                "site": "0xf14734",
+                "target": "MString::Set(unsigned short)",
+                "basis": "retained_static_instruction_argument_candidate"
+              }
+            ],
+            "otherUIStringCallCandidates": [],
+            "interaction": "offline_simulator",
+            "defaults": "demo",
+            "rangeAndOptionGrouping": "simulator_policy",
+            "deviceAvailabilityVerified": false
+          },
+          "action": "signal-info"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "revision": "v7.4-tv",
+  "scope": {
+    "source_revision": "v7.1-tv",
+    "corrections": {
+      "source_revision": "v7.1-tv",
+      "source_user_reports_working": true,
+      "prior_v73_user_reports_freeze": true,
+      "defect": "V72/V73 removed GP restore following virtual MoveRect before GOT loads",
+      "required_gp_restore_va": "0xfb8200",
+      "required_gp_word": "0x8fdc0018",
+      "native_span": [
+        "0xfb8200",
+        "0xfb8358"
+      ],
+      "native_block_sha256": "8e284a270f025b2388cfffd21721419708bf40b82fa4c44ed9f0a998739babaa",
+      "normal_fill": "0xff0082d4",
+      "muted_fill": "0xff898989",
+      "fill_fields": [
+        "0x2a4",
+        "0x2a8",
+        "0x2ac",
+        "0x2b0"
+      ],
+      "standalone_code": [
+        {
+          "va": "0xdf9324",
+          "old": "0x240502a8",
+          "new": "0x24050885"
+        },
+        {
+          "va": "0xdf9348",
+          "old": "0x24050191",
+          "new": "0x24050885"
+        },
+        {
+          "va": "0xdf936c",
+          "old": "0x24050191",
+          "new": "0x24050885"
+        },
+        {
+          "va": "0xdf9390",
+          "old": "0x24050191",
+          "new": "0x24050885"
+        },
+        {
+          "va": "0xdf9648",
+          "old": "0x2405023a",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdf966c",
+          "old": "0x2405023a",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdf9690",
+          "old": "0x2405023a",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdf96b4",
+          "old": "0x2405023a",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdf996c",
+          "old": "0x2405023b",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdf9990",
+          "old": "0x2405023b",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdf99b4",
+          "old": "0x2405023b",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdf99d8",
+          "old": "0x2405023b",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdf9c90",
+          "old": "0x24050236",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdf9cb4",
+          "old": "0x24050236",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdf9cd8",
+          "old": "0x24050236",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdf9cfc",
+          "old": "0x24050236",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdf9fb4",
+          "old": "0x2405023d",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdf9fd8",
+          "old": "0x2405023d",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdf9ffc",
+          "old": "0x2405023d",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdfa020",
+          "old": "0x2405023d",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdfa2d8",
+          "old": "0x24050238",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdfa2fc",
+          "old": "0x24050238",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdfa320",
+          "old": "0x24050238",
+          "new": "0x240505cd"
+        },
+        {
+          "va": "0xdfa344",
+          "old": "0x24050238",
+          "new": "0x240505cd"
+        }
+      ],
+      "standalone_num": [
+        {
+          "id": "0x5b38",
+          "old": 0,
+          "new": 1728
+        },
+        {
+          "id": "0x5b39",
+          "old": 435,
+          "new": 19
+        },
+        {
+          "id": "0x4208",
+          "old": 165,
+          "new": 160
+        },
+        {
+          "id": "0x4219",
+          "old": 0,
+          "new": 56
+        },
+        {
+          "id": "0x4218",
+          "old": 100,
+          "new": 52
+        },
+        {
+          "id": "0x4217",
+          "old": 100,
+          "new": 52
+        }
+      ],
+      "standalone_outer": [
+        1728,
+        19,
+        160,
+        230
+      ],
+      "standalone_icon": [
+        1784,
+        74,
+        52,
+        52
+      ],
+      "right_margin": 84,
+      "top_margin": 74,
+      "white_badge_id": 2181,
+      "legacy_shadows_null_id": 1485,
+      "base_overlay_files": 12,
+      "output_overlay_files": 14,
+      "original_button_not_overlaid": true,
+      "limits": [
+        "Static and bounded instruction tests do not prove physical TV behavior",
+        "No device crash dump; GP defect reproduces invalid access and fits reported symptom",
+        "CSS numeric-popup badge relocation is not installed",
+        "Existing real IsMuted predicate still governs standalone lifecycle"
+      ],
+      "television_tested": false,
+      "flash_ready": false
+    },
+    "menus_original": true,
+    "settings_original": true,
+    "original_lifecycle_and_audio_routing": true,
+    "v74_television_tested": false
+  },
+  "records": [
+    {
+      "relative_path": "08_APP/bin/dvbt_board",
+      "original_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+      "candidate_sha256": "8918a9a426521d7af2124a2358586c6021038c4eccde750b8105d914d7cf2a3b",
+      "bytes": 13836676
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Common/popups/volumeControl/arc_soundDown.png",
+      "original_sha256": "0124768c82ed9e51c614b2928ee97c5b628960bdac6ac683416531da0f48a532",
+      "candidate_sha256": "e454ec06b221cd7c28c9453568d189a5c735255cbeff41545f625b74ce5bb2f4",
+      "bytes": 1034
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Common/popups/volumeControl/arc_soundMute.png",
+      "original_sha256": "96a0e524ed1e8167d0d3ddd22b36656c99930d33653e0ea390b295c1f13cca01",
+      "candidate_sha256": "3b9bf1124dbfbdd64f8d4761f31649607ccff27bd25541ea4a0aed9db3bed842",
+      "bytes": 818
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Common/popups/volumeControl/arc_soundUp.png",
+      "original_sha256": "6fa4da20137eadb2da83ff64d0804036a58368a16df1dbadf3aa1eec4b5eb71e",
+      "candidate_sha256": "5e7f435949124eb16ea609a04a54a031c5e37ee23f96a1bad65763313ad03a8f",
+      "bytes": 1158
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Common/popups/volumeControl/bg.png",
+      "original_sha256": "347c72138107e1dfae24068eb9ed50141ac958d65b7e4765697b85dd7d95db18",
+      "candidate_sha256": "3bc46a137594635ca1a2c47bcd820d6d619c3a850d58f9fc6db1908d1011169d",
+      "bytes": 2938
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Common/popups/volumeControl/volume_shadow.png",
+      "original_sha256": "9a095d761869c488870b5f8fd6d179a222e3293cd443f96fdbb43845b5c946f4",
+      "candidate_sha256": "38278e73d42c9ee28205a3191ac6f653491e509a9d7fbb5b6beea068105ec069",
+      "bytes": 359
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/modern/mute_badge.png",
+      "original_sha256": null,
+      "candidate_sha256": "b715372a955609be668bccb839466323fe00f07447147ee11fa4ad0f60d93066",
+      "bytes": 1385
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/modern/numeric_bg.png",
+      "original_sha256": null,
+      "candidate_sha256": "6144405871b839f29d6be99b7696f678400a415f06c5893d43fd61937801547c",
+      "bytes": 11172
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/modern/volume_muted_bg.png",
+      "original_sha256": null,
+      "candidate_sha256": "14a1bab0198740835f236cfe7fbaeca943b9e10f9aa1784107b111e013bb7389",
+      "bytes": 3116
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/volume/mute_icon.png",
+      "original_sha256": "b5a061e1b756cdb160a3685e9baaea0fdc1aad3a1f6af245828037447dd429ff",
+      "candidate_sha256": "82445d3755d20ba59fa325fc3bebc7505124f59531b0b7dbd3c1470b30a5417c",
+      "bytes": 1683
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/volume/volume_ellipse.png",
+      "original_sha256": "856419dba36067ee7d55c469e1b46fbdfb922bee5b893a482c6c164f2a975bf5",
+      "candidate_sha256": "09e0029db7a9d95051831cd1953f4944d651308dad70a9a7d7abf3085c87955a",
+      "bytes": 1120
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/volume/volume_icon.png",
+      "original_sha256": "0899f126b8139430eb7ee8b86482efdb0c9730460e7900f9fe523086d584f446",
+      "candidate_sha256": "aa1c3918d73338f4065285fbc634fe56169dcc7019af99753b907a897796b099",
+      "bytes": 2044
+    },
+    {
+      "relative_path": "08_APP/rc/rc/bin/Image_res.bin",
+      "original_sha256": "d6b1b9fde60c9cc4624f264a8e75da4245e6fb3e9dab7534ddce01706fbcd2f3",
+      "candidate_sha256": "2ef7d8b0dfc053d524464d996332e0b276601e6168e5288ecd81b52412d45293",
+      "bytes": 129627
+    },
+    {
+      "relative_path": "08_APP/rc/rc/bin/Num_res.bin",
+      "original_sha256": "e20c03cd212f548eb8154e8e49d6cf4daafc5fd5842887c51590bf76cfe613ff",
+      "candidate_sha256": "a7ef3d3980b364c89f461bf6db9107f294bdc9ba6eab9a1934309069868cf13b",
+      "bytes": 94288
+    }
+  ],
+  "television_tested": false,
+  "flash_ready": false
+}

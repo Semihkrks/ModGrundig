@@ -1,0 +1,140 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           MIPS R3000
+  Version:                           0x1
+  Entry point address:               0x20690
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          5420 (bytes into file)
+  Flags:                             0x70001007, noreorder, pic, cpic, o32, mips32r2
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         9
+  Size of section headers:           40 (bytes)
+  Number of section headers:         22
+  Section header string table index: 20
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  PHDR           0x000034 0x00010034 0x00010034 0x00120 0x00120 R   0x4
+  INTERP         0x000154 0x00010154 0x00010154 0x0000d 0x0000d R   0x1
+      [Requesting program interpreter: /lib/ld.so.1]
+  LOAD           0x000000 0x00010000 0x00010000 0x00689 0x00689 R   0x10000
+  LOAD           0x000690 0x00020690 0x00020690 0x0081c 0x0081c R E 0x10000
+  LOAD           0x000eb0 0x00030eb0 0x00030eb0 0x00084 0x00090 RW  0x10000
+  DYNAMIC        0x000438 0x00010438 0x00010438 0x000a8 0x000a8 R   0x4
+  GNU_STACK      0x000000 0x00000000 0x00000000 0x00000 0x00000 RW  0
+  REGINFO        0x000180 0x00010180 0x00010180 0x00018 0x00018 R   0x4
+  ABIFLAGS       0x000168 0x00010168 0x00010168 0x00018 0x00018 R   0x8
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     
+   01     .interp 
+   02     .interp .MIPS.abiflags .reginfo .dynsym .gnu.version .gnu.version_r .hash .dynamic .dynstr .rodata 
+   03     .text 
+   04     .data .rld_map .got 
+   05     .dynamic 
+   06     
+   07     .reginfo 
+   08     .MIPS.abiflags 
+
+Dynamic section at offset 0x438 contains 21 entries:
+  Tag        Type                         Name/Value
+ 0x00000001 (NEEDED)                     Shared library: [libpng12.so.0]
+ 0x00000001 (NEEDED)                     Shared library: [libc.so.6]
+ 0x00000015 (DEBUG)                      0x0
+ 0x00000006 (SYMTAB)                     0x10198
+ 0x0000000b (SYMENT)                     16 (bytes)
+ 0x00000005 (STRTAB)                     0x104e0
+ 0x0000000a (STRSZ)                      354 (bytes)
+ 0x00000004 (HASH)                       0x10378
+ 0x6ffffff0 (VERSYM)                     0x10308
+ 0x6ffffffe (VERNEED)                    0x10338
+ 0x6fffffff (VERNEEDNUM)                 2
+ 0x70000001 (MIPS_RLD_VERSION)           1
+ 0x70000005 (MIPS_FLAGS)                 NOTPOT
+ 0x70000006 (MIPS_BASE_ADDRESS)          0x10000
+ 0x70000011 (MIPS_SYMTABNO)              23
+ 0x7000000a (MIPS_LOCAL_GOTNO)           7
+ 0x70000013 (MIPS_GOTSYM)                0x1
+ 0x00000003 (PLTGOT)                     0x30ec0
+ 0x70000016 (MIPS_RLD_MAP)               0x30eb0
+ 0x70000035 (MIPS_RLD_MAP_REL)           0x209e0
+ 0x00000000 (NULL)                       0x0
+
+Version symbols section '.gnu.version' contains 23 entries:
+ Addr: 0x0000000000010308  Offset: 0x00000308  Link: 4 (.dynsym)
+  000:   0 (*local*)       2 (GLIBC_2.0)     2 (GLIBC_2.0)     3 (PNG12_0)    
+  004:   3 (PNG12_0)       3 (PNG12_0)       3 (PNG12_0)       3 (PNG12_0)    
+  008:   3 (PNG12_0)       3 (PNG12_0)       3 (PNG12_0)       3 (PNG12_0)    
+  00c:   3 (PNG12_0)       3 (PNG12_0)       2 (GLIBC_2.0)     3 (PNG12_0)    
+  010:   3 (PNG12_0)       2 (GLIBC_2.0)     3 (PNG12_0)       2 (GLIBC_2.0)  
+  014:   2 (GLIBC_2.0)     3 (PNG12_0)       2 (GLIBC_2.0)  
+
+Version needs section '.gnu.version_r' contains 2 entries:
+ Addr: 0x0000000000010338  Offset: 0x00000338  Link: 9 (.dynstr)
+  000000: Version: 1  File: libpng12.so.0  Cnt: 1
+  0x0020:   Name: PNG12_0  Flags: none  Version: 3
+  0x0010: Version: 1  File: libc.so.6  Cnt: 1
+  0x0030:   Name: GLIBC_2.0  Flags: none  Version: 2
+
+MIPS ABI Flags Version: 0
+
+ISA: MIPS32r2
+GPR size: 32
+CPR1 size: 32
+CPR2 size: 0
+FP ABI: Hard float (32-bit CPU, Any FPU)
+ISA Extension: None
+ASEs:
+	None
+FLAGS 1: 00000000
+FLAGS 2: 00000000
+
+Primary GOT:
+ Canonical gp value: 00038eb0
+
+ Reserved entries:
+   Address     Access  Initial Purpose
+  00030ec0 -32752(gp) 00000000 Lazy resolver
+  00030ec4 -32748(gp) 80000000 Module pointer (GNU extension)
+
+ Local entries:
+   Address     Access  Initial
+  00030ec8 -32744(gp) 00010000
+  00030ecc -32740(gp) 00020000
+  00030ed0 -32736(gp) 00020000
+  00030ed4 -32732(gp) 00030000
+  00030ed8 -32728(gp) 000206d0
+
+ Global entries:
+   Address     Access  Initial Sym.Val. Type    Ndx Name
+  00030edc -32724(gp) 00000000 00000000 FUNC    UND _exit
+  00030ee0 -32720(gp) 00000000 00000000 FUNC    UND open
+  00030ee4 -32716(gp) 00000000 00000000 FUNC    UND png_create_read_struct
+  00030ee8 -32712(gp) 00000000 00000000 FUNC    UND png_create_info_struct
+  00030eec -32708(gp) 00000000 00000000 FUNC    UND png_set_read_fn
+  00030ef0 -32704(gp) 00000000 00000000 FUNC    UND png_read_info
+  00030ef4 -32700(gp) 00000000 00000000 FUNC    UND png_get_IHDR
+  00030ef8 -32696(gp) 00000000 00000000 FUNC    UND png_get_valid
+  00030efc -32692(gp) 00000000 00000000 FUNC    UND png_set_palette_to_rgb
+  00030f00 -32688(gp) 00000000 00000000 FUNC    UND png_set_tRNS_to_alpha
+  00030f04 -32684(gp) 00000000 00000000 FUNC    UND png_set_add_alpha
+  00030f08 -32680(gp) 00000000 00000000 FUNC    UND png_read_update_info
+  00030f0c -32676(gp) 00000000 00000000 FUNC    UND png_get_rowbytes
+  00030f10 -32672(gp) 00000000 00000000 FUNC    UND malloc
+  00030f14 -32668(gp) 00000000 00000000 FUNC    UND png_read_image
+  00030f18 -32664(gp) 00000000 00000000 FUNC    UND png_read_end
+  00030f1c -32660(gp) 00000000 00000000 FUNC    UND write
+  00030f20 -32656(gp) 00000000 00000000 FUNC    UND png_destroy_read_struct
+  00030f24 -32652(gp) 00000000 00000000 FUNC    UND free
+  00030f28 -32648(gp) 00000000 00000000 FUNC    UND close
+  00030f2c -32644(gp) 00000000 00000000 FUNC    UND png_get_io_ptr
+  00030f30 -32640(gp) 00000000 00000000 FUNC    UND read
+

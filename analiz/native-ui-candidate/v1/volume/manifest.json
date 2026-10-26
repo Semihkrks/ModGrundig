@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "status": "offline_candidate_not_TV_validated",
+  "records": [
+    {
+      "relative_path": "08_APP/rc/rc/bin/Num_res.bin",
+      "original_sha256": "e20c03cd212f548eb8154e8e49d6cf4daafc5fd5842887c51590bf76cfe613ff",
+      "candidate_sha256": "281a97c04d9e000b60a0349a10d5eda5c76a91c33f369793347aef126abebe03",
+      "original_bytes": 94288,
+      "candidate_bytes": 94288,
+      "changed_byte_count": 16,
+      "changed_byte_offsets": [
+        92464,
+        92468,
+        92469,
+        92472,
+        92484,
+        92624,
+        92628,
+        92632,
+        92636,
+        92640,
+        92641,
+        92644,
+        92648,
+        92652,
+        92692,
+        92700
+      ],
+      "candidate": "analiz/native-ui-candidate/v1/volume/candidate/08_APP/rc/rc/bin/Num_res.bin"
+    },
+    {
+      "relative_path": "08_APP/bin/dvbt_board",
+      "original_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+      "candidate_sha256": "9b64ca24f6f7ff0833284599f8bdec3db1b90c820d4fdfdb9ff26711c1ad41c2",
+      "original_bytes": 13836676,
+      "candidate_bytes": 13836676,
+      "changed_byte_count": 13,
+      "changed_byte_offsets": [
+        12288504,
+        12288506,
+        12288507,
+        12288508,
+        12288510,
+        12288512,
+        12288513,
+        12288514,
+        12288515,
+        12288519,
+        12288520,
+        12288522,
+        12288523
+      ],
+      "candidate": "analiz/native-ui-candidate/v1/volume/candidate/08_APP/bin/dvbt_board"
+    }
+  ],
+  "num_patches": [
+    {
+      "id": 23104,
+      "id_hex": "0x5a40",
+      "file_offset": 92472,
+      "original_value": 140,
+      "candidate_value": 76,
+      "role": "normal root width"
+    },
+    {
+      "id": 23103,
+      "id_hex": "0x5a3f",
+      "file_offset": 92468,
+      "original_value": 460,
+      "candidate_value": 540,
+      "role": "normal root height; contains 20+500 panel"
+    },
+    {
+      "id": 23107,
+      "id_hex": "0x5a43",
+      "file_offset": 92484,
+      "original_value": 100,
+      "candidate_value": 76,
+      "role": "panel width"
+    },
+    {
+      "id": 23102,
+      "id_hex": "0x5a3e",
+      "file_offset": 92464,
+      "original_value": 420,
+      "candidate_value": 500,
+      "role": "panel height"
+    },
+    {
+      "id": 23144,
+      "id_hex": "0x5a68",
+      "file_offset": 92632,
+      "original_value": 0,
+      "candidate_value": 23,
+      "role": "speaker/mute x"
+    },
+    {
+      "id": 23145,
+      "id_hex": "0x5a69",
+      "file_offset": 92636,
+      "original_value": 320,
+      "candidate_value": 444,
+      "role": "speaker/mute y"
+    },
+    {
+      "id": 23143,
+      "id_hex": "0x5a67",
+      "file_offset": 92628,
+      "original_value": 100,
+      "candidate_value": 30,
+      "role": "speaker/mute width"
+    },
+    {
+      "id": 23142,
+      "id_hex": "0x5a66",
+      "file_offset": 92624,
+      "original_value": 100,
+      "candidate_value": 30,
+      "role": "speaker/mute height"
+    },
+    {
+      "id": 23159,
+      "id_hex": "0x5a77",
+      "file_offset": 92692,
+      "original_value": 100,
+      "candidate_value": 76,
+      "role": "number width"
+    },
+    {
+      "id": 23161,
+      "id_hex": "0x5a79",
+      "file_offset": 92700,
+      "original_value": 20,
+      "candidate_value": 18,
+      "role": "number y"
+    },
+    {
+      "id": 23148,
+      "id_hex": "0x5a6c",
+      "file_offset": 92648,
+      "original_value": 45,
+      "candidate_value": 35,
+      "role": "track x"
+    },
+    {
+      "id": 23149,
+      "id_hex": "0x5a6d",
+      "file_offset": 92652,
+      "original_value": 88,
+      "candidate_value": 92,
+      "role": "track y"
+    },
+    {
+      "id": 23147,
+      "id_hex": "0x5a6b",
+      "file_offset": 92644,
+      "original_value": 10,
+      "candidate_value": 6,
+      "role": "track and progress width"
+    },
+    {
+      "id": 23146,
+      "id_hex": "0x5a6a",
+      "file_offset": 92640,
+      "original_value": 200,
+      "candidate_value": 320,
+      "role": "track and progress height"
+    }
+  ],
+  "elf_patch": {
+    "virtual_address": "0xfb81f8",
+    "file_offset": 12288504,
+    "original_hex": "000000001800dc8f2900c2932700401000000000",
+    "candidate_hex": "2900d0932c00c28f0b101000270040141800dc8f",
+    "scope": "normal volume branch icon selection only; volume zero uses mute image",
+    "service_mute_flags_changed": false,
+    "arc_routing_changed": false,
+    "no_codecave_or_trampoline": true
+  },
+  "sources": {
+    "num": "08_APP/rc/rc/bin/Num_res.bin",
+    "elf": "08_APP/bin/dvbt_board"
+  },
+  "direct_entry_check": {
+    "executable_bytes_scanned": 11757380,
+    "direct_incoming": [],
+    "literal_va_counts": {
+      "0xfb81f8": 0,
+      "0xfb81fc": 0,
+      "0xfb8200": 0,
+      "0xfb8204": 0,
+      "0xfb8208": 0
+    },
+    "computed_entries_resolved": false
+  },
+  "host_validation": {
+    "capstone_version": "5.0.6",
+    "unicorn_version": "2.1.4",
+    "decoded": [
+      {
+        "address": "0xfb81f8",
+        "mnemonic": "lbu",
+        "operands": "$s0, 0x29($fp)",
+        "bytes": "2900d093"
+      },
+      {
+        "address": "0xfb81fc",
+        "mnemonic": "lw",
+        "operands": "$v0, 0x2c($fp)",
+        "bytes": "2c00c28f"
+      },
+      {
+        "address": "0xfb8200",
+        "mnemonic": "movn",
+        "operands": "$v0, $zero, $s0",
+        "bytes": "0b101000"
+      },
+      {
+        "address": "0xfb8204",
+        "mnemonic": "bnez",
+        "operands": "$v0, 0xfb82a4",
+        "bytes": "27004014"
+      },
+      {
+        "address": "0xfb8208",
+        "mnemonic": "lw",
+        "operands": "$gp, 0x18($fp)",
+        "bytes": "1800dc8f"
+      }
+    ],
+    "emulator_cases": 202,
+    "volume_range": [
+      0,
+      100
+    ],
+    "mute_states": [
+      0,
+      1
+    ],
+    "delay_slots_verified": true,
+    "virtual_call_arguments_preserved": true,
+    "volatile_register_clobber_test": true,
+    "gp_restore_verified": true,
+    "saved_s0_and_epilogue_verified": true,
+    "original_state_unchanged": true,
+    "hardware_or_service_code_executed": false,
+    "limitation": "Synthetic callee preserves MIPS ABI s0; actual widget callee not emulated"
+  },
+  "originals_modified": false,
+  "firmware_repacked": false,
+  "target_executed": false,
+  "TV_tested": false,
+  "flashable": false,
+  "unchanged": [
+    "ARC branches",
+    "hardware mute flags",
+    "font and color tables",
+    "event maps",
+    "PNG assets"
+  ],
+  "unresolved": [
+    "Active TV firmware/profile match",
+    "native image fitting and ShowBorder semantics",
+    "30px icon appearance and final window clipping/scaling",
+    "on-device timing and recovery"
+  ]
+}

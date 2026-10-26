@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-24",
+  "revision": "v3",
+  "status": "offline_native_candidate_and_MIPS_startup_lab",
+  "report": "docs/UI_NATIVE_ADAY_V3.md",
+  "original_SWImage_sha256": "6d7614730c5f63b9e6727b8b329606b188b581efb366bffde6991aca123852c0",
+  "candidate_SWImage_sha256": "382750ab36013c489fbe8b34a42241cdfabbc8441e301703153e014b039a1c22",
+  "app_sha256": "c3f282e9966b3f634442d7574a13ce3cd889c3167ff63baa205ba23d75e0adb2",
+  "changed_files": 22,
+  "regular_files_verified": 2371,
+  "metadata_entries_verified": 2773,
+  "committed_nodes_crc_verified": 18988,
+  "payloads_verified": 14,
+  "payloads_unchanged": 13,
+  "independent_readback": "PASS_OFFLINE_ONLY",
+  "tests": {
+    "v3": 8,
+    "app_guards": 7,
+    "emulation_contract": 14,
+    "original_MIPS_PNG_decodes": 3
+  },
+  "original_decoder_passed": true,
+  "actual_app_runs": {
+    "original": {
+      "exit_code": 134,
+      "last_path": {
+        "call": "open",
+        "path": "/sys/class/ubi",
+        "result": "-1 errno=2 (No such file or directory)"
+      },
+      "screen_rendered": false
+    },
+    "v2": {
+      "exit_code": 134,
+      "last_path": {
+        "call": "open",
+        "path": "/sys/class/ubi",
+        "result": "-1 errno=2 (No such file or directory)"
+      },
+      "screen_rendered": false
+    },
+    "v3": {
+      "exit_code": 134,
+      "last_path": {
+        "call": "open",
+        "path": "/sys/class/ubi",
+        "result": "-1 errno=2 (No such file or directory)"
+      },
+      "screen_rendered": false
+    }
+  },
+  "full_preview_ported": false,
+  "full_TV_emulator": false,
+  "TV_tested": false,
+  "flash_ready": false,
+  "remaining": "Home/configured text styles; extra numeric widgets; channel/info; other UI families; native animations; NAND/UBI/GOP emulation; active device profile and acceptance"
+}

@@ -1,0 +1,129 @@
+// Generated from retained firmware resource tables; do not hand-edit.
+export const PROFILE={
+  "source": "GMGRMR V03.017.04 offline resources",
+  "turkish_table_sha256": "6649c2771f4de6ea4db9f7b8b8b8b384c1929ab2dabe2f834b215e28a666de1b",
+  "tv_parity_verified": false,
+  "native_geometry_applied": false,
+  "network_web_enabled": false,
+  "menu_title": {
+    "id": 3913,
+    "offset": 68758,
+    "text": "Ayarlar"
+  },
+  "channel_list_title": {
+    "id": 4059,
+    "offset": 73296,
+    "text": "KANAL LİSTESİ"
+  },
+  "volume": {
+    "height": 420,
+    "track_height": 200,
+    "track_y": 88,
+    "icon_y": 320,
+    "number_font": 36
+  },
+  "volume_images": {
+    "background": {
+      "id": 674,
+      "path": "./assets/image-674.png",
+      "sha256": "9a6fb3cc1c24654d1c93ed885d96169b5e03c189f84d342fb8f9892d194b1e04"
+    },
+    "mute": {
+      "id": 680,
+      "path": "./assets/image-680.png",
+      "sha256": "002d336eb6fbdd8358d0ccdb79b2dfb5af146e6c0e2f1ce7fcf39c3d0812dbb0"
+    },
+    "knob": {
+      "id": 681,
+      "path": "./assets/image-681.png",
+      "sha256": "5ee71d8c678b8ee01f3afbc60d4e016135cea6256378f538d77e71fdc9531d3b"
+    },
+    "speaker": {
+      "id": 682,
+      "path": "./assets/image-682.png",
+      "sha256": "053834514c15c8df932ded27a690da62d8b9e1442b238c63b563e286d10bba6b"
+    }
+  },
+  "cards": [
+    {
+      "kind": "video",
+      "label": {
+        "id": 3747,
+        "offset": 65034,
+        "text": "Görüntü Ayarları"
+      },
+      "images": {
+        "normal": {
+          "id": 985,
+          "path": "./assets/image-985.png",
+          "sha256": "889e608f51380f4d6f607e9605a53f925e97ee306af83a736bb4d1134a10ea00"
+        },
+        "focus": {
+          "id": 986,
+          "path": "./assets/image-986.png",
+          "sha256": "ae256d21429c45381e9f0d37cd739122bfebef582506e595cbd81eccf6f88965"
+        }
+      }
+    },
+    {
+      "kind": "sound",
+      "label": {
+        "id": 3997,
+        "offset": 71521,
+        "text": "Ses Ayarları"
+      },
+      "images": {
+        "normal": {
+          "id": 973,
+          "path": "./assets/image-973.png",
+          "sha256": "dde0975c8c947da6ba86bc930ca7eebc9ff2b108b217062e13be721d6b704a57"
+        },
+        "focus": {
+          "id": 974,
+          "path": "./assets/image-974.png",
+          "sha256": "d7c43cb4cb6c57e7224b9dbbdd6d32e779fcdd0764bcc1f9a64675e08cfa9bf3"
+        }
+      }
+    },
+    {
+      "kind": "source",
+      "label": {
+        "id": 4091,
+        "offset": 73879,
+        "text": "Kaynak Ayarları"
+      },
+      "images": {
+        "normal": {
+          "id": 975,
+          "path": "./assets/image-975.png",
+          "sha256": "208dbc89ef300d5cf04b67b38d0641afea1f590f528de8ccc2c67d78f7d1c7ba"
+        },
+        "focus": {
+          "id": 976,
+          "path": "./assets/image-976.png",
+          "sha256": "7e160816638dc1fd7f86b2cbb0336afbfc59d3317d38924237138de214776d6d"
+        }
+      }
+    },
+    {
+      "kind": "settings",
+      "label": {
+        "id": 141,
+        "offset": 2095,
+        "text": "TV Ayarları"
+      },
+      "images": {
+        "normal": {
+          "id": 983,
+          "path": "./assets/image-983.png",
+          "sha256": "a155a11bd2638139d8560d5fa56b67935e62d251f3564fe8e2f588511a244aeb"
+        },
+        "focus": {
+          "id": 984,
+          "path": "./assets/image-984.png",
+          "sha256": "75fb932c4f71b5d880542b99c9a07dacd559761c14444db29e23e3208ed35ac0"
+        }
+      }
+    }
+  ]
+};

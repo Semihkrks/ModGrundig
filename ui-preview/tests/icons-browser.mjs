@@ -1,0 +1,21 @@
+import {createRequire} from 'node:module';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const require=createRequire(import.meta.url),{chromium}=require(process.env.PLAYWRIGHT_MODULE||'C:/Users/Semih/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'),out=path.join(root,'analiz/ui-modernizasyon');
+const before=await fs.readFile(path.join(out,'tv-icons-before.svg'),'utf8'),after=await fs.readFile(path.join(root,'ui-preview/tv-icons.svg'),'utf8');
+const names=[['settings','Ayarlar'],['picture','Görüntü'],['speaker','Ses'],['mute','Sessiz'],['source','Kaynak'],['tv','TV'],['channels','Kanal listesi'],['edit','Kanal düzenleme'],['media','Medya'],['timer','Zamanlayıcı'],['lock','Kilit'],['record','Kayıt'],['usb','USB'],['back','Geri'],['play','Oynat'],['pause','Duraklat']];
+const sprite=(text,prefix)=>text.replace('<svg xmlns="http://www.w3.org/2000/svg">','<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden">').replaceAll('id="icon-','id="'+prefix+'-icon-');
+const browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
+const page=await browser.newPage({viewport:{width:1440,height:1540},deviceScaleFactor:1});
+try{
+ await page.setContent(`<html lang="tr"><meta charset="utf-8"><style>body{margin:0;padding:40px;background:#edf2f6;color:#203b50;font:18px 'Segoe UI',sans-serif}*{box-sizing:border-box}h1{margin:0 0 10px;font-size:28px}p{margin:0 0 26px;color:#536f83}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}article{background:#fbfcfd;padding:19px 20px 15px;border-radius:14px;height:308px}h2{margin:0 0 15px;font-size:18px;font-weight:600}.pair{display:flex;gap:36px;justify-content:space-around}.cell{display:flex;align-items:center;flex-direction:column;gap:14px}.large{width:100px;height:100px}.small{width:32px;height:32px}small{font-size:13px;color:#6b8293}.after{color:#203b50}svg{overflow:visible}</style>${sprite(before,'before')}${sprite(after,'after')}<h1>TV simgeleri · Geometri ve okunabilirlik</h1><p>Her simge büyük ve 32px boyutta: sol önceki çizim, sağ düzeltilmiş çizim.</p><div class="grid">${names.map(([name,label])=>`<article><h2>${label}</h2><div class="pair">${['before','after'].map(type=>`<div class="cell ${type}"><svg class="large" viewBox="0 0 32 32" data-name="${name}" data-version="${type}"><use href="#${type}-icon-${name}"/></svg><svg class="small" viewBox="0 0 32 32"><use href="#${type}-icon-${name}"/></svg><small>${type==='before'?'Önce':'Sonra'}</small></div>`).join('')}</div></article>`).join('')}</div></html>`);
+ const boxes=await page.locator('svg.large[data-version="after"]').evaluateAll(nodes=>nodes.map(n=>{const b=n.firstElementChild.getBBox();return {name:n.dataset.name,x:b.x,y:b.y,width:b.width,height:b.height};}));
+ assert.equal(boxes.length,16);for(const box of boxes){assert(box.width>0&&box.height>0,box.name+' empty');assert(box.x>=1&&box.y>=1&&box.x+box.width<=31&&box.y+box.height<=31,box.name+' clips');}
+ for(const name of ['settings','pause','timer']){const b=boxes.find(b=>b.name===name);assert(Math.abs(b.x+b.width/2-16)<.01,name+' off-center');}
+ const symmetry=await page.evaluate(()=>{const d=document.querySelector('#after-icon-settings path').getAttribute('d');const values=d.match(/-?\d+(?:\.\d+)?/g).map(Number);const points=[];for(let i=0;i<values.length;i+=2)points.push([values[i],values[i+1]]);return points.every(([x,y])=>points.some(([a,b])=>Math.abs(a-(32-x))<.002&&Math.abs(b-(32-y))<.002));});assert(symmetry,'gear lacks rotational symmetry');
+ await page.screenshot({path:path.join(out,'icons-before-after.png'),fullPage:true});
+ await fs.writeFile(path.join(out,'icon-geometry-tests.json'),JSON.stringify({status:'pass',symbols:boxes.length,boxes,centered:['settings','pause','timer'],gearSymmetry:true,nativeApplied:false},null,2)+'\n');console.log('16 symbols: bounds, centers, gear symmetry and screenshot PASS');
+}finally{await browser.close();}

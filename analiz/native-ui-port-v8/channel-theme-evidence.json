@@ -1,0 +1,423 @@
+{
+  "date": "2026-10-25",
+  "method": "retained Ghidra direct exports + original/v7 exact ELF words + bounded single-instruction MIPS argument tests",
+  "REA_Evidence": false,
+  "new_decompilations": 0,
+  "native_functions_theming_patched": 2,
+  "patch_instructions": 25,
+  "num_changes": 0,
+  "input_v7_elf_sha256": "9ededb627b8548d0b12f6495d66bac4a0943fb3d92e83a2f3547a86b1ec33dc3",
+  "output_channel_only_elf_sha256": "d3813dc09bde2c305792310fcdc34567a63dd280039322334e36921cdb0ac6a1",
+  "resources": [
+    {
+      "id": 2184,
+      "path": "../rc/ARimages/Grundig/modern/v8_channel_panel.png",
+      "bytes": 547,
+      "sha256": "6ccc0d3dcd46ae5acb469c6c6e3e4447df19e6f4b29ef35ddeb2535552362cd6"
+    },
+    {
+      "id": 2185,
+      "path": "../rc/ARimages/Grundig/modern/v8_program_band.png",
+      "bytes": 187,
+      "sha256": "7212f2a35f1bb52e142902def0078bbdbe926f874ecd9712830b7d8f21563329"
+    }
+  ],
+  "patch_proof": [
+    {
+      "va": "0x799b0c",
+      "old_word": "0x2404004b",
+      "new_word": "0x2404005e",
+      "role": "channel-list main panel fallback Color75 -> Color94",
+      "callsite": "0x799b14",
+      "target": "GetRcEngine::RcGetColor(unsigned int)",
+      "source": "analiz/native-ui-port-v3/channel-list/raw-calls.json",
+      "source_sha256": "2e4e11e107fbd9f36b39af561476068ae62f01d2f6207a5a58c1291ce4d035e3",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x799b2c",
+      "old_word": "0x2404004b",
+      "new_word": "0x2404005e",
+      "role": "channel-list main panel fallback Color75 -> Color94",
+      "callsite": "0x799b34",
+      "target": "GetRcEngine::RcGetColor(unsigned int)",
+      "source": "analiz/native-ui-port-v3/channel-list/raw-calls.json",
+      "source_sha256": "2e4e11e107fbd9f36b39af561476068ae62f01d2f6207a5a58c1291ce4d035e3",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x799b4c",
+      "old_word": "0x2404004b",
+      "new_word": "0x2404005e",
+      "role": "channel-list main panel fallback Color75 -> Color94",
+      "callsite": "0x799b54",
+      "target": "GetRcEngine::RcGetColor(unsigned int)",
+      "source": "analiz/native-ui-port-v3/channel-list/raw-calls.json",
+      "source_sha256": "2e4e11e107fbd9f36b39af561476068ae62f01d2f6207a5a58c1291ce4d035e3",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x799b6c",
+      "old_word": "0x2404004b",
+      "new_word": "0x2404005e",
+      "role": "channel-list main panel fallback Color75 -> Color94",
+      "callsite": "0x799b74",
+      "target": "GetRcEngine::RcGetColor(unsigned int)",
+      "source": "analiz/native-ui-port-v3/channel-list/raw-calls.json",
+      "source_sha256": "2e4e11e107fbd9f36b39af561476068ae62f01d2f6207a5a58c1291ce4d035e3",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x799c6c",
+      "old_word": "0x24050042",
+      "new_word": "0x24050888",
+      "role": "channel-list panel normal Image66 -> private2184",
+      "callsite": "0x799c74",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/channel-list/raw-calls.json",
+      "source_sha256": "2e4e11e107fbd9f36b39af561476068ae62f01d2f6207a5a58c1291ce4d035e3",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x799c90",
+      "old_word": "0x24050027",
+      "new_word": "0x24050888",
+      "role": "channel-list panel state1 Image39 -> private2184",
+      "callsite": "0x799c98",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/channel-list/raw-calls.json",
+      "source_sha256": "2e4e11e107fbd9f36b39af561476068ae62f01d2f6207a5a58c1291ce4d035e3",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x799cb4",
+      "old_word": "0x24050027",
+      "new_word": "0x24050888",
+      "role": "channel-list panel state2 Image39 -> private2184",
+      "callsite": "0x799cbc",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/channel-list/raw-calls.json",
+      "source_sha256": "2e4e11e107fbd9f36b39af561476068ae62f01d2f6207a5a58c1291ce4d035e3",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x799cd8",
+      "old_word": "0x24050027",
+      "new_word": "0x24050888",
+      "role": "channel-list panel state3 Image39 -> private2184",
+      "callsite": "0x799ce0",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/channel-list/raw-calls.json",
+      "source_sha256": "2e4e11e107fbd9f36b39af561476068ae62f01d2f6207a5a58c1291ce4d035e3",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x79d164",
+      "old_word": "0x24040045",
+      "new_word": "0x24040000",
+      "role": "channel-list right detail normal text Color69 -> Color0",
+      "callsite": "0x79d16c",
+      "target": "GetRcEngine::RcGetColor(unsigned int)",
+      "source": "analiz/native-ui-port-v3/channel-list/raw-calls.json",
+      "source_sha256": "2e4e11e107fbd9f36b39af561476068ae62f01d2f6207a5a58c1291ce4d035e3",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x79d5c8",
+      "old_word": "0x24040045",
+      "new_word": "0x24040000",
+      "role": "channel-list right detail normal text Color69 -> Color0",
+      "callsite": "0x79d5d0",
+      "target": "GetRcEngine::RcGetColor(unsigned int)",
+      "source": "analiz/native-ui-port-v3/channel-list/raw-calls.json",
+      "source_sha256": "2e4e11e107fbd9f36b39af561476068ae62f01d2f6207a5a58c1291ce4d035e3",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x79da38",
+      "old_word": "0x24040045",
+      "new_word": "0x24040000",
+      "role": "channel-list right detail normal text Color69 -> Color0",
+      "callsite": "0x79da40",
+      "target": "GetRcEngine::RcGetColor(unsigned int)",
+      "source": "analiz/native-ui-port-v3/channel-list/raw-calls.json",
+      "source_sha256": "2e4e11e107fbd9f36b39af561476068ae62f01d2f6207a5a58c1291ce4d035e3",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x79de98",
+      "old_word": "0x24040045",
+      "new_word": "0x24040000",
+      "role": "channel-list right detail normal text Color69 -> Color0",
+      "callsite": "0x79dea0",
+      "target": "GetRcEngine::RcGetColor(unsigned int)",
+      "source": "analiz/native-ui-port-v3/channel-list/raw-calls.json",
+      "source_sha256": "2e4e11e107fbd9f36b39af561476068ae62f01d2f6207a5a58c1291ce4d035e3",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x79e2f8",
+      "old_word": "0x24040045",
+      "new_word": "0x24040000",
+      "role": "channel-list right detail normal text Color69 -> Color0",
+      "callsite": "0x79e300",
+      "target": "GetRcEngine::RcGetColor(unsigned int)",
+      "source": "analiz/native-ui-port-v3/channel-list/raw-calls.json",
+      "source_sha256": "2e4e11e107fbd9f36b39af561476068ae62f01d2f6207a5a58c1291ce4d035e3",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x7deb74",
+      "old_word": "0x240501a7",
+      "new_word": "0x24050889",
+      "role": "program-info local Image423 -> private2185",
+      "callsite": "0x7deb7c",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/program-info/raw-calls.json",
+      "source_sha256": "7fc864387000d760e3a9347c71e4c7124191429b3556bb6add9c1144c0c00c2f",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x7deb98",
+      "old_word": "0x240501a7",
+      "new_word": "0x24050889",
+      "role": "program-info local Image423 -> private2185",
+      "callsite": "0x7deba0",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/program-info/raw-calls.json",
+      "source_sha256": "7fc864387000d760e3a9347c71e4c7124191429b3556bb6add9c1144c0c00c2f",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x7debbc",
+      "old_word": "0x240501a7",
+      "new_word": "0x24050889",
+      "role": "program-info local Image423 -> private2185",
+      "callsite": "0x7debc4",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/program-info/raw-calls.json",
+      "source_sha256": "7fc864387000d760e3a9347c71e4c7124191429b3556bb6add9c1144c0c00c2f",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x7debe0",
+      "old_word": "0x240501a7",
+      "new_word": "0x24050889",
+      "role": "program-info local Image423 -> private2185",
+      "callsite": "0x7debe8",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/program-info/raw-calls.json",
+      "source_sha256": "7fc864387000d760e3a9347c71e4c7124191429b3556bb6add9c1144c0c00c2f",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x7deeb8",
+      "old_word": "0x240501a7",
+      "new_word": "0x24050889",
+      "role": "program-info local Image423 -> private2185",
+      "callsite": "0x7deec0",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/program-info/raw-calls.json",
+      "source_sha256": "7fc864387000d760e3a9347c71e4c7124191429b3556bb6add9c1144c0c00c2f",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x7deedc",
+      "old_word": "0x240501a7",
+      "new_word": "0x24050889",
+      "role": "program-info local Image423 -> private2185",
+      "callsite": "0x7deee4",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/program-info/raw-calls.json",
+      "source_sha256": "7fc864387000d760e3a9347c71e4c7124191429b3556bb6add9c1144c0c00c2f",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x7def00",
+      "old_word": "0x240501a7",
+      "new_word": "0x24050889",
+      "role": "program-info local Image423 -> private2185",
+      "callsite": "0x7def08",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/program-info/raw-calls.json",
+      "source_sha256": "7fc864387000d760e3a9347c71e4c7124191429b3556bb6add9c1144c0c00c2f",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x7def24",
+      "old_word": "0x240501a7",
+      "new_word": "0x24050889",
+      "role": "program-info local Image423 -> private2185",
+      "callsite": "0x7def2c",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/program-info/raw-calls.json",
+      "source_sha256": "7fc864387000d760e3a9347c71e4c7124191429b3556bb6add9c1144c0c00c2f",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x7dfe98",
+      "old_word": "0x240501a7",
+      "new_word": "0x24050889",
+      "role": "program-info local Image423 -> private2185",
+      "callsite": "0x7dfea0",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/program-info/raw-calls.json",
+      "source_sha256": "7fc864387000d760e3a9347c71e4c7124191429b3556bb6add9c1144c0c00c2f",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x7dfebc",
+      "old_word": "0x240501a7",
+      "new_word": "0x24050889",
+      "role": "program-info local Image423 -> private2185",
+      "callsite": "0x7dfec4",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/program-info/raw-calls.json",
+      "source_sha256": "7fc864387000d760e3a9347c71e4c7124191429b3556bb6add9c1144c0c00c2f",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x7dfee0",
+      "old_word": "0x240501a7",
+      "new_word": "0x24050889",
+      "role": "program-info local Image423 -> private2185",
+      "callsite": "0x7dfee8",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/program-info/raw-calls.json",
+      "source_sha256": "7fc864387000d760e3a9347c71e4c7124191429b3556bb6add9c1144c0c00c2f",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    },
+    {
+      "va": "0x7dff04",
+      "old_word": "0x240501a7",
+      "new_word": "0x24050889",
+      "role": "program-info local Image423 -> private2185",
+      "callsite": "0x7dff0c",
+      "target": "MImg::Set(unsigned short)",
+      "source": "analiz/native-ui-port-v3/program-info/raw-calls.json",
+      "source_sha256": "7fc864387000d760e3a9347c71e4c7124191429b3556bb6add9c1144c0c00c2f",
+      "basis": "exact_instruction_word + retained_local_call_argument"
+    }
+  ],
+  "scene_spec": {
+    "coordinate_basis": "retained constructor rectangles; later layout not run",
+    "channel_list": {
+      "function": "0x7995b0",
+      "panel": {
+        "field": "this+0x184",
+        "parent": "frame root",
+        "num_ids_xywh": [
+          404,
+          405,
+          403,
+          402
+        ],
+        "rect": [
+          100,
+          160,
+          1720,
+          770
+        ],
+        "image_id": 2184,
+        "fallback_color_id": 94
+      },
+      "list": {
+        "field": "this+0x1b4",
+        "parent": "this+0x184",
+        "num_ids_xywh": [
+          572,
+          573,
+          571,
+          570
+        ],
+        "rect": [
+          0,
+          80,
+          680,
+          690
+        ],
+        "image_id": 496,
+        "native_rows_retained": true
+      },
+      "detail_title": {
+        "field": "this+0x1b8",
+        "parent": "this+0x184",
+        "num_ids_xywh": [
+          664,
+          665,
+          663,
+          662
+        ],
+        "rect": [
+          730,
+          100,
+          678,
+          100
+        ],
+        "font_id": 1199,
+        "size_num_id": 12821,
+        "size": 36,
+        "color_id": 0,
+        "align": 65,
+        "text_resource_id": 3439,
+        "text_basis": "native initial Hazır Değil placeholder; real EPG unbound"
+      }
+    },
+    "program_info": {
+      "function": "0x7de53c",
+      "band": {
+        "field": "this+0x188",
+        "parent": "this+0x180",
+        "num_ids_xywh": [
+          850,
+          851,
+          849,
+          848
+        ],
+        "rect": [
+          0,
+          0,
+          1920,
+          250
+        ],
+        "image_id": 2185
+      },
+      "channel_box": {
+        "field": "this+0x184",
+        "parent": "this+0x180",
+        "num_ids_xywh": [
+          758,
+          759,
+          757,
+          756
+        ],
+        "rect": [
+          0,
+          37,
+          700,
+          213
+        ],
+        "image_id": 2185,
+        "native_visibility_initially_disabled": true
+      }
+    },
+    "real_channel_database": false,
+    "fake_channels_embedded": false,
+    "native_filter_count_preserved": 7,
+    "full_native_frame_executed": false
+  },
+  "tests": {
+    "command": "python -m unittest discover -s scripts -p test_native_ui_v8_channels.py -v",
+    "passed": 5,
+    "single_instruction_executions": 50
+  },
+  "native_handlers_changed": false,
+  "original_files_changed": false,
+  "full_frame_executed": false,
+  "TV_tested": false,
+  "limits": [
+    "two-tone channel-list subset; dynamic left row theme retained",
+    "program-info retains native layout, white text and icons on dark band",
+    "no claim of full Chrome visual parity or device validation"
+  ]
+}

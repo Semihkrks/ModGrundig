@@ -8,6 +8,7 @@
 !/tools/*.md
 !/tools/*.json
 !/tools/*.sha256
+!/tools/emulation-lab-run.ps1
 
 # Archives and binaries outside the analysis tree.
 *.bin
@@ -40,6 +41,11 @@
 /analiz/dosya-sistemleri-tam/12_certificate/
 /analiz/dosya-sistemleri/**/certificate/
 /analiz/loglar/linux-12_certificate.log
+
+# Full offline candidates retain the original opaque certificate payload.
+# Keep these local; publish reports/patch recipes instead of the full container.
+/analiz/native-ui-candidate/**/GM_SWImage*.bin
+/analiz/native-ui-candidate/**/V7_INCELEME_ADAYI.zip
 
 __pycache__/
 node_modules/

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101820">
+  <title>ModGrundig · Menü tasarım önizlemesi</title>
+  <meta name="description" content="Grundig menülerinin çevrimdışı tasarım önizlemesi. Test kanalları ve kumanda gezinmesi; televizyon bağlantısı içermez.">
+  <link rel="icon" href="./assets/image-983.png" type="image/png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="simulator-caption"><h1>ModGrundig <span>Tasarım önizlemesi · Test kanalları</span></h1></header>
+  <main aria-label="Grundig menü tasarım önizlemesi">
+    <section class="preview-shell" aria-label="Televizyon ekranı">
+      <div id="stage" data-menu="closed" data-design="after" data-muted="false" data-route="local" data-volume-visible="false" style="--scale: .6; --display-volume: .32;">
+        <div id="screen">
+          <img id="tv-scene" class="tv-scene" src="./scene.svg" alt="Örnek yayın görüntüsü: gün batımında dağlar ve göl" draggable="false">
+          <div id="broadcast-label" class="broadcast-label" aria-hidden="true"></div>
+          <div id="recording-indicator" role="status" aria-live="polite" hidden>Kayıt · Örnek</div>
+          <p id="broadcast-subtitle" aria-label="Yayın altyazısı" hidden></p>
+
+          <section id="menu" aria-labelledby="menu-heading" hidden>
+            <header class="menu-header"><span class="grundig-logo" aria-label="Grundig">GRUNDIG</span><h2 id="menu-heading">TV</h2><span class="menu-time" id="menu-time"></span></header>
+            <h3 id="home-title">İzle &amp; Dinle</h3>
+            <div id="home-items" class="home-items" aria-label="İzle ve dinle"></div>
+            <div id="home-secondary" class="home-secondary" aria-label="Ayar kategorileri"></div>
+            <footer id="home-footer" class="menu-hints"><span><b>OK</b>Seç</span><span><b>↶</b>Geri</span></footer>
+          </section>
+
+          <section id="settings-panel" class="tv-panel" aria-labelledby="settings-title" hidden>
+            <header class="panel-header"><div><p id="settings-breadcrumb" class="panel-breadcrumb">Ayarlar</p><h2 id="settings-title">Görüntü</h2></div><span class="panel-mark">GRUNDIG</span></header>
+            <div id="settings-rows" class="tv-rows" aria-label="Ayar seçenekleri"></div>
+            <footer id="settings-footer" class="menu-hints"><span><b>◀ ▶</b>Değiştir</span><span><b>OK</b>Seç</span><span><b>↶</b>Geri</span></footer>
+          </section>
+
+          <section id="channel-list-panel" class="tv-panel" aria-labelledby="channel-list-title" hidden>
+            <header class="panel-header"><div><p class="panel-breadcrumb">TV</p><h2 id="channel-list-title">Kanal Listesi</h2></div><span class="panel-mark">GRUNDIG</span></header>
+            <div id="channel-list-tabs" class="channel-tabs" aria-label="Kanal filtreleri"></div>
+            <div class="channel-list-content"><div id="channel-list-rows" class="tv-rows" aria-label="Kanallar"></div><aside id="channel-list-details" aria-label="Seçili kanalın program bilgisi"></aside></div>
+            <footer id="channel-list-footer" class="menu-hints"><span><b>OK</b>İzle</span><span><b>↶</b>Geri</span></footer>
+          </section>
+
+          <section id="source-panel" class="tv-panel" aria-labelledby="source-title" hidden>
+            <header class="panel-header"><div><p class="panel-breadcrumb">TV</p><h2 id="source-title">Kaynak</h2></div><span class="panel-mark">GRUNDIG</span></header>
+            <div id="source-items" class="source-items" aria-label="Giriş kaynakları"></div>
+            <footer class="menu-hints"><span><b>OK</b>Seç</span><span><b>↶</b>Geri</span></footer>
+          </section>
+
+          <section id="channel-info-panel" aria-label="Kanal ve program bilgisi" hidden></section>
+          <section id="channel-number-osd" aria-label="Kanal seçimi" role="status" aria-live="polite" aria-atomic="true" hidden>
+            <p class="number-label">Kanal seçimi</p>
+            <strong id="number-digits"></strong>
+            <p id="number-channel"></p>
+            <small id="number-hint">OK ile izle</small>
+            <div id="number-progress" aria-hidden="true"><span></span></div>
+          </section>
+          <div id="notice" role="status" aria-live="polite" hidden></div>
+
+          <aside id="volume-panel" aria-label="Ses düzeyi" role="status" aria-live="off">
+            <span id="volume-number">32</span>
+            <div id="volume-track" class="volume-track" aria-hidden="true"><div id="volume-fill"></div></div>
+            <img id="volume-icon" src="./native-assets/volume-speaker.png" alt="" aria-hidden="true">
+            <span id="volume-route">TV</span>
+          </aside>
+          <div id="mute-badge" aria-label="Ses kapalı"><svg aria-hidden="true"><use href="./tv-icons.svg#icon-mute"></use></svg><span>Sessiz</span></div>
+          <p id="key-help" class="key-help"><span>Menü <kbd>M</kbd></span><span>Seç <kbd>Enter</kbd></span><span>Geri <kbd>Esc</kbd></span><span>Kumanda <kbd>F1</kbd></span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="simulator-footnote">Örnek yayınlar <span aria-hidden="true">·</span> TV entegrasyonu doğrulanmadı</div>
+  <button type="button" id="remote-toggle" class="remote-toggle" aria-label="Test kumandasını aç" aria-expanded="false" aria-controls="test-controls"><svg aria-hidden="true"><use href="./icons.svg#icon-menu"></use></svg><span>Kumanda</span><kbd>F1</kbd></button>
+  <section id="test-controls" aria-label="Test kumandası" hidden>
+    <div class="remote-top"><span>TV kumandası</span><span>F1</span></div><div class="remote-extra remote-system"><button type="button" data-action="power" aria-label="Bekleme durumunu değiştir">Bekleme <kbd>P</kbd></button><button type="button" data-action="guide">TV rehberi <kbd>G</kbd></button><button type="button" data-action="usb-toggle" aria-pressed="false">USB <kbd>U</kbd></button></div>
+    <div class="remote-utilities"><button type="button" data-action="menu">Menü</button><button type="button" data-action="back">Geri</button><button type="button" data-action="info">Bilgi</button><button type="button" data-action="source">Kaynak</button></div>
+    <div class="remote-direction" aria-label="Yön tuşları"><button type="button" data-action="up" aria-label="Yukarı">▲</button><button type="button" data-action="left" aria-label="Sol">◀</button><button type="button" data-action="ok" class="remote-ok">OK</button><button type="button" data-action="right" aria-label="Sağ">▶</button><button type="button" data-action="down" aria-label="Aşağı">▼</button></div>
+    <div class="remote-rockers"><div><button type="button" data-action="volume-up" aria-label="Sesi artır">+</button><span>Ses</span><button type="button" data-action="volume-down" aria-label="Sesi azalt">−</button></div><button type="button" data-action="mute" aria-pressed="false" class="mute-key"><svg aria-hidden="true"><use href="./tv-icons.svg#icon-mute"></use></svg><span>Sessiz</span></button><div><button type="button" data-action="channel-up" aria-label="Sonraki kanal">+</button><span>Kanal</span><button type="button" data-action="channel-down" aria-label="Önceki kanal">−</button></div></div>
+    <div class="remote-numbers" aria-label="Kanal numarası"><button type="button" data-action="1">1</button><button type="button" data-action="2">2</button><button type="button" data-action="3">3</button><button type="button" data-action="4">4</button><button type="button" data-action="5">5</button><button type="button" data-action="6">6</button><button type="button" data-action="7">7</button><button type="button" data-action="8">8</button><button type="button" data-action="9">9</button><button type="button" data-action="0">0</button></div>
+    <div class="remote-extra remote-edit" aria-label="Kanal düzenleme"><button type="button" data-action="favorite">Favori <kbd>F2</kbd></button><button type="button" data-action="skip">Atla <kbd>F3</kbd></button><button type="button" data-action="lock">Kilitle <kbd>F4</kbd></button></div>
+    <div class="remote-extra remote-entry"><button type="button" data-action="recall">Önceki kanal <kbd>R</kbd></button><button type="button" data-action="backspace">Rakamı sil <kbd>⌫</kbd></button></div>
+    <div class="remote-extra remote-broadcast" aria-label="Yayın seçenekleri"><button type="button" data-action="subtitles">Altyazı</button><button type="button" data-action="audio">Ses dili</button><button type="button" data-action="teletext">Teletekst</button></div>
+    <div class="remote-extra remote-playback" aria-label="Kayıt ve oynatma"><button type="button" data-action="record"><span class="record-dot" aria-hidden="true"></span>Kayıt</button><button type="button" data-action="play-pause">Oynat / Duraklat</button><button type="button" data-action="stop">Durdur</button></div>
+    <div class="remote-color-keys" aria-label="Renkli TV tuşları"><button type="button" data-action="red" aria-label="Kırmızı tuş"><span></span></button><button type="button" data-action="green" aria-label="Yeşil tuş"><span></span></button><button type="button" data-action="yellow" aria-label="Sarı tuş"><span></span></button><button type="button" data-action="blue" aria-label="Mavi tuş"><span></span></button></div>
+    <div class="remote-connections" role="group" aria-labelledby="connection-test-title"><h2 id="connection-test-title">Bağlantı denemesi</h2><div><button type="button" data-action="toggle-hdmi" aria-pressed="true">HDMI</button><button type="button" data-action="toggle-cec" aria-pressed="true">CEC</button><button type="button" data-action="toggle-arc" aria-pressed="false">ARC</button><button type="button" data-action="toggle-handled" aria-pressed="true">CEC kabulü</button></div></div>
+  </section>
+  <output id="status-output" class="sr-only" aria-live="polite"></output><ol id="event-log" hidden></ol>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,618 @@
+[
+  {
+    "target_bytes_modified": false,
+    "kind": "original_function_metadata_removed",
+    "original": {
+      "body_bytes": 103000,
+      "signature": "undefined NewUI_Settings(MMainFrame * param_1)",
+      "entry": "0055b6c0"
+    }
+  },
+  {
+    "kind": "next_phase_prefix_exit_adapter",
+    "analysis_end_exclusive": "00560f54",
+    "terminal_call": "00560f4c",
+    "fragment": "autosearch_initial",
+    "assumption": "Additional original instructions from next phase preserve final stores/loop exits before a metadata-only terminating call. Prefix is not owned by this natural phase.",
+    "natural_end_exclusive": "00560f18"
+  },
+  {
+    "fragment": "autosearch_initial",
+    "s8_input": "explicit_original_frame_context_parameter_unknown_runtime_pointer",
+    "kind": "fragment_context",
+    "t9_seed": "none_fragment_not_PIC_entry",
+    "gp_hex": "0x10cc310"
+  },
+  {
+    "fragment": "autosearch_initial",
+    "kind": "retained_internal_switch_override",
+    "basis": "raw table target validation by SettingsFillListingGaps pre-script",
+    "dispatch": "0055e82c",
+    "destinations": [
+      "0055e834",
+      "0055e8bc",
+      "0055e944",
+      "0055e9cc",
+      "0055ea54"
+    ]
+  },
+  {
+    "fragment": "autosearch_initial",
+    "kind": "retained_internal_switch_override",
+    "basis": "raw table target validation by SettingsFillListingGaps pre-script",
+    "dispatch": "0055f590",
+    "destinations": [
+      "0055f598",
+      "0055f620",
+      "0055f6a8",
+      "0055f730",
+      "0055f7b8"
+    ]
+  },
+  {
+    "kind": "external_or_unknown_jump_return_abstraction",
+    "fragment": "autosearch_initial",
+    "original": {
+      "address": "00560f30",
+      "instruction": "b 0x00560f5c",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "flow_override": "NONE",
+      "flows": [
+        "00560f5c"
+      ],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Return at fragment boundary abstracts continuation; not original standalone function behavior",
+    "modified": {
+      "address": "00560f30",
+      "instruction": "b 0x00560f5c",
+      "flow_type": "TERMINATOR",
+      "flow_override": "RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    }
+  },
+  {
+    "kind": "adapter_call_return_boundary_abstraction",
+    "fragment": "autosearch_initial",
+    "original_call": {
+      "address": "00560f4c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00560f54",
+      "delay_slots": 1
+    },
+    "modified_call": {
+      "address": "00560f4c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL_TERMINATOR",
+      "flow_override": "CALL_RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Next-phase prefix call terminates the analysis adapter; continuation is retained only in raw CFG."
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055bcf8",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055bd00",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055c1a4",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055c1ac",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055c818",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055c820",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055c858",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055c860",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "abort",
+    "original": {
+      "address": "0055c890",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055c898",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055cc70",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055cc78",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055ce84",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055ce8c",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055d098",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055d0a0",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055d2fc",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055d304",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055d33c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055d344",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "abort",
+    "original": {
+      "address": "0055d374",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055d37c",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055d75c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055d764",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055d970",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055d978",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055db84",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055db8c",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055de14",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055de1c",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055de54",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055de5c",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "abort",
+    "original": {
+      "address": "0055de8c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055de94",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055e0dc",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055e0e4",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "abort",
+    "original": {
+      "address": "0055e114",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055e11c",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055e490",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055e498",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "abort",
+    "original": {
+      "address": "0055e4c8",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055e4d0",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055ebb8",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055ebc0",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "abort",
+    "original": {
+      "address": "0055ebf0",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055ebf8",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055ef34",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055ef3c",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "abort",
+    "original": {
+      "address": "0055ef6c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055ef74",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055f1f4",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055f1fc",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "abort",
+    "original": {
+      "address": "0055f22c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055f234",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055f9f4",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055f9fc",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "abort",
+    "original": {
+      "address": "0055fa2c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055fa34",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0055fe0c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055fe14",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "00560020",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00560028",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "00560234",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0056023c",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "005604c4",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005604cc",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "00560504",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0056050c",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "abort",
+    "original": {
+      "address": "0056053c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00560544",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "00560998",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005609a0",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  },
+  {
+    "kind": "standard_noreturn_callsite_assumption",
+    "name": "abort",
+    "original": {
+      "address": "005609d0",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005609d8",
+      "delay_slots": 1
+    },
+    "fragment": "autosearch_initial"
+  }
+]

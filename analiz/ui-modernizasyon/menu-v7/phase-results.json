@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-24",
+  "branch": "codex/ui-soft-preview",
+  "status": "pass",
+  "scope": "existing_browser_ui_and_bounded_native_v7_rehost",
+  "skills": [
+    "redesign-existing-projects",
+    "frontend-a11y"
+  ],
+  "agents": [
+    "remote_focus_fix",
+    "menu_review_resume"
+  ],
+  "tests": [
+    {
+      "command": "node --test ui-preview/tests/*.test.mjs",
+      "passed": 50
+    },
+    {
+      "command": "node ui-preview/tests/new-menu-layout.mjs",
+      "report": "analiz/ui-modernizasyon/menu-v7/browser-tests.json",
+      "menus": 24,
+      "rows": 156,
+      "sha256": "d10c6dbebad147d8b4b82a000d75a8cbe75185de76baaba23d39597d887a1b73"
+    },
+    {
+      "command": "node ui-preview/tests/remote-focus.mjs",
+      "report": "analiz/ui-modernizasyon/menu-v7/remote-focus-tests.json",
+      "checks": 6,
+      "sha256": "8dc89d103296e833508d881c44e703f928b79ea1327d6561338687ae62b77e7d"
+    },
+    {
+      "command": "node ui-preview/tests/browser.mjs",
+      "report": "analiz/ui-modernizasyon/browser-tests.json",
+      "checks": 10,
+      "sha256": "617577f91e9cdc1771b551a897541683766fb6094ec3392dcf8d4ec9cbdb4850"
+    },
+    {
+      "command": "python -m unittest discover -s scripts -p test_native_frame_rehost.py -v",
+      "passed": 15
+    },
+    {
+      "command": "python -m unittest discover -s scripts -p test_native_frame_viewer.py -v",
+      "passed": 5
+    },
+    {
+      "command": "node --test scripts/test_native_frame_viewer.mjs",
+      "passed": 9
+    },
+    {
+      "command": "python scripts/build_native_ui_v7.py",
+      "status": "verified_existing_v7",
+      "files": 24
+    }
+  ],
+  "fixed": [
+    "numeric_label_spacing",
+    "direct_channel_filter_selection",
+    "native_browser_remote_keyboard_focus",
+    "empty_radio_guidance",
+    "base_and_advanced_backlight_test_image"
+  ],
+  "original_firmware_modified": false,
+  "tv_written": false,
+  "new_firmware_package": false,
+  "full_native_menu_port": false,
+  "native_channel_name_bridge_installed": false,
+  "browser_firmware_parity_verified": false,
+  "outstanding_review_p1_p2": 0,
+  "doc_links_checked": true
+}

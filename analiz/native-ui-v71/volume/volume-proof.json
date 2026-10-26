@@ -1,0 +1,330 @@
+{
+  "revision": "v7.1-volume",
+  "input_profile": "exact pinned v7-tv 12-file overlay",
+  "changed_paths": [
+    "08_APP/bin/dvbt_board",
+    "08_APP/rc/ARimages/Common/popups/volumeControl/bg.png",
+    "08_APP/rc/rc/bin/Num_res.bin"
+  ],
+  "num_records": [
+    {
+      "id": 23105,
+      "id_hex": "0x5a41",
+      "file_offset": 92476,
+      "old": 0,
+      "new": 80,
+      "role": "normal-volume root x"
+    }
+  ],
+  "code_records": [
+    {
+      "va": "0xfbb550",
+      "file_offset": 12301648,
+      "old_word": "0x2404005e",
+      "new_word": "0x24040001",
+      "role": "local ignored normal-state color argument / flag value"
+    },
+    {
+      "va": "0xfbb55c",
+      "file_offset": 12301660,
+      "old_word": "0x0",
+      "new_word": "0xa204003a",
+      "role": "enable panel image in RcGetColor jalr delay slot"
+    }
+  ],
+  "num_changed_byte_offsets": [
+    92476
+  ],
+  "elf_changed_byte_offsets": [
+    12301648,
+    12301660,
+    12301662,
+    12301663
+  ],
+  "before_geometry": {
+    "root": [
+      0,
+      150,
+      68,
+      490
+    ],
+    "panel": [
+      0,
+      170,
+      68,
+      450
+    ],
+    "speaker": [
+      12,
+      563,
+      44,
+      44
+    ],
+    "number": [
+      0,
+      188,
+      68,
+      55
+    ],
+    "track": [
+      31,
+      256,
+      6,
+      276
+    ]
+  },
+  "after_geometry": {
+    "root": [
+      80,
+      150,
+      68,
+      490
+    ],
+    "panel": [
+      80,
+      170,
+      68,
+      450
+    ],
+    "speaker": [
+      92,
+      563,
+      44,
+      44
+    ],
+    "number": [
+      80,
+      188,
+      68,
+      55
+    ],
+    "track": [
+      111,
+      256,
+      6,
+      276
+    ]
+  },
+  "outer_frame": {
+    "rect": [
+      0,
+      160,
+      160,
+      725
+    ],
+    "ids": [
+      "0x5bf0",
+      "0x5bf1",
+      "0x5bef",
+      "0x5bee"
+    ],
+    "factory": "0xfb601c",
+    "constructor_call": "0xfb60f8",
+    "normal_root_screen_rect": [
+      80,
+      310,
+      68,
+      490
+    ],
+    "panel_screen_rect": [
+      80,
+      330,
+      68,
+      450
+    ],
+    "root_right": 148,
+    "root_bottom": 640,
+    "source": "Factory reads outer rect; MMainFrame constructor saves it then zeros client rect xy; CreateDFBWindow consumes saved outer rect."
+  },
+  "capsule": {
+    "image_id": 674,
+    "path": "08_APP/rc/ARimages/Common/popups/volumeControl/bg.png",
+    "size": [
+      68,
+      450
+    ],
+    "radius": 34,
+    "png_color_type": 6,
+    "explicit_alpha": true,
+    "image_enabled_byte": "panel+0x3a=1",
+    "sha256": "3bc46a137594635ca1a2c47bcd820d6d619c3a850d58f9fc6db1908d1011169d"
+  },
+  "evidence": [
+    {
+      "kind": "retained direct Ghidra static output",
+      "path": "analiz/native/ui-targeted/dvbt_board/00fb9780.c",
+      "address": "0xfb9780",
+      "finding": "normal root frame+0x184; panel frame+0x1a4 belongs to root; speaker/number/track belong to panel; panel defines image674 but has no explicit image-enable store"
+    },
+    {
+      "kind": "retained direct Ghidra static output",
+      "path": "analiz/native/ui-deep/muf-core35/2e251be4.c",
+      "address": "0x2e251be4",
+      "finding": "MWidget::DrawBackground chooses RenderImageToSurface only when background byte+0x39 is nonzero AND image byte+0x3a equals1; otherwise draws solid color"
+    },
+    {
+      "kind": "static source discrepancy",
+      "path": "scripts/native_frame_rehost.py",
+      "finding": "render() unconditionally supplies image674 to paint(); does not construct actual OnCreate flag; also paints root685 even though OnCreate later resets all root images to null1485"
+    },
+    {
+      "kind": "direct ELF static disassembly",
+      "address": "0x2e234ef4..0x2e234f58",
+      "finding": "MMainFrame constructor calls MWnd::SetRect with outer rect, then zeroes supplied xy before creating client container; outer y160 therefore adds to client-local root y150"
+    },
+    {
+      "kind": "direct ELF static disassembly",
+      "address": "0x2e2334d8..0x2e2335ec",
+      "finding": "CreateDFBWindow loads saved outerxywh into window description and passes it to layer CreateWindow; later optional scaling branch uses device ratios"
+    }
+  ],
+  "geometry_basis": "1920x1080 logical resource coordinates;80 is4.17% left design margin; root right148 stays inside original outer width160; physical active-surface scaling/overscan not measured",
+  "unchanged": [
+    "all other payloads",
+    "Image_res table and all image IDs",
+    "ChannelControl numeric resource IDs0x98f..0x99a",
+    "RefreshVolumeUI body, volume value/mute/timeout handlers",
+    "ARC/source routing and their geometry",
+    "normal-volume child geometry"
+  ],
+  "limits": [
+    "Original full OnCreate not executed; exact local words and object context checked.",
+    "Panel normal-state color changes94 to1 only to reuse a0=1 in the delay slot; it is ignored by enabled image mode.",
+    "MWidget default image flag comes from MSystem default widget style; prior host image preparation bypassed it.",
+    "No physical TV rendering/compositor verification of this revision."
+  ],
+  "television_tested": false,
+  "target_process_executed": false,
+  "test_status": "8/8 unittest tests passed after outer-frame containment correction",
+  "native_constructor_probe": {
+    "flag": 1,
+    "color": 4294309365,
+    "calls": [
+      {
+        "argument": 1,
+        "flag_at_callback": 1
+      }
+    ],
+    "visited": [
+      "0xfbb548",
+      "0xfbb54c",
+      "0xfbb550",
+      "0xfbb554",
+      "0xfbb558",
+      "0xfbb55c",
+      "0x30000000",
+      "0x30000004",
+      "0xfbb560",
+      "0xfbb564"
+    ],
+    "changed_panel_offsets": [
+      58,
+      76,
+      77,
+      78,
+      79
+    ],
+    "process_or_hardware_executed": false
+  },
+  "old_native_constructor_probe": {
+    "flag": 0,
+    "color": 4294309365,
+    "calls": [
+      {
+        "argument": 94,
+        "flag_at_callback": 0
+      }
+    ],
+    "visited": [
+      "0xfbb548",
+      "0xfbb54c",
+      "0xfbb550",
+      "0xfbb554",
+      "0xfbb558",
+      "0xfbb55c",
+      "0x30000000",
+      "0x30000004",
+      "0xfbb560",
+      "0xfbb564"
+    ],
+    "changed_panel_offsets": [
+      76,
+      77,
+      78,
+      79
+    ],
+    "process_or_hardware_executed": false
+  },
+  "draw_paths": {
+    "before": [
+      "QueryVisualState",
+      "QueryFlag",
+      "GetDFBSurface",
+      "ClipDFBSurface",
+      "GetAbsRect",
+      "SetColor",
+      "FillRectangle",
+      "SetColor",
+      "FillRectangle",
+      "FillRectangle",
+      "SetColor",
+      "FillRectangle",
+      "FillRectangle"
+    ],
+    "after": [
+      "QueryVisualState",
+      "QueryFlag",
+      "GetDFBSurface",
+      "ClipDFBSurface",
+      "GetMResourceManager",
+      "GetAbsRect",
+      "MImgQueryFlag",
+      "FindCachedSurface",
+      "GetInstance",
+      "GetSize",
+      "GetPixelFormat",
+      "GetPosition",
+      "SetSrcBlendFunction",
+      "SetDstBlendFunction",
+      "SetBlittingFlags",
+      "SetRenderOptions",
+      "SetBlittingFlags",
+      "MImgQueryFlag",
+      "GetSize",
+      "StretchBlit",
+      "ReleaseSource",
+      "MImgQueryFlag",
+      "ReleaseSource"
+    ]
+  },
+  "libmuf_sha256": "494d4aa45a3c8d8e10760388d8d30111e9127a0357d38cdf97979b9f9bb16d96",
+  "alpha_compositor_boundary": "Host Pillow RGBA; bilinear StretchBlit and source-over alpha",
+  "additional_static_geometry_evidence": [
+    {
+      "address": "0x2e258a7c..0x2e258a90",
+      "function": "MWidget::MWidget",
+      "finding": "constructor copies supplied Rect xywh into widget+0x1c/+0x20/+0x24/+0x28"
+    },
+    {
+      "address": "0x2e258b58..0x2e258b78",
+      "function": "MWidget::MWidget",
+      "finding": "background/image flags copied from MSystem::GetDefaultWidgetStyle result bytes1/2; panel did not explicitly override image byte"
+    },
+    {
+      "address": "0x2e24d3ec..0x2e24d41c",
+      "function": "MWidget::GetAbsRect",
+      "finding": "adds widget+0x1bc/+0x1c0 parent offsets to local xy, preserves width/height"
+    },
+    {
+      "address": "0x2e25192c..0x2e251be0",
+      "function": "MWidget::ClipDFBSurface",
+      "finding": "intersects requested rect with surface bounds and widget absolute rect; no radius implemented; native clip callback is host stub in paint rehost"
+    }
+  ],
+  "source_hashes": {
+    "scripts/native_ui_v71_volume.py": "ad22968bb2ef54efc9cbe21347949871307203cb15ebac97700b2b84b0ed6b1d",
+    "scripts/test_native_ui_v71_volume.py": "10864ef72ab28555027c3e6d958b512c663cfa080ef8aab181bc6cfab6696537",
+    "analiz/native/ui-targeted/dvbt_board/00fb9780.c": "dbefb4b735f3910e8e3580445726de5bc49ecaa70c4e2b557d4c9a7ecb05e7a7",
+    "analiz/native/ui-deep/muf-core35/2e251be4.c": "499f5167de627925e486d4885f41d921d8ef187f40f442eaf59010c7a674645b"
+  }
+}

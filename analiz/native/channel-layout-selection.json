@@ -1,0 +1,31 @@
+{
+  "addresses": [
+    "007995b0",
+    "007de53c"
+  ],
+  "target_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+  "decompile_timeout_seconds": 120,
+  "seed_t9_entry": true,
+  "clamp_to_dynsym_size": true,
+  "export_syntax_tree": false,
+  "decompiler_max_payload_mbytes": 256,
+  "noreturn_names": [
+    "abort",
+    "__assert_fail",
+    "__cxa_throw",
+    "__cxa_rethrow",
+    "_Unwind_Resume",
+    "__stack_chk_fail"
+  ],
+  "function_bounds": {
+    "007995b0": {
+      "end_exclusive": "0x7b0f58",
+      "basis": "exact_ELF_eh_frame_FDE_entry_range"
+    },
+    "007de53c": {
+      "end_exclusive": "0x7f4710",
+      "basis": "exact_ELF_eh_frame_FDE_entry_range"
+    }
+  },
+  "purpose": "Existing numeric zapping, channel list and program-info paths; no invented device channel data"
+}

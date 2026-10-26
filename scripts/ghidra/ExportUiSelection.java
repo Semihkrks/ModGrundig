@@ -21,6 +21,32 @@ import java.nio.file.*;
 import java.util.*;
 
 public class ExportUiSelection extends GhidraScript {
+    // Optional, explicit native analysis-group controls. Never changes target bytes.
+    private static class SelectedGroupOptions extends DecompileOptions {
+        final Map<String,Boolean> groups = new LinkedHashMap<>();
+        @Override public void encode(Encoder encoder, DecompInterface iface) throws IOException {
+            if (groups.isEmpty()) { super.encode(encoder, iface); return; }
+            Encoder intercepted = (Encoder)java.lang.reflect.Proxy.newProxyInstance(
+                Encoder.class.getClassLoader(), new Class<?>[]{Encoder.class}, (proxy, method, args) -> {
+                    if (method.getName().equals("closeElement") && args != null && args.length == 1 && args[0].equals(ElementId.ELEM_OPTIONSLIST)) {
+                        for (Map.Entry<String,Boolean> group : groups.entrySet()) {
+                            encoder.openElement(ElementId.ELEM_CURRENTACTION);
+                            ElementId[] params = {ElementId.ELEM_PARAM1, ElementId.ELEM_PARAM2, ElementId.ELEM_PARAM3};
+                            String[] values = {iface.getSimplificationStyle(), group.getKey(), group.getValue() ? "on" : "off"};
+                            for (int i=0;i<params.length;i++) {
+                                encoder.openElement(params[i]);
+                                encoder.writeString(AttributeId.ATTRIB_CONTENT, values[i]);
+                                encoder.closeElement(params[i]);
+                            }
+                            encoder.closeElement(ElementId.ELEM_CURRENTACTION);
+                        }
+                    }
+                    try { return method.invoke(encoder, args); }
+                    catch (java.lang.reflect.InvocationTargetException failure) { throw failure.getCause(); }
+                });
+            super.encode(intercepted, iface);
+        }
+    }
     private Path output;
     private final Gson gson = new GsonBuilder().disableHtmlEscaping().serializeNulls().setPrettyPrinting().create();
     private String address(Address value) { return value == null ? null : value.toString(); }
@@ -253,7 +279,39 @@ public class ExportUiSelection extends GhidraScript {
         if (options.has("target_sha256") && !options.get("target_sha256").getAsString().equalsIgnoreCase(currentProgram.getExecutableSHA256())) throw new IllegalArgumentException("Selected program's stored executable SHA256 differs from caller target identity");
         int timeout = options.has("decompile_timeout_seconds") ? options.get("decompile_timeout_seconds").getAsInt() : 60;
         if (timeout < 1 || timeout > 600) throw new IllegalArgumentException("decompile_timeout_seconds must be 1..600");
-        DecompileOptions decompileOptions = new DecompileOptions();
+        boolean exportSyntaxTree = !options.has("export_syntax_tree") || options.get("export_syntax_tree").getAsBoolean();
+        boolean emitCCode = !options.has("emit_c_code") || options.get("emit_c_code").getAsBoolean();
+        String simplificationStyle = options.has("decompiler_simplification_style") ? options.get("decompiler_simplification_style").getAsString() : "decompile";
+        if (!Set.of("decompile", "normalize", "firstpass").contains(simplificationStyle)) throw new IllegalArgumentException("Unsupported decompiler style");
+        SelectedGroupOptions decompileOptions = new SelectedGroupOptions();
+        if (options.has("decompiler_action_groups")) {
+            Set<String> allowedGroups = Set.of("protorecovery", "protorecovery_b", "localrecovery", "stackptrflow", "stackvars", "typerecovery", "conditionalexe", "unreachable", "normalizebranches");
+            for (Map.Entry<String,JsonElement> group : options.getAsJsonObject("decompiler_action_groups").entrySet()) {
+                if (!allowedGroups.contains(group.getKey())) throw new IllegalArgumentException("Unsupported explicit action group: " + group.getKey());
+                decompileOptions.groups.put(group.getKey(), group.getValue().getAsBoolean());
+            }
+        }
+        Map<String,Object> analysisOptionOverrides = new LinkedHashMap<>();
+        if (options.has("decompiler_simplify_predication")) {
+            boolean value = options.get("decompiler_simplify_predication").getAsBoolean();
+            decompileOptions.setPredicate(value);
+            analysisOptionOverrides.put("simplify_predication", value);
+        }
+        if (options.has("decompiler_split_structures")) {
+            boolean value = options.get("decompiler_split_structures").getAsBoolean();
+            decompileOptions.setSplitStructures(value);
+            analysisOptionOverrides.put("split_structures", value);
+        }
+        if (options.has("decompiler_split_arrays")) {
+            boolean value = options.get("decompiler_split_arrays").getAsBoolean();
+            decompileOptions.setSplitArrays(value);
+            analysisOptionOverrides.put("split_arrays", value);
+        }
+        if (options.has("decompiler_split_pointers")) {
+            boolean value = options.get("decompiler_split_pointers").getAsBoolean();
+            decompileOptions.setSplitPointers(value);
+            analysisOptionOverrides.put("split_pointers", value);
+        }
         if (options.has("decompiler_max_payload_mbytes")) {
             int maximum = options.get("decompiler_max_payload_mbytes").getAsInt();
             if (maximum < 1 || maximum > 512) throw new IllegalArgumentException("decompiler_max_payload_mbytes must be 1..512");
@@ -335,6 +393,9 @@ public class ExportUiSelection extends GhidraScript {
         DecompInterface decompiler = new DecompInterface();
         try {
             decompiler.setOptions(decompileOptions);
+            decompiler.setSimplificationStyle(simplificationStyle);
+            decompiler.toggleSyntaxTree(exportSyntaxTree);
+            decompiler.toggleCCode(emitCCode);
             if (!decompiler.openProgram(currentProgram)) throw new IllegalStateException("Decompiler could not open existing program");
             decompiler.flushCache();
             for (Function function : functions) {
@@ -412,13 +473,18 @@ public class ExportUiSelection extends GhidraScript {
                 report.put("immediate_scalar_candidates", scalars);
                 report.put("directly_referenced_defined_strings", new ArrayList<>(strings.values()));
                 DecompileResults result = decompiler.decompileFunction(function, timeout, monitor);
+                report.put("syntax_tree_requested", exportSyntaxTree);
+                report.put("C_code_requested", emitCCode);
+                report.put("decompiler_simplification_style", simplificationStyle);
+                report.put("high_function_present", result.getHighFunction() != null);
                 report.put("decompile_complete", result.decompileCompleted());
                 report.put("decompile_error", result.getErrorMessage());
-                if (result.decompileCompleted() && result.getDecompiledFunction() != null) {
+                if (emitCCode && result.decompileCompleted() && result.getDecompiledFunction() != null && !result.getDecompiledFunction().getC().isBlank()) {
                     String filename = address(function.getEntryPoint()).replace(':', '_') + ".c";
                     Files.writeString(output.resolve(filename), result.getDecompiledFunction().getC(), StandardCharsets.UTF_8, StandardOpenOption.CREATE_NEW);
                     report.put("pseudocode_file", filename);
                 }
+                report.put("C_export_complete", report.containsKey("pseudocode_file"));
                 List<Map<String,Object>> pcodeCalls = new ArrayList<>();
                 Map<String,Map<String,Object>> constantStrings = new LinkedHashMap<>();
                 Set<String> outsideBody = new TreeSet<>();
@@ -467,14 +533,14 @@ public class ExportUiSelection extends GhidraScript {
                         pcodeCalls.add(call);
                     }
                 }
-                report.put("pcode_export_complete", true);
+                report.put("pcode_export_complete", exportSyntaxTree && result.getHighFunction() != null);
                 } catch (RuntimeException failure) {
                     report.put("pcode_export_complete", false);
                     report.put("pcode_export_error", failure.getClass().getName() + ": " + failure.getMessage());
                 }
                 report.put("decompiler_pcode_calls", pcodeCalls);
                 report.put("decompiler_pcode_addresses_outside_selected_body", outsideBody);
-                report.put("decompiler_pcode_within_selected_body", outsideBody.isEmpty());
+                report.put("decompiler_pcode_within_selected_body", !exportSyntaxTree || result.getHighFunction() == null ? null : outsideBody.isEmpty());
                 report.put("decompiler_constant_defined_strings", new ArrayList<>(constantStrings.values()));
                 reports.add(report);
                 write(address(function.getEntryPoint()).replace(':', '_') + ".json", report);
@@ -489,10 +555,16 @@ public class ExportUiSelection extends GhidraScript {
         summary.put("requested_count", selectors.size());
         summary.put("processed_count", reports.size());
         summary.put("decompile_complete_count", reports.stream().filter(row -> Boolean.TRUE.equals(row.get("decompile_complete"))).count());
+        summary.put("C_export_complete_count", reports.stream().filter(row -> Boolean.TRUE.equals(row.get("C_export_complete"))).count());
         summary.put("ephemeral_context_seed_count", seeds.size());
         summary.put("ephemeral_noreturn_change_count", noReturnChanges.size());
         summary.put("decompile_timeout_seconds_per_function", timeout);
         summary.put("decompiler_max_payload_mbytes", decompileOptions.getMaxPayloadMBytes());
+        summary.put("syntax_tree_requested", exportSyntaxTree);
+        summary.put("C_code_requested", emitCCode);
+        summary.put("decompiler_simplification_style", simplificationStyle);
+        summary.put("analysis_option_overrides", analysisOptionOverrides);
+        summary.put("decompiler_action_group_overrides", decompileOptions.groups);
         summary.put("target_executed", false);
         summary.put("target_bytes_written", false);
         summary.put("evidence_kind", "direct_Ghidra_static_query_not_REA_Evidence");

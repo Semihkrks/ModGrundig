@@ -1,0 +1,58 @@
+{
+  "target_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+  "ranges": [
+    {
+      "start": "0055e834",
+      "end_exclusive": "0055ead4",
+      "instruction_count_before": 0,
+      "instruction_count_after": 168,
+      "expected_instruction_count": 168,
+      "command_applied": true,
+      "status_messages": [],
+      "aligned_seeds": 5
+    },
+    {
+      "start": "0055f598",
+      "end_exclusive": "0055f838",
+      "instruction_count_before": 0,
+      "instruction_count_after": 168,
+      "expected_instruction_count": 168,
+      "command_applied": true,
+      "status_messages": [],
+      "aligned_seeds": 5
+    }
+  ],
+  "switches": [
+    {
+      "dispatch_site": "0055e82c",
+      "table_address": "00fe7c80",
+      "case_destinations": [
+        "0055e834",
+        "0055e8bc",
+        "0055e944",
+        "0055e9cc",
+        "0055ea54"
+      ],
+      "basis": "raw ELF/loaded-memory table words plus explicit PIC gp\u003d0x10cc310 invariant, not runtime observation",
+      "ephemeral_jumptable_override": true
+    },
+    {
+      "dispatch_site": "0055f590",
+      "table_address": "00fe7c94",
+      "case_destinations": [
+        "0055f598",
+        "0055f620",
+        "0055f6a8",
+        "0055f730",
+        "0055f7b8"
+      ],
+      "basis": "raw ELF/loaded-memory table words plus explicit PIC gp\u003d0x10cc310 invariant, not runtime observation",
+      "ephemeral_jumptable_override": true
+    }
+  ],
+  "target_executed": false,
+  "target_bytes_written": false,
+  "analysis_database_saved": false,
+  "auto_analysis": false,
+  "basis": "Existing raw MIPS index records 40 MImg::Set calls in these two listing gaps; only metadata decoded inside explicit ranges"
+}

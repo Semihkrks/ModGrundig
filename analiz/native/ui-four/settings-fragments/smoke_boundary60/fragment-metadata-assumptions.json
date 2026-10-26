@@ -1,0 +1,234 @@
+[
+  {
+    "kind": "original_function_metadata_removed",
+    "original": {
+      "body_bytes": 103000,
+      "signature": "undefined NewUI_Settings(MMainFrame * param_1)",
+      "entry": "0055b6c0"
+    },
+    "target_bytes_modified": false
+  },
+  {
+    "fragment": "entry_position",
+    "s8_input": "original_prologue_sets_s8",
+    "kind": "fragment_context",
+    "t9_seed": "original_function_entry_0x55b6c0",
+    "gp_hex": "0x10cc310"
+  },
+  {
+    "kind": "final_call_return_boundary_abstraction",
+    "fragment": "entry_position",
+    "original_call": {
+      "address": "0055b728",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055b730",
+      "delay_slots": 1
+    },
+    "unrepresented_trailing_gp_restore": {
+      "address": "0055b730",
+      "instruction": "lw gp,0x20(s8)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0055b734",
+      "delay_slots": 0
+    },
+    "modified_call": {
+      "address": "0055b728",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL_TERMINATOR",
+      "flow_override": "CALL_RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Final original call is modeled as terminating this analysis fragment. Original GP restore and next-phase continuation are retained as raw evidence, not represented in fragment C."
+  },
+  {
+    "fragment": "antenna_initial",
+    "s8_input": "explicit_original_frame_context_parameter_unknown_runtime_pointer",
+    "kind": "fragment_context",
+    "t9_seed": "none_fragment_not_PIC_entry",
+    "gp_hex": "0x10cc310"
+  },
+  {
+    "kind": "external_or_unknown_jump_return_abstraction",
+    "fragment": "antenna_initial",
+    "original": {
+      "address": "00562ef0",
+      "instruction": "beq v0,zero,0x005635f4",
+      "flow_type": "CONDITIONAL_JUMP",
+      "flow_override": "NONE",
+      "flows": [
+        "005635f4"
+      ],
+      "fallthrough": "00562ef8",
+      "delay_slots": 1
+    },
+    "assumption": "Return at fragment boundary abstracts continuation; not original standalone function behavior",
+    "modified": {
+      "address": "00562ef0",
+      "instruction": "beq v0,zero,0x005635f4",
+      "flow_type": "CONDITIONAL_TERMINATOR",
+      "flow_override": "RETURN",
+      "flows": [],
+      "fallthrough": "00562ef8",
+      "delay_slots": 1
+    }
+  },
+  {
+    "kind": "final_call_return_boundary_abstraction",
+    "fragment": "antenna_initial",
+    "original_call": {
+      "address": "005635e8",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005635f0",
+      "delay_slots": 1
+    },
+    "unrepresented_trailing_gp_restore": {
+      "address": "005635f0",
+      "instruction": "lw gp,0x20(s8)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005635f4",
+      "delay_slots": 0
+    },
+    "modified_call": {
+      "address": "005635e8",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL_TERMINATOR",
+      "flow_override": "CALL_RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Final original call is modeled as terminating this analysis fragment. Original GP restore and next-phase continuation are retained as raw evidence, not represented in fragment C."
+  },
+  {
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "0056303c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00563044",
+      "delay_slots": 1
+    },
+    "fragment": "antenna_initial",
+    "kind": "standard_noreturn_callsite_assumption"
+  },
+  {
+    "name": "abort",
+    "original": {
+      "address": "00563074",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0056307c",
+      "delay_slots": 1
+    },
+    "fragment": "antenna_initial",
+    "kind": "standard_noreturn_callsite_assumption"
+  },
+  {
+    "fragment": "source_initial",
+    "s8_input": "explicit_original_frame_context_parameter_unknown_runtime_pointer",
+    "kind": "fragment_context",
+    "t9_seed": "none_fragment_not_PIC_entry",
+    "gp_hex": "0x10cc310"
+  },
+  {
+    "kind": "external_or_unknown_jump_return_abstraction",
+    "fragment": "source_initial",
+    "original": {
+      "address": "00563644",
+      "instruction": "beq v0,zero,0x005642dc",
+      "flow_type": "CONDITIONAL_JUMP",
+      "flow_override": "NONE",
+      "flows": [
+        "005642dc"
+      ],
+      "fallthrough": "0056364c",
+      "delay_slots": 1
+    },
+    "assumption": "Return at fragment boundary abstracts continuation; not original standalone function behavior",
+    "modified": {
+      "address": "00563644",
+      "instruction": "beq v0,zero,0x005642dc",
+      "flow_type": "CONDITIONAL_TERMINATOR",
+      "flow_override": "RETURN",
+      "flows": [],
+      "fallthrough": "0056364c",
+      "delay_slots": 1
+    }
+  },
+  {
+    "kind": "final_call_return_boundary_abstraction",
+    "fragment": "source_initial",
+    "original_call": {
+      "address": "005642d0",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005642d8",
+      "delay_slots": 1
+    },
+    "unrepresented_trailing_gp_restore": {
+      "address": "005642d8",
+      "instruction": "lw gp,0x20(s8)",
+      "flow_type": "FALL_THROUGH",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "005642dc",
+      "delay_slots": 0
+    },
+    "modified_call": {
+      "address": "005642d0",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL_TERMINATOR",
+      "flow_override": "CALL_RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Final original call is modeled as terminating this analysis fragment. Original GP restore and next-phase continuation are retained as raw evidence, not represented in fragment C."
+  },
+  {
+    "name": "_Unwind_Resume",
+    "original": {
+      "address": "00563844",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "0056384c",
+      "delay_slots": 1
+    },
+    "fragment": "source_initial",
+    "kind": "standard_noreturn_callsite_assumption"
+  },
+  {
+    "name": "abort",
+    "original": {
+      "address": "0056387c",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00563884",
+      "delay_slots": 1
+    },
+    "fragment": "source_initial",
+    "kind": "standard_noreturn_callsite_assumption"
+  }
+]

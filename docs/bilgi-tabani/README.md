@@ -2,7 +2,9 @@
 
 Öncelik: özgün firmware’i değiştirmeden mimariyi ve davranışları kanıtlarıyla çözmek. Cihazda çalıştırma, repack veya yükleme yapılmadı.
 
-[Genel bulgular](../TERSINE_MUHENDISLIK.md) · [UI kod yapısı](../UI_KOD_YAPISI.md) · [UI ayrıntıları](../UI_HARITASI.md) · [Boot ve format](BOOT_VE_FORMAT.md) · [Servis davranışları](SERVISLER.md) · [Bağımlılık araştırması](BAGIMLILIKLAR.md) · [Servis derinleştirme](SERVIS_DERINLESTIRME.md) · [DirectFB callback çözümü](DIRECTFB_CALLBACK.md) · [Dar UI devamı](UI_DAR_DEVAM.md) · [Araç sınırları](ARAC_SINIRLARI.md) · [Aşama raporu](ASAMA_2026-10-22.md) · [Araştırma takibi](TAKIP.md) · [Ölçülebilir durum](../../analiz/asama-durum.json)
+24 Ekim devamı: [sayısal kanal adı ABI/çağrı yolu](NUMERIC_KANAL_ADI.md), [menü/ayar önizlemesi ve ayrı native aday v7](../UI_MENU_AYARLAR_V7.md). Yukarıdaki repack ifadesi ilk sistem analizi kapsamını anlatır; sonraki ayrı UI adaylarının paket durumu kendi raporlarında belirtilir. TV'ye yükleme yapılmadı.
+
+[Genel bulgular](../TERSINE_MUHENDISLIK.md) · [UI kod yapısı](../UI_KOD_YAPISI.md) · [UI ayrıntıları](../UI_HARITASI.md) · [Boot ve format](BOOT_VE_FORMAT.md) · [Servis davranışları](SERVISLER.md) · [Bağımlılık araştırması](BAGIMLILIKLAR.md) · [Servis derinleştirme](SERVIS_DERINLESTIRME.md) · [DirectFB callback çözümü](DIRECTFB_CALLBACK.md) · [Dar UI devamı](UI_DAR_DEVAM.md) · [Factory kaydı ve UI hazırlığı](UI_FACTORY_KAYDI.md) · [Dört büyük UI gövdesi ve tasarıma geçiş](UI_DORT_BUYUK_FONKSIYON.md) · [Araç sınırları](ARAC_SINIRLARI.md) · [Aşama raporu](ASAMA_2026-10-22.md) · [Araştırma takibi](TAKIP.md) · [Ölçülebilir durum](../../analiz/asama-durum.json)
 
 ## Kapsam
 
@@ -10,7 +12,7 @@
 - Ghidra indeksi mevcut dosya yolu: 226/226.
 - Bu sistem taramasında 222 yeni artifact, 106930 fonksiyon kaydı, 2376133 xref.
 - İlk örnek decompile: 837/837; analiz timeout: 4.
-- Güncel odaklı sorgular: 174 benzersiz giriş / 170 tamamlanmış C; dört büyük UI gövdesi ayrıca takipte.
+- Güncel odaklı sorgular: 180 benzersiz giriş / 180 tamamlanmış C; Settings sınırlanmış çıkarım profiliyle bu sayıya dahildir.
 - Ham bootloader komutları ayrı kapsam: 5/5 decompile; [bulgular](../../analiz/native/boot-candidate-v1/FINDINGS.md).
 - Decompile tamamlanması doğruluk veya semantik inceleme tamamlanması değildir. Fonksiyon sayıları external/thunk kayıtları içerebilir. Dolaylı hedefler açıkça adaydır.
 

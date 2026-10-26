@@ -1,0 +1,416 @@
+{
+  "revision": "v7.1-tv",
+  "scope": {
+    "source_revision": "v7-tv",
+    "volume": {
+      "revision": "v7.1-volume",
+      "input_profile": "exact pinned v7-tv 12-file overlay",
+      "changed_paths": [
+        "08_APP/bin/dvbt_board",
+        "08_APP/rc/ARimages/Common/popups/volumeControl/bg.png",
+        "08_APP/rc/rc/bin/Num_res.bin"
+      ],
+      "num_records": [
+        {
+          "id": 23105,
+          "id_hex": "0x5a41",
+          "file_offset": 92476,
+          "old": 0,
+          "new": 96,
+          "role": "normal-volume root x"
+        }
+      ],
+      "code_records": [
+        {
+          "va": "0xfbb550",
+          "file_offset": 12301648,
+          "old_word": "0x2404005e",
+          "new_word": "0x24040001",
+          "role": "local ignored normal-state color argument / flag value"
+        },
+        {
+          "va": "0xfbb55c",
+          "file_offset": 12301660,
+          "old_word": "0x0",
+          "new_word": "0xa204003a",
+          "role": "enable panel image in RcGetColor jalr delay slot"
+        }
+      ],
+      "num_changed_byte_offsets": [
+        92476
+      ],
+      "elf_changed_byte_offsets": [
+        12301648,
+        12301660,
+        12301662,
+        12301663
+      ],
+      "before_geometry": {
+        "root": [
+          0,
+          150,
+          68,
+          490
+        ],
+        "panel": [
+          0,
+          170,
+          68,
+          450
+        ],
+        "speaker": [
+          12,
+          563,
+          44,
+          44
+        ],
+        "number": [
+          0,
+          188,
+          68,
+          55
+        ],
+        "track": [
+          31,
+          256,
+          6,
+          276
+        ]
+      },
+      "after_geometry": {
+        "root": [
+          96,
+          150,
+          68,
+          490
+        ],
+        "panel": [
+          96,
+          170,
+          68,
+          450
+        ],
+        "speaker": [
+          108,
+          563,
+          44,
+          44
+        ],
+        "number": [
+          96,
+          188,
+          68,
+          55
+        ],
+        "track": [
+          127,
+          256,
+          6,
+          276
+        ]
+      },
+      "capsule": {
+        "image_id": 674,
+        "path": "08_APP/rc/ARimages/Common/popups/volumeControl/bg.png",
+        "size": [
+          68,
+          450
+        ],
+        "radius": 34,
+        "png_color_type": 6,
+        "explicit_alpha": true,
+        "image_enabled_byte": "panel+0x3a=1",
+        "sha256": "3bc46a137594635ca1a2c47bcd820d6d619c3a850d58f9fc6db1908d1011169d"
+      },
+      "evidence": [
+        {
+          "kind": "retained direct Ghidra static output",
+          "path": "analiz/native/ui-targeted/dvbt_board/00fb9780.c",
+          "address": "0xfb9780",
+          "finding": "normal root frame+0x184; panel frame+0x1a4 belongs to root; speaker/number/track belong to panel; panel defines image674 but has no explicit image-enable store"
+        },
+        {
+          "kind": "retained direct Ghidra static output",
+          "path": "analiz/native/ui-deep/muf-core35/2e251be4.c",
+          "address": "0x2e251be4",
+          "finding": "MWidget::DrawBackground chooses RenderImageToSurface only when background byte+0x39 is nonzero AND image byte+0x3a equals1; otherwise draws solid color"
+        },
+        {
+          "kind": "static source discrepancy",
+          "path": "scripts/native_frame_rehost.py",
+          "finding": "render() unconditionally supplies image674 to paint(); does not construct actual OnCreate flag; also paints root685 even though OnCreate later resets all root images to null1485"
+        }
+      ],
+      "geometry_basis": "1920x1080 logical resource coordinates;96 is5% left design margin; physical active-surface scaling/overscan not measured",
+      "unchanged": [
+        "all other payloads",
+        "Image_res table and all image IDs",
+        "ChannelControl numeric resource IDs0x98f..0x99a",
+        "RefreshVolumeUI body, volume value/mute/timeout handlers",
+        "ARC/source routing and their geometry",
+        "normal-volume child geometry"
+      ],
+      "limits": [
+        "Original full OnCreate not executed; exact local words and object context checked.",
+        "Panel normal-state color changes94 to1 only to reuse a0=1 in the delay slot; it is ignored by enabled image mode.",
+        "MWidget default image flag comes from MSystem default widget style; prior host image preparation bypassed it.",
+        "No physical TV rendering/compositor verification of this revision."
+      ],
+      "television_tested": false,
+      "target_process_executed": false
+    },
+    "numeric": {
+      "status": "PASS_OFFLINE_STATIC_LAYOUT",
+      "code_records": [
+        {
+          "va": "0x89518c",
+          "file_offset": 4805004,
+          "old_word": "0x24040050",
+          "new_word": "0x2404098f",
+          "role": "ChannelControlApp outer window height: RcGetNum(0x50) -> RcGetNum(0x98f)"
+        }
+      ],
+      "num_records": [],
+      "changed_elf_bytes": [
+        4805004,
+        4805005
+      ],
+      "changed_paths": [
+        "08_APP/bin/dvbt_board"
+      ],
+      "before": {
+        "outer_frame": [
+          0,
+          0,
+          1920,
+          80
+        ],
+        "root": [
+          0,
+          0,
+          1920,
+          312
+        ],
+        "background": [
+          1538,
+          64,
+          310,
+          224
+        ],
+        "digits": [
+          1566,
+          118,
+          254,
+          78
+        ],
+        "background_visible": [
+          1538,
+          64,
+          310,
+          16
+        ],
+        "digits_visible": [
+          1566,
+          118,
+          254,
+          0
+        ],
+        "outer_height_resource": "0x50",
+        "parent_relationship": "background and TextBox are siblings under root; root under frame client"
+      },
+      "after": {
+        "outer_frame": [
+          0,
+          0,
+          1920,
+          312
+        ],
+        "root": [
+          0,
+          0,
+          1920,
+          312
+        ],
+        "background": [
+          1538,
+          64,
+          310,
+          224
+        ],
+        "digits": [
+          1566,
+          118,
+          254,
+          78
+        ],
+        "background_visible": [
+          1538,
+          64,
+          310,
+          224
+        ],
+        "digits_visible": [
+          1566,
+          118,
+          254,
+          78
+        ],
+        "outer_height_resource": "0x98f",
+        "parent_relationship": "background and TextBox are siblings under root; root under frame client"
+      },
+      "resources": {
+        "image_table_id": 2179,
+        "image_path": "../rc/ARimages/Grundig/modern/numeric_bg.png",
+        "image_size": [
+          310,
+          224
+        ],
+        "image_enable_store_va": "0x89610c",
+        "image_enable_store_word": "0xa204003a",
+        "font_id": 1200,
+        "font_path": "08_APP/rc/rc/DejaVuSans.ttf",
+        "font_sha256": "f4d46af3f8b795d13cffe2ab07d639e0f116412a18f9706ee87f94770b1dd5b2",
+        "font_size": 58,
+        "font_metrics": {
+          "0": {
+            "width": 37.0,
+            "bbox": [
+              0,
+              11,
+              37,
+              55
+            ]
+          },
+          "12": {
+            "width": 74.0,
+            "bbox": [
+              0,
+              11,
+              74,
+              54
+            ]
+          },
+          "9999": {
+            "width": 148.0,
+            "bbox": [
+              0,
+              11,
+              148,
+              55
+            ]
+          },
+          "99999": {
+            "width": 185.0,
+            "bbox": [
+              0,
+              11,
+              185,
+              55
+            ]
+          }
+        },
+        "alignment": 17,
+        "padding": 3
+      },
+      "root_cause": "outer DirectFB window remained 80px high; card at y64 exposed only16px; digits at y118 were fully clipped",
+      "evidence": [
+        "analiz/native/ui-targeted/v71-numeric-frame/00895108.c",
+        "analiz/native/ui-targeted/v71-numeric-frame/00895108.json",
+        "analiz/native/ui-four/channels/numeric-v1/00895b84.c",
+        "analiz/native/ui-deep/muf-core35/2e251be4.c"
+      ],
+      "service_handlers_changed": false,
+      "global_num_0x50_changed": false,
+      "original_oncreate_executed": false,
+      "physical_v71_tested": false,
+      "limits": [
+        "Static parent-clipping and original font metrics; physical TV V7.1 rendering remains unobserved.",
+        "New Ghidra output is independent readOnly analysis, not REA Evidence."
+      ]
+    },
+    "menus_original": true,
+    "settings_original": true,
+    "channel_handlers_original": true,
+    "update_handlers_original": true,
+    "bootloader_original": true,
+    "source_v7_user_reported_boot": true,
+    "source_v7_visual_defects_reported": true,
+    "v71_television_tested": false
+  },
+  "records": [
+    {
+      "relative_path": "08_APP/bin/dvbt_board",
+      "original_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+      "candidate_sha256": "4473f976cd7d356a052fe5a69dece02e3d65bbf80f671b808279bf69737a39d2",
+      "bytes": 13836676
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Common/popups/volumeControl/arc_soundDown.png",
+      "original_sha256": "0124768c82ed9e51c614b2928ee97c5b628960bdac6ac683416531da0f48a532",
+      "candidate_sha256": "e454ec06b221cd7c28c9453568d189a5c735255cbeff41545f625b74ce5bb2f4",
+      "bytes": 1034
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Common/popups/volumeControl/arc_soundMute.png",
+      "original_sha256": "96a0e524ed1e8167d0d3ddd22b36656c99930d33653e0ea390b295c1f13cca01",
+      "candidate_sha256": "3b9bf1124dbfbdd64f8d4761f31649607ccff27bd25541ea4a0aed9db3bed842",
+      "bytes": 818
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Common/popups/volumeControl/arc_soundUp.png",
+      "original_sha256": "6fa4da20137eadb2da83ff64d0804036a58368a16df1dbadf3aa1eec4b5eb71e",
+      "candidate_sha256": "5e7f435949124eb16ea609a04a54a031c5e37ee23f96a1bad65763313ad03a8f",
+      "bytes": 1158
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Common/popups/volumeControl/bg.png",
+      "original_sha256": "347c72138107e1dfae24068eb9ed50141ac958d65b7e4765697b85dd7d95db18",
+      "candidate_sha256": "3bc46a137594635ca1a2c47bcd820d6d619c3a850d58f9fc6db1908d1011169d",
+      "bytes": 2938
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Common/popups/volumeControl/volume_shadow.png",
+      "original_sha256": "9a095d761869c488870b5f8fd6d179a222e3293cd443f96fdbb43845b5c946f4",
+      "candidate_sha256": "38278e73d42c9ee28205a3191ac6f653491e509a9d7fbb5b6beea068105ec069",
+      "bytes": 359
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/modern/numeric_bg.png",
+      "original_sha256": null,
+      "candidate_sha256": "6144405871b839f29d6be99b7696f678400a415f06c5893d43fd61937801547c",
+      "bytes": 11172
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/volume/mute_icon.png",
+      "original_sha256": "b5a061e1b756cdb160a3685e9baaea0fdc1aad3a1f6af245828037447dd429ff",
+      "candidate_sha256": "703208975d4b1424f003a2998e89c164116968e47e6d05dac6551e3f38698696",
+      "bytes": 1683
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/volume/volume_ellipse.png",
+      "original_sha256": "856419dba36067ee7d55c469e1b46fbdfb922bee5b893a482c6c164f2a975bf5",
+      "candidate_sha256": "09e0029db7a9d95051831cd1953f4944d651308dad70a9a7d7abf3085c87955a",
+      "bytes": 1120
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/volume/volume_icon.png",
+      "original_sha256": "0899f126b8139430eb7ee8b86482efdb0c9730460e7900f9fe523086d584f446",
+      "candidate_sha256": "aa1c3918d73338f4065285fbc634fe56169dcc7019af99753b907a897796b099",
+      "bytes": 2044
+    },
+    {
+      "relative_path": "08_APP/rc/rc/bin/Image_res.bin",
+      "original_sha256": "d6b1b9fde60c9cc4624f264a8e75da4245e6fb3e9dab7534ddce01706fbcd2f3",
+      "candidate_sha256": "4c7936af201a77418d00e333fe548c32f198785821b8aa9884d40ea3e47ed87b",
+      "bytes": 129524
+    },
+    {
+      "relative_path": "08_APP/rc/rc/bin/Num_res.bin",
+      "original_sha256": "e20c03cd212f548eb8154e8e49d6cf4daafc5fd5842887c51590bf76cfe613ff",
+      "candidate_sha256": "ab9ed82e5ab5acba44f4aa32c381ff9e84009d2b445023f4176158dc0ebaf253",
+      "bytes": 94288
+    }
+  ],
+  "television_tested": false,
+  "flash_ready": false
+}

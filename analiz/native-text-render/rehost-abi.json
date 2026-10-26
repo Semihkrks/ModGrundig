@@ -1,0 +1,38 @@
+{
+  "schema": "grundig-native-text-abi-v1",
+  "date": "2026-10-24",
+  "evidence_kind": "direct_Ghidra_static_plus_resource_bytes_not_REA_Evidence",
+  "executed_by_this_report": false,
+  "libmuf_sha256": "494d4aa45a3c8d8e10760388d8d30111e9127a0357d38cdf97979b9f9bb16d96",
+  "DrawString": {
+    "entry": "0x2e24de4c",
+    "body_bytes": 2400,
+    "instruction_count": 600,
+    "source": "analiz/native/ui-targeted/text-small3/2e24de4c.json",
+    "register_arguments": ["widget", "surface", "font", "utf8"],
+    "stack_arguments": {"16": "length_excluding_nul", "20": "x_pointer", "24": "y_pointer", "28": "flags", "32": "start_u16", "36": "control_map"},
+    "selected_state": {"visual_state": 0, "widget_font_orientation_offset": 312, "widget_font_orientation": 5, "control_map_root_offset": 8, "control_map_root": 0},
+    "selected_state_is_constructor_verified": false,
+    "normal_ascii_callbacks": {
+      "0x2e24dec0": "QueryVisualState", "0x2e24df10": "operator_new_array_nothrow", "0x2e24e448": "QueryVisualState", "0x2e24e610": "surface_DrawString_offset_0xbc", "0x2e24e0e0": "operator_delete_array"
+    }
+  },
+  "CalculateTextDrawFlags": {
+    "entry": "0x2e24fe3c",
+    "source": "analiz/native/ui-targeted/text-render6/2e24fe3c.json",
+    "register_arguments": ["widget", "rect", "alignment", "measured_font_height"],
+    "stack_arguments": {"16": "x_pointer", "20": "y_pointer", "24": "flags_pointer"},
+    "callbacks": {"0x2e24fedc": "QueryVisualState"},
+    "ghidra_enumeration_gap": {"first": "0x2e24ffa0", "last_inclusive": "0x2e24ffd4", "instructions": 14, "resolution": "renderer verifies pinned raw ELF and explicitly bounds additional original instructions"}
+  },
+  "volume": {
+    "constructor_entry": "0x00fb9780", "text_widget_offset": "0x1ac", "parent_offset": "0x1a4", "parent_kind": "panel",
+    "font_image_resource": 1198, "font_path": "08_APP/rc/font/DINPro-CondMedium.otf", "font_sha256": "1e00616ed6d74da0eb3105683da02722e697c52f4a7461c1d0bd891ae344aa75", "requested_size_resource": 12821, "requested_size": 36, "alignment": 34, "padding": 0, "color_resource": 37, "draw_background": false
+  },
+  "numeric": {
+    "constructor_entry": "0x00895b84", "text_widget_offset": "0x188", "parent_offset": "0x180", "parent_kind": "root",
+    "font_image_resource": 1199, "font_path": "08_APP/rc/font/Lucida Sans Bold.ttf", "font_sha256": "347e36d73e5db9b791c4ad385e391bf6fceeb0e17e830634d5fe35ca7da5f0bb", "requested_size_resource": 12830, "requested_size": 48, "alignment": 66, "padding": 3, "original_color_resource": 94, "v3_color_resource": 0
+  },
+  "font_metric_boundary": "DrawSingleLine calls DirectFB font+0x18 GetHeight; requested size need not equal measured height; replacement metrics must be explicit",
+  "limits": ["Complete TextBox lifecycle not executed by report", "Orientation 5 is selected rehost input", "Full DrawSingleLine not executed", "ICU/iconv and complex shaping not validated", "Hardware rasterizer and video plane not validated"]
+}

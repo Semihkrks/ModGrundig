@@ -1,0 +1,44 @@
+{
+  "observed_date": "2026-10-25",
+  "method": "offline source constants, retained Ghidra and host archive inspection",
+  "rea_evidence": false,
+  "expected_usb_root_relative_path": "Target_GM/image/GM_SWImage.bin",
+  "expected_path_va": "0x00fe67bc",
+  "expected_path_file_offset": "0x00be67bc",
+  "discovery_function": "ArTvSettingsManager::CheckUSBUpdate @ 0x005432f8",
+  "usb_click_handler": "SoftwareUpdateFrame USB handler @ 0x00ed09ac",
+  "version_comparison_in_discovery": false,
+  "error_string_id": "0x0e44",
+  "error_return_codes": [
+    1,
+    2
+  ],
+  "no_file_return_code": 1,
+  "environment_failure_return_code": 2,
+  "localized_error": "Daha yeni sürümün güncelleme verisi yoktur.",
+  "working_rar_sha256": "868bfd56353dbf43c60caa9a83b9e35fc993492dc24357b16baf11d70c497991",
+  "working_archive_images": [
+    {
+      "member": "GMGRMR.-.-.-.-.V03.017.04/Target_GM/image/GM_SWImage.bin",
+      "sha256": "3291477403bd9d1961a1e27a45d974fcb7e1bdef54bacc676e10c11bfb0c5e71",
+      "is_v7": true,
+      "is_original": false,
+      "expected_root_path": false
+    }
+  ],
+  "prepared_usb_root": "analiz\\native-ui-candidate\\v7-tv\\vendor-rar-readback",
+  "prepared_root_v7_sha256": "3291477403bd9d1961a1e27a45d974fcb7e1bdef54bacc676e10c11bfb0c5e71",
+  "prepared_layout_matches_static_lookup": true,
+  "source_evidence": "analiz/native/ui-targeted/usb-update-v1/discovery-and-error-evidence.json",
+  "source_evidence_present": true,
+  "versions_changed": false,
+  "bootloader_changed": false,
+  "firmware_executed": false,
+  "device_write_performed": false,
+  "television_tested": false,
+  "limits": [
+    "File lookup success does not establish subsequent bootloader acceptance.",
+    "The same popup also covers unavailable environment manager.",
+    "Host folder checks do not observe the actual USB device or mount."
+  ]
+}

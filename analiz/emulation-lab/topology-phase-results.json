@@ -1,0 +1,204 @@
+{
+  "date": "2026-10-24",
+  "scope": "Isolated linux-user startup with explicit private synthetic UBI filesystem facts; no TV framebuffer",
+  "runs": [
+    {
+      "report": "run-v3-ubi-directory.json",
+      "variant": "v3",
+      "application_sha256": "c109a782f476dfb8b23136d7dad3a231c57dd4cb605e081da559ed370f76208a",
+      "exit_code": 134,
+      "seconds": 0.77,
+      "shared_library_opened_count": 112,
+      "storage_path_operations": [
+        {
+          "call": "open",
+          "path": "/sys/class/ubi",
+          "result": "4"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi",
+          "result": "4"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/./name",
+          "result": "-1 errno=2 (No such file or directory)"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/../name",
+          "result": "-1 errno=2 (No such file or directory)"
+        }
+      ],
+      "ioctl_count": 0,
+      "screen_rendered": false
+    },
+    {
+      "report": "run-v3-ubi-mpool-name.json",
+      "variant": "v3",
+      "application_sha256": "c109a782f476dfb8b23136d7dad3a231c57dd4cb605e081da559ed370f76208a",
+      "exit_code": 134,
+      "seconds": 0.719,
+      "shared_library_opened_count": 112,
+      "storage_path_operations": [
+        {
+          "call": "open",
+          "path": "/sys/class/ubi",
+          "result": "4"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi",
+          "result": "4"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/./name",
+          "result": "-1 errno=2 (No such file or directory)"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/../name",
+          "result": "-1 errno=2 (No such file or directory)"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/ubi0_0/name",
+          "result": "5"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/ubi0_0/data_bytes",
+          "result": "-1 errno=2 (No such file or directory)"
+        }
+      ],
+      "ioctl_count": 0,
+      "screen_rendered": false
+    },
+    {
+      "report": "run-v3-ubi-mpool-empty.json",
+      "variant": "v3",
+      "application_sha256": "c109a782f476dfb8b23136d7dad3a231c57dd4cb605e081da559ed370f76208a",
+      "exit_code": 134,
+      "seconds": 0.469,
+      "shared_library_opened_count": 112,
+      "storage_path_operations": [
+        {
+          "call": "open",
+          "path": "/sys/class/ubi",
+          "result": "4"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi",
+          "result": "4"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/./name",
+          "result": "-1 errno=2 (No such file or directory)"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/../name",
+          "result": "-1 errno=2 (No such file or directory)"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/ubi0_0/name",
+          "result": "5"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/ubi0_0/data_bytes",
+          "result": "4"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/ubi0_0/usable_eb_size",
+          "result": "4"
+        },
+        {
+          "call": "open",
+          "path": "/dev/shm/ubi0_0",
+          "result": "-1 errno=2 (No such file or directory)"
+        }
+      ],
+      "ioctl_count": 0,
+      "screen_rendered": false
+    },
+    {
+      "report": "run-original-ubi-mpool-empty.json",
+      "variant": "original",
+      "application_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+      "exit_code": 134,
+      "seconds": 0.719,
+      "shared_library_opened_count": 112,
+      "storage_path_operations": [
+        {
+          "call": "open",
+          "path": "/sys/class/ubi",
+          "result": "4"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi",
+          "result": "4"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/./name",
+          "result": "-1 errno=2 (No such file or directory)"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/../name",
+          "result": "-1 errno=2 (No such file or directory)"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/ubi0_0/name",
+          "result": "5"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/ubi0_0/data_bytes",
+          "result": "4"
+        },
+        {
+          "call": "open",
+          "path": "/sys/class/ubi/ubi0_0/usable_eb_size",
+          "result": "4"
+        },
+        {
+          "call": "open",
+          "path": "/dev/shm/ubi0_0",
+          "result": "-1 errno=2 (No such file or directory)"
+        }
+      ],
+      "ioctl_count": 0,
+      "screen_rendered": false
+    }
+  ],
+  "safety_probe": {
+    "report": "isolation-probe.json",
+    "passed": true,
+    "checks": 12
+  },
+  "contract_tests": {
+    "command": "python3 -m unittest discover -s scripts -p test_emulation_lab.py -v",
+    "passed": 18,
+    "failed": 0
+  },
+  "new_static_functions": 4,
+  "new_static_bytes": 1584,
+  "new_static_instructions": 396,
+  "new_static_report": "ubi-memory-boundary-static.json",
+  "unresolved_boundary": "/dev/shm/ubi0_0 expected volume bytes not supplied; fail closed on ENOENT -> raise(6)",
+  "originals_modified": false,
+  "physical_devices": false,
+  "host_sysfs": false,
+  "fake_ioctl_success": false,
+  "raw_logs_persisted": false
+}

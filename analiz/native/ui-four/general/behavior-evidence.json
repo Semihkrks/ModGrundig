@@ -1,0 +1,44 @@
+{
+  "target_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+  "entry": "0xd01710",
+  "evidence_kind": "direct_Ghidra_C_and_raw_MIPS_not_REA_Evidence",
+  "C_complete": true,
+  "C_count": 1,
+  "FDE_bytes": 146892,
+  "instructions_present_expected": [36723, 36723],
+  "instruction_gap_count": 0,
+  "raw_calls": 3642,
+  "symbolic_GOT_candidates": 3573,
+  "unresolved_dynamic_call_targets": 69,
+  "unresolved_virtual_slot_counts": {"0x34": 66, "0x48": 1, "0x44": 1, "0x40": 1},
+  "pcode_calls": 3197,
+  "pcode_addresses_outside_FDE": 0,
+  "raw_calls_absent_from_pcode": 445,
+  "raw_pcode_gap_scope": "Only exception/cleanup API targets; address list in raw-pcode-call-gaps.json",
+  "constructor_counts": {"ImageButton": 21, "ComboButton": 21, "TextBox": 7, "ScrollListContainer": 6, "AbsContainer": 6, "Image": 2, "SpinButton": 2, "Button": 1},
+  "constructor_IDs": {"minimum": 0, "maximum": 65, "unique": 66, "all_context_stores_checked_in_assembly": true},
+  "message_map": {"map_va": "0x010be074", "records": 44, "widget_ID_selector_matches": 31, "create_record_va": "0x010be07c", "create_event": 1, "handler_va": "0xd01710"},
+  "critical_prototype_checks": [
+    {"site": "0xd24574", "API": "MMainFrame::SetInitialFocus", "registers": {"a0": "this", "a1": "*(this+0x180), widget ID 0"}},
+    {"site": "0xd245d8", "API": "MMainFrame::SwitchFocusTo", "condition": "parent app private data == 11", "registers": {"a0": "this", "a1": "*(this+0x1c4), widget ID 17"}},
+    {"site": "0xd2486c", "API": "MEvtHandle::PostEvent", "condition": "IsTvInFirstTime()==0", "registers": {"a0": "this", "a1": "this", "a2": "0xc0000020", "a3": 0, "stack+0x10": 0}, "map_record_va": "0x010be0d0", "handler_va": "0xd01400"},
+    {"site": "0xd24e6c", "API": "ArUIManager::NewUI_Settings", "registers": {"a0": "manager", "a1": "this"}},
+    {"site": "0xd24e88", "API": "CommonFrame::EnableShadows", "registers": {"a0": "this", "a1": 1}},
+    {"site": "0xd25124", "API": "ArAudioManager::SetAudioDescription", "condition": "GetCurrentInputSourceType()==5 at 0xd250e8", "registers": {"a0": "audio manager", "a1": 3}}
+  ],
+  "conditional_visibility": [
+    {"condition": "PermanentTimeshift==0 OR UsbRecording==0", "getter_sites": ["0xd248b4", "0xd248e0"], "hidden_widget_IDs": [53], "hide_sites": ["0xd24924"]},
+    {"condition": "CustomScreenSaver==0", "getter_sites": ["0xd25190"], "hidden_widget_IDs": [62], "hide_sites": ["0xd251bc"]},
+    {"condition": "Hotel!=0 AND HotelAdmin==0", "getter_sites": ["0xd251e0", "0xd2520c"], "hidden_widget_IDs": [60, 59], "hide_sites": ["0xd25250", "0xd2526c"]},
+    {"condition": "Hotel==0 OR HotelAdmin==0", "getter_sites": ["0xd25290", "0xd252bc"], "hidden_widget_IDs": [15], "hide_sites": ["0xd25300"]},
+    {"condition": "SettingsRecovery==0", "getter_sites": ["0xd25324"], "hidden_widget_IDs": [63], "hide_sites": ["0xd25350"]},
+    {"condition": "ArTvConf_GetBasicMode()==1 AND GetBasicMode()==1", "getter_sites": ["0xd25374", "0xd253a8"], "hidden_widget_IDs": [12, 10, 14, 13], "hide_sites": ["0xd253f4", "0xd25410", "0xd2542c", "0xd25448"]}
+  ],
+  "limitations": [
+    "Full function C is pseudocode, with incomplete external C++ prototypes; critical arguments use assembly.",
+    "Concrete virtual dispatch targets remain unresolved.",
+    "Resource table values describe profile candidates and initial logical geometry; NewUI_Settings follows construction.",
+    "Message-map ID match does not establish handler body semantics or observed runtime dispatch.",
+    "No firmware modification, target execution, repack, deployment or TV write."
+  ]
+}

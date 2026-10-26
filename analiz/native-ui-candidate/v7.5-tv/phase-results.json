@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-26",
+  "revision": "v7.5-tv",
+  "source_revision": "v7.4-tv from working V7.1",
+  "status": "PASS_OFFLINE_TEST_CANDIDATE",
+  "native_name_bridge_installed": true,
+  "widget_id": 3,
+  "widget_rect": [
+    1566,
+    206,
+    254,
+    38
+  ],
+  "create_bytes": 532,
+  "update_bytes": 768,
+  "channel_data_source": "TV native GetProgramSelInfo -> route check -> GetProgramName",
+  "pc_preview_data_source": "explicit demo fixture, not packaged in firmware",
+  "leading_zero_preserved": true,
+  "failed_lookup_clears_name": true,
+  "volume_gp_fix_preserved": true,
+  "muted_fill_gray": true,
+  "white_top_right_badge": true,
+  "app_files_verified": 2374,
+  "app_metadata_verified": 2777,
+  "unchanged_regular_files": 2360,
+  "app_sha256": "fa15b45eaac351c84f4ebe1a1f8e802fa0d5730fe80f11d4c51b3496d204bfa9",
+  "bin_sha256": "b4a2d9ac0c2580b249341b23def4c8b33deb41a08d374ea647534818c7b638df",
+  "rar_sha256": "87d36643a6e22d7c94e1770d76c5e6a473cbdace37a40a16cda67c4236a4c984",
+  "bin_bytes": 42483736,
+  "rar_bytes": 43141176,
+  "payloads_checked": 14,
+  "unchanged_payloads": 13,
+  "committed_crc_nodes": 19083,
+  "rar_files_verified": 17,
+  "rar_directories_verified": 11,
+  "tests": {
+    "helper_cases_suite": 6,
+    "elf_loader_unwind_suite": 4,
+    "installed_hooks_suite": 4,
+    "final_preview_suite": 5,
+    "old_loader_generated_probe": true,
+    "cpp_throw_through_rx_caught": true,
+    "cpp_without_fde_negative_control_aborts": true,
+    "sevenzip": "PASS",
+    "winrar": "PASS"
+  },
+  "television_tested": false,
+  "flash_ready": false,
+  "usb_written": false,
+  "original_firmware_modified": false,
+  "rejected_revision": "v7.3-tv",
+  "user_freeze_trigger_confirmed": "Volume plus/minus; no panel then freeze",
+  "limitations": [
+    "Physical TV kernel/real manager/graphics untested",
+    "FDE permits unwind; helper local LSDA cleanup absent on native allocation exception",
+    "Route mismatch shows no name rather than wrong name"
+  ],
+  "skills": [
+    "reverse-engineer-anything"
+  ]
+}

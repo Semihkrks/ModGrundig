@@ -1,0 +1,261 @@
+{
+  "ephemeral_noreturn_assumptions": [
+    {
+      "previous_noreturn": true,
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "__assert_fail",
+      "address": "EXTERNAL:00000005"
+    },
+    {
+      "previous_noreturn": true,
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "_Unwind_Resume",
+      "address": "EXTERNAL:00000015"
+    },
+    {
+      "previous_noreturn": true,
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "abort",
+      "address": "EXTERNAL:00000017"
+    },
+    {
+      "previous_noreturn": false,
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "__cxa_rethrow",
+      "address": "EXTERNAL:0000002c"
+    },
+    {
+      "kind": "selected_callsite_noreturn_override",
+      "function": "2e23a030",
+      "instruction": "2e23a31c",
+      "got_slot": "2e2b3bc8",
+      "got_symbol": null,
+      "got_target_aliases": [
+        "abort"
+      ],
+      "noreturn_name": "abort",
+      "derived_gp_hex": "0x2e2bb8e0",
+      "original_flow_override": "NONE",
+      "flow_override": "CALL_RETURN",
+      "basis": "linear_same_block_gp_relative_t9_load_to_named_GOT_slot_then_jalr; explicit_standard_noreturn_assumption"
+    },
+    {
+      "kind": "selected_callsite_noreturn_override",
+      "function": "2e255bd4",
+      "instruction": "2e25748c",
+      "got_slot": "2e2b3bc8",
+      "got_symbol": null,
+      "got_target_aliases": [
+        "abort"
+      ],
+      "noreturn_name": "abort",
+      "derived_gp_hex": "0x2e2bb8e0",
+      "original_flow_override": "NONE",
+      "flow_override": "CALL_RETURN",
+      "basis": "linear_same_block_gp_relative_t9_load_to_named_GOT_slot_then_jalr; explicit_standard_noreturn_assumption"
+    },
+    {
+      "kind": "selected_callsite_noreturn_override",
+      "function": "2e271504",
+      "instruction": "2e271588",
+      "got_slot": "2e2b3bc8",
+      "got_symbol": null,
+      "got_target_aliases": [
+        "abort"
+      ],
+      "noreturn_name": "abort",
+      "derived_gp_hex": "0x2e2bb8e0",
+      "original_flow_override": "NONE",
+      "flow_override": "CALL_RETURN",
+      "basis": "linear_same_block_gp_relative_t9_load_to_named_GOT_slot_then_jalr; explicit_standard_noreturn_assumption"
+    }
+  ],
+  "ephemeral_context_seeds": [
+    {
+      "address": "2e23a030",
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2e23a030"
+    },
+    {
+      "address": "2e24fe3c",
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2e24fe3c"
+    },
+    {
+      "address": "2e255bd4",
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2e255bd4"
+    },
+    {
+      "address": "2e271504",
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2e271504"
+    },
+    {
+      "address": "2e281f14",
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2e281f14"
+    },
+    {
+      "address": "2e282068",
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2e282068"
+    }
+  ],
+  "requested": [
+    {
+      "requested_address": "2e23a030",
+      "function": {
+        "address": "2e23a030",
+        "name": "MResourceManager::GetDFBFont",
+        "signature": "undefined __thiscall GetDFBFont(MResourceManager * this, ulong param_1, ushort param_2, ulong param_3)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 756
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e23a030",
+      "original_body_max": "2e23a323",
+      "supplied_dynsym": {
+        "size": 756,
+        "symbol": "MResourceManager::GetDFBFont"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e23a323",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2e24fe3c",
+      "function": {
+        "address": "2e24fe3c",
+        "name": "MWidget::CalculateTextDrawFlags",
+        "signature": "undefined __thiscall CalculateTextDrawFlags(MWidget * this, _Rect * param_1, EN_WDG_ALIGN param_2, ulong param_3, long * param_4, long * param_5, DFBSurfaceTextFlags * param_6)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 324
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e24fe3c",
+      "original_body_max": "2e2500ff",
+      "supplied_dynsym": {
+        "size": 324,
+        "symbol": "MWidget::CalculateTextDrawFlags"
+      },
+      "body_exceeds_dynsym_size": true,
+      "dynsym_end_inclusive": "2e24ff7f",
+      "ephemeral_body_clamped": true,
+      "body_change_reason": "Original analyzed body exceeded caller-supplied ELF dynsym entry+size; bounded to declared contiguous range for this unsaved query only",
+      "query_body": {
+        "address": "2e24fe3c",
+        "name": "MWidget::CalculateTextDrawFlags",
+        "signature": "undefined __thiscall CalculateTextDrawFlags(MWidget * this, _Rect * param_1, EN_WDG_ALIGN param_2, ulong param_3, long * param_4, long * param_5, DFBSurfaceTextFlags * param_6)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 324
+      }
+    },
+    {
+      "requested_address": "2e255bd4",
+      "function": {
+        "address": "2e255bd4",
+        "name": "MWidget::DrawSingleLine",
+        "signature": "undefined __thiscall DrawSingleLine(MWidget * this, _Rect * param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 7548
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e255bd4",
+      "original_body_max": "2e257a8b",
+      "supplied_dynsym": {
+        "size": 7548,
+        "symbol": "MWidget::DrawSingleLine"
+      },
+      "body_exceeds_dynsym_size": true,
+      "dynsym_end_inclusive": "2e25794f",
+      "ephemeral_body_clamped": true,
+      "body_change_reason": "Original analyzed body exceeded caller-supplied ELF dynsym entry+size; bounded to declared contiguous range for this unsaved query only",
+      "query_body": {
+        "address": "2e255bd4",
+        "name": "MWidget::DrawSingleLine",
+        "signature": "undefined __thiscall DrawSingleLine(MWidget * this, _Rect * param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 7548
+      }
+    },
+    {
+      "requested_address": "2e271504",
+      "function": {
+        "address": "2e271504",
+        "name": "GetRcEngine::RcGetFont",
+        "signature": "undefined __stdcall RcGetFont(uint param_1, uint * param_2)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 176
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e271504",
+      "original_body_max": "2e2715b3",
+      "supplied_dynsym": {
+        "size": 176,
+        "symbol": "GetRcEngine::RcGetFont"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e2715b3",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2e281f14",
+      "function": {
+        "address": "2e281f14",
+        "name": "TextBox::Update",
+        "signature": "undefined __thiscall Update(TextBox * this, _Rect * param_1, uchar param_2)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 196
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e281f14",
+      "original_body_max": "2e281fd7",
+      "supplied_dynsym": {
+        "size": 196,
+        "symbol": "TextBox::Update"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e281fd7",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2e282068",
+      "function": {
+        "address": "2e282068",
+        "name": "TextBox::TextBox",
+        "signature": "undefined __thiscall TextBox(TextBox * this, MWidget * param_1, _Rect * param_2, ulong param_3, ulong param_4)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 80
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e282068",
+      "original_body_max": "2e2820b7",
+      "supplied_dynsym": {
+        "size": 80,
+        "symbol": "TextBox::TextBox"
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e2820b7",
+      "ephemeral_body_clamped": false
+    }
+  ]
+}

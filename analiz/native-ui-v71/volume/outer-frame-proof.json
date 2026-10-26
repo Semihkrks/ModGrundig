@@ -1,0 +1,85 @@
+{
+  "kind": "direct Capstone static ELF disassembly, not REA Evidence",
+  "factory": "0xfb601c",
+  "outer_rect_ids": [
+    "0x5bf0",
+    "0x5bf1",
+    "0x5bef",
+    "0x5bee"
+  ],
+  "outer_rect_values": [
+    0,
+    160,
+    160,
+    725
+  ],
+  "resource_load_sites": [
+    "0xfb6058",
+    "0xfb6070",
+    "0xfb6088",
+    "0xfb60a0"
+  ],
+  "frame_constructor_call": "0xfb60f8",
+  "constructor_chain": [
+    "VolumeControlFrame0xfbdbb0",
+    "CommonFrame0x8d3548",
+    "MMainFrame0x2e234db0"
+  ],
+  "outer_rect_store": {
+    "call": "0x2e234efc",
+    "target": "MWnd::SetRect0x2e261b74",
+    "fields": [
+      "frame+0x1c x",
+      "frame+0x20 y",
+      "frame+0x24 width",
+      "frame+0x28 height"
+    ]
+  },
+  "client_origin_reset": [
+    "0x2e234f08 storeszero outerRect.x",
+    "0x2e234f0c storeszero outerRect.y"
+  ],
+  "client_constructor_call": "0x2e234f58",
+  "dfb_window_creation": {
+    "function": "MMainFrame::CreateDFBWindow0x2e2334a4",
+    "description_fields_load": "0x2e2334d8..0x2e233504",
+    "layer_CreateWindow_call": "0x2e2335e8",
+    "optional_scaling_branch": "0x2e233618..0x2e2336dc",
+    "active_scaling_ratios_observed": false
+  },
+  "factory_tail_rect_call": {
+    "address": "0xfb61e0",
+    "target": "MMainFrame::InvalidateClientArea0x2e2332f8",
+    "correction": "This tail call is not CreateDFBWindow; actual window creation evidence is separate above."
+  },
+  "discarded_preliminary_margin96": {
+    "root_right164_exceeds_width160": true
+  },
+  "final_margin80": {
+    "local_root": [
+      80,
+      150,
+      68,
+      490
+    ],
+    "logical_screen_root": [
+      80,
+      310,
+      68,
+      490
+    ],
+    "logical_screen_panel": [
+      80,
+      330,
+      68,
+      450
+    ],
+    "root_right148_le_width160": true,
+    "root_bottom640_le_height725": true
+  },
+  "full_frame_creation_executed": false,
+  "limits": [
+    "Runtime scaling ratios and physical overscan not observed.",
+    "Native paint callback host surfaces use known logical screen offsets; actual DirectFB driver/compositor not executed."
+  ]
+}

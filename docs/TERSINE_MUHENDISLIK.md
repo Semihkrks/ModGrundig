@@ -1,5 +1,17 @@
 # Grundig GMGRMR V03.017.04 — tersine mühendislik
 
+26 Ekim son devam: [V7.5 gerçek sayısal kanal adı bağlantısı](UI_NATIVE_V75_KANAL_ADI.md) yerleştirildi. Baştaki sıfırlar korunur; hedef ad GetProgramSelInfo/GetProgramName üzerinden sorgulanır. Yeni metin widget'ı ve helper/unwind yerleşimi çevrimdışı test edildi. Donma GP düzeltmesi korunur; V7.5 henüz TV'de denenmedi.
+
+26 Ekim cihaz geri bildirimi: V7.3 ses paneli görünmeme/donma nedeniyle reddedildi; kullanıcı V7.1'in çalıştığını bildirdi. Eksik GP geri yüklemesi ABI regresyonunda yeniden üretildi. [Doğrudan V7.1 tabanlı V7.4 düzeltme ve inceleme adayı](UI_NATIVE_V74_GP_DUZELTMESI.md) çevrimdışı doğrulandı; cihaz başarısı henüz yoktur. Yeni gerçek kanal adı isteği de bu belgede açık takip maddesidir.
+
+25 Ekim son UI devamı: [V7.3 gri sessiz durumu ve mevcut kalıcı gösterge](UI_NATIVE_V73_GRI_SESSIZ.md) tamamlandı. Image680'in önceki şekil/alfa verisi korunup paleti griye çevrildi; mevcut401 yolu da güncellendi. MuteControlFrame ve panel timeout bağlantıları adresli kanıtla belgelendi. Son APP/BIN/RAR çevrimdışı doğrulandı; fiziksel V7.3 testi bekliyor.
+
+25 Ekim cihaz geri bildirimi: kullanıcı V7'yi fiziksel TV'ye yükleyip yayın/ses çalışmasını ve iki görsel kusuru bildirdi. [V7.1 düzeltmesi](UI_NATIVE_V71_TV_DUZELTMELERI.md), ses panelinin görüntü bayrağını ve numara ekranının dış pencere yüksekliğini adresli kanıtlarla düzeltir; paneli içeride ve24 mantıksal piksel yukarı konumlandırır. Son BIN/RAR çevrimdışı doğrulamadan geçti, V7.1 cihaz testi bekliyor. Aşağıdaki önceki aşamalar tarihsel kayıttır.
+
+23 Ekim native devamı: kullanıcı onayıyla [gerçek APP/UI adayı v2](UI_NATIVE_ADAY_V2.md) ayrı kopyada oluşturuldu. 22 dosya değişikliği, 2.371 dosyalık yeniden çıkarma, 2.773 metaveri kaydı ve 14 payload doğrulandı. Orijinal dosyalar ve TV korunur; bu sonuç cihaz kabulü veya tam görsel eşlik kanıtı değildir. Aşağıdaki önceki analiz kapsamı tarihsel kayıt olarak kalır.
+
+23 Ekim devamı: [dört büyük UI gövdesinin C çıktıları, kanıtları ve tasarıma geçiş kapsamı](bilgi-tabani/UI_DORT_BUYUK_FONKSIYON.md) tamamlandı. Settings sınırlanmış çıkarım profili kullanır; bu çıktı tam semantik çözüm değildir. Aşağıdaki eski aşama sayaçları tarihsel kapsamlarını korur.
+
 Güncel sistem aşaması ve modül bazlı durum: [bilgi tabanı](bilgi-tabani/README.md). Genişletilmiş UI aşaması: [136 odaklı giriş / 132 C çıktısı ve adresli davranışlar](UI_KOD_YAPISI.md). İlk 54/26 sorgunun sayaçları bu genişletilmiş kapsamla karıştırılmamalıdır.
 
 22 Ekim 2026. İncelenen kaynak kullanıcının sağladığı RAR'dır; fiziksel TV'nin aktif firmware dump'ı değildir. Bu rapor dosya/format, statik kod ve cihaz gözlemini birbirinden ayırır. Cihazda gözlem yapılmadı. Yeni odaklı kod bulguları [UI bağlantı haritasında](UI_HARITASI.md): ana uygulamada 54 sorgu/48 tamamlanmış decompile, MUF'ta 26/26. Bunlar kısmi statik sonuçlardır; tam çağrı grafiği değildir.

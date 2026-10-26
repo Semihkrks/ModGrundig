@@ -1,5 +1,7 @@
 # UI bağlantı haritası
 
+23 Ekim güncellemesi: [dört büyük UI gövdesinin C çıktıları ve kalan belirsizlikler](bilgi-tabani/UI_DORT_BUYUK_FONKSIYON.md). Settings sınırlanmış çıkarım kullanır; eski dört timeout listesi güncel C yokluğu anlamına gelmez.
+
 Sonraki genişletilmiş aşama: [UI kod yapısı](UI_KOD_YAPISI.md). Orada timer birimi ms olarak doğrulandı; ID→indeks yolu, focus slotu ve seçili animasyon gate'leri çözüldü. Aşağıdaki 54/26 sayaçları ilk odaklı sorgunun kapsamıdır.
 
 22 Ekim 2026. Sağlanan GMGRMR V03.017.04 paketi çevrimdışı incelendi. Menü, ses animasyonu veya firmwarAe değiştirilmedi; TV'de çalıştırma yapılmadı. Bu belge sonraki UI görevlerinin başlangıç noktasıdır.
@@ -72,6 +74,8 @@ Devir paketindeki **volume_ellipse.png**, hash olarak firmware'in **volume_icon.
 `HW 0x10/0x11/0x0d → MUF 0xf04c/0xf04d/0xf04e → VolumeControlApp::Summon (0x8d1438) → event 0x14 → VolumeControlFrame::OnKey (0xfb8c7c)` zinciri statik kayıt ve kodla desteklenir. Ardından yerel ses için `ArAudioManager::MainVolumeUp/Down` veya mute yolu çalışır. Hotel/headphone koşulları davranışı ayrıca değiştirir.
 
 Refresh içindeki modlar: `0` normal ses, `1` yerel mute, `2` ARC ses, `3` ARC mute. ARC active + CEC initialized + HDMI plugged dalı ses tuşunu CEC yoluna yöneltip yerel ses çağrısından döner. Ses seviyesinin her zaman TV hoparlörünü değiştireceği varsayılamaz.
+
+23 Ekim düzeltmesi: `IsRcKeyProcessedByCec` ret kolu da `0xfb91ac..0xfb91d4` üzerinden Refresh ve çıkış yapar; yerel çağrıya düşmez. Yerel yol `0xfb91e0` sonrasında, ARC kapıları false iken başlar. Host model bu adresli bulguya göre düzeltildi. [Gerçek firmware adayı ve patch sınırları](UI_NATIVE_ADAY_V2.md).
 
 Normal ve ARC ses gösterimlerinde `SetTimer(...,3000,0,1)` var. Sonraki `MTimerManager::AddTimer (0x2e24c034)` incelemesi birimi ms olarak kanıtladı: **3 saniyelik kapanış zamanlayıcısıdır**. Timer handler `0xfb7aec` uygulamayı kapatır; yerel mute açıksa ayrı `MuteControlApp` gösterilebilir.
 

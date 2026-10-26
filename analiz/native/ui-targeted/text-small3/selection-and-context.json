@@ -1,0 +1,147 @@
+{
+  "ephemeral_noreturn_assumptions": [
+    {
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn",
+      "previous_noreturn": true,
+      "address": "EXTERNAL:00000005",
+      "name": "__assert_fail"
+    },
+    {
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn",
+      "previous_noreturn": true,
+      "address": "EXTERNAL:00000015",
+      "name": "_Unwind_Resume"
+    },
+    {
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn",
+      "previous_noreturn": true,
+      "address": "EXTERNAL:00000017",
+      "name": "abort"
+    },
+    {
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn",
+      "previous_noreturn": false,
+      "address": "EXTERNAL:0000002c",
+      "name": "__cxa_rethrow"
+    },
+    {
+      "kind": "selected_callsite_noreturn_override",
+      "function": "2e24de4c",
+      "instruction": "2e24e75c",
+      "got_slot": "2e2b3bc8",
+      "got_symbol": null,
+      "got_target_aliases": [
+        "abort"
+      ],
+      "noreturn_name": "abort",
+      "derived_gp_hex": "0x2e2bb8e0",
+      "original_flow_override": "NONE",
+      "flow_override": "CALL_RETURN",
+      "basis": "linear_same_block_gp_relative_t9_load_to_named_GOT_slot_then_jalr; explicit_standard_noreturn_assumption"
+    },
+    {
+      "kind": "selected_callsite_noreturn_override",
+      "function": "2e24e7ac",
+      "instruction": "2e24ee08",
+      "got_slot": "2e2b3bc8",
+      "got_symbol": null,
+      "got_target_aliases": [
+        "abort"
+      ],
+      "noreturn_name": "abort",
+      "derived_gp_hex": "0x2e2bb8e0",
+      "original_flow_override": "NONE",
+      "flow_override": "CALL_RETURN",
+      "basis": "linear_same_block_gp_relative_t9_load_to_named_GOT_slot_then_jalr; explicit_standard_noreturn_assumption"
+    }
+  ],
+  "requested": [
+    {
+      "requested_address": "2e24de4c",
+      "function": {
+        "address": "2e24de4c",
+        "name": "MWidget::DrawString",
+        "signature": "undefined __thiscall DrawString(MWidget * this, _IDirectFBSurface * param_1, _IDirectFBFont * param_2, char * param_3, int param_4, long * param_5, long * param_6, DFBSurfaceTextFlags param_7, ushort param_8, map * param_9)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 2400
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e24de4c",
+      "original_body_max": "2e24e7ab",
+      "supplied_dynsym": {
+        "symbol": "MWidget::DrawString",
+        "size": 2400
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e24e7ab",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2e24e7ac",
+      "function": {
+        "address": "2e24e7ac",
+        "name": "MWidget::DrawString",
+        "signature": "undefined __thiscall DrawString(MWidget * this, _IDirectFBSurface * param_1, _IDirectFBFont * param_2, char * param_3, int param_4, long * param_5, long * param_6, DFBSurfaceTextFlags param_7)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 1704
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e24e7ac",
+      "original_body_max": "2e24ee53",
+      "supplied_dynsym": {
+        "symbol": "MWidget::DrawString",
+        "size": 1704
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e24ee53",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2e2531dc",
+      "function": {
+        "address": "2e2531dc",
+        "name": "MWidget::PreprocessText",
+        "signature": "undefined __thiscall PreprocessText(MWidget * this, map * param_1, char * param_2)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 1572
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2e2531dc",
+      "original_body_max": "2e2537ff",
+      "supplied_dynsym": {
+        "symbol": "MWidget::PreprocessText",
+        "size": 1572
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2e2537ff",
+      "ephemeral_body_clamped": false
+    }
+  ],
+  "ephemeral_context_seeds": [
+    {
+      "register": "t9",
+      "address": "2e24de4c",
+      "value_hex": "2e24de4c",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    },
+    {
+      "register": "t9",
+      "address": "2e24e7ac",
+      "value_hex": "2e24e7ac",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    },
+    {
+      "register": "t9",
+      "address": "2e2531dc",
+      "value_hex": "2e2531dc",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    }
+  ]
+}

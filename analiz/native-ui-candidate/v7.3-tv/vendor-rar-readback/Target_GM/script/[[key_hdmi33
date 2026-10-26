@@ -1,0 +1,15 @@
+# <- this is for comment / total file size must be less than 4KB
+
+#HDMI3 300
+setenv startAddr 0x80200000
+saveenv
+fatload usb 0 0x80200000 /Target_GM/BIN_FILES/keys/hdmi3_300_edid.bin
+
+setenv tmp_cmd 'setenv hdmi33size $filesize'
+run tmp_cmd
+saveenv
+
+writePrKey b /Target_GM/BIN_FILES/keys/hdmi3_300_edid.bin
+
+% <- this is end of file symbol
+

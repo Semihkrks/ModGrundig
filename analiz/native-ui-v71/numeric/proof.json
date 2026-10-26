@@ -1,0 +1,169 @@
+{
+  "status": "PASS_OFFLINE_STATIC_LAYOUT",
+  "code_records": [
+    {
+      "va": "0x89518c",
+      "file_offset": 4805004,
+      "old_word": "0x24040050",
+      "new_word": "0x2404098f",
+      "role": "ChannelControlApp outer window height: RcGetNum(0x50) -> RcGetNum(0x98f)"
+    }
+  ],
+  "num_records": [],
+  "changed_elf_bytes": [
+    4805004,
+    4805005
+  ],
+  "changed_paths": [
+    "08_APP/bin/dvbt_board"
+  ],
+  "before": {
+    "outer_frame": [
+      0,
+      0,
+      1920,
+      80
+    ],
+    "root": [
+      0,
+      0,
+      1920,
+      312
+    ],
+    "background": [
+      1538,
+      64,
+      310,
+      224
+    ],
+    "digits": [
+      1566,
+      118,
+      254,
+      78
+    ],
+    "background_visible": [
+      1538,
+      64,
+      310,
+      16
+    ],
+    "digits_visible": [
+      1566,
+      118,
+      254,
+      0
+    ],
+    "outer_height_resource": "0x50",
+    "parent_relationship": "background and TextBox are siblings under root; root under frame client"
+  },
+  "after": {
+    "outer_frame": [
+      0,
+      0,
+      1920,
+      312
+    ],
+    "root": [
+      0,
+      0,
+      1920,
+      312
+    ],
+    "background": [
+      1538,
+      64,
+      310,
+      224
+    ],
+    "digits": [
+      1566,
+      118,
+      254,
+      78
+    ],
+    "background_visible": [
+      1538,
+      64,
+      310,
+      224
+    ],
+    "digits_visible": [
+      1566,
+      118,
+      254,
+      78
+    ],
+    "outer_height_resource": "0x98f",
+    "parent_relationship": "background and TextBox are siblings under root; root under frame client"
+  },
+  "resources": {
+    "image_table_id": 2179,
+    "image_path": "../rc/ARimages/Grundig/modern/numeric_bg.png",
+    "image_size": [
+      310,
+      224
+    ],
+    "image_enable_store_va": "0x89610c",
+    "image_enable_store_word": "0xa204003a",
+    "font_id": 1200,
+    "font_path": "08_APP/rc/rc/DejaVuSans.ttf",
+    "font_sha256": "f4d46af3f8b795d13cffe2ab07d639e0f116412a18f9706ee87f94770b1dd5b2",
+    "font_size": 58,
+    "font_metrics": {
+      "0": {
+        "width": 37.0,
+        "bbox": [
+          0,
+          11,
+          37,
+          55
+        ]
+      },
+      "12": {
+        "width": 74.0,
+        "bbox": [
+          0,
+          11,
+          74,
+          54
+        ]
+      },
+      "9999": {
+        "width": 148.0,
+        "bbox": [
+          0,
+          11,
+          148,
+          55
+        ]
+      },
+      "99999": {
+        "width": 185.0,
+        "bbox": [
+          0,
+          11,
+          185,
+          55
+        ]
+      }
+    },
+    "alignment": 17,
+    "padding": 3
+  },
+  "root_cause": "outer DirectFB window remained 80px high; card at y64 exposed only16px; digits at y118 were fully clipped",
+  "evidence": [
+    "analiz/native/ui-targeted/v71-numeric-frame/00895108.c",
+    "analiz/native/ui-targeted/v71-numeric-frame/00895108.json",
+    "analiz/native/ui-four/channels/numeric-v1/00895b84.c",
+    "analiz/native/ui-deep/muf-core35/2e251be4.c"
+  ],
+  "service_handlers_changed": false,
+  "global_num_0x50_changed": false,
+  "original_oncreate_executed": false,
+  "physical_v71_tested": false,
+  "limits": [
+    "Static parent-clipping and original font metrics; physical TV V7.1 rendering remains unobserved.",
+    "New Ghidra output is independent readOnly analysis, not REA Evidence."
+  ]
+}

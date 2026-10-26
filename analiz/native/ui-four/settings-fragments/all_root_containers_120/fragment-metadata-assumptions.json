@@ -1,0 +1,49 @@
+[
+  {
+    "target_bytes_modified": false,
+    "kind": "original_function_metadata_removed",
+    "original": {
+      "body_bytes": 103000,
+      "signature": "undefined NewUI_Settings(MMainFrame * param_1)",
+      "entry": "0055b6c0"
+    }
+  },
+  {
+    "analysis_end_exclusive": "00566450",
+    "terminal_call": "00566448",
+    "fragment": "root_containers",
+    "assumption": "Additional original instructions from next phase preserve final stores/loop exits before a metadata-only terminating call. Prefix is not owned by this natural phase.",
+    "natural_end_exclusive": "0056643c",
+    "kind": "next_phase_prefix_exit_adapter"
+  },
+  {
+    "fragment": "root_containers",
+    "s8_input": "explicit_original_frame_context_parameter_unknown_runtime_pointer",
+    "kind": "fragment_context",
+    "t9_seed": "none_fragment_not_PIC_entry",
+    "gp_hex": "0x10cc310"
+  },
+  {
+    "kind": "adapter_call_return_boundary_abstraction",
+    "fragment": "root_containers",
+    "original_call": {
+      "address": "00566448",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL",
+      "flow_override": "NONE",
+      "flows": [],
+      "fallthrough": "00566450",
+      "delay_slots": 1
+    },
+    "modified_call": {
+      "address": "00566448",
+      "instruction": "jalr t9",
+      "flow_type": "COMPUTED_CALL_TERMINATOR",
+      "flow_override": "CALL_RETURN",
+      "flows": [],
+      "fallthrough": null,
+      "delay_slots": 1
+    },
+    "assumption": "Next-phase prefix call terminates the analysis adapter; continuation is retained only in raw CFG."
+  }
+]
