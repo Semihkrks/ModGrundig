@@ -1,0 +1,96 @@
+{
+  "status": "COMPLETE_STATIC_NO_PATCH",
+  "source_sha256": "215c0a86cdd9fd579655da4752e0a5c7822eb3210e768ca63b86859683c9c02b",
+  "queried_functions": 8,
+  "decompile_complete": 8,
+  "previous_assembly_revisited": [
+    "MApi_VDEC_EX_V2_Init",
+    "MDrv_HVD_EX_Init",
+    "_HVD_EX_DemuxTS_ParseHEVCSPS"
+  ],
+  "new_body_scope": [
+    "HAL_VPU_EX_LoadCode",
+    "MDrv_HVD_EX_GetErrCode",
+    "_VPU_EX_GetFrameBufferDefaultSize",
+    "HAL_VPU_EX_Init",
+    "_HVD_EX_Init_"
+  ],
+  "new_decompile_not_newly_discovered_total": true,
+  "memory_formula_host_arithmetic": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "depth_assumption": 8,
+      "aligned_width": 1920,
+      "aligned_height": 1088,
+      "reference_factor": 6,
+      "bytes": 20897792,
+      "mib": 19.9296875
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "depth_assumption": 10,
+      "aligned_width": 1920,
+      "aligned_height": 1088,
+      "reference_factor": 6,
+      "bytes": 25597952,
+      "mib": 24.412109375
+    },
+    {
+      "width": 3840,
+      "height": 2160,
+      "depth_assumption": 8,
+      "aligned_width": 3840,
+      "aligned_height": 2176,
+      "reference_factor": 6,
+      "bytes": 77299712,
+      "mib": 73.71875
+    },
+    {
+      "width": 3840,
+      "height": 2160,
+      "depth_assumption": 10,
+      "aligned_width": 3840,
+      "aligned_height": 2176,
+      "reference_factor": 6,
+      "bytes": 96100352,
+      "mib": 91.6484375
+    }
+  ],
+  "memory_limits": [
+    "SPS formula is not a proven active DTV allocation/rejection predicate",
+    "Actual TRT SPS and caller consuming the computed requirement are unknown",
+    "30MiB mmap profile is not live runtime allocation evidence"
+  ],
+  "divx_error_gate": {
+    "function": "MDrv_HVD_EX_GetErrCode",
+    "va": "0x2d5fb370",
+    "active_stream_required": true,
+    "firmware_error_data_selector": "0x1205",
+    "conditional_status_selector": "0x122c",
+    "hevc_conditional_mask": "0x2",
+    "width_height_threshold": "0x1fe001 exclusive upper boundary (1920*1088+1)",
+    "uhd_support_global": "bModeSupportDivXHEVC_4K",
+    "error_return": 8,
+    "side_effect": "HAL_HVD_EX_SetData(stream,0x1102,0) on selected error results; command meaning not proven",
+    "input_source_or_DTV_check_in_function": false,
+    "actual_live_status_unknown": true,
+    "SDK_AVMonitor_error_consumer_not_closed": true,
+    "patch_permitted": false
+  },
+  "firmware_loader_gate": {
+    "function": "HAL_VPU_EX_LoadCode",
+    "va": "0x2d630388",
+    "embedded_source": "0x2d66c2dc",
+    "embedded_bytes": "0x9b3e0",
+    "post_load_check": "destination[6]==0x52 && destination[7]==0x32",
+    "failure_return": 0,
+    "success_flag": "pVPUHalContext+0xb1",
+    "UHD_specific": false
+  },
+  "patch_emitted": false,
+  "firmware_executed": false,
+  "original_modified": false,
+  "next_concrete_observation": "Read existing native debug output for SetVdecType/MApi_VDEC_EX_V2_Init result, BBU id, loaded-FW prefix, GetData selectors0x1205/0x122c and first decoded frame/sequence data on TRT; compare a working HD channel. No forced-success or memory-map patch."
+}

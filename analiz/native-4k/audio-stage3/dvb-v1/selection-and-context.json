@@ -1,0 +1,55 @@
+{
+  "ephemeral_noreturn_assumptions": [
+    {
+      "previous_noreturn": true,
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "_Unwind_Resume",
+      "address": "EXTERNAL:00000079"
+    },
+    {
+      "previous_noreturn": true,
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "abort",
+      "address": "EXTERNAL:0000007d"
+    },
+    {
+      "previous_noreturn": false,
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "__cxa_rethrow",
+      "address": "EXTERNAL:00000112"
+    }
+  ],
+  "ephemeral_context_seeds": [
+    {
+      "address": "2d4d6a08",
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2d4d6a08"
+    }
+  ],
+  "requested": [
+    {
+      "requested_address": "2d4d6a08",
+      "function": {
+        "address": "2d4d6a08",
+        "name": "MSrv_DTV_Player_DVB::_GetAvInfoFromProgramInfo",
+        "signature": "undefined __thiscall _GetAvInfoFromProgramInfo(MSrv_DTV_Player_DVB * this, _DVB_PROGRAMINFO * param_1, uchar * param_2, MW_DTV_AVInfo * param_3)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 756
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2d4d6a08",
+      "original_body_max": "2d4d6df7",
+      "supplied_dynsym": {
+        "size": 1056
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2d4d6e27",
+      "ephemeral_body_clamped": false
+    }
+  ]
+}

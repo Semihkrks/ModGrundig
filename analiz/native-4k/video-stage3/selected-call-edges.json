@@ -1,0 +1,711 @@
+[
+  {
+    "source": "analiz/native-4k/video-stage3/ghidra-v1/2d5fb370.json",
+    "call": {
+      "instruction_address": "2d5fb3e0",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2d614b20, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2d614b20",
+      "target_function": {
+        "address": "2d614b20",
+        "name": "HAL_HVD_EX_GetData",
+        "signature": "undefined HAL_HVD_EX_GetData(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 4796
+      },
+      "target_symbol": "HAL_HVD_EX_GetData",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x10, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(const, 0x1205, 4)",
+          "constant_hex": "0x1205",
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "instructions": [
+      {
+        "va": "2d5fb3d4",
+        "instruction": "jr ra"
+      },
+      {
+        "va": "2d5fb3d8",
+        "instruction": "_addiu sp,sp,0x50"
+      },
+      {
+        "va": "2d5fb3dc",
+        "instruction": "lw t9,-0x6d7c(gp)"
+      },
+      {
+        "va": "2d5fb3e0",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "2d5fb3e4",
+        "instruction": "_li a1,0x1205"
+      },
+      {
+        "va": "2d5fb3e8",
+        "instruction": "move s0,v0"
+      },
+      {
+        "va": "2d5fb3ec",
+        "instruction": "sltiu v0,v0,0x1008"
+      },
+      {
+        "va": "2d5fb3f0",
+        "instruction": "bne v0,zero,0x2d5fb47c"
+      }
+    ]
+  },
+  {
+    "source": "analiz/native-4k/video-stage3/ghidra-v1/2d5fb370.json",
+    "call": {
+      "instruction_address": "2d5fb414",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2d614b20, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2d614b20",
+      "target_function": {
+        "address": "2d614b20",
+        "name": "HAL_HVD_EX_GetData",
+        "signature": "undefined HAL_HVD_EX_GetData(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 4796
+      },
+      "target_symbol": "HAL_HVD_EX_GetData",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x10, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(const, 0x122c, 4)",
+          "constant_hex": "0x122c",
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "instructions": [
+      {
+        "va": "2d5fb408",
+        "instruction": "_addiu v0,s0,-0x3001"
+      },
+      {
+        "va": "2d5fb40c",
+        "instruction": "lw t9,-0x6d7c(gp)"
+      },
+      {
+        "va": "2d5fb410",
+        "instruction": "move a0,s1"
+      },
+      {
+        "va": "2d5fb414",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "2d5fb418",
+        "instruction": "_li a1,0x122c"
+      },
+      {
+        "va": "2d5fb41c",
+        "instruction": "andi v0,v0,0x1"
+      },
+      {
+        "va": "2d5fb420",
+        "instruction": "bne v0,zero,0x2d5fb4c8"
+      },
+      {
+        "va": "2d5fb424",
+        "instruction": "_lw gp,0x10(sp)"
+      }
+    ]
+  },
+  {
+    "source": "analiz/native-4k/video-stage3/ghidra-v1/2d5fb370.json",
+    "call": {
+      "instruction_address": "2d5fb430",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2d614b20, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2d614b20",
+      "target_function": {
+        "address": "2d614b20",
+        "name": "HAL_HVD_EX_GetData",
+        "signature": "undefined HAL_HVD_EX_GetData(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 4796
+      },
+      "target_symbol": "HAL_HVD_EX_GetData",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x10, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(const, 0x122c, 4)",
+          "constant_hex": "0x122c",
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "instructions": [
+      {
+        "va": "2d5fb424",
+        "instruction": "_lw gp,0x10(sp)"
+      },
+      {
+        "va": "2d5fb428",
+        "instruction": "lw t9,-0x6d7c(gp)"
+      },
+      {
+        "va": "2d5fb42c",
+        "instruction": "move a0,s1"
+      },
+      {
+        "va": "2d5fb430",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "2d5fb434",
+        "instruction": "_li a1,0x122c"
+      },
+      {
+        "va": "2d5fb438",
+        "instruction": "andi v0,v0,0x2"
+      },
+      {
+        "va": "2d5fb43c",
+        "instruction": "bne v0,zero,0x2d5fb4f4"
+      },
+      {
+        "va": "2d5fb440",
+        "instruction": "_lw gp,0x10(sp)"
+      }
+    ]
+  },
+  {
+    "source": "analiz/native-4k/video-stage3/ghidra-v1/2d5fb370.json",
+    "call": {
+      "instruction_address": "2d5fb4b8",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2d616a1c, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2d616a1c",
+      "target_function": {
+        "address": "2d616a1c",
+        "name": "HAL_HVD_EX_SetData",
+        "signature": "undefined HAL_HVD_EX_SetData(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 1112
+      },
+      "target_symbol": "HAL_HVD_EX_SetData",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x10, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(const, 0x1102, 4)",
+          "constant_hex": "0x1102",
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 2,
+          "expression": "(const, 0x0, 4)",
+          "constant_hex": "0x0",
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "instructions": [
+      {
+        "va": "2d5fb4ac",
+        "instruction": "lw t9,-0x71f4(gp)"
+      },
+      {
+        "va": "2d5fb4b0",
+        "instruction": "move a0,s1"
+      },
+      {
+        "va": "2d5fb4b4",
+        "instruction": "li a1,0x1102"
+      },
+      {
+        "va": "2d5fb4b8",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "2d5fb4bc",
+        "instruction": "_clear a2"
+      },
+      {
+        "va": "2d5fb4c0",
+        "instruction": "b 0x2d5fb448"
+      },
+      {
+        "va": "2d5fb4c4",
+        "instruction": "_lw gp,0x10(sp)"
+      },
+      {
+        "va": "2d5fb4c8",
+        "instruction": "lw v0,-0x6f50(gp)"
+      }
+    ]
+  },
+  {
+    "source": "analiz/native-4k/video-stage3/ghidra-v1/2d602190.json",
+    "call": {
+      "instruction_address": "2d602c34",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2d6196e0, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2d6196e0",
+      "target_function": {
+        "address": "2d6196e0",
+        "name": "HAL_HVD_EX_GetBBUId",
+        "signature": "undefined HAL_HVD_EX_GetBBUId(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 464
+      },
+      "target_symbol": "HAL_HVD_EX_GetBBUId",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x10, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "instructions": [
+      {
+        "va": "2d602c28",
+        "instruction": "lw s0,0x0(t0)"
+      },
+      {
+        "va": "2d602c2c",
+        "instruction": "lw t9,-0x6f38(gp)"
+      },
+      {
+        "va": "2d602c30",
+        "instruction": "move a0,s7"
+      },
+      {
+        "va": "2d602c34",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "2d602c38",
+        "instruction": "_sw t0,0x64(sp)"
+      },
+      {
+        "va": "2d602c3c",
+        "instruction": "addu s0,s0,s8"
+      },
+      {
+        "va": "2d602c40",
+        "instruction": "lw gp,0x40(sp)"
+      },
+      {
+        "va": "2d602c44",
+        "instruction": "sw v0,0x620(s0)"
+      }
+    ]
+  },
+  {
+    "source": "analiz/native-4k/video-stage3/ghidra-v1/2d602190.json",
+    "call": {
+      "instruction_address": "2d602cf8",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2d634374, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2d634374",
+      "target_function": {
+        "address": "2d634374",
+        "name": "_HVD_EX_Init_",
+        "signature": "undefined _HVD_EX_Init_(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 108
+      },
+      "target_symbol": "_HVD_EX_Init_",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x10, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "instructions": [
+      {
+        "va": "2d602cec",
+        "instruction": "b 0x2d60294c"
+      },
+      {
+        "va": "2d602cf0",
+        "instruction": "_lw v1,0x1c(s1)"
+      },
+      {
+        "va": "2d602cf4",
+        "instruction": "sw t0,0x64(sp)"
+      },
+      {
+        "va": "2d602cf8",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "2d602cfc",
+        "instruction": "_move a0,s7"
+      },
+      {
+        "va": "2d602d00",
+        "instruction": "lw gp,0x40(sp)"
+      },
+      {
+        "va": "2d602d04",
+        "instruction": "move s2,v0"
+      },
+      {
+        "va": "2d602d08",
+        "instruction": "bne v0,s1,0x2d60275c"
+      }
+    ]
+  },
+  {
+    "source": "analiz/native-4k/video-stage3/ghidra-v1/2d602190.json",
+    "call": {
+      "instruction_address": "2d602d28",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2d614b20, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2d614b20",
+      "target_function": {
+        "address": "2d614b20",
+        "name": "HAL_HVD_EX_GetData",
+        "signature": "undefined HAL_HVD_EX_GetData(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 4796
+      },
+      "target_symbol": "HAL_HVD_EX_GetData",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x10, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(const, 0x4006, 4)",
+          "constant_hex": "0x4006",
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "instructions": [
+      {
+        "va": "2d602d1c",
+        "instruction": "lw s1,0x88(s0)"
+      },
+      {
+        "va": "2d602d20",
+        "instruction": "move a0,s7"
+      },
+      {
+        "va": "2d602d24",
+        "instruction": "sw t0,0x64(sp)"
+      },
+      {
+        "va": "2d602d28",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "2d602d2c",
+        "instruction": "_li a1,0x4006"
+      },
+      {
+        "va": "2d602d30",
+        "instruction": "lw gp,0x40(sp)"
+      },
+      {
+        "va": "2d602d34",
+        "instruction": "lw t9,-0x78ac(gp)"
+      },
+      {
+        "va": "2d602d38",
+        "instruction": "jalr t9"
+      }
+    ]
+  },
+  {
+    "source": "analiz/native-4k/video-stage3/ghidra-v1/2d633a20.json",
+    "call": {
+      "instruction_address": "2d634210",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2d60fcf0, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2d60fcf0",
+      "target_function": {
+        "address": "2d60fcf0",
+        "name": "HAL_HVD_EX_GetEVDHWBuffer",
+        "signature": "undefined HAL_HVD_EX_GetEVDHWBuffer(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 8
+      },
+      "target_symbol": "HAL_HVD_EX_GetEVDHWBuffer",
+      "arguments": [],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "instructions": [
+      {
+        "va": "2d634204",
+        "instruction": "srl s0,v1,0x2"
+      },
+      {
+        "va": "2d634208",
+        "instruction": "sw s0,0x0(v0)"
+      },
+      {
+        "va": "2d63420c",
+        "instruction": "lw t9,-0x7d24(gp)"
+      },
+      {
+        "va": "2d634210",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "2d634214",
+        "instruction": "_nop"
+      },
+      {
+        "va": "2d634218",
+        "instruction": "lw gp,0x18(sp)"
+      },
+      {
+        "va": "2d63421c",
+        "instruction": "lw v1,0x490(sp)"
+      },
+      {
+        "va": "2d634220",
+        "instruction": "addu v0,s0,v0"
+      }
+    ]
+  },
+  {
+    "source": "analiz/native-4k/video-stage3/ghidra-v1/2d634374.json",
+    "call": {
+      "instruction_address": "2d6343c8",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2d603540, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2d603540",
+      "target_function": {
+        "address": "2d603540",
+        "name": "_HVD_EX_Rst",
+        "signature": "undefined _HVD_EX_Rst(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 4968
+      },
+      "target_symbol": "_HVD_EX_Rst",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x10, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(const, 0x0, 4)",
+          "constant_hex": "0x0",
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "instructions": [
+      {
+        "va": "2d6343bc",
+        "instruction": "jr ra"
+      },
+      {
+        "va": "2d6343c0",
+        "instruction": "_addiu sp,sp,0x20"
+      },
+      {
+        "va": "2d6343c4",
+        "instruction": "lw t9,-0x795c(gp)"
+      },
+      {
+        "va": "2d6343c8",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "2d6343cc",
+        "instruction": "_clear a1"
+      },
+      {
+        "va": "2d6343d0",
+        "instruction": "lw ra,0x1c(sp)"
+      },
+      {
+        "va": "2d6343d4",
+        "instruction": "lw gp,0x10(sp)"
+      },
+      {
+        "va": "2d6343d8",
+        "instruction": "jr ra"
+      }
+    ]
+  },
+  {
+    "source": "analiz/native-4k/video-stage3/ghidra-v1/2d655304.json",
+    "call": {
+      "instruction_address": "2d655e60",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2d602190, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2d602190",
+      "target_function": {
+        "address": "2d602190",
+        "name": "MDrv_HVD_EX_Init",
+        "signature": "undefined MDrv_HVD_EX_Init(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 3320
+      },
+      "target_symbol": "MDrv_HVD_EX_Init",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x54, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(register, 0x40, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 2,
+          "expression": "(register, 0x44, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 3,
+          "expression": "(unique, 0x5e00, 1)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 4,
+          "expression": "(unique, 0x5e00, 1)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "instructions": [
+      {
+        "va": "2d655e54",
+        "instruction": "move a1,s0"
+      },
+      {
+        "va": "2d655e58",
+        "instruction": "sw a0,0x10(sp)"
+      },
+      {
+        "va": "2d655e5c",
+        "instruction": "move a2,s1"
+      },
+      {
+        "va": "2d655e60",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "2d655e64",
+        "instruction": "_move a0,s5"
+      },
+      {
+        "va": "2d655e68",
+        "instruction": "li v1,0x1"
+      },
+      {
+        "va": "2d655e6c",
+        "instruction": "bne v0,v1,0x2d6561e4"
+      },
+      {
+        "va": "2d655e70",
+        "instruction": "_lw gp,0x20(sp)"
+      }
+    ]
+  }
+]

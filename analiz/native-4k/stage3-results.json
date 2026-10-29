@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-30",
+  "status": "OFFLINE_PROGRESS_NO_NATIVE_4K_PATCH",
+  "selected_functions": 16,
+  "new_focused_functions": 10,
+  "new_c_exports": 12,
+  "previous_c_reused": 1,
+  "audio_codec_table_rows": 22,
+  "host_predicate_cases": 11,
+  "host_conversion": "PASS_HOST_ONLY",
+  "native_emulation": false,
+  "television_tested": false,
+  "firmware_modified": false,
+  "live_satellite_conversion": false,
+  "user_usb_recording": "Not tried",
+  "findings": [
+    "Audio startup not aborted by ignored video initialization returns; video/readiness/sync can retain mute",
+    "Real VDEC init return and microcode R2 checks exist",
+    "SPS memory calculation examined; active DTV caller/allocation comparison unresolved",
+    "Conditional DivX HEVC UHD error8 is not established as TRT failure"
+  ],
+  "unresolved": [
+    "Actual TRT service/audio/video/PCR PIDs",
+    "Decoder frame count and error code on target",
+    "Audio MAD lock/PCM and mute mask",
+    "SPS helper active DTV caller and real framebuffer allocation",
+    "DivX error policy consumer and live flag state"
+  ],
+  "evidence": [
+    "audio-stage3/results.json",
+    "video-stage3/results.json",
+    "host-conversion/results.json"
+  ]
+}

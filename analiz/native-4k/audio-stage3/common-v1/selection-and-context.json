@@ -1,0 +1,131 @@
+{
+  "ephemeral_noreturn_assumptions": [
+    {
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "__cxa_rethrow",
+      "address": "EXTERNAL:0000014f",
+      "previous_noreturn": false
+    },
+    {
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "_Unwind_Resume",
+      "address": "EXTERNAL:000001c6",
+      "previous_noreturn": true
+    },
+    {
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "abort",
+      "address": "EXTERNAL:00000335",
+      "previous_noreturn": true
+    },
+    {
+      "kind": "selected_callsite_noreturn_override",
+      "function": "2d9d7e40",
+      "instruction": "2d9d8768",
+      "got_slot": "2da8cd04",
+      "got_symbol": null,
+      "got_target_aliases": [
+        "abort"
+      ],
+      "noreturn_name": "abort",
+      "derived_gp_hex": "0x2da91f90",
+      "original_flow_override": "NONE",
+      "flow_override": "CALL_RETURN",
+      "basis": "linear_same_block_gp_relative_t9_load_to_named_GOT_slot_then_jalr; explicit_standard_noreturn_assumption"
+    }
+  ],
+  "ephemeral_context_seeds": [
+    {
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2d9d7e40",
+      "address": "2d9d7e40"
+    },
+    {
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2d9d3e04",
+      "address": "2d9d3e04"
+    },
+    {
+      "register": "t9",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2d9d6124",
+      "address": "2d9d6124"
+    }
+  ],
+  "requested": [
+    {
+      "requested_address": "2d9d7e40",
+      "function": {
+        "address": "2d9d7e40",
+        "name": "MW_DTV_AVMonitor::DoStart",
+        "signature": "undefined __thiscall DoStart(MW_DTV_AVMonitor * this, MW_DTV_AVInfo * param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 5700
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2d9d7e40",
+      "original_body_max": "2d9d9483",
+      "supplied_dynsym": {
+        "size": 5700
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2d9d9483",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2d9d3e04",
+      "function": {
+        "address": "2d9d3e04",
+        "name": "MW_DTV_AVMonitor::SetMuteFlag",
+        "signature": "undefined __thiscall SetMuteFlag(MW_DTV_AVMonitor * this, uchar param_1, ulong param_2)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 1844
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2d9d3e04",
+      "original_body_max": "2d9d455b",
+      "supplied_dynsym": {
+        "size": 1844
+      },
+      "body_exceeds_dynsym_size": true,
+      "dynsym_end_inclusive": "2d9d4537",
+      "ephemeral_body_clamped": true,
+      "body_change_reason": "Original analyzed body exceeded caller-supplied ELF dynsym entry+size; bounded to declared contiguous range for this unsaved query only",
+      "query_body": {
+        "address": "2d9d3e04",
+        "name": "MW_DTV_AVMonitor::SetMuteFlag",
+        "signature": "undefined __thiscall SetMuteFlag(MW_DTV_AVMonitor * this, uchar param_1, ulong param_2)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 1844
+      }
+    },
+    {
+      "requested_address": "2d9d6124",
+      "function": {
+        "address": "2d9d6124",
+        "name": "MW_DTV_AVMonitor::CheckAudioStatus",
+        "signature": "undefined __thiscall CheckAudioStatus(MW_DTV_AVMonitor * this)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 192
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2d9d6124",
+      "original_body_max": "2d9d61e3",
+      "supplied_dynsym": {
+        "size": 192
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2d9d61e3",
+      "ephemeral_body_clamped": false
+    }
+  ]
+}

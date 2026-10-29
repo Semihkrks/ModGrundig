@@ -1,5 +1,32 @@
 # 4K yayın →1080p ve kayıp kanal araştırması
 
+## 30 Ekim: görüntü hatası, ses mute koşulları ve dönüşüm deneyi
+
+Yeni odak tarama/listelenme değildir: kullanıcı kanalın V7.8'de bulunduğunu,
+ancak iki ses seçiminde de görüntü/ses olmadığını bildirmiştir. USB kayıt henüz
+denenmemiştir; canlı servis/PID/decoder hata ölçümleri bulunmaz.
+
+- [Ses yolu](4K_SES_YOLU.md): video init dönüşü kontrol edilmeden ses başlatma
+  sürer. Fakat mute2'nin kaldırılması video/readiness/sync koşullarına bağlanır.
+  Başarısız video ile sesin sessiz kalması, iki ses codec'inin de desteklenmediği
+  sonucunu tek başına vermez. Beş yeni odaklı gövde, dört yeni C çıktısı,
+  22 codec dönüşüm satırı ve11 host mantık vakası belgelendi.
+- [Görüntü sınırları](4K_VIDEO_SINIRLARI.md): sekiz C çıktısı, beş yeni odaklı
+  gövde ve üç önceki assembly hedefinin yeniden incelemesi. Gerçek init dönüş
+  kapıları, R2 mikrokod başlık kontrolü ve SPS bellek hesabı çözüldü.
+  Örnek UHD girdide yaklaşık74–92MiB hesabı çıkar; **aktif DTV tahsisi ve bu
+  hesabın gerçek çağrı yolu henüz bağlanmadı**. Paket varsayılanındaki30MiB'den
+  doğrudan kesin yetersizlik veya güvenli yeni MMAP boyutu çıkarılmaz.
+- DivX koşullu hata8 yolu bulundu; TRT UHD'de bayrak değeri, tetiklenme ve hata
+  tüketicisi doğrulanmadı. Genel bir HEVC/4K kilidi diye patch edilmedi.
+- [Host dönüşüm deneyi](4K_FHD_DONUSUM_DENEYI.md): sentetik4K Main10+AC-3,
+  FHD H.264+AAC'ye çevrildi ve hata/sessizlik kontrolleri geçti. Bu, bilgisayar
+  üzerinde bir deneydir; TV'nin canlı uydu akışını dönüştürmesi değildir.
+
+Bu aşamada **yüklenebilir yeni 4K firmware yaması çıkarılmadı**. Kaynaklar ve
+önceki paketler korunur; zorla success/unmute veya bellek haritası değişikliği yoktur.
+[Aşama3 kapsam kaydı](../analiz/native-4k/stage3-results.json).
+
 **27 Ekim son cihaz geri bildirimi:** kullanıcı V7.8'de **TRT Ultra HD** adlı kanalı bulduğunu, görüntü olmadığını ve Dolby/HE-AAC olarak belirttiği iki ses seçeneğini ayrı ayrı seçtiğinde ikisinde de ses çıkmadığını bildirdi. [Ayrı cihaz gözlem kaydı](../analiz/native-ui-candidate/v7.8-tv/device-feedback.json). Böylece önceki “hiç listelenmiyor” gözlemi bu deneme için aşıldı; keşfin default transponder yamasından kaynaklandığı, doğru/güncel servisin alındığı veya canlı PID/codec değerleri henüz kanıtlanmadı. Aşağıdaki ilk tarama aşaması tarihsel kapsamıyla korunur.
 
 Yeni öncelik yalnız ölçekleme değildir: geçerli video/ses/PCR PID'lerinin gerçek akışa bağlanması, A/V başlatma ve mute durumları, ardından HEVC profil/bit derinliği/UHD50 ve ses decoder çıktıları ayrılmalıdır. EPG/akış bilgisi veya ses menüsünde iki seçeneğin görünmesi metadata okunmasını gösterebilir; sıkıştırılmış görüntü/sesin çözüldüğünü göstermez.1080p ölçekleme çözülmüş kareden sonra gelir. Mevcut firmware incelemesinde `_GetAvInfoFromProgramInfo0x2d4d6a08` video ve seçilen ses PID/codec alanlarını ayrı okur (`0x2d4d6a38`, `0x2d4d6a9c`, `0x2d4d6aac`); `AVMonitor::DoStart0x2d9d7e40` demux PID filtreleri ve SetMuteFlag/Get_mapi_audio yollarını içerir. Bunlar gerçek cihaz dönüşleri olmadan hatanın nedeni olarak ilan edilmez. [Kaynak assembly ve GOT adları](../analiz/native-4k/decoder-stage2/playback-evidence.json). Bu devamda yeni decompile veya firmware değişikliği yapılmadı; mevcut iki gövde yeni gözlemle yeniden değerlendirildi.
