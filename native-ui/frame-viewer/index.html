@@ -8,22 +8,22 @@
 </style>
 <header>
 <h1>Gerçek MUF çizim kodu · test yüzeyi</h1>
-<label>Sürüm <select id="variant"><option value="v7.5-tv">V7.5 TV adayı</option><option value="v7.4-tv">V7.4 · 7.1 tabanlı test adayı</option><option value="v7.1-tv">V7.1 · cihazda çalışan temel</option><option value="v7-tv">Önceki V7 TV · kırpma hatası</option><option value="v7">Önceki v7 taslak</option><option value="v6">Önceki v6</option><option value="v5">Önceki v5</option><option value="v4">Önceki v4</option><option value="v3">Önceki v3</option><option value="original">Orijinal firmware</option></select></label>
-<label>Sahne <select id="scene"><option value="volume">Ses paneli</option><option value="mute">Mevcut mute ikonu (yalıtılmış)</option><option value="numeric">Numara girişi</option></select></label>
+<label>Sürüm <select id="variant"><option value="v7.9-tv" selected>V7.9 · seviyeli ses ikonları</option><option value="v7.7-tv">V7.7 TV adayı</option><option value="v7.6-tv">V7.6 TV adayı</option><option value="v7.5-tv">V7.5 TV adayı</option><option value="v7.4-tv">V7.4 · 7.1 tabanlı test adayı</option><option value="v7.1-tv">V7.1 · cihazda çalışan temel</option><option value="v7-tv">Önceki V7 TV · kırpma hatası</option><option value="v7">Önceki v7 taslak</option><option value="v6">Önceki v6</option><option value="v5">Önceki v5</option><option value="v4">Önceki v4</option><option value="v3">Önceki v3</option><option value="original">Orijinal firmware</option></select></label>
+<label>Sahne <select id="scene"><option value="volume">Ses paneli</option><option value="mute">Mevcut mute ikonu (yalıtılmış)</option><option value="numeric">Numara girişi</option><option value="timeout" id="timeout-scene" disabled>Panel zaman aşımı (native)</option></select></label>
 <button id="down" aria-label="Ses azalt">Ses −</button><button id="up" aria-label="Ses artır">Ses +</button><button id="mute">Mute</button>
 <span id="status" role="status" aria-live="polite"></span>
 </header>
 <main><img id="frame" alt="Firmware MIPS çizim kodundan üretilen 1920×1080 framebuffer"><p id="error" role="alert"></p></main>
-<footer><p>7.3 cihazda donma bildirdiği için reddedildi. V7.5 çevrimdışı test adayıdır; cihazda doğrulanmadı.</p>
+<footer><p>V7.9: yarım kenar boşluğu ve seviyeli ses ikonları. V7.7 kullanıcıya göre TV'de çalışıyor; V7.9 henüz TV'de denenmedi. V7.3 donma nedeniyle reddedildi.</p>
 <p><kbd>←</kbd> / <kbd>→</kbd> ses · <kbd>M</kbd> mute · rakamlar kanal girişi · <kbd>⌫</kbd> sil · <kbd>Enter</kbd> test seçimi · <kbd>Esc</kbd> geri</p>
 <p>Tarayıcı yalnız üretilen PNG kareyi gösterir. Servisler ve grafik yüzeyi emüle edilir; tam TV açılışı, canlı yayın, kanal değiştirme ve donanım ses çıkışı çalışmaz.</p>
-<p>V7.5 kanal adları burada açık PC demo servisinden gelir. Native ad köprüsü TV’de kendi kanal yöneticisini sorgular; bu ekran TV veritabanını okumaz. MUF ve Pillow sınırlı testidir; fiziksel TV emülasyonu değildir.</p>
+<p>Kanal adları burada açık PC demo servisinden gelir. Native ad köprüsü TV’de kendi kanal yöneticisini sorgular; bu ekran TV veritabanını okumaz. MUF ve Pillow sınırlı testidir; fiziksel TV emülasyonu değildir.</p>
 </footer>
 <script>
 const $=id=>document.getElementById(id);
-const state={variant:'v7.5-tv',scene:'volume',volume:35,mute:false,digits:'12'};
-let desired=0,busy=false,currentUrl=null,digitTime=0,currentMatch=null,confirmRevision=null,renderedRevision=0;
-function requestFrame(){currentMatch=null;confirmRevision=null;desired++;pump()}
+const state={variant:'v7.9-tv',scene:'volume',volume:35,mute:false,digits:'12'};
+let desired=0,busy=false,currentUrl=null,digitTime=0,currentMatch=null,confirmRevision=null,renderedRevision=0,timerRefresh=null,renderedElapsed=0,lifecycleRefresh=null;
+function requestFrame(){clearTimeout(timerRefresh);clearTimeout(lifecycleRefresh);currentMatch=null;confirmRevision=null;desired++;pump()}
 function confirmSelection(){
  if(state.scene!=='numeric')return;
  if(busy){confirmRevision=desired;return}
@@ -38,31 +38,45 @@ async function pump(){
  try{while(true){
   const revision=desired;
   const query=new URLSearchParams({...state,mute:state.mute?'1':'0'});
+  if(['v7.7-tv','v7.9-tv'].includes(state.variant)&&state.scene==='mute-key')query.set('mute',state.mute?'0':'1');
+  if(state.variant==='v7.6-tv'&&state.scene==='numeric'){
+   const duration=state.digits.length===4?2000:3000;
+   query.set('elapsed_ms',String(digitTime?Math.min(duration,Math.floor((Date.now()-digitTime)/50)*50):0));
+  }
   try{
    const res=await fetch('/frame.png?'+query);
    if(!res.ok)throw new Error('Native çizim tamamlanamadı ('+res.status+').');
    const blob=await res.blob();
    const channelHeader=res.headers?.get('X-Channel-Resolution');
    const channel=channelHeader?JSON.parse(decodeURIComponent(channelHeader)):null;
-   if(revision===desired){const next=URL.createObjectURL(blob);$('frame').src=next;if(currentUrl)URL.revokeObjectURL(currentUrl);currentUrl=next;currentMatch=channel;renderedRevision=revision;$('error').textContent='';$('status').textContent=state.scene==='resources'?'v8 · native kaynak örnekleri':state.scene==='volume'?'Ses '+state.volume+(state.mute?' · mute':''):state.scene==='mute'?'Mevcut mute ikonu · zamanlayıcı ve gölge çalıştırılmaz':'Numara '+state.digits+(channel?.matched?' · '+channel.name+' (örnek)':'');break}
+   const nativeHeader=res.headers?.get('X-Native-UI-State');
+   const nativeState=nativeHeader?JSON.parse(decodeURIComponent(nativeHeader)):null;
+   if(revision===desired){const next=URL.createObjectURL(blob);$('frame').src=next;if(currentUrl)URL.revokeObjectURL(currentUrl);currentUrl=next;currentMatch=channel;renderedRevision=revision;if(nativeState)state.mute=nativeState.muted;renderedElapsed=Number(query.get('elapsed_ms')||0);$('error').textContent='';$('status').textContent=state.scene==='resources'?'v8 · native kaynak örnekleri':['volume','mute-key'].includes(state.scene)?'Ses '+state.volume+(state.mute?' · mute':''):state.scene==='mute'?'Mevcut mute ikonu · yalıtılmış çizim':state.scene==='timeout'?'Panel kapandı'+(nativeState?.badge_visible?' · sağ üst sessiz rozeti':''):'Numara '+state.digits+(channel?.matched?' · '+channel.name+' (örnek)':'');
+    if(['v7.7-tv','v7.9-tv'].includes(state.variant)&&['volume','mute-key'].includes(state.scene)&&nativeState?.panel_timeout_ms>0){
+     lifecycleRefresh=setTimeout(()=>{state.scene='timeout';$('scene').value='timeout';requestFrame()},nativeState.panel_timeout_ms);
+    }
+    break}
   }catch(error){if(revision===desired)throw error}
- }}catch(error){$('error').textContent=error.message}finally{busy=false;if(confirmRevision===desired){confirmRevision=null;confirmSelection()}}
+ }}catch(error){$('error').textContent=error.message}finally{busy=false;if(confirmRevision===desired){confirmRevision=null;confirmSelection()}
+ if(state.variant==='v7.6-tv'&&state.scene==='numeric'&&digitTime&&(Date.now()-digitTime<(state.digits.length===4?2000:3000)||renderedElapsed<(state.digits.length===4?2000:3000)))timerRefresh=setTimeout(requestFrame,80);
+ }
 }
 function changeVolume(delta){digitTime=0;state.scene='volume';$('scene').value='volume';state.volume=Math.max(0,Math.min(100,state.volume+delta));requestFrame()}
 $('up').onclick=()=>changeVolume(1);$('down').onclick=()=>changeVolume(-1);
-$('mute').onclick=()=>{digitTime=0;state.mute=!state.mute;state.scene='volume';$('scene').value='volume';requestFrame()};
-$('variant').onchange=e=>{state.variant=e.target.value;if(state.variant==='v7.5-tv')state.digits=state.digits.slice(0,4);requestFrame()};
-$('scene').onchange=e=>{digitTime=0;state.scene=e.target.value;requestFrame()};
+$('mute').onclick=()=>{digitTime=0;state.mute=!state.mute;state.scene=['v7.7-tv','v7.9-tv'].includes(state.variant)?'mute-key':'volume';$('scene').value='volume';requestFrame()};
+$('variant').onchange=e=>{state.variant=e.target.value;$('timeout-scene').disabled=!['v7.7-tv','v7.9-tv'].includes(state.variant);if(!['v7.7-tv','v7.9-tv'].includes(state.variant)&&['mute-key','timeout'].includes(state.scene)){state.scene='volume';$('scene').value='volume'}if(['v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv'].includes(state.variant))state.digits=state.digits.slice(0,4);requestFrame()};
+$('scene').onchange=e=>{digitTime=e.target.value==='numeric'?Date.now():0;state.scene=e.target.value;requestFrame()};
 document.addEventListener('keydown',e=>{
  if(e.ctrlKey||e.metaKey||e.altKey)return;
  if(e.target instanceof HTMLSelectElement)return;
  if(['ArrowRight','ArrowUp','ArrowLeft','ArrowDown'].includes(e.key)){e.preventDefault();changeVolume(['ArrowRight','ArrowUp'].includes(e.key)?1:-1)}
  else if(e.key.toLowerCase()==='m'){e.preventDefault();$('mute').click()}
- else if(/^[0-9]$/.test(e.key)){e.preventDefault();const now=Date.now();state.digits=now-digitTime>1800?'':state.digits;digitTime=now;if(state.digits.length<(state.variant==='v7.5-tv'?4:5))state.digits+=e.key;state.scene='numeric';$('scene').value='numeric';requestFrame()}
+ else if(/^[0-9]$/.test(e.key)){e.preventDefault();const now=Date.now();state.digits=now-digitTime>1800?'':state.digits;digitTime=now;if(state.digits.length<(['v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv'].includes(state.variant)?4:5))state.digits+=e.key;state.scene='numeric';$('scene').value='numeric';requestFrame()}
  else if(e.key==='Backspace'&&state.scene==='numeric'){e.preventDefault();state.digits=state.digits.slice(0,-1);digitTime=Date.now();if(!state.digits){state.digits='0';state.scene='volume';$('scene').value='volume'}requestFrame()}
  else if(e.key==='Enter'&&state.scene==='numeric'){e.preventDefault();confirmSelection()}
  else if(e.key==='Escape'){digitTime=0;state.scene='volume';$('scene').value='volume';requestFrame()}
 });
+$('timeout-scene').disabled=!['v7.7-tv','v7.9-tv'].includes(state.variant);
 requestFrame();
 </script>
 </html>

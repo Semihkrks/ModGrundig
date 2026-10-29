@@ -1,0 +1,171 @@
+{
+  "status": "PASS_STATIC_INIT_ROUTE_PLUS_BOUNDED_CODEC_SWITCH",
+  "files": {
+    "07_MSLIB/utopia/libapiVDEC.so": "215c0a86cdd9fd579655da4752e0a5c7822eb3210e768ca63b86859683c9c02b",
+    "07_MSLIB/libvdplayer.so": "76fedf3a2226d3e7939a5f6e83362caa0bacacd28cb0849a5f330fe60f3ddfad",
+    "07_MSLIB/libMStarSDK.so": "00d147f752f92c9706e6496d0cda21de528e81f0c73cac54426b2618c17fe5fb"
+  },
+  "selected_bodies": [
+    {
+      "file": "07_MSLIB/utopia/libapiVDEC.so",
+      "name": "MDrv_HVD_EX_Init",
+      "address": "0x2d602190",
+      "bytes": 3320,
+      "body_sha256": "9e99c0019a3db23dabdc7d579e74bf62cc7be8d892ba1724e450b41063a22f3a"
+    },
+    {
+      "file": "07_MSLIB/utopia/libapiVDEC.so",
+      "name": "HAL_HVD_EX_InitHW",
+      "address": "0x2d618e0c",
+      "bytes": 1820,
+      "body_sha256": "9eca496544f8eee8a0cc8a61d176baa6bd504fb0390e5bb0c0b10658b73aa0c5"
+    },
+    {
+      "file": "07_MSLIB/utopia/libapiVDEC.so",
+      "name": "MDrv_HVD_EX_GetDispInfo",
+      "address": "0x2d5ffd54",
+      "bytes": 408,
+      "body_sha256": "437584d7eb85bbffb91e1bc699c723cf742af9c6e16e2fefde33afaf47919f39"
+    },
+    {
+      "file": "07_MSLIB/utopia/libapiVDEC.so",
+      "name": "HAL_HVD_EX_GetEVDHWBuffer",
+      "address": "0x2d60fcf0",
+      "bytes": 8,
+      "body_sha256": "86f62cf64ce50c05d643311dca58b0015d61c00530029397d8c4b4ef4e1353e6"
+    },
+    {
+      "file": "07_MSLIB/utopia/libapiVDEC.so",
+      "name": "HAL_VPU_EX_IsEVDR2",
+      "address": "0x2d62d5e0",
+      "bytes": 8,
+      "body_sha256": "207819bf4ebe30789debac4affc1a07c833e14f530eef04dc87a6cf369209b43"
+    },
+    {
+      "file": "07_MSLIB/utopia/libapiVDEC.so",
+      "name": "HAL_VPU_EX_EVDInUsed",
+      "address": "0x2d62e624",
+      "bytes": 204,
+      "body_sha256": "1bdbcd90d2cb851bc8463e0da0f93a0302d8780603763e6bf81f9c4265a8701f"
+    },
+    {
+      "file": "07_MSLIB/libvdplayer.so",
+      "name": "msAPI_VDPlayer_HWInit_HEVC",
+      "address": "0x2db668ec",
+      "bytes": 1420,
+      "body_sha256": "2f99dd03ea8355dd759972c01664b69d05ef6c41d73b970bb968b3b7e3e4937a"
+    },
+    {
+      "file": "07_MSLIB/libvdplayer.so",
+      "name": "msAPI_VDPlayer_DecodeFrame_HEVC",
+      "address": "0x2db66844",
+      "bytes": 168,
+      "body_sha256": "34984f5094b2eb8e906a6800772630efd0577e11bebac9a44b1af348a069b0a9"
+    },
+    {
+      "file": "07_MSLIB/libvdplayer.so",
+      "name": "msAPI_VDPlayer_Reset_HEVC",
+      "address": "0x2db665d0",
+      "bytes": 188,
+      "body_sha256": "071d061cc52673cdc1b6006f0f9d3f3991d56a16630b6bfe493e77f7474453d9"
+    },
+    {
+      "file": "07_MSLIB/libMStarSDK.so",
+      "name": "_ZN9mapi_vdec11SetVdecTypeEN27mapi_video_dtv_cfg_datatype10CODEC_TYPEEh",
+      "address": "0x2cba8604",
+      "bytes": 928,
+      "body_sha256": "148c09e61aaec02a31dfbb8aedde8d68bb387eb5dfdd7a3f3f9b72ab49295461"
+    },
+    {
+      "file": "07_MSLIB/libMStarSDK.so",
+      "name": "_ZN9mapi_vdec11SetVdecTypeEPKN18mapi_vdec_datatype15VDEC_INIT_PARAME",
+      "address": "0x2cba8234",
+      "bytes": 976,
+      "body_sha256": "a08d8d52d80f12b9d9a9155c12779cf7da73296e9452d2e93ce4ba1adf191e87"
+    }
+  ],
+  "init_route": [
+    {
+      "address": "0x2db669a4/0x2db669b0",
+      "behavior": "HEVCnamedplayer setsVDECcodec16 inINITparam+4"
+    },
+    {
+      "address": "0x2db669cc",
+      "behavior": "callsMApi_VDEC_EX_GetFreeStream witha3codec16"
+    },
+    {
+      "address": "0x2db66bec",
+      "behavior": "callsMApi_VDEC_EX_Init withINITparam"
+    },
+    {
+      "address": "0x2d65542c..0x2d655488",
+      "behavior": "V2Init classifiescodec16asHVDbackend1"
+    },
+    {
+      "address": "0x2d655cd4\u21920x2d6572b4",
+      "behavior": "codec16 mapslowmodebits7 thenconverges commonHVDInit path"
+    },
+    {
+      "address": "0x2d655e60",
+      "behavior": "GOT2d73e5a0\u2192MDrv_HVD_EX_Init"
+    },
+    {
+      "address": "0x2d602434\u21920x2d602ab8",
+      "behavior": "HVDkind7 requestsbackendtype2; samecallerloopcontinues"
+    },
+    {
+      "address": "0x2d618e64..0x2d618e70",
+      "behavior": "HAL kind7 selectsEVD path; usesEVDInUsed0x2d62e624"
+    },
+    {
+      "address": "0x2d619008..0x2d61906c",
+      "behavior": "RealRIUbase+C1604/C1700 accesses present forEVD; recordedONLYstatic, NOTexecuted"
+    }
+  ],
+  "codec_switch_probe": {
+    "input_codec": 16,
+    "output_lowmode": 7,
+    "executed_addresses": [
+      "0x2d655ca4",
+      "0x2d655ca8",
+      "0x2d655cac",
+      "0x2d655cb0",
+      "0x2d655cb4",
+      "0x2d655cb8",
+      "0x2d655cbc",
+      "0x2d655cc0",
+      "0x2d655cc4",
+      "0x2d655cc8",
+      "0x2d655ccc",
+      "0x2d655cd0",
+      "0x2d655cd4",
+      "0x2d655cd8",
+      "0x2d6572b4",
+      "0x2d6572b8",
+      "0x2d6572bc",
+      "0x2d6572c0"
+    ],
+    "only_selected_instructions": true
+  },
+  "api_vs_hardware": {
+    "CheckCaps16": "reportsfalsein legacycapabilityfunction, yetactualInitexplicitlymaps16toEVD; cannot equatefalse withnoHEVChardware",
+    "pixel_rate_helper": "MDrv_HVD_EX_GetDispInfo0x2d5ffd54 callsHAL_HVD_EX_GetFrmRateIsSupported at0x2d5ffe80, storesstatus+13d at0x2d5ffe9c; originalGetDispInfo returnsunchangeds3success, so threshold isstatusreportNOTitselfaninitfailure"
+  },
+  "dtv_namespace": {
+    "address": "0x2cba8604",
+    "supported_parameter_cases": [
+      1,
+      2,
+      3,
+      7
+    ],
+    "hevc_enum7_to_vdec16": "0x2cba869c branch\u21920x2cba8944 stores16",
+    "limitation": "PMTVIDEO_TYPE5 namespace mustbeconvertedtoDTVenum7 orstructcodecenum beforethisoverload; activeDVB conversionnotyetprovenhere"
+  },
+  "limits": [
+    "No hardwareRIU/decodercontrol/TVprocess executed.",
+    "FullEVDmicrocode/hardwarecapabilities andHEVCMain10/bitdepthlimitsnotrecovered.",
+    "Codecinitpathpresent doesnotprove4KresolutionthroughputoractiveDVBcallchain.",
+    "Actual siliconmarketingnumber/chiprevisionnotestablishedfromMarlon120B buildtargetalone."
+  ]
+}

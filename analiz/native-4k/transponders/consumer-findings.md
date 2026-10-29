@@ -1,0 +1,16 @@
+# Varsayılan uydu tablosunun tüketicisi — 27 Ekim 2026
+
+**APP içindeki `frequency_tables.tar.gz` dosyasını değiştirmek, geçerli kalıcı SAT veritabanına yeni transponderi otomatik eklemez.** Mevcut kanallar/veritabanı korunarak otomatik tarama kapsamının güncellendiği iddia edilmemelidir.
+
+Kaynak: `07_MSLIB/libmsrv_dvbs_customer.so`, SHA256 `9c3d825e7162bb36495c9e74ddc345d151e4b8e51e3190f822d25e607b7cd9ed`. Dört işlev seçildi, **4/4 decompile tamamlandı**.42 GOT çağrı noktası ve10 Customer vtable girdisi orijinal ELF üzerinden statik olarak bağlandı. Bunlar cihazda gerçekleşmiş çağrılar değildir. Ham C/JSON `consumer-query/`; özet `consumer-proof.json`; talimatlar `consumer-assembly.txt`.
+
+| İşlev | Doğrulanan davranış |
+|---|---|
+| `LoadSatelliteListfromXML 0x2e9665a8` | Dosya offsetleri `0x417e8/0x4182c` içindeki tar metinlerini `system()` çağrılarına verir (`0x2e966600/0x2e966630`): arşiv `/USR_DB` ve `/BACKUP_DB` hedeflerine açılır. **Komutlar yalnız veri olarak incelendi, çalıştırılmadı.** Her iki çağrı0 dönerse `sync`; başarıda da hatada da `Process_Loader(this,1)` çağrılır ve1 döner. Dönüş değeri tek başına yükleme başarısı değildir. |
+| `ResetSatDB 0x2e9666dc` | Global `vSatList` boşsa XML/arşiv yükleyicisini çağırır (`0x2e966bc4`); doluysa önbellekteki listeyi kullanır. Ana ve yedek SAT storage nesnelerini **Clear** eder (`0x2e96678c/0x2e96679c`), varsayılan SAT/TP kayıtlarını yeniden kurar, `SaveAll` yapar; güncel SAT/TP seçimini0'a alır. Birleştirme/migration yolu değildir. Üst sınırlar24 uydu, uydu başına254 TP'dir. |
+| `Init 0x2e9674d4` | Ana SAT storage başlığından4 bayt okuyup gömülü format değeriyle karşılaştırır. SAT ve TP bitmap yüklemeleri başarılıysa mevcut seçimleri, dolu SAT ve TP kayıtlarını yükleyip **arşive uğramadan döner**. Başlık/okuma/bitmap hatası halinde sanal `+0x3c` çağrısı yapılır; orijinal Customer vtable'ındaki hedef `ResetSatDB`'dir. |
+| `ReloadSatList 0x2e967260` | Ana/yedek storage nesnelerini kapatıp açar; mevcut başlık/bitmap/SAT kayıtlarını tekrar okur. Hatalı durumda “reset/reload” içeren mesajlar basmasına rağmen bu gövdede `ResetSatDB` veya arşiv yükleme çağrısı **yoktur**. Log metni ile kod davranışı ayrıldı. |
+
+Bu yüzden yeni APP arşivi; varsayılanların gerçekten yüklendiği bir kod yolunda etkili olabilir. Zaten geçerli SAT veritabanı bulunan cihazda yalnız firmware arşivini yenilemek, mevcut otomatik tarama TP listesini değiştirdiğini kanıtlamaz. Fabrika ayarı, SAT veritabanı silme veya başlık sürümünü bozarak yeniden oluşturmayı zorlama bu çalışmanın parçası değildir ve uygulanmadı. Güncel frekansın manuel aranması, APP değişikliği ile canlı veritabanı güncellemesini birbirinden ayıran bağımsız bir RF testi olur.
+
+Sınırlar: başlangıç framework'ünün `Init` çağırıcısı ve ilk kurulum/fabrika sıfırlama UI→`ResetSatDB` bağlantıları dört işlev sınırı içinde izlenmedi. `Process_Loader` gövdesi/XML parser'ı ayrıca açılmadı. Canlı TV veritabanı, tuner veya sinyal okunmadı. Decompiler'ın `GetInstance` dönüşünü `uchar` göstermesi ve `mapi_storage::Read` argümanları assembly ile düzeltildi; ayrıntılar JSON'da. Yeni Ghidra sorgusu salt okunur, geçici PIC bağlamlıdır; **REA Evidence olarak sunulmaz**. Orijinal modül ve mevcut V7.7 firmware değiştirilmedi.

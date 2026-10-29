@@ -1,0 +1,4182 @@
+{
+  "address": "2e191c48",
+  "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+  "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+  "external": false,
+  "thunk": false,
+  "body_bytes": 368,
+  "incoming_entry_xrefs": [
+    {
+      "from": "Entry Point",
+      "to": "2e191c48",
+      "type": "EXTERNAL",
+      "source_type": "DEFAULT",
+      "operand_index": -1,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN"
+    },
+    {
+      "from": "2e1e2590",
+      "to": "2e191c48",
+      "type": "DATA",
+      "source_type": "DEFAULT",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN"
+    },
+    {
+      "from": "2e1c6f88",
+      "to": "2e191c48",
+      "type": "INDIRECTION",
+      "source_type": "ANALYSIS",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN"
+    },
+    {
+      "from": "2e1dc590",
+      "to": "2e191c48",
+      "type": "DATA",
+      "source_type": "ANALYSIS",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN"
+    },
+    {
+      "from": "2e1e1818",
+      "to": "2e191c48",
+      "type": "DATA",
+      "source_type": "DEFAULT",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN"
+    }
+  ],
+  "analyzed_callers": [],
+  "analyzed_callees": [],
+  "instruction_count": 92,
+  "computed_callsite_count": 0,
+  "instructions": [
+    {
+      "address": "2e191c48",
+      "instruction": "lbu v0,0x26(a0)",
+      "mnemonic": "lbu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x26(a0)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x26",
+              "unsigned_hex": "0x26",
+              "signed_decimal": 38,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191c4c",
+      "instruction": "move t1,a0",
+      "mnemonic": "move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191c50",
+      "instruction": "beq v0,zero,0x2e191d30",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191d30",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191d30"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191c50",
+          "to": "2e191d30",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191d30"
+        }
+      ]
+    },
+    {
+      "address": "2e191c54",
+      "instruction": "_andi a3,a3,0xffff",
+      "mnemonic": "_andi",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0xffff",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0xffff",
+              "unsigned_hex": "0xffff",
+              "signed_decimal": 65535,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191c58",
+      "instruction": "beq a1,zero,0x2e191d30",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191d30",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191d30"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191c58",
+          "to": "2e191d30",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191d30"
+        }
+      ]
+    },
+    {
+      "address": "2e191c5c",
+      "instruction": "_clear a0",
+      "mnemonic": "_clear",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191c60",
+      "instruction": "b 0x2e191c70",
+      "mnemonic": "b",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "0x2e191c70",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191c70"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191c60",
+          "to": "2e191c70",
+          "type": "UNCONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 0,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191c70"
+        }
+      ]
+    },
+    {
+      "address": "2e191c64",
+      "instruction": "_li t0,0x1e0",
+      "mnemonic": "_li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1e0",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1e0",
+              "unsigned_hex": "0x1e0",
+              "signed_decimal": 480,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191c68",
+      "instruction": "beq a0,t0,0x2e191c84",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "t0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191c84",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191c84"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191c68",
+          "to": "2e191c84",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191c84"
+        }
+      ]
+    },
+    {
+      "address": "2e191c6c",
+      "instruction": "_clear t2",
+      "mnemonic": "_clear",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t2"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191c70",
+      "instruction": "addu v0,a1,a0",
+      "mnemonic": "addu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191c74",
+      "instruction": "lhu v1,0x0(v0)",
+      "mnemonic": "lhu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x0(v0)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x0",
+              "unsigned_hex": "0x0",
+              "signed_decimal": 0,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191c78",
+      "instruction": "bne v1,a3,0x2e191c68",
+      "mnemonic": "bne",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191c68",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191c68"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191c78",
+          "to": "2e191c68",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191c68"
+        }
+      ]
+    },
+    {
+      "address": "2e191c7c",
+      "instruction": "_addiu a0,a0,0x4",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x4",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x4",
+              "unsigned_hex": "0x4",
+              "signed_decimal": 4,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191c80",
+      "instruction": "li t2,0x1",
+      "mnemonic": "li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1",
+              "unsigned_hex": "0x1",
+              "signed_decimal": 1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191c84",
+      "instruction": "lui v0,0x1",
+      "mnemonic": "lui",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1",
+              "unsigned_hex": "0x1",
+              "signed_decimal": 1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191c88",
+      "instruction": "addu v0,a1,v0",
+      "mnemonic": "addu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191c8c",
+      "instruction": "lhu t0,-0x3ca(v0)",
+      "mnemonic": "lhu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x3ca(v0)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x3ca",
+              "unsigned_hex": "0xfffffc36",
+              "signed_decimal": -970,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191c90",
+      "instruction": "beq t0,zero,0x2e191cc8",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191cc8",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191cc8"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191c90",
+          "to": "2e191cc8",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191cc8"
+        }
+      ]
+    },
+    {
+      "address": "2e191c94",
+      "instruction": "_nop",
+      "mnemonic": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [],
+      "references_from": []
+    },
+    {
+      "address": "2e191c98",
+      "instruction": "lhu v0,0x1e0(a1)",
+      "mnemonic": "lhu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1e0(a1)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1e0",
+              "unsigned_hex": "0x1e0",
+              "signed_decimal": 480,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191c9c",
+      "instruction": "beq v0,a3,0x2e191d3c",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191d3c",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191d3c"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191c9c",
+          "to": "2e191d3c",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191d3c"
+        }
+      ]
+    },
+    {
+      "address": "2e191ca0",
+      "instruction": "_clear v1",
+      "mnemonic": "_clear",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191ca4",
+      "instruction": "b 0x2e191cb8",
+      "mnemonic": "b",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "0x2e191cb8",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191cb8"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191ca4",
+          "to": "2e191cb8",
+          "type": "UNCONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 0,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191cb8"
+        }
+      ]
+    },
+    {
+      "address": "2e191ca8",
+      "instruction": "_move a0,a1",
+      "mnemonic": "_move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191cac",
+      "instruction": "lhu v0,0x1ee(a0)",
+      "mnemonic": "lhu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1ee(a0)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1ee",
+              "unsigned_hex": "0x1ee",
+              "signed_decimal": 494,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191cb0",
+      "instruction": "beq v0,a3,0x2e191d3c",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191d3c",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191d3c"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191cb0",
+          "to": "2e191d3c",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191d3c"
+        }
+      ]
+    },
+    {
+      "address": "2e191cb4",
+      "instruction": "_addiu a0,a0,0xe",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0xe",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0xe",
+              "unsigned_hex": "0xe",
+              "signed_decimal": 14,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191cb8",
+      "instruction": "addiu v1,v1,0x1",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1",
+              "unsigned_hex": "0x1",
+              "signed_decimal": 1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191cbc",
+      "instruction": "slt v0,v1,t0",
+      "mnemonic": "slt",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "t0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191cc0",
+      "instruction": "bne v0,zero,0x2e191cac",
+      "mnemonic": "bne",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191cac",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191cac"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191cc0",
+          "to": "2e191cac",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191cac"
+        }
+      ]
+    },
+    {
+      "address": "2e191cc4",
+      "instruction": "_nop",
+      "mnemonic": "_nop",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [],
+      "references_from": []
+    },
+    {
+      "address": "2e191cc8",
+      "instruction": "clear t0",
+      "mnemonic": "clear",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191ccc",
+      "instruction": "lw v1,0x170(t1)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x170(t1)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x170",
+              "unsigned_hex": "0x170",
+              "signed_decimal": 368,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "t1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191cd0",
+      "instruction": "li v0,0x2",
+      "mnemonic": "li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x2",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x2",
+              "unsigned_hex": "0x2",
+              "signed_decimal": 2,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191cd4",
+      "instruction": "beq v1,v0,0x2e191cf0",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191cf0",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191cf0"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191cd4",
+          "to": "2e191cf0",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191cf0"
+        }
+      ]
+    },
+    {
+      "address": "2e191cd8",
+      "instruction": "_li v0,0x1",
+      "mnemonic": "_li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1",
+              "unsigned_hex": "0x1",
+              "signed_decimal": 1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191cdc",
+      "instruction": "beq v1,v0,0x2e191d9c",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191d9c",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191d9c"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191cdc",
+          "to": "2e191d9c",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191d9c"
+        }
+      ]
+    },
+    {
+      "address": "2e191ce0",
+      "instruction": "_li v1,0xd",
+      "mnemonic": "_li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0xd",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0xd",
+              "unsigned_hex": "0xd",
+              "signed_decimal": 13,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191ce4",
+      "instruction": "li v1,0x1",
+      "mnemonic": "li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1",
+              "unsigned_hex": "0x1",
+              "signed_decimal": 1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191ce8",
+      "instruction": "jr ra",
+      "mnemonic": "jr",
+      "flow_type": "TERMINATOR",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191cec",
+      "instruction": "_move v0,v1",
+      "mnemonic": "_move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191cf0",
+      "instruction": "lui v0,0xd",
+      "mnemonic": "lui",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0xd",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0xd",
+              "unsigned_hex": "0xd",
+              "signed_decimal": 13,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191cf4",
+      "instruction": "addu v0,t1,v0",
+      "mnemonic": "addu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "t1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191cf8",
+      "instruction": "lw a0,0x2d70(v0)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x2d70(v0)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x2d70",
+              "unsigned_hex": "0x2d70",
+              "signed_decimal": 11632,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191cfc",
+      "instruction": "li v0,0x6",
+      "mnemonic": "li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x6",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x6",
+              "unsigned_hex": "0x6",
+              "signed_decimal": 6,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d00",
+      "instruction": "beq a0,v0,0x2e191d34",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191d34",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191d34"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191d00",
+          "to": "2e191d34",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191d34"
+        }
+      ]
+    },
+    {
+      "address": "2e191d04",
+      "instruction": "_sltu v1,zero,t0",
+      "mnemonic": "_sltu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "t0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d08",
+      "instruction": "li v0,0x5",
+      "mnemonic": "li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x5",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x5",
+              "unsigned_hex": "0x5",
+              "signed_decimal": 5,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d0c",
+      "instruction": "beq a0,v0,0x2e191d28",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191d28",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191d28"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191d0c",
+          "to": "2e191d28",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191d28"
+        }
+      ]
+    },
+    {
+      "address": "2e191d10",
+      "instruction": "_addiu v0,a0,-0xb",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0xb",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0xb",
+              "unsigned_hex": "0xfffffff5",
+              "signed_decimal": -11,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d14",
+      "instruction": "sltiu v0,v0,0x2",
+      "mnemonic": "sltiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x2",
+              "unsigned_hex": "0x2",
+              "signed_decimal": 2,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d18",
+      "instruction": "bne v0,zero,0x2e191d28",
+      "mnemonic": "bne",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191d28",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191d28"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191d18",
+          "to": "2e191d28",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191d28"
+        }
+      ]
+    },
+    {
+      "address": "2e191d1c",
+      "instruction": "_li v0,0xd",
+      "mnemonic": "_li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0xd",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0xd",
+              "unsigned_hex": "0xd",
+              "signed_decimal": 13,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d20",
+      "instruction": "bne a0,v0,0x2e191ce8",
+      "mnemonic": "bne",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191ce8",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191ce8"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191d20",
+          "to": "2e191ce8",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191ce8"
+        }
+      ]
+    },
+    {
+      "address": "2e191d24",
+      "instruction": "_li v1,0x1",
+      "mnemonic": "_li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1",
+              "unsigned_hex": "0x1",
+              "signed_decimal": 1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d28",
+      "instruction": "bne t2,zero,0x2e191d34",
+      "mnemonic": "bne",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t2"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "zero",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "zero"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191d34",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191d34"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191d28",
+          "to": "2e191d34",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191d34"
+        }
+      ]
+    },
+    {
+      "address": "2e191d2c",
+      "instruction": "_move v1,t0",
+      "mnemonic": "_move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "t0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d30",
+      "instruction": "clear v1",
+      "mnemonic": "clear",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d34",
+      "instruction": "jr ra",
+      "mnemonic": "jr",
+      "flow_type": "TERMINATOR",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d38",
+      "instruction": "_move v0,v1",
+      "mnemonic": "_move",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d3c",
+      "instruction": "sll v0,v1,0x4",
+      "mnemonic": "sll",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x4",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x4",
+              "unsigned_hex": "0x4",
+              "signed_decimal": 4,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d40",
+      "instruction": "sll v1,v1,0x1",
+      "mnemonic": "sll",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1",
+              "unsigned_hex": "0x1",
+              "signed_decimal": 1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d44",
+      "instruction": "subu v0,v0,v1",
+      "mnemonic": "subu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d48",
+      "instruction": "addu a3,a1,v0",
+      "mnemonic": "addu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a3",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d4c",
+      "instruction": "lhu a0,0x1e2(a3)",
+      "mnemonic": "lhu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1e2(a3)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1e2",
+              "unsigned_hex": "0x1e2",
+              "signed_decimal": 482,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d50",
+      "instruction": "lui a1,0xd",
+      "mnemonic": "lui",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0xd",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0xd",
+              "unsigned_hex": "0xd",
+              "signed_decimal": 13,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d54",
+      "instruction": "addu a1,t1,a1",
+      "mnemonic": "addu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "t1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "a1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d58",
+      "instruction": "sh a0,0x1c(a2)",
+      "mnemonic": "sh",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1c(a2)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1c",
+              "unsigned_hex": "0x1c",
+              "signed_decimal": 28,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d5c",
+      "instruction": "lhu v1,0x1e2(a3)",
+      "mnemonic": "lhu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1e2(a3)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1e2",
+              "unsigned_hex": "0x1e2",
+              "signed_decimal": 482,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d60",
+      "instruction": "sh v1,0x164(a2)",
+      "mnemonic": "sh",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x164(a2)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x164",
+              "unsigned_hex": "0x164",
+              "signed_decimal": 356,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d64",
+      "instruction": "lbu v0,0x1ea(a3)",
+      "mnemonic": "lbu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1ea(a3)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1ea",
+              "unsigned_hex": "0x1ea",
+              "signed_decimal": 490,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d68",
+      "instruction": "sb v0,0x4(a2)",
+      "mnemonic": "sb",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x4(a2)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x4",
+              "unsigned_hex": "0x4",
+              "signed_decimal": 4,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d6c",
+      "instruction": "lbu v1,0x1eb(a3)",
+      "mnemonic": "lbu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1eb(a3)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1eb",
+              "unsigned_hex": "0x1eb",
+              "signed_decimal": 491,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d70",
+      "instruction": "li v0,0x6",
+      "mnemonic": "li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x6",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x6",
+              "unsigned_hex": "0x6",
+              "signed_decimal": 6,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d74",
+      "instruction": "sb v1,0x3(a2)",
+      "mnemonic": "sb",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x3(a2)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x3",
+              "unsigned_hex": "0x3",
+              "signed_decimal": 3,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d78",
+      "instruction": "lw a0,0x2d70(a1)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x2d70(a1)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x2d70",
+              "unsigned_hex": "0x2d70",
+              "signed_decimal": 11632,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d7c",
+      "instruction": "bne a0,v0,0x2e191ccc",
+      "mnemonic": "bne",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191ccc",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191ccc"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191d7c",
+          "to": "2e191ccc",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191ccc"
+        }
+      ]
+    },
+    {
+      "address": "2e191d80",
+      "instruction": "_li t0,0x1",
+      "mnemonic": "_li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1",
+              "unsigned_hex": "0x1",
+              "signed_decimal": 1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d84",
+      "instruction": "lhu v1,0x1e8(a3)",
+      "mnemonic": "lhu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1e8(a3)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1e8",
+              "unsigned_hex": "0x1e8",
+              "signed_decimal": 488,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d88",
+      "instruction": "li t0,0x1",
+      "mnemonic": "li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1",
+              "unsigned_hex": "0x1",
+              "signed_decimal": 1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d8c",
+      "instruction": "sh v1,0x16c(a2)",
+      "mnemonic": "sh",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x16c(a2)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x16c",
+              "unsigned_hex": "0x16c",
+              "signed_decimal": 364,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d90",
+      "instruction": "lhu v0,0x1e6(a3)",
+      "mnemonic": "lhu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1e6(a3)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1e6",
+              "unsigned_hex": "0x1e6",
+              "signed_decimal": 486,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a3"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d94",
+      "instruction": "b 0x2e191ccc",
+      "mnemonic": "b",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "0x2e191ccc",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191ccc"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191d94",
+          "to": "2e191ccc",
+          "type": "UNCONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 0,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191ccc"
+        }
+      ]
+    },
+    {
+      "address": "2e191d98",
+      "instruction": "_sh v0,0x16a(a2)",
+      "mnemonic": "_sh",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x16a(a2)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x16a",
+              "unsigned_hex": "0x16a",
+              "signed_decimal": 362,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "a2"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191d9c",
+      "instruction": "lui v0,0xd",
+      "mnemonic": "lui",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0xd",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0xd",
+              "unsigned_hex": "0xd",
+              "signed_decimal": 13,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191da0",
+      "instruction": "addu v0,t1,v0",
+      "mnemonic": "addu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "t1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191da4",
+      "instruction": "lw a0,0x2d6c(v0)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x2d6c(v0)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x2d6c",
+              "unsigned_hex": "0x2d6c",
+              "signed_decimal": 11628,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191da8",
+      "instruction": "bne a0,v1,0x2e191ce4",
+      "mnemonic": "bne",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2e191ce4",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191ce4"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191da8",
+          "to": "2e191ce4",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191ce4"
+        }
+      ]
+    },
+    {
+      "address": "2e191dac",
+      "instruction": "_clear v1",
+      "mnemonic": "_clear",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2e191db0",
+      "instruction": "b 0x2e191d34",
+      "mnemonic": "b",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "0x2e191d34",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2e191d34"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2e191db0",
+          "to": "2e191d34",
+          "type": "UNCONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 0,
+          "is_call": false,
+          "from_function": {
+            "address": "2e191c48",
+            "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+            "signature": "undefined __thiscall _GetBatLCN(MW_DVB_SI_PSI_Parser_Customer * this, _MAPI_SI_BAT_TS_INFO * param_1, MW_DVB_PROGRAM_INFO * param_2, ushort param_3)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 368
+          },
+          "target_symbol": "LAB_2e191d34"
+        }
+      ]
+    },
+    {
+      "address": "2e191db4",
+      "instruction": "_movn v1,t0,t2",
+      "mnemonic": "_movn",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v1",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v1"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "t0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "t2",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t2"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    }
+  ],
+  "immediate_scalar_candidates": [
+    {
+      "java_type": "Scalar",
+      "display": "0x26",
+      "unsigned_hex": "0x26",
+      "signed_decimal": 38,
+      "bits": 32,
+      "instruction_address": "2e191c48",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0xffff",
+      "unsigned_hex": "0xffff",
+      "signed_decimal": 65535,
+      "bits": 32,
+      "instruction_address": "2e191c54",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1e0",
+      "unsigned_hex": "0x1e0",
+      "signed_decimal": 480,
+      "bits": 32,
+      "instruction_address": "2e191c64",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x0",
+      "unsigned_hex": "0x0",
+      "signed_decimal": 0,
+      "bits": 32,
+      "instruction_address": "2e191c74",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x4",
+      "unsigned_hex": "0x4",
+      "signed_decimal": 4,
+      "bits": 32,
+      "instruction_address": "2e191c7c",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1",
+      "unsigned_hex": "0x1",
+      "signed_decimal": 1,
+      "bits": 32,
+      "instruction_address": "2e191c80",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1",
+      "unsigned_hex": "0x1",
+      "signed_decimal": 1,
+      "bits": 32,
+      "instruction_address": "2e191c84",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x3ca",
+      "unsigned_hex": "0xfffffc36",
+      "signed_decimal": -970,
+      "bits": 32,
+      "instruction_address": "2e191c8c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1e0",
+      "unsigned_hex": "0x1e0",
+      "signed_decimal": 480,
+      "bits": 32,
+      "instruction_address": "2e191c98",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1ee",
+      "unsigned_hex": "0x1ee",
+      "signed_decimal": 494,
+      "bits": 32,
+      "instruction_address": "2e191cac",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0xe",
+      "unsigned_hex": "0xe",
+      "signed_decimal": 14,
+      "bits": 32,
+      "instruction_address": "2e191cb4",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1",
+      "unsigned_hex": "0x1",
+      "signed_decimal": 1,
+      "bits": 32,
+      "instruction_address": "2e191cb8",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x170",
+      "unsigned_hex": "0x170",
+      "signed_decimal": 368,
+      "bits": 32,
+      "instruction_address": "2e191ccc",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x2",
+      "unsigned_hex": "0x2",
+      "signed_decimal": 2,
+      "bits": 32,
+      "instruction_address": "2e191cd0",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1",
+      "unsigned_hex": "0x1",
+      "signed_decimal": 1,
+      "bits": 32,
+      "instruction_address": "2e191cd8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0xd",
+      "unsigned_hex": "0xd",
+      "signed_decimal": 13,
+      "bits": 32,
+      "instruction_address": "2e191ce0",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1",
+      "unsigned_hex": "0x1",
+      "signed_decimal": 1,
+      "bits": 32,
+      "instruction_address": "2e191ce4",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0xd",
+      "unsigned_hex": "0xd",
+      "signed_decimal": 13,
+      "bits": 32,
+      "instruction_address": "2e191cf0",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x2d70",
+      "unsigned_hex": "0x2d70",
+      "signed_decimal": 11632,
+      "bits": 32,
+      "instruction_address": "2e191cf8",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x6",
+      "unsigned_hex": "0x6",
+      "signed_decimal": 6,
+      "bits": 32,
+      "instruction_address": "2e191cfc",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x5",
+      "unsigned_hex": "0x5",
+      "signed_decimal": 5,
+      "bits": 32,
+      "instruction_address": "2e191d08",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0xb",
+      "unsigned_hex": "0xfffffff5",
+      "signed_decimal": -11,
+      "bits": 32,
+      "instruction_address": "2e191d10",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x2",
+      "unsigned_hex": "0x2",
+      "signed_decimal": 2,
+      "bits": 32,
+      "instruction_address": "2e191d14",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0xd",
+      "unsigned_hex": "0xd",
+      "signed_decimal": 13,
+      "bits": 32,
+      "instruction_address": "2e191d1c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1",
+      "unsigned_hex": "0x1",
+      "signed_decimal": 1,
+      "bits": 32,
+      "instruction_address": "2e191d24",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x4",
+      "unsigned_hex": "0x4",
+      "signed_decimal": 4,
+      "bits": 32,
+      "instruction_address": "2e191d3c",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1",
+      "unsigned_hex": "0x1",
+      "signed_decimal": 1,
+      "bits": 32,
+      "instruction_address": "2e191d40",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1e2",
+      "unsigned_hex": "0x1e2",
+      "signed_decimal": 482,
+      "bits": 32,
+      "instruction_address": "2e191d4c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0xd",
+      "unsigned_hex": "0xd",
+      "signed_decimal": 13,
+      "bits": 32,
+      "instruction_address": "2e191d50",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1c",
+      "unsigned_hex": "0x1c",
+      "signed_decimal": 28,
+      "bits": 32,
+      "instruction_address": "2e191d58",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1e2",
+      "unsigned_hex": "0x1e2",
+      "signed_decimal": 482,
+      "bits": 32,
+      "instruction_address": "2e191d5c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x164",
+      "unsigned_hex": "0x164",
+      "signed_decimal": 356,
+      "bits": 32,
+      "instruction_address": "2e191d60",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1ea",
+      "unsigned_hex": "0x1ea",
+      "signed_decimal": 490,
+      "bits": 32,
+      "instruction_address": "2e191d64",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x4",
+      "unsigned_hex": "0x4",
+      "signed_decimal": 4,
+      "bits": 32,
+      "instruction_address": "2e191d68",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1eb",
+      "unsigned_hex": "0x1eb",
+      "signed_decimal": 491,
+      "bits": 32,
+      "instruction_address": "2e191d6c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x6",
+      "unsigned_hex": "0x6",
+      "signed_decimal": 6,
+      "bits": 32,
+      "instruction_address": "2e191d70",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x3",
+      "unsigned_hex": "0x3",
+      "signed_decimal": 3,
+      "bits": 32,
+      "instruction_address": "2e191d74",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x2d70",
+      "unsigned_hex": "0x2d70",
+      "signed_decimal": 11632,
+      "bits": 32,
+      "instruction_address": "2e191d78",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1",
+      "unsigned_hex": "0x1",
+      "signed_decimal": 1,
+      "bits": 32,
+      "instruction_address": "2e191d80",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1e8",
+      "unsigned_hex": "0x1e8",
+      "signed_decimal": 488,
+      "bits": 32,
+      "instruction_address": "2e191d84",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1",
+      "unsigned_hex": "0x1",
+      "signed_decimal": 1,
+      "bits": 32,
+      "instruction_address": "2e191d88",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x16c",
+      "unsigned_hex": "0x16c",
+      "signed_decimal": 364,
+      "bits": 32,
+      "instruction_address": "2e191d8c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1e6",
+      "unsigned_hex": "0x1e6",
+      "signed_decimal": 486,
+      "bits": 32,
+      "instruction_address": "2e191d90",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x16a",
+      "unsigned_hex": "0x16a",
+      "signed_decimal": 362,
+      "bits": 32,
+      "instruction_address": "2e191d98",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0xd",
+      "unsigned_hex": "0xd",
+      "signed_decimal": 13,
+      "bits": 32,
+      "instruction_address": "2e191d9c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x2d6c",
+      "unsigned_hex": "0x2d6c",
+      "signed_decimal": 11628,
+      "bits": 32,
+      "instruction_address": "2e191da4",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    }
+  ],
+  "directly_referenced_defined_strings": [],
+  "syntax_tree_requested": true,
+  "C_code_requested": true,
+  "decompiler_simplification_style": "decompile",
+  "high_function_present": true,
+  "decompile_complete": true,
+  "decompile_error": "",
+  "pseudocode_file": "2e191c48.c",
+  "C_export_complete": true,
+  "pcode_export_complete": true,
+  "decompiler_pcode_calls": [],
+  "decompiler_pcode_addresses_outside_selected_body": [],
+  "decompiler_pcode_within_selected_body": true,
+  "decompiler_constant_defined_strings": []
+}

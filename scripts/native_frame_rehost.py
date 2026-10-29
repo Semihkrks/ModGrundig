@@ -32,7 +32,10 @@ V72_TV_OVERLAY = ROOT / 'analiz/native-ui-candidate/v7.2-tv/overlay'
 V73_TV_OVERLAY = ROOT / 'analiz/native-ui-candidate/v7.3-tv/overlay'
 V74_TV_OVERLAY = ROOT / 'analiz/native-ui-candidate/v7.4-tv/overlay'
 V75_TV_OVERLAY = ROOT / 'analiz/native-ui-candidate/v7.5-tv/overlay'
-TV_VARIANTS = ('v7-tv', 'v7.1-tv', 'v7.2-tv', 'v7.3-tv','v7.4-tv','v7.5-tv')
+V76_TV_OVERLAY = ROOT / 'analiz/native-ui-candidate/v7.6-tv/overlay'
+V77_TV_OVERLAY = ROOT / 'analiz/native-ui-candidate/v7.7-tv/overlay'
+V79_TV_OVERLAY = ROOT / 'analiz/native-ui-candidate/v7.9-tv/overlay'
+TV_VARIANTS = ('v7-tv', 'v7.1-tv', 'v7.2-tv', 'v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv')
 OUT = ROOT / 'analiz/native-frame-rehost'
 LIB = SOURCE / '07_MSLIB/libmuf.so'
 LIB_SHA = '494d4aa45a3c8d8e10760388d8d30111e9127a0357d38cdf97979b9f9bb16d96'
@@ -81,7 +84,16 @@ def intersect_rect(*rectangles):
 
 def validate_tv_inputs(variant):
     """Read-only overlay/manifest validation; no build helper execution."""
-    if variant == 'v7.5-tv':
+    if variant == 'v7.9-tv':
+        from native_ui_v79_tv_pins import MANIFEST_SHA, RECORDS
+        overlay = V79_TV_OVERLAY
+    elif variant == 'v7.7-tv':
+        from native_ui_v77_tv_pins import MANIFEST_SHA, RECORDS
+        overlay = V77_TV_OVERLAY
+    elif variant == 'v7.6-tv':
+        from native_ui_v76_tv_pins import MANIFEST_SHA, RECORDS
+        overlay = V76_TV_OVERLAY
+    elif variant == 'v7.5-tv':
         from native_ui_v75_tv_pins import MANIFEST_SHA, RECORDS
         overlay = V75_TV_OVERLAY
     elif variant == 'v7.4-tv':
@@ -113,10 +125,10 @@ def validate_tv_inputs(variant):
 
 
 def source_file(variant, relative):
-    if variant not in ('original', 'v3', 'v4', 'v5', 'v6', 'v7', 'v8', 'v7-tv', 'v7.1-tv', 'v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv'):
+    if variant not in ('original', 'v3', 'v4', 'v5', 'v6', 'v7', 'v8', 'v7-tv', 'v7.1-tv', 'v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv'):
         raise ValueError('Unsupported source variant')
     source = SOURCE / relative
-    overlay = V75_TV_OVERLAY if variant == 'v7.5-tv' else V74_TV_OVERLAY if variant == 'v7.4-tv' else V73_TV_OVERLAY if variant == 'v7.3-tv' else V72_TV_OVERLAY if variant == 'v7.2-tv' else V71_TV_OVERLAY if variant == 'v7.1-tv' else V7_TV_OVERLAY if variant == 'v7-tv' else V8_OVERLAY if variant == 'v8' else V7_OVERLAY if variant == 'v7' else V6_OVERLAY if variant == 'v6' else V5_OVERLAY if variant == 'v5' else V4_OVERLAY if variant == 'v4' else OVERLAY
+    overlay = V79_TV_OVERLAY if variant == 'v7.9-tv' else V77_TV_OVERLAY if variant == 'v7.7-tv' else V76_TV_OVERLAY if variant == 'v7.6-tv' else V75_TV_OVERLAY if variant == 'v7.5-tv' else V74_TV_OVERLAY if variant == 'v7.4-tv' else V73_TV_OVERLAY if variant == 'v7.3-tv' else V72_TV_OVERLAY if variant == 'v7.2-tv' else V71_TV_OVERLAY if variant == 'v7.1-tv' else V7_TV_OVERLAY if variant == 'v7-tv' else V8_OVERLAY if variant == 'v8' else V7_OVERLAY if variant == 'v7' else V6_OVERLAY if variant == 'v6' else V5_OVERLAY if variant == 'v5' else V4_OVERLAY if variant == 'v4' else OVERLAY
     candidate = overlay / relative
     selected = candidate if variant != 'original' and candidate.is_file() else source
     boundary = overlay if selected == candidate else SOURCE
@@ -132,7 +144,10 @@ def volume_style(variant):
     table and font files stay original. No browser CSS font enters the frame.
     """
     from build_native_volume_patch import elf_va_offset
-    from native_volume_state_rehost import SHA
+    from native_volume_state_rehost import SHA, register_v76_pins, register_v77_pins, register_v79_pins
+    if variant=='v7.6-tv': register_v76_pins()
+    if variant in ('v7.7-tv','v7.9-tv'): register_v77_pins()
+    if variant=='v7.9-tv': register_v79_pins()
     raw = source_file(variant, '08_APP/bin/dvbt_board').read_bytes()
     expected = V4_ELF_SHA if variant == 'v4' else SHA[variant]
     if sha(raw) != expected:
@@ -153,7 +168,7 @@ def volume_style(variant):
         if len(set(selected)) != 1:
             raise ValueError('Inconsistent widget visual state arguments')
         values[role] = selected[0]
-    expected_style = (0x4af, 0) if variant == 'v4' else (0x4ae, 0) if variant in ('v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv') else (0x4ae, 0x25)
+    expected_style = (0x4af, 0) if variant == 'v4' else (0x4ae, 0) if variant in ('v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv') else (0x4ae, 0x25)
     if (values['font'], values['color']) != expected_style:
         raise ValueError('Unexpected selected volume typography')
     resource = image_table(variant)[values['font']]['resource_path']
@@ -168,7 +183,10 @@ def volume_style(variant):
 def numeric_style(variant):
     """Read the selected numeric constructor's local resource bindings."""
     from build_native_volume_patch import elf_va_offset
-    from native_volume_state_rehost import SHA
+    from native_volume_state_rehost import SHA, register_v76_pins, register_v77_pins, register_v79_pins
+    if variant=='v7.6-tv': register_v76_pins()
+    if variant in ('v7.7-tv','v7.9-tv'): register_v77_pins()
+    if variant=='v7.9-tv': register_v79_pins()
     raw = source_file(variant, '08_APP/bin/dvbt_board').read_bytes()
     if sha(raw) != SHA[variant]:
         raise ValueError('Pinned numeric constructor ELF SHA256 mismatch')
@@ -186,16 +204,16 @@ def numeric_style(variant):
                 raise ValueError('Unexpected numeric constructor argument instruction')
             selected.append(word&0xffff)
             fields.append(dict(role=role,va=hex(va),file_offset=off,word=hex(word)))
-        if variant in ('v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv') and role=='background_color':
+        if variant in ('v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv') and role=='background_color':
             if selected != [1, 0x5e, 0x5e, 0x5e]:
                 raise ValueError('Unexpected image-enabled background color arguments')
         elif len(set(selected))!=1:
             raise ValueError('Inconsistent numeric visual state arguments')
         values[role]=selected[0]
-    expected=(0x4b0,0,1,2179) if variant in ('v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv') else (0x4af,0x5e,0x12,0x1f1) if variant=='original' else (0x4af,0,0x5e,0x1f1)
+    expected=(0x4b0,0,1,2179) if variant in ('v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv') else (0x4af,0x5e,0x12,0x1f1) if variant=='original' else (0x4af,0,0x5e,0x1f1)
     if tuple(values[k] for k in ('font','color','background_color','background_image'))!=expected:
         raise ValueError('Unexpected numeric resource bindings')
-    if variant in ('v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv'):
+    if variant in ('v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv'):
         offset=elf_va_offset(raw,0x89610c,4)
         if u32(raw,offset)!=0xa204003a:
             raise ValueError('Expected native image-enable store in jalr delay slot')
@@ -205,7 +223,7 @@ def numeric_style(variant):
     if sha(font.read_bytes())!=FONT_SHA[values['font']]:
         raise ValueError('Pinned numeric font SHA256 mismatch')
     size,alignment=48,0x42
-    if variant in ('v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv'):
+    if variant in ('v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv'):
         for va in (0x896784,0x8967a8,0x8967cc,0x8967f0):
             off=elf_va_offset(raw,va,4)
             if u32(raw,off)!=0x2402003a:
@@ -522,15 +540,15 @@ class NativePainter:
 
 def image_table(variant='original'):
     from build_soft_ui_assets import table
-    if variant in ('v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv'):
+    if variant in ('v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv'):
         from map_ui_asset_dependencies import parse_table, CACHE
         validate_tv_inputs(variant)
         path=source_file(variant,'08_APP/rc/rc/bin/Image_res.bin')
         CACHE.pop(path,None)
         info,records=parse_table(path)
-        if info['status']!='fully_parsed' or len(records)!=(2182 if variant in ('v7.4-tv','v7.5-tv') else 2181) or records[2180]['resource_path']!='../rc/ARimages/Grundig/modern/volume_muted_bg.png':
+        if info['status']!='fully_parsed' or len(records)!=(2184 if variant=='v7.9-tv' else 2182 if variant in ('v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv') else 2181) or records[2180]['resource_path']!='../rc/ARimages/Grundig/modern/volume_muted_bg.png':
             raise ValueError('Unexpected V7.2 appended mute panel resource')
-        if variant in ('v7.4-tv','v7.5-tv') and records[2181]['resource_path']!='../rc/ARimages/Grundig/modern/mute_badge.png':
+        if variant in ('v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv') and records[2181]['resource_path']!='../rc/ARimages/Grundig/modern/mute_badge.png':
             raise ValueError('Unexpected V7.4 standalone white badge resource')
         return records
     if variant == 'v8':
@@ -542,7 +560,7 @@ def image_table(variant='original'):
         if info['status']!='fully_parsed' or len(records)!=2226:
             raise ValueError('Unexpected V8 image table')
         return records
-    if variant in ('v5','v6','v7','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv'):
+    if variant in ('v5','v6','v7','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv'):
         from build_native_ui_v5 import append_image_table, IMAGE_REL
         from map_ui_asset_dependencies import parse_table, CACHE
         path=source_file(variant,IMAGE_REL)
@@ -557,7 +575,7 @@ def image_table(variant='original'):
     _,records=table()
     return records
 
-def render(variant,volume=35,mute=False):
+def render(variant,volume=35,mute=False,*,half_margin_review=False):
     if not 0<=volume<=100:
         raise ValueError('Volume must be 0..100')
     from native_volume_state_rehost import run_case
@@ -566,6 +584,12 @@ def render(variant,volume=35,mute=False):
     state=native_state['state']
     num_path=source_file(variant,'08_APP/rc/rc/bin/Num_res.bin')
     nums=num_path.read_bytes()
+    margin_proof=None
+    if half_margin_review:
+        if half_margin_review is not True or variant!='v7.7-tv':
+            raise ValueError('Half-margin review requires the pinned V7.7 rendering base')
+        from build_native_ui_v79_margin_review import verified_margin_resource
+        nums,num_path,margin_proof=verified_margin_resource()
     def n(i): return u32(nums,56+i*4)
     colors=(SOURCE/'08_APP/rc/rc/bin/Color_res.bin').read_bytes()
     def c(i): return u32(colors,56+i*4)
@@ -577,7 +601,7 @@ def render(variant,volume=35,mute=False):
         if not isinstance(rel,str):
             raise ValueError('Unexpected image resource record')
         path=source_file(variant,'08_APP/'+rel.replace('../rc/','rc/'))
-        if variant in ('v4','v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv') and not (variant in ('v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv') and i==680) and i in V4_ICON_SHA and sha(path.read_bytes())!=V4_ICON_SHA[i]:
+        if variant in ('v4','v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv') and not (variant in ('v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv') and i==680) and i in V4_ICON_SHA and sha(path.read_bytes())!=V4_ICON_SHA[i]:
             raise ValueError('Pinned v4 icon SHA256 mismatch')
         inputs.append(dict(image_id=i,path=path.relative_to(ROOT).as_posix(),sha256=sha(path.read_bytes())))
         return Image.open(path).convert('RGBA')
@@ -595,7 +619,7 @@ def render(variant,volume=35,mute=False):
         clip=intersect_rect(outer,root)
         argument=u32(raw,elf_va_offset(raw,0xfbb550,4))
         store=u32(raw,elf_va_offset(raw,0xfbb55c,4))
-        expected=(0x24040001,0xa204003a) if variant in ('v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv') else (0x2404005e,0)
+        expected=(0x24040001,0xa204003a) if variant in ('v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv') else (0x2404005e,0)
         if (argument,store)!=expected:
             raise ValueError('Unexpected pinned panel image flag instructions')
         panel_style=dict(image_resource_id=674,image_enabled=store==0xa204003a,
@@ -607,7 +631,7 @@ def render(variant,volume=35,mute=False):
         p.paint('normal-root image 685',root,image=img(685))
     panel=(root[0]+n(0x5a44),root[1]+n(0x5a45),n(0x5a43),n(0x5a3e))
     panel_id=674
-    if variant in ('v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv'):
+    if variant in ('v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv'):
         panel_sets=[item['resource_id'] for item in state['image_sets'] if item['object_offset']==0x1a4]
         if len(panel_sets)!=4 or len(set(panel_sets))!=1 or panel_sets[0] not in (674,2180):
             raise ValueError('Unexpected native panel image assignments')
@@ -646,7 +670,7 @@ def render(variant,volume=35,mute=False):
     evidence.update(variant=variant,volume=volume,mute=mute,input_assets=inputs,num_path=num_path.relative_to(ROOT).as_posix(),
                     num_sha256=sha(nums),surface_geometry=dict(outer_frame=outer,root_local=root_local,root=root,panel=panel,speaker=speaker,track=track,thumb=knob),
                     progress_fill_color=fill_color,text_geometry=number,font_sha256=sha(font.read_bytes()),native_volume_state=native_state,
-                    verified_pins=pins,panel_style=panel_style,
+                    verified_pins=pins,panel_style=panel_style,half_margin_review=margin_proof,
                     parent_clip=clip,child_clip=child_clip,
                     geometry_basis='1920x1080 logical screen; outer origin added for TV variants; active hardware scaling/overscan unmeasured',
                     volume_style=style,font_path=font.relative_to(ROOT).as_posix(),
@@ -655,10 +679,12 @@ def render(variant,volume=35,mute=False):
     return p.canvas,evidence
 
 
-def render_numeric(variant,digits='123'):
+def render_numeric(variant,digits='123',elapsed_ms=0):
     """Native paint/text routines, synthetic numeric frame state from OnCreate."""
-    if not digits.isascii() or not digits.isdigit() or not 1<=len(digits)<=(4 if variant=='v7.5-tv' else 5):
+    if not digits.isascii() or not digits.isdigit() or not 1<=len(digits)<=(4 if variant in ('v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv') else 5):
         raise ValueError('Numeric input must contain 1..5 ASCII digits')
+    if type(elapsed_ms) is not int or not 0<=elapsed_ms<=10000 or (variant!='v7.6-tv' and elapsed_ms):
+        raise ValueError('Elapsed milliseconds supported only for V7.6 in 0..10000')
     pins=validate_tv_inputs(variant) if variant in TV_VARIANTS else None
     num_path=source_file(variant,'08_APP/rc/rc/bin/Num_res.bin')
     nums=num_path.read_bytes()
@@ -674,7 +700,7 @@ def render_numeric(variant,digits='123'):
         from build_native_volume_patch import elf_va_offset
         raw=source_file(variant,'08_APP/bin/dvbt_board').read_bytes()
         word=u32(raw,elf_va_offset(raw,0x89518c,4))
-        expected=0x2404098f if variant in ('v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv') else 0x24040050
+        expected=0x2404098f if variant in ('v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv') else 0x24040050
         if word!=expected:
             raise ValueError('Unexpected pinned numeric outer-height instruction')
         outer_height_resource=word&0xffff
@@ -685,8 +711,8 @@ def render_numeric(variant,digits='123'):
     textrect=(root[0]+n(0x999),root[1]+n(0x99a),n(0x998),n(0x997))
     font,style=numeric_style(variant)
     background_input=None
-    if variant in ('v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv'):
-        if variant in ('v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv'):
+    if variant in ('v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv'):
+        if variant in ('v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv'):
             from build_native_ui_v6 import CARD_REL, card_png
         else:
             from build_native_ui_v5 import CARD_REL, card_png
@@ -719,13 +745,22 @@ def render_numeric(variant,digits='123'):
                        native_widget_created=False,
                        boundary='Additional name widget exists only in rehost design; no native OnCreate/event bridge installed')
     name_bridge=None
-    if variant=='v7.5-tv':
-        from native_channel_name_rehost import run_name_bridge
-        name_bridge=run_name_bridge(variant,digits)
+    if variant in ('v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv'):
+        if variant in ('v7.7-tv','v7.9-tv'):
+            from native_channel_name_v77_rehost import run_name_bridge
+        elif variant=='v7.6-tv':
+            from native_channel_name_v76_rehost import run_name_bridge
+        else:
+            from native_channel_name_rehost import run_name_bridge
+        name_bridge=run_name_bridge(variant,digits,elapsed_ms=elapsed_ms) if variant=='v7.6-tv' else run_name_bridge(variant,digits)
         name_font=source_file(variant,'08_APP/'+image_table(variant)[name_bridge['font_resource_id']]['resource_path'].replace('../rc/','rc/'))
         if sha(name_font.read_bytes())!=FONT_SHA[name_bridge['font_resource_id']]: raise ValueError('Name font identity differs')
         if name_bridge['text']:
             p.text('native helper destination name: PC demo service',name_bridge['rect'],name_bridge['text'],name_font,name_bridge['font_size'],name_bridge['color'],align=name_bridge['alignment'],clip=clip)
+        if variant=='v7.6-tv' and name_bridge.get('countdown'):
+            timer=name_bridge['countdown']
+            if timer['rect'][2]:
+                p.paint('native cosmetic timer ID2 blue line',timer['rect'],color=timer['color'],clip=clip)
         channel=name_bridge
     evidence=p.evidence()
     evidence.update(variant=variant,numeric_input=digits,num_sha256=sha(nums),font_sha256=sha(font.read_bytes()),
@@ -745,10 +780,10 @@ def render_numeric(variant,digits='123'):
 
 def render_mute_badge(variant='v7.3-tv'):
     """Existing MuteControlFrame image with pinned static constructor inputs."""
-    if variant not in ('v7.3-tv','v7.4-tv','v7.5-tv'):
+    if variant not in ('v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv'):
         raise ValueError('Expected pinned existing mute badge variant')
     pins=validate_tv_inputs(variant)
-    modern=variant in ('v7.4-tv','v7.5-tv')
+    modern=variant in ('v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv')
     rid=2181 if modern else 680
     record=image_table(variant)[rid]
     relative='08_APP/'+record['resource_path'].replace('../rc/','rc/')
@@ -769,7 +804,7 @@ def render_mute_badge(variant='v7.3-tv'):
         root=(outer[0],outer[1],n(0x4208),230)
         panel=(root[0],root[1]+25,158,165)
         icon=(panel[0]+n(0x4219),panel[1]+30,n(0x4218),n(0x4217))
-        if icon!=(1784,74,52,52): raise ValueError('Pinned standalone badge geometry differs')
+        if icon!=((1772,74,64,64) if variant in ('v7.6-tv','v7.7-tv','v7.9-tv') else (1784,74,52,52)): raise ValueError('Pinned standalone badge geometry differs')
     else:
         outer=(0,435,160,230);root=(0,435,165,230);panel=(0,460,158,165);icon=(0,490,100,100)
     clip=intersect_rect(outer,root,panel)
@@ -783,7 +818,7 @@ def render_mute_badge(variant='v7.3-tv'):
             other_state_image_calls=['0xdf9350','0xdf9374','0xdf9398'],other_state_image_id=2181 if modern else 401,
             shadow_image_id=1485 if modern else None,root_image_id=1485,root_image_is_null=True),
         lifecycle_provenance=dict(timer='0xfb7aec',application_id='0x10ff',
-            rule='Existing timer checks IsMuted before closing Volume and running MuteControl; zero alone does not launch standalone'),
+            rule=('V7.7 actual timeout checks IsMuted OR (captured mode0 AND GetMainVolume==0) before closing Volume and running MuteControl' if variant in ('v7.7-tv','v7.9-tv') else 'Existing timer checks IsMuted before closing Volume and running MuteControl; zero alone does not launch standalone')),
         lifecycle_executed=False,
         geometry_basis='Pinned static OnCreate instructions and Num fields; constructor and timer not executed',
         omitted=['Existing border composition','Timer, visibility and application lifecycle','Full device compositor'],
@@ -793,7 +828,7 @@ def render_mute_badge(variant='v7.3-tv'):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--variant',choices=('original','v3','v4','v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','both','all'),default='both')
+    parser.add_argument('--variant',choices=('original','v3','v4','v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv','both','all'),default='both')
     parser.add_argument('--volume',type=int,default=35)
     parser.add_argument('--mute',action='store_true')
     parser.add_argument('--numeric',help='Also render native numeric input surfaces with supplied digits')
@@ -803,7 +838,7 @@ def main():
     OUT.mkdir(parents=True,exist_ok=True)
     if not OUT.resolve().is_relative_to((ROOT/'analiz').resolve()):
         raise ValueError('Output boundary escaped')
-    for variant in (('original','v3','v4','v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv') if args.variant=='all' else ('original','v3') if args.variant=='both' else (args.variant,)):
+    for variant in (('original','v3','v4','v5','v6','v7','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv') if args.variant=='all' else ('original','v3') if args.variant=='both' else (args.variant,)):
         image,evidence=render(variant,args.volume,args.mute)
         stem=f'{variant}-volume-{args.volume}'+('-mute' if args.mute else '')
         image.save(OUT/(stem+'.png'))

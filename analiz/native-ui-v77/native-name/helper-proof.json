@@ -1,0 +1,368 @@
+{
+  "revision": "v7.7-tv",
+  "kind": "native numeric channel name and missing-channel text; countdown removed",
+  "create": "0x1160100",
+  "update": "0x1160800",
+  "app_gp": "0x10cc310",
+  "create_size": 532,
+  "update_size": 872,
+  "create_sha256": "6ce07138c7bab7c88025a43729fb582b072c00b8bc4b7ee43560668ae6a4cf1e",
+  "update_sha256": "1137cc20979d33abb9f4153d5172d287348b9fc010472b5182e9be459a476532",
+  "widget": {
+    "id": 3,
+    "parent": "frame+0x180",
+    "allocation": 592,
+    "rect": [
+      1566,
+      206,
+      254,
+      38
+    ],
+    "font_id": 1200,
+    "font_size": 26
+  },
+  "missing_channel": {
+    "text": "Kayıtlı kanal yok",
+    "only_on": "GetProgramSelInfo returned not1",
+    "encoding": "UTF-8 std::string::operator=(const char*) via GOT0x10c90f4",
+    "other_lookup_errors": "clear label"
+  },
+  "countdown": false,
+  "extra_widgets": false,
+  "extra_timers": false,
+  "private_state_tail": false,
+  "timers": "All original SetTimer/OnTimer bytes and tuning behavior preserved; no hooks or added timer calls",
+  "hooks": [
+    {
+      "va": "0x8968ac",
+      "old": "0x8fdc0018",
+      "new": "0x8fc40060"
+    },
+    {
+      "va": "0x8968b0",
+      "old": "0x1021",
+      "new": "0xc458040"
+    },
+    {
+      "va": "0x8957c8",
+      "old": "0x8f99e108",
+      "new": "0xc458200"
+    },
+    {
+      "va": "0x8957cc",
+      "old": "0x320f809",
+      "new": "0x0"
+    },
+    {
+      "va": "0x895a68",
+      "old": "0x8f99e108",
+      "new": "0xc458200"
+    },
+    {
+      "va": "0x895a6c",
+      "old": "0x320f809",
+      "new": "0x0"
+    }
+  ],
+  "got": {
+    "new_nothrow": "0x10c6e6c",
+    "nothrow_object": "0x10cc2b0",
+    "TextBox": "0x10c8c40",
+    "GetWidget": "0x10c6f88",
+    "GetParentFrame": "0x10cc368",
+    "SetFlag": "0x10cb13c",
+    "Show": "0x10cc98c",
+    "Invalidate": "0x10c4e28",
+    "SetText": "0x10ca418",
+    "MStringCtor": "0x10c5d38",
+    "MStringDtor": "0x10c6fa8",
+    "GetManager": "0x10cc370",
+    "dynamic_cast": "0x10c6984",
+    "ManagerRTTI": "0x10ccde0",
+    "CustomerRTTI": "0x10c9978",
+    "GetSel": "0x10cce20",
+    "GetControl": "0x10cb5a8",
+    "StringAssign": "0x10c90f4"
+  },
+  "unwind_frames": [
+    {
+      "start": 18219264,
+      "size": 532,
+      "frame_size": 160,
+      "prologue_end": 48,
+      "sp_adjust_pc": 0,
+      "sp_restore_pc": 528,
+      "events": [
+        {
+          "pc": 4,
+          "cfa_offset": 160
+        },
+        {
+          "pc": 8,
+          "offsets": {
+            "31": -4
+          }
+        },
+        {
+          "pc": 12,
+          "offsets": {
+            "30": -8
+          }
+        },
+        {
+          "pc": 16,
+          "offsets": {
+            "28": -12
+          }
+        },
+        {
+          "pc": 20,
+          "offsets": {
+            "16": -16
+          }
+        },
+        {
+          "pc": 24,
+          "offsets": {
+            "17": -20
+          }
+        },
+        {
+          "pc": 28,
+          "offsets": {
+            "18": -24
+          }
+        },
+        {
+          "pc": 32,
+          "offsets": {
+            "19": -28
+          }
+        },
+        {
+          "pc": 36,
+          "offsets": {
+            "20": -32
+          }
+        },
+        {
+          "pc": 40,
+          "offsets": {
+            "21": -36
+          }
+        },
+        {
+          "pc": 44,
+          "offsets": {
+            "22": -40
+          }
+        },
+        {
+          "pc": 484,
+          "restores": [
+            31
+          ]
+        },
+        {
+          "pc": 488,
+          "restores": [
+            30
+          ]
+        },
+        {
+          "pc": 500,
+          "restores": [
+            16
+          ]
+        },
+        {
+          "pc": 504,
+          "restores": [
+            17
+          ]
+        },
+        {
+          "pc": 508,
+          "restores": [
+            18
+          ]
+        },
+        {
+          "pc": 512,
+          "restores": [
+            19
+          ]
+        },
+        {
+          "pc": 516,
+          "restores": [
+            20
+          ]
+        },
+        {
+          "pc": 520,
+          "restores": [
+            21
+          ]
+        },
+        {
+          "pc": 524,
+          "restores": [
+            22
+          ]
+        },
+        {
+          "pc": 532,
+          "cfa_offset": 0
+        }
+      ],
+      "personality": null,
+      "lsda": null
+    },
+    {
+      "start": 18221056,
+      "size": 872,
+      "frame_size": 160,
+      "prologue_end": 48,
+      "sp_adjust_pc": 0,
+      "sp_restore_pc": 868,
+      "events": [
+        {
+          "pc": 4,
+          "cfa_offset": 160
+        },
+        {
+          "pc": 8,
+          "offsets": {
+            "31": -4
+          }
+        },
+        {
+          "pc": 12,
+          "offsets": {
+            "30": -8
+          }
+        },
+        {
+          "pc": 16,
+          "offsets": {
+            "28": -12
+          }
+        },
+        {
+          "pc": 20,
+          "offsets": {
+            "16": -16
+          }
+        },
+        {
+          "pc": 24,
+          "offsets": {
+            "17": -20
+          }
+        },
+        {
+          "pc": 28,
+          "offsets": {
+            "18": -24
+          }
+        },
+        {
+          "pc": 32,
+          "offsets": {
+            "19": -28
+          }
+        },
+        {
+          "pc": 36,
+          "offsets": {
+            "20": -32
+          }
+        },
+        {
+          "pc": 40,
+          "offsets": {
+            "21": -36
+          }
+        },
+        {
+          "pc": 44,
+          "offsets": {
+            "22": -40
+          }
+        },
+        {
+          "pc": 828,
+          "restores": [
+            31
+          ]
+        },
+        {
+          "pc": 832,
+          "restores": [
+            30
+          ]
+        },
+        {
+          "pc": 836,
+          "restores": [
+            28
+          ]
+        },
+        {
+          "pc": 840,
+          "restores": [
+            16
+          ]
+        },
+        {
+          "pc": 844,
+          "restores": [
+            17
+          ]
+        },
+        {
+          "pc": 848,
+          "restores": [
+            18
+          ]
+        },
+        {
+          "pc": 852,
+          "restores": [
+            19
+          ]
+        },
+        {
+          "pc": 856,
+          "restores": [
+            20
+          ]
+        },
+        {
+          "pc": 860,
+          "restores": [
+            21
+          ]
+        },
+        {
+          "pc": 864,
+          "restores": [
+            22
+          ]
+        },
+        {
+          "pc": 872,
+          "cfa_offset": 0
+        }
+      ],
+      "personality": null,
+      "lsda": null
+    }
+  ],
+  "lifetime": "original digit SetText first; name SetText owns copy; normal MString cleanup preserved",
+  "limits": [
+    "Bounded helpers with modeled native callbacks; physicalTV not tested.",
+    "No LSDA local cleanup: later native allocation exceptions may leak temporary string/widget resources."
+  ]
+}

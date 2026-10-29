@@ -1,0 +1,100 @@
+{
+  "status": "PASS_OFFLINE_STATIC_AND_TWO_INSTRUCTION_CACHE_LEAF_PROBES",
+  "date": "2026-10-27",
+  "files": [
+    {
+      "path": "analiz\\dosya-sistemleri-tam\\08_APP\\bin\\dvbt_board",
+      "sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916"
+    },
+    {
+      "path": "analiz\\dosya-sistemleri-tam\\07_MSLIB\\libmsrv_common.so",
+      "sha256": "06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21"
+    },
+    {
+      "path": "analiz\\dosya-sistemleri-tam\\07_MSLIB\\libmsrv_control.so",
+      "sha256": "0b154eba8a18cda242d3a1efafb74ca576bfb35bf0c6b9be38fc13fe16e518ea"
+    },
+    {
+      "path": "analiz\\dosya-sistemleri-tam\\07_MSLIB\\libmsrv_control_customer.so",
+      "sha256": "dbb8dc826b7f3bfe3afb768e3427afcd723ae956a8e81807e794deba4a8189ad"
+    }
+  ],
+  "chain": [
+    {
+      "address": "0xfb9424",
+      "role": "OnKey native SetMute toggle returns before next Refresh atfb9438"
+    },
+    {
+      "address": "0x4c825c",
+      "role": "ArAudioManagerSetMute callsMSrv_SSSoundSetMuteStatus withtype4,desiredbyte,processor0"
+    },
+    {
+      "address": "0x2d9aa8e0..0x2d9aa8f4",
+      "role": "SetMuteStatus comparesstoredtype4 andcallsGetInstance"
+    },
+    {
+      "address": "0x2d9aa900..0x2d9aa908",
+      "role": "virtualslot2c calledwithrequestedmutebyte BEFOREreturn0x2d9aa928"
+    },
+    {
+      "address": "0x2f1e319c",
+      "role": "actualCustomer vtable2c relocation isSetMuteFlagEh"
+    },
+    {
+      "address": "0x2ea9a5a4",
+      "words": [
+        "jr ra",
+        "sb a1,0x11c(a0)"
+      ],
+      "role": "synchronousonebytecachedstore"
+    },
+    {
+      "address": "0x4c7de8..0x4c7e0c",
+      "role": "ArAudioManagerIsMuted readsGetInstancevirtualslot28"
+    },
+    {
+      "address": "0x2f1e3198",
+      "role": "actualCustomer vtable28 relocation isGetMuteFlag"
+    },
+    {
+      "address": "0x2ea9a59c",
+      "words": [
+        "jr ra",
+        "lbu v0,0x11c(a0)"
+      ],
+      "role": "samecachedbyteunsignedread"
+    }
+  ],
+  "customer_relocations": {
+    "0x2f1e3198": "_ZN19MSrv_Control_common11GetMuteFlagEv",
+    "0x2f1e319c": "_ZN19MSrv_Control_common11SetMuteFlagEh"
+  },
+  "bounded_cache_cases": [
+    {
+      "input": 1,
+      "stored": 1,
+      "is_muted_return": 1
+    },
+    {
+      "input": 0,
+      "stored": 0,
+      "is_muted_return": 0
+    },
+    {
+      "input": 255,
+      "stored": 255,
+      "is_muted_return": 255
+    },
+    {
+      "input": 0,
+      "stored": 0,
+      "is_muted_return": 0
+    }
+  ],
+  "conclusion": "UI mute flag changes synchronously within original SetMute before OnKey calls Refresh; no async hardware notification needed for this cachedbool path.",
+  "limits": [
+    "Static shipped binaries and isolated2instructiongetter/setter execution; nofullTVprocess/hardware/tuner executed.",
+    "Native library binding runtime not directlyobserved; suppliedCustomer vtable relocations supportresolvedstaticpath.",
+    "Hardware/audio completionanderror behavior notprovenbycachewrite; reportcoversUIcachedflagonly."
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "passed": true,
+  "date": "2026-10-27",
+  "preview_tests": 10,
+  "historical_v75_tests": 5,
+  "historical_v76_tests": 9,
+  "combined_tests": 24,
+  "combined_seconds": 35.044,
+  "javascript_syntax": "node --check PASS",
+  "http": {
+    "passed": true,
+    "cases": [
+      {
+        "query": "scene=numeric&digits=01",
+        "status": "PASS",
+        "scene": "numeric",
+        "muted": false
+      },
+      {
+        "query": "scene=numeric&digits=0000",
+        "status": "PASS",
+        "scene": "numeric",
+        "muted": false
+      },
+      {
+        "query": "scene=mute-key&volume=35&mute=0",
+        "status": "PASS",
+        "scene": "mute-key",
+        "muted": true
+      },
+      {
+        "query": "scene=mute-key&volume=35&mute=1",
+        "status": "PASS",
+        "scene": "mute-key",
+        "muted": false
+      },
+      {
+        "query": "scene=timeout&volume=0&mute=0",
+        "status": "PASS",
+        "scene": "timeout",
+        "muted": false
+      },
+      {
+        "query": "scene=timeout&volume=35&mute=1",
+        "status": "PASS",
+        "scene": "timeout",
+        "muted": true
+      },
+      {
+        "query": "scene=timeout&volume=35&mute=0",
+        "status": "PASS",
+        "scene": "timeout",
+        "muted": false
+      },
+      {
+        "query": "scene=volume&volume=0",
+        "status": "PASS",
+        "scene": "volume",
+        "muted": false
+      },
+      {
+        "query": "scene=numeric&digits=01&elapsed_ms=50",
+        "status": "PASS400"
+      },
+      {
+        "query": "scene=numeric&digits=12345",
+        "status": "PASS400"
+      },
+      {
+        "query": "variant=v7.6-tv&scene=mute-key",
+        "status": "PASS400"
+      },
+      {
+        "query": "nativeUIheader",
+        "status": "PASS",
+        "state": {
+          "muted": true,
+          "panel_timeout_ms": 3000,
+          "panel_open": true,
+          "badge_visible": false
+        }
+      }
+    ],
+    "server_pid": 11516
+  },
+  "browser": {
+    "tool": "Chrome DevTools real browser",
+    "url": "http://127.0.0.1:4174/",
+    "variant": "v7.7-tv",
+    "selected_variant": "v7.7-tv",
+    "image1920": true,
+    "mute_key_to_timeout": {
+      "request_scenes": [
+        "mute-key",
+        "timeout"
+      ],
+      "final_muted": true,
+      "final_scene": "timeout",
+      "error": ""
+    },
+    "numeric": {
+      "digits": "01",
+      "final_scene": "numeric",
+      "elapsed_parameter_absent": true,
+      "no_periodic_numeric_requests": true,
+      "error": ""
+    }
+  },
+  "images": [
+    {
+      "name": "numeric01",
+      "scene": "numeric",
+      "png": "analiz\\native-frame-rehost\\v77\\numeric01.png",
+      "seconds": 1.333
+    },
+    {
+      "name": "numeric0000",
+      "scene": "numeric",
+      "png": "analiz\\native-frame-rehost\\v77\\numeric0000.png",
+      "seconds": 1.046
+    },
+    {
+      "name": "mute_key35",
+      "scene": "mute-key",
+      "png": "analiz\\native-frame-rehost\\v77\\mute_key35.png",
+      "seconds": 1.107
+    },
+    {
+      "name": "unmute_key35",
+      "scene": "mute-key",
+      "png": "analiz\\native-frame-rehost\\v77\\unmute_key35.png",
+      "seconds": 1.074
+    },
+    {
+      "name": "zero0",
+      "scene": "volume",
+      "png": "analiz\\native-frame-rehost\\v77\\zero0.png",
+      "seconds": 0.956
+    },
+    {
+      "name": "timeout_zero0",
+      "scene": "timeout",
+      "png": "analiz\\native-frame-rehost\\v77\\timeout_zero0.png",
+      "seconds": 0.584
+    },
+    {
+      "name": "timeout_mute35",
+      "scene": "timeout",
+      "png": "analiz\\native-frame-rehost\\v77\\timeout_mute35.png",
+      "seconds": 0.632
+    },
+    {
+      "name": "timeout_normal35",
+      "scene": "timeout",
+      "png": "analiz\\native-frame-rehost\\v77\\timeout_normal35.png",
+      "seconds": 0.317
+    }
+  ],
+  "native_paths": [
+    "Numeric CREATE/UPDATE",
+    "Actual OnKey→Refresh same Unicorn instance",
+    "Actual timeout→local-mode/zero/IsMuted predicate"
+  ],
+  "limits": [
+    "Explicit PC demo channel fixture; firmware uses its native channel manager",
+    "Actual installed native instruction paths execute with modeled sound/apps/graphics services",
+    "MUF output uses hostPillow rasterization and bounded surface model; physical framebuffer not run",
+    "Browser panel close scheduling reads actual3000msSetTimer value but actualTVtimerlatency not measured",
+    "No full TV process/tuner/hardware audio/compositor execution"
+  ],
+  "television_tested": false,
+  "server": {
+    "pid": 11516,
+    "hidden": true,
+    "address": "127.0.0.1",
+    "port": 4174
+  }
+}

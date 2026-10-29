@@ -1,0 +1,124 @@
+{
+  "revision": "v7.9-tv",
+  "input_sha256": "494cfd8dbe9817ff29240d29e5e7e8e31667265da38214d818557e94914dbf87",
+  "output_sha256": "861d97c013c4d56e093a69cf779abfa6ea78e6c17233af5d6b2b3ba075b0b4ea",
+  "helper": {
+    "va": "0x1161400",
+    "file_offset": 14029824,
+    "bytes": 72,
+    "sha256": "4adfe401b8116ebb91033aff8231c405acd837de579bf36127b4ad591a96cbf5",
+    "original_zero_slot": [
+      "0x1161400",
+      "0x1162000"
+    ],
+    "segment_flags": 5,
+    "existing_segment_extent": 62428,
+    "segment_size_and_headers_unchanged": true
+  },
+  "hooks": [
+    {
+      "va": "0xfb820c",
+      "old": "0x101840",
+      "new": "0xc458500"
+    },
+    {
+      "va": "0xfb8210",
+      "old": "0x246302a8",
+      "new": "0x0"
+    }
+  ],
+  "allowlist": [
+    {
+      "offset": 12288524,
+      "size": 8
+    },
+    {
+      "offset": 14029824,
+      "size": 72
+    }
+  ],
+  "changed_byte_offsets": [
+    12288524,
+    12288525,
+    12288526,
+    12288527,
+    12288528,
+    12288529,
+    12288530,
+    12288531,
+    14029824,
+    14029825,
+    14029826,
+    14029827,
+    14029828,
+    14029831,
+    14029836,
+    14029838,
+    14029839,
+    14029840,
+    14029842,
+    14029843,
+    14029848,
+    14029850,
+    14029851,
+    14029852,
+    14029854,
+    14029855,
+    14029860,
+    14029861,
+    14029862,
+    14029863,
+    14029864,
+    14029867,
+    14029872,
+    14029873,
+    14029874,
+    14029875,
+    14029876,
+    14029879,
+    14029884,
+    14029885,
+    14029886,
+    14029887,
+    14029888,
+    14029890,
+    14029891
+  ],
+  "rule": {
+    "mode0_zero_or_mute": 680,
+    "mode0_1_to_20": 2182,
+    "mode0_21_to_60": 682,
+    "mode0_61_to_100": 2183
+  },
+  "local_mode_scope": "Original mode check at 0xfb7e78 branches nonzero modes to 0xfb8358; only mode0 reaches hook 0xfb820c",
+  "abi": {
+    "inputs": "v0 effective volume after original clamp/mute; s0 audible boolean",
+    "output": "v1 image id; existing store FP+0x40 and four MImgSet calls retained",
+    "return_address": "jal writes RA=0xfb8214; leaf jr RA returns to existing store",
+    "clobbers": [
+      "v1"
+    ],
+    "preserved": "all registers other than v1; no memory access",
+    "no_calls": true,
+    "no_stack_frame": true,
+    "no_gp_change": true
+  },
+  "unwind": {
+    "existing_cie_fde_and_search_header_unchanged": true,
+    "new_fde": false,
+    "reason": "Pure leaf has no stack changes, saved-register changes, calls, throwing operations or synchronous unwind path; no exception cleanup added",
+    "limitation": "Asynchronous stack unwinding while PC is inside the 72-byte leaf is not established"
+  },
+  "unchanged": [
+    "audio state/control calls",
+    "mute/zero selection and gray bar",
+    "ARC/CEC mode1/2/3 code",
+    "numeric/mute helpers",
+    "ELF size/headers/GOT/EH data"
+  ],
+  "physical_tv_tested": false,
+  "evidence": "Pinned V7.7 ELF bytes, retained direct Ghidra Refresh instructions, separate bounded Unicorn regression",
+  "limits": [
+    "No firmware process or hardware execution; service/UI calls are modeled in tests"
+  ]
+}

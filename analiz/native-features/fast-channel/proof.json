@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "offline_static_only": true,
+  "target_executed": false,
+  "patch_emitted": false,
+  "decision": "Existing native live-database Yes/No control is functional; retain it without forced getters or BasicMode bypass",
+  "app_sha256": "861d97c013c4d56e093a69cf779abfa6ea78e6c17233af5d6b2b3ba075b0b4ea",
+  "checked_app_words": [
+    {
+      "va": "0x0053d544",
+      "file_offset": 1299780,
+      "word": "0x93c30034"
+    },
+    {
+      "va": "0x0053d54c",
+      "file_offset": 1299788,
+      "word": "0x00602821"
+    },
+    {
+      "va": "0x0053d5d0",
+      "file_offset": 1299920,
+      "word": "0x00402821"
+    },
+    {
+      "va": "0x00d23544",
+      "file_offset": 9581892,
+      "word": "0x24050e39"
+    },
+    {
+      "va": "0x00d23560",
+      "file_offset": 9581920,
+      "word": "0x2405106c"
+    }
+  ],
+  "modules": [
+    {
+      "name": "libmsrv_dvb.so",
+      "sha256": "93fe7286bb7fb9bf3d33ccf75556985f68666fe485241099c20bb7165bc88d97",
+      "checked_words": [
+        {
+          "va": "0x2d4c7574",
+          "file_offset": 619892,
+          "word": "0x03e00008"
+        },
+        {
+          "va": "0x2d4c7578",
+          "file_offset": 619896,
+          "word": "0x00001021"
+        }
+      ]
+    },
+    {
+      "name": "libmsrv_system_database.so",
+      "sha256": "dbdef96fed7bd96d18b44c641203491649a04909d50aa8ecf8d7af4cf6fd4882",
+      "checked_words": [
+        {
+          "va": "0x2e578840",
+          "file_offset": 165952,
+          "word": "0x923037c8"
+        }
+      ]
+    },
+    {
+      "name": "libmsrv_common_customer.so",
+      "sha256": "394ee95f07383231c9cc1019d9d1fb8eb3c8309ae68fe2d3186ddf19c51dae39",
+      "checked_words": [
+        {
+          "va": "0x2dfd34bc",
+          "file_offset": 668860,
+          "word": "0x03e00008"
+        },
+        {
+          "va": "0x2dfd34c0",
+          "file_offset": 668864,
+          "word": "0xa48501d6"
+        }
+      ]
+    },
+    {
+      "name": "libmsrv_common.so",
+      "sha256": "06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21",
+      "checked_words": [
+        {
+          "va": "0x2d9da2dc",
+          "file_offset": 828124,
+          "word": "0x240200c8"
+        },
+        {
+          "va": "0x2d9da2e0",
+          "file_offset": 828128,
+          "word": "0xa60201d6"
+        },
+        {
+          "va": "0x2d9da330",
+          "file_offset": 828208,
+          "word": "0x240207d0"
+        },
+        {
+          "va": "0x2d9da338",
+          "file_offset": 828216,
+          "word": "0xa60201d6"
+        },
+        {
+          "va": "0x2d9cfeac",
+          "file_offset": 786092,
+          "word": "0x03e00008"
+        },
+        {
+          "va": "0x2d9cfeb0",
+          "file_offset": 786096,
+          "word": "0x948201d6"
+        },
+        {
+          "va": "0x2d9d6798",
+          "file_offset": 812952,
+          "word": "0x8c590008"
+        },
+        {
+          "va": "0x2d9d67a4",
+          "file_offset": 812964,
+          "word": "0x0054102b"
+        }
+      ]
+    }
+  ],
+  "menu_turkish": [
+    "Ayarlar",
+    "Genel",
+    "Gelişmiş",
+    "Hızlı Kanal Geçişi",
+    "Evet"
+  ],
+  "selected_value": {
+    "Hayır": 0,
+    "Evet": 1
+  },
+  "ui_handler": "0x00cf58d8",
+  "db_field": "MSrv_System_Database+0x37c8",
+  "db_setter_saves": "SaveUserGeneralSettings",
+  "runtime_field": "MW_DTV_AVMonitor+0x1d6",
+  "enabled_avsync_timeout_ms": 200,
+  "disabled_avsync_timeout_ms": 2000,
+  "timeout_condition": "In DoVideoSync, if IsSyncDone()==0 and elapsed<=GetAvSyncTimeout(), return and keep waiting; synchronization may finish earlier",
+  "visibility": "No individual Fast Zapping gate found in General OnCreate; Advanced entry is hidden when both service BasicMode and user BasicMode equal 1",
+  "limits": [
+    "Live device database value and active source are unknown",
+    "200/2000 ms is an AV-sync timeout, not an observed channel-switch duration or guaranteed saving",
+    "Signal lock, decoded-frame, PCR/audio and file-in waits remain present",
+    "Static query data is direct Ghidra output, not REA Evidence or device measurement"
+  ]
+}

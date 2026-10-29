@@ -1,0 +1,1073 @@
+[
+  {
+    "source_report": "analiz/native-features/fast-boot/ui-v1/00521d70.json",
+    "source_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+    "caller": "ArServiceSettingsManager::ArTvConf_SetFastBoot",
+    "call": {
+      "instruction_address": "00521dc0",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2e57d0b4, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2e57d0b4",
+      "target_function": {
+        "address": "2e57d0b4",
+        "name": "<EXTERNAL>::MSrv_System_Database::SetFactFastBoot",
+        "signature": "undefined SetFactFastBoot(uchar param_1)",
+        "external": false,
+        "thunk": true,
+        "body_bytes": 1
+      },
+      "target_symbol": "<EXTERNAL>::MSrv_System_Database::SetFactFastBoot",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x8, 1)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "nearby_instructions": [
+      {
+        "va": "00521dac",
+        "instruction": "lw v0,0x24(s8)"
+      },
+      {
+        "va": "00521db0",
+        "instruction": "andi v0,v0,0xff"
+      },
+      {
+        "va": "00521db4",
+        "instruction": "move a0,v1"
+      },
+      {
+        "va": "00521db8",
+        "instruction": "move a1,v0"
+      },
+      {
+        "va": "00521dbc",
+        "instruction": "lw t9,-0x68d4(gp)"
+      },
+      {
+        "va": "00521dc0",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00521dc4",
+        "instruction": "_nop"
+      },
+      {
+        "va": "00521dc8",
+        "instruction": "lw gp,0x10(s8)"
+      },
+      {
+        "va": "00521dcc",
+        "instruction": "move sp,s8"
+      },
+      {
+        "va": "00521dd0",
+        "instruction": "lw ra,0x1c(sp)"
+      },
+      {
+        "va": "00521dd4",
+        "instruction": "lw s8,0x18(sp)"
+      }
+    ]
+  },
+  {
+    "source_report": "analiz/native-features/fast-boot/ui-v1/00523460.json",
+    "source_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+    "caller": "ArServiceSettingsManager::ArTvConf_GetFastBoot",
+    "call": {
+      "instruction_address": "0052349c",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2e573d64, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2e573d64",
+      "target_function": {
+        "address": "2e573d64",
+        "name": "<EXTERNAL>::MSrv_System_Database::GetFactFastBoot",
+        "signature": "undefined GetFactFastBoot(void)",
+        "external": false,
+        "thunk": true,
+        "body_bytes": 1
+      },
+      "target_symbol": "<EXTERNAL>::MSrv_System_Database::GetFactFastBoot",
+      "arguments": [],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "nearby_instructions": [
+      {
+        "va": "00523488",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "0052348c",
+        "instruction": "_nop"
+      },
+      {
+        "va": "00523490",
+        "instruction": "lw gp,0x10(s8)"
+      },
+      {
+        "va": "00523494",
+        "instruction": "move a0,v0"
+      },
+      {
+        "va": "00523498",
+        "instruction": "lw t9,-0x4938(gp)"
+      },
+      {
+        "va": "0052349c",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "005234a0",
+        "instruction": "_nop"
+      },
+      {
+        "va": "005234a4",
+        "instruction": "lw gp,0x10(s8)"
+      },
+      {
+        "va": "005234a8",
+        "instruction": "move sp,s8"
+      },
+      {
+        "va": "005234ac",
+        "instruction": "lw ra,0x1c(sp)"
+      },
+      {
+        "va": "005234b0",
+        "instruction": "lw s8,0x18(sp)"
+      }
+    ]
+  },
+  {
+    "source_report": "analiz/native-features/fast-boot/ui-v1/0053bf20.json",
+    "source_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+    "caller": "ArTvSettingsManager::GetFastBootMode",
+    "call": {
+      "instruction_address": "0053bf5c",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2e57865c, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2e57865c",
+      "target_function": {
+        "address": "2e57865c",
+        "name": "<EXTERNAL>::MSrv_System_Database::GetFastBootEnabled",
+        "signature": "undefined GetFastBootEnabled(void)",
+        "external": false,
+        "thunk": true,
+        "body_bytes": 1
+      },
+      "target_symbol": "<EXTERNAL>::MSrv_System_Database::GetFastBootEnabled",
+      "arguments": [],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "nearby_instructions": [
+      {
+        "va": "0053bf48",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "0053bf4c",
+        "instruction": "_nop"
+      },
+      {
+        "va": "0053bf50",
+        "instruction": "lw gp,0x10(s8)"
+      },
+      {
+        "va": "0053bf54",
+        "instruction": "move a0,v0"
+      },
+      {
+        "va": "0053bf58",
+        "instruction": "lw t9,-0x5750(gp)"
+      },
+      {
+        "va": "0053bf5c",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "0053bf60",
+        "instruction": "_nop"
+      },
+      {
+        "va": "0053bf64",
+        "instruction": "lw gp,0x10(s8)"
+      },
+      {
+        "va": "0053bf68",
+        "instruction": "move sp,s8"
+      },
+      {
+        "va": "0053bf6c",
+        "instruction": "lw ra,0x1c(sp)"
+      },
+      {
+        "va": "0053bf70",
+        "instruction": "lw s8,0x18(sp)"
+      }
+    ]
+  },
+  {
+    "source_report": "analiz/native-features/fast-boot/ui-v1/0053bf80.json",
+    "source_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+    "caller": "ArTvSettingsManager::SetFastBootMode",
+    "call": {
+      "instruction_address": "0053bfcc",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2e584288, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2e584288",
+      "target_function": {
+        "address": "2e584288",
+        "name": "<EXTERNAL>::MSrv_System_Database::SetFastBootEnabled",
+        "signature": "undefined SetFastBootEnabled(uchar param_1)",
+        "external": false,
+        "thunk": true,
+        "body_bytes": 1
+      },
+      "target_symbol": "<EXTERNAL>::MSrv_System_Database::SetFastBootEnabled",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x8, 1)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "nearby_instructions": [
+      {
+        "va": "0053bfb8",
+        "instruction": "lw gp,0x10(s8)"
+      },
+      {
+        "va": "0053bfbc",
+        "instruction": "lbu v1,0x24(s8)"
+      },
+      {
+        "va": "0053bfc0",
+        "instruction": "move a0,v0"
+      },
+      {
+        "va": "0053bfc4",
+        "instruction": "move a1,v1"
+      },
+      {
+        "va": "0053bfc8",
+        "instruction": "lw t9,-0x1d44(gp)"
+      },
+      {
+        "va": "0053bfcc",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "0053bfd0",
+        "instruction": "_nop"
+      },
+      {
+        "va": "0053bfd4",
+        "instruction": "lw gp,0x10(s8)"
+      },
+      {
+        "va": "0053bfd8",
+        "instruction": "move sp,s8"
+      },
+      {
+        "va": "0053bfdc",
+        "instruction": "lw ra,0x1c(sp)"
+      },
+      {
+        "va": "0053bfe0",
+        "instruction": "lw s8,0x18(sp)"
+      }
+    ]
+  },
+  {
+    "source_report": "analiz/native-features/fast-boot/ui-v1/00cf576c.json",
+    "source_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+    "caller": "FUN_00cf576c",
+    "call": {
+      "instruction_address": "00cf57cc",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x53bf80, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x53bf80",
+      "target_function": {
+        "address": "0053bf80",
+        "name": "ArTvSettingsManager::SetFastBootMode",
+        "signature": "undefined __thiscall SetFastBootMode(ArTvSettingsManager * this, uchar param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 112
+      },
+      "target_symbol": "ArTvSettingsManager::SetFastBootMode",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x8, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(unique, 0x10000032, 1)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "nearby_instructions": [
+      {
+        "va": "00cf57b8",
+        "instruction": "lw v0,0x264(v0)"
+      },
+      {
+        "va": "00cf57bc",
+        "instruction": "andi v0,v0,0xff"
+      },
+      {
+        "va": "00cf57c0",
+        "instruction": "move a0,v1"
+      },
+      {
+        "va": "00cf57c4",
+        "instruction": "move a1,v0"
+      },
+      {
+        "va": "00cf57c8",
+        "instruction": "lw t9,0x818(gp)"
+      },
+      {
+        "va": "00cf57cc",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00cf57d0",
+        "instruction": "_nop"
+      },
+      {
+        "va": "00cf57d4",
+        "instruction": "lw gp,0x10(s8)"
+      },
+      {
+        "va": "00cf57d8",
+        "instruction": "lw t9,0xf60(gp)"
+      },
+      {
+        "va": "00cf57dc",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00cf57e0",
+        "instruction": "_nop"
+      }
+    ]
+  },
+  {
+    "source_report": "analiz/native-features/fast-boot/ui-v1/00cf576c.json",
+    "source_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+    "caller": "FUN_00cf576c",
+    "call": {
+      "instruction_address": "00cf57f0",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x53bf20, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x53bf20",
+      "target_function": {
+        "address": "0053bf20",
+        "name": "ArTvSettingsManager::GetFastBootMode",
+        "signature": "undefined __stdcall GetFastBootMode(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 96
+      },
+      "target_symbol": "ArTvSettingsManager::GetFastBootMode",
+      "arguments": [],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "nearby_instructions": [
+      {
+        "va": "00cf57dc",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00cf57e0",
+        "instruction": "_nop"
+      },
+      {
+        "va": "00cf57e4",
+        "instruction": "lw gp,0x10(s8)"
+      },
+      {
+        "va": "00cf57e8",
+        "instruction": "move a0,v0"
+      },
+      {
+        "va": "00cf57ec",
+        "instruction": "lw t9,0xcbc(gp)"
+      },
+      {
+        "va": "00cf57f0",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00cf57f4",
+        "instruction": "_nop"
+      },
+      {
+        "va": "00cf57f8",
+        "instruction": "lw gp,0x10(s8)"
+      },
+      {
+        "va": "00cf57fc",
+        "instruction": "sltu v0,zero,v0"
+      },
+      {
+        "va": "00cf5800",
+        "instruction": "andi v0,v0,0xff"
+      },
+      {
+        "va": "00cf5804",
+        "instruction": "beq v0,zero,0x00cf58bc"
+      }
+    ]
+  },
+  {
+    "source_report": "analiz/native-features/fast-boot/db-v1/2e57d0b4.json",
+    "source_sha256": "dbdef96fed7bd96d18b44c641203491649a04909d50aa8ecf8d7af4cf6fd4882",
+    "caller": "MSrv_System_Database::SetFactFastBoot",
+    "call": {
+      "instruction_address": "2e57d11c",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2e571338, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2e571338",
+      "target_function": {
+        "address": "2e571338",
+        "name": "MSrv_System_Database::SaveFactoryTvConfigurationSetting",
+        "signature": "undefined __thiscall SaveFactoryTvConfigurationSetting(MSrv_System_Database * this)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 152
+      },
+      "target_symbol": "MSrv_System_Database::SaveFactoryTvConfigurationSetting",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x10, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "nearby_instructions": [
+      {
+        "va": "2e57d108",
+        "instruction": "addu v1,s0,v1"
+      },
+      {
+        "va": "2e57d10c",
+        "instruction": "lw v0,0x10d0(v1)"
+      },
+      {
+        "va": "2e57d110",
+        "instruction": "lw t9,-0x7f54(gp)"
+      },
+      {
+        "va": "2e57d114",
+        "instruction": "move a0,s0"
+      },
+      {
+        "va": "2e57d118",
+        "instruction": "ins v0,s1,0xf,0x1"
+      },
+      {
+        "va": "2e57d11c",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "2e57d120",
+        "instruction": "_sw v0,0x10d0(v1)"
+      },
+      {
+        "va": "2e57d124",
+        "instruction": "lw gp,0x10(sp)"
+      },
+      {
+        "va": "2e57d128",
+        "instruction": "lw t9,-0x7f90(gp)"
+      },
+      {
+        "va": "2e57d12c",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "2e57d130",
+        "instruction": "_move a0,s2"
+      }
+    ]
+  },
+  {
+    "source_report": "analiz/native-features/fast-boot/db-v1/2e584288.json",
+    "source_sha256": "dbdef96fed7bd96d18b44c641203491649a04909d50aa8ecf8d7af4cf6fd4882",
+    "caller": "MSrv_System_Database::SetFastBootEnabled",
+    "call": {
+      "instruction_address": "2e5842e0",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2e5705a0, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2e5705a0",
+      "target_function": {
+        "address": "2e5705a0",
+        "name": "MSrv_System_Database::SaveUserGeneralSettings",
+        "signature": "undefined __thiscall SaveUserGeneralSettings(MSrv_System_Database * this)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 100
+      },
+      "target_symbol": "MSrv_System_Database::SaveUserGeneralSettings",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x10, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "nearby_instructions": [
+      {
+        "va": "2e5842cc",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "2e5842d0",
+        "instruction": "_li a3,0x2a11"
+      },
+      {
+        "va": "2e5842d4",
+        "instruction": "lw gp,0x10(sp)"
+      },
+      {
+        "va": "2e5842d8",
+        "instruction": "move a0,s0"
+      },
+      {
+        "va": "2e5842dc",
+        "instruction": "lw t9,-0x7f70(gp)"
+      },
+      {
+        "va": "2e5842e0",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "2e5842e4",
+        "instruction": "_sb s1,0x37de(s0)"
+      },
+      {
+        "va": "2e5842e8",
+        "instruction": "lw gp,0x10(sp)"
+      },
+      {
+        "va": "2e5842ec",
+        "instruction": "lw t9,-0x7f90(gp)"
+      },
+      {
+        "va": "2e5842f0",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "2e5842f4",
+        "instruction": "_move a0,s2"
+      }
+    ]
+  },
+  {
+    "source_report": "analiz/native-features/fast-boot/app-power-v1/00532f24.json",
+    "source_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+    "caller": "ArTvManager::StartStandby",
+    "call": {
+      "instruction_address": "00532fc0",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2df77fdc, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2df77fdc",
+      "target_function": {
+        "address": "2df77fdc",
+        "name": "<EXTERNAL>::ArSrvPowerManager::SetPowerState",
+        "signature": "undefined SetPowerState(POWER_STATE param_1, bool param_2)",
+        "external": false,
+        "thunk": true,
+        "body_bytes": 1
+      },
+      "target_symbol": "<EXTERNAL>::ArSrvPowerManager::SetPowerState",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x8, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(const, 0x3, 4)",
+          "constant_hex": "0x3",
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 2,
+          "expression": "(const, 0x0, 4)",
+          "constant_hex": "0x0",
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "nearby_instructions": [
+      {
+        "va": "00532fac",
+        "instruction": "lw gp,0x10(s8)"
+      },
+      {
+        "va": "00532fb0",
+        "instruction": "move a0,v0"
+      },
+      {
+        "va": "00532fb4",
+        "instruction": "li a1,0x3"
+      },
+      {
+        "va": "00532fb8",
+        "instruction": "clear a2"
+      },
+      {
+        "va": "00532fbc",
+        "instruction": "lw t9,-0x44bc(gp)"
+      },
+      {
+        "va": "00532fc0",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00532fc4",
+        "instruction": "_nop"
+      },
+      {
+        "va": "00532fc8",
+        "instruction": "lw gp,0x10(s8)"
+      },
+      {
+        "va": "00532fcc",
+        "instruction": "lw t9,-0x6f84(gp)"
+      },
+      {
+        "va": "00532fd0",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00532fd4",
+        "instruction": "_nop"
+      }
+    ]
+  },
+  {
+    "source_report": "analiz/native-features/fast-boot/app-power-v1/00ea019c.json",
+    "source_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+    "caller": "PowerOnOffFrame::PowerOff",
+    "call": {
+      "instruction_address": "00ea0658",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x532f24, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x532f24",
+      "target_function": {
+        "address": "00532f24",
+        "name": "ArTvManager::StartStandby",
+        "signature": "undefined __stdcall StartStandby(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 708
+      },
+      "target_symbol": "ArTvManager::StartStandby",
+      "arguments": [],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "nearby_instructions": [
+      {
+        "va": "00ea0644",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00ea0648",
+        "instruction": "_nop"
+      },
+      {
+        "va": "00ea064c",
+        "instruction": "lw gp,0x18(s8)"
+      },
+      {
+        "va": "00ea0650",
+        "instruction": "move a0,v0"
+      },
+      {
+        "va": "00ea0654",
+        "instruction": "lw t9,-0x6f34(gp)"
+      },
+      {
+        "va": "00ea0658",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00ea065c",
+        "instruction": "_nop"
+      },
+      {
+        "va": "00ea0660",
+        "instruction": "lw gp,0x18(s8)"
+      },
+      {
+        "va": "00ea0664",
+        "instruction": "sb v0,0x40(s8)"
+      },
+      {
+        "va": "00ea0668",
+        "instruction": "lw t9,0x360(gp)"
+      },
+      {
+        "va": "00ea066c",
+        "instruction": "jalr t9"
+      }
+    ]
+  },
+  {
+    "source_report": "analiz/native-features/fast-boot/app-power-v1/00ea019c.json",
+    "source_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+    "caller": "PowerOnOffFrame::PowerOff",
+    "call": {
+      "instruction_address": "00ea08b0",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x532d8c, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x532d8c",
+      "target_function": {
+        "address": "00532d8c",
+        "name": "ArTvManager::SuspendSystem",
+        "signature": "undefined __stdcall SuspendSystem(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 104
+      },
+      "target_symbol": "ArTvManager::SuspendSystem",
+      "arguments": [],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "nearby_instructions": [
+      {
+        "va": "00ea089c",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00ea08a0",
+        "instruction": "_nop"
+      },
+      {
+        "va": "00ea08a4",
+        "instruction": "lw gp,0x18(s8)"
+      },
+      {
+        "va": "00ea08a8",
+        "instruction": "move a0,v0"
+      },
+      {
+        "va": "00ea08ac",
+        "instruction": "lw t9,-0x2fbc(gp)"
+      },
+      {
+        "va": "00ea08b0",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00ea08b4",
+        "instruction": "_nop"
+      },
+      {
+        "va": "00ea08b8",
+        "instruction": "lw gp,0x18(s8)"
+      },
+      {
+        "va": "00ea08bc",
+        "instruction": "li v0,0x1"
+      },
+      {
+        "va": "00ea08c0",
+        "instruction": "sw v0,0x48(s8)"
+      },
+      {
+        "va": "00ea08c4",
+        "instruction": "lw v0,0x48(s8)"
+      }
+    ]
+  },
+  {
+    "source_report": "analiz/native-features/fast-boot/app-resume-v1/00532d8c.json",
+    "source_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+    "caller": "ArTvManager::SuspendSystem",
+    "call": {
+      "instruction_address": "00532dd0",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x2df77fdc, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x2df77fdc",
+      "target_function": {
+        "address": "2df77fdc",
+        "name": "<EXTERNAL>::ArSrvPowerManager::SetPowerState",
+        "signature": "undefined SetPowerState(POWER_STATE param_1, bool param_2)",
+        "external": false,
+        "thunk": true,
+        "body_bytes": 1
+      },
+      "target_symbol": "<EXTERNAL>::ArSrvPowerManager::SetPowerState",
+      "arguments": [
+        {
+          "argument_index_zero_based": 0,
+          "expression": "(register, 0x8, 4)",
+          "constant_hex": null,
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 1,
+          "expression": "(const, 0x2, 4)",
+          "constant_hex": "0x2",
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        },
+        {
+          "argument_index_zero_based": 2,
+          "expression": "(const, 0x0, 4)",
+          "constant_hex": "0x0",
+          "defined_string": null,
+          "resource_id_status": "not_proven_by_constant_alone"
+        }
+      ],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "nearby_instructions": [
+      {
+        "va": "00532dbc",
+        "instruction": "lw gp,0x10(s8)"
+      },
+      {
+        "va": "00532dc0",
+        "instruction": "move a0,v0"
+      },
+      {
+        "va": "00532dc4",
+        "instruction": "li a1,0x2"
+      },
+      {
+        "va": "00532dc8",
+        "instruction": "clear a2"
+      },
+      {
+        "va": "00532dcc",
+        "instruction": "lw t9,-0x44bc(gp)"
+      },
+      {
+        "va": "00532dd0",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00532dd4",
+        "instruction": "_nop"
+      },
+      {
+        "va": "00532dd8",
+        "instruction": "lw gp,0x10(s8)"
+      },
+      {
+        "va": "00532ddc",
+        "instruction": "move sp,s8"
+      },
+      {
+        "va": "00532de0",
+        "instruction": "lw ra,0x1c(sp)"
+      },
+      {
+        "va": "00532de4",
+        "instruction": "lw s8,0x18(sp)"
+      }
+    ]
+  },
+  {
+    "source_report": "analiz/native/ui-four/general/bounded300/00d01710.json",
+    "source_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+    "caller": "FUN_00d01710",
+    "call": {
+      "instruction_address": "00d23a7c",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x53bf20, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x53bf20",
+      "target_function": {
+        "address": "0053bf20",
+        "name": "ArTvSettingsManager::GetFastBootMode",
+        "signature": "undefined __stdcall GetFastBootMode(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 96
+      },
+      "target_symbol": "ArTvSettingsManager::GetFastBootMode",
+      "arguments": [],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "nearby_instructions": [
+      {
+        "va": "00d23a68",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00d23a6c",
+        "instruction": "_nop"
+      },
+      {
+        "va": "00d23a70",
+        "instruction": "lw gp,0x18(s8)"
+      },
+      {
+        "va": "00d23a74",
+        "instruction": "move a0,v0"
+      },
+      {
+        "va": "00d23a78",
+        "instruction": "lw t9,0xcbc(gp)"
+      },
+      {
+        "va": "00d23a7c",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00d23a80",
+        "instruction": "_nop"
+      },
+      {
+        "va": "00d23a84",
+        "instruction": "lw gp,0x18(s8)"
+      },
+      {
+        "va": "00d23a88",
+        "instruction": "lw v1,0x11a4(s8)"
+      },
+      {
+        "va": "00d23a8c",
+        "instruction": "sw v0,0x264(v1)"
+      },
+      {
+        "va": "00d23a90",
+        "instruction": "lw v0,-0x7fe8(gp)"
+      }
+    ]
+  },
+  {
+    "source_report": "analiz/native/ui-four/general/bounded300/00d01710.json",
+    "source_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+    "caller": "FUN_00d01710",
+    "call": {
+      "instruction_address": "00d23f68",
+      "pcode_opcode": "CALL",
+      "target_expression": "(ram, 0x523460, 8)",
+      "target_interpretation": "literal_pcode_CALL_address_no_dereference",
+      "direct_target_address_space": "ram",
+      "constant_target_hex": "0x523460",
+      "target_function": {
+        "address": "00523460",
+        "name": "ArServiceSettingsManager::ArTvConf_GetFastBoot",
+        "signature": "undefined __stdcall ArTvConf_GetFastBoot(void)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 96
+      },
+      "target_symbol": "ArServiceSettingsManager::ArTvConf_GetFastBoot",
+      "arguments": [],
+      "basis": "static_decompiler_pcode_with_ephemeral_entry_assumptions"
+    },
+    "nearby_instructions": [
+      {
+        "va": "00d23f54",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00d23f58",
+        "instruction": "_nop"
+      },
+      {
+        "va": "00d23f5c",
+        "instruction": "lw gp,0x18(s8)"
+      },
+      {
+        "va": "00d23f60",
+        "instruction": "move a0,v0"
+      },
+      {
+        "va": "00d23f64",
+        "instruction": "lw t9,-0x4e24(gp)"
+      },
+      {
+        "va": "00d23f68",
+        "instruction": "jalr t9"
+      },
+      {
+        "va": "00d23f6c",
+        "instruction": "_nop"
+      },
+      {
+        "va": "00d23f70",
+        "instruction": "lw gp,0x18(s8)"
+      },
+      {
+        "va": "00d23f74",
+        "instruction": "sltiu v0,v0,0x1"
+      },
+      {
+        "va": "00d23f78",
+        "instruction": "andi v0,v0,0xff"
+      },
+      {
+        "va": "00d23f7c",
+        "instruction": "beq v0,zero,0x00d23fb0"
+      }
+    ]
+  }
+]

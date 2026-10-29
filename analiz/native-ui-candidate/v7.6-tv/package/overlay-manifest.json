@@ -1,0 +1,1567 @@
+{
+  "revision": "v7.6-tv",
+  "scope": {
+    "mute_visual": {
+      "source_revision": "v7.5-tv",
+      "changed_paths": [
+        "08_APP/rc/rc/bin/Num_res.bin",
+        "08_APP/rc/ARimages/Grundig/modern/mute_badge.png",
+        "08_APP/rc/ARimages/Grundig/volume/mute_button_grundig.png"
+      ],
+      "screen_icon": [
+        1772,
+        74,
+        64,
+        64
+      ],
+      "badge_size": [
+        64,
+        64
+      ],
+      "glyph_size": [
+        32,
+        32
+      ],
+      "radius": 20,
+      "right_margin": 84,
+      "top_margin": 74,
+      "original_screen_icon": [
+        1784,
+        74,
+        52,
+        52
+      ],
+      "geometry_resources": [
+        {
+          "id": "0x4219",
+          "old": 56,
+          "new": 44
+        },
+        {
+          "id": "0x4218",
+          "old": 52,
+          "new": 64
+        },
+        {
+          "id": "0x4217",
+          "old": 52,
+          "new": 64
+        }
+      ],
+      "normal_image_id": 2181,
+      "normal_image_state_addresses": [
+        "0xdf9324",
+        "0xdf9348",
+        "0xdf936c",
+        "0xdf9390"
+      ],
+      "legacy_image_id": 401,
+      "legacy_asset": "08_APP/rc/ARimages/Grundig/volume/mute_button_grundig.png",
+      "legacy_original_sha256": "9facafe621ba0052c30c67650320d634dc3686ea921f1114a4a9b4055c607bb7",
+      "added_original_sha256": {
+        "08_APP/rc/ARimages/Grundig/volume/mute_button_grundig.png": "9facafe621ba0052c30c67650320d634dc3686ea921f1114a4a9b4055c607bb7"
+      },
+      "legacy_canvas": [
+        85,
+        95
+      ],
+      "legacy_glyph_replaced": true,
+      "shared_volume_image680_unchanged": true,
+      "volume_gp_recovery_preserved": true,
+      "elf_bytes_unchanged": true,
+      "routing_and_lifecycle_unchanged": true,
+      "reported_old_icon_root_cause": "Unproven without installed-image identity or device runtime trace",
+      "fallback_scope": "Image401 original asset now carries the same modern badge; normal four states remain2181",
+      "physical_tv_tested": false
+    },
+    "source_revision": "v7.4-tv",
+    "source_v71_working_base_preserved": true,
+    "name_bridge": {
+      "revision": "v7.6-tv",
+      "kind": "native channel-name/unmatched message/cosmetic countdown",
+      "helpers": {
+        "create": {
+          "va": "0x1160100",
+          "bytes": 884,
+          "sha256": "31e56ad830de8513696c7c04b9d39142142950e5636a7d3ac3ee161e9f225750"
+        },
+        "update": {
+          "va": "0x1160800",
+          "bytes": 872,
+          "sha256": "1137cc20979d33abb9f4153d5172d287348b9fc010472b5182e9be459a476532"
+        },
+        "start_timer": {
+          "va": "0x1161000",
+          "bytes": 500,
+          "sha256": "d4f4b820b67a47192ffade8b9880f600d707646793ac5cfb88b2d98b1032dd28"
+        },
+        "tick_timer": {
+          "va": "0x1161400",
+          "bytes": 612,
+          "sha256": "cf31d38df264e2a17dde6f4b6cedb4969b17cd80c9f35e217eee94747891d656"
+        }
+      },
+      "widget": {
+        "id": 3,
+        "allocation": 600,
+        "base_textbox_size": 592,
+        "rect": [
+          1566,
+          206,
+          254,
+          38
+        ],
+        "font_id": 1200,
+        "font_size": 26,
+        "text_color": "0xff527185",
+        "private_tail_offsets": [
+          "0x250 remainingMs",
+          "0x254 totalMs"
+        ]
+      },
+      "line": {
+        "id": 4,
+        "rect": [
+          1566,
+          266,
+          254,
+          4
+        ],
+        "allocation": 612,
+        "color": "0xff0082d4",
+        "parent": "frame+0x180",
+        "width": "remaining*254/total; min0,max254",
+        "redraw": "invalidate old line before virtualMoveRect0x24, invalidate numericcardframe+184 after; no fullroot redraw"
+      },
+      "missing_channel": {
+        "text": "Kayıtlı kanal yok",
+        "only_on": "GetProgramSelInfo returned not1",
+        "encoding": "UTF-8 std::string::operator=(const char*) via verifiedGOT0x10c90f4",
+        "other_lookup_errors": "clear label; do not claim channel is unregistered"
+      },
+      "timers": {
+        "original": "unchanged SetTimer args2000/3000ms,ID0/1,mode0 are called FIRST",
+        "cosmetic": "separate ID2 periodic50ms mode0",
+        "reset": "KillTimer(this,2),reset private remaining/total and fullwidth each digit",
+        "dispatch": "a2==2 intercepted; others tailoriginal0x8968e4 after restoringAPPGP/t9originalentry; original0/1cancel cosmetic before originalhandler",
+        "teardown": "MEvtHandleD2 0x2e230250 calls KillTimer() noarg; removes all timers for eventhandle",
+        "time_limit": "cosmetic decrements50ms per actual dispatched tick; tuning still occurs at original timer expiry independently; delayedticks may visually lag but NEVER delay tuning"
+      },
+      "hooks": [
+        {
+          "va": "0x8968ac",
+          "old": "0x8fdc0018",
+          "new": "0x8fc40060"
+        },
+        {
+          "va": "0x8968b0",
+          "old": "0x1021",
+          "new": "0xc458040"
+        },
+        {
+          "va": "0x8957c8",
+          "old": "0x8f99e108",
+          "new": "0xc458200"
+        },
+        {
+          "va": "0x8957cc",
+          "old": "0x320f809",
+          "new": "0x0"
+        },
+        {
+          "va": "0x895a68",
+          "old": "0x8f99e108",
+          "new": "0xc458200"
+        },
+        {
+          "va": "0x895a6c",
+          "old": "0x320f809",
+          "new": "0x0"
+        },
+        {
+          "va": "0x895808",
+          "old": "0x8f99ed48",
+          "new": "0xc458400"
+        },
+        {
+          "va": "0x895abc",
+          "old": "0x8f99ed48",
+          "new": "0xc458400"
+        },
+        {
+          "va": "0x895af0",
+          "old": "0x8f99ed48",
+          "new": "0xc458400"
+        },
+        {
+          "va": "0x89580c",
+          "old": "0x320f809",
+          "new": "0x0"
+        },
+        {
+          "va": "0x895ac0",
+          "old": "0x320f809",
+          "new": "0x0"
+        },
+        {
+          "va": "0x895af4",
+          "old": "0x320f809",
+          "new": "0x0"
+        },
+        {
+          "va": "0x8968d8",
+          "old": "0x3c1c0083",
+          "new": "0x8458500"
+        },
+        {
+          "va": "0x8968dc",
+          "old": "0x279c5a38",
+          "new": "0x0"
+        },
+        {
+          "va": "0x8968e0",
+          "old": "0x399e021",
+          "new": "0x0"
+        }
+      ],
+      "unwind_frames": [
+        {
+          "start": 18219264,
+          "size": 884,
+          "frame_size": 160,
+          "prologue_end": 48,
+          "sp_adjust_pc": 0,
+          "sp_restore_pc": 880,
+          "events": [
+            {
+              "pc": 4,
+              "cfa_offset": 160
+            },
+            {
+              "pc": 8,
+              "offsets": {
+                "31": -4
+              }
+            },
+            {
+              "pc": 12,
+              "offsets": {
+                "30": -8
+              }
+            },
+            {
+              "pc": 16,
+              "offsets": {
+                "28": -12
+              }
+            },
+            {
+              "pc": 20,
+              "offsets": {
+                "16": -16
+              }
+            },
+            {
+              "pc": 24,
+              "offsets": {
+                "17": -20
+              }
+            },
+            {
+              "pc": 28,
+              "offsets": {
+                "18": -24
+              }
+            },
+            {
+              "pc": 32,
+              "offsets": {
+                "19": -28
+              }
+            },
+            {
+              "pc": 36,
+              "offsets": {
+                "20": -32
+              }
+            },
+            {
+              "pc": 40,
+              "offsets": {
+                "21": -36
+              }
+            },
+            {
+              "pc": 44,
+              "offsets": {
+                "22": -40
+              }
+            },
+            {
+              "pc": 836,
+              "restores": [
+                31
+              ]
+            },
+            {
+              "pc": 840,
+              "restores": [
+                30
+              ]
+            },
+            {
+              "pc": 852,
+              "restores": [
+                16
+              ]
+            },
+            {
+              "pc": 856,
+              "restores": [
+                17
+              ]
+            },
+            {
+              "pc": 860,
+              "restores": [
+                18
+              ]
+            },
+            {
+              "pc": 864,
+              "restores": [
+                19
+              ]
+            },
+            {
+              "pc": 868,
+              "restores": [
+                20
+              ]
+            },
+            {
+              "pc": 872,
+              "restores": [
+                21
+              ]
+            },
+            {
+              "pc": 876,
+              "restores": [
+                22
+              ]
+            },
+            {
+              "pc": 884,
+              "cfa_offset": 0
+            }
+          ],
+          "personality": null,
+          "lsda": null
+        },
+        {
+          "start": 18221056,
+          "size": 872,
+          "frame_size": 160,
+          "prologue_end": 48,
+          "sp_adjust_pc": 0,
+          "sp_restore_pc": 868,
+          "events": [
+            {
+              "pc": 4,
+              "cfa_offset": 160
+            },
+            {
+              "pc": 8,
+              "offsets": {
+                "31": -4
+              }
+            },
+            {
+              "pc": 12,
+              "offsets": {
+                "30": -8
+              }
+            },
+            {
+              "pc": 16,
+              "offsets": {
+                "28": -12
+              }
+            },
+            {
+              "pc": 20,
+              "offsets": {
+                "16": -16
+              }
+            },
+            {
+              "pc": 24,
+              "offsets": {
+                "17": -20
+              }
+            },
+            {
+              "pc": 28,
+              "offsets": {
+                "18": -24
+              }
+            },
+            {
+              "pc": 32,
+              "offsets": {
+                "19": -28
+              }
+            },
+            {
+              "pc": 36,
+              "offsets": {
+                "20": -32
+              }
+            },
+            {
+              "pc": 40,
+              "offsets": {
+                "21": -36
+              }
+            },
+            {
+              "pc": 44,
+              "offsets": {
+                "22": -40
+              }
+            },
+            {
+              "pc": 828,
+              "restores": [
+                31
+              ]
+            },
+            {
+              "pc": 832,
+              "restores": [
+                30
+              ]
+            },
+            {
+              "pc": 836,
+              "restores": [
+                28
+              ]
+            },
+            {
+              "pc": 840,
+              "restores": [
+                16
+              ]
+            },
+            {
+              "pc": 844,
+              "restores": [
+                17
+              ]
+            },
+            {
+              "pc": 848,
+              "restores": [
+                18
+              ]
+            },
+            {
+              "pc": 852,
+              "restores": [
+                19
+              ]
+            },
+            {
+              "pc": 856,
+              "restores": [
+                20
+              ]
+            },
+            {
+              "pc": 860,
+              "restores": [
+                21
+              ]
+            },
+            {
+              "pc": 864,
+              "restores": [
+                22
+              ]
+            },
+            {
+              "pc": 872,
+              "cfa_offset": 0
+            }
+          ],
+          "personality": null,
+          "lsda": null
+        },
+        {
+          "start": 18223104,
+          "size": 500,
+          "frame_size": 160,
+          "prologue_end": 48,
+          "sp_adjust_pc": 0,
+          "sp_restore_pc": 496,
+          "events": [
+            {
+              "pc": 4,
+              "cfa_offset": 160
+            },
+            {
+              "pc": 8,
+              "offsets": {
+                "31": -4
+              }
+            },
+            {
+              "pc": 12,
+              "offsets": {
+                "30": -8
+              }
+            },
+            {
+              "pc": 16,
+              "offsets": {
+                "28": -12
+              }
+            },
+            {
+              "pc": 20,
+              "offsets": {
+                "16": -16
+              }
+            },
+            {
+              "pc": 24,
+              "offsets": {
+                "17": -20
+              }
+            },
+            {
+              "pc": 28,
+              "offsets": {
+                "18": -24
+              }
+            },
+            {
+              "pc": 32,
+              "offsets": {
+                "19": -28
+              }
+            },
+            {
+              "pc": 36,
+              "offsets": {
+                "20": -32
+              }
+            },
+            {
+              "pc": 40,
+              "offsets": {
+                "21": -36
+              }
+            },
+            {
+              "pc": 44,
+              "offsets": {
+                "22": -40
+              }
+            },
+            {
+              "pc": 452,
+              "restores": [
+                31
+              ]
+            },
+            {
+              "pc": 456,
+              "restores": [
+                30
+              ]
+            },
+            {
+              "pc": 468,
+              "restores": [
+                16
+              ]
+            },
+            {
+              "pc": 472,
+              "restores": [
+                17
+              ]
+            },
+            {
+              "pc": 476,
+              "restores": [
+                18
+              ]
+            },
+            {
+              "pc": 480,
+              "restores": [
+                19
+              ]
+            },
+            {
+              "pc": 484,
+              "restores": [
+                20
+              ]
+            },
+            {
+              "pc": 488,
+              "restores": [
+                21
+              ]
+            },
+            {
+              "pc": 492,
+              "restores": [
+                22
+              ]
+            },
+            {
+              "pc": 500,
+              "cfa_offset": 0
+            }
+          ],
+          "personality": null,
+          "lsda": null
+        },
+        {
+          "start": 18224128,
+          "size": 612,
+          "frame_size": 160,
+          "prologue_end": 48,
+          "sp_adjust_pc": 0,
+          "sp_restore_pc": 608,
+          "events": [
+            {
+              "pc": 4,
+              "cfa_offset": 160
+            },
+            {
+              "pc": 8,
+              "offsets": {
+                "31": -4
+              }
+            },
+            {
+              "pc": 12,
+              "offsets": {
+                "30": -8
+              }
+            },
+            {
+              "pc": 16,
+              "offsets": {
+                "28": -12
+              }
+            },
+            {
+              "pc": 20,
+              "offsets": {
+                "16": -16
+              }
+            },
+            {
+              "pc": 24,
+              "offsets": {
+                "17": -20
+              }
+            },
+            {
+              "pc": 28,
+              "offsets": {
+                "18": -24
+              }
+            },
+            {
+              "pc": 32,
+              "offsets": {
+                "19": -28
+              }
+            },
+            {
+              "pc": 36,
+              "offsets": {
+                "20": -32
+              }
+            },
+            {
+              "pc": 40,
+              "offsets": {
+                "21": -36
+              }
+            },
+            {
+              "pc": 44,
+              "offsets": {
+                "22": -40
+              }
+            },
+            {
+              "pc": 560,
+              "restores": [
+                31
+              ]
+            },
+            {
+              "pc": 564,
+              "restores": [
+                30
+              ]
+            },
+            {
+              "pc": 568,
+              "restores": [
+                28
+              ]
+            },
+            {
+              "pc": 572,
+              "restores": [
+                16
+              ]
+            },
+            {
+              "pc": 576,
+              "restores": [
+                17
+              ]
+            },
+            {
+              "pc": 580,
+              "restores": [
+                18
+              ]
+            },
+            {
+              "pc": 584,
+              "restores": [
+                19
+              ]
+            },
+            {
+              "pc": 588,
+              "restores": [
+                20
+              ]
+            },
+            {
+              "pc": 592,
+              "restores": [
+                21
+              ]
+            },
+            {
+              "pc": 596,
+              "restores": [
+                22
+              ]
+            },
+            {
+              "pc": 612,
+              "cfa_offset": 0
+            }
+          ],
+          "personality": null,
+          "lsda": null
+        }
+      ],
+      "got": {
+        "new_nothrow": "0x10c6e6c",
+        "nothrow_object": "0x10cc2b0",
+        "TextBox": "0x10c8c40",
+        "GetWidget": "0x10c6f88",
+        "GetParentFrame": "0x10cc368",
+        "SetFlag": "0x10cb13c",
+        "Show": "0x10cc98c",
+        "Invalidate": "0x10c4e28",
+        "SetText": "0x10ca418",
+        "MStringCtor": "0x10c5d38",
+        "MStringDtor": "0x10c6fa8",
+        "GetManager": "0x10cc370",
+        "dynamic_cast": "0x10c6984",
+        "ManagerRTTI": "0x10ccde0",
+        "CustomerRTTI": "0x10c9978",
+        "GetSel": "0x10cce20",
+        "GetControl": "0x10cb5a8",
+        "StringAssign": "0x10c90f4",
+        "AbsContainer": "0x10c6d8c",
+        "SetTimer": "0x10cb058",
+        "KillTimer": "0x10c786c"
+      },
+      "limits": [
+        "Bounded native helper execution with mocked services; real TV renderer/heap/timers not run.",
+        "No LSDA cleanup; native C++ exception propagation has FDE support but temporary allocation may leak on later allocationexception.",
+        "Blue countdown tick timing not physical-TV-measured; original tuning timeout preserved."
+      ]
+    },
+    "elf_placement": {
+      "input_sha256": "8918a9a426521d7af2124a2358586c6021038c4eccde750b8105d914d7cf2a3b",
+      "output_sha256": "321985b775c72643eb1aa2a586ab93dae02e934665c257d94bf4ea9ad446eb9a",
+      "file_offset": 14024704,
+      "segment_va": 18219008,
+      "create_va": 18219264,
+      "update_va": 18221056,
+      "segment_size": 62520,
+      "phnum": 8,
+      "original_phdr_bytes_preserved": true,
+      "at_phdr": 18219008,
+      "original_load_changes": [
+        {
+          "offset": 28,
+          "size": 4
+        },
+        {
+          "offset": 44,
+          "size": 2
+        }
+      ],
+      "section_table_unchanged": true,
+      "dynamic_and_mips_got_untouched": true,
+      "unwind": {
+        "original_entries": 6741,
+        "merged_entries": 6745,
+        "old_entries_preserved": true,
+        "header_va": 18227556,
+        "new_frames": [
+          {
+            "start": 18219264,
+            "size": 884,
+            "frame_size": 160,
+            "prologue_end": 48,
+            "sp_adjust_pc": 0,
+            "sp_restore_pc": 880,
+            "events": [
+              {
+                "pc": 4,
+                "cfa_offset": 160
+              },
+              {
+                "pc": 8,
+                "offsets": {
+                  "31": -4
+                }
+              },
+              {
+                "pc": 12,
+                "offsets": {
+                  "30": -8
+                }
+              },
+              {
+                "pc": 16,
+                "offsets": {
+                  "28": -12
+                }
+              },
+              {
+                "pc": 20,
+                "offsets": {
+                  "16": -16
+                }
+              },
+              {
+                "pc": 24,
+                "offsets": {
+                  "17": -20
+                }
+              },
+              {
+                "pc": 28,
+                "offsets": {
+                  "18": -24
+                }
+              },
+              {
+                "pc": 32,
+                "offsets": {
+                  "19": -28
+                }
+              },
+              {
+                "pc": 36,
+                "offsets": {
+                  "20": -32
+                }
+              },
+              {
+                "pc": 40,
+                "offsets": {
+                  "21": -36
+                }
+              },
+              {
+                "pc": 44,
+                "offsets": {
+                  "22": -40
+                }
+              },
+              {
+                "pc": 836,
+                "restores": [
+                  31
+                ]
+              },
+              {
+                "pc": 840,
+                "restores": [
+                  30
+                ]
+              },
+              {
+                "pc": 852,
+                "restores": [
+                  16
+                ]
+              },
+              {
+                "pc": 856,
+                "restores": [
+                  17
+                ]
+              },
+              {
+                "pc": 860,
+                "restores": [
+                  18
+                ]
+              },
+              {
+                "pc": 864,
+                "restores": [
+                  19
+                ]
+              },
+              {
+                "pc": 868,
+                "restores": [
+                  20
+                ]
+              },
+              {
+                "pc": 872,
+                "restores": [
+                  21
+                ]
+              },
+              {
+                "pc": 876,
+                "restores": [
+                  22
+                ]
+              },
+              {
+                "pc": 884,
+                "cfa_offset": 0
+              }
+            ],
+            "personality": null,
+            "lsda": null
+          },
+          {
+            "start": 18221056,
+            "size": 872,
+            "frame_size": 160,
+            "prologue_end": 48,
+            "sp_adjust_pc": 0,
+            "sp_restore_pc": 868,
+            "events": [
+              {
+                "pc": 4,
+                "cfa_offset": 160
+              },
+              {
+                "pc": 8,
+                "offsets": {
+                  "31": -4
+                }
+              },
+              {
+                "pc": 12,
+                "offsets": {
+                  "30": -8
+                }
+              },
+              {
+                "pc": 16,
+                "offsets": {
+                  "28": -12
+                }
+              },
+              {
+                "pc": 20,
+                "offsets": {
+                  "16": -16
+                }
+              },
+              {
+                "pc": 24,
+                "offsets": {
+                  "17": -20
+                }
+              },
+              {
+                "pc": 28,
+                "offsets": {
+                  "18": -24
+                }
+              },
+              {
+                "pc": 32,
+                "offsets": {
+                  "19": -28
+                }
+              },
+              {
+                "pc": 36,
+                "offsets": {
+                  "20": -32
+                }
+              },
+              {
+                "pc": 40,
+                "offsets": {
+                  "21": -36
+                }
+              },
+              {
+                "pc": 44,
+                "offsets": {
+                  "22": -40
+                }
+              },
+              {
+                "pc": 828,
+                "restores": [
+                  31
+                ]
+              },
+              {
+                "pc": 832,
+                "restores": [
+                  30
+                ]
+              },
+              {
+                "pc": 836,
+                "restores": [
+                  28
+                ]
+              },
+              {
+                "pc": 840,
+                "restores": [
+                  16
+                ]
+              },
+              {
+                "pc": 844,
+                "restores": [
+                  17
+                ]
+              },
+              {
+                "pc": 848,
+                "restores": [
+                  18
+                ]
+              },
+              {
+                "pc": 852,
+                "restores": [
+                  19
+                ]
+              },
+              {
+                "pc": 856,
+                "restores": [
+                  20
+                ]
+              },
+              {
+                "pc": 860,
+                "restores": [
+                  21
+                ]
+              },
+              {
+                "pc": 864,
+                "restores": [
+                  22
+                ]
+              },
+              {
+                "pc": 872,
+                "cfa_offset": 0
+              }
+            ],
+            "personality": null,
+            "lsda": null
+          },
+          {
+            "start": 18223104,
+            "size": 500,
+            "frame_size": 160,
+            "prologue_end": 48,
+            "sp_adjust_pc": 0,
+            "sp_restore_pc": 496,
+            "events": [
+              {
+                "pc": 4,
+                "cfa_offset": 160
+              },
+              {
+                "pc": 8,
+                "offsets": {
+                  "31": -4
+                }
+              },
+              {
+                "pc": 12,
+                "offsets": {
+                  "30": -8
+                }
+              },
+              {
+                "pc": 16,
+                "offsets": {
+                  "28": -12
+                }
+              },
+              {
+                "pc": 20,
+                "offsets": {
+                  "16": -16
+                }
+              },
+              {
+                "pc": 24,
+                "offsets": {
+                  "17": -20
+                }
+              },
+              {
+                "pc": 28,
+                "offsets": {
+                  "18": -24
+                }
+              },
+              {
+                "pc": 32,
+                "offsets": {
+                  "19": -28
+                }
+              },
+              {
+                "pc": 36,
+                "offsets": {
+                  "20": -32
+                }
+              },
+              {
+                "pc": 40,
+                "offsets": {
+                  "21": -36
+                }
+              },
+              {
+                "pc": 44,
+                "offsets": {
+                  "22": -40
+                }
+              },
+              {
+                "pc": 452,
+                "restores": [
+                  31
+                ]
+              },
+              {
+                "pc": 456,
+                "restores": [
+                  30
+                ]
+              },
+              {
+                "pc": 468,
+                "restores": [
+                  16
+                ]
+              },
+              {
+                "pc": 472,
+                "restores": [
+                  17
+                ]
+              },
+              {
+                "pc": 476,
+                "restores": [
+                  18
+                ]
+              },
+              {
+                "pc": 480,
+                "restores": [
+                  19
+                ]
+              },
+              {
+                "pc": 484,
+                "restores": [
+                  20
+                ]
+              },
+              {
+                "pc": 488,
+                "restores": [
+                  21
+                ]
+              },
+              {
+                "pc": 492,
+                "restores": [
+                  22
+                ]
+              },
+              {
+                "pc": 500,
+                "cfa_offset": 0
+              }
+            ],
+            "personality": null,
+            "lsda": null
+          },
+          {
+            "start": 18224128,
+            "size": 612,
+            "frame_size": 160,
+            "prologue_end": 48,
+            "sp_adjust_pc": 0,
+            "sp_restore_pc": 608,
+            "events": [
+              {
+                "pc": 4,
+                "cfa_offset": 160
+              },
+              {
+                "pc": 8,
+                "offsets": {
+                  "31": -4
+                }
+              },
+              {
+                "pc": 12,
+                "offsets": {
+                  "30": -8
+                }
+              },
+              {
+                "pc": 16,
+                "offsets": {
+                  "28": -12
+                }
+              },
+              {
+                "pc": 20,
+                "offsets": {
+                  "16": -16
+                }
+              },
+              {
+                "pc": 24,
+                "offsets": {
+                  "17": -20
+                }
+              },
+              {
+                "pc": 28,
+                "offsets": {
+                  "18": -24
+                }
+              },
+              {
+                "pc": 32,
+                "offsets": {
+                  "19": -28
+                }
+              },
+              {
+                "pc": 36,
+                "offsets": {
+                  "20": -32
+                }
+              },
+              {
+                "pc": 40,
+                "offsets": {
+                  "21": -36
+                }
+              },
+              {
+                "pc": 44,
+                "offsets": {
+                  "22": -40
+                }
+              },
+              {
+                "pc": 560,
+                "restores": [
+                  31
+                ]
+              },
+              {
+                "pc": 564,
+                "restores": [
+                  30
+                ]
+              },
+              {
+                "pc": 568,
+                "restores": [
+                  28
+                ]
+              },
+              {
+                "pc": 572,
+                "restores": [
+                  16
+                ]
+              },
+              {
+                "pc": 576,
+                "restores": [
+                  17
+                ]
+              },
+              {
+                "pc": 580,
+                "restores": [
+                  18
+                ]
+              },
+              {
+                "pc": 584,
+                "restores": [
+                  19
+                ]
+              },
+              {
+                "pc": 588,
+                "restores": [
+                  20
+                ]
+              },
+              {
+                "pc": 592,
+                "restores": [
+                  21
+                ]
+              },
+              {
+                "pc": 596,
+                "restores": [
+                  22
+                ]
+              },
+              {
+                "pc": 612,
+                "cfa_offset": 0
+              }
+            ],
+            "personality": null,
+            "lsda": null
+          }
+        ],
+        "temporary_cleanup_on_exception": false
+      },
+      "device_tested": false
+    },
+    "hooks": [
+      {
+        "va": "0x8968ac",
+        "old": "0x8fdc0018",
+        "new": "0x8fc40060"
+      },
+      {
+        "va": "0x8968b0",
+        "old": "0x1021",
+        "new": "0xc458040"
+      },
+      {
+        "va": "0x8957c8",
+        "old": "0x8f99e108",
+        "new": "0xc458200"
+      },
+      {
+        "va": "0x8957cc",
+        "old": "0x320f809",
+        "new": "0x0"
+      },
+      {
+        "va": "0x895a68",
+        "old": "0x8f99e108",
+        "new": "0xc458200"
+      },
+      {
+        "va": "0x895a6c",
+        "old": "0x320f809",
+        "new": "0x0"
+      },
+      {
+        "va": "0x895808",
+        "old": "0x8f99ed48",
+        "new": "0xc458400"
+      },
+      {
+        "va": "0x895abc",
+        "old": "0x8f99ed48",
+        "new": "0xc458400"
+      },
+      {
+        "va": "0x895af0",
+        "old": "0x8f99ed48",
+        "new": "0xc458400"
+      },
+      {
+        "va": "0x89580c",
+        "old": "0x320f809",
+        "new": "0x0"
+      },
+      {
+        "va": "0x895ac0",
+        "old": "0x320f809",
+        "new": "0x0"
+      },
+      {
+        "va": "0x895af4",
+        "old": "0x320f809",
+        "new": "0x0"
+      },
+      {
+        "va": "0x8968d8",
+        "old": "0x3c1c0083",
+        "new": "0x8458500"
+      },
+      {
+        "va": "0x8968dc",
+        "old": "0x279c5a38",
+        "new": "0x0"
+      },
+      {
+        "va": "0x8968e0",
+        "old": "0x399e021",
+        "new": "0x0"
+      }
+    ],
+    "menus_original": true,
+    "settings_original": true,
+    "volume_gp_fix_preserved": true,
+    "channel_tuning_and_original_timer_0_1_preserved": true,
+    "cosmetic_timer_id": 2,
+    "no_fabricated_channels_in_firmware": true,
+    "v76_television_tested": false
+  },
+  "records": [
+    {
+      "relative_path": "08_APP/bin/dvbt_board",
+      "original_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+      "candidate_sha256": "19ee3d0d7ac6fdefa0323d21b0630cb074102aa728859e25cf426debd4bf4317",
+      "bytes": 14087224
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Common/popups/volumeControl/arc_soundDown.png",
+      "original_sha256": "0124768c82ed9e51c614b2928ee97c5b628960bdac6ac683416531da0f48a532",
+      "candidate_sha256": "e454ec06b221cd7c28c9453568d189a5c735255cbeff41545f625b74ce5bb2f4",
+      "bytes": 1034
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Common/popups/volumeControl/arc_soundMute.png",
+      "original_sha256": "96a0e524ed1e8167d0d3ddd22b36656c99930d33653e0ea390b295c1f13cca01",
+      "candidate_sha256": "3b9bf1124dbfbdd64f8d4761f31649607ccff27bd25541ea4a0aed9db3bed842",
+      "bytes": 818
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Common/popups/volumeControl/arc_soundUp.png",
+      "original_sha256": "6fa4da20137eadb2da83ff64d0804036a58368a16df1dbadf3aa1eec4b5eb71e",
+      "candidate_sha256": "5e7f435949124eb16ea609a04a54a031c5e37ee23f96a1bad65763313ad03a8f",
+      "bytes": 1158
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Common/popups/volumeControl/bg.png",
+      "original_sha256": "347c72138107e1dfae24068eb9ed50141ac958d65b7e4765697b85dd7d95db18",
+      "candidate_sha256": "3bc46a137594635ca1a2c47bcd820d6d619c3a850d58f9fc6db1908d1011169d",
+      "bytes": 2938
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Common/popups/volumeControl/volume_shadow.png",
+      "original_sha256": "9a095d761869c488870b5f8fd6d179a222e3293cd443f96fdbb43845b5c946f4",
+      "candidate_sha256": "38278e73d42c9ee28205a3191ac6f653491e509a9d7fbb5b6beea068105ec069",
+      "bytes": 359
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/modern/mute_badge.png",
+      "original_sha256": null,
+      "candidate_sha256": "ada6beb5af9300a0195e73ad5c1c5d251ca7d8d7ab07cb05a222b8a59a236a79",
+      "bytes": 1456
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/modern/numeric_bg.png",
+      "original_sha256": null,
+      "candidate_sha256": "6144405871b839f29d6be99b7696f678400a415f06c5893d43fd61937801547c",
+      "bytes": 11172
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/modern/volume_muted_bg.png",
+      "original_sha256": null,
+      "candidate_sha256": "14a1bab0198740835f236cfe7fbaeca943b9e10f9aa1784107b111e013bb7389",
+      "bytes": 3116
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/volume/mute_button_grundig.png",
+      "original_sha256": "9facafe621ba0052c30c67650320d634dc3686ea921f1114a4a9b4055c607bb7",
+      "candidate_sha256": "3b4da91b34b4e998970ba5ff42759407372381230388189ffba417c4e1c2eddb",
+      "bytes": 1484
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/volume/mute_icon.png",
+      "original_sha256": "b5a061e1b756cdb160a3685e9baaea0fdc1aad3a1f6af245828037447dd429ff",
+      "candidate_sha256": "82445d3755d20ba59fa325fc3bebc7505124f59531b0b7dbd3c1470b30a5417c",
+      "bytes": 1683
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/volume/volume_ellipse.png",
+      "original_sha256": "856419dba36067ee7d55c469e1b46fbdfb922bee5b893a482c6c164f2a975bf5",
+      "candidate_sha256": "09e0029db7a9d95051831cd1953f4944d651308dad70a9a7d7abf3085c87955a",
+      "bytes": 1120
+    },
+    {
+      "relative_path": "08_APP/rc/ARimages/Grundig/volume/volume_icon.png",
+      "original_sha256": "0899f126b8139430eb7ee8b86482efdb0c9730460e7900f9fe523086d584f446",
+      "candidate_sha256": "aa1c3918d73338f4065285fbc634fe56169dcc7019af99753b907a897796b099",
+      "bytes": 2044
+    },
+    {
+      "relative_path": "08_APP/rc/rc/bin/Image_res.bin",
+      "original_sha256": "d6b1b9fde60c9cc4624f264a8e75da4245e6fb3e9dab7534ddce01706fbcd2f3",
+      "candidate_sha256": "2ef7d8b0dfc053d524464d996332e0b276601e6168e5288ecd81b52412d45293",
+      "bytes": 129627
+    },
+    {
+      "relative_path": "08_APP/rc/rc/bin/Num_res.bin",
+      "original_sha256": "e20c03cd212f548eb8154e8e49d6cf4daafc5fd5842887c51590bf76cfe613ff",
+      "candidate_sha256": "7ec3f2236f8b6061fdf22c65af37042a84b713805fac823bc228d74d9e39047a",
+      "bytes": 94288
+    }
+  ],
+  "television_tested": false,
+  "flash_ready": false
+}

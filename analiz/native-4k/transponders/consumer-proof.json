@@ -1,0 +1,626 @@
+{
+  "date": "2026-10-27",
+  "module": "analiz\\dosya-sistemleri-tam\\07_MSLIB\\libmsrv_dvbs_customer.so",
+  "sha256": "9c3d825e7162bb36495c9e74ddc345d151e4b8e51e3190f822d25e607b7cd9ed",
+  "kind": "direct Ghidra static analysis + original ELF GOT/vtable validation; not REA Evidence",
+  "functions": {
+    "2e9665a8": {
+      "name": "MW_DTV_FREQUENCYTABLE_DVBS_Customer::LoadSatelliteListfromXML",
+      "body_bytes": 308,
+      "instruction_count": 77,
+      "decompile_complete": true,
+      "gp": "0x2e9a5580",
+      "gp_basis": "PIC entry t9==function entry; first3 original instructions"
+    },
+    "2e9666dc": {
+      "name": "MW_DTV_FREQUENCYTABLE_DVBS_Customer::ResetSatDB",
+      "body_bytes": 1272,
+      "instruction_count": 318,
+      "decompile_complete": true,
+      "gp": "0x2e9a5580",
+      "gp_basis": "PIC entry t9==function entry; first3 original instructions"
+    },
+    "2e967260": {
+      "name": "MW_DTV_FREQUENCYTABLE_DVBS_Customer::ReloadSatList",
+      "body_bytes": 628,
+      "instruction_count": 157,
+      "decompile_complete": true,
+      "gp": "0x2e9a5580",
+      "gp_basis": "PIC entry t9==function entry; first3 original instructions"
+    },
+    "2e9674d4": {
+      "name": "MW_DTV_FREQUENCYTABLE_DVBS_Customer::Init",
+      "body_bytes": 836,
+      "instruction_count": 209,
+      "decompile_complete": true,
+      "gp": "0x2e9a5580",
+      "gp_basis": "PIC entry t9==function entry; first3 original instructions"
+    }
+  },
+  "got_bound_calls": [
+    {
+      "function": "2e9665a8",
+      "callsite": "2e9665d0",
+      "load": "2e9665cc",
+      "got_slot": "0x2e99e6c0",
+      "symbol": "_ZN24MW_FreqTable_XML_Builder11GetInstanceEv",
+      "symbol_value": "0x2e97f990",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9665a8",
+      "callsite": "2e9665f0",
+      "load": "2e9665e8",
+      "got_slot": "0x2e99d854",
+      "symbol": "snprintf",
+      "symbol_value": "0x2e980210",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9665a8",
+      "callsite": "2e966600",
+      "load": "2e9665fc",
+      "got_slot": "0x2e99d6a0",
+      "symbol": "system",
+      "symbol_value": "0x2e9802e0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9665a8",
+      "callsite": "2e966620",
+      "load": "2e966618",
+      "got_slot": "0x2e99d854",
+      "symbol": "snprintf",
+      "symbol_value": "0x2e980210",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9665a8",
+      "callsite": "2e966630",
+      "load": "2e96662c",
+      "got_slot": "0x2e99d6a0",
+      "symbol": "system",
+      "symbol_value": "0x2e9802e0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9665a8",
+      "callsite": "2e96664c",
+      "load": "2e966648",
+      "got_slot": "0x2e99da38",
+      "symbol": "puts",
+      "symbol_value": "0x2e980150",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9665a8",
+      "callsite": "2e96665c",
+      "load": "2e966658",
+      "got_slot": "0x2e99de10",
+      "symbol": "sync",
+      "symbol_value": "0x2e97fef0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9665a8",
+      "callsite": "2e966670",
+      "load": "2e96666c",
+      "got_slot": "0x2e99e3ec",
+      "symbol": "_ZN24MW_FreqTable_XML_Builder14Process_LoaderEh",
+      "symbol_value": "0x2e97fb40",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9665a8",
+      "callsite": "2e9666a0",
+      "load": "2e96669c",
+      "got_slot": "0x2e99da38",
+      "symbol": "puts",
+      "symbol_value": "0x2e980150",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9665a8",
+      "callsite": "2e9666b4",
+      "load": "2e9666b0",
+      "got_slot": "0x2e99e3ec",
+      "symbol": "_ZN24MW_FreqTable_XML_Builder14Process_LoaderEh",
+      "symbol_value": "0x2e97fb40",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9666dc",
+      "callsite": "2e96678c",
+      "load": "2e966788",
+      "got_slot": "0x2e99d814",
+      "symbol": "_ZN12mapi_storage5ClearEv",
+      "symbol_value": "0x2e980240",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9666dc",
+      "callsite": "2e96679c",
+      "load": "2e966798",
+      "got_slot": "0x2e99d814",
+      "symbol": "_ZN12mapi_storage5ClearEv",
+      "symbol_value": "0x2e980240",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9666dc",
+      "callsite": "2e9667bc",
+      "load": "2e9667b4",
+      "got_slot": "0x2e99d654",
+      "symbol": "_ZN35MW_DTV_FREQUENCYTABLE_DVBS_Customer13WriteDatabaseEmPKht",
+      "symbol_value": "0x2e965a04",
+      "symbol_imported": false,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9666dc",
+      "callsite": "2e966874",
+      "load": "2e966868",
+      "got_slot": "0x2e99d90c",
+      "symbol": "memset",
+      "symbol_value": "0x2e9801f0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9666dc",
+      "callsite": "2e9668a4",
+      "load": "2e966898",
+      "got_slot": "0x2e99e190",
+      "symbol": "strncpy",
+      "symbol_value": "0x2e97fc80",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9666dc",
+      "callsite": "2e966b08",
+      "load": "2e966b04",
+      "got_slot": "0x2e99ddec",
+      "symbol": "_ZN35MW_DTV_FREQUENCYTABLE_DVBS_Customer7SaveAllEv",
+      "symbol_value": "0x2e965b08",
+      "symbol_imported": false,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9666dc",
+      "callsite": "2e966bb0",
+      "load": "2e966ba8",
+      "got_slot": "0x2e99dac4",
+      "symbol": "printf",
+      "symbol_value": "0x2e9800c0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9666dc",
+      "callsite": "2e966bc4",
+      "load": "2e966bc0",
+      "got_slot": "0x2e99e130",
+      "symbol": "_ZN35MW_DTV_FREQUENCYTABLE_DVBS_Customer24LoadSatelliteListfromXMLEv",
+      "symbol_value": "0x2e9665a8",
+      "symbol_imported": false,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e967260",
+      "callsite": "2e967288",
+      "load": "2e967284",
+      "got_slot": "0x2e99e124",
+      "symbol": "_ZN17mapi_interface_TV29Get_mapi_storage_dtv_cmdb_satEv",
+      "symbol_value": "0x2e97fce0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e967260",
+      "callsite": "2e967298",
+      "load": "2e967294",
+      "got_slot": "0x2e99dcf0",
+      "symbol": "_ZN17mapi_interface_TV36Get_mapi_storage_dtv_cmdb_sat_backupEv",
+      "symbol_value": "0x2e97ffa0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e967260",
+      "callsite": "2e9672ac",
+      "load": "2e9672a8",
+      "got_slot": "0x2e99e5bc",
+      "symbol": "_ZN12mapi_storage8FinalizeEv",
+      "symbol_value": "0x2e97fa20",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e967260",
+      "callsite": "2e9672bc",
+      "load": "2e9672b8",
+      "got_slot": "0x2e99e5bc",
+      "symbol": "_ZN12mapi_storage8FinalizeEv",
+      "symbol_value": "0x2e97fa20",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e967260",
+      "callsite": "2e9672cc",
+      "load": "2e9672c8",
+      "got_slot": "0x2e99e68c",
+      "symbol": "_ZN12mapi_storage4InitEv",
+      "symbol_value": "0x2e97f9c0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e967260",
+      "callsite": "2e9672dc",
+      "load": "2e9672d8",
+      "got_slot": "0x2e99e68c",
+      "symbol": "_ZN12mapi_storage4InitEv",
+      "symbol_value": "0x2e97f9c0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e967260",
+      "callsite": "2e967368",
+      "load": "2e967348",
+      "got_slot": "0x2e99dd50",
+      "symbol": "_ZN12mapi_storage4ReadEmPhm",
+      "symbol_value": "0x2e97ff70",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e967260",
+      "callsite": "2e967430",
+      "load": "2e96742c",
+      "got_slot": "0x2e99da38",
+      "symbol": "puts",
+      "symbol_value": "0x2e980150",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e967260",
+      "callsite": "2e967444",
+      "load": "2e967440",
+      "got_slot": "0x2e99da38",
+      "symbol": "puts",
+      "symbol_value": "0x2e980150",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e967260",
+      "callsite": "2e967470",
+      "load": "2e96746c",
+      "got_slot": "0x2e99e170",
+      "symbol": "_ZnajRKSt9nothrow_t",
+      "symbol_value": "0x2e97fca0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e967260",
+      "callsite": "2e9674a4",
+      "load": "2e967494",
+      "got_slot": "0x2e99dac4",
+      "symbol": "printf",
+      "symbol_value": "0x2e9800c0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e967260",
+      "callsite": "2e9674b4",
+      "load": "2e9674b0",
+      "got_slot": "0x2e99d7f8",
+      "symbol": "abort",
+      "symbol_value": "0x2e980260",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e967260",
+      "callsite": "2e9674c4",
+      "load": "2e9674c0",
+      "got_slot": "0x2e99da38",
+      "symbol": "puts",
+      "symbol_value": "0x2e980150",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9674d4",
+      "callsite": "2e9674fc",
+      "load": "2e9674f8",
+      "got_slot": "0x2e99e124",
+      "symbol": "_ZN17mapi_interface_TV29Get_mapi_storage_dtv_cmdb_satEv",
+      "symbol_value": "0x2e97fce0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9674d4",
+      "callsite": "2e96750c",
+      "load": "2e967508",
+      "got_slot": "0x2e99dcf0",
+      "symbol": "_ZN17mapi_interface_TV36Get_mapi_storage_dtv_cmdb_sat_backupEv",
+      "symbol_value": "0x2e97ffa0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9674d4",
+      "callsite": "2e967534",
+      "load": "2e96752c",
+      "got_slot": "0x2e99e170",
+      "symbol": "_ZnajRKSt9nothrow_t",
+      "symbol_value": "0x2e97fca0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9674d4",
+      "callsite": "2e967550",
+      "load": "2e967548",
+      "got_slot": "0x2e99e170",
+      "symbol": "_ZnajRKSt9nothrow_t",
+      "symbol_value": "0x2e97fca0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9674d4",
+      "callsite": "2e9675d4",
+      "load": "2e9675c8",
+      "got_slot": "0x2e99d90c",
+      "symbol": "memset",
+      "symbol_value": "0x2e9801f0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9674d4",
+      "callsite": "2e967608",
+      "load": "2e9675e8",
+      "got_slot": "0x2e99dd50",
+      "symbol": "_ZN12mapi_storage4ReadEmPhm",
+      "symbol_value": "0x2e97ff70",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9674d4",
+      "callsite": "2e96775c",
+      "load": "2e967758",
+      "got_slot": "0x2e99da38",
+      "symbol": "puts",
+      "symbol_value": "0x2e980150",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9674d4",
+      "callsite": "2e967770",
+      "load": "2e96776c",
+      "got_slot": "0x2e99da38",
+      "symbol": "puts",
+      "symbol_value": "0x2e980150",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9674d4",
+      "callsite": "2e9677ac",
+      "load": "2e9677a8",
+      "got_slot": "0x2e99da38",
+      "symbol": "puts",
+      "symbol_value": "0x2e980150",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9674d4",
+      "callsite": "2e9677dc",
+      "load": "2e9677c8",
+      "got_slot": "0x2e99dac4",
+      "symbol": "printf",
+      "symbol_value": "0x2e9800c0",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    },
+    {
+      "function": "2e9674d4",
+      "callsite": "2e9677ec",
+      "load": "2e9677e8",
+      "got_slot": "0x2e99d7f8",
+      "symbol": "abort",
+      "symbol_value": "0x2e980260",
+      "symbol_imported": true,
+      "basis": "original GOT slot to linked dynamic symbol; runtime loader implementation not executed"
+    }
+  ],
+  "got_callsite_count": 42,
+  "vtable": [
+    {
+      "slot": "0x3c",
+      "entry_va": "0x2e99d144",
+      "file_offset": "0x4d144",
+      "target": "0x2e9666dc",
+      "symbol": "_ZN35MW_DTV_FREQUENCYTABLE_DVBS_Customer10ResetSatDBEv",
+      "basis": "raw original Customer-class vtable; actual virtual call target conditional on runtimevptr"
+    },
+    {
+      "slot": "0x40",
+      "entry_va": "0x2e99d148",
+      "file_offset": "0x4d148",
+      "target": "0x2e968484",
+      "symbol": "_ZN35MW_DTV_FREQUENCYTABLE_DVBS_Customer12AddSatelliteERh12MS_SAT_PARAMh",
+      "basis": "raw original Customer-class vtable; actual virtual call target conditional on runtimevptr"
+    },
+    {
+      "slot": "0x44",
+      "entry_va": "0x2e99d14c",
+      "file_offset": "0x4d14c",
+      "target": "0x2e968ed8",
+      "symbol": "_ZN35MW_DTV_FREQUENCYTABLE_DVBS_Customer14AddTransponderEht19MS_TRASPONDER_PARAMh",
+      "basis": "raw original Customer-class vtable; actual virtual call target conditional on runtimevptr"
+    },
+    {
+      "slot": "0x6c",
+      "entry_va": "0x2e99d174",
+      "file_offset": "0x4d174",
+      "target": "0x2e9650b4",
+      "symbol": "_ZN35MW_DTV_FREQUENCYTABLE_DVBS_Customer19SetCurrentSatelliteEh",
+      "basis": "raw original Customer-class vtable; actual virtual call target conditional on runtimevptr"
+    },
+    {
+      "slot": "0x78",
+      "entry_va": "0x2e99d180",
+      "file_offset": "0x4d180",
+      "target": "0x2e965104",
+      "symbol": "_ZN35MW_DTV_FREQUENCYTABLE_DVBS_Customer21SetCurrentTransponderEh",
+      "basis": "raw original Customer-class vtable; actual virtual call target conditional on runtimevptr"
+    },
+    {
+      "slot": "0xc0",
+      "entry_va": "0x2e99d1c8",
+      "file_offset": "0x4d1c8",
+      "target": "0x2e965e44",
+      "symbol": "_ZN35MW_DTV_FREQUENCYTABLE_DVBS_Customer10SaveBitmapE8BMP_TYPE",
+      "basis": "raw original Customer-class vtable; actual virtual call target conditional on runtimevptr"
+    },
+    {
+      "slot": "0xc4",
+      "entry_va": "0x2e99d1cc",
+      "file_offset": "0x4d1cc",
+      "target": "0x2e9670bc",
+      "symbol": "_ZN35MW_DTV_FREQUENCYTABLE_DVBS_Customer10LoadBitmapE8BMP_TYPE",
+      "basis": "raw original Customer-class vtable; actual virtual call target conditional on runtimevptr"
+    },
+    {
+      "slot": "0xcc",
+      "entry_va": "0x2e99d1d4",
+      "file_offset": "0x4d1d4",
+      "target": "0x2e966fd4",
+      "symbol": "_ZN35MW_DTV_FREQUENCYTABLE_DVBS_Customer7LoadCurERmS0_",
+      "basis": "raw original Customer-class vtable; actual virtual call target conditional on runtimevptr"
+    },
+    {
+      "slot": "0xd8",
+      "entry_va": "0x2e99d1e0",
+      "file_offset": "0x4d1e0",
+      "target": "0x2e9686a4",
+      "symbol": "_ZN35MW_DTV_FREQUENCYTABLE_DVBS_Customer7LoadSatEt",
+      "basis": "raw original Customer-class vtable; actual virtual call target conditional on runtimevptr"
+    },
+    {
+      "slot": "0xdc",
+      "entry_va": "0x2e99d1e4",
+      "file_offset": "0x4d1e4",
+      "target": "0x2e9690f8",
+      "symbol": "_ZN35MW_DTV_FREQUENCYTABLE_DVBS_Customer6LoadTpEt",
+      "basis": "raw original Customer-class vtable; actual virtual call target conditional on runtimevptr"
+    }
+  ],
+  "commands_as_data_only": [
+    {
+      "file_offset": "0x417e8",
+      "va": "0x2e9817e8",
+      "text": "tar xzvf /applications/defaults/frequency_tables.tar.gz -C /USR_DB",
+      "executed": false
+    },
+    {
+      "file_offset": "0x4182c",
+      "va": "0x2e98182c",
+      "text": "tar xzvf /applications/defaults/frequency_tables.tar.gz -C /BACKUP_DB",
+      "executed": false
+    }
+  ],
+  "lifecycle": [
+    {
+      "entry": "0x2e9674d4 Init",
+      "condition": "4-byte primary SAT storage header matches embedded format version; both sat/TP bitmap loads succeed",
+      "result": "LoadCur, occupied LoadSat slots0..23 and occupied LoadTp slots0..2999; return without archive/XML"
+    },
+    {
+      "entry": "0x2e9674d4 Init",
+      "condition": "primary header read fails, header mismatches, or either bitmap load fails",
+      "result": "virtualslot+0x3c targets ResetSatDB for original Customer vtable"
+    },
+    {
+      "entry": "0x2e9666dc ResetSatDB",
+      "condition": "global vSatList vector empty",
+      "result": "LoadSatelliteListfromXML; then rebuild SAT database"
+    },
+    {
+      "entry": "0x2e9666dc ResetSatDB",
+      "condition": "global vSatList already populated",
+      "result": "skip new tar/XML load; still clear/rebuild using cached list"
+    },
+    {
+      "entry": "0x2e9665a8 LoadSatelliteListfromXML",
+      "condition": "called",
+      "result": "system(tar→USR_DB),system(tar→BACKUP_DB), sync only ifbothsuccess; Process_Loader(this,1) on BOTH success/failure; returns1always"
+    },
+    {
+      "entry": "0x2e967260 ReloadSatList",
+      "condition": "called",
+      "result": "Finalize/Init both storage objects; readprimary header/bitmap and loadexisting SAT rows; failureprints warning but no ResetSatDB/archivecall in this body"
+    }
+  ],
+  "reset_effects": {
+    "clear_calls": [
+      "0x2e96678c primary storage this+0x84",
+      "0x2e96679c backup storage this+0x88"
+    ],
+    "format_header_write": "0x2e9667bc 4bytes atoffset0",
+    "save_all": "0x2e966b08",
+    "current_sat_reset0": "0x2e966b1c virtual+0x6c",
+    "current_tp_reset0": "0x2e966b30 virtual+0x78",
+    "satellite_limit": 24,
+    "per_sat_tp_loop_limit": 254
+  },
+  "prototype_corrections": [
+    {
+      "function": "0x2e9665a8",
+      "issue": "Decompiler wrongly types GetInstance return as uchar and hides Process_Loader argument",
+      "assembly": "0x2e9665ec moves fullv0→s2;0x2e966668→6674 and66ac→66b8 set a0=s2,a1=1; GOT symbol Process_Loader(unsignedchar) is a nonstatic member(this,1)"
+    },
+    {
+      "function": "0x2e9674d4",
+      "issue": "Decompiler mapi_storage::Read argument display is misleading",
+      "assembly": "0x2e9675e0..760c: a0=primary storage,a1=0offset,a2=stack18buffer,a3=4bytes; no target read was performed"
+    }
+  ],
+  "conclusion": "Replacing APP/defaults/frequency_tables.tar.gz alone does not merge new transponders into an alreadyvalid persistent SAT DB. ResetSatDB is destructive to SAT storage/current selections and was NOT invoked.",
+  "unresolved": [
+    "Normal startup framework caller of Init not traced within four-function budget",
+    "Factory-reset/first-install UI callers of ResetSatDB not traced; function name is not evidence of a specific UI gesture",
+    "Process_Loader implementation/XML path parsing not decompiled here; only importedmembercall and reset use of globalvSatList verified",
+    "Actual device primary/backup DB validity/version and existing TP lists not read"
+  ],
+  "target_executed": false,
+  "commands_executed": false,
+  "device_access": false,
+  "database_modified": false
+}

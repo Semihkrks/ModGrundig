@@ -26,7 +26,7 @@ def validate_metadata(original,current,revision,records=()):
         raise ValueError('Duplicate added resource')
     if any(not PRIVATE_PNG.fullmatch(name) for name in new_files):
         raise ValueError('New resource outside private flat PNG directory')
-    if new_files and revision not in ('v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv'):raise ValueError('Old revision cannot add resources')
+    if new_files and revision not in ('v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.8-tv','v7.9-tv','v7.10-tv'):raise ValueError('Old revision cannot add resources')
     parent='/rc/ARimages/Grundig'
     new_dirs=set()
     for name in new_files:
@@ -61,7 +61,7 @@ def digest(data):return hashlib.sha256(data).hexdigest()
 
 
 def main(revision='v2'):
-    if revision not in ('v2','v3','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv'):raise ValueError('Unsupported readback revision')
+    if revision not in ('v2','v3','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.8-tv','v7.9-tv','v7.10-tv'):raise ValueError('Unsupported readback revision')
     PACKAGE=ROOT/f'analiz/native-ui-candidate/{revision}/package'
     stock=(ROOT/'analiz/firmware-dogrulanmis/Target_GM/image/GM_SWImage.bin').read_bytes()
     filename='GM_SWImage_UI_v7_OFFLINE_UNVERIFIED.bin' if revision=='v7-tv' else f'GM_SWImage_UI_{revision}_OFFLINE_UNVERIFIED.bin'
@@ -99,9 +99,14 @@ def main(revision='v2'):
     assert candidate[footer+8:]==b'# Script Size = '
     assert struct.unpack_from('<I',candidate,footer)[0]==zlib.crc32(candidate[:0x4000])
     assert struct.unpack_from('<I',candidate,footer+4)[0]==zlib.crc32(candidate[:footer+4])
-    if revision in ('v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv'):
+    if revision in ('v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.8-tv','v7.9-tv','v7.10-tv'):
         from export_ubifs_metadata import inspect_image
-        if revision=='v7.5-tv':from build_native_ui_v75_tv import verified_packaging_records
+        if revision=='v7.10-tv':from build_native_ui_v710_tv import verified_packaging_records
+        elif revision=='v7.9-tv':from build_native_ui_v79_tv import verified_packaging_records
+        elif revision=='v7.8-tv':from build_native_ui_v78_tv import verified_packaging_records
+        elif revision=='v7.7-tv':from build_native_ui_v77_tv import verified_packaging_records
+        elif revision=='v7.6-tv':from build_native_ui_v76_tv import verified_packaging_records
+        elif revision=='v7.5-tv':from build_native_ui_v75_tv import verified_packaging_records
         elif revision=='v7.4-tv':from build_native_ui_v74_tv import verified_packaging_records
         elif revision=='v7.3-tv':from build_native_ui_v73_tv import verified_packaging_records
         elif revision=='v7.2-tv':from build_native_ui_v72_tv import verified_packaging_records
@@ -133,5 +138,5 @@ def main(revision='v2'):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--revision',choices=('v2','v3','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv'),default='v2')
+    parser.add_argument('--revision',choices=('v2','v3','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.8-tv','v7.9-tv','v7.10-tv'),default='v2')
     main(parser.parse_args().revision)

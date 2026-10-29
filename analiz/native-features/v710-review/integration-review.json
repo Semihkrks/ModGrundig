@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "review_scope": "Read-only V7.10 composition and new dispatch additions only; native_semih_brand implementation excluded while in progress",
+  "reviewed_at_utc": "2026-10-29T18:00:23.760904+00:00",
+  "source_sha256": {
+    "scripts/build_native_ui_v710_tv.py": "2ba606bb5dc4780ca90c927442f326b657816224d6c5ca5d48e027efe4d96a99",
+    "scripts/build_native_app.py": "e5011a68ca3a27123bcd806deade107524e2b5b419d552b11c7191e63e9cf4cb",
+    "scripts/verify_native_release.py": "ed06067cea3f721065997d6e418ba1f46d76f64bd02a5dc9a0739c6c3ffa62a5",
+    "scripts/verify_native_storage.py": "0006e091847ba050709c3db3a7c9952a536c9cf44085fb5c0417ddf6ce852d5f"
+  },
+  "decision": "no_concrete_blocking_findings_in_reviewed_integration",
+  "findings": [],
+  "checks_passed": [
+    "Four reviewed Python source files compiled in memory",
+    "All 18 V7.9 code-pinned records verified; ELF SHA-256 is 861d97c013c4d56e093a69cf779abfa6ea78e6c17233af5d6b2b3ba075b0b4ea",
+    "V7.10 builder metadata agrees with independent verifier for new private PNG permissions, owner/time, directories and parent nlink",
+    "Both metadata boundaries reject shared/legacy, traversal and arbitrary nested new PNG paths",
+    "V7.10 accepts LZO/raw-ELF inherited policy and rejects ZLIB",
+    "V7.10 output guard rejects outside paths",
+    "python -B -S import chain succeeds without site-packages or native_semih_brand import"
+  ],
+  "static_confirmations": [
+    "V7.10 composes exclusively from previous.verified_packaging_records() of V7.9, preserving existing provenance and payload bytes except APP ELF/Image_res plus private brand assets",
+    "verified_packaging_records lazily imports only generated pins and verifies full manifest hash, ordered record tuple map, sizes and each candidate hash",
+    "New v7.10-tv dispatch is present in builder revision choices, overlay verifier, additions policy, compression policy and manifest-copy path",
+    "New v7.10-tv dispatch is present in independent release choices/overlay verifier and storage verifier choices",
+    "Brand raster reconstruction and native_semih_brand are not imported by the packaging verifier"
+  ],
+  "not_verified_yet": [
+    "Native brand patch/assets implementation, explicitly excluded by assignment",
+    "Actual V7.10 expected_payloads reconstruction and generated manifest/pins absent at review time",
+    "V7.10 APP/UBIFS/container/RAR build or readback: no package writes authorized in this review"
+  ],
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "package_written": false,
+  "reviewer_output_only": "analiz/native-features/v710-review/integration-review.json"
+}

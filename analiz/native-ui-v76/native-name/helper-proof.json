@@ -1,0 +1,797 @@
+{
+  "revision": "v7.6-tv",
+  "kind": "native channel-name/unmatched message/cosmetic countdown",
+  "helpers": {
+    "create": {
+      "va": "0x1160100",
+      "bytes": 884,
+      "sha256": "31e56ad830de8513696c7c04b9d39142142950e5636a7d3ac3ee161e9f225750"
+    },
+    "update": {
+      "va": "0x1160800",
+      "bytes": 872,
+      "sha256": "1137cc20979d33abb9f4153d5172d287348b9fc010472b5182e9be459a476532"
+    },
+    "start_timer": {
+      "va": "0x1161000",
+      "bytes": 500,
+      "sha256": "d4f4b820b67a47192ffade8b9880f600d707646793ac5cfb88b2d98b1032dd28"
+    },
+    "tick_timer": {
+      "va": "0x1161400",
+      "bytes": 612,
+      "sha256": "cf31d38df264e2a17dde6f4b6cedb4969b17cd80c9f35e217eee94747891d656"
+    }
+  },
+  "widget": {
+    "id": 3,
+    "allocation": 600,
+    "base_textbox_size": 592,
+    "rect": [
+      1566,
+      206,
+      254,
+      38
+    ],
+    "font_id": 1200,
+    "font_size": 26,
+    "text_color": "0xff527185",
+    "private_tail_offsets": [
+      "0x250 remainingMs",
+      "0x254 totalMs"
+    ]
+  },
+  "line": {
+    "id": 4,
+    "rect": [
+      1566,
+      266,
+      254,
+      4
+    ],
+    "allocation": 612,
+    "color": "0xff0082d4",
+    "parent": "frame+0x180",
+    "width": "remaining*254/total; min0,max254",
+    "redraw": "invalidate old line before virtualMoveRect0x24, invalidate numericcardframe+184 after; no fullroot redraw"
+  },
+  "missing_channel": {
+    "text": "Kayıtlı kanal yok",
+    "only_on": "GetProgramSelInfo returned not1",
+    "encoding": "UTF-8 std::string::operator=(const char*) via verifiedGOT0x10c90f4",
+    "other_lookup_errors": "clear label; do not claim channel is unregistered",
+    "font_metrics": {
+      "text_width": 211.0,
+      "bbox": [
+        0,
+        5,
+        211,
+        30
+      ],
+      "available_rect": [
+        1566,
+        206,
+        254,
+        38
+      ]
+    }
+  },
+  "timers": {
+    "original": "unchanged SetTimer args2000/3000ms,ID0/1,mode0 are called FIRST",
+    "cosmetic": "separate ID2 periodic50ms mode0",
+    "reset": "KillTimer(this,2),reset private remaining/total and fullwidth each digit",
+    "dispatch": "a2==2 intercepted; others tailoriginal0x8968e4 after restoringAPPGP/t9originalentry; original0/1cancel cosmetic before originalhandler",
+    "teardown": "MEvtHandleD2 0x2e230250 calls KillTimer() noarg; removes all timers for eventhandle",
+    "time_limit": "cosmetic decrements50ms per actual dispatched tick; tuning still occurs at original timer expiry independently; delayedticks may visually lag but NEVER delay tuning"
+  },
+  "hooks": [
+    {
+      "va": "0x8968ac",
+      "old": "0x8fdc0018",
+      "new": "0x8fc40060"
+    },
+    {
+      "va": "0x8968b0",
+      "old": "0x1021",
+      "new": "0xc458040"
+    },
+    {
+      "va": "0x8957c8",
+      "old": "0x8f99e108",
+      "new": "0xc458200"
+    },
+    {
+      "va": "0x8957cc",
+      "old": "0x320f809",
+      "new": "0x0"
+    },
+    {
+      "va": "0x895a68",
+      "old": "0x8f99e108",
+      "new": "0xc458200"
+    },
+    {
+      "va": "0x895a6c",
+      "old": "0x320f809",
+      "new": "0x0"
+    },
+    {
+      "va": "0x895808",
+      "old": "0x8f99ed48",
+      "new": "0xc458400"
+    },
+    {
+      "va": "0x895abc",
+      "old": "0x8f99ed48",
+      "new": "0xc458400"
+    },
+    {
+      "va": "0x895af0",
+      "old": "0x8f99ed48",
+      "new": "0xc458400"
+    },
+    {
+      "va": "0x89580c",
+      "old": "0x320f809",
+      "new": "0x0"
+    },
+    {
+      "va": "0x895ac0",
+      "old": "0x320f809",
+      "new": "0x0"
+    },
+    {
+      "va": "0x895af4",
+      "old": "0x320f809",
+      "new": "0x0"
+    },
+    {
+      "va": "0x8968d8",
+      "old": "0x3c1c0083",
+      "new": "0x8458500"
+    },
+    {
+      "va": "0x8968dc",
+      "old": "0x279c5a38",
+      "new": "0x0"
+    },
+    {
+      "va": "0x8968e0",
+      "old": "0x399e021",
+      "new": "0x0"
+    }
+  ],
+  "unwind_frames": [
+    {
+      "start": 18219264,
+      "size": 884,
+      "frame_size": 160,
+      "prologue_end": 48,
+      "sp_adjust_pc": 0,
+      "sp_restore_pc": 880,
+      "events": [
+        {
+          "pc": 4,
+          "cfa_offset": 160
+        },
+        {
+          "pc": 8,
+          "offsets": {
+            "31": -4
+          }
+        },
+        {
+          "pc": 12,
+          "offsets": {
+            "30": -8
+          }
+        },
+        {
+          "pc": 16,
+          "offsets": {
+            "28": -12
+          }
+        },
+        {
+          "pc": 20,
+          "offsets": {
+            "16": -16
+          }
+        },
+        {
+          "pc": 24,
+          "offsets": {
+            "17": -20
+          }
+        },
+        {
+          "pc": 28,
+          "offsets": {
+            "18": -24
+          }
+        },
+        {
+          "pc": 32,
+          "offsets": {
+            "19": -28
+          }
+        },
+        {
+          "pc": 36,
+          "offsets": {
+            "20": -32
+          }
+        },
+        {
+          "pc": 40,
+          "offsets": {
+            "21": -36
+          }
+        },
+        {
+          "pc": 44,
+          "offsets": {
+            "22": -40
+          }
+        },
+        {
+          "pc": 836,
+          "restores": [
+            31
+          ]
+        },
+        {
+          "pc": 840,
+          "restores": [
+            30
+          ]
+        },
+        {
+          "pc": 852,
+          "restores": [
+            16
+          ]
+        },
+        {
+          "pc": 856,
+          "restores": [
+            17
+          ]
+        },
+        {
+          "pc": 860,
+          "restores": [
+            18
+          ]
+        },
+        {
+          "pc": 864,
+          "restores": [
+            19
+          ]
+        },
+        {
+          "pc": 868,
+          "restores": [
+            20
+          ]
+        },
+        {
+          "pc": 872,
+          "restores": [
+            21
+          ]
+        },
+        {
+          "pc": 876,
+          "restores": [
+            22
+          ]
+        },
+        {
+          "pc": 884,
+          "cfa_offset": 0
+        }
+      ],
+      "personality": null,
+      "lsda": null
+    },
+    {
+      "start": 18221056,
+      "size": 872,
+      "frame_size": 160,
+      "prologue_end": 48,
+      "sp_adjust_pc": 0,
+      "sp_restore_pc": 868,
+      "events": [
+        {
+          "pc": 4,
+          "cfa_offset": 160
+        },
+        {
+          "pc": 8,
+          "offsets": {
+            "31": -4
+          }
+        },
+        {
+          "pc": 12,
+          "offsets": {
+            "30": -8
+          }
+        },
+        {
+          "pc": 16,
+          "offsets": {
+            "28": -12
+          }
+        },
+        {
+          "pc": 20,
+          "offsets": {
+            "16": -16
+          }
+        },
+        {
+          "pc": 24,
+          "offsets": {
+            "17": -20
+          }
+        },
+        {
+          "pc": 28,
+          "offsets": {
+            "18": -24
+          }
+        },
+        {
+          "pc": 32,
+          "offsets": {
+            "19": -28
+          }
+        },
+        {
+          "pc": 36,
+          "offsets": {
+            "20": -32
+          }
+        },
+        {
+          "pc": 40,
+          "offsets": {
+            "21": -36
+          }
+        },
+        {
+          "pc": 44,
+          "offsets": {
+            "22": -40
+          }
+        },
+        {
+          "pc": 828,
+          "restores": [
+            31
+          ]
+        },
+        {
+          "pc": 832,
+          "restores": [
+            30
+          ]
+        },
+        {
+          "pc": 836,
+          "restores": [
+            28
+          ]
+        },
+        {
+          "pc": 840,
+          "restores": [
+            16
+          ]
+        },
+        {
+          "pc": 844,
+          "restores": [
+            17
+          ]
+        },
+        {
+          "pc": 848,
+          "restores": [
+            18
+          ]
+        },
+        {
+          "pc": 852,
+          "restores": [
+            19
+          ]
+        },
+        {
+          "pc": 856,
+          "restores": [
+            20
+          ]
+        },
+        {
+          "pc": 860,
+          "restores": [
+            21
+          ]
+        },
+        {
+          "pc": 864,
+          "restores": [
+            22
+          ]
+        },
+        {
+          "pc": 872,
+          "cfa_offset": 0
+        }
+      ],
+      "personality": null,
+      "lsda": null
+    },
+    {
+      "start": 18223104,
+      "size": 500,
+      "frame_size": 160,
+      "prologue_end": 48,
+      "sp_adjust_pc": 0,
+      "sp_restore_pc": 496,
+      "events": [
+        {
+          "pc": 4,
+          "cfa_offset": 160
+        },
+        {
+          "pc": 8,
+          "offsets": {
+            "31": -4
+          }
+        },
+        {
+          "pc": 12,
+          "offsets": {
+            "30": -8
+          }
+        },
+        {
+          "pc": 16,
+          "offsets": {
+            "28": -12
+          }
+        },
+        {
+          "pc": 20,
+          "offsets": {
+            "16": -16
+          }
+        },
+        {
+          "pc": 24,
+          "offsets": {
+            "17": -20
+          }
+        },
+        {
+          "pc": 28,
+          "offsets": {
+            "18": -24
+          }
+        },
+        {
+          "pc": 32,
+          "offsets": {
+            "19": -28
+          }
+        },
+        {
+          "pc": 36,
+          "offsets": {
+            "20": -32
+          }
+        },
+        {
+          "pc": 40,
+          "offsets": {
+            "21": -36
+          }
+        },
+        {
+          "pc": 44,
+          "offsets": {
+            "22": -40
+          }
+        },
+        {
+          "pc": 452,
+          "restores": [
+            31
+          ]
+        },
+        {
+          "pc": 456,
+          "restores": [
+            30
+          ]
+        },
+        {
+          "pc": 468,
+          "restores": [
+            16
+          ]
+        },
+        {
+          "pc": 472,
+          "restores": [
+            17
+          ]
+        },
+        {
+          "pc": 476,
+          "restores": [
+            18
+          ]
+        },
+        {
+          "pc": 480,
+          "restores": [
+            19
+          ]
+        },
+        {
+          "pc": 484,
+          "restores": [
+            20
+          ]
+        },
+        {
+          "pc": 488,
+          "restores": [
+            21
+          ]
+        },
+        {
+          "pc": 492,
+          "restores": [
+            22
+          ]
+        },
+        {
+          "pc": 500,
+          "cfa_offset": 0
+        }
+      ],
+      "personality": null,
+      "lsda": null
+    },
+    {
+      "start": 18224128,
+      "size": 612,
+      "frame_size": 160,
+      "prologue_end": 48,
+      "sp_adjust_pc": 0,
+      "sp_restore_pc": 608,
+      "events": [
+        {
+          "pc": 4,
+          "cfa_offset": 160
+        },
+        {
+          "pc": 8,
+          "offsets": {
+            "31": -4
+          }
+        },
+        {
+          "pc": 12,
+          "offsets": {
+            "30": -8
+          }
+        },
+        {
+          "pc": 16,
+          "offsets": {
+            "28": -12
+          }
+        },
+        {
+          "pc": 20,
+          "offsets": {
+            "16": -16
+          }
+        },
+        {
+          "pc": 24,
+          "offsets": {
+            "17": -20
+          }
+        },
+        {
+          "pc": 28,
+          "offsets": {
+            "18": -24
+          }
+        },
+        {
+          "pc": 32,
+          "offsets": {
+            "19": -28
+          }
+        },
+        {
+          "pc": 36,
+          "offsets": {
+            "20": -32
+          }
+        },
+        {
+          "pc": 40,
+          "offsets": {
+            "21": -36
+          }
+        },
+        {
+          "pc": 44,
+          "offsets": {
+            "22": -40
+          }
+        },
+        {
+          "pc": 560,
+          "restores": [
+            31
+          ]
+        },
+        {
+          "pc": 564,
+          "restores": [
+            30
+          ]
+        },
+        {
+          "pc": 568,
+          "restores": [
+            28
+          ]
+        },
+        {
+          "pc": 572,
+          "restores": [
+            16
+          ]
+        },
+        {
+          "pc": 576,
+          "restores": [
+            17
+          ]
+        },
+        {
+          "pc": 580,
+          "restores": [
+            18
+          ]
+        },
+        {
+          "pc": 584,
+          "restores": [
+            19
+          ]
+        },
+        {
+          "pc": 588,
+          "restores": [
+            20
+          ]
+        },
+        {
+          "pc": 592,
+          "restores": [
+            21
+          ]
+        },
+        {
+          "pc": 596,
+          "restores": [
+            22
+          ]
+        },
+        {
+          "pc": 612,
+          "cfa_offset": 0
+        }
+      ],
+      "personality": null,
+      "lsda": null
+    }
+  ],
+  "got": {
+    "new_nothrow": "0x10c6e6c",
+    "nothrow_object": "0x10cc2b0",
+    "TextBox": "0x10c8c40",
+    "GetWidget": "0x10c6f88",
+    "GetParentFrame": "0x10cc368",
+    "SetFlag": "0x10cb13c",
+    "Show": "0x10cc98c",
+    "Invalidate": "0x10c4e28",
+    "SetText": "0x10ca418",
+    "MStringCtor": "0x10c5d38",
+    "MStringDtor": "0x10c6fa8",
+    "GetManager": "0x10cc370",
+    "dynamic_cast": "0x10c6984",
+    "ManagerRTTI": "0x10ccde0",
+    "CustomerRTTI": "0x10c9978",
+    "GetSel": "0x10cce20",
+    "GetControl": "0x10cb5a8",
+    "StringAssign": "0x10c90f4",
+    "AbsContainer": "0x10c6d8c",
+    "SetTimer": "0x10cb058",
+    "KillTimer": "0x10c786c"
+  },
+  "limits": [
+    "Bounded native helper execution with mocked services; real TV renderer/heap/timers not run.",
+    "No LSDA cleanup; native C++ exception propagation has FDE support but temporary allocation may leak on later allocationexception.",
+    "Blue countdown tick timing not physical-TV-measured; original tuning timeout preserved."
+  ],
+  "static_evidence": [
+    {
+      "path": "analiz/native/ui-four/channels/number-helpers-v1/0089552c.json",
+      "refs": [
+        "0x895808 firstdigit SetTimer",
+        "0x895abc fourthdigit2000ms",
+        "0x895af0 digits2/3 SetTimer3000ms",
+        "0x8957a4 StringAssign GOTgp-0x321c"
+      ]
+    },
+    {
+      "path": "analiz/native/ui-four/channels/numeric-v1/008968d8.json",
+      "refs": [
+        "0x8968d8 GP-only first12bytes",
+        "0x896908 timerIDfroma2",
+        "0x89691c ID0 tune",
+        "0x89692c ID1 tune"
+      ]
+    },
+    {
+      "path": "analiz/native/ui-deep/muf-core35/2e24c034.c",
+      "refs": [
+        "returns1afterinsert; returns0duplicatehandle/ID",
+        "milliseconds conversion seconds/nanoseconds"
+      ]
+    },
+    {
+      "path": "analiz/native/ui-deep/muf-core35/2e259b4c.c",
+      "refs": [
+        "asyncStartAnimation SetTimer(this,50,id,0)"
+      ]
+    },
+    {
+      "path": "analiz/native/ui-deep/muf-core35/2e25a1c8.c",
+      "refs": [
+        "subsequentticks incrementcounter without rescheduling timer"
+      ]
+    },
+    {
+      "path": "analiz/native/ui-targeted/text-small3/2e24e7ac.c",
+      "refs": [
+        "DrawString copies incomingbytes and callsDFBsurface+bc/+fc; UTF8C2AD recognized"
+      ]
+    },
+    {
+      "path": "analiz/dosya-sistemleri-tam/07_MSLIB/libmuf.so",
+      "sha256": "494d4aa45a3c8d8e10760388d8d30111e9127a0357d38cdf97979b9f9bb16d96",
+      "refs": [
+        "0x2e230250 MEvtHandleD2 callsGOTKillTimer() noarg",
+        "0x2e22fdec KillTimer() tailRemoveTimer(handle)",
+        "0x2e24f7f4 virtualMoveRect callsSetRect thenvirtualMoveXY",
+        "0x2e2522c8 MoveXY invalidates/releasescachedsurface"
+      ]
+    }
+  ]
+}

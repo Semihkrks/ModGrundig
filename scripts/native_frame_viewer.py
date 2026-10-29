@@ -55,31 +55,48 @@ def preview_file(path):
 
 def frame_bytes(query):
     values = parse_qs(query, strict_parsing=True)
-    if set(values)-{'variant', 'scene', 'volume', 'mute', 'digits'}:
+    if set(values)-{'variant', 'scene', 'volume', 'mute', 'digits', 'elapsed_ms'}:
         raise ValueError('Unknown parameter')
     if any(len(v) != 1 for v in values.values()):
         raise ValueError('Duplicate parameter')
-    variant = values.get('variant', ['v7.5-tv'])[0]
+    variant = values.get('variant', ['v7.9-tv'])[0]
     scene = values.get('scene', ['volume'])[0]
     volume = int(values.get('volume', ['35'])[0])
     mute = values.get('mute', ['0'])[0]
     digits = values.get('digits', ['123'])[0]
-    if variant not in ('original', 'v3', 'v4', 'v5', 'v6', 'v7', 'v7-tv', 'v7.1-tv', 'v7.4-tv', 'v7.5-tv') or scene not in ('volume', 'numeric', 'mute') or not 0 <= volume <= 100 or mute not in ('0', '1'):
+    elapsed_ms = int(values.get('elapsed_ms', ['0'])[0])
+    if not 0<=elapsed_ms<=10000 or (elapsed_ms and (variant!='v7.6-tv' or scene!='numeric')):
+        raise ValueError('Invalid bounded countdown input')
+    if variant not in ('original', 'v3', 'v4', 'v5', 'v6', 'v7', 'v7-tv', 'v7.1-tv', 'v7.4-tv', 'v7.5-tv', 'v7.6-tv', 'v7.7-tv','v7.9-tv') or scene not in ('volume', 'numeric', 'mute', 'mute-key', 'timeout') or not 0 <= volume <= 100 or mute not in ('0', '1'):
         raise ValueError('Invalid bounded test input')
-    if not digits.isascii() or not digits.isdigit() or not 1 <= len(digits) <= (4 if variant=='v7.5-tv' else 5):
+    if scene in ('mute-key','timeout') and variant not in ('v7.7-tv','v7.9-tv'):
+        raise ValueError('Native lifecycle scenes require V7.7')
+    if not digits.isascii() or not digits.isdigit() or not 1 <= len(digits) <= (4 if variant in ('v7.5-tv','v7.6-tv','v7.7-tv','v7.9-tv') else 5):
         raise ValueError('Expected 1..5 ASCII digits')
-    key = (variant, scene, volume, mute, digits)
+    key = (variant, scene, volume, mute, digits, elapsed_ms)
     if key in CACHE:
         CACHE.move_to_end(key)
         return CACHE[key]
-    image, evidence = render(variant, volume, mute == '1') if scene == 'volume' else render_mute_badge(variant) if scene=='mute' else render_numeric(variant, digits)
+    if scene in ('mute-key','timeout'):
+        from native_mute_v77_rehost import render_flow
+        image,evidence=render_flow(variant,scene,volume,mute=='1')
+    else:
+        image, evidence = render(variant, volume, mute == '1') if scene == 'volume' else render_mute_badge(variant) if scene=='mute' else render_numeric(variant, digits, elapsed_ms=elapsed_ms)
     output = io.BytesIO()
     image.save(output, format='PNG')
     channel=evidence.get('channel_resolution')
     if channel and channel.get('native_name_bridge_installed'):
         channel={key:channel[key] for key in ('digits','number','matched','name','native_name_bridge_installed','data_source','device_database')}
-    metadata = {'variant': variant, 'scene': scene, 'volume': volume, 'mute': mute == '1', 'digits': digits,
+    panel_timeout_ms=None
+    for timer in evidence.get('native_volume_state',{}).get('state',{}).get('timers',[]):
+        if timer['name']=='SetTimer' and timer['args'][1:3]==[0,1]:panel_timeout_ms=timer['args'][0]
+    for timer in evidence.get('native_lifecycle',{}).get('timers',[]):
+        if timer[0]=='SetTimer' and timer[2:4]==[0,1]:panel_timeout_ms=timer[1]
+    metadata = {'variant': variant, 'scene': scene, 'volume': volume, 'mute': evidence.get('mute',mute == '1'), 'digits': digits,
                 'channel_resolution': channel,
+                'panel_timeout_ms':panel_timeout_ms,
+                'native_lifecycle':evidence.get('native_lifecycle'),
+                'countdown':evidence.get('native_name_bridge',{}).get('countdown') if evidence.get('native_name_bridge') else None,
                 'native_name_bridge': ({key:evidence['native_name_bridge'][key] for key in ('native_name_bridge_installed','data_source','device_database','helper_inputs')} if evidence.get('native_name_bridge') else None),
                 'specimen_layout': evidence.get('specimen_layout'),
                 'full_native_menu_executed':False,
@@ -111,6 +128,7 @@ class Handler(BaseHTTPRequestHandler):
             return
         url = urlsplit(self.path)
         channel_header=None
+        native_ui_header=None
         preview_response=False
         if len(url.query) > 256:
             self.send_error(400)
@@ -135,7 +153,10 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_error(500, 'Native rehost failed; no substitute frame generated')
                 return
             payload, mime = (png, 'image/png') if url.path.endswith('.png') else (metadata, 'application/json')
-            channel=json.loads(metadata).get('channel_resolution')
+            decoded=json.loads(metadata)
+            channel=decoded.get('channel_resolution')
+            if decoded['variant'] in ('v7.7-tv','v7.9-tv'):
+                native_ui_header=quote(json.dumps(dict(muted=decoded['mute'],panel_timeout_ms=decoded.get('panel_timeout_ms'),panel_open=decoded.get('native_lifecycle',{}).get('panel_open') if decoded.get('native_lifecycle') else decoded['scene']=='volume',badge_visible=decoded.get('native_lifecycle',{}).get('badge_visible') if decoded.get('native_lifecycle') else decoded['scene']=='mute')),safe='')
             if channel is not None:
                 channel_header=quote(json.dumps(channel,ensure_ascii=False),safe='')
         else:
@@ -145,6 +166,8 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('Content-Type', mime)
         self.send_header('Content-Length', str(len(payload)))
         self.send_header('Cache-Control', 'no-store')
+        if native_ui_header is not None:
+            self.send_header('X-Native-UI-State',native_ui_header)
         if channel_header is not None:
             self.send_header('X-Channel-Resolution',channel_header)
         self.send_header('X-Content-Type-Options', 'nosniff')

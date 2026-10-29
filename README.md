@@ -1,6 +1,6 @@
 # ModGrundig
 
-Eski nesil Grundig, Beko ve Arçelik televizyonlarının firmware’ini çevrimdışı açmak ve bağlantılarını kanıtlarıyla anlamak için araştırma deposu. UI adayları ayrı kopyalarda üretilir; özgün paketler korunur. Kullanıcıya göre V7.1 çalışıyor; V7.3 ses panelinde donma yaptığı için reddedildi. V7.1 tabanlı V7.4'te eksik GP geri yüklemesi düzeltildi ve çevrimdışı test edildi; yeni aday henüz cihazda doğrulanmadı.
+Eski nesil Grundig, Beko ve Arçelik televizyonlarının firmware’ini çevrimdışı açmak ve bağlantılarını kanıtlarıyla anlamak için araştırma deposu. UI adayları ayrı kopyalarda üretilir; özgün paketler korunur. Kullanıcı 27 Ekim 2026'da V7.7'nin TV'de sorunsuz çalıştığını bildirdi; bu kapsamlı cihaz testi sayılmaz. V7.3 ses panelinde donma yaptığı için reddedilmişti. Güncel 4K araştırması ayrı tutulur; çalışan V7.7 değiştirilmez ve henüz doğrulanmış bir 4K kilit açma paketi yoktur.
 
 İnceleme [Reverse Engineer Anything](https://github.com/morluto/rea) ile yürür. `rea/` bu depoda sabit commit’e bağlı bir alt depodur. REA’nın kendi kaynağı, README’si ve lisansı [morluto/rea](https://github.com/morluto/rea) üzerindedir.
 
@@ -19,6 +19,21 @@ git lfs pull
 Git LFS, `analiz/ui-kod-cagrilari.json` ve `analiz/dosya-sistemleri-tam.tar` içindir. Alt depo gelmezse `git submodule update --init rea`.
 
 ## Nereden başlanır
+
+- [Geliştirme öncelikleri: hızlı kanal, oyun/PC yolu, kırpmasız görüntü ve kullanılabilir özellik adayları](docs/GELISTIRME_ONCELIK_PLANI.md)
+
+- [V7.9 test RAR'ı: seviyeli ses ikonları, yarım kenar boşluğu ve gerçek native kontroller](docs/UI_NATIVE_V79_SEVIYELI_SES.md)
+- [V7.10: native SEMIH menü logosu ve hız ayarlarının doğrulanan durumu](docs/UI_NATIVE_V710_SEMIH_VE_HIZ.md)
+- [Hızlı kanal geçişinin gerçek ayarı ve AV senkronizasyon yolu](docs/FAST_CHANNEL_ANALIZ.md)
+- [Hızlı açılış: mevcut STR yolu ve eksik etkinleştirme bağlantısı](docs/FAST_BOOT_ANALIZ.md)
+
+- [V7.8 veri test RAR'ı: V7.7 korunur, yalnız varsayılan TRT4K transponderi eklenir; decoder kilidi değildir](docs/UI_NATIVE_V78_TRANSPONDER.md)
+
+- [4K kanal araştırması: eksik TRT transponderi, kabul edilen HEVC türü ve decoder sınırları](docs/4K_YAYIN_VE_GIZLI_OZELLIKLER.md)
+
+- [V7.7: panelde mute düzeltmesi, ses0 sağ üst rozeti ve çizgisiz kanal girişi](docs/UI_NATIVE_V77_PAKET.md)
+
+- [V7.6: buyuk sessiz rozeti, gercek kayitsiz kanal mesaji ve native sayac](docs/UI_NATIVE_V76_PAKET.md)
 
 - [V7.5 test adayı: gerçek kanal adı bağlantısı; GP düzeltmesi, gri bar ve beyaz rozet korunur](docs/UI_NATIVE_V75_KANAL_ADI.md)
 - [V7.4: V7.3 donma kusuru, V7.1 tabanlı düzeltme, gri bar ve sağ üst beyaz rozet](docs/UI_NATIVE_V74_GP_DUZELTMESI.md)

@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-27",
+  "scope": "tuner/scanning/service classification only",
+  "modules": [
+    {
+      "module": "07_MSLIB/libmsrv_dvb.so",
+      "sha256": "93fe7286bb7fb9bf3d33ccf75556985f68666fe485241099c20bb7165bc88d97",
+      "processed": 8,
+      "decompiled": 8,
+      "c_exports": 8,
+      "evidence_dir": "dvb"
+    },
+    {
+      "module": "07_MSLIB/libmsrv_dvb_customer.so",
+      "sha256": "67b12c70234292c6afeffc489d91ae3101f95c2a4ff7fcc1f726bb4505e6e761",
+      "processed": 4,
+      "decompiled": 4,
+      "c_exports": 4,
+      "evidence_dir": "customer"
+    },
+    {
+      "module": "07_MSLIB/libmsrv_dvbs_customer.so",
+      "sha256": "9c3d825e7162bb36495c9e74ddc345d151e4b8e51e3190f822d25e607b7cd9ed",
+      "processed": 3,
+      "decompiled": 3,
+      "c_exports": 3,
+      "evidence_dir": "satellite"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "sha256": "4ebd5fc038a843b26c03b6cb6b44b5e9052820bea388c5d4fc1913b840e83949",
+      "processed": 1,
+      "decompiled": 1,
+      "c_exports": 1,
+      "evidence_dir": "pmt"
+    }
+  ],
+  "functions_examined": 17,
+  "decompiled": 17,
+  "firmware_executed": false,
+  "source_bytes_changed": false,
+  "patches_applied": false,
+  "findings": [
+    {
+      "id": "HEVC_SERVICE_ALREADY_TV",
+      "proof": [
+        "customer/2e192540.c",
+        "service-case-assembly.json",
+        "customer-vtable-bindings.json"
+      ],
+      "function": "0x2e192540",
+      "case_target": "0x2e192668",
+      "behavior": "service0x1f maps internal TV1, subtype0 in customer override"
+    },
+    {
+      "id": "HEVC_PMT_ALREADY_CAPTURED",
+      "proof": [
+        "pmt/2dca7ed8.c",
+        "pmt/2dca7ed8.json"
+      ],
+      "function": "0x2dca7ed8",
+      "branch_compare": "0x2dca8318",
+      "storage_path": "0x2dca8508",
+      "behavior": "stream0x24 retained among at most3 video candidates with PID"
+    },
+    {
+      "id": "HEVC_CODEC5_FORWARD",
+      "proof": [
+        "dvb/2d53bf88.c",
+        "classifier-assembly.json"
+      ],
+      "function": "0x2d53bf88",
+      "branch": "0x2d53c01c",
+      "store": "0x2d53c100",
+      "behavior": "stream0x24 maps internal video type5, retains PID; no width/height test"
+    },
+    {
+      "id": "SATELLITE_FILTERS_NOT_UHD",
+      "proof": [
+        "customer/2e191a98.c",
+        "customer/2e191888.c",
+        "satellite/2e973aa8.c"
+      ],
+      "behavior": "unknown7 and somedata3 skipped; TV1 accepted subject to user TV/radio/FTA, LCN and operator rules"
+    },
+    {
+      "id": "BASE_CLASSIFIER_IS_OLDER",
+      "proof": [
+        "dvb/2d53c128.c",
+        "customer/2e192540.c"
+      ],
+      "behavior": "basebound0x1a excludes1f but customerbound0x20 andcase1f overrides; patching base alone unjustified"
+    },
+    {
+      "id": "HEVC_SPECIFIC_SUPPORT_GATE_ACCEPTS",
+      "proof": [
+        "gates/2e19784c.c",
+        "gates/gate-proof.json"
+      ],
+      "mask": "0x8242140e",
+      "bit31": true,
+      "behavior": "Satellite parser mode2 recognizes1f, copies it and returns true before any external feature query; cablemode1+operator8exception doesnotapply"
+    }
+  ],
+  "missing": [
+    "No live parser object/vtable trace",
+    "No actual broadcast PMT/SDT descriptors or active channel DB from device",
+    "HEVC Main/Main10/profile/level/bitdepth support not established by service type",
+    "Demod lock, RF transponder validity and actual VDEC decode/display not tested"
+  ],
+  "patch_recommendation": "No evidence-backed tuner/filter unlock patch identified. Existing customer scanner/classifier already accepts HEVC service and PMT stream type; decoder must be assessed independently.",
+  "methodology": "Direct Ghidra -process -noanalysis -readOnly with ephemeral t9=entry; source hash verified; static Capstone jump-table derivation; no extracted code execution",
+  "continuation_2026_10_27": {
+    "user_observation": "No UHD channels ever visible, including before mods; auto scan used; manual scan not tried",
+    "remaining_gate_query": "gates/2e19784c.c",
+    "processed": 1,
+    "decompiled": 1,
+    "proof": "gates/gate-proof.json",
+    "new_result": "SpecificSupport mask8242140e includesbit31; satellite2 acceptsHEVC1f without4Kflag query",
+    "classification_correction": "program+1c16bitfield often treated asLCN in previous prose, semanticlayoutnotproven; keepfield unnamed",
+    "transponder_audit_owned_by_parent": "../transponders/turksat-current-tp-audit.json",
+    "patch": "No tuner binary patch justified; missing default transponder is a separate data-driven finding"
+  }
+}

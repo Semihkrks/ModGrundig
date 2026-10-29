@@ -1,0 +1,47 @@
+Direct Capstone disassembly of generated patch bytes; not REA Evidence.
+Pinned source SHA256 494cfd8dbe9817ff29240d29e5e7e8e31667265da38214d818557e94914dbf87
+Patched ELF SHA256 861d97c013c4d56e093a69cf779abfa6ea78e6c17233af5d6b2b3ba075b0b4ea
+
+Helper (no loads/stores/calls):
+01161400 a8020324 addiu $v1, $zero, 0x2a8
+01161404 0e000012 beqz $s0, 0x1161440
+01161408 00000000 nop 
+0116140c 1500432c sltiu $v1, $v0, 0x15
+01161410 07006014 bnez $v1, 0x1161430
+01161414 00000000 nop 
+01161418 3d00432c sltiu $v1, $v0, 0x3d
+0116141c 07006014 bnez $v1, 0x116143c
+01161420 00000000 nop 
+01161424 87080324 addiu $v1, $zero, 0x887
+01161428 05000010 b 0x1161440
+0116142c 00000000 nop 
+01161430 86080324 addiu $v1, $zero, 0x886
+01161434 02000010 b 0x1161440
+01161438 00000000 nop 
+0116143c aa020324 addiu $v1, $zero, 0x2aa
+01161440 0800e003 jr $ra
+01161444 00000000 nop 
+
+Installed local mode0 hook and preserved predecessors/successors:
+00fb81f8 2900d093 lbu $s0, 0x29($fp)
+00fb81fc 2c00c28f lw $v0, 0x2c($fp)
+00fb8200 1800dc8f lw $gp, 0x18($fp)
+00fb8204 0b101000 movn $v0, $zero, $s0
+00fb8208 2b800200 sltu $s0, $zero, $v0
+00fb820c 0085450c jal 0x1161400
+00fb8210 00000000 nop 
+00fb8214 4000c3af sw $v1, 0x40($fp)
+00fb8218 84080324 addiu $v1, $zero, 0x884
+00fb821c a2020224 addiu $v0, $zero, 0x2a2
+00fb8220 0b185000 movn $v1, $v0, $s0
+00fb8224 4400c3af sw $v1, 0x44($fp)
+00fb8228 89ff033c lui $v1, 0xff89
+00fb822c 89896334 ori $v1, $v1, 0x8989
+00fb8230 00ff023c lui $v0, 0xff00
+00fb8234 d4824234 ori $v0, $v0, 0x82d4
+00fb8238 0b185000 movn $v1, $v0, $s0
+00fb823c 4800c3af sw $v1, 0x48($fp)
+00fb8240 c000c28f lw $v0, 0xc0($fp)
+00fb8244 a801508c lw $s0, 0x1a8($v0)
+
+No new exception cleanup/FDE: pure leaf does not call or throw; asynchronous unwind at helper PC is unverified.

@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-27",
+  "status": "PASS_READ_ONLY_NO_ACTIONABLE_FINDINGS",
+  "production_helper_sha256": "8ee4cf80c5054d9f1c652e8c7f78cd2484be2f542bcfd79d8ef9a28aba33c1cd",
+  "production_helper_size": 224,
+  "production_files": {
+    "scripts/native_ui_v77_mute.py": "471d33666347d7f0930b31b079f491c3618bc0ce7aa313d64168b4f1a12b7b96",
+    "scripts/native_ui_v77_elf.py": "42d006ebba34ff89945473d5a9ede90dadfd9b6cde8703491bab2ded0bb310bc",
+    "scripts/build_native_ui_v77_tv.py": "476c4d5c0fbbaa112afd219b5b1b4e5a11541bcdfe9a2d6f45b34f899a34966d"
+  },
+  "reviewed": [
+    "OriginalOnKeymodeword1to0 leavesSetMute(!IsMuted)andCECmode3instructions unchanged",
+    "ActualSoundInstancepointera0 retained bypredicateS0; confirmedoriginalGOTsymbolIsMuted/GetMainVolume",
+    "OriginalTimerFP+1c dispatchlocal dead afterbranch; snapshotcapturebeforeKillTimerandparentKill; nolateframepointerdereference",
+    "MIPSjal/delayslotmodebyvalueargument andoriginalGPload afterhelper",
+    "PredicateIsMutedtrue returns1forallmodes; onlyfalsecapturedmode0querieslocalzero; ARC2/3localzero cannotcreatebadge",
+    "FDEGP/RA/callee-saved and64KiBcombinedELFplacementcontract",
+    "Synchronouscachedmuteflagwrite chain storedin synchronous-cache.json"
+  ],
+  "actual_tests": {
+    "command": "tools/native-volume-venv/Scripts/python.exe scripts/test_native_ui_v77_mute.py",
+    "passed": 8,
+    "failed": 0,
+    "scope": "installedOnKey/Refresh/timeout/predicateUIinstructionpaths withmodeledsound/app/renderboundaries"
+  },
+  "unresolved": [
+    "FullTVapplication/actualdisplaydriver/runtimekeydispatcher notexecuted",
+    "AudiohardwarecompletionandphysicalARC/CECbehaviornotmeasured",
+    "ActualfirmwareupdateacceptanceandTVregressionsneedphysicaldevicevalidation"
+  ],
+  "actionable_findings": []
+}

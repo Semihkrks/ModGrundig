@@ -1,0 +1,116 @@
+[
+  {
+    "source": "07_MSLIB/libmsrv_dvb.so",
+    "gp": "0x2d5dfc20",
+    "jump_table": "0x2d5a05ac",
+    "service_type": "0x19",
+    "branch_target": "0x2d53c274",
+    "instructions": [
+      {
+        "va": "0x2d53c274",
+        "hex": "01000224",
+        "mnemonic": "addiu",
+        "operands": "$v0, $zero, 1"
+      },
+      {
+        "va": "0x2d53c278",
+        "hex": "000000a2",
+        "mnemonic": "sb",
+        "operands": "$zero, ($s0)"
+      },
+      {
+        "va": "0x2d53c27c",
+        "hex": "000022a2",
+        "mnemonic": "sb",
+        "operands": "$v0, ($s1)"
+      },
+      {
+        "va": "0x2d53c280",
+        "hex": "2c00bf8f",
+        "mnemonic": "lw",
+        "operands": "$ra, 0x2c($sp)"
+      },
+      {
+        "va": "0x2d53c284",
+        "hex": "2800b28f",
+        "mnemonic": "lw",
+        "operands": "$s2, 0x28($sp)"
+      },
+      {
+        "va": "0x2d53c288",
+        "hex": "2400b18f",
+        "mnemonic": "lw",
+        "operands": "$s1, 0x24($sp)"
+      },
+      {
+        "va": "0x2d53c28c",
+        "hex": "2000b08f",
+        "mnemonic": "lw",
+        "operands": "$s0, 0x20($sp)"
+      },
+      {
+        "va": "0x2d53c290",
+        "hex": "0800e003",
+        "mnemonic": "jr",
+        "operands": "$ra"
+      }
+    ]
+  },
+  {
+    "source": "07_MSLIB/libmsrv_dvb_customer.so",
+    "gp": "0x2e1e9bb0",
+    "jump_table": "0x2e1c38a4",
+    "service_type": "0x1f",
+    "branch_target": "0x2e192668",
+    "instructions": [
+      {
+        "va": "0x2e192668",
+        "hex": "01000224",
+        "mnemonic": "addiu",
+        "operands": "$v0, $zero, 1"
+      },
+      {
+        "va": "0x2e19266c",
+        "hex": "000000a2",
+        "mnemonic": "sb",
+        "operands": "$zero, ($s0)"
+      },
+      {
+        "va": "0x2e192670",
+        "hex": "000022a2",
+        "mnemonic": "sb",
+        "operands": "$v0, ($s1)"
+      },
+      {
+        "va": "0x2e192674",
+        "hex": "2c00bf8f",
+        "mnemonic": "lw",
+        "operands": "$ra, 0x2c($sp)"
+      },
+      {
+        "va": "0x2e192678",
+        "hex": "2800b18f",
+        "mnemonic": "lw",
+        "operands": "$s1, 0x28($sp)"
+      },
+      {
+        "va": "0x2e19267c",
+        "hex": "2400b08f",
+        "mnemonic": "lw",
+        "operands": "$s0, 0x24($sp)"
+      },
+      {
+        "va": "0x2e192680",
+        "hex": "0800e003",
+        "mnemonic": "jr",
+        "operands": "$ra"
+      },
+      {
+        "va": "0x2e192684",
+        "hex": "3000bd27",
+        "mnemonic": "addiu",
+        "operands": "$sp, $sp, 0x30"
+      }
+    ]
+  }
+]

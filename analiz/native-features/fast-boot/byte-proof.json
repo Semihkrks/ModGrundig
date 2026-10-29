@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "method": "hash-pinned offline ELF byte checks plus retained direct Ghidra queries",
+  "source_sha256": {
+    "original_app": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+    "control": "0b154eba8a18cda242d3a1efafb74ca576bfb35bf0c6b9be38fc13fe16e518ea",
+    "database": "dbdef96fed7bd96d18b44c641203491649a04909d50aa8ecf8d7af4cf6fd4882",
+    "power": "394ee95f07383231c9cc1019d9d1fb8eb3c8309ae68fe2d3186ddf19c51dae39"
+  },
+  "v79_app_sha256": "861d97c013c4d56e093a69cf779abfa6ea78e6c17233af5d6b2b3ba075b0b4ea",
+  "compiled_transition_stubs": [
+    {
+      "symbol": "_ZN12MSrv_Control18Normal2FakeStandbyEv",
+      "elf_va": "0x2ea92410",
+      "size": 8,
+      "hex": "0800e00300000000",
+      "meaning": "jr ra; nop; no transition or state write"
+    },
+    {
+      "symbol": "_ZN12MSrv_Control18FakeStandby2NormalEv",
+      "elf_va": "0x2ea92418",
+      "size": 8,
+      "hex": "0800e00300000000",
+      "meaning": "jr ra; nop; no transition or state write"
+    },
+    {
+      "symbol": "_ZN12MSrv_Control26FakeStandby2ScheduledEventEv",
+      "elf_va": "0x2ea92428",
+      "size": 8,
+      "hex": "0800e00300000000",
+      "meaning": "jr ra; nop; no transition or state write"
+    }
+  ],
+  "customer_FakeStandby_success_stub": {
+    "symbol": "_ZN17ArSrvPowerManager11FakeStandbyEv",
+    "elf_va": "0x2df76494",
+    "size": 8,
+    "hex": "0800e00301000224"
+  },
+  "v79_unchanged_ranges": [
+    {
+      "va": "0xcf576c",
+      "bytes": 364,
+      "sha256": "9029b072700a3d0d0f0fdbcffc114cd85b54181a230113ae36326cae6a562183",
+      "v79_identical": true
+    },
+    {
+      "va": "0x53bf20",
+      "bytes": 96,
+      "sha256": "5096330a8262800c1a92fe0f1dcb0f9a485c8b4a199b900f309598ca8622ce86",
+      "v79_identical": true
+    },
+    {
+      "va": "0x53bf80",
+      "bytes": 112,
+      "sha256": "680fd940cd1cdfdc8502824a52023106ea45a971e1d9cbe99cd2db07c5e9ca75",
+      "v79_identical": true
+    },
+    {
+      "va": "0x532d8c",
+      "bytes": 104,
+      "sha256": "fe4bb2d27f5634566e0101791f95ac09a5d0680475d254d75e010ddaff7251fe",
+      "v79_identical": true
+    },
+    {
+      "va": "0x532f24",
+      "bytes": 708,
+      "sha256": "d5c6c5a7e993265b836695b9869dcd305bed9eeca6e7e798bcb9747ee803b5f4",
+      "v79_identical": true
+    },
+    {
+      "va": "0xea019c",
+      "bytes": 1860,
+      "sha256": "91955cb16b2b1728a9c634590f95923aec25ee5d9cab00c4dcd1b7a00091a878",
+      "v79_identical": true
+    }
+  ],
+  "retained_direct_ghidra_queries": [
+    {
+      "run": "ui-v1",
+      "target_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+      "complete_functions": 5
+    },
+    {
+      "run": "db-v1",
+      "target_sha256": "dbdef96fed7bd96d18b44c641203491649a04909d50aa8ecf8d7af4cf6fd4882",
+      "complete_functions": 5
+    },
+    {
+      "run": "control-v1",
+      "target_sha256": "0b154eba8a18cda242d3a1efafb74ca576bfb35bf0c6b9be38fc13fe16e518ea",
+      "complete_functions": 3
+    },
+    {
+      "run": "power-v1",
+      "target_sha256": "394ee95f07383231c9cc1019d9d1fb8eb3c8309ae68fe2d3186ddf19c51dae39",
+      "complete_functions": 5
+    },
+    {
+      "run": "app-power-v1",
+      "target_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+      "complete_functions": 2
+    },
+    {
+      "run": "app-resume-v1",
+      "target_sha256": "51f6bd24ea6f1a152aa7142e2b993dcd615d01840a7127a3cc2484fe29748916",
+      "complete_functions": 2
+    },
+    {
+      "run": "startup-v1",
+      "target_sha256": "394ee95f07383231c9cc1019d9d1fb8eb3c8309ae68fe2d3186ddf19c51dae39",
+      "complete_functions": 2
+    }
+  ],
+  "dynamic_import_inventory_sha256": "1e831494ee629983f981a9603394932313c1b6daf56e8bbed49a14db9a885248",
+  "fast_boot_dynamic_imports_in_original_226_ELFs": [
+    {
+      "path": "07_MSLIB/libmsrv_common.so",
+      "symbols": [
+        "_ZN12MSrv_Control19m_isFastBootStandbyE"
+      ]
+    },
+    {
+      "path": "08_APP/bin/dvbt_board",
+      "symbols": [
+        "_ZN20MSrv_System_Database15SetFactFastBootEh",
+        "_ZN20MSrv_System_Database18GetFastBootEnabledEv",
+        "_ZN20MSrv_System_Database15GetFactFastBootEv",
+        "_ZN20MSrv_System_Database18SetFastBootEnabledEh",
+        "_ZN12MSrv_Control19m_isFastBootStandbyE"
+      ]
+    }
+  ],
+  "build_metadata_flags_equal_zero": {
+    "FAST_BOOT_ENABLE": true,
+    "ACTIVE_STANDBY_MODE_ENABLE": true
+  },
+  "decision": "do_not_enable_fast_boot_setting",
+  "reason": "UI and persistent fields exist, but the selected power path lacks a verified fast-boot setting consumer; legacy transition entry points are stubs.",
+  "patch_emitted": false,
+  "firmware_executed": false,
+  "firmware_bytes_modified": false,
+  "device_speed_measured": false
+}

@@ -9,7 +9,7 @@ from ubireader.ubi_io import ubi_file
 from ubireader.ubifs import ubifs,nodes
 from ubireader.ubifs import defines as D
 
-parser=argparse.ArgumentParser();parser.add_argument('--revision',choices=('v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv'),default='v7-tv');args=parser.parse_args()
+parser=argparse.ArgumentParser();parser.add_argument('--revision',choices=('v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.8-tv','v7.9-tv','v7.10-tv'),default='v7-tv');args=parser.parse_args()
 image=ROOT/f'analiz/native-ui-candidate/{args.revision}/package/08_APP.ubifs'
 metadata=inspect_image(image);entry=next(r for r in metadata['entries'] if r['path']=='/bin/dvbt_board')
 crc=verify_index_crc(image);f=ubi_file(str(image),1);counts=Counter();elf_counts=Counter()

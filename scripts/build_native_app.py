@@ -37,7 +37,7 @@ ASSET_PATHS = {
     680:'rc/ARimages/Grundig/volume/mute_icon.png',681:'rc/ARimages/Grundig/volume/volume_ellipse.png',
     682:'rc/ARimages/Grundig/volume/volume_icon.png',
 }
-REVISIONS = ('v2', 'v3', 'v8', 'v7-tv', 'v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv')
+REVISIONS = ('v2', 'v3', 'v8', 'v7-tv', 'v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.8-tv','v7.9-tv','v7.10-tv')
 # V8's deterministic overlay verifier owns the exact set of appended IDs/bytes.
 # Packaging additionally confines new PNGs to the private modern directory and
 # its one versioned Home subdirectory. No arbitrary nested paths are admitted.
@@ -122,10 +122,15 @@ def verify_index_crc(path):
 def overlay_records(revision='v2'):
     if revision not in REVISIONS:
         raise ValueError('Unsupported build revision')
-    if revision in ('v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv'):
+    if revision in ('v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.8-tv','v7.9-tv','v7.10-tv'):
         # Raster reconstruction is platform-dependent. This stdlib-only API
         # checks the code-pinned output map after full Windows reconstruction.
-        if revision=='v7.5-tv':from build_native_ui_v75_tv import verified_packaging_records
+        if revision=='v7.10-tv':from build_native_ui_v710_tv import verified_packaging_records
+        elif revision=='v7.9-tv':from build_native_ui_v79_tv import verified_packaging_records
+        elif revision=='v7.8-tv':from build_native_ui_v78_tv import verified_packaging_records
+        elif revision=='v7.7-tv':from build_native_ui_v77_tv import verified_packaging_records
+        elif revision=='v7.6-tv':from build_native_ui_v76_tv import verified_packaging_records
+        elif revision=='v7.5-tv':from build_native_ui_v75_tv import verified_packaging_records
         elif revision=='v7.4-tv':from build_native_ui_v74_tv import verified_packaging_records
         elif revision=='v7.3-tv':from build_native_ui_v73_tv import verified_packaging_records
         elif revision=='v7.2-tv':from build_native_ui_v72_tv import verified_packaging_records
@@ -215,7 +220,7 @@ def expected_with_additions(original, records, revision):
             if row['original_sha256'] is None or original[name]['type']!='regular':
                 raise ValueError('Existing overlay must identify an original regular file')
             continue
-        if revision not in ('v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv') or not V8_ADDED_FILE.fullmatch(name) or row['original_sha256'] is not None:
+        if revision not in ('v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.8-tv','v7.9-tv','v7.10-tv') or not V8_ADDED_FILE.fullmatch(name) or row['original_sha256'] is not None:
             raise ValueError('Unapproved new resource path')
         missing = []
         parent = p.parent
@@ -239,7 +244,7 @@ def expected_with_additions(original, records, revision):
 
 
 def compressor_policy(revision, compressor):
-    if compressor not in ('lzo','zlib','lzo-raw-elf') or (compressor!='lzo' and revision not in ('v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv')) or (compressor=='zlib' and revision!='v8'):
+    if compressor not in ('lzo','zlib','lzo-raw-elf') or (compressor!='lzo' and revision not in ('v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.8-tv','v7.9-tv','v7.10-tv')) or (compressor=='zlib' and revision!='v8'):
         raise ValueError('Unsupported filesystem compressor/revision')
     if compressor=='zlib':
         proof=ROOT/'analiz/native-ui-port-v8/kernel-compression.json'
@@ -398,7 +403,7 @@ def main(revision='v2', fs_compressor='lzo'):
             'No firmware signature/boot acceptance claim. Native rendering must be checked on target before installation approval.'])
     save(OUTPUT/'app-build-validation.json',report)
     save(OUTPUT/'app-index.json',inspected)
-    if revision in ('v3','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv'):
+    if revision in ('v3','v8','v7-tv','v7.1-tv','v7.2-tv','v7.3-tv','v7.4-tv','v7.5-tv','v7.6-tv','v7.7-tv','v7.8-tv','v7.9-tv','v7.10-tv'):
         shutil.copyfile(ROOT/f'analiz/native-ui-candidate/{revision}/manifest.json',OUTPUT/'overlay-manifest.json')
         shutil.copyfile(ROOT/'analiz/native-png-probe/decode-result.json',OUTPUT/'png-decoder-validation.json')
     else:

@@ -1,0 +1,152 @@
+{
+  "status": "PASS_BOUNDED_METADATA_ONLY",
+  "new_raw_function_bodies": 3,
+  "unique_new_function_bodies": 2,
+  "revisited_function_bodies": 1,
+  "revisited_functions": [
+    "base_UpdateProgInfoByServiceType_0x2d53db70_previously_decompiled_in_tuner_stage1"
+  ],
+  "new_decompiled_functions": 0,
+  "bounded_cases": 13,
+  "functions": [
+    {
+      "source": "base",
+      "name": "_ZN20MW_DVB_SI_PSI_Parser17_ResetServiceInfoER19MW_DVB_PROGRAM_INFO",
+      "va": "0x2d53d010",
+      "bytes": 120,
+      "body_sha256": "9d67d3b5dedbcd32ed2b2437c48b59a0ff94c73ed75bb0131fa3f775f8fd3be0"
+    },
+    {
+      "source": "base",
+      "name": "_ZN20MW_DVB_SI_PSI_Parser28_UpdateProgInfoByServiceTypeEhP16_DVB_PROGRAMINFOP19MW_DVB_PROGRAM_INFO",
+      "va": "0x2d53db70",
+      "bytes": 208,
+      "body_sha256": "16db46bbf4b54e2f99de79061f683e490411f5652985802d117ceb4436d0ab00"
+    },
+    {
+      "source": "customer",
+      "name": "_ZN29MW_DVB_SI_PSI_Parser_Customer17_ResetServiceInfoER19MW_DVB_PROGRAM_INFO",
+      "va": "0x2e19c210",
+      "bytes": 72,
+      "body_sha256": "b14a299b6e2a98e2f9c770fa4082d24c36c66ab4f25f4095ddaa03f4d1103f74"
+    }
+  ],
+  "cases": [
+    {
+      "case": "base_reset_initializes_lcn_ffff_not_zero",
+      "lcn": 65535,
+      "instructions": 90
+    },
+    {
+      "case": "GetNitLCN_disabled",
+      "lcn": 65535,
+      "instructions": 7
+    },
+    {
+      "case": "GetNitLCN_missing_sid",
+      "lcn": 65535,
+      "instructions": 731
+    },
+    {
+      "case": "GetNitLCN_valid_sid",
+      "lcn": 12,
+      "instructions": 34
+    },
+    {
+      "case": "GetNitLCN_zero_lcn_sid",
+      "lcn": 0,
+      "instructions": 41
+    },
+    {
+      "case": "sat_unknown_lcn",
+      "mode": 2,
+      "country_value": 1,
+      "operator_value": 0,
+      "sort_value": 0,
+      "lcn": 65535,
+      "accepted": true,
+      "instructions": 49
+    },
+    {
+      "case": "sat_zero_lcn",
+      "mode": 2,
+      "country_value": 1,
+      "operator_value": 0,
+      "sort_value": 0,
+      "lcn": 0,
+      "accepted": false,
+      "instructions": 55
+    },
+    {
+      "case": "zero_exception_country8_sat_sort12",
+      "mode": 2,
+      "country_value": 8,
+      "operator_value": 0,
+      "sort_value": 12,
+      "lcn": 0,
+      "accepted": true,
+      "instructions": 59
+    },
+    {
+      "case": "zero_exception_country12_mode0",
+      "mode": 0,
+      "country_value": 12,
+      "operator_value": 0,
+      "sort_value": 0,
+      "lcn": 0,
+      "accepted": true,
+      "instructions": 47
+    },
+    {
+      "case": "mode1_operator4_1023",
+      "mode": 1,
+      "country_value": 1,
+      "operator_value": 4,
+      "sort_value": 0,
+      "lcn": 1023,
+      "accepted": true,
+      "instructions": 46
+    },
+    {
+      "case": "mode1_operator4_1024",
+      "mode": 1,
+      "country_value": 1,
+      "operator_value": 4,
+      "sort_value": 0,
+      "lcn": 1024,
+      "accepted": false,
+      "instructions": 46
+    },
+    {
+      "case": "mode1_operator7_999",
+      "mode": 1,
+      "country_value": 1,
+      "operator_value": 7,
+      "sort_value": 0,
+      "lcn": 999,
+      "accepted": true,
+      "instructions": 50
+    },
+    {
+      "case": "mode1_operator7_1000",
+      "mode": 1,
+      "country_value": 1,
+      "operator_value": 7,
+      "sort_value": 0,
+      "lcn": 1000,
+      "accepted": false,
+      "instructions": 50
+    }
+  ],
+  "customer_reset_to_base_GOT": {
+    "load": "0x2e19c22c",
+    "call": "0x2e19c230",
+    "slot": "0x2e1e2458",
+    "target_symbol": "_ZN20MW_DVB_SI_PSI_Parser17_ResetServiceInfoER19MW_DVB_PROGRAM_INFO"
+  },
+  "limitations": [
+    "No full firmware process or hardware execution.",
+    "LCN initialization and selected cases are proven; caller ordering and live broadcast LCN remain unobserved.",
+    "Country/operator numeric meanings are not inferred from these raw values."
+  ]
+}

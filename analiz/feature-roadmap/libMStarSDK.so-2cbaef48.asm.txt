@@ -1,0 +1,14 @@
+2cbaef48: lui $gp, 0x1e
+2cbaef4c: addiu $gp, $gp, -0x5888
+2cbaef50: addu $gp, $gp, $t9
+2cbaef54: andi $a1, $a1, 0xff
+2cbaef58: bnez $a1, 0x2cbaef70
+2cbaef5c: addiu $v1, $zero, 1
+2cbaef60: lw $v0, 0x82c($gp)
+2cbaef64: sb $zero, ($v0)
+2cbaef68: jr $ra
+2cbaef6c: addiu $v0, $zero, 1
+2cbaef70: lw $v0, 0x82c($gp)
+2cbaef74: sb $v1, ($v0)
+2cbaef78: jr $ra
+2cbaef7c: addiu $v0, $zero, 1

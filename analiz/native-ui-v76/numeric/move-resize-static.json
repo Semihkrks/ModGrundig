@@ -1,0 +1,1733 @@
+{
+  "source": "analiz/dosya-sistemleri-tam/07_MSLIB/libmuf.so",
+  "sha256": "494d4aa45a3c8d8e10760388d8d30111e9127a0357d38cdf97979b9f9bb16d96",
+  "functions": [
+    {
+      "name": "MoveRect",
+      "va": "0x2e24f7f4",
+      "bytes": 116,
+      "sha256": "d8452931e67dc596289173e4ad46af2eeb9e3de64d1d7b1820f8a8d21b8284f2",
+      "instructions": [
+        {
+          "va": "0x2e24f7f4",
+          "bytes": "07001c3c",
+          "mnemonic": "lui",
+          "operands": "$gp, 7"
+        },
+        {
+          "va": "0x2e24f7f8",
+          "bytes": "ecc09c27",
+          "mnemonic": "addiu",
+          "operands": "$gp, $gp, -0x3f14"
+        },
+        {
+          "va": "0x2e24f7fc",
+          "bytes": "21e09903",
+          "mnemonic": "addu",
+          "operands": "$gp, $gp, $t9"
+        },
+        {
+          "va": "0x2e24f800",
+          "bytes": "d8ffbd27",
+          "mnemonic": "addiu",
+          "operands": "$sp, $sp, -0x28"
+        },
+        {
+          "va": "0x2e24f804",
+          "bytes": "2400bfaf",
+          "mnemonic": "sw",
+          "operands": "$ra, 0x24($sp)"
+        },
+        {
+          "va": "0x2e24f808",
+          "bytes": "2000b2af",
+          "mnemonic": "sw",
+          "operands": "$s2, 0x20($sp)"
+        },
+        {
+          "va": "0x2e24f80c",
+          "bytes": "1c00b1af",
+          "mnemonic": "sw",
+          "operands": "$s1, 0x1c($sp)"
+        },
+        {
+          "va": "0x2e24f810",
+          "bytes": "1800b0af",
+          "mnemonic": "sw",
+          "operands": "$s0, 0x18($sp)"
+        },
+        {
+          "va": "0x2e24f814",
+          "bytes": "1000bcaf",
+          "mnemonic": "sw",
+          "operands": "$gp, 0x10($sp)"
+        },
+        {
+          "va": "0x2e24f818",
+          "bytes": "8087998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x7880($gp)"
+        },
+        {
+          "va": "0x2e24f81c",
+          "bytes": "21808000",
+          "mnemonic": "move",
+          "operands": "$s0, $a0"
+        },
+        {
+          "va": "0x2e24f820",
+          "bytes": "2190a000",
+          "mnemonic": "move",
+          "operands": "$s2, $a1"
+        },
+        {
+          "va": "0x2e24f824",
+          "bytes": "2128e000",
+          "mnemonic": "move",
+          "operands": "$a1, $a3"
+        },
+        {
+          "va": "0x2e24f828",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e24f82c",
+          "bytes": "2188c000",
+          "mnemonic": "move",
+          "operands": "$s1, $a2"
+        },
+        {
+          "va": "0x2e24f830",
+          "bytes": "0000028e",
+          "mnemonic": "lw",
+          "operands": "$v0, ($s0)"
+        },
+        {
+          "va": "0x2e24f834",
+          "bytes": "21200002",
+          "mnemonic": "move",
+          "operands": "$a0, $s0"
+        },
+        {
+          "va": "0x2e24f838",
+          "bytes": "21284002",
+          "mnemonic": "move",
+          "operands": "$a1, $s2"
+        },
+        {
+          "va": "0x2e24f83c",
+          "bytes": "2000598c",
+          "mnemonic": "lw",
+          "operands": "$t9, 0x20($v0)"
+        },
+        {
+          "va": "0x2e24f840",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e24f844",
+          "bytes": "21302002",
+          "mnemonic": "move",
+          "operands": "$a2, $s1"
+        },
+        {
+          "va": "0x2e24f848",
+          "bytes": "2400bf8f",
+          "mnemonic": "lw",
+          "operands": "$ra, 0x24($sp)"
+        },
+        {
+          "va": "0x2e24f84c",
+          "bytes": "1000bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x10($sp)"
+        },
+        {
+          "va": "0x2e24f850",
+          "bytes": "01000224",
+          "mnemonic": "addiu",
+          "operands": "$v0, $zero, 1"
+        },
+        {
+          "va": "0x2e24f854",
+          "bytes": "2000b28f",
+          "mnemonic": "lw",
+          "operands": "$s2, 0x20($sp)"
+        },
+        {
+          "va": "0x2e24f858",
+          "bytes": "1c00b18f",
+          "mnemonic": "lw",
+          "operands": "$s1, 0x1c($sp)"
+        },
+        {
+          "va": "0x2e24f85c",
+          "bytes": "1800b08f",
+          "mnemonic": "lw",
+          "operands": "$s0, 0x18($sp)"
+        },
+        {
+          "va": "0x2e24f860",
+          "bytes": "0800e003",
+          "mnemonic": "jr",
+          "operands": "$ra"
+        },
+        {
+          "va": "0x2e24f864",
+          "bytes": "2800bd27",
+          "mnemonic": "addiu",
+          "operands": "$sp, $sp, 0x28"
+        }
+      ]
+    },
+    {
+      "name": "MoveXY",
+      "va": "0x2e2522c8",
+      "bytes": 176,
+      "sha256": "4fbdf4fa9e767e7761739c5780db78399f860d9963c1aecbb53ddd999867c04e",
+      "instructions": [
+        {
+          "va": "0x2e2522c8",
+          "bytes": "07001c3c",
+          "mnemonic": "lui",
+          "operands": "$gp, 7"
+        },
+        {
+          "va": "0x2e2522cc",
+          "bytes": "18969c27",
+          "mnemonic": "addiu",
+          "operands": "$gp, $gp, -0x69e8"
+        },
+        {
+          "va": "0x2e2522d0",
+          "bytes": "21e09903",
+          "mnemonic": "addu",
+          "operands": "$gp, $gp, $t9"
+        },
+        {
+          "va": "0x2e2522d4",
+          "bytes": "d8ffbd27",
+          "mnemonic": "addiu",
+          "operands": "$sp, $sp, -0x28"
+        },
+        {
+          "va": "0x2e2522d8",
+          "bytes": "2400bfaf",
+          "mnemonic": "sw",
+          "operands": "$ra, 0x24($sp)"
+        },
+        {
+          "va": "0x2e2522dc",
+          "bytes": "2000b2af",
+          "mnemonic": "sw",
+          "operands": "$s2, 0x20($sp)"
+        },
+        {
+          "va": "0x2e2522e0",
+          "bytes": "1c00b1af",
+          "mnemonic": "sw",
+          "operands": "$s1, 0x1c($sp)"
+        },
+        {
+          "va": "0x2e2522e4",
+          "bytes": "1800b0af",
+          "mnemonic": "sw",
+          "operands": "$s0, 0x18($sp)"
+        },
+        {
+          "va": "0x2e2522e8",
+          "bytes": "1000bcaf",
+          "mnemonic": "sw",
+          "operands": "$gp, 0x10($sp)"
+        },
+        {
+          "va": "0x2e2522ec",
+          "bytes": "c88e998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x7138($gp)"
+        },
+        {
+          "va": "0x2e2522f0",
+          "bytes": "21908000",
+          "mnemonic": "move",
+          "operands": "$s2, $a0"
+        },
+        {
+          "va": "0x2e2522f4",
+          "bytes": "2180a000",
+          "mnemonic": "move",
+          "operands": "$s0, $a1"
+        },
+        {
+          "va": "0x2e2522f8",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e2522fc",
+          "bytes": "2188c000",
+          "mnemonic": "move",
+          "operands": "$s1, $a2"
+        },
+        {
+          "va": "0x2e252300",
+          "bytes": "1000bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x10($sp)"
+        },
+        {
+          "va": "0x2e252304",
+          "bytes": "21204002",
+          "mnemonic": "move",
+          "operands": "$a0, $s2"
+        },
+        {
+          "va": "0x2e252308",
+          "bytes": "8887998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x7878($gp)"
+        },
+        {
+          "va": "0x2e25230c",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e252310",
+          "bytes": "21280000",
+          "mnemonic": "move",
+          "operands": "$a1, $zero"
+        },
+        {
+          "va": "0x2e252314",
+          "bytes": "c401448e",
+          "mnemonic": "lw",
+          "operands": "$a0, 0x1c4($s2)"
+        },
+        {
+          "va": "0x2e252318",
+          "bytes": "1000bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x10($sp)"
+        },
+        {
+          "va": "0x2e25231c",
+          "bytes": "1c0050ae",
+          "mnemonic": "sw",
+          "operands": "$s0, 0x1c($s2)"
+        },
+        {
+          "va": "0x2e252320",
+          "bytes": "06008010",
+          "mnemonic": "beqz",
+          "operands": "$a0, 0x2e25233c"
+        },
+        {
+          "va": "0x2e252324",
+          "bytes": "200051ae",
+          "mnemonic": "sw",
+          "operands": "$s1, 0x20($s2)"
+        },
+        {
+          "va": "0x2e252328",
+          "bytes": "0c00998c",
+          "mnemonic": "lw",
+          "operands": "$t9, 0xc($a0)"
+        },
+        {
+          "va": "0x2e25232c",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e252330",
+          "bytes": "00000000",
+          "mnemonic": "nop",
+          "operands": ""
+        },
+        {
+          "va": "0x2e252334",
+          "bytes": "1000bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x10($sp)"
+        },
+        {
+          "va": "0x2e252338",
+          "bytes": "c40140ae",
+          "mnemonic": "sw",
+          "operands": "$zero, 0x1c4($s2)"
+        },
+        {
+          "va": "0x2e25233c",
+          "bytes": "c88e998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x7138($gp)"
+        },
+        {
+          "va": "0x2e252340",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e252344",
+          "bytes": "21204002",
+          "mnemonic": "move",
+          "operands": "$a0, $s2"
+        },
+        {
+          "va": "0x2e252348",
+          "bytes": "0000428e",
+          "mnemonic": "lw",
+          "operands": "$v0, ($s2)"
+        },
+        {
+          "va": "0x2e25234c",
+          "bytes": "2800598c",
+          "mnemonic": "lw",
+          "operands": "$t9, 0x28($v0)"
+        },
+        {
+          "va": "0x2e252350",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e252354",
+          "bytes": "21204002",
+          "mnemonic": "move",
+          "operands": "$a0, $s2"
+        },
+        {
+          "va": "0x2e252358",
+          "bytes": "2400bf8f",
+          "mnemonic": "lw",
+          "operands": "$ra, 0x24($sp)"
+        },
+        {
+          "va": "0x2e25235c",
+          "bytes": "1000bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x10($sp)"
+        },
+        {
+          "va": "0x2e252360",
+          "bytes": "01000224",
+          "mnemonic": "addiu",
+          "operands": "$v0, $zero, 1"
+        },
+        {
+          "va": "0x2e252364",
+          "bytes": "2000b28f",
+          "mnemonic": "lw",
+          "operands": "$s2, 0x20($sp)"
+        },
+        {
+          "va": "0x2e252368",
+          "bytes": "1c00b18f",
+          "mnemonic": "lw",
+          "operands": "$s1, 0x1c($sp)"
+        },
+        {
+          "va": "0x2e25236c",
+          "bytes": "1800b08f",
+          "mnemonic": "lw",
+          "operands": "$s0, 0x18($sp)"
+        },
+        {
+          "va": "0x2e252370",
+          "bytes": "0800e003",
+          "mnemonic": "jr",
+          "operands": "$ra"
+        },
+        {
+          "va": "0x2e252374",
+          "bytes": "2800bd27",
+          "mnemonic": "addiu",
+          "operands": "$sp, $sp, 0x28"
+        }
+      ]
+    },
+    {
+      "name": "SetRect",
+      "va": "0x2e261b74",
+      "bytes": 36,
+      "sha256": "87febae6756329eeb2137722a7f8d453386f78367363f91fa3e00a9bf6e47134",
+      "instructions": [
+        {
+          "va": "0x2e261b74",
+          "bytes": "0c00a28c",
+          "mnemonic": "lw",
+          "operands": "$v0, 0xc($a1)"
+        },
+        {
+          "va": "0x2e261b78",
+          "bytes": "0000a38c",
+          "mnemonic": "lw",
+          "operands": "$v1, ($a1)"
+        },
+        {
+          "va": "0x2e261b7c",
+          "bytes": "0400a68c",
+          "mnemonic": "lw",
+          "operands": "$a2, 4($a1)"
+        },
+        {
+          "va": "0x2e261b80",
+          "bytes": "0800a78c",
+          "mnemonic": "lw",
+          "operands": "$a3, 8($a1)"
+        },
+        {
+          "va": "0x2e261b84",
+          "bytes": "280082ac",
+          "mnemonic": "sw",
+          "operands": "$v0, 0x28($a0)"
+        },
+        {
+          "va": "0x2e261b88",
+          "bytes": "1c0083ac",
+          "mnemonic": "sw",
+          "operands": "$v1, 0x1c($a0)"
+        },
+        {
+          "va": "0x2e261b8c",
+          "bytes": "200086ac",
+          "mnemonic": "sw",
+          "operands": "$a2, 0x20($a0)"
+        },
+        {
+          "va": "0x2e261b90",
+          "bytes": "0800e003",
+          "mnemonic": "jr",
+          "operands": "$ra"
+        },
+        {
+          "va": "0x2e261b94",
+          "bytes": "240087ac",
+          "mnemonic": "sw",
+          "operands": "$a3, 0x24($a0)"
+        }
+      ]
+    },
+    {
+      "name": "Invalidate",
+      "va": "0x2e25034c",
+      "bytes": 420,
+      "sha256": "394b86261698935f57a3a742e40a5492e20ecb6724b8e7410e90e07f8bcb133a",
+      "instructions": [
+        {
+          "va": "0x2e25034c",
+          "bytes": "07001c3c",
+          "mnemonic": "lui",
+          "operands": "$gp, 7"
+        },
+        {
+          "va": "0x2e250350",
+          "bytes": "94b59c27",
+          "mnemonic": "addiu",
+          "operands": "$gp, $gp, -0x4a6c"
+        },
+        {
+          "va": "0x2e250354",
+          "bytes": "21e09903",
+          "mnemonic": "addu",
+          "operands": "$gp, $gp, $t9"
+        },
+        {
+          "va": "0x2e250358",
+          "bytes": "c0ffbd27",
+          "mnemonic": "addiu",
+          "operands": "$sp, $sp, -0x40"
+        },
+        {
+          "va": "0x2e25035c",
+          "bytes": "3c00bfaf",
+          "mnemonic": "sw",
+          "operands": "$ra, 0x3c($sp)"
+        },
+        {
+          "va": "0x2e250360",
+          "bytes": "3800b3af",
+          "mnemonic": "sw",
+          "operands": "$s3, 0x38($sp)"
+        },
+        {
+          "va": "0x2e250364",
+          "bytes": "3400b2af",
+          "mnemonic": "sw",
+          "operands": "$s2, 0x34($sp)"
+        },
+        {
+          "va": "0x2e250368",
+          "bytes": "3000b1af",
+          "mnemonic": "sw",
+          "operands": "$s1, 0x30($sp)"
+        },
+        {
+          "va": "0x2e25036c",
+          "bytes": "2c00b0af",
+          "mnemonic": "sw",
+          "operands": "$s0, 0x2c($sp)"
+        },
+        {
+          "va": "0x2e250370",
+          "bytes": "1000bcaf",
+          "mnemonic": "sw",
+          "operands": "$gp, 0x10($sp)"
+        },
+        {
+          "va": "0x2e250374",
+          "bytes": "3083998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x7cd0($gp)"
+        },
+        {
+          "va": "0x2e250378",
+          "bytes": "21808000",
+          "mnemonic": "move",
+          "operands": "$s0, $a0"
+        },
+        {
+          "va": "0x2e25037c",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e250380",
+          "bytes": "cc019124",
+          "mnemonic": "addiu",
+          "operands": "$s1, $a0, 0x1cc"
+        },
+        {
+          "va": "0x2e250384",
+          "bytes": "1000bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x10($sp)"
+        },
+        {
+          "va": "0x2e250388",
+          "bytes": "21202002",
+          "mnemonic": "move",
+          "operands": "$a0, $s1"
+        },
+        {
+          "va": "0x2e25038c",
+          "bytes": "d489998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x762c($gp)"
+        },
+        {
+          "va": "0x2e250390",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e250394",
+          "bytes": "21904000",
+          "mnemonic": "move",
+          "operands": "$s2, $v0"
+        },
+        {
+          "va": "0x2e250398",
+          "bytes": "2400028e",
+          "mnemonic": "lw",
+          "operands": "$v0, 0x24($s0)"
+        },
+        {
+          "va": "0x2e25039c",
+          "bytes": "2c004010",
+          "mnemonic": "beqz",
+          "operands": "$v0, 0x2e250450"
+        },
+        {
+          "va": "0x2e2503a0",
+          "bytes": "1000bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x10($sp)"
+        },
+        {
+          "va": "0x2e2503a4",
+          "bytes": "2800028e",
+          "mnemonic": "lw",
+          "operands": "$v0, 0x28($s0)"
+        },
+        {
+          "va": "0x2e2503a8",
+          "bytes": "2a004010",
+          "mnemonic": "beqz",
+          "operands": "$v0, 0x2e250454"
+        },
+        {
+          "va": "0x2e2503ac",
+          "bytes": "bc8b998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x7444($gp)"
+        },
+        {
+          "va": "0x2e2503b0",
+          "bytes": "948c998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x736c($gp)"
+        },
+        {
+          "va": "0x2e2503b4",
+          "bytes": "1800b327",
+          "mnemonic": "addiu",
+          "operands": "$s3, $sp, 0x18"
+        },
+        {
+          "va": "0x2e2503b8",
+          "bytes": "21200002",
+          "mnemonic": "move",
+          "operands": "$a0, $s0"
+        },
+        {
+          "va": "0x2e2503bc",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e2503c0",
+          "bytes": "21286002",
+          "mnemonic": "move",
+          "operands": "$a1, $s3"
+        },
+        {
+          "va": "0x2e2503c4",
+          "bytes": "e401028e",
+          "mnemonic": "lw",
+          "operands": "$v0, 0x1e4($s0)"
+        },
+        {
+          "va": "0x2e2503c8",
+          "bytes": "11004010",
+          "mnemonic": "beqz",
+          "operands": "$v0, 0x2e250410"
+        },
+        {
+          "va": "0x2e2503cc",
+          "bytes": "1000bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x10($sp)"
+        },
+        {
+          "va": "0x2e2503d0",
+          "bytes": "1c00438c",
+          "mnemonic": "lw",
+          "operands": "$v1, 0x1c($v0)"
+        },
+        {
+          "va": "0x2e2503d4",
+          "bytes": "04000224",
+          "mnemonic": "addiu",
+          "operands": "$v0, $zero, 4"
+        },
+        {
+          "va": "0x2e2503d8",
+          "bytes": "3402058e",
+          "mnemonic": "lw",
+          "operands": "$a1, 0x234($s0)"
+        },
+        {
+          "va": "0x2e2503dc",
+          "bytes": "3002048e",
+          "mnemonic": "lw",
+          "operands": "$a0, 0x230($s0)"
+        },
+        {
+          "va": "0x2e2503e0",
+          "bytes": "2c020d8e",
+          "mnemonic": "lw",
+          "operands": "$t5, 0x22c($s0)"
+        },
+        {
+          "va": "0x2e2503e4",
+          "bytes": "3d006210",
+          "mnemonic": "beq",
+          "operands": "$v1, $v0, 0x2e2504dc"
+        },
+        {
+          "va": "0x2e2503e8",
+          "bytes": "28020c8e",
+          "mnemonic": "lw",
+          "operands": "$t4, 0x228($s0)"
+        },
+        {
+          "va": "0x2e2503ec",
+          "bytes": "2000a98f",
+          "mnemonic": "lw",
+          "operands": "$t1, 0x20($sp)"
+        },
+        {
+          "va": "0x2e2503f0",
+          "bytes": "03002011",
+          "mnemonic": "beqz",
+          "operands": "$t1, 0x2e250400"
+        },
+        {
+          "va": "0x2e2503f4",
+          "bytes": "2400a88f",
+          "mnemonic": "lw",
+          "operands": "$t0, 0x24($sp)"
+        },
+        {
+          "va": "0x2e2503f8",
+          "bytes": "20000015",
+          "mnemonic": "bnez",
+          "operands": "$t0, 0x2e25047c"
+        },
+        {
+          "va": "0x2e2503fc",
+          "bytes": "00000000",
+          "mnemonic": "nop",
+          "operands": ""
+        },
+        {
+          "va": "0x2e250400",
+          "bytes": "2400a5af",
+          "mnemonic": "sw",
+          "operands": "$a1, 0x24($sp)"
+        },
+        {
+          "va": "0x2e250404",
+          "bytes": "2000a4af",
+          "mnemonic": "sw",
+          "operands": "$a0, 0x20($sp)"
+        },
+        {
+          "va": "0x2e250408",
+          "bytes": "1c00adaf",
+          "mnemonic": "sw",
+          "operands": "$t5, 0x1c($sp)"
+        },
+        {
+          "va": "0x2e25040c",
+          "bytes": "1800acaf",
+          "mnemonic": "sw",
+          "operands": "$t4, 0x18($sp)"
+        },
+        {
+          "va": "0x2e250410",
+          "bytes": "bc8b998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x7444($gp)"
+        },
+        {
+          "va": "0x2e250414",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e250418",
+          "bytes": "21202002",
+          "mnemonic": "move",
+          "operands": "$a0, $s1"
+        },
+        {
+          "va": "0x2e25041c",
+          "bytes": "1000bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x10($sp)"
+        },
+        {
+          "va": "0x2e250420",
+          "bytes": "21204002",
+          "mnemonic": "move",
+          "operands": "$a0, $s2"
+        },
+        {
+          "va": "0x2e250424",
+          "bytes": "fc8a998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x7504($gp)"
+        },
+        {
+          "va": "0x2e250428",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e25042c",
+          "bytes": "21286002",
+          "mnemonic": "move",
+          "operands": "$a1, $s3"
+        },
+        {
+          "va": "0x2e250430",
+          "bytes": "3c00bf8f",
+          "mnemonic": "lw",
+          "operands": "$ra, 0x3c($sp)"
+        },
+        {
+          "va": "0x2e250434",
+          "bytes": "1000bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x10($sp)"
+        },
+        {
+          "va": "0x2e250438",
+          "bytes": "3800b38f",
+          "mnemonic": "lw",
+          "operands": "$s3, 0x38($sp)"
+        },
+        {
+          "va": "0x2e25043c",
+          "bytes": "3400b28f",
+          "mnemonic": "lw",
+          "operands": "$s2, 0x34($sp)"
+        },
+        {
+          "va": "0x2e250440",
+          "bytes": "3000b18f",
+          "mnemonic": "lw",
+          "operands": "$s1, 0x30($sp)"
+        },
+        {
+          "va": "0x2e250444",
+          "bytes": "2c00b08f",
+          "mnemonic": "lw",
+          "operands": "$s0, 0x2c($sp)"
+        },
+        {
+          "va": "0x2e250448",
+          "bytes": "0800e003",
+          "mnemonic": "jr",
+          "operands": "$ra"
+        },
+        {
+          "va": "0x2e25044c",
+          "bytes": "4000bd27",
+          "mnemonic": "addiu",
+          "operands": "$sp, $sp, 0x40"
+        },
+        {
+          "va": "0x2e250450",
+          "bytes": "bc8b998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x7444($gp)"
+        },
+        {
+          "va": "0x2e250454",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e250458",
+          "bytes": "21202002",
+          "mnemonic": "move",
+          "operands": "$a0, $s1"
+        },
+        {
+          "va": "0x2e25045c",
+          "bytes": "3c00bf8f",
+          "mnemonic": "lw",
+          "operands": "$ra, 0x3c($sp)"
+        },
+        {
+          "va": "0x2e250460",
+          "bytes": "1000bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x10($sp)"
+        },
+        {
+          "va": "0x2e250464",
+          "bytes": "3800b38f",
+          "mnemonic": "lw",
+          "operands": "$s3, 0x38($sp)"
+        },
+        {
+          "va": "0x2e250468",
+          "bytes": "3400b28f",
+          "mnemonic": "lw",
+          "operands": "$s2, 0x34($sp)"
+        },
+        {
+          "va": "0x2e25046c",
+          "bytes": "3000b18f",
+          "mnemonic": "lw",
+          "operands": "$s1, 0x30($sp)"
+        },
+        {
+          "va": "0x2e250470",
+          "bytes": "2c00b08f",
+          "mnemonic": "lw",
+          "operands": "$s0, 0x2c($sp)"
+        },
+        {
+          "va": "0x2e250474",
+          "bytes": "0800e003",
+          "mnemonic": "jr",
+          "operands": "$ra"
+        },
+        {
+          "va": "0x2e250478",
+          "bytes": "4000bd27",
+          "mnemonic": "addiu",
+          "operands": "$sp, $sp, 0x40"
+        },
+        {
+          "va": "0x2e25047c",
+          "bytes": "e5ff8010",
+          "mnemonic": "beqz",
+          "operands": "$a0, 0x2e250414"
+        },
+        {
+          "va": "0x2e250480",
+          "bytes": "bc8b998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x7444($gp)"
+        },
+        {
+          "va": "0x2e250484",
+          "bytes": "e3ffa010",
+          "mnemonic": "beqz",
+          "operands": "$a1, 0x2e250414"
+        },
+        {
+          "va": "0x2e250488",
+          "bytes": "1800a78f",
+          "mnemonic": "lw",
+          "operands": "$a3, 0x18($sp)"
+        },
+        {
+          "va": "0x2e25048c",
+          "bytes": "1c00a68f",
+          "mnemonic": "lw",
+          "operands": "$a2, 0x1c($sp)"
+        },
+        {
+          "va": "0x2e250490",
+          "bytes": "2110a501",
+          "mnemonic": "addu",
+          "operands": "$v0, $t5, $a1"
+        },
+        {
+          "va": "0x2e250494",
+          "bytes": "21188401",
+          "mnemonic": "addu",
+          "operands": "$v1, $t4, $a0"
+        },
+        {
+          "va": "0x2e250498",
+          "bytes": "2140c800",
+          "mnemonic": "addu",
+          "operands": "$t0, $a2, $t0"
+        },
+        {
+          "va": "0x2e25049c",
+          "bytes": "2148e900",
+          "mnemonic": "addu",
+          "operands": "$t1, $a3, $t1"
+        },
+        {
+          "va": "0x2e2504a0",
+          "bytes": "2a50ec00",
+          "mnemonic": "slt",
+          "operands": "$t2, $a3, $t4"
+        },
+        {
+          "va": "0x2e2504a4",
+          "bytes": "2a58cd00",
+          "mnemonic": "slt",
+          "operands": "$t3, $a2, $t5"
+        },
+        {
+          "va": "0x2e2504a8",
+          "bytes": "2a204800",
+          "mnemonic": "slt",
+          "operands": "$a0, $v0, $t0"
+        },
+        {
+          "va": "0x2e2504ac",
+          "bytes": "2a286900",
+          "mnemonic": "slt",
+          "operands": "$a1, $v1, $t1"
+        },
+        {
+          "va": "0x2e2504b0",
+          "bytes": "0a388a01",
+          "mnemonic": "movz",
+          "operands": "$a3, $t4, $t2"
+        },
+        {
+          "va": "0x2e2504b4",
+          "bytes": "0a30ab01",
+          "mnemonic": "movz",
+          "operands": "$a2, $t5, $t3"
+        },
+        {
+          "va": "0x2e2504b8",
+          "bytes": "0b100401",
+          "mnemonic": "movn",
+          "operands": "$v0, $t0, $a0"
+        },
+        {
+          "va": "0x2e2504bc",
+          "bytes": "0b182501",
+          "mnemonic": "movn",
+          "operands": "$v1, $t1, $a1"
+        },
+        {
+          "va": "0x2e2504c0",
+          "bytes": "23104600",
+          "mnemonic": "subu",
+          "operands": "$v0, $v0, $a2"
+        },
+        {
+          "va": "0x2e2504c4",
+          "bytes": "23186700",
+          "mnemonic": "subu",
+          "operands": "$v1, $v1, $a3"
+        },
+        {
+          "va": "0x2e2504c8",
+          "bytes": "2400a2af",
+          "mnemonic": "sw",
+          "operands": "$v0, 0x24($sp)"
+        },
+        {
+          "va": "0x2e2504cc",
+          "bytes": "2000a3af",
+          "mnemonic": "sw",
+          "operands": "$v1, 0x20($sp)"
+        },
+        {
+          "va": "0x2e2504d0",
+          "bytes": "1c00a6af",
+          "mnemonic": "sw",
+          "operands": "$a2, 0x1c($sp)"
+        },
+        {
+          "va": "0x2e2504d4",
+          "bytes": "cfff0010",
+          "mnemonic": "b",
+          "operands": "0x2e250414"
+        },
+        {
+          "va": "0x2e2504d8",
+          "bytes": "1800a7af",
+          "mnemonic": "sw",
+          "operands": "$a3, 0x18($sp)"
+        },
+        {
+          "va": "0x2e2504dc",
+          "bytes": "c001028e",
+          "mnemonic": "lw",
+          "operands": "$v0, 0x1c0($s0)"
+        },
+        {
+          "va": "0x2e2504e0",
+          "bytes": "bc01038e",
+          "mnemonic": "lw",
+          "operands": "$v1, 0x1bc($s0)"
+        },
+        {
+          "va": "0x2e2504e4",
+          "bytes": "2168a201",
+          "mnemonic": "addu",
+          "operands": "$t5, $t5, $v0"
+        },
+        {
+          "va": "0x2e2504e8",
+          "bytes": "c0ff0010",
+          "mnemonic": "b",
+          "operands": "0x2e2503ec"
+        },
+        {
+          "va": "0x2e2504ec",
+          "bytes": "21608301",
+          "mnemonic": "addu",
+          "operands": "$t4, $t4, $v1"
+        }
+      ]
+    },
+    {
+      "name": "ClearDFBSurface",
+      "va": "0x2e251f84",
+      "bytes": 372,
+      "sha256": "1416e35ec1e819f969e746ea63004eb447882dcf1325f6e2cdbf7d6050f99742",
+      "instructions": [
+        {
+          "va": "0x2e251f84",
+          "bytes": "07001c3c",
+          "mnemonic": "lui",
+          "operands": "$gp, 7"
+        },
+        {
+          "va": "0x2e251f88",
+          "bytes": "5c999c27",
+          "mnemonic": "addiu",
+          "operands": "$gp, $gp, -0x66a4"
+        },
+        {
+          "va": "0x2e251f8c",
+          "bytes": "21e09903",
+          "mnemonic": "addu",
+          "operands": "$gp, $gp, $t9"
+        },
+        {
+          "va": "0x2e251f90",
+          "bytes": "c0ffbd27",
+          "mnemonic": "addiu",
+          "operands": "$sp, $sp, -0x40"
+        },
+        {
+          "va": "0x2e251f94",
+          "bytes": "3c00bfaf",
+          "mnemonic": "sw",
+          "operands": "$ra, 0x3c($sp)"
+        },
+        {
+          "va": "0x2e251f98",
+          "bytes": "3800b2af",
+          "mnemonic": "sw",
+          "operands": "$s2, 0x38($sp)"
+        },
+        {
+          "va": "0x2e251f9c",
+          "bytes": "3400b1af",
+          "mnemonic": "sw",
+          "operands": "$s1, 0x34($sp)"
+        },
+        {
+          "va": "0x2e251fa0",
+          "bytes": "3000b0af",
+          "mnemonic": "sw",
+          "operands": "$s0, 0x30($sp)"
+        },
+        {
+          "va": "0x2e251fa4",
+          "bytes": "1800bcaf",
+          "mnemonic": "sw",
+          "operands": "$gp, 0x18($sp)"
+        },
+        {
+          "va": "0x2e251fa8",
+          "bytes": "fc81998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x7e04($gp)"
+        },
+        {
+          "va": "0x2e251fac",
+          "bytes": "21908000",
+          "mnemonic": "move",
+          "operands": "$s2, $a0"
+        },
+        {
+          "va": "0x2e251fb0",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e251fb4",
+          "bytes": "2180a000",
+          "mnemonic": "move",
+          "operands": "$s0, $a1"
+        },
+        {
+          "va": "0x2e251fb8",
+          "bytes": "1800bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x18($sp)"
+        },
+        {
+          "va": "0x2e251fbc",
+          "bytes": "2f004010",
+          "mnemonic": "beqz",
+          "operands": "$v0, 0x2e25207c"
+        },
+        {
+          "va": "0x2e251fc0",
+          "bytes": "c40142ae",
+          "mnemonic": "sw",
+          "operands": "$v0, 0x1c4($s2)"
+        },
+        {
+          "va": "0x2e251fc4",
+          "bytes": "7880998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x7f88($gp)"
+        },
+        {
+          "va": "0x2e251fc8",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e251fcc",
+          "bytes": "00000000",
+          "mnemonic": "nop",
+          "operands": ""
+        },
+        {
+          "va": "0x2e251fd0",
+          "bytes": "1800bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x18($sp)"
+        },
+        {
+          "va": "0x2e251fd4",
+          "bytes": "3492998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x6dcc($gp)"
+        },
+        {
+          "va": "0x2e251fd8",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e251fdc",
+          "bytes": "21204000",
+          "mnemonic": "move",
+          "operands": "$a0, $v0"
+        },
+        {
+          "va": "0x2e251fe0",
+          "bytes": "1800bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x18($sp)"
+        },
+        {
+          "va": "0x2e251fe4",
+          "bytes": "35000012",
+          "mnemonic": "beqz",
+          "operands": "$s0, 0x2e2520bc"
+        },
+        {
+          "va": "0x2e251fe8",
+          "bytes": "21884000",
+          "mnemonic": "move",
+          "operands": "$s1, $v0"
+        },
+        {
+          "va": "0x2e251fec",
+          "bytes": "948c998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x736c($gp)"
+        },
+        {
+          "va": "0x2e251ff0",
+          "bytes": "21204002",
+          "mnemonic": "move",
+          "operands": "$a0, $s2"
+        },
+        {
+          "va": "0x2e251ff4",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e251ff8",
+          "bytes": "2000a527",
+          "mnemonic": "addiu",
+          "operands": "$a1, $sp, 0x20"
+        },
+        {
+          "va": "0x2e251ffc",
+          "bytes": "2000a98f",
+          "mnemonic": "lw",
+          "operands": "$t1, 0x20($sp)"
+        },
+        {
+          "va": "0x2e252000",
+          "bytes": "0000088e",
+          "mnemonic": "lw",
+          "operands": "$t0, ($s0)"
+        },
+        {
+          "va": "0x2e252004",
+          "bytes": "0800028e",
+          "mnemonic": "lw",
+          "operands": "$v0, 8($s0)"
+        },
+        {
+          "va": "0x2e252008",
+          "bytes": "2800a48f",
+          "mnemonic": "lw",
+          "operands": "$a0, 0x28($sp)"
+        },
+        {
+          "va": "0x2e25200c",
+          "bytes": "2400ab8f",
+          "mnemonic": "lw",
+          "operands": "$t3, 0x24($sp)"
+        },
+        {
+          "va": "0x2e252010",
+          "bytes": "04000a8e",
+          "mnemonic": "lw",
+          "operands": "$t2, 4($s0)"
+        },
+        {
+          "va": "0x2e252014",
+          "bytes": "0c00038e",
+          "mnemonic": "lw",
+          "operands": "$v1, 0xc($s0)"
+        },
+        {
+          "va": "0x2e252018",
+          "bytes": "2c00a58f",
+          "mnemonic": "lw",
+          "operands": "$a1, 0x2c($sp)"
+        },
+        {
+          "va": "0x2e25201c",
+          "bytes": "21202401",
+          "mnemonic": "addu",
+          "operands": "$a0, $t1, $a0"
+        },
+        {
+          "va": "0x2e252020",
+          "bytes": "21100201",
+          "mnemonic": "addu",
+          "operands": "$v0, $t0, $v0"
+        },
+        {
+          "va": "0x2e252024",
+          "bytes": "21286501",
+          "mnemonic": "addu",
+          "operands": "$a1, $t3, $a1"
+        },
+        {
+          "va": "0x2e252028",
+          "bytes": "2a308200",
+          "mnemonic": "slt",
+          "operands": "$a2, $a0, $v0"
+        },
+        {
+          "va": "0x2e25202c",
+          "bytes": "21184301",
+          "mnemonic": "addu",
+          "operands": "$v1, $t2, $v1"
+        },
+        {
+          "va": "0x2e252030",
+          "bytes": "0b108600",
+          "mnemonic": "movn",
+          "operands": "$v0, $a0, $a2"
+        },
+        {
+          "va": "0x2e252034",
+          "bytes": "2a380901",
+          "mnemonic": "slt",
+          "operands": "$a3, $t0, $t1"
+        },
+        {
+          "va": "0x2e252038",
+          "bytes": "2a20a300",
+          "mnemonic": "slt",
+          "operands": "$a0, $a1, $v1"
+        },
+        {
+          "va": "0x2e25203c",
+          "bytes": "2a304b01",
+          "mnemonic": "slt",
+          "operands": "$a2, $t2, $t3"
+        },
+        {
+          "va": "0x2e252040",
+          "bytes": "0a480701",
+          "mnemonic": "movz",
+          "operands": "$t1, $t0, $a3"
+        },
+        {
+          "va": "0x2e252044",
+          "bytes": "0b18a400",
+          "mnemonic": "movn",
+          "operands": "$v1, $a1, $a0"
+        },
+        {
+          "va": "0x2e252048",
+          "bytes": "0a584601",
+          "mnemonic": "movz",
+          "operands": "$t3, $t2, $a2"
+        },
+        {
+          "va": "0x2e25204c",
+          "bytes": "23204900",
+          "mnemonic": "subu",
+          "operands": "$a0, $v0, $t1"
+        },
+        {
+          "va": "0x2e252050",
+          "bytes": "23286b00",
+          "mnemonic": "subu",
+          "operands": "$a1, $v1, $t3"
+        },
+        {
+          "va": "0x2e252054",
+          "bytes": "2a102201",
+          "mnemonic": "slt",
+          "operands": "$v0, $t1, $v0"
+        },
+        {
+          "va": "0x2e252058",
+          "bytes": "2a186301",
+          "mnemonic": "slt",
+          "operands": "$v1, $t3, $v1"
+        },
+        {
+          "va": "0x2e25205c",
+          "bytes": "0a200200",
+          "mnemonic": "movz",
+          "operands": "$a0, $zero, $v0"
+        },
+        {
+          "va": "0x2e252060",
+          "bytes": "0a280300",
+          "mnemonic": "movz",
+          "operands": "$a1, $zero, $v1"
+        },
+        {
+          "va": "0x2e252064",
+          "bytes": "1800bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x18($sp)"
+        },
+        {
+          "va": "0x2e252068",
+          "bytes": "21382001",
+          "mnemonic": "move",
+          "operands": "$a3, $t1"
+        },
+        {
+          "va": "0x2e25206c",
+          "bytes": "21306001",
+          "mnemonic": "move",
+          "operands": "$a2, $t3"
+        },
+        {
+          "va": "0x2e252070",
+          "bytes": "21108000",
+          "mnemonic": "move",
+          "operands": "$v0, $a0"
+        },
+        {
+          "va": "0x2e252074",
+          "bytes": "07008014",
+          "mnemonic": "bnez",
+          "operands": "$a0, 0x2e252094"
+        },
+        {
+          "va": "0x2e252078",
+          "bytes": "2118a000",
+          "mnemonic": "move",
+          "operands": "$v1, $a1"
+        },
+        {
+          "va": "0x2e25207c",
+          "bytes": "3c00bf8f",
+          "mnemonic": "lw",
+          "operands": "$ra, 0x3c($sp)"
+        },
+        {
+          "va": "0x2e252080",
+          "bytes": "3800b28f",
+          "mnemonic": "lw",
+          "operands": "$s2, 0x38($sp)"
+        },
+        {
+          "va": "0x2e252084",
+          "bytes": "3400b18f",
+          "mnemonic": "lw",
+          "operands": "$s1, 0x34($sp)"
+        },
+        {
+          "va": "0x2e252088",
+          "bytes": "3000b08f",
+          "mnemonic": "lw",
+          "operands": "$s0, 0x30($sp)"
+        },
+        {
+          "va": "0x2e25208c",
+          "bytes": "0800e003",
+          "mnemonic": "jr",
+          "operands": "$ra"
+        },
+        {
+          "va": "0x2e252090",
+          "bytes": "4000bd27",
+          "mnemonic": "addiu",
+          "operands": "$sp, $sp, 0x40"
+        },
+        {
+          "va": "0x2e252094",
+          "bytes": "faffa010",
+          "mnemonic": "beqz",
+          "operands": "$a1, 0x2e252080"
+        },
+        {
+          "va": "0x2e252098",
+          "bytes": "3c00bf8f",
+          "mnemonic": "lw",
+          "operands": "$ra, 0x3c($sp)"
+        },
+        {
+          "va": "0x2e25209c",
+          "bytes": "308d998f",
+          "mnemonic": "lw",
+          "operands": "$t9, -0x72d0($gp)"
+        },
+        {
+          "va": "0x2e2520a0",
+          "bytes": "2800a2af",
+          "mnemonic": "sw",
+          "operands": "$v0, 0x28($sp)"
+        },
+        {
+          "va": "0x2e2520a4",
+          "bytes": "2c00a3af",
+          "mnemonic": "sw",
+          "operands": "$v1, 0x2c($sp)"
+        },
+        {
+          "va": "0x2e2520a8",
+          "bytes": "2000a7af",
+          "mnemonic": "sw",
+          "operands": "$a3, 0x20($sp)"
+        },
+        {
+          "va": "0x2e2520ac",
+          "bytes": "2400a6af",
+          "mnemonic": "sw",
+          "operands": "$a2, 0x24($sp)"
+        },
+        {
+          "va": "0x2e2520b0",
+          "bytes": "21280002",
+          "mnemonic": "move",
+          "operands": "$a1, $s0"
+        },
+        {
+          "va": "0x2e2520b4",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e2520b8",
+          "bytes": "21204002",
+          "mnemonic": "move",
+          "operands": "$a0, $s2"
+        },
+        {
+          "va": "0x2e2520bc",
+          "bytes": "c401448e",
+          "mnemonic": "lw",
+          "operands": "$a0, 0x1c4($s2)"
+        },
+        {
+          "va": "0x2e2520c0",
+          "bytes": "02161100",
+          "mnemonic": "srl",
+          "operands": "$v0, $s1, 0x18"
+        },
+        {
+          "va": "0x2e2520c4",
+          "bytes": "1000a2af",
+          "mnemonic": "sw",
+          "operands": "$v0, 0x10($sp)"
+        },
+        {
+          "va": "0x2e2520c8",
+          "bytes": "4800998c",
+          "mnemonic": "lw",
+          "operands": "$t9, 0x48($a0)"
+        },
+        {
+          "va": "0x2e2520cc",
+          "bytes": "ff002732",
+          "mnemonic": "andi",
+          "operands": "$a3, $s1, 0xff"
+        },
+        {
+          "va": "0x2e2520d0",
+          "bytes": "003c257e",
+          "mnemonic": "ext",
+          "operands": "$a1, $s1, 0x10, 8"
+        },
+        {
+          "va": "0x2e2520d4",
+          "bytes": "09f82003",
+          "mnemonic": "jalr",
+          "operands": "$t9"
+        },
+        {
+          "va": "0x2e2520d8",
+          "bytes": "003a267e",
+          "mnemonic": "ext",
+          "operands": "$a2, $s1, 8, 8"
+        },
+        {
+          "va": "0x2e2520dc",
+          "bytes": "3c00bf8f",
+          "mnemonic": "lw",
+          "operands": "$ra, 0x3c($sp)"
+        },
+        {
+          "va": "0x2e2520e0",
+          "bytes": "1800bc8f",
+          "mnemonic": "lw",
+          "operands": "$gp, 0x18($sp)"
+        },
+        {
+          "va": "0x2e2520e4",
+          "bytes": "3800b28f",
+          "mnemonic": "lw",
+          "operands": "$s2, 0x38($sp)"
+        },
+        {
+          "va": "0x2e2520e8",
+          "bytes": "3400b18f",
+          "mnemonic": "lw",
+          "operands": "$s1, 0x34($sp)"
+        },
+        {
+          "va": "0x2e2520ec",
+          "bytes": "3000b08f",
+          "mnemonic": "lw",
+          "operands": "$s0, 0x30($sp)"
+        },
+        {
+          "va": "0x2e2520f0",
+          "bytes": "0800e003",
+          "mnemonic": "jr",
+          "operands": "$ra"
+        },
+        {
+          "va": "0x2e2520f4",
+          "bytes": "4000bd27",
+          "mnemonic": "addiu",
+          "operands": "$sp, $sp, 0x40"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    "MoveRect sets rectangle before virtualMoveXY",
+    "MoveXY invalidates, clears/release cachedsurface, invalidates, invokes vtable+28",
+    "Invalidate skips zero width/height; may union previousrect if relevantnativeparentstateexists",
+    "Parent/root Invalidate aroundshrink avoids relying on unproven oldrectstate"
+  ],
+  "execution": "Static disassembly only; no original firmwareprocess executed"
+}

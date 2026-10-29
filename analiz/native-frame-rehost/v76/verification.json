@@ -1,0 +1,259 @@
+{
+  "passed": true,
+  "preview_tests": 9,
+  "historical_v75_tests": 5,
+  "combined_tests": 14,
+  "combined_seconds": 14.684,
+  "javascript_syntax": "node --check PASS",
+  "http": {
+    "passed": true,
+    "cases": [
+      {
+        "query": "scene=numeric&digits=01",
+        "status": "PASS",
+        "variant": "v7.6-tv",
+        "name": "TRT 1",
+        "width": 254
+      },
+      {
+        "query": "scene=numeric&digits=0000",
+        "status": "PASS",
+        "variant": "v7.6-tv",
+        "name": "Kayıtlı kanal yok",
+        "width": 254
+      },
+      {
+        "query": "scene=numeric&digits=01&elapsed_ms=1500",
+        "status": "PASS",
+        "variant": "v7.6-tv",
+        "name": "TRT 1",
+        "width": 127
+      },
+      {
+        "query": "scene=numeric&digits=01&elapsed_ms=3000",
+        "status": "PASS",
+        "variant": "v7.6-tv",
+        "name": "TRT 1",
+        "width": 0
+      },
+      {
+        "query": "scene=mute",
+        "status": "PASS",
+        "geometry": {
+          "outer_frame": [
+            1728,
+            19,
+            160,
+            230
+          ],
+          "root": [
+            1728,
+            19,
+            160,
+            230
+          ],
+          "panel": [
+            1728,
+            44,
+            158,
+            165
+          ],
+          "icon": [
+            1772,
+            74,
+            64,
+            64
+          ]
+        }
+      },
+      {
+        "query": "scene=volume&volume=0",
+        "status": "PASS",
+        "geometry": {
+          "outer_frame": [
+            0,
+            160,
+            160,
+            725
+          ],
+          "root_local": [
+            80,
+            126,
+            68,
+            490
+          ],
+          "root": [
+            80,
+            286,
+            68,
+            490
+          ],
+          "panel": [
+            80,
+            306,
+            68,
+            450
+          ],
+          "speaker": [
+            92,
+            699,
+            44,
+            44
+          ],
+          "track": [
+            111,
+            392,
+            6,
+            276
+          ],
+          "thumb": [
+            117,
+            658,
+            25,
+            25
+          ]
+        }
+      },
+      {
+        "query": "scene=volume&volume=35&mute=1",
+        "status": "PASS",
+        "geometry": {
+          "outer_frame": [
+            0,
+            160,
+            160,
+            725
+          ],
+          "root_local": [
+            80,
+            126,
+            68,
+            490
+          ],
+          "root": [
+            80,
+            286,
+            68,
+            490
+          ],
+          "panel": [
+            80,
+            306,
+            68,
+            450
+          ],
+          "speaker": [
+            92,
+            699,
+            44,
+            44
+          ],
+          "track": [
+            111,
+            392,
+            6,
+            276
+          ],
+          "thumb": [
+            117,
+            562,
+            25,
+            25
+          ]
+        }
+      },
+      {
+        "query": "digits12345",
+        "status": "PASS400"
+      }
+    ],
+    "server_pid": 16632
+  },
+  "browser": {
+    "tool": "Chrome DevTools real browser",
+    "url": "http://127.0.0.1:4174/",
+    "variant": "v7.6-tv",
+    "selected_variant": "v7.6-tv",
+    "image1920": true,
+    "keyboard_digits": "01",
+    "error": "",
+    "countdown_elapsed_requests": [
+      0,
+      50,
+      800,
+      1900,
+      3000
+    ],
+    "final_rendered_elapsed_ms": 3000,
+    "final_zero_rendered": true
+  },
+  "images": [
+    {
+      "name": "numeric01",
+      "scene": "numeric",
+      "png": "analiz\\native-frame-rehost\\v76\\numeric01.png",
+      "seconds": 0.923
+    },
+    {
+      "name": "numeric0000",
+      "scene": "numeric",
+      "png": "analiz\\native-frame-rehost\\v76\\numeric0000.png",
+      "seconds": 0.804
+    },
+    {
+      "name": "numeric01_half",
+      "scene": "numeric",
+      "png": "analiz\\native-frame-rehost\\v76\\numeric01_half.png",
+      "seconds": 1.341
+    },
+    {
+      "name": "numeric01_end",
+      "scene": "numeric",
+      "png": "analiz\\native-frame-rehost\\v76\\numeric01_end.png",
+      "seconds": 2.223
+    },
+    {
+      "name": "badge",
+      "scene": "badge",
+      "png": "analiz\\native-frame-rehost\\v76\\badge.png",
+      "seconds": 0.419
+    },
+    {
+      "name": "mute35",
+      "scene": "volume",
+      "png": "analiz\\native-frame-rehost\\v76\\mute35.png",
+      "seconds": 1.051
+    },
+    {
+      "name": "normal35",
+      "scene": "volume",
+      "png": "analiz\\native-frame-rehost\\v76\\normal35.png",
+      "seconds": 0.972
+    },
+    {
+      "name": "zero0",
+      "scene": "volume",
+      "png": "analiz\\native-frame-rehost\\v76\\zero0.png",
+      "seconds": 0.915
+    }
+  ],
+  "native_helpers": [
+    "CREATE",
+    "UPDATE",
+    "START_TIMER",
+    "TICK_TIMER"
+  ],
+  "limits": [
+    "Explicit PC demo channel fixture; firmware uses its native channel manager",
+    "Actual installed helper instructions and bounded MUF draw run; native services/timer delivery/Pillow output modeled",
+    "Full TV process, tuner, real compositor and physicalTVtimer not run",
+    "Browser renders native PNG snapshots and does not match target50ms refresh rate; final zero ensured"
+  ],
+  "television_tested": false,
+  "server": {
+    "pid": 16632,
+    "hidden": true,
+    "address": "127.0.0.1",
+    "port": 4174
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "status": "PASS_REAL_CHROMIUM_NATIVE_FRAME_VIEWER",
+  "port": 4175,
+  "cases": [
+    "default V7.9 native framebuffer loaded",
+    "volume + button reaches native level36",
+    "actual mute-key scene gray panel path",
+    "actual unmute-key scene",
+    "keyboard channel12 native name bridge"
+  ],
+  "page_errors": [],
+  "native_frame_responses": [
+    {
+      "url": "http://127.0.0.1:4175/frame.png?variant=v7.9-tv&scene=volume&volume=35&mute=0&digits=12",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4175/frame.png?variant=v7.9-tv&scene=volume&volume=36&mute=0&digits=12",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4175/frame.png?variant=v7.9-tv&scene=mute-key&volume=36&mute=0&digits=12",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4175/frame.png?variant=v7.9-tv&scene=mute-key&volume=36&mute=1&digits=12",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4175/frame.png?variant=v7.9-tv&scene=numeric&volume=36&mute=0&digits=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4175/frame.png?variant=v7.9-tv&scene=numeric&volume=36&mute=0&digits=12",
+      "status": 200
+    }
+  ],
+  "limitations": "Real browser requests actual installed MIPS frame model; sound/tuner/DirectFB services modeled; physicalTV untested"
+}

@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-29",
+  "evidence": "direct original ELF symbols and Capstone; no decompile or runtime test",
+  "functions": [
+    {
+      "module": "analiz\\dosya-sistemleri-tam\\07_MSLIB\\libmsrv_common.so",
+      "module_sha256": "06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21",
+      "name": "_ZN12MSrv_Picture16SetGameModeOnOffEh",
+      "va": "0x2d99c314",
+      "bytes": 92,
+      "body_sha256": "8dc04502a2452af6a1707739d46c9f36739b292649043b1d930f561371cce81e",
+      "got_load_candidates": [
+        {
+          "load": "0x2d99c330",
+          "symbol": "_ZN8mapi_pql10GetWinTypeEv",
+          "got": "0x2da8b0d4"
+        },
+        {
+          "load": "0x2d99c340",
+          "symbol": "_ZN21mapi_interface_common12Get_mapi_pqlE15MAPI_SCALER_WIN",
+          "got": "0x2da8cb88"
+        }
+      ]
+    },
+    {
+      "module": "analiz\\dosya-sistemleri-tam\\07_MSLIB\\libmsrv_common.so",
+      "module_sha256": "06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21",
+      "name": "_ZN11MSrv_Player19SetUserOverScanModeEh",
+      "va": "0x2d99f748",
+      "bytes": 8,
+      "body_sha256": "96e23f3c4976851e481e10e15024aa1aafda4ea71d783aef32311b8664414aa6",
+      "got_load_candidates": []
+    },
+    {
+      "module": "analiz\\dosya-sistemleri-tam\\07_MSLIB\\libMStarSDK.so",
+      "module_sha256": "00d147f752f92c9706e6496d0cda21de528e81f0c73cac54426b2618c17fe5fb",
+      "name": "_ZN8mapi_pql16SetGameModeOnOffEh",
+      "va": "0x2cb60824",
+      "bytes": 68,
+      "body_sha256": "3dfac67e407519aa32d60660e4b0715b9a0dba961df016d4bd89000891386ca0",
+      "got_load_candidates": [
+        {
+          "load": "0x2cb60844",
+          "symbol": "printf",
+          "got": "0x2cd8a54c"
+        }
+      ]
+    },
+    {
+      "module": "analiz\\dosya-sistemleri-tam\\07_MSLIB\\libMStarSDK.so",
+      "module_sha256": "00d147f752f92c9706e6496d0cda21de528e81f0c73cac54426b2618c17fe5fb",
+      "name": "_ZN15mapi_video_base14EnableOverScanEh",
+      "va": "0x2cbaef48",
+      "bytes": 56,
+      "body_sha256": "ae158f6e06ad8f306c9964a82cf803f889e023dada3df731628fb298f028d911",
+      "got_load_candidates": []
+    },
+    {
+      "module": "analiz\\dosya-sistemleri-tam\\07_MSLIB\\libMStarSDK_customer.so",
+      "module_sha256": "4ebd5fc038a843b26c03b6cb6b44b5e9052820bea388c5d4fc1913b840e83949",
+      "name": "_ZN17mapi_pql_customer16SetGameModeOnOffEh",
+      "va": "0x2dc76928",
+      "bytes": 112,
+      "body_sha256": "cf0e1b3ed83bbf692341d6339f748bc7bef13cd0e8f46b8b2727bcdca2101d6e",
+      "got_load_candidates": [
+        {
+          "load": "0x2dc76950",
+          "symbol": "_Z25_SDK2DriverPQWinTypeTrans11MAPI_PQ_WIN",
+          "got": "0x2dd0ff50"
+        }
+      ]
+    }
+  ],
+  "physical_support_proven": false,
+  "firmware_changed": false,
+  "new_assembly_bodies": 5,
+  "new_decompiled_functions": 0,
+  "runtime_tests_run": 0,
+  "interpretations": [
+    {
+      "va": "0x2cb60824",
+      "finding": "Base SetGameModeOnOff calls printf and returns0; function name alone does not prove working game mode."
+    },
+    {
+      "va": "0x2dc76928",
+      "finding": "Customer wrapper translateswindow then callsvirtualslot+0x1dc; concrete target and active instance unresolved."
+    },
+    {
+      "va": "0x2d99c314",
+      "finding": "Picture service obtainsPQobject and tailcallsvirtualslot+0x154; active vtable unresolved."
+    },
+    {
+      "va": "0x2cbaef48",
+      "finding": "Booleanizesinput and writesstaticoverscan flag; does not itself crop orscale pixels."
+    }
+  ],
+  "open_indirect_slots": [
+    "MSrvPicture PQobject+0x154",
+    "CustomerPQ+0x1dc"
+  ]
+}

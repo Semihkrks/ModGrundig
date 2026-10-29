@@ -1,0 +1,52 @@
+2d53db70: d8ffbd27 addiu $sp, $sp, -0x28
+2d53db74: 2400bfaf sw $ra, 0x24($sp)
+2d53db78: 2000b1af sw $s1, 0x20($sp)
+2d53db7c: 1c00b0af sw $s0, 0x1c($sp)
+2d53db80: 1000bcaf sw $gp, 0x10($sp)
+2d53db84: ff00a530 andi $a1, $a1, 0xff
+2d53db88: 0c000224 addiu $v0, $zero, 0xc
+2d53db8c: 2180c000 move $s0, $a2
+2d53db90: 1a00a210 beq $a1, $v0, 0x2d53dbfc
+2d53db94: 2188e000 move $s1, $a3
+2d53db98: 10000224 addiu $v0, $zero, 0x10
+2d53db9c: 1700a210 beq $a1, $v0, 0x2d53dbfc
+2d53dba0: 00000000 nop 
+2d53dba4: 04000012 beqz $s0, 0x2d53dbb8
+2d53dba8: 07000224 addiu $v0, $zero, 7
+2d53dbac: 1d000392 lbu $v1, 0x1d($s0)
+2d53dbb0: 0e006210 beq $v1, $v0, 0x2d53dbec
+2d53dbb4: 00000000 nop 
+2d53dbb8: 07002012 beqz $s1, 0x2d53dbd8
+2d53dbbc: 07000224 addiu $v0, $zero, 7
+2d53dbc0: 0e002392 lbu $v1, 0xe($s1)
+2d53dbc4: 05006214 bne $v1, $v0, 0x2d53dbdc
+2d53dbc8: 2400bf8f lw $ra, 0x24($sp)
+2d53dbcc: 080020a2 sb $zero, 8($s1)
+2d53dbd0: 030020a2 sb $zero, 3($s1)
+2d53dbd4: 040020a2 sb $zero, 4($s1)
+2d53dbd8: 2400bf8f lw $ra, 0x24($sp)
+2d53dbdc: 2000b18f lw $s1, 0x20($sp)
+2d53dbe0: 1c00b08f lw $s0, 0x1c($sp)
+2d53dbe4: 0800e003 jr $ra
+2d53dbe8: 2800bd27 addiu $sp, $sp, 0x28
+2d53dbec: 220000a2 sb $zero, 0x22($s0)
+2d53dbf0: 100000a2 sb $zero, 0x10($s0)
+2d53dbf4: f0ff0010 b 0x2d53dbb8
+2d53dbf8: 0f0000a2 sb $zero, 0xf($s0)
+2d53dbfc: 0000828c lw $v0, ($a0)
+2d53dc00: 03000524 addiu $a1, $zero, 3
+2d53dc04: 68018624 addiu $a2, $a0, 0x168
+2d53dc08: bc02598c lw $t9, 0x2bc($v0)
+2d53dc0c: 09f82003 jalr $t9
+2d53dc10: 21380000 move $a3, $zero
+2d53dc14: e3ff4014 bnez $v0, 0x2d53dba4
+2d53dc18: 1000bc8f lw $gp, 0x10($sp)
+2d53dc1c: 03000012 beqz $s0, 0x2d53dc2c
+2d53dc20: 00000000 nop 
+2d53dc24: 100000a2 sb $zero, 0x10($s0)
+2d53dc28: 0f0000a2 sb $zero, 0xf($s0)
+2d53dc2c: ddff2012 beqz $s1, 0x2d53dba4
+2d53dc30: 00000000 nop 
+2d53dc34: 030020a2 sb $zero, 3($s1)
+2d53dc38: daff0010 b 0x2d53dba4
+2d53dc3c: 040020a2 sb $zero, 4($s1)

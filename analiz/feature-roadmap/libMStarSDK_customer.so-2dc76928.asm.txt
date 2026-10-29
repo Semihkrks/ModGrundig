@@ -1,0 +1,28 @@
+2dc76928: lui $gp, 0xa
+2dc7692c: addiu $gp, $gp, 0x698
+2dc76930: addu $gp, $gp, $t9
+2dc76934: addiu $sp, $sp, -0x28
+2dc76938: sw $ra, 0x24($sp)
+2dc7693c: sw $s3, 0x20($sp)
+2dc76940: sw $s1, 0x1c($sp)
+2dc76944: sw $s0, 0x18($sp)
+2dc76948: sw $gp, 0x10($sp)
+2dc7694c: lw $v0, ($a0)
+2dc76950: lw $t9, -0x7070($gp)
+2dc76954: move $s0, $a0
+2dc76958: lw $a0, 0x28($a0)
+2dc7695c: lw $s3, 0x1dc($v0)
+2dc76960: jalr $t9
+2dc76964: andi $s1, $a1, 0xff
+2dc76968: move $a0, $s0
+2dc7696c: move $a2, $s1
+2dc76970: move $t9, $s3
+2dc76974: jalr $t9
+2dc76978: move $a1, $v0
+2dc7697c: lw $ra, 0x24($sp)
+2dc76980: lw $gp, 0x10($sp)
+2dc76984: lw $s3, 0x20($sp)
+2dc76988: lw $s1, 0x1c($sp)
+2dc7698c: lw $s0, 0x18($sp)
+2dc76990: jr $ra
+2dc76994: addiu $sp, $sp, 0x28

@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-29T18:03:11.822037+00:00",
+  "decision": "PASS_OFFLINE_NATIVE_SCOPE",
+  "findings": [],
+  "source_sha256": {
+    "native_semih_brand.py": "9dcfd104ac91c54a17d7aa6b4d91b695904308f5a259aedd3489b1d9931be841",
+    "v79_elf": "861d97c013c4d56e093a69cf779abfa6ea78e6c17233af5d6b2b3ba075b0b4ea",
+    "v710_elf": "5c567b644297dd9e69520062821cb82153eb310e588b085fb2f93e447aa5ee14",
+    "v710_manifest": "1abb8a355b67ccf5ae2cc1a504a7fea8f1b833a8f19553b04df4690185dfa0b7",
+    "semih_png": "fdfd41d53f5f1979d9021ec1942b9d015396bb65be8bbf6a638e103d2c6131e5",
+    "semih_svg": "a46d8d0a6dce58af0724a9a0de1cf87a49f2942f0ccbbe51d41405e29070c34d"
+  },
+  "native_patch_review": {
+    "patch_sites": [
+      {
+        "va": "0xdb56e4",
+        "word_before": "0x24050393",
+        "word_after": "0x24050888",
+        "register": "a1",
+        "field": "this+0x1b8",
+        "slot": "0x260",
+        "call_va": "0xdb56ec",
+        "source_report": "analiz/native-features/semih-brand/native-v1/00db5328.json"
+      },
+      {
+        "va": "0xdb5708",
+        "word_before": "0x24050393",
+        "word_after": "0x24050888",
+        "register": "a1",
+        "field": "this+0x1b8",
+        "slot": "0x274",
+        "call_va": "0xdb5710",
+        "source_report": "analiz/native-features/semih-brand/native-v1/00db5328.json"
+      },
+      {
+        "va": "0xdb572c",
+        "word_before": "0x24050393",
+        "word_after": "0x24050888",
+        "register": "a1",
+        "field": "this+0x1b8",
+        "slot": "0x288",
+        "call_va": "0xdb5734",
+        "source_report": "analiz/native-features/semih-brand/native-v1/00db5328.json"
+      },
+      {
+        "va": "0xdb5750",
+        "word_before": "0x24050393",
+        "word_after": "0x24050888",
+        "register": "a1",
+        "field": "this+0x1b8",
+        "slot": "0x29c",
+        "call_va": "0xdb5758",
+        "source_report": "analiz/native-features/semih-brand/native-v1/00db5328.json"
+      },
+      {
+        "va": "0xdbebd4",
+        "word_before": "0x24050393",
+        "word_after": "0x24050888",
+        "register": "a1",
+        "field": "this+0x1b8",
+        "slot": "0x260",
+        "call_va": "0xdbebdc",
+        "source_report": "analiz/native-features/semih-brand/native-v1/00dbb4f8.json"
+      },
+      {
+        "va": "0xdbebf8",
+        "word_before": "0x24050393",
+        "word_after": "0x24050888",
+        "register": "a1",
+        "field": "this+0x1b8",
+        "slot": "0x274",
+        "call_va": "0xdbec00",
+        "source_report": "analiz/native-features/semih-brand/native-v1/00dbb4f8.json"
+      },
+      {
+        "va": "0xdbec1c",
+        "word_before": "0x24050393",
+        "word_after": "0x24050888",
+        "register": "a1",
+        "field": "this+0x1b8",
+        "slot": "0x288",
+        "call_va": "0xdbec24",
+        "source_report": "analiz/native-features/semih-brand/native-v1/00dbb4f8.json"
+      },
+      {
+        "va": "0xdbec40",
+        "word_before": "0x24050393",
+        "word_after": "0x24050888",
+        "register": "a1",
+        "field": "this+0x1b8",
+        "slot": "0x29c",
+        "call_va": "0xdbec48",
+        "source_report": "analiz/native-features/semih-brand/native-v1/00dbb4f8.json"
+      }
+    ],
+    "changed_bytes": 16,
+    "changed_instruction_words": 8,
+    "length_preserved": true,
+    "all_other_ELF_bytes_identical": true,
+    "upper16_opcode_and_registers_unchanged": true,
+    "calls_delay_slots_GP_stack_and_control_flow_unchanged": true,
+    "original_query_bytes_match_V79": true,
+    "got": {
+      "gp": "0x10cc310",
+      "slot": "0x10cba00",
+      "target": "0x2e231944",
+      "symbol": "libmuf.so:MImg::Set(unsigned short)"
+    },
+    "normal_branch_confirmed_from_retained_C": true
+  },
+  "resource_review": {
+    "before_count": 2184,
+    "after_count": 2185,
+    "new_id": 2184,
+    "new_path": "../rc/ARimages/Grundig/modern/semih_menu_brand.png",
+    "stock915_path": "../rc/ARimages/Grundig/icons/brandLogo/logo_400_120.png",
+    "all_existing_serialized_records_identical": true,
+    "only_three_header_fields_changed": true,
+    "stock915_not_overlaid": true
+  },
+  "overlay_review": {
+    "v79_records": 18,
+    "v710_records": 19,
+    "changed_inherited_files": [
+      "08_APP/bin/dvbt_board",
+      "08_APP/rc/rc/bin/Image_res.bin"
+    ],
+    "unchanged_inherited_files": 16,
+    "added_files": [
+      "08_APP/rc/ARimages/Grundig/modern/semih_menu_brand.png"
+    ],
+    "verified_records": "pass",
+    "verified_packaging_records": "pass",
+    "stdlib_only_packaging_verification": "python -B -S actual call passed independently; no site-packages loaded"
+  },
+  "artwork_review": {
+    "dimensions": [
+      400,
+      120
+    ],
+    "mode": "P8",
+    "white_RGB_only": true,
+    "transparent_background": true,
+    "opaque_pixels_present": true,
+    "alpha_bbox": [
+      98,
+      43,
+      302,
+      77
+    ],
+    "cap_height": 34,
+    "center_x": 200,
+    "independent_svg_paths_no_font_or_image": true,
+    "proposal_png_visually_inspected": true,
+    "exact_OEM_font_recovered": false
+  },
+  "tests": {
+    "native_semih_brand": "7/7 passed",
+    "integration": "7 bounded checks passed previously",
+    "source_compilation": "pass"
+  },
+  "limitations": [
+    "Offline static review; no physical TV or full firmware execution",
+    "Selected Ghidra C has incomplete prototypes; eight bindings independently checked through raw instructions and GOT target",
+    "Actual platform loader/decoder acceptance and pixel placement on TV remain unmeasured",
+    "Source art approximates OEM bitmap typography; no exact font recovery claim"
+  ],
+  "package_written": false,
+  "firmware_executed": false
+}

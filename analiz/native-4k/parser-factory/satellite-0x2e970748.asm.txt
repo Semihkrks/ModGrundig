@@ -1,0 +1,100 @@
+2e970748: 03001c3c lui $gp, 3
+2e97074c: 384e9c27 addiu $gp, $gp, 0x4e38
+2e970750: 21e09903 addu $gp, $gp, $t9
+2e970754: e0ffbd27 addiu $sp, $sp, -0x20
+2e970758: 1c00bfaf sw $ra, 0x1c($sp)
+2e97075c: 1000bcaf sw $gp, 0x10($sp)
+2e970760: 3000a28f lw $v0, 0x30($sp)
+2e970764: 3400a88f lw $t0, 0x34($sp)
+2e970768: 3800a98f lw $t1, 0x38($sp)
+2e97076c: 1600a010 beqz $a1, 0x2e9707c8
+2e970770: 4000a38f lw $v1, 0x40($sp)
+2e970774: 2200c010 beqz $a2, 0x2e970800
+2e970778: 280185ac sw $a1, 0x128($a0)
+2e97077c: 2900e010 beqz $a3, 0x2e970824
+2e970780: 2c0186ac sw $a2, 0x12c($a0)
+2e970784: 30004010 beqz $v0, 0x2e970848
+2e970788: 300187ac sw $a3, 0x130($a0)
+2e97078c: 37000011 beqz $t0, 0x2e97086c
+2e970790: 1c0182ac sw $v0, 0x11c($a0)
+2e970794: 3e006010 beqz $v1, 0x2e970890
+2e970798: 340188ac sw $t0, 0x134($a0)
+2e97079c: 45002011 beqz $t1, 0x2e9708b4
+2e9707a0: 3c0183ac sw $v1, 0x13c($a0)
+2e9707a4: 01000224 addiu $v0, $zero, 1
+2e9707a8: 150182a0 sb $v0, 0x115($a0)
+2e9707ac: 3c00a28f lw $v0, 0x3c($sp)
+2e9707b0: 1c00bf8f lw $ra, 0x1c($sp)
+2e9707b4: 480189ac sw $t1, 0x148($a0)
+2e9707b8: 4c0182ac sw $v0, 0x14c($a0)
+2e9707bc: 2000bd27 addiu $sp, $sp, 0x20
+2e9707c0: 0800e003 jr $ra
+2e9707c4: 01000224 addiu $v0, $zero, 1
+2e9707c8: 2880848f lw $a0, -0x7fd8($gp)
+2e9707cc: 2880858f lw $a1, -0x7fd8($gp)
+2e9707d0: 2880868f lw $a2, -0x7fd8($gp)
+2e9707d4: 4485998f lw $t9, -0x7abc($gp)
+2e9707d8: 50f58424 addiu $a0, $a0, -0xab0
+2e9707dc: 5052a524 addiu $a1, $a1, 0x5250
+2e9707e0: 146ac624 addiu $a2, $a2, 0x6a14
+2e9707e4: 4f040724 addiu $a3, $zero, 0x44f
+2e9707e8: 09f82003 jalr $t9
+2e9707ec: 00000000 nop 
+2e9707f0: 1000bc8f lw $gp, 0x10($sp)
+2e9707f4: 7882998f lw $t9, -0x7d88($gp)
+2e9707f8: 09f82003 jalr $t9
+2e9707fc: 00000000 nop 
+2e970800: 2880848f lw $a0, -0x7fd8($gp)
+2e970804: 2880858f lw $a1, -0x7fd8($gp)
+2e970808: 2880868f lw $a2, -0x7fd8($gp)
+2e97080c: 4485998f lw $t9, -0x7abc($gp)
+2e970810: 50f58424 addiu $a0, $a0, -0xab0
+2e970814: 5052a524 addiu $a1, $a1, 0x5250
+2e970818: 146ac624 addiu $a2, $a2, 0x6a14
+2e97081c: f2ff0010 b 0x2e9707e8
+2e970820: 52040724 addiu $a3, $zero, 0x452
+2e970824: 2880848f lw $a0, -0x7fd8($gp)
+2e970828: 2880858f lw $a1, -0x7fd8($gp)
+2e97082c: 2880868f lw $a2, -0x7fd8($gp)
+2e970830: 4485998f lw $t9, -0x7abc($gp)
+2e970834: 50f58424 addiu $a0, $a0, -0xab0
+2e970838: 5052a524 addiu $a1, $a1, 0x5250
+2e97083c: 146ac624 addiu $a2, $a2, 0x6a14
+2e970840: e9ff0010 b 0x2e9707e8
+2e970844: 55040724 addiu $a3, $zero, 0x455
+2e970848: 2880848f lw $a0, -0x7fd8($gp)
+2e97084c: 2880858f lw $a1, -0x7fd8($gp)
+2e970850: 2880868f lw $a2, -0x7fd8($gp)
+2e970854: 4485998f lw $t9, -0x7abc($gp)
+2e970858: 50f58424 addiu $a0, $a0, -0xab0
+2e97085c: 5052a524 addiu $a1, $a1, 0x5250
+2e970860: 146ac624 addiu $a2, $a2, 0x6a14
+2e970864: e0ff0010 b 0x2e9707e8
+2e970868: 58040724 addiu $a3, $zero, 0x458
+2e97086c: 2880848f lw $a0, -0x7fd8($gp)
+2e970870: 2880858f lw $a1, -0x7fd8($gp)
+2e970874: 2880868f lw $a2, -0x7fd8($gp)
+2e970878: 4485998f lw $t9, -0x7abc($gp)
+2e97087c: 50f58424 addiu $a0, $a0, -0xab0
+2e970880: 5052a524 addiu $a1, $a1, 0x5250
+2e970884: 146ac624 addiu $a2, $a2, 0x6a14
+2e970888: d7ff0010 b 0x2e9707e8
+2e97088c: 5b040724 addiu $a3, $zero, 0x45b
+2e970890: 2880848f lw $a0, -0x7fd8($gp)
+2e970894: 2880858f lw $a1, -0x7fd8($gp)
+2e970898: 2880868f lw $a2, -0x7fd8($gp)
+2e97089c: 4485998f lw $t9, -0x7abc($gp)
+2e9708a0: 50f58424 addiu $a0, $a0, -0xab0
+2e9708a4: 5052a524 addiu $a1, $a1, 0x5250
+2e9708a8: 146ac624 addiu $a2, $a2, 0x6a14
+2e9708ac: ceff0010 b 0x2e9707e8
+2e9708b0: 5e040724 addiu $a3, $zero, 0x45e
+2e9708b4: 2880848f lw $a0, -0x7fd8($gp)
+2e9708b8: 2880858f lw $a1, -0x7fd8($gp)
+2e9708bc: 2880868f lw $a2, -0x7fd8($gp)
+2e9708c0: 4485998f lw $t9, -0x7abc($gp)
+2e9708c4: 50f58424 addiu $a0, $a0, -0xab0
+2e9708c8: 5052a524 addiu $a1, $a1, 0x5250
+2e9708cc: 146ac624 addiu $a2, $a2, 0x6a14
+2e9708d0: c5ff0010 b 0x2e9707e8
+2e9708d4: 63040724 addiu $a3, $zero, 0x463

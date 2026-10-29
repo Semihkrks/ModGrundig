@@ -1,0 +1,300 @@
+{
+  "libmuf_sha256": "494d4aa45a3c8d8e10760388d8d30111e9127a0357d38cdf97979b9f9bb16d96",
+  "elf_load_segments": [
+    {
+      "va": 773783552,
+      "file_offset": 0,
+      "file_size": 669156,
+      "memory_size": 669156,
+      "flags": 5
+    },
+    {
+      "va": 774518244,
+      "file_offset": 669156,
+      "file_size": 71876,
+      "memory_size": 72396,
+      "flags": 6
+    }
+  ],
+  "native_functions": {
+    "DrawBackground": {
+      "entry": "0x2e251be4",
+      "function_bytes": 928,
+      "unique_executed_instructions": 0,
+      "executed_instruction_count": 0,
+      "executed_addresses": []
+    },
+    "RenderImageToSurface": {
+      "entry": "0x2e23e684",
+      "function_bytes": 2716,
+      "unique_executed_instructions": 0,
+      "executed_instruction_count": 0,
+      "executed_addresses": []
+    },
+    "DrawBorders": {
+      "entry": "0x2e24d438",
+      "function_bytes": 424,
+      "unique_executed_instructions": 0,
+      "executed_instruction_count": 0,
+      "executed_addresses": []
+    },
+    "DrawString": {
+      "entry": "0x2e24de4c",
+      "function_bytes": 2400,
+      "unique_executed_instructions": 0,
+      "executed_instruction_count": 0,
+      "executed_addresses": []
+    },
+    "CalculateTextDrawFlags": {
+      "entry": "0x2e24fe3c",
+      "function_bytes": 324,
+      "unique_executed_instructions": 0,
+      "executed_instruction_count": 0,
+      "executed_addresses": []
+    }
+  },
+  "callbacks": [],
+  "compositions": [],
+  "framebuffer": "Host Pillow RGBA; bilinear StretchBlit and source-over alpha",
+  "clipping_boundary": "Explicit host intersections of widget/parent/outer rectangles when supplied; DirectFB clipping code is not executed",
+  "never_executed": [
+    "Full dvbt_board process",
+    "Boot/kernel/init",
+    "NAND/UBI",
+    "DirectFB/GOP drivers",
+    "TV tuner/decoder",
+    "Actual broadcast"
+  ],
+  "state_boundary": "Widget object state assembled from retained OnCreate C and Num resources, not original constructor execution",
+  "relocation_boundary": "One libstdc++ empty-string GOT cell injected; original paint instruction bytes unchanged",
+  "disassembly_correction": "CalculateTextDrawFlags omitted switch blocks: bottom-center0x2e24ffa0..ffd4 (14 instructions), left/top0x2e24fffc..2e250014 (7); bounded original ELF bytes, never patched",
+  "variant": "v7.7-tv",
+  "surface_geometry": {},
+  "input_assets": [],
+  "omitted": [
+    "Full device compositor and TV video"
+  ],
+  "verified_pins": null,
+  "scene": "timeout",
+  "volume": 35,
+  "mute": false,
+  "native_lifecycle": {
+    "muted": false,
+    "volume": 35,
+    "mode": 0,
+    "panel_open": false,
+    "badge_visible": false,
+    "actions": [
+      [
+        "panel_kill"
+      ]
+    ],
+    "images": [],
+    "fill_colors": [
+      4278223572,
+      4278223572,
+      4278223572,
+      4278223572
+    ],
+    "calls": [
+      {
+        "name": "KillTimer",
+        "args": [
+          268435456,
+          0,
+          0,
+          0,
+          17613584
+        ]
+      },
+      {
+        "name": "GetParentApp",
+        "args": [
+          268435456,
+          3134193692,
+          3134193696,
+          3134193700,
+          17613584
+        ]
+      },
+      {
+        "name": "Kill",
+        "args": [
+          268559360,
+          3134193692,
+          3134193696,
+          3134193700,
+          17613584
+        ]
+      },
+      {
+        "name": "SoundInstance",
+        "args": [
+          3134193688,
+          3134193692,
+          3134193696,
+          3134193700,
+          17613584
+        ]
+      },
+      {
+        "name": "IsMuted",
+        "args": [
+          268559872,
+          0,
+          3134193696,
+          3134193700,
+          0
+        ]
+      },
+      {
+        "name": "GetMainVolume",
+        "args": [
+          268559872,
+          3134193692,
+          3134193696,
+          3134193700,
+          0
+        ]
+      }
+    ],
+    "timers": [
+      [
+        "KillTimer",
+        0,
+        0,
+        0
+      ]
+    ],
+    "steps": 124,
+    "executed_addresses": [
+      "0xfb7aec",
+      "0xfb7af0",
+      "0xfb7af4",
+      "0xfb7af8",
+      "0xfb7afc",
+      "0xfb7b00",
+      "0xfb7b04",
+      "0xfb7b08",
+      "0xfb7b0c",
+      "0xfb7b10",
+      "0xfb7b14",
+      "0xfb7b18",
+      "0xfb7b1c",
+      "0xfb7b20",
+      "0xfb7b24",
+      "0xfb7b28",
+      "0xfb7b2c",
+      "0xfb7b30",
+      "0xfb7b34",
+      "0xfb7b38",
+      "0xfb7b3c",
+      "0xfb7b40",
+      "0xfb7b44",
+      "0xfb7b48",
+      "0xfb7b4c",
+      "0xfb7b50",
+      "0xfb7b54",
+      "0xfb7b58",
+      "0xfb7b5c",
+      "0xfb7b60",
+      "0xfb7b64",
+      "0xfb7b68",
+      "0xfb7b6c",
+      "0xfb7b70",
+      "0xfb7b74",
+      "0xfb7b78",
+      "0xfb7b7c",
+      "0xfb7b80",
+      "0xfb7b84",
+      "0xfb7b88",
+      "0xfb7b8c",
+      "0xfb7b90",
+      "0xfb7b94",
+      "0xfb7b98",
+      "0xfb7b9c",
+      "0xfb7ba0",
+      "0xfb7ba4",
+      "0xfb7ba8",
+      "0xfb7bac",
+      "0xfb7bb0",
+      "0xfb7cf4",
+      "0xfb7cf8",
+      "0xfb7cfc",
+      "0xfb7d00",
+      "0xfb7d04",
+      "0xfb7d08",
+      "0xfb7d0c",
+      "0xfb7d10",
+      "0xfb7d14",
+      "0x1161000",
+      "0x1161004",
+      "0x1161008",
+      "0x116100c",
+      "0x1161010",
+      "0x1161014",
+      "0x1161018",
+      "0x116101c",
+      "0x1161020",
+      "0x1161024",
+      "0x1161028",
+      "0x116102c",
+      "0x1161030",
+      "0x1161034",
+      "0x1161038",
+      "0x116103c",
+      "0x1161040",
+      "0x1161044",
+      "0x1161048",
+      "0x116104c",
+      "0x1161050",
+      "0x1161054",
+      "0x1161058",
+      "0x116105c",
+      "0x1161060",
+      "0x1161064",
+      "0x1161068",
+      "0x116106c",
+      "0x1161070",
+      "0x1161074",
+      "0x1161078",
+      "0x116107c",
+      "0x1161080",
+      "0x1161084",
+      "0x1161088",
+      "0x116108c",
+      "0x1161090",
+      "0x1161094",
+      "0x1161098",
+      "0x11610ac",
+      "0x11610b0",
+      "0x11610b4",
+      "0x11610b8",
+      "0x11610bc",
+      "0x11610c0",
+      "0x11610c4",
+      "0x11610c8",
+      "0x11610cc",
+      "0x11610d0",
+      "0x11610d4",
+      "0x11610d8",
+      "0x11610dc"
+    ],
+    "scope": "actual installed OnKey/Refresh/timeout/predicate instructions; sound/app/surface services modeled",
+    "physical_tv_tested": false,
+    "action": "timeout",
+    "variant": "v7.7-tv",
+    "elf_sha256": "494cfd8dbe9817ff29240d29e5e7e8e31667265da38214d818557e94914dbf87",
+    "num_sha256": "7ec3f2236f8b6061fdf22c65af37042a84b713805fac823bc228d74d9e39047a",
+    "input_volume": 35,
+    "input_muted": false,
+    "native_lifecycle_instructions_executed": true,
+    "boundary": "Actual installed OnKey→Refresh or timeout→predicate instructions; sound manager, app allocation/visibility and graphics services modeled; no full TV process"
+  },
+  "lifecycle_executed": true,
+  "lifecycle_boundary": "Actual installed OnKey→Refresh or timeout→predicate instructions; sound manager, app allocation/visibility and graphics services modeled; no full TV process",
+  "lifecycle_provenance": {
+    "entry": "0xfb7aec",
+    "rule": "Installed local mute mode0; local volume0 or explicit mute may show corner badge after timeout"
+  }
+}

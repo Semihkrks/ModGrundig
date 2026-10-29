@@ -63,6 +63,26 @@ V75_PINS = {relative: digest for relative, _, digest, _ in V75_RECORDS}
 SHA['v7.5-tv'] = V75_PINS['08_APP/bin/dvbt_board']
 NUM_SHA['v7.5-tv'] = V75_PINS['08_APP/rc/rc/bin/Num_res.bin']
 
+def register_v76_pins():
+    # Lazy registration preserves historical previews before a new overlay exists.
+    from native_ui_v76_tv_pins import RECORDS
+    pins = {relative: digest for relative, _, digest, _ in RECORDS}
+    SHA['v7.6-tv'] = pins['08_APP/bin/dvbt_board']
+    NUM_SHA['v7.6-tv'] = pins['08_APP/rc/rc/bin/Num_res.bin']
+
+
+def register_v77_pins():
+    from native_ui_v77_tv_pins import RECORDS
+    pins = {relative: digest for relative, _, digest, _ in RECORDS}
+    SHA['v7.7-tv'] = pins['08_APP/bin/dvbt_board']
+    NUM_SHA['v7.7-tv'] = pins['08_APP/rc/rc/bin/Num_res.bin']
+
+def register_v79_pins():
+    from native_ui_v79_tv_pins import RECORDS
+    pins = {relative: digest for relative, _, digest, _ in RECORDS}
+    SHA['v7.9-tv'] = pins['08_APP/bin/dvbt_board']
+    NUM_SHA['v7.9-tv'] = pins['08_APP/rc/rc/bin/Num_res.bin']
+
 IMPORTS = {
     0x10c4ce4: 'GetMuteControlFrame', 0x10c5068: 'Hide', 0x10cc98c: 'Show',
     0x10c909c: 'SoundInstance', 0x10cd110: 'GetMainVolume', 0x10ca504: 'IsMuted',
@@ -81,6 +101,9 @@ def sha(data):
 
 def run_case(variant='v3', volume=35, muted=False, mode=0, arc_muted=False,
              key=0xf04c, arc_active=True, instruction_budget=10000):
+    if variant=='v7.6-tv': register_v76_pins()
+    if variant=='v7.7-tv': register_v77_pins()
+    if variant=='v7.9-tv': register_v79_pins()
     if variant not in SHA or not 0 <= volume <= 255 or mode not in (0, 1, 2, 3):
         raise ValueError('Unsupported bounded input')
     base = SOURCE if variant == 'original' else ROOT/f'analiz/native-ui-candidate/{variant}/overlay'
@@ -143,6 +166,12 @@ def run_case(variant='v3', volume=35, muted=False, mode=0, arc_muted=False,
     trace, visited = [], Counter()
     selection = json.loads((ROOT/'analiz/native/ui-targeted/dvbt_board/00fb7d18.json').read_text())
     allowed = {int(i['address'], 16) for i in selection['instructions']}
+    if variant=='v7.9-tv':
+        from native_ui_v79_wave import HELPER, code
+        from build_native_volume_patch import elf_va_offset
+        helper=code();at=elf_va_offset(raw,HELPER,len(helper))
+        if raw[at:at+len(helper)]!=helper:raise ValueError('Installed V7.9 wave helper differs')
+        allowed.update(range(HELPER,HELPER+len(helper),4))
     completed, count = False, 0
     def offset(addr):
         if addr not in objects:

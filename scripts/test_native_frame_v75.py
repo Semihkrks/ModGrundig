@@ -22,7 +22,7 @@ class V75PreviewTests(unittest.TestCase):
   self.assertIn('GetSel',calls);self.assertNotIn('GetName',calls)
  def test_four_digit_limit_historical_five_retained(self):
   with self.assertRaises(ValueError):r.render_numeric('v7.5-tv','12345')
-  with self.assertRaises(ValueError):viewer.frame_bytes('scene=numeric&digits=12345')
+  with self.assertRaises(ValueError):viewer.frame_bytes('variant=v7.5-tv&scene=numeric&digits=12345')
   r.render_numeric('v7.4-tv','12345')
  def test_gray_native_progress_and_badge_geometry(self):
   for vol,mute in [(0,False),(35,True),(35,False)]:
@@ -32,7 +32,7 @@ class V75PreviewTests(unittest.TestCase):
   _,e=r.render_mute_badge('v7.5-tv');self.assertEqual(e['surface_geometry']['icon'],(1784,74,52,52))
   self.assertEqual(e['input_assets'][0]['image_id'],2181);self.assertFalse(e['lifecycle_executed'])
  def test_default_and_fail_closed_actual_helper_comparison(self):
-  _,raw=viewer.frame_bytes('scene=numeric&digits=01');m=json.loads(raw)
+  _,raw=viewer.frame_bytes('variant=v7.5-tv&scene=numeric&digits=01');m=json.loads(raw)
   self.assertEqual(m['variant'],'v7.5-tv');self.assertTrue(m['channel_resolution']['native_name_bridge_installed'])
   with patch('native_ui_v75_name.code_update',return_value=b'bad'):
    with self.assertRaises(ValueError):run_name_bridge('v7.5-tv','01')

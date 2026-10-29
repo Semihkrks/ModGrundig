@@ -1,0 +1,350 @@
+{
+  "evidence": "static disassembly only; target never executed",
+  "functions": [
+    {
+      "source": "07_MSLIB/libmsrv_dvb.so",
+      "source_sha256": "93fe7286bb7fb9bf3d33ccf75556985f68666fe485241099c20bb7165bc88d97",
+      "function": "_IsProgramListable",
+      "va": "0x2d50280c",
+      "bytes": 64,
+      "instructions": [
+        {
+          "va": "0x2d50280c",
+          "hex": "1500a290",
+          "mnemonic": "lbu",
+          "operands": "$v0, 0x15($a1)"
+        },
+        {
+          "va": "0x2d502810",
+          "hex": "01000324",
+          "mnemonic": "addiu",
+          "operands": "$v1, $zero, 1"
+        },
+        {
+          "va": "0x2d502814",
+          "hex": "07004310",
+          "mnemonic": "beq",
+          "operands": "$v0, $v1, 0x2d502834"
+        },
+        {
+          "va": "0x2d502818",
+          "hex": "00000000",
+          "mnemonic": "nop",
+          "operands": ""
+        },
+        {
+          "va": "0x2d50281c",
+          "hex": "1100a290",
+          "mnemonic": "lbu",
+          "operands": "$v0, 0x11($a1)"
+        },
+        {
+          "va": "0x2d502820",
+          "hex": "04004310",
+          "mnemonic": "beq",
+          "operands": "$v0, $v1, 0x2d502834"
+        },
+        {
+          "va": "0x2d502824",
+          "hex": "00000000",
+          "mnemonic": "nop",
+          "operands": ""
+        },
+        {
+          "va": "0x2d502828",
+          "hex": "0f00a290",
+          "mnemonic": "lbu",
+          "operands": "$v0, 0xf($a1)"
+        },
+        {
+          "va": "0x2d50282c",
+          "hex": "03004310",
+          "mnemonic": "beq",
+          "operands": "$v0, $v1, 0x2d50283c"
+        },
+        {
+          "va": "0x2d502830",
+          "hex": "00000000",
+          "mnemonic": "nop",
+          "operands": ""
+        },
+        {
+          "va": "0x2d502834",
+          "hex": "0800e003",
+          "mnemonic": "jr",
+          "operands": "$ra"
+        },
+        {
+          "va": "0x2d502838",
+          "hex": "21100000",
+          "mnemonic": "move",
+          "operands": "$v0, $zero"
+        },
+        {
+          "va": "0x2d50283c",
+          "hex": "1000a290",
+          "mnemonic": "lbu",
+          "operands": "$v0, 0x10($a1)"
+        },
+        {
+          "va": "0x2d502840",
+          "hex": "01004238",
+          "mnemonic": "xori",
+          "operands": "$v0, $v0, 1"
+        },
+        {
+          "va": "0x2d502844",
+          "hex": "0800e003",
+          "mnemonic": "jr",
+          "operands": "$ra"
+        },
+        {
+          "va": "0x2d502848",
+          "hex": "0100422c",
+          "mnemonic": "sltiu",
+          "operands": "$v0, $v0, 1"
+        }
+      ]
+    },
+    {
+      "source": "07_MSLIB/libmsrv_dvb_customer.so",
+      "source_sha256": "67b12c70234292c6afeffc489d91ae3101f95c2a4ff7fcc1f726bb4505e6e761",
+      "function": "_IsMatchedProgramTypeByFilterLoopType",
+      "va": "0x2e172f44",
+      "bytes": 84,
+      "instructions": [
+        {
+          "va": "0x2e172f44",
+          "hex": "07001c3c",
+          "mnemonic": "lui",
+          "operands": "$gp, 7"
+        },
+        {
+          "va": "0x2e172f48",
+          "hex": "6c6c9c27",
+          "mnemonic": "addiu",
+          "operands": "$gp, $gp, 0x6c6c"
+        },
+        {
+          "va": "0x2e172f4c",
+          "hex": "21e09903",
+          "mnemonic": "addu",
+          "operands": "$gp, $gp, $t9"
+        },
+        {
+          "va": "0x2e172f50",
+          "hex": "e0ffbd27",
+          "mnemonic": "addiu",
+          "operands": "$sp, $sp, -0x20"
+        },
+        {
+          "va": "0x2e172f54",
+          "hex": "1c00bfaf",
+          "mnemonic": "sw",
+          "operands": "$ra, 0x1c($sp)"
+        },
+        {
+          "va": "0x2e172f58",
+          "hex": "1000bcaf",
+          "mnemonic": "sw",
+          "operands": "$gp, 0x10($sp)"
+        },
+        {
+          "va": "0x2e172f5c",
+          "hex": "0d00c22c",
+          "mnemonic": "sltiu",
+          "operands": "$v0, $a2, 0xd"
+        },
+        {
+          "va": "0x2e172f60",
+          "hex": "05004014",
+          "mnemonic": "bnez",
+          "operands": "$v0, 0x2e172f78"
+        },
+        {
+          "va": "0x2e172f64",
+          "hex": "21388000",
+          "mnemonic": "move",
+          "operands": "$a3, $a0"
+        },
+        {
+          "va": "0x2e172f68",
+          "hex": "1c00bf8f",
+          "mnemonic": "lw",
+          "operands": "$ra, 0x1c($sp)"
+        },
+        {
+          "va": "0x2e172f6c",
+          "hex": "01000224",
+          "mnemonic": "addiu",
+          "operands": "$v0, $zero, 1"
+        },
+        {
+          "va": "0x2e172f70",
+          "hex": "0800e003",
+          "mnemonic": "jr",
+          "operands": "$ra"
+        },
+        {
+          "va": "0x2e172f74",
+          "hex": "2000bd27",
+          "mnemonic": "addiu",
+          "operands": "$sp, $sp, 0x20"
+        },
+        {
+          "va": "0x2e172f78",
+          "hex": "2880838f",
+          "mnemonic": "lw",
+          "operands": "$v1, -0x7fd8($gp)"
+        },
+        {
+          "va": "0x2e172f7c",
+          "hex": "80100600",
+          "mnemonic": "sll",
+          "operands": "$v0, $a2, 2"
+        },
+        {
+          "va": "0x2e172f80",
+          "hex": "c4fb6324",
+          "mnemonic": "addiu",
+          "operands": "$v1, $v1, -0x43c"
+        },
+        {
+          "va": "0x2e172f84",
+          "hex": "21186200",
+          "mnemonic": "addu",
+          "operands": "$v1, $v1, $v0"
+        },
+        {
+          "va": "0x2e172f88",
+          "hex": "0000648c",
+          "mnemonic": "lw",
+          "operands": "$a0, ($v1)"
+        },
+        {
+          "va": "0x2e172f8c",
+          "hex": "21209c00",
+          "mnemonic": "addu",
+          "operands": "$a0, $a0, $gp"
+        },
+        {
+          "va": "0x2e172f90",
+          "hex": "08008000",
+          "mnemonic": "jr",
+          "operands": "$a0"
+        },
+        {
+          "va": "0x2e172f94",
+          "hex": "00000000",
+          "mnemonic": "nop",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "source": "07_MSLIB/libmsrv_dvb.so",
+      "source_sha256": "93fe7286bb7fb9bf3d33ccf75556985f68666fe485241099c20bb7165bc88d97",
+      "function": "GetByLcn",
+      "va": "0x2d50c488",
+      "bytes": 64,
+      "instructions": [
+        {
+          "va": "0x2d50c488",
+          "hex": "0800868c",
+          "mnemonic": "lw",
+          "operands": "$a2, 8($a0)"
+        },
+        {
+          "va": "0x2d50c48c",
+          "hex": "0400838c",
+          "mnemonic": "lw",
+          "operands": "$v1, 4($a0)"
+        },
+        {
+          "va": "0x2d50c490",
+          "hex": "05006614",
+          "mnemonic": "bne",
+          "operands": "$v1, $a2, 0x2d50c4a8"
+        },
+        {
+          "va": "0x2d50c494",
+          "hex": "ffffa530",
+          "mnemonic": "andi",
+          "operands": "$a1, $a1, 0xffff"
+        },
+        {
+          "va": "0x2d50c498",
+          "hex": "0800e003",
+          "mnemonic": "jr",
+          "operands": "$ra"
+        },
+        {
+          "va": "0x2d50c49c",
+          "hex": "21100000",
+          "mnemonic": "move",
+          "operands": "$v0, $zero"
+        },
+        {
+          "va": "0x2d50c4a0",
+          "hex": "07006610",
+          "mnemonic": "beq",
+          "operands": "$v1, $a2, 0x2d50c4c0"
+        },
+        {
+          "va": "0x2d50c4a4",
+          "hex": "21100000",
+          "mnemonic": "move",
+          "operands": "$v0, $zero"
+        },
+        {
+          "va": "0x2d50c4a8",
+          "hex": "34006294",
+          "mnemonic": "lhu",
+          "operands": "$v0, 0x34($v1)"
+        },
+        {
+          "va": "0x2d50c4ac",
+          "hex": "fcff4514",
+          "mnemonic": "bne",
+          "operands": "$v0, $a1, 0x2d50c4a0"
+        },
+        {
+          "va": "0x2d50c4b0",
+          "hex": "a4016324",
+          "mnemonic": "addiu",
+          "operands": "$v1, $v1, 0x1a4"
+        },
+        {
+          "va": "0x2d50c4b4",
+          "hex": "5cfe6324",
+          "mnemonic": "addiu",
+          "operands": "$v1, $v1, -0x1a4"
+        },
+        {
+          "va": "0x2d50c4b8",
+          "hex": "0800e003",
+          "mnemonic": "jr",
+          "operands": "$ra"
+        },
+        {
+          "va": "0x2d50c4bc",
+          "hex": "21106000",
+          "mnemonic": "move",
+          "operands": "$v0, $v1"
+        },
+        {
+          "va": "0x2d50c4c0",
+          "hex": "0800e003",
+          "mnemonic": "jr",
+          "operands": "$ra"
+        },
+        {
+          "va": "0x2d50c4c4",
+          "hex": "00000000",
+          "mnemonic": "nop",
+          "operands": ""
+        }
+      ]
+    }
+  ]
+}

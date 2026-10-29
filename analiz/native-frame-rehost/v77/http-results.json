@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "query": "scene=numeric&digits=01",
+      "status": "PASS",
+      "scene": "numeric",
+      "muted": false
+    },
+    {
+      "query": "scene=numeric&digits=0000",
+      "status": "PASS",
+      "scene": "numeric",
+      "muted": false
+    },
+    {
+      "query": "scene=mute-key&volume=35&mute=0",
+      "status": "PASS",
+      "scene": "mute-key",
+      "muted": true
+    },
+    {
+      "query": "scene=mute-key&volume=35&mute=1",
+      "status": "PASS",
+      "scene": "mute-key",
+      "muted": false
+    },
+    {
+      "query": "scene=timeout&volume=0&mute=0",
+      "status": "PASS",
+      "scene": "timeout",
+      "muted": false
+    },
+    {
+      "query": "scene=timeout&volume=35&mute=1",
+      "status": "PASS",
+      "scene": "timeout",
+      "muted": true
+    },
+    {
+      "query": "scene=timeout&volume=35&mute=0",
+      "status": "PASS",
+      "scene": "timeout",
+      "muted": false
+    },
+    {
+      "query": "scene=volume&volume=0",
+      "status": "PASS",
+      "scene": "volume",
+      "muted": false
+    },
+    {
+      "query": "scene=numeric&digits=01&elapsed_ms=50",
+      "status": "PASS400"
+    },
+    {
+      "query": "scene=numeric&digits=12345",
+      "status": "PASS400"
+    },
+    {
+      "query": "variant=v7.6-tv&scene=mute-key",
+      "status": "PASS400"
+    },
+    {
+      "query": "nativeUIheader",
+      "status": "PASS",
+      "state": {
+        "muted": true,
+        "panel_timeout_ms": 3000,
+        "panel_open": true,
+        "badge_visible": false
+      }
+    }
+  ],
+  "server_pid": 11516
+}

@@ -1,5 +1,17 @@
 # Grundig GMGRMR V03.017.04 — tersine mühendislik
 
+29 Ekim V7.10: [SEMIH native menü logosu ve hız ayarları](UI_NATIVE_V710_SEMIH_VE_HIZ.md). Mevcut hızlı kanal geçişinin kalıcı DB → AV-sync timeout yolu doğrulandı; canlı kullanıcı ayarı zorlanmadı. Hızlı açılış için seçili STR yolunu güvenilir şekilde hızlandıran yama çıkarılmadı. Logo değişikliği özel kaynak 2184 ve sekiz menü argümanıyla sınırlandı; fiziksel V7.10 TV testi yok.
+
+27 Ekim V7.9: kullanıcı onayıyla [yerel ses seviyesine göre1/2/3 dalga ve80→40 kenar boşluğu](UI_NATIVE_V79_SEVIYELI_SES.md) gerçek native kod/kaynaklara uygulandı.31 test ve85 native senaryo, bağımsız inceleme, APP/BIN/RAR kontrolleri geçti. Ayrı test RAR'ı hazır; fiziksel V7.9 TV testi yok. Yeni4K decoder değişikliği yapılmadı.
+
+27 Ekim son cihaz geri bildirimi: kullanıcı V7.8'de TRT Ultra HD adlı kanalı bulduğunu, görüntü olmadığını ve iki ses seçeneğinde de ses çıkmadığını bildirdi. [Gözlem ve güncel A/V araştırma ayrımı](4K_YAYIN_VE_GIZLI_OZELLIKLER.md). Önceki “yalnız otomatik arama / kanal listede yok” aşaması tarihsel kayıttır; şimdi PID/PCR/demux, A/V init/mute ve decoder sonucu ayrılmalı. Ölçekleme tek kalan iş olarak kanıtlanmadı.
+
+27 Ekim 4K devamı: [tuner/decoder/scaler/özellik araştırması](4K_YAYIN_VE_GIZLI_OZELLIKLER.md), eksik11767V/15000 varsayılan transponderini, müşteri parser seçimini, kayıt/listelenebilirlik filtrelerini ve DB codec5→AVInfo7→VDEC16/EVD yolunu ayrı kanıtlarla ele alır. Geçerli cihaz SAT DB yeni default arşivi otomatik birleştirmiyor; yalnız otomatik arama denenmiş. Henüz gerçek yayının nerede kaybolduğu, UHD50/Main10 çözme ve canlı DB güncellemesi doğrulanmadı. Kullanıcının sonraki paketleme isteğiyle [yalnız varsayılan frekans verisini değiştiren V7.8 test RAR'ı](UI_NATIVE_V78_TRANSPONDER.md) çevrimdışı doğrulandı; bu4K kilidi açma veya sürüm kontrolü atlama paketi değildir.
+
+27 Ekim V7.7: [Mute olay yolu, yerel ses0 rozeti ve sayaç kaldırma](UI_NATIVE_V77_PAKET.md) ayrı RAR test paketinde. Gerçek kod kancaları, olay geçişleri ve paket bütünlüğü çevrimdışı geçti. Kullanıcı V7.7'nin fiziksel TV'de sorunsuz çalıştığını bildirdi; ayrıntılı test matrisi henüz yok.
+
+26 Ekim V7.6: [sessiz rozeti, kayıtlı olmayan kanal mesajı ve native sayaç](UI_NATIVE_V76_PAKET.md) ayrı test paketine alındı. Orijinal tuning süreleri korunur. Çevrimdışı kontroller geçti; fiziksel TV testi yok.
+
 26 Ekim son devam: [V7.5 gerçek sayısal kanal adı bağlantısı](UI_NATIVE_V75_KANAL_ADI.md) yerleştirildi. Baştaki sıfırlar korunur; hedef ad GetProgramSelInfo/GetProgramName üzerinden sorgulanır. Yeni metin widget'ı ve helper/unwind yerleşimi çevrimdışı test edildi. Donma GP düzeltmesi korunur; V7.5 henüz TV'de denenmedi.
 
 26 Ekim cihaz geri bildirimi: V7.3 ses paneli görünmeme/donma nedeniyle reddedildi; kullanıcı V7.1'in çalıştığını bildirdi. Eksik GP geri yüklemesi ABI regresyonunda yeniden üretildi. [Doğrudan V7.1 tabanlı V7.4 düzeltme ve inceleme adayı](UI_NATIVE_V74_GP_DUZELTMESI.md) çevrimdışı doğrulandı; cihaz başarısı henüz yoktur. Yeni gerçek kanal adı isteği de bu belgede açık takip maddesidir.

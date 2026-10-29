@@ -1,0 +1,187 @@
+{
+  "date": "2026-10-27",
+  "scope": "stage2_post_scan_visibility_and_lcn",
+  "new_modules": 2,
+  "new_functions": 14,
+  "new_decompiled_functions": 12,
+  "new_raw_assembly_only_functions": 2,
+  "queries": [
+    {
+      "group": "customer",
+      "requested": 2,
+      "complete": 2,
+      "source_sha256": "67b12c70234292c6afeffc489d91ae3101f95c2a4ff7fcc1f726bb4505e6e761"
+    },
+    {
+      "group": "dvb",
+      "requested": 4,
+      "complete": 4,
+      "source_sha256": "93fe7286bb7fb9bf3d33ccf75556985f68666fe485241099c20bb7165bc88d97"
+    },
+    {
+      "group": "small-customer",
+      "requested": 1,
+      "complete": 1,
+      "source_sha256": "67b12c70234292c6afeffc489d91ae3101f95c2a4ff7fcc1f726bb4505e6e761"
+    },
+    {
+      "group": "small-dvb",
+      "requested": 2,
+      "complete": 2,
+      "source_sha256": "93fe7286bb7fb9bf3d33ccf75556985f68666fe485241099c20bb7165bc88d97"
+    },
+    {
+      "group": "lcn-customer",
+      "requested": 2,
+      "complete": 2,
+      "source_sha256": "67b12c70234292c6afeffc489d91ae3101f95c2a4ff7fcc1f726bb4505e6e761"
+    },
+    {
+      "group": "lcn-dvb",
+      "requested": 1,
+      "complete": 1,
+      "source_sha256": "93fe7286bb7fb9bf3d33ccf75556985f68666fe485241099c20bb7165bc88d97"
+    }
+  ],
+  "functions": [
+    {
+      "group": "customer",
+      "address": "2e1651bc",
+      "name": "MSrv_ChannelManager_DVB_Customer::_CheckFilterListProgram",
+      "c": "analiz\\native-4k\\visibility\\customer\\2e1651bc.c",
+      "c_sha256": "aac9e53b6efe96c7fe84a4cd0d99f3954586be40c42585ee01231cc1f858bb47"
+    },
+    {
+      "group": "customer",
+      "address": "2e1778dc",
+      "name": "MW_DTV_CM_DVB_Customer::GetProgramInfoByIndex",
+      "c": "analiz\\native-4k\\visibility\\customer\\2e1778dc.c",
+      "c_sha256": "bfeba98a6538d616746e0b92eae41c73b26c167acd892d4f204b72bb0fae58d5"
+    },
+    {
+      "group": "dvb",
+      "address": "2d4be7e8",
+      "name": "MSrv_ChannelManager_DVB::_GetProgramInfoByIndex",
+      "c": "analiz\\native-4k\\visibility\\dvb\\2d4be7e8.c",
+      "c_sha256": "0cc25dfee5cd5ddc543b81dd707c946cab131582b89a43870e57e8cb06d346b7"
+    },
+    {
+      "group": "dvb",
+      "address": "2d507238",
+      "name": "MW_DTV_CM_DVB::_GetNextProgramInfo<EN_SERVICE_QUERY_TYPE>",
+      "c": "analiz\\native-4k\\visibility\\dvb\\2d507238.c",
+      "c_sha256": "8ff52c51b5cf82bee12355e94bf30ce60d681bff3e6f64c0ebb7e26fcb4e1262"
+    },
+    {
+      "group": "dvb",
+      "address": "2d50eda8",
+      "name": "MW_DTV_CM_DB_IMPL<_DVB_PROGRAMINFO,_DVB_MUXINFO,_ST_DVB_SAT_INFO,_ST_DVB_NETWORK_INFO>::SaveProgram",
+      "c": "analiz\\native-4k\\visibility\\dvb\\2d50eda8.c",
+      "c_sha256": "d4abe51a25aea7fde394603df9a9b7825463a08d6d735688c96e6a6ffb2eda12"
+    },
+    {
+      "group": "dvb",
+      "address": "2d53eda4",
+      "name": "MW_DVB_SI_PSI_Parser::_AddCommonProgramInfo",
+      "c": "analiz\\native-4k\\visibility\\dvb\\2d53eda4.c",
+      "c_sha256": "8f63556d1abfb2a83dec749e66cb3f944594e7de43ad4bba2dca006b4ea59ef3"
+    },
+    {
+      "group": "small-customer",
+      "address": "2e172f44",
+      "name": "MW_DTV_CM_DVB_Customer::_IsMatchedProgramTypeByFilterLoopType",
+      "c": "analiz\\native-4k\\visibility\\small-customer\\2e172f44.c",
+      "c_sha256": "c1938a9ddf105e1ebdf3bffa49c5c2bf1f7df330d6070fb8629668be98b47d85"
+    },
+    {
+      "group": "small-dvb",
+      "address": "2d50280c",
+      "name": "MW_DTV_CM_DVB::_IsProgramListable",
+      "c": "analiz\\native-4k\\visibility\\small-dvb\\2d50280c.c",
+      "c_sha256": "313c90b4012b4c1c4885ea9cbe801e05beedde99ea4816cd2f61ad962f602cd1"
+    },
+    {
+      "group": "small-dvb",
+      "address": "2d50c488",
+      "name": "MW_DTV_CM_DB_IMPL<_DVB_PROGRAMINFO,_DVB_MUXINFO,_ST_DVB_SAT_INFO,_ST_DVB_NETWORK_INFO>::GetByLcn",
+      "c": "analiz\\native-4k\\visibility\\small-dvb\\2d50c488.c",
+      "c_sha256": "f01112e23e2aa5261e725bd7054760e843cc32aa1284abb4e6b786ab0f5471f8"
+    },
+    {
+      "group": "lcn-customer",
+      "address": "2e191b98",
+      "name": "MW_DVB_SI_PSI_Parser_Customer::_GetNitLCN",
+      "c": "analiz\\native-4k\\visibility\\lcn-customer\\2e191b98.c",
+      "c_sha256": "20d71bde91ec016bafe7b918c19ed30ef6005e6e7f46553c3428a8c342307da6"
+    },
+    {
+      "group": "lcn-customer",
+      "address": "2e191c48",
+      "name": "MW_DVB_SI_PSI_Parser_Customer::_GetBatLCN",
+      "c": "analiz\\native-4k\\visibility\\lcn-customer\\2e191c48.c",
+      "c_sha256": "0892e297cddbb5bcaf20fe79e0ab32a800d3204c124213d4b10c5d9becf1007e"
+    },
+    {
+      "group": "lcn-dvb",
+      "address": "2d53f474",
+      "name": "MW_DVB_SI_PSI_Parser::_UpdateServiceInfo",
+      "c": "analiz\\native-4k\\visibility\\lcn-dvb\\2d53f474.c",
+      "c_sha256": "235c3c15833b5ed3e44653f1841d3c9e67ef883f58e4305c4fee2a126442a86a"
+    }
+  ],
+  "raw_functions": [
+    {
+      "source": "base",
+      "name": "_ZN20MW_DVB_SI_PSI_Parser17_ResetServiceInfoER19MW_DVB_PROGRAM_INFO",
+      "va": "0x2d53d010",
+      "bytes": 120,
+      "body_sha256": "9d67d3b5dedbcd32ed2b2437c48b59a0ff94c73ed75bb0131fa3f775f8fd3be0"
+    },
+    {
+      "source": "base",
+      "name": "_ZN20MW_DVB_SI_PSI_Parser28_UpdateProgInfoByServiceTypeEhP16_DVB_PROGRAMINFOP19MW_DVB_PROGRAM_INFO",
+      "va": "0x2d53db70",
+      "bytes": 208,
+      "body_sha256": "16db46bbf4b54e2f99de79061f683e490411f5652985802d117ceb4436d0ab00"
+    },
+    {
+      "source": "customer",
+      "name": "_ZN29MW_DVB_SI_PSI_Parser_Customer17_ResetServiceInfoER19MW_DVB_PROGRAM_INFO",
+      "va": "0x2e19c210",
+      "bytes": 72,
+      "body_sha256": "b14a299b6e2a98e2f9c770fa4082d24c36c66ab4f25f4095ddaa03f4d1103f74"
+    }
+  ],
+  "bounded_cases": 13,
+  "bounded_status": "PASS_BOUNDED_METADATA_ONLY",
+  "proven_static_edges": {
+    "customer_reset_to_base_GOT": 1,
+    "next_program_list_gate_targets": 2,
+    "next_program_base_and_customer_vtable_relocation_records": 4
+  },
+  "findings": [
+    "MW+0x1c is LCN via AddCommon and GetByLcn.",
+    "BaseReset initializes LCN0xffff, not0; CustomerReset preserves it.",
+    "NIT/BAT LCN copy functions compare service-ID, not HEVC codec.",
+    "CheckService rejects LCN0 except two numeric mode/config cases; mode1/operator4,7 also impose LCN bounds.",
+    "Satellite mode2 does not take mode1 LCN bound branch.",
+    "Stored list filter does not read codec+0x19; raw class1f already mapped to TV1 is not excluded here."
+  ],
+  "unresolved_indirect_paths": [
+    "query0xc virtual filter+0xd0",
+    "DB provider object virtual access and serializer/write descendants",
+    "active operator/bouquet and runtime LCN writer order",
+    "favorite route object runtime type"
+  ],
+  "source_originals_unchanged": true,
+  "firmware_modified": false,
+  "device_written": false,
+  "full_tv_program_executed": false,
+  "notes": "Bounded byte execution covers pure metadata functions only; no hardware or firmware process. Static negative findings limited to retained bodies. Numeric country/operator values are not named without separate proof.",
+  "retained_function_bodies": 15,
+  "revisited_raw_assembly_functions": 1,
+  "existing_stage1_functions_reused_not_recounted": [
+    "Customer_CheckService_0x2e191888",
+    "base_UpdateProgInfoByServiceType_0x2d53db70"
+  ]
+}
