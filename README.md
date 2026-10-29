@@ -1,14 +1,55 @@
-# ModGrundig
+<div align="center">
 
-Eski nesil Grundig, Beko ve Arçelik televizyonlarının firmware’ini çevrimdışı açmak ve bağlantılarını kanıtlarıyla anlamak için araştırma deposu. UI adayları ayrı kopyalarda üretilir; özgün paketler korunur. Kullanıcı 27 Ekim 2026'da V7.7'nin TV'de sorunsuz çalıştığını bildirdi; bu kapsamlı cihaz testi sayılmaz. V7.3 ses panelinde donma yaptığı için reddedilmişti. Güncel 4K araştırması ayrı tutulur; çalışan V7.7 değiştirilmez ve henüz doğrulanmış bir 4K kilit açma paketi yoktur.
+<img src="docs/assets/modgrundig-header.svg" alt="ModGrundig — Firmware Research ve Native TV UI" width="100%">
 
-İnceleme [Reverse Engineer Anything](https://github.com/morluto/rea) ile yürür. `rea/` bu depoda sabit commit’e bağlı bir alt depodur. REA’nın kendi kaynağı, README’si ve lisansı [morluto/rea](https://github.com/morluto/rea) üzerindedir.
+**Grundig GMGRMR firmware araştırması ve native televizyon arayüzü geliştirme projesi.**
 
-`analiz/` araştırma notlarını, kanıt JSON’larını, açılmış bölümleri, iki dosya sistemi görünümünü ve firmware imajlarını içerir. Orijinal devir ZIP’i, devir görselleri, sertifika bölümü, PEM ve anahtar dosyaları repoda yoktur.
+[Dokümantasyon](docs/README.md) · [Mimari ve bulgular](docs/TERSINE_MUHENDISLIK.md) · [Son aday: V7.10](docs/UI_NATIVE_V710_SEMIH_VE_HIZ.md) · [Katkıda bulun](#katkıda-bulunma)
 
-Lisans: [MIT](LICENSE). REA alt deposu kendi lisansına tabidir.
+Linux · MIPS32 · MUF / DirectFB · Python · Ghidra
 
-## Klonlama
+</div>
+
+## Proje hakkında
+
+ModGrundig, **GMGRMR V03.017.04** yazılım ailesinin yapısını anlamak ve mevcut televizyon deneyimini native kod ile iyileştirmek için geliştirilen açık kaynak bir araştırma projesidir. Firmware bölümleri, ELF modülleri, servis bağlantıları, kaynak tabloları ve arayüz davranışları birlikte incelenir.
+
+Amaç, değişiklikleri gerçek `libmuf` / DirectFB kaynaklarına bağlamak ve sonuçları dosya, fonksiyon adresi, çağrı ilişkisi ve doğrulama kayıtlarıyla belgelemektir. **Tarayıcı önizlemesi, native kod testi ve fiziksel TV gözlemi ayrı kanıt düzeyleridir.**
+
+## Çalışma alanları
+
+| Alan | Kapsam |
+|---|---|
+| **Firmware mimarisi** | Bölüm yerleşimi, dosya sistemleri, açılış zinciri ve güncelleme formatının çevrimdışı analizi. |
+| **Modül ve çağrı haritaları** | 226 ELF modülünün envanteri; import/export, sembol, bağımlılık ve seçilmiş fonksiyon incelemeleri. |
+| **Native UI** | Ses paneli, mute durumu, kanal numarası girişi ve menü kaynaklarında izlenebilir değişiklikler. |
+| **Doğrulama araçları** | Kaynak hash kontrolleri, odaklı testler, dosya sistemi yeniden çıkarımı ve paket bütünlüğü kontrolleri. |
+| **Araştırma bilgi tabanı** | Ghidra çıktıları, JSON kanıtları, sürüm notları ve açık teknik sorular. |
+
+Envanterin tamamlanması, bütün fonksiyonların çözüldüğü veya kaynak kodun eksiksiz geri kazanıldığı anlamına gelmez. Diğer Grundig, Beko ve Arçelik modelleriyle uyumluluk ayrıca doğrulanmalıdır.
+
+## Güncel durum
+
+**Son belgelenen aday V7.10; fiziksel cihaz geri bildirimi bulunan temel sürüm V7.7’dir.**
+
+| Sürüm / konu | Durum | Ayrıntı |
+|---|---|---|
+| **V7.10** | Çevrimdışı doğrulandı; TV testi yok | Native **SEMIH** menü logosu; V7.9 ses/kanal davranışları korunur. [Rapor →](docs/UI_NATIVE_V710_SEMIH_VE_HIZ.md) |
+| **V7.9** | Çevrimdışı doğrulandı; TV testi yok | Seviyeye göre ses ikonları ve azaltılmış sol kenar boşluğu. [Rapor →](docs/UI_NATIVE_V79_SEVIYELI_SES.md) |
+| **V7.7** | Kullanıcı cihaz geri bildirimi var | 27 Ekim 2026’da TV’de çalıştığı bildirildi; kapsamlı donanım testi değildir. [Rapor →](docs/UI_NATIVE_V77_PAKET.md) |
+| **4K / HEVC** | Araştırma sürüyor | Doğrulanmış 4K kilit açma çözümü yoktur. [Araştırma →](docs/4K_YAYIN_VE_GIZLI_OZELLIKLER.md) |
+
+> **Kapsam notu:** V7.10 yeni hızlı kanal geçişi veya hızlı açılış özelliği eklemez. Hızlı kanal geçişi mevcut native ayardır; hızlı açılış için güvenilir ek hızlandırma yaması çıkarılmamıştır. **V7.3, cihazda donma bildirimi nedeniyle reddedilmiştir.** Eski çalışmalar [sürüm arşivinde](docs/README.md) tutulur.
+
+## Native kaynaklardan bir örnek
+
+![Özgün GRUNDIG logosu ile V7.10 SEMIH kaynağının karşılaştırması](analiz/native-ui-candidate/v7.10-tv/preview/brand-comparison.png)
+
+*Gerçek PNG kaynakları, aynı native widget ölçeğinde gösterilir. Bu bir TV ekran görüntüsü değildir. Yeni harfler özgün bitmap stiline yaklaştırılmıştır; birebir OEM fontu geri kazanılmamıştır.*
+
+## Hızlı başlangıç
+
+Kaynağı ve sabitlenmiş araç alt depolarını indirin:
 
 ```bash
 git clone --recurse-submodules https://github.com/Semihkrks/ModGrundig.git
@@ -16,67 +57,54 @@ cd ModGrundig
 git lfs pull
 ```
 
-Git LFS, `analiz/ui-kod-cagrilari.json` ve `analiz/dosya-sistemleri-tam.tar` içindir. Alt depo gelmezse `git submodule update --init rea`.
+Son komut için **Git LFS** kurulu olmalıdır. LFS ile tutulan dosyalar `analiz/ui-kod-cagrilari.json` ve `analiz/dosya-sistemleri-tam.tar` dosyalarıdır. Eksik alt depolar için `git submodule update --init --recursive` kullanılır. REA alt depolarındaki bazı test dosyaları Windows dosya adı/uzun yol sınırlarına takılabilir; bu durumda WSL/Linux kullanın.
 
-## Nereden başlanır
+**İlk okuma rotası:**
 
-- [Geliştirme öncelikleri: hızlı kanal, oyun/PC yolu, kırpmasız görüntü ve kullanılabilir özellik adayları](docs/GELISTIRME_ONCELIK_PLANI.md)
+1. [Sistem bilgi tabanı](docs/bilgi-tabani/README.md) — mimari ve modül rolleri.
+2. [Tersine mühendislik raporu](docs/TERSINE_MUHENDISLIK.md) — kanıtlar ve tamamlanan kapsam.
+3. [UI kod yapısı](docs/UI_KOD_YAPISI.md) ve [kaynak haritası](docs/UI_HARITASI.md) — native arayüz bağlantıları.
+4. [Kurulum kaydı](docs/KURULUM.md) — araçlar, yerel yollar ve yeniden üretim koşulları.
 
-- [V7.9 test RAR'ı: seviyeli ses ikonları, yarım kenar boşluğu ve gerçek native kontroller](docs/UI_NATIVE_V79_SEVIYELI_SES.md)
-- [V7.10: native SEMIH menü logosu ve hız ayarlarının doğrulanan durumu](docs/UI_NATIVE_V710_SEMIH_VE_HIZ.md)
-- [Hızlı kanal geçişinin gerçek ayarı ve AV senkronizasyon yolu](docs/FAST_CHANNEL_ANALIZ.md)
-- [Hızlı açılış: mevcut STR yolu ve eksik etkinleştirme bağlantısı](docs/FAST_BOOT_ANALIZ.md)
+Analiz ortamında Windows, Ubuntu/WSL, Python, Ghidra/JDK ve seçilmiş native testler için ek araçlar kullanılır. Scriptler henüz taşınabilir, tek komutlu kurulum sunmaz; bazıları yerel kaynaklar ve hash ile sabitlenmiş önceki çıktılar gerektirir. **Depoyu klonlamak, tek başına firmware oluşturma veya tam TV emülasyonu sağlamaz.**
 
-- [V7.8 veri test RAR'ı: V7.7 korunur, yalnız varsayılan TRT4K transponderi eklenir; decoder kilidi değildir](docs/UI_NATIVE_V78_TRANSPONDER.md)
+## Doğrulama yaklaşımı
 
-- [4K kanal araştırması: eksik TRT transponderi, kabul edilen HEVC türü ve decoder sınırları](docs/4K_YAYIN_VE_GIZLI_OZELLIKLER.md)
-
-- [V7.7: panelde mute düzeltmesi, ses0 sağ üst rozeti ve çizgisiz kanal girişi](docs/UI_NATIVE_V77_PAKET.md)
-
-- [V7.6: buyuk sessiz rozeti, gercek kayitsiz kanal mesaji ve native sayac](docs/UI_NATIVE_V76_PAKET.md)
-
-- [V7.5 test adayı: gerçek kanal adı bağlantısı; GP düzeltmesi, gri bar ve beyaz rozet korunur](docs/UI_NATIVE_V75_KANAL_ADI.md)
-- [V7.4: V7.3 donma kusuru, V7.1 tabanlı düzeltme, gri bar ve sağ üst beyaz rozet](docs/UI_NATIVE_V74_GP_DUZELTMESI.md)
-- [Reddedilen V7.3: cihaz donma geri bildirimi; yüklemeyin](docs/UI_NATIVE_V73_GRI_SESSIZ.md)
-- [V7.2 ara revizyon: native sessiz seçim kodu; ikon tasarımı sonradan düzeltildi](docs/UI_NATIVE_V72_SESSIZ_DURUMU.md)
-- [V7.1: TV'de görülen köşe, kenar mesafesi ve numara kırpılması düzeltmeleri](docs/UI_NATIVE_V71_TV_DUZELTMELERI.md)
-- [Önceki V7 TV adayı: orijinal menüler, yalnız ses ve numara ekranı](docs/UI_NATIVE_V7_TV_ADAYI.md)
-- [İptal edilen V8 menü deneyi: tarihsel kanıtlar](docs/UI_NATIVE_ADAY_V8.md)
-- [Güncel v7: Chrome menü/ayar önizlemesi, kanal listesi, native sayı boşluğu ve gerçek test sınırları](docs/UI_MENU_AYARLAR_V7.md)
-- [Güncel native UI v5: kompakt ses kapsülü, büyük mute ikonu ve kavisli kanal numarası](docs/UI_NATIVE_ADAY_V5.md)
-- [Native çizim kodundan görüntü: çalışan test ekranı, font/ikon düzeltmesi ve kalan TV açılış engeli](docs/NATIVE_GORUNTU_CALISTIRMA.md)
-- [Güncel native aday v3 ve gerçek MIPS çalıştırma laboratuvarı](docs/UI_NATIVE_ADAY_V3.md)
-- [TV emülasyonu: kurulan ortam, gerçek başlangıç engeli ve sınırlar](docs/TV_EMULASYON_ARASTIRMASI.md)
-- [Gerçek firmware UI adayı v2: değişiklikler, dosya/paket doğrulamaları ve TV'de doğrulanmayan kapsam](docs/UI_NATIVE_ADAY_V2.md)
-- [Güncel modern TV test ortamı:24menü/156satır, kaynak kanıtları ve özellikler](docs/UI_OZELLIK_KAPSAMI.md)
-
-- [UI modernleştirme: çalışan önizleme, native kaynak adayları ve test durumu](docs/UI_UYGULAMA_DURUMU.md)
-- [Sistem bilgi tabanı ve modül indeksi](docs/bilgi-tabani/README.md)
-- [Dört büyük UI fonksiyonu ve tasarıma geçiş durumu](docs/bilgi-tabani/UI_DORT_BUYUK_FONKSIYON.md)
-- [UI kod yapısı ve davranış kanıtları](docs/UI_KOD_YAPISI.md)
-- [UI, menü ve ses paneli bağlantı haritası](docs/UI_HARITASI.md)
-- [Tersine mühendislik bulguları ve kapsamı](docs/TERSINE_MUHENDISLIK.md)
-- [Araç kurulumu ve tekrar çalıştırma](docs/KURULUM.md)
-- [GitHub’da olan ve yerelde kalan ayrımı](docs/GITHUB_SENKRON.md)
-
-## Dizinler
-
-| Yol | İçerik |
+| Kanıt düzeyi | Ne gösterir? |
 |---|---|
-| `docs/` | Bulgular, UI haritası, modül notları |
-| `scripts/` | Yalnız çevrimdışı veri işleyen araştırma araçları |
-| `analiz/` | Kanıt JSON’ları, açılmış bölümler, dosya sistemi görünümleri, firmware imajları, REA/Ghidra notları |
-| `tools/` | Yerel araç sarmalayıcıları |
-| `rea/` | Sabitlenmiş [REA](https://github.com/morluto/rea) alt deposu |
+| **Dosya / kaynak incelemesi** | İmaj içeriği, kaynak kimlikleri ve hash ile doğrulanan girdiler. |
+| **Statik kod analizi** | İncelenen fonksiyonun assembly/decompile davranışı ve kanıtlanan çağrı yolları. |
+| **Host / sınırlı native test** | Testin kapsadığı bayt, durum veya fonksiyon sözleşmesi; tam TV davranışı değildir. |
+| **Fiziksel cihaz gözlemi** | Yalnız bildirilen cihaz, sürüm ve denenen senaryo. |
 
-Yerel Linux ağacı, Ghidra veritabanı ve araç kurulumları analiz makinesinde kalır. Yollar [kurulum notunda](docs/KURULUM.md).
+V7.10 kayıtlarında **25/25 odaklı kontrol**, bağımsız native inceleme ve APP/BIN/RAR çevrimdışı doğrulamaları bulunur. Bunlar tüm televizyon işlevlerinin test edildiği anlamına gelmez. [Doğrulama kaydı →](analiz/native-ui-candidate/v7.10-tv/phase-results.json)
 
-`analiz/dosya-sistemleri/` ilk NTFS denemesidir ve özel dosyalar yüzünden repoda yoktur. `analiz/firmware-orijinal/` ilk RAR denemesidir; tamamlanmış kaynak diye kullanılmamalıdır. Güncel okuma görünümü `analiz/dosya-sistemleri-tam/`, doğrulanmış imaj `analiz/firmware-dogrulanmis/` altındadır.
+## Depo yapısı
 
-## Kanıt kayıtları
+```text
+ModGrundig/
+├── docs/        Mimari, araştırma raporları ve sürüm belgeleri
+├── scripts/     Analiz, dönüşüm, doğrulama ve test araçları
+├── analiz/      Envanterler, kanıtlar ve seçilmiş çıktılar
+├── native-ui/   Native yardımcılar ve önizleme araçları
+├── tools/       Araç sarmalayıcıları ve ortam notları
+└── rea/         Sabit commit’e bağlı REA alt deposu
+```
 
-`analiz/bolum-haritasi.json`, `dosya-envanteri.json`, `elf-envanteri.json`, `bagimliliklar.json`, `ui-kaynak-haritasi.json`, `sembol-baglantilari.json`, `modul-kategorileri.json` dosya incelemesinden üretilmiştir. Birleşik ilişki grafiği `analiz/baglanti-grafi.json` içindedir.
+Güncel ELF/sembol/bağımlılık envanteri **[`analiz/envanter-v2/`](analiz/envanter-v2/)** altındadır. Eski kök JSON’lar tarihsel izlenebilirlik için korunur. `analiz/dosya-sistemleri/` ilk kısmi çıkarımdır; tamamlanmış ağaç değildir. Güncel okuma görünümü `analiz/dosya-sistemleri-tam/`, doğrulanmış imaj kayıtları `analiz/firmware-dogrulanmis/` altındadır.
 
-22 Ekim 2026 düzeltmesi: güncel ELF/sembol/bağımlılık envanteri **`analiz/envanter-v2/`** altındadır. Önceki readelf parser’ı `[MIPS PLT]` alanını section/name’e kaydırıyordu. Eski kök JSON’lar önceki sorguların hash kaydı için durur. UI kod çağrı adayları `analiz/ui-kod-cagrilari.json`, bağımsız Ghidra karşılaştırması `analiz/ui-kod-cagrilari-dogrulama.json` içindedir.
+Tam üretilmiş firmware paketleri, yerel araç kurulumları, orijinal devir arşivi, özel anahtarlar ve sertifika bölümü yayımlanmaz. Belgelerdeki bazı paket yolları yerel analiz çıktısına aittir; GitHub indirmesi değildir. [GitHub / yerel dosya ayrımı →](docs/GITHUB_SENKRON.md)
 
-İncelenen paket, kullanıcının sağladığı RAR’dır. Fiziksel televizyonun aktif firmware dump’ı olduğu kanıtlanmamıştır. PC analizi, cihazın aktif tema/kalibrasyonunu veya güvenli yeniden yüklemeyi kanıtlamaz.
+## Katkıda bulunma
+
+Hata bildirirken ilgili sürümü, dosyayı veya fonksiyon adresini, beklenen davranışı ve gözlenen sonucu belirtin. Cihaz seri numarası, anahtar, sertifika veya özel hesap bilgilerini paylaşmayın.
+
+Orijinal girdileri koruyun; scriptleri `scripts/`, kanıtları `analiz/`, açıklamaları `docs/` altında tutun. Değişikliğin kapsamına uygun testleri ve çözülemeyen noktaları ekleyin. Normal menüde kullanılabilen ayarlar, yeni veya gizli özellik olarak sunulmamalıdır.
+
+[Sorun bildir](https://github.com/Semihkrks/ModGrundig/issues) · [Değişiklik öner](https://github.com/Semihkrks/ModGrundig/pulls)
+
+## Lisans ve araçlar
+
+Projenin özgün kodu ve dokümantasyonu [MIT lisansı](LICENSE) ile sunulur. Üçüncü taraf araçlar ve üreticiye ait materyaller kendi hak ve lisanslarına tabidir; bu projenin lisansı bunlara ek hak vermez.
+
+[Reverse Engineer Anything](https://github.com/morluto/rea) sabitlenmiş alt depo olarak kullanılır. Eski MIPS ELF ABI sınırlarında doğrudan Ghidra analizi yapılır; bu çıktılar REA Evidence olarak etiketlenmez. ModGrundig bağımsız bir projedir; Grundig, Beko veya Arçelik’in resmî yazılım dağıtımı değildir.
