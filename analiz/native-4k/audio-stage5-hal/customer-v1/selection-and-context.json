@@ -1,0 +1,62 @@
+{
+  "requested": [
+    {
+      "requested_address": "2dc67de4",
+      "function": {
+        "address": "2dc67de4",
+        "name": "mapi_audio_customer::MMA_getAudioInfo2",
+        "signature": "undefined __stdcall MMA_getAudioInfo2(MMA_AUDIO_DEC_ID param_1, MM_AUDIO_INFO_TYPE param_2, ulong param_3)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 228
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2dc67de4",
+      "original_body_max": "2dc67ec7",
+      "supplied_dynsym": {
+        "size": 368
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2dc67f53",
+      "ephemeral_body_clamped": false
+    }
+  ],
+  "ephemeral_context_seeds": [
+    {
+      "register": "t9",
+      "address": "2dc67de4",
+      "value_hex": "2dc67de4",
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement"
+    }
+  ],
+  "ephemeral_noreturn_assumptions": [
+    {
+      "previous_noreturn": true,
+      "address": "EXTERNAL:0000001c",
+      "name": "__assert_fail",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn"
+    },
+    {
+      "previous_noreturn": true,
+      "address": "EXTERNAL:00000049",
+      "name": "_Unwind_Resume",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn"
+    },
+    {
+      "previous_noreturn": true,
+      "address": "EXTERNAL:0000004f",
+      "name": "abort",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn"
+    },
+    {
+      "previous_noreturn": false,
+      "address": "EXTERNAL:000000a8",
+      "name": "__cxa_rethrow",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "kind": "external_function_noreturn"
+    }
+  ]
+}

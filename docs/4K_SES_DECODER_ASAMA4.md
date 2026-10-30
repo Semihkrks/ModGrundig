@@ -1,5 +1,10 @@
 # Ses decoder yolu — V7.9 testinden sonraki dar inceleme
 
+**Aşama5 güncellemesi:** Aşağıdaki decoderID→SHM belirsizliği artık
+[HAL ve native testleriyle](4K_SES_HAL_ASAMA5.md) kapandı: incelenen ID0/1/2 aynı
+selector0'a gider. Yanlış kilit bankı hipotezi desteklenmedi. Aşağıdaki metin
+aşama4'ün tarihsel sınır kaydıdır.
+
 30 Ekim 2026. Kullanıcı V7.9 HEVC ses testinin yüklenmesinin %100 tamamlandığını, TV'nin yeniden başladığını ve iki ses seçeneğinde de belirgin değişiklik/ses olmadığını bildirdi. **Bu sonuç, fallback'in çalıştığını veya MAD kilidinin false olduğunu kanıtlamaz.** Canlı helper çağrı sayısı, seçilen PID/codec, mute maskesi ve PCM verisi yoktur.
 
 Somut yeni sonuç: **Normal ses başlatması, decoder kimliği atanmışsa kimlikli AudioSDK API'sini kullanıyor; testte korunan IsMadLock zinciri ise SHM selector0'ı okuyor.** Decoder kimliği ile bu selector arasındaki ilişki çözülmediği için “yanlış decoder kilidi okunuyor” sonucu henüz çıkarılamaz. Yeni A2 yaması üretilmedi.

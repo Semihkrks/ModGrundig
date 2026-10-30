@@ -1,0 +1,66 @@
+{
+  "status": "PASS_EVENT_MODE_STATIC_AND_NATIVE_CONSTRUCTOR",
+  "new_C_exports": 3,
+  "new_raw_constructor": true,
+  "constructor_native_cases": [
+    {
+      "prefill": 0,
+      "mode26": 0,
+      "audio_requested": 1,
+      "video_requested": 1,
+      "audio_pid": 8191
+    },
+    {
+      "prefill": 170,
+      "mode26": 0,
+      "audio_requested": 1,
+      "video_requested": 1,
+      "audio_pid": 8191
+    },
+    {
+      "prefill": 255,
+      "mode26": 0,
+      "audio_requested": 1,
+      "video_requested": 1,
+      "audio_pid": 8191
+    }
+  ],
+  "source_sha256": "06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21",
+  "exports": {
+    "analiz\\native-4k\\audio-stage5-mode\\common-v2\\2d9d9da4.c": "ba278dec8c8e736afc85646e2f65dada0af729ff75ec72d05ccad18f1c6dd404",
+    "analiz\\native-4k\\audio-stage5-mode\\common-v2\\2d9d6d58.c": "a56e7b6149eba9ce45860cbad1db488de1e2c86b6d7a5f63af54c35e73d9d711",
+    "analiz\\native-4k\\audio-stage5-mode\\common-v2\\2d9d7384.c": "312ca116fabc2e853c91306ca2f3fbf3639422d760f54bc3a162743d7b938828"
+  },
+  "pinned_words": {
+    "0x2d98e440": "0xa0800026",
+    "0x2d9da284": "0x24020001",
+    "0x2d9da294": "0xafa2003c",
+    "0x2d9d9fb0": "0x24020100",
+    "0x2d9d9fc0": "0xafa2003c"
+  },
+  "event_dispatch": {
+    "normal_start": 1,
+    "without_dmx_start": 256,
+    "command_field": "+0x20",
+    "mode_field": "+0x26",
+    "fields_are_distinct": true
+  },
+  "selected_DVB_update_call": {
+    "call": "0x2d4d704c",
+    "symbol": "_ZN16MW_DTV_AVMonitor5StartERK13MW_DTV_AVInfoh",
+    "argument": "caller AVInfo passed unchanged as a1"
+  },
+  "constructor_mode_default": 0,
+  "converter_mode_write_found": false,
+  "applied_guard_field": "+0xc6",
+  "requested_guard_field": "+0xfe",
+  "selected_DoSetMode_behavior": "Display/timing setup using GetDispInfo; not the +0x26 producer",
+  "unresolved": [
+    "Every upstream writer of caller AVInfo+0x26",
+    "Actual event/mode and requested/applied fields on TV",
+    "All customers and active source caller selection"
+  ],
+  "target_hardware_executed": false,
+  "whole_firmware_executed": false,
+  "firmware_patch": false
+}

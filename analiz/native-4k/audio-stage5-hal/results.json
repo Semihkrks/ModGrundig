@@ -1,0 +1,162 @@
+{
+  "status": "PASS_BOUNDED_NATIVE_HAL_CONTRACT",
+  "source_sha256": "d55e76dd24baea83657739e4424982cb8c4b00d90a9144792c1c6b430fe46651",
+  "new_C_exports": 3,
+  "callback_assignment": {
+    "init": "0x2d075e38",
+    "gp": "0x2d23a000",
+    "words": {
+      "0x2d075ea8": "0x8f848c84",
+      "0x2d075eb0": "0x8f828c60",
+      "0x2d075eb8": "0xac440000"
+    },
+    "target": "0x2d072d38",
+    "pointer_address": "0x2d2330cc",
+    "hardware_init_executed": false
+  },
+  "all_selected_valid_API_IDs_map_to_ADEC0": true,
+  "legacy_SHM_read": [
+    1,
+    0
+  ],
+  "mismatch_hypothesis_supported": false,
+  "hardware_executed": false,
+  "full_firmware_executed": false,
+  "initialized_shared_state_mocked": true,
+  "hardware_SHM_function_mocked": true,
+  "case_count": 9,
+  "cases": [
+    {
+      "api_decoder_id": 0,
+      "info_type": 0,
+      "mocked_SHM_value": 0,
+      "SHM_read": [
+        1,
+        0
+      ],
+      "api_success": 1,
+      "one_byte_lock": 0,
+      "other_output_bytes_unchanged": true,
+      "callee_saved_stack_preserved": true
+    },
+    {
+      "api_decoder_id": 0,
+      "info_type": 0,
+      "mocked_SHM_value": 1,
+      "SHM_read": [
+        1,
+        0
+      ],
+      "api_success": 1,
+      "one_byte_lock": 1,
+      "other_output_bytes_unchanged": true,
+      "callee_saved_stack_preserved": true
+    },
+    {
+      "api_decoder_id": 0,
+      "info_type": 0,
+      "mocked_SHM_value": 2,
+      "SHM_read": [
+        1,
+        0
+      ],
+      "api_success": 1,
+      "one_byte_lock": 1,
+      "other_output_bytes_unchanged": true,
+      "callee_saved_stack_preserved": true
+    },
+    {
+      "api_decoder_id": 1,
+      "info_type": 0,
+      "mocked_SHM_value": 0,
+      "SHM_read": [
+        1,
+        0
+      ],
+      "api_success": 1,
+      "one_byte_lock": 0,
+      "other_output_bytes_unchanged": true,
+      "callee_saved_stack_preserved": true
+    },
+    {
+      "api_decoder_id": 1,
+      "info_type": 0,
+      "mocked_SHM_value": 1,
+      "SHM_read": [
+        1,
+        0
+      ],
+      "api_success": 1,
+      "one_byte_lock": 1,
+      "other_output_bytes_unchanged": true,
+      "callee_saved_stack_preserved": true
+    },
+    {
+      "api_decoder_id": 1,
+      "info_type": 0,
+      "mocked_SHM_value": 2,
+      "SHM_read": [
+        1,
+        0
+      ],
+      "api_success": 1,
+      "one_byte_lock": 1,
+      "other_output_bytes_unchanged": true,
+      "callee_saved_stack_preserved": true
+    },
+    {
+      "api_decoder_id": 2,
+      "info_type": 0,
+      "mocked_SHM_value": 0,
+      "SHM_read": [
+        1,
+        0
+      ],
+      "api_success": 1,
+      "one_byte_lock": 0,
+      "other_output_bytes_unchanged": true,
+      "callee_saved_stack_preserved": true
+    },
+    {
+      "api_decoder_id": 2,
+      "info_type": 0,
+      "mocked_SHM_value": 1,
+      "SHM_read": [
+        1,
+        0
+      ],
+      "api_success": 1,
+      "one_byte_lock": 1,
+      "other_output_bytes_unchanged": true,
+      "callee_saved_stack_preserved": true
+    },
+    {
+      "api_decoder_id": 2,
+      "info_type": 0,
+      "mocked_SHM_value": 2,
+      "SHM_read": [
+        1,
+        0
+      ],
+      "api_success": 1,
+      "one_byte_lock": 1,
+      "other_output_bytes_unchanged": true,
+      "callee_saved_stack_preserved": true
+    }
+  ],
+  "exports": {
+    "analiz\\native-4k\\audio-stage5-hal\\api-v1\\2d072d38.c": "9e586fa33594c8eb0c27608570d41d04f8fac7a7a7cef3897c29e79a928a0aea",
+    "analiz\\native-4k\\audio-stage5-hal\\api-v1\\2d06260c.c": "eb466265f7f718f61ed0f1de8c602a02c76bed7ae5102775525871b767e68604",
+    "analiz\\native-4k\\audio-stage5-hal\\customer-v1\\2dc67de4.c": "7a949209163674d928ee7c373a68cb08a5033adb567812889fe935eec2cbfdd9"
+  },
+  "distinction": "Return value1 means API call success; output onebyte separately means actual lock0/1",
+  "source_function_hashes": {
+    "HAL_MAD_GetAudioInfo2": "2d8f4a3ab6811b8f75822718335b662db42d55ddaf7ed21c2a25a3d44a5ede3e",
+    "HAL_AUDIO_Convert_DecId_to_ADECId": "a285301f4909d39937439e28139951241886d5428b3389f8b6dc95def5ad60e2"
+  },
+  "limitations": [
+    "No actual DSP, PCM, TS or RF data",
+    "Valid selected API IDs0/1/2 tested only",
+    "Legacy equivalence relies on separately pinned stage4 SHM(1,0) chain"
+  ]
+}

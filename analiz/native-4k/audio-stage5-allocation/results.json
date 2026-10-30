@@ -1,0 +1,194 @@
+{
+  "date": "2026-10-30",
+  "user_feedback": "Normal HD audio works after returning from TRT UltraHD; no global persistent allocation failure established",
+  "status": "PASS_STATIC_AND_HOST_TRANSCRIPTIONS",
+  "source_sha256": "4ebd5fc038a843b26c03b6cb6b44b5e9052820bea388c5d4fc1913b840e83949",
+  "target_executed": false,
+  "firmware_modified": false,
+  "counts": {
+    "new_C_exports": 5,
+    "selected_function_bodies": 5,
+    "pinned_instruction_words": 18,
+    "pinned_vtable_slots": 5,
+    "host_transcription_cases": 4
+  },
+  "bodies": [
+    {
+      "va": "0x2dc6ed7c",
+      "size": 372,
+      "symbol": "_ZN19mapi_audio_customerC1Ev",
+      "sha256": "e53493c9d404b2d2c4cb1c01642e5454f2af673cbf259e552f50b613d78d4436"
+    },
+    {
+      "va": "0x2dc6ae10",
+      "size": 396,
+      "symbol": "_ZN19mapi_audio_customer12OpenAudioDecEP17AudioSDKDecStatus",
+      "sha256": "0e1f8c77aff98634fdca34f2aafc5de7cfa9027bdf3551f3a783e2434d44d54c"
+    },
+    {
+      "va": "0x2dc6ada4",
+      "size": 108,
+      "symbol": "_ZN19mapi_audio_customer13CloseAudioDecE16MMA_AUDIO_DEC_ID",
+      "sha256": "c1043d496782533a33ccecf21e4ccc5b93b4387896d565b3eed3ad629e3c7209"
+    },
+    {
+      "va": "0x2dc6cf38",
+      "size": 4472,
+      "symbol": "_ZN19mapi_audio_customer29InputSource_ChangeAudioSourceE22MAPI_INPUT_SOURCE_TYPE",
+      "sha256": "c95ef4a79c4dbbd1b743edefe82afaf26207cf757c69322fb97f2a91a1d3ca78"
+    },
+    {
+      "va": "0x2dc6c98c",
+      "size": 1452,
+      "symbol": "_ZN19mapi_audio_customer29InputSource_ChangeAudioSourceE22MAPI_INPUT_SOURCE_TYPE25MAPI_AUDIO_PROCESSOR_TYPE",
+      "sha256": "891617e65e8ce0c9ab7bccb484654014907cf403e113e2b60a0d3ffaf3d01808"
+    }
+  ],
+  "vtable": [
+    {
+      "slot": "0x50",
+      "target": "0x2dc6ae10"
+    },
+    {
+      "slot": "0x54",
+      "target": "0x2dc6ada4"
+    },
+    {
+      "slot": "0x58",
+      "target": "0x2dc6ac08"
+    },
+    {
+      "slot": "0x6c",
+      "target": "0x2dc6cf38"
+    },
+    {
+      "slot": "0x13c",
+      "target": "0x2dc62954"
+    }
+  ],
+  "instruction_words": {
+    "0x2dc6edfc": "0x2404ffff",
+    "0x2dc6ee10": "0xae040130",
+    "0x2dc6ee20": "0xae04012c",
+    "0x2dc6cf70": "0x8c820118",
+    "0x2dc6cf78": "0x1045010e",
+    "0x2dc6d020": "0x8e25012c",
+    "0x2dc6d024": "0x8c590054",
+    "0x2dc6d044": "0x8c790050",
+    "0x2dc6d050": "0x26250134",
+    "0x2dc6d05c": "0xae22012c",
+    "0x2dc6d06c": "0xae320118",
+    "0x2dc6cc78": "0x8e050130",
+    "0x2dc6cc7c": "0x8c590054",
+    "0x2dc6cc8c": "0xae110158",
+    "0x2dc6cc90": "0xae130154",
+    "0x2dc6cc94": "0x8c590050",
+    "0x2dc6cca0": "0x26050150",
+    "0x2dc6cca8": "0xae020130"
+  },
+  "constructor": {
+    "main_ID": "+0x12c=-1",
+    "secondary_ID": "+0x130=-1",
+    "main_status_source": "+0x13c=0x1c",
+    "secondary_status_source": "+0x158=0x25",
+    "initial_DSP_main": "+0x140=0",
+    "initial_DSP_secondary": "+0x15c=0"
+  },
+  "allocation": {
+    "main_call": "0x2dc6d04c virtual+0x50(status+0x134)",
+    "main_store": "0x2dc6d05c stores returned V0 to+0x12c",
+    "secondary_call": "0x2dc6cc9c virtual+0x50(status+0x150)",
+    "secondary_store": "0x2dc6cca8 stores returnedV0 to+0x130",
+    "selected_ID_is_literal": false,
+    "underlying_API_allocation_policy_unresolved": true
+  },
+  "open": {
+    "va": "0x2dc6ae10",
+    "reject_null_status": true,
+    "allowed_source_values": [
+      1,
+      23,
+      24,
+      25,
+      26,
+      28,
+      30,
+      34,
+      37,
+      38
+    ],
+    "reject_return": "-1",
+    "API_call": "0x2dc6af30 MApi_AUDIO_OpenDecodeSystem",
+    "returned_ID_converter": "0x2dc63550",
+    "source_info_converter": "virtual+0x13c ->0x2dc62954",
+    "converter_numeric_outputs_not_inspected": true
+  },
+  "close": {
+    "va": "0x2dc6ada4",
+    "ID_minus1_or3_returns0": true,
+    "valid_path": "ID converter0x2dc634d8 then MApi_AUDIO_ReleaseDecodeSystem",
+    "caller_ignores_release_success": true
+  },
+  "main_source_change": {
+    "va": "0x2dc6cf38",
+    "same_source_early_return": "0x2dc6cf70..0x2dc6cf78",
+    "open_failure_not_checked_before_source_update": true,
+    "source_update": "0x2dc6d06c +0x118=requested",
+    "source1c_later_default_DSP_switch": "virtual+0x44(this,0,0)",
+    "HEVC_specific_allocation_condition_found": false,
+    "DSP_field_reused_on_later_source_changes": true
+  },
+  "host_cases": [
+    {
+      "current_source": 28,
+      "requested_source": 28,
+      "old_id": -1,
+      "mocked_open_result": 1,
+      "open_called": false,
+      "resulting_main_id": -1,
+      "resulting_current_source": 28
+    },
+    {
+      "current_source": 28,
+      "requested_source": 28,
+      "old_id": 1,
+      "mocked_open_result": 2,
+      "open_called": false,
+      "resulting_main_id": 1,
+      "resulting_current_source": 28
+    },
+    {
+      "current_source": 23,
+      "requested_source": 28,
+      "old_id": 1,
+      "mocked_open_result": 2,
+      "open_called": true,
+      "resulting_main_id": 2,
+      "resulting_current_source": 28
+    },
+    {
+      "current_source": 23,
+      "requested_source": 28,
+      "old_id": 1,
+      "mocked_open_result": -1,
+      "open_called": true,
+      "resulting_main_id": -1,
+      "resulting_current_source": 28
+    }
+  ],
+  "implications": [
+    "Constructor does not preassign a valid mainID",
+    "Allocation result is stored unconditionally; this layer does not force ID0/1/2",
+    "Same-source calls return even when mainID remains-1",
+    "Failure may persist until another source change; not observed on TV",
+    "Previous switch skips proc0 when mainID-1 but otherID valid; if both-1 it uses legacy fallback instead",
+    "WorkingHD followed by silentUHD on same mainDTV source would not by itself imply reallocation in this selected main function"
+  ],
+  "unresolved": [
+    "Live main/secondary IDs and allocation return",
+    "Underlying OpenDecodeSystem fixed-vs-dynamic selection policy",
+    "Numeric source/returned-ID converters beyond resolved targets",
+    "All callers/order of source switching and active PIP state",
+    "Whether TV ever enters selected allocation-failure state"
+  ]
+}

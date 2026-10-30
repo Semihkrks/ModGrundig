@@ -1,0 +1,166 @@
+{
+  "ephemeral_noreturn_assumptions": [
+    {
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "__assert_fail",
+      "address": "EXTERNAL:0000001c",
+      "previous_noreturn": true
+    },
+    {
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "_Unwind_Resume",
+      "address": "EXTERNAL:00000049",
+      "previous_noreturn": true
+    },
+    {
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "abort",
+      "address": "EXTERNAL:0000004f",
+      "previous_noreturn": true
+    },
+    {
+      "kind": "external_function_noreturn",
+      "basis": "explicit_standard_abort_or_throw_semantics_assumption_not_target_execution",
+      "name": "__cxa_rethrow",
+      "address": "EXTERNAL:000000a8",
+      "previous_noreturn": false
+    }
+  ],
+  "ephemeral_context_seeds": [
+    {
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2dc6ed7c",
+      "address": "2dc6ed7c",
+      "register": "t9"
+    },
+    {
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2dc6ae10",
+      "address": "2dc6ae10",
+      "register": "t9"
+    },
+    {
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2dc6ada4",
+      "address": "2dc6ada4",
+      "register": "t9"
+    },
+    {
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2dc6cf38",
+      "address": "2dc6cf38",
+      "register": "t9"
+    },
+    {
+      "basis": "assumed_MIPS_PIC_t9_equals_function_entry_not_runtime_measurement",
+      "value_hex": "2dc6c98c",
+      "address": "2dc6c98c",
+      "register": "t9"
+    }
+  ],
+  "requested": [
+    {
+      "requested_address": "2dc6ed7c",
+      "function": {
+        "address": "2dc6ed7c",
+        "name": "mapi_audio_customer::mapi_audio_customer",
+        "signature": "undefined __thiscall mapi_audio_customer(mapi_audio_customer * this)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 372
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2dc6ed7c",
+      "original_body_max": "2dc6eeef",
+      "supplied_dynsym": {
+        "size": 372
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2dc6eeef",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2dc6ae10",
+      "function": {
+        "address": "2dc6ae10",
+        "name": "mapi_audio_customer::OpenAudioDec",
+        "signature": "undefined __thiscall OpenAudioDec(mapi_audio_customer * this, AudioSDKDecStatus * param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 396
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2dc6ae10",
+      "original_body_max": "2dc6af9b",
+      "supplied_dynsym": {
+        "size": 396
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2dc6af9b",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2dc6ada4",
+      "function": {
+        "address": "2dc6ada4",
+        "name": "mapi_audio_customer::CloseAudioDec",
+        "signature": "undefined __thiscall CloseAudioDec(mapi_audio_customer * this, MMA_AUDIO_DEC_ID param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 108
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2dc6ada4",
+      "original_body_max": "2dc6ae0f",
+      "supplied_dynsym": {
+        "size": 108
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2dc6ae0f",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2dc6cf38",
+      "function": {
+        "address": "2dc6cf38",
+        "name": "mapi_audio_customer::InputSource_ChangeAudioSource",
+        "signature": "undefined __thiscall InputSource_ChangeAudioSource(mapi_audio_customer * this, MAPI_INPUT_SOURCE_TYPE param_1)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 1616
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2dc6cf38",
+      "original_body_max": "2dc6deeb",
+      "supplied_dynsym": {
+        "size": 4472
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2dc6e0af",
+      "ephemeral_body_clamped": false
+    },
+    {
+      "requested_address": "2dc6c98c",
+      "function": {
+        "address": "2dc6c98c",
+        "name": "mapi_audio_customer::InputSource_ChangeAudioSource",
+        "signature": "undefined __thiscall InputSource_ChangeAudioSource(mapi_audio_customer * this, MAPI_INPUT_SOURCE_TYPE param_1, MAPI_AUDIO_PROCESSOR_TYPE param_2)",
+        "external": false,
+        "thunk": false,
+        "body_bytes": 1452
+      },
+      "status": "selected_existing_function",
+      "original_body_min": "2dc6c98c",
+      "original_body_max": "2dc6cf37",
+      "supplied_dynsym": {
+        "size": 1452
+      },
+      "body_exceeds_dynsym_size": false,
+      "dynsym_end_inclusive": "2dc6cf37",
+      "ephemeral_body_clamped": false
+    }
+  ]
+}

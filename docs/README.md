@@ -6,6 +6,10 @@ ModGrundig araştırma raporları, uygulama kayıtları ve tarihsel deneyler.
 
 ## Güncel çalışma
 
+- [Ses HAL — eski/yeni kilit API'si ve native testler](4K_SES_HAL_ASAMA5.md)
+- [Ses decoder kimliğinin tahsisi](4K_SES_DECODER_TAHSISI.md)
+- [DMX olayları ve AVInfo mod alanı](4K_SES_DMX_MODU.md)
+
 - [V7.9 ses testi sonrası decoder/DSP incelemesi](4K_SES_DECODER_ASAMA4.md)
 - [Yamanın çağrı koşulları ve tanılama erişimi](V79_SES_TESTI_ERISIM_ANALIZI.md)
 

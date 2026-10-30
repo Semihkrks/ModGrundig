@@ -1,0 +1,27 @@
+2dc6ada4: 0b001c3c lui $gp, 0xb
+2dc6ada8: 1cc29c27 addiu $gp, $gp, -0x3de4
+2dc6adac: 21e09903 addu $gp, $gp, $t9
+2dc6adb0: e0ffbd27 addiu $sp, $sp, -0x20
+2dc6adb4: 1c00bfaf sw $ra, 0x1c($sp)
+2dc6adb8: 1000bcaf sw $gp, 0x10($sp)
+2dc6adbc: ffff0224 addiu $v0, $zero, -1
+2dc6adc0: 0f00a210 beq $a1, $v0, 0x2dc6ae00
+2dc6adc4: 2120a000 move $a0, $a1
+2dc6adc8: 03000224 addiu $v0, $zero, 3
+2dc6adcc: 0c00a210 beq $a1, $v0, 0x2dc6ae00
+2dc6add0: 3480998f lw $t9, -0x7fcc($gp)
+2dc6add4: 08163927 addiu $t9, $t9, 0x1608
+2dc6add8: 09f82003 jalr $t9
+2dc6addc: 00000000 nop 
+2dc6ade0: 1000bc8f lw $gp, 0x10($sp)
+2dc6ade4: 9484998f lw $t9, -0x7b6c($gp)
+2dc6ade8: 09f82003 jalr $t9
+2dc6adec: 21204000 move $a0, $v0
+2dc6adf0: 1c00bf8f lw $ra, 0x1c($sp)
+2dc6adf4: 1000bc8f lw $gp, 0x10($sp)
+2dc6adf8: 0800e003 jr $ra
+2dc6adfc: 2000bd27 addiu $sp, $sp, 0x20
+2dc6ae00: 1c00bf8f lw $ra, 0x1c($sp)
+2dc6ae04: 21100000 move $v0, $zero
+2dc6ae08: 0800e003 jr $ra
+2dc6ae0c: 2000bd27 addiu $sp, $sp, 0x20

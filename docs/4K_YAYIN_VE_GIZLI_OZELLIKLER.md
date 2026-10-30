@@ -1,5 +1,34 @@
 # 4K yayın →1080p ve kayıp kanal araştırması
 
+## 30 Ekim: Aşama5 — yanlış decoder kilidi hipotezi elendi
+
+Kullanıcı normal HD kanallarda sesin çalıştığını; TRT Ultra HD'de şifreli kanal
+veya sinyal yok uyarısı görmediğini bildirdi. Sayısal kalite/TS/PID bilgisi yoktur.
+[Cihaz kaydı](../analiz/native-ui-candidate/v7.9-audio-test/device-feedback.json).
+
+- [HAL ve9 native vaka](4K_SES_HAL_ASAMA5.md): incelenen ID0/1/2, aynı ADEC/SHM
+  selector0'a bağlanır. Eski MAD lock ile yeni API aynı kaynağı okur. API success1,
+  ayrı tek bayt lock0/1 ile karıştırılmamalıdır. Yanlış-bank gerekçeli A2 yoktur.
+- [Decoder tahsisi](4K_SES_DECODER_TAHSISI.md):5 C çıktısı ve4 host mantık vakası.
+  ID tahsis sonucundan alınır. Aynı-kaynak erken dönüşünde allocation başarısızlığı
+  kalabilir; bu kod koşulu cihazdaki TRT sorunu olarak kanıtlanmadı.
+- [Event ve DMX/mod ayrımı](4K_SES_DMX_MODU.md):3 farklı C çıktısı ve104 baytlık
+  constructor incelemesi. Event1 ve0x100, mod+0x26'dan ayrıdır. Mod varsayılanı0;
+  seçilmiş DVB UpdateAV normal Start'a gider. HEVC diye mod1 seçildiği kanıtlanmadı.
+- 53 GP-relative SetMuteFlag yükleme adayı18 kapsayıcı fonksiyonda listelendi.
+  Bunlar tamamı doğrulanmış53 çağrı veya yeni53 fonksiyon değildir.
+
+Toplam **11 farklı C çıktısı**, **12 kontrollü native vaka** (9 HAL,3 constructor)
+ve **4 host tahsis mantığı vakası** doğrulandı. Hardware getter mock'tur; gerçek
+DSP/PCM/RF çalıştırılması değildir. Yinelenen mode C çıktıları iki kez sayılmadı.
+Alt ajan kotası dolduğunda ana ajan eksik script/raporları tamamladı.
+
+**Yeni yama veya firmware paketi üretilmedi.** Eski kilit sorgusunun bozuk olduğu
+varsayılmadı; bu ihtimal elendi. Canlı PID ve DSP/PCM ölçümleri açık konudur.
+Önceki V7.9 ses-test paketi değiştirilmedi.
+[Aşama5 kapsam kaydı](../analiz/native-4k/stage5-results.json).
+
+
 ## 30 Ekim: V7.9 ses testinin cihaz sonucu ve sonraki araştırma
 
 Kullanıcı HEVC ses testi güncellemesinin %100 tamamlanıp TV'nin yeniden

@@ -1,0 +1,1144 @@
+{
+  "address": "2d06260c",
+  "name": "HAL_AUDIO_Convert_DecId_to_ADECId",
+  "signature": "undefined HAL_AUDIO_Convert_DecId_to_ADECId(void)",
+  "external": false,
+  "thunk": false,
+  "body_bytes": 92,
+  "incoming_entry_xrefs": [
+    {
+      "from": "Entry Point",
+      "to": "2d06260c",
+      "type": "EXTERNAL",
+      "source_type": "DEFAULT",
+      "operand_index": -1,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "HAL_AUDIO_Convert_DecId_to_ADECId"
+    },
+    {
+      "from": "2d2329c8",
+      "to": "2d06260c",
+      "type": "DATA",
+      "source_type": "DEFAULT",
+      "operand_index": 0,
+      "is_call": false,
+      "from_function": {},
+      "target_symbol": "HAL_AUDIO_Convert_DecId_to_ADECId"
+    }
+  ],
+  "analyzed_callers": [],
+  "analyzed_callees": [],
+  "instruction_count": 23,
+  "computed_callsite_count": 1,
+  "instructions": [
+    {
+      "address": "2d06260c",
+      "instruction": "lui gp,0x1d",
+      "mnemonic": "lui",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1d",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1d",
+              "unsigned_hex": "0x1d",
+              "signed_decimal": 29,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2d062610",
+      "instruction": "addiu gp,gp,0x79f4",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x79f4",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x79f4",
+              "unsigned_hex": "0x79f4",
+              "signed_decimal": 31220,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2d062614",
+      "instruction": "addu gp,gp,t9",
+      "mnemonic": "addu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2d062618",
+      "instruction": "addiu sp,sp,-0x20",
+      "mnemonic": "addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0x20",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x20",
+              "unsigned_hex": "0xffffffe0",
+              "signed_decimal": -32,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2d06261c",
+      "instruction": "sw ra,0x1c(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1c(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1c",
+              "unsigned_hex": "0x1c",
+              "signed_decimal": 28,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2d06261c",
+          "to": "Stack[-0x4]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2d06260c",
+            "name": "HAL_AUDIO_Convert_DecId_to_ADECId",
+            "signature": "undefined HAL_AUDIO_Convert_DecId_to_ADECId(void)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 92
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2d062620",
+      "instruction": "sw gp,0x10(sp)",
+      "mnemonic": "sw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x10(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x10",
+              "unsigned_hex": "0x10",
+              "signed_decimal": 16,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2d062620",
+          "to": "Stack[-0x10]",
+          "type": "WRITE",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2d06260c",
+            "name": "HAL_AUDIO_Convert_DecId_to_ADECId",
+            "signature": "undefined HAL_AUDIO_Convert_DecId_to_ADECId(void)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 92
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2d062624",
+      "instruction": "li v0,-0x1",
+      "mnemonic": "li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x1",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x1",
+              "unsigned_hex": "0xffffffff",
+              "signed_decimal": -1,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2d062628",
+      "instruction": "beq a0,v0,0x2d062644",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2d062644",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2d062644"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2d062628",
+          "to": "2d062644",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2d06260c",
+            "name": "HAL_AUDIO_Convert_DecId_to_ADECId",
+            "signature": "undefined HAL_AUDIO_Convert_DecId_to_ADECId(void)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 92
+          },
+          "target_symbol": "LAB_2d062644"
+        }
+      ]
+    },
+    {
+      "address": "2d06262c",
+      "instruction": "_li v0,0x3",
+      "mnemonic": "_li",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x3",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x3",
+              "unsigned_hex": "0x3",
+              "signed_decimal": 3,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2d062630",
+      "instruction": "beq a0,v0,0x2d062644",
+      "mnemonic": "beq",
+      "flow_type": "CONDITIONAL_JUMP",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x2d062644",
+          "objects": [
+            {
+              "java_type": "GenericAddress",
+              "display": "2d062644"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2d062630",
+          "to": "2d062644",
+          "type": "CONDITIONAL_JUMP",
+          "source_type": "DEFAULT",
+          "operand_index": 2,
+          "is_call": false,
+          "from_function": {
+            "address": "2d06260c",
+            "name": "HAL_AUDIO_Convert_DecId_to_ADECId",
+            "signature": "undefined HAL_AUDIO_Convert_DecId_to_ADECId(void)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 92
+          },
+          "target_symbol": "LAB_2d062644"
+        }
+      ]
+    },
+    {
+      "address": "2d062634",
+      "instruction": "_lw ra,0x1c(sp)",
+      "mnemonic": "_lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1c(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1c",
+              "unsigned_hex": "0x1c",
+              "signed_decimal": 28,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2d062634",
+          "to": "Stack[-0x4]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2d06260c",
+            "name": "HAL_AUDIO_Convert_DecId_to_ADECId",
+            "signature": "undefined HAL_AUDIO_Convert_DecId_to_ADECId(void)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 92
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2d062638",
+      "instruction": "clear v0",
+      "mnemonic": "clear",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2d06263c",
+      "instruction": "jr ra",
+      "mnemonic": "jr",
+      "flow_type": "TERMINATOR",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2d062640",
+      "instruction": "_addiu sp,sp,0x20",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x20",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x20",
+              "unsigned_hex": "0x20",
+              "signed_decimal": 32,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2d062644",
+      "instruction": "lw a0,-0x7fd0(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7fd0(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7fd0",
+              "unsigned_hex": "0xffff8030",
+              "signed_decimal": -32720,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2d062648",
+      "instruction": "lw t9,-0x7c1c(gp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "-0x7c1c(gp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x7c1c",
+              "unsigned_hex": "0xffff83e4",
+              "signed_decimal": -31772,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2d06264c",
+      "instruction": "jalr t9",
+      "mnemonic": "jalr",
+      "flow_type": "COMPUTED_CALL",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "t9",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "t9"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2d062650",
+      "instruction": "_addiu a0,a0,-0x6e40",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "a0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "a0"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "-0x6e40",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "-0x6e40",
+              "unsigned_hex": "0xffff91c0",
+              "signed_decimal": -28224,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2d062654",
+      "instruction": "lw ra,0x1c(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x1c(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x1c",
+              "unsigned_hex": "0x1c",
+              "signed_decimal": 28,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2d062654",
+          "to": "Stack[-0x4]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2d06260c",
+            "name": "HAL_AUDIO_Convert_DecId_to_ADECId",
+            "signature": "undefined HAL_AUDIO_Convert_DecId_to_ADECId(void)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 92
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2d062658",
+      "instruction": "lw gp,0x10(sp)",
+      "mnemonic": "lw",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "gp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "gp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "0x10(sp)",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x10",
+              "unsigned_hex": "0x10",
+              "signed_decimal": 16,
+              "bits": 32
+            },
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        }
+      ],
+      "references_from": [
+        {
+          "from": "2d062658",
+          "to": "Stack[-0x10]",
+          "type": "READ",
+          "source_type": "ANALYSIS",
+          "operand_index": 1,
+          "is_call": false,
+          "from_function": {
+            "address": "2d06260c",
+            "name": "HAL_AUDIO_Convert_DecId_to_ADECId",
+            "signature": "undefined HAL_AUDIO_Convert_DecId_to_ADECId(void)",
+            "external": false,
+            "thunk": false,
+            "body_bytes": 92
+          },
+          "target_symbol": null
+        }
+      ]
+    },
+    {
+      "address": "2d06265c",
+      "instruction": "clear v0",
+      "mnemonic": "clear",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "v0",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "v0"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2d062660",
+      "instruction": "jr ra",
+      "mnemonic": "jr",
+      "flow_type": "TERMINATOR",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 1,
+      "operands": [
+        {
+          "index": 0,
+          "display": "ra",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "ra"
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    },
+    {
+      "address": "2d062664",
+      "instruction": "_addiu sp,sp,0x20",
+      "mnemonic": "_addiu",
+      "flow_type": "FALL_THROUGH",
+      "ephemeral_flow_override": "NONE",
+      "delay_slots": 0,
+      "operands": [
+        {
+          "index": 0,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "display": "sp",
+          "objects": [
+            {
+              "java_type": "Register",
+              "display": "sp"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "display": "0x20",
+          "objects": [
+            {
+              "java_type": "Scalar",
+              "display": "0x20",
+              "unsigned_hex": "0x20",
+              "signed_decimal": 32,
+              "bits": 32
+            }
+          ]
+        }
+      ],
+      "references_from": []
+    }
+  ],
+  "immediate_scalar_candidates": [
+    {
+      "java_type": "Scalar",
+      "display": "0x1d",
+      "unsigned_hex": "0x1d",
+      "signed_decimal": 29,
+      "bits": 32,
+      "instruction_address": "2d06260c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x79f4",
+      "unsigned_hex": "0x79f4",
+      "signed_decimal": 31220,
+      "bits": 32,
+      "instruction_address": "2d062610",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x20",
+      "unsigned_hex": "0xffffffe0",
+      "signed_decimal": -32,
+      "bits": 32,
+      "instruction_address": "2d062618",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1c",
+      "unsigned_hex": "0x1c",
+      "signed_decimal": 28,
+      "bits": 32,
+      "instruction_address": "2d06261c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x10",
+      "unsigned_hex": "0x10",
+      "signed_decimal": 16,
+      "bits": 32,
+      "instruction_address": "2d062620",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x1",
+      "unsigned_hex": "0xffffffff",
+      "signed_decimal": -1,
+      "bits": 32,
+      "instruction_address": "2d062624",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x3",
+      "unsigned_hex": "0x3",
+      "signed_decimal": 3,
+      "bits": 32,
+      "instruction_address": "2d06262c",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1c",
+      "unsigned_hex": "0x1c",
+      "signed_decimal": 28,
+      "bits": 32,
+      "instruction_address": "2d062634",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x20",
+      "unsigned_hex": "0x20",
+      "signed_decimal": 32,
+      "bits": 32,
+      "instruction_address": "2d062640",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7fd0",
+      "unsigned_hex": "0xffff8030",
+      "signed_decimal": -32720,
+      "bits": 32,
+      "instruction_address": "2d062644",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x7c1c",
+      "unsigned_hex": "0xffff83e4",
+      "signed_decimal": -31772,
+      "bits": 32,
+      "instruction_address": "2d062648",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "-0x6e40",
+      "unsigned_hex": "0xffff91c0",
+      "signed_decimal": -28224,
+      "bits": 32,
+      "instruction_address": "2d062650",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x1c",
+      "unsigned_hex": "0x1c",
+      "signed_decimal": 28,
+      "bits": 32,
+      "instruction_address": "2d062654",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x10",
+      "unsigned_hex": "0x10",
+      "signed_decimal": 16,
+      "bits": 32,
+      "instruction_address": "2d062658",
+      "operand_index": 1,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    },
+    {
+      "java_type": "Scalar",
+      "display": "0x20",
+      "unsigned_hex": "0x20",
+      "signed_decimal": 32,
+      "bits": 32,
+      "instruction_address": "2d062664",
+      "operand_index": 2,
+      "resource_id_status": "unclassified_immediate_not_proven_resource_id"
+    }
+  ],
+  "directly_referenced_defined_strings": [],
+  "syntax_tree_requested": false,
+  "C_code_requested": true,
+  "decompiler_simplification_style": "decompile",
+  "high_function_present": true,
+  "decompile_complete": true,
+  "decompile_error": "",
+  "pseudocode_file": "2d06260c.c",
+  "C_export_complete": true,
+  "pcode_export_complete": false,
+  "decompiler_pcode_calls": [],
+  "decompiler_pcode_addresses_outside_selected_body": [],
+  "decompiler_pcode_within_selected_body": null,
+  "decompiler_constant_defined_strings": []
+}
