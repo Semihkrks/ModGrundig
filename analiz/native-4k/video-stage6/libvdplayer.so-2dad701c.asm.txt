@@ -1,0 +1,113 @@
+2dad701c: 0e001c3c lui $gp, 0xe
+2dad7020: 74bb9c27 addiu $gp, $gp, -0x448c
+2dad7024: 21e09903 addu $gp, $gp, $t9
+2dad7028: e0ffbd27 addiu $sp, $sp, -0x20
+2dad702c: 1c00bfaf sw $ra, 0x1c($sp)
+2dad7030: 1800b0af sw $s0, 0x18($sp)
+2dad7034: 1000bcaf sw $gp, 0x10($sp)
+2dad7038: 5c8c908f lw $s0, -0x73a4($gp)
+2dad703c: 2493998f lw $t9, -0x6cdc($gp)
+2dad7040: 09f82003 jalr $t9
+2dad7044: 3403048e lw $a0, 0x334($s0)
+2dad7048: 1000bc8f lw $gp, 0x10($sp)
+2dad704c: 24004010 beqz $v0, 0x2dad70e0
+2dad7050: 21284000 move $a1, $v0
+2dad7054: 0002043c lui $a0, 0x200
+2dad7058: 0c008234 ori $v0, $a0, 0xc
+2dad705c: 2b10a200 sltu $v0, $a1, $v0
+2dad7060: 24004014 bnez $v0, 0x2dad70f4
+2dad7064: 0a008234 ori $v0, $a0, 0xa
+2dad7068: 0003033c lui $v1, 0x300
+2dad706c: 07106234 ori $v0, $v1, 0x1007
+2dad7070: 4600a210 beq $a1, $v0, 0x2dad718c
+2dad7074: 08106234 ori $v0, $v1, 0x1008
+2dad7078: 2b10a200 sltu $v0, $a1, $v0
+2dad707c: 37004010 beqz $v0, 0x2dad715c
+2dad7080: 07306234 ori $v0, $v1, 0x3007
+2dad7084: 01006234 ori $v0, $v1, 1
+2dad7088: 2a00a210 beq $a1, $v0, 0x2dad7134
+2dad708c: 05006234 ori $v0, $v1, 5
+2dad7090: 2800a210 beq $a1, $v0, 0x2dad7134
+2dad7094: 0d008234 ori $v0, $a0, 0xd
+2dad7098: 2600a210 beq $a1, $v0, 0x2dad7134
+2dad709c: 0002023c lui $v0, 0x200
+2dad70a0: 0c004234 ori $v0, $v0, 0xc
+2dad70a4: 0e00a214 bne $a1, $v0, 0x2dad70e0
+2dad70a8: 2c80848f lw $a0, -0x7fd4($gp)
+2dad70ac: 348a998f lw $t9, -0x75cc($gp)
+2dad70b0: 09f82003 jalr $t9
+2dad70b4: 8ca38424 addiu $a0, $a0, -0x5c74
+2dad70b8: 1000bc8f lw $gp, 0x10($sp)
+2dad70bc: 09000010 b 0x2dad70e4
+2dad70c0: 21100000 move $v0, $zero
+2dad70c4: e5030292 lbu $v0, 0x3e5($s0)
+2dad70c8: 01000324 addiu $v1, $zero, 1
+2dad70cc: 05004310 beq $v0, $v1, 0x2dad70e4
+2dad70d0: 21100000 move $v0, $zero
+2dad70d4: d7030292 lbu $v0, 0x3d7($s0)
+2dad70d8: 2d004314 bne $v0, $v1, 0x2dad7190
+2dad70dc: 2c80848f lw $a0, -0x7fd4($gp)
+2dad70e0: 21100000 move $v0, $zero
+2dad70e4: 1c00bf8f lw $ra, 0x1c($sp)
+2dad70e8: 1800b08f lw $s0, 0x18($sp)
+2dad70ec: 0800e003 jr $ra
+2dad70f0: 2000bd27 addiu $sp, $sp, 0x20
+2dad70f4: 2b10a200 sltu $v0, $a1, $v0
+2dad70f8: 0e004010 beqz $v0, 0x2dad7134
+2dad70fc: 02008234 ori $v0, $a0, 2
+2dad7100: 0c00a210 beq $a1, $v0, 0x2dad7134
+2dad7104: 03008234 ori $v0, $a0, 3
+2dad7108: 2b10a200 sltu $v0, $a1, $v0
+2dad710c: 29004014 bnez $v0, 0x2dad71b4
+2dad7110: 0001033c lui $v1, 0x100
+2dad7114: 08008234 ori $v0, $a0, 8
+2dad7118: 0600a210 beq $a1, $v0, 0x2dad7134
+2dad711c: 09008234 ori $v0, $a0, 9
+2dad7120: 2b10a200 sltu $v0, $a1, $v0
+2dad7124: 19004010 beqz $v0, 0x2dad718c
+2dad7128: 06008234 ori $v0, $a0, 6
+2dad712c: dcffa214 bne $a1, $v0, 0x2dad70a0
+2dad7130: 0002023c lui $v0, 0x200
+2dad7134: 2c80848f lw $a0, -0x7fd4($gp)
+2dad7138: 348a998f lw $t9, -0x75cc($gp)
+2dad713c: 09f82003 jalr $t9
+2dad7140: 68a38424 addiu $a0, $a0, -0x5c98
+2dad7144: 1c00bf8f lw $ra, 0x1c($sp)
+2dad7148: 1000bc8f lw $gp, 0x10($sp)
+2dad714c: 06000224 addiu $v0, $zero, 6
+2dad7150: 1800b08f lw $s0, 0x18($sp)
+2dad7154: 0800e003 jr $ra
+2dad7158: 2000bd27 addiu $sp, $sp, 0x20
+2dad715c: 0b00a210 beq $a1, $v0, 0x2dad718c
+2dad7160: 08306234 ori $v0, $v1, 0x3008
+2dad7164: 2b10a200 sltu $v0, $a1, $v0
+2dad7168: 19004014 bnez $v0, 0x2dad71d0
+2dad716c: 01206234 ori $v0, $v1, 0x2001
+2dad7170: 0004023c lui $v0, 0x400
+2dad7174: 05004234 ori $v0, $v0, 5
+2dad7178: eeffa210 beq $a1, $v0, 0x2dad7134
+2dad717c: 0005023c lui $v0, 0x500
+2dad7180: 01004234 ori $v0, $v0, 1
+2dad7184: c6ffa214 bne $a1, $v0, 0x2dad70a0
+2dad7188: 0002023c lui $v0, 0x200
+2dad718c: 2c80848f lw $a0, -0x7fd4($gp)
+2dad7190: 348a998f lw $t9, -0x75cc($gp)
+2dad7194: 09f82003 jalr $t9
+2dad7198: 68a38424 addiu $a0, $a0, -0x5c98
+2dad719c: 1c00bf8f lw $ra, 0x1c($sp)
+2dad71a0: 1000bc8f lw $gp, 0x10($sp)
+2dad71a4: 05000224 addiu $v0, $zero, 5
+2dad71a8: 1800b08f lw $s0, 0x18($sp)
+2dad71ac: 0800e003 jr $ra
+2dad71b0: 2000bd27 addiu $sp, $sp, 0x20
+2dad71b4: 03006234 ori $v0, $v1, 3
+2dad71b8: c2ffa210 beq $a1, $v0, 0x2dad70c4
+2dad71bc: 04006234 ori $v0, $v1, 4
+2dad71c0: b7ffa214 bne $a1, $v0, 0x2dad70a0
+2dad71c4: 0002023c lui $v0, 0x200
+2dad71c8: dbff0010 b 0x2dad7138
+2dad71cc: 2c80848f lw $a0, -0x7fd4($gp)
+2dad71d0: b3ffa214 bne $a1, $v0, 0x2dad70a0
+2dad71d4: 0002023c lui $v0, 0x200
+2dad71d8: edff0010 b 0x2dad7190
+2dad71dc: 2c80848f lw $a0, -0x7fd4($gp)

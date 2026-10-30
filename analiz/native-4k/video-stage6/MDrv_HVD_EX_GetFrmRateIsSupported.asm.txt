@@ -1,0 +1,12 @@
+2d5f22a0: 15001c3c lui $gp, 0x15
+2d5f22a4: a02f9c27 addiu $gp, $gp, 0x2fa0
+2d5f22a8: 21e09903 addu $gp, $gp, $t9
+2d5f22ac: 988a828f lw $v0, -0x7568($gp)
+2d5f22b0: 02240400 srl $a0, $a0, 0x10
+2d5f22b4: 0000438c lw $v1, ($v0)
+2d5f22b8: ff008430 andi $a0, $a0, 0xff
+2d5f22bc: c4050224 addiu $v0, $zero, 0x5c4
+2d5f22c0: 02288270 mul $a1, $a0, $v0
+2d5f22c4: 2120a300 addu $a0, $a1, $v1
+2d5f22c8: 0800e003 jr $ra
+2d5f22cc: 3d018290 lbu $v0, 0x13d($a0)

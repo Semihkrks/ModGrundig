@@ -1,5 +1,17 @@
 # 4K yayın →1080p ve kayıp kanal araştırması
 
+## 31 Ekim: görüntü odaklı aşama6
+
+[HEVC görüntü raporu](4K_VIDEO_ASAMA6.md),13 seçilmiş assembly gövdesini,
+4/4 Ghidra C çıktısını,167 ELF import taramasını ve25 sınırlı native vakayı
+birleştirir. Ana HEVC auth kapısı DivX seçeneklerinden; medya hata tüketicisi
+canlı DVB yolundan ayrıldı. İncelenen DS wrapper'ları referans framebuffer'ı
+küçültmüyor. Paket haritasında30MiB framebuffer'dan sonra DRAM sonuna408KiB
+kalır; aynı adreste boyut artırmak geçerli çözüm değildir. Aktif cihaz profili,
+init/auth sonucu ve gerçek UHD kareleri ölçülmedi. **Görüntü çözülmedi;
+yeni firmware yaması/paketi yok.**
+[Tekrar üretilebilir kapsam](../analiz/native-4k/video-stage6/results.json).
+
 ## 30 Ekim: Aşama5 — yanlış decoder kilidi hipotezi elendi
 
 Kullanıcı normal HD kanallarda sesin çalıştığını; TRT Ultra HD'de şifreli kanal

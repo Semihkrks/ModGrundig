@@ -1,5 +1,11 @@
 # Grundig GMGRMR V03.017.04 — tersine mühendislik
 
+31 Ekim: [HEVC görüntü aşama6](4K_VIDEO_ASAMA6.md),13 seçili assembly gövdesi,
+4 C çıktısı,167 ELF import taraması ve25 sınırlı native vakayı kaydeder. Auth,
+medya hata yolu ve dynamic scaling ayrıldı; paket framebuffer alanını aynı
+adreste büyütmenin DRAM sınırını aşacağı hesaplandı. Gerçek TRT init/frame
+durumu yok; görüntü hedefi sağlanmadı, yeni firmware üretilmedi.
+
 29 Ekim V7.10: [SEMIH native menü logosu ve hız ayarları](UI_NATIVE_V710_SEMIH_VE_HIZ.md). Mevcut hızlı kanal geçişinin kalıcı DB → AV-sync timeout yolu doğrulandı; canlı kullanıcı ayarı zorlanmadı. Hızlı açılış için seçili STR yolunu güvenilir şekilde hızlandıran yama çıkarılmadı. Logo değişikliği özel kaynak 2184 ve sekiz menü argümanıyla sınırlandı; fiziksel V7.10 TV testi yok.
 
 27 Ekim V7.9: kullanıcı onayıyla [yerel ses seviyesine göre1/2/3 dalga ve80→40 kenar boşluğu](UI_NATIVE_V79_SEVIYELI_SES.md) gerçek native kod/kaynaklara uygulandı.31 test ve85 native senaryo, bağımsız inceleme, APP/BIN/RAR kontrolleri geçti. Ayrı test RAR'ı hazır; fiziksel V7.9 TV testi yok. Yeni4K decoder değişikliği yapılmadı.
