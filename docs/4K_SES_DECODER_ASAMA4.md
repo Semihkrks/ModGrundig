@@ -62,3 +62,15 @@ A2 için önce main decoderID'nin atanması ve ID→SHM selector eşleşmesi; ge
 `reverse-engineer-anything` kullanıldı. Üç kütüphane SHA-256 ile sabitlendi. **5 yeni C çıktısı**, iki küçük enum helper'ının raw incelemesi, **20 DSP tablo satırı**, **7 host processor/ID koşul vakası** ve **11 seçilmiş driver dispatch/forwarder bloğu** kaydedildi. Blok sayısı yeni decompile/fonksiyon sayısı değildir. Ghidra `-noanalysis -readOnly` kullanıldı; çıktılar REA Evidence değildir.
 
 `python -X utf8 scripts/audit_hevc_audio_decoder_stage4.py` ve `python -m py_compile scripts/audit_hevc_audio_decoder_stage4.py` geçti. [Script](../scripts/audit_hevc_audio_decoder_stage4.py) kaynak hash'lerini, beş gerçek C çıktısını, callback/table word'lerini ve sayısal eşlemeleri doğrular. Host koşul vakaları native decoder çalıştırmaz. Firmware programı, donanım veya bütün TV süreci çalıştırılmadı; orijinal dosyalara ve önceki test paketine yazılmadı.
+
+## Son dar kapanış: decoder kimliği nerede HAL'a geçiyor?
+
+İki küçük raw gövde ve ayrıca onaylanan 108 baytlık driver forwarder okundu; **yeni C/decompile yoktur**:
+
+- `_MApi_AUDIO_GetDecodeSystem=0x2d082f00` (468 bayt), decoderID için `g_AudioVars2+0x98+36*ID` tablosuna ve `+0x9d+36*ID` baytına bakar; etkin kayıt varsa config'i kopyalar. Bu fonksiyon ID'yi SHM bankına çevirmiyor; cached config okumasıdır.
+- `_MApi_AUDIO_GetAudioInfo2=0x2d07f534` (376 bayt), ID/infoType/output girdilerini değiştirmeden `MDrv_AUDIO_GetAudioInfo2`'ye iletir (`0x2d07f594–0x2d07f5a0`). Burada da ID1→SHM0 benzeri eşleme yoktur.
+- `MDrv_AUDIO_GetAudioInfo2=0x2d05735c` (108 bayt), BSS `g_FuncPrt_Hal_GetAudioInfo2=0x2d2330cc` pointer'ını yükler ve doluysa **a0=ID, a1=infoType, a2=output** girdilerini değiştirmeden çağırır (`0x2d057374–0x2d057388`). Pointer null ise 0 döner.
+
+Artık kalan sınır yapay bir wrapper değildir: **runtime HAL callback'inin atanması ve onun ID→SHM selector eşlemesi**dir. `HAL_MAD_GetAudioInfo2=0x2d072d38`, 2264 baytlık bir export olarak mevcut; bu son görevde geniş gövdesi açılmadı ve runtime pointer'ın kesin hedefi diye ilan edilmedi. API ID0/1/2'nin hangi SHM bankını okuduğu hâlâ kanıtlanmış değildir; dolayısıyla legacy kilit uyumsuzluğu ne doğrulandı ne elendi.
+
+Main audio ID'nin `audio+0x12c` alanından okunduğu kesin. **ID tahsisinin sabit bir değer mi yoksa açılışta allocation sonucuna göre mi olduğu**, bu alanın tahsis yazıcısı incelenmediği için ayrıştırılamadı. “Mutlaka ID1 kullanıyor” veya “cihazdan cihaza değişiyor” sonucu çıkarılmadı. Son script bu üç ilave raw gövdeyi ayrı sayar; beş C çıktısı sayısı değişmez. Yeni firmware veya A2 yaması yoktur.

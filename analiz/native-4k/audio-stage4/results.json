@@ -21,7 +21,9 @@
     "new_C_exports": 5,
     "enum_dispatch_rows": 20,
     "decoder_ID_host_cases": 7,
-    "selected_driver_blocks": 11
+    "selected_driver_blocks": 11,
+    "final_closure_raw_functions": 3,
+    "final_closure_new_C": 0
   },
   "evidence": [
     {
@@ -332,6 +334,30 @@
       "sha256": "436fae54ed15db7cc87631b4ed62dea11ea5f24ef935da65cbc6ee14cccaadb8",
       "kind": "HAL_GetCommInfo_shared_SHM_call",
       "assembly": "api-2d074bc8.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/utopia/libapiAUDIO.so",
+      "va": "0x2d082f00",
+      "bytes": 468,
+      "sha256": "19730fef83f0a8577d2e8bb54f82c1a16f92a3478a369a959de51dc2650220f9",
+      "kind": "final_GetDecodeSystem_cached_ID_record",
+      "assembly": "api-2d082f00.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/utopia/libapiAUDIO.so",
+      "va": "0x2d07f534",
+      "bytes": 376,
+      "sha256": "e614bf7f27a37bcbe0a64fc75b6a7a8c61f84c62c7864c5edd750355c122de12",
+      "kind": "final_GetAudioInfo2_ID_forwarder",
+      "assembly": "api-2d07f534.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/utopia/libapiAUDIO.so",
+      "va": "0x2d05735c",
+      "bytes": 108,
+      "sha256": "1dcb5a154231485564d02815427ccb072901995287d9709f8067a769217fb3fa",
+      "kind": "final_MDrv_GetAudioInfo2_HAL_pointer",
+      "assembly": "api-2d05735c.asm.txt"
     }
   ],
   "main_processor_route": {
@@ -530,7 +556,16 @@
     "decoder_ID_to_SHM_selector_equivalence_proven": false
   },
   "conclusion": "Main audio uses runtime decoder-ID APIs when initialized; MAD lock reads fixed SHM selector0. This API distinction does not prove a wrong lock or explain device silence.",
-  "next_boundary": "Map initialized main decoder ID to HAL SHM selector; establish actual per-decoder lock info enum/ABI before any A2 patch.",
+  "final_ID_closure": {
+    "GetDecodeSystem": "0x2d082f00 reads cached g_AudioVars2+0x98+36*ID and flag+0x9d+36*ID; no HAL selector map",
+    "GetAudioInfo2": "0x2d07f534 forwards ID/infoType/output unmodified to MDrv_AUDIO_GetAudioInfo2",
+    "MDrv_GetAudioInfo2": "0x2d05735c forwards unmodified args through runtime g_FuncPrt_Hal_GetAudioInfo2; null returns0",
+    "HAL_pointer": "BSS0x2d2330cc, runtime assignment/target not proven in this scope",
+    "HAL_MAD_GetAudioInfo2": "Export0x2d072d38 size2264; body deliberately not expanded",
+    "main_ID_allocation_policy": "Fieldread+0x12c proven; allocation writer not inspected, so statically-fixed vs allocation-time policy unresolved",
+    "decoder_ID_to_SHM_mapping_proven": false
+  },
+  "next_boundary": "Runtime HAL callback g_FuncPrt_Hal_GetAudioInfo2 and decoder-ID-to-SHM selector map; no A2 predicate proven.",
   "unresolved": [
     "Live selected Dolby/HE-AAC PMT/DB enum, PIDs and DSP values are unavailable",
     "Main decoder ID allocation/runtime value is not observed",
