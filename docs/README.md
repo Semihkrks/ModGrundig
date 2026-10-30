@@ -6,6 +6,9 @@ ModGrundig araştırma raporları, uygulama kayıtları ve tarihsel deneyler.
 
 ## Güncel çalışma
 
+- [V7.9 ses testi sonrası decoder/DSP incelemesi](4K_SES_DECODER_ASAMA4.md)
+- [Yamanın çağrı koşulları ve tanılama erişimi](V79_SES_TESTI_ERISIM_ANALIZI.md)
+
 - [Etkin taban V7.9 — HEVC ses testi ve cihaz deneme rehberi](V79_SES_TEST_REHBERI.md)
 - [Native ses yamasının koşulları, adresleri ve sınırları](V79_HEVC_SES_TESTI.md)
 - [MSLIB paketleme ve RAM sınırı doğrulaması](V79_SES_PAKETLEME.md)

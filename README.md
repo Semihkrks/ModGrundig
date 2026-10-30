@@ -34,7 +34,7 @@ Envanterin tamamlanması, bütün fonksiyonların çözüldüğü veya kaynak ko
 
 | Sürüm / konu | Durum | Ayrıntı |
 |---|---|---|
-| **V7.9 HEVC ses testi** | Deneysel native yama; TV sonucu bekleniyor | Görüntü karesi gelmediğinde, kilit almış ses decoder'ı için dar mute kurtarma yolu. [Test rehberi →](docs/V79_SES_TEST_REHBERI.md) |
+| **V7.9 HEVC ses testi** | Güncelleme tamamlandı; ses hedefi sağlanmadı | Kullanıcı %100 yükleme ve yeniden başlatma bildirdi. İki ses seçimi de sessiz; helper/decoder runtime değerleri bilinmiyor. [Test rehberi →](docs/V79_SES_TEST_REHBERI.md) |
 | **V7.10** | Şimdilik devre dışı; arşiv | SEMIH logo deneyi korunur, yeni testlere dahil edilmez. [Rapor →](docs/UI_NATIVE_V710_SEMIH_VE_HIZ.md) |
 | **V7.9** | Çevrimdışı doğrulandı; TV testi yok | Seviyeye göre ses ikonları ve azaltılmış sol kenar boşluğu. [Rapor →](docs/UI_NATIVE_V79_SEVIYELI_SES.md) |
 | **V7.7** | Kullanıcı cihaz geri bildirimi var | 27 Ekim 2026’da TV’de çalıştığı bildirildi; kapsamlı donanım testi değildir. [Rapor →](docs/UI_NATIVE_V77_PAKET.md) |

@@ -1,5 +1,11 @@
 # V7.9 tabanlı HEVC ses testi
 
+**30 Ekim cihaz geri bildirimi:** Kullanıcı son denemede iki ses seçiminde de
+ses gelmediğini bildirdi. Yüklemenin %100 tamamlandığını ve TV'nin yeniden
+başladığını da doğruladı. Bu aday ses hedefini sağlamış sayılmaz. Helper'ın
+çalışması ve decoder lock/mute değerleri cihazda ölçülmedi.
+[Ayrı cihaz gözlemi](../analiz/native-ui-candidate/v7.9-audio-test/device-feedback.json).
+
 Bu deneyin tabanı V7.9'dur. V7.10 ve SEMIH logosu dahil değildir.
 Amaç HEVC video karesi oluşmadığında, hazır ses çözücüsünün video kaynaklı
 mute nedeninden kurtulup kurtulamayacağını sınamaktır. Görüntü dönüştürme veya

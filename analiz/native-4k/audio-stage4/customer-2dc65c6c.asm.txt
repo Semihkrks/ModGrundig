@@ -1,0 +1,57 @@
+2dc65c6c: 0b001c3c lui $gp, 0xb
+2dc65c70: 54139c27 addiu $gp, $gp, 0x1354
+2dc65c74: 21e09903 addu $gp, $gp, $t9
+2dc65c78: e0ffbd27 addiu $sp, $sp, -0x20
+2dc65c7c: 1c00bfaf sw $ra, 0x1c($sp)
+2dc65c80: 1800b0af sw $s0, 0x18($sp)
+2dc65c84: 1000bcaf sw $gp, 0x10($sp)
+2dc65c88: 3001838c lw $v1, 0x130($a0)
+2dc65c8c: ffff0224 addiu $v0, $zero, -1
+2dc65c90: 21808000 move $s0, $a0
+2dc65c94: 1a006210 beq $v1, $v0, 0x2dc65d00
+2dc65c98: 2138a000 move $a3, $a1
+2dc65c9c: 0d00c010 beqz $a2, 0x2dc65cd4
+2dc65ca0: ffff0224 addiu $v0, $zero, -1
+2dc65ca4: 01000224 addiu $v0, $zero, 1
+2dc65ca8: 1e00c210 beq $a2, $v0, 0x2dc65d24
+2dc65cac: ffff0224 addiu $v0, $zero, -1
+2dc65cb0: b080998f lw $t9, -0x7f50($gp)
+2dc65cb4: 1c01058e lw $a1, 0x11c($s0)
+2dc65cb8: 09f82003 jalr $t9
+2dc65cbc: 21200002 move $a0, $s0
+2dc65cc0: 1000bc8f lw $gp, 0x10($sp)
+2dc65cc4: 1c00bf8f lw $ra, 0x1c($sp)
+2dc65cc8: 1800b08f lw $s0, 0x18($sp)
+2dc65ccc: 0800e003 jr $ra
+2dc65cd0: 2000bd27 addiu $sp, $sp, 0x20
+2dc65cd4: 2c01058e lw $a1, 0x12c($s0)
+2dc65cd8: f6ffa210 beq $a1, $v0, 0x2dc65cb4
+2dc65cdc: b080998f lw $t9, -0x7f50($gp)
+2dc65ce0: 0000028e lw $v0, ($s0)
+2dc65ce4: 400107ae sw $a3, 0x140($s0)
+2dc65ce8: 21200002 move $a0, $s0
+2dc65cec: 5800598c lw $t9, 0x58($v0)
+2dc65cf0: 09f82003 jalr $t9
+2dc65cf4: 34010626 addiu $a2, $s0, 0x134
+2dc65cf8: edff0010 b 0x2dc65cb0
+2dc65cfc: 1000bc8f lw $gp, 0x10($sp)
+2dc65d00: 2c01828c lw $v0, 0x12c($a0)
+2dc65d04: e5ff4314 bne $v0, $v1, 0x2dc65c9c
+2dc65d08: 00000000 nop 
+2dc65d0c: 0000828c lw $v0, ($a0)
+2dc65d10: 4000598c lw $t9, 0x40($v0)
+2dc65d14: 09f82003 jalr $t9
+2dc65d18: 00000000 nop 
+2dc65d1c: e9ff0010 b 0x2dc65cc4
+2dc65d20: 1000bc8f lw $gp, 0x10($sp)
+2dc65d24: e3ff6210 beq $v1, $v0, 0x2dc65cb4
+2dc65d28: b080998f lw $t9, -0x7f50($gp)
+2dc65d2c: 0000028e lw $v0, ($s0)
+2dc65d30: 5c0107ae sw $a3, 0x15c($s0)
+2dc65d34: 21286000 move $a1, $v1
+2dc65d38: 5800598c lw $t9, 0x58($v0)
+2dc65d3c: 21200002 move $a0, $s0
+2dc65d40: 09f82003 jalr $t9
+2dc65d44: 50010626 addiu $a2, $s0, 0x150
+2dc65d48: d9ff0010 b 0x2dc65cb0
+2dc65d4c: 1000bc8f lw $gp, 0x10($sp)

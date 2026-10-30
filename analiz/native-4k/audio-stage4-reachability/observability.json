@@ -1,0 +1,90 @@
+{
+  "status": "NO_EXISTING_USER_EXPORT_PATH_PROVEN",
+  "date": "2026-10-30",
+  "sources": [
+    {
+      "path": "analiz/dosya-sistemleri-tam/06_RFS/etc/inittab",
+      "sha256": "03abdcf85ff983b045c3c109e13a580a462d67c58b4ad49b0d93d7e28f557c97",
+      "selected_lines": [
+        {
+          "line": 1,
+          "text": "::sysinit:/etc/init.d/rcS"
+        },
+        {
+          "line": 2,
+          "text": "ttyS0::respawn:-/bin/sh"
+        }
+      ]
+    },
+    {
+      "path": "analiz/dosya-sistemleri-tam/06_RFS/etc/init.d/rcS",
+      "sha256": "7f3646653d871d17d0f72c072ab7998b636adc62068879a5583e0620a1760185",
+      "selected_lines": []
+    },
+    {
+      "path": "analiz/dosya-sistemleri-tam/11_customer_update/profile",
+      "sha256": "12bee4c100c36c7b047de4bf5080f52d8544a37268de787105dee1290b42de24",
+      "selected_lines": [
+        {
+          "line": 109,
+          "text": "cd applications/bin"
+        },
+        {
+          "line": 110,
+          "text": "export UART_ENABLE=FALSE"
+        },
+        {
+          "line": 113,
+          "text": "./autorun signal"
+        },
+        {
+          "line": 115,
+          "text": "./autorun signal >/dev/null 2>&1"
+        }
+      ]
+    },
+    {
+      "path": "analiz/dosya-sistemleri-tam/09_CONFIG/MM/mm_cfg.ini",
+      "sha256": "fc6a1176d65e29f7561cbf616f564779d75f926a54a469f6a5ef369fdab23e43",
+      "selected_lines": [
+        {
+          "line": 84,
+          "text": "ms_mm_log_to_file = 0"
+        },
+        {
+          "line": 85,
+          "text": "## change to your usb device path (exp:ms_mm_log_dir = usb/sdx)"
+        },
+        {
+          "line": 86,
+          "text": "ms_mm_log_dir = usb/sda1"
+        },
+        {
+          "line": 100,
+          "text": "ms_mm_disable_all_log = 1"
+        }
+      ]
+    }
+  ],
+  "launcher": {
+    "default": "UART_ENABLE=FALSE",
+    "application_command": "./autorun signal >/dev/null 2>&1",
+    "effect": "Application inherited stdout and stderr are directed to /dev/null in supplied default profile",
+    "printf_instrumentation_ready": false
+  },
+  "mm_settings": {
+    "ms_mm_log_to_file": 0,
+    "ms_mm_disable_all_log": 1,
+    "configured_directory": "usb/sda1",
+    "live_DTV_printf_export_consumer_proven": false
+  },
+  "limits": [
+    "Supplied static defaults, not live TV filesystem/environment observation",
+    "No claim that every FILE pointer or app-internal redirect is resolved",
+    "No user menu/USB export method for AVMonitor printf/fprintf logs proven",
+    "No UART/profile/setter changes; no broad log capture or private data export"
+  ],
+  "conclusion": "Do not propose plain printf/fprintf-only TV instrumentation as user-readable; first prove an existing accessible bounded export channel",
+  "target_executed": false,
+  "firmware_modified": false
+}

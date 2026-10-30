@@ -1,0 +1,50 @@
+2d9d1b18: lui $gp, 0xc
+2d9d1b1c: addiu $gp, $gp, 0x478
+2d9d1b20: addu $gp, $gp, $t9
+2d9d1b24: addiu $sp, $sp, -0x30
+2d9d1b28: sw $ra, 0x2c($sp)
+2d9d1b2c: sw $s2, 0x28($sp)
+2d9d1b30: sw $s1, 0x24($sp)
+2d9d1b34: sw $s0, 0x20($sp)
+2d9d1b38: sw $gp, 0x10($sp)
+2d9d1b3c: lw $a2, -0x7fc8($gp)
+2d9d1b40: lw $t9, -0x618c($gp)
+2d9d1b44: move $s0, $a0
+2d9d1b48: addiu $s2, $sp, 0x18
+2d9d1b4c: addiu $a2, $a2, -0x62dc
+2d9d1b50: move $s1, $a1
+2d9d1b54: move $a0, $s2
+2d9d1b58: addiu $a1, $s0, 0x50
+2d9d1b5c: jalr $t9
+2d9d1b60: addiu $a3, $zero, 0x1200
+2d9d1b64: lw $gp, 0x10($sp)
+2d9d1b68: addiu $a2, $s0, 0x108
+2d9d1b6c: addiu $s0, $s0, 0xd8
+2d9d1b70: lw $v0, ($s0)
+2d9d1b74: lw $v1, 4($s0)
+2d9d1b78: lw $a0, 8($s0)
+2d9d1b7c: lw $a1, 0xc($s0)
+2d9d1b80: addiu $s0, $s0, 0x10
+2d9d1b84: sw $v0, ($s1)
+2d9d1b88: sw $v1, 4($s1)
+2d9d1b8c: sw $a0, 8($s1)
+2d9d1b90: sw $a1, 0xc($s1)
+2d9d1b94: bne $s0, $a2, 0x2d9d1b70
+2d9d1b98: addiu $s1, $s1, 0x10
+2d9d1b9c: lw $v1, ($s0)
+2d9d1ba0: lw $t9, -0x7d6c($gp)
+2d9d1ba4: move $a0, $s2
+2d9d1ba8: sw $v1, ($s1)
+2d9d1bac: lhu $v0, 4($s0)
+2d9d1bb0: sh $v0, 4($s1)
+2d9d1bb4: lbu $v1, 6($s0)
+2d9d1bb8: jalr $t9
+2d9d1bbc: sb $v1, 6($s1)
+2d9d1bc0: lw $ra, 0x2c($sp)
+2d9d1bc4: lw $gp, 0x10($sp)
+2d9d1bc8: addiu $v0, $zero, 1
+2d9d1bcc: lw $s2, 0x28($sp)
+2d9d1bd0: lw $s1, 0x24($sp)
+2d9d1bd4: lw $s0, 0x20($sp)
+2d9d1bd8: jr $ra
+2d9d1bdc: addiu $sp, $sp, 0x30

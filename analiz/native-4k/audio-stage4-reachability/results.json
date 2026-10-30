@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-30",
+  "status": "READ_ONLY_REACHABILITY_AUDIT_NO_PATCH",
+  "source_sha256": "06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21",
+  "user_feedback": "Update reached100percent and TV restarted; no audio on either reported track. Does not identify runtime helper branch.",
+  "counts": {
+    "retained_function_bodies_reused": 7,
+    "new_small_raw_functions": 1,
+    "new_decompiled_functions": 0,
+    "new_native_or_hardware_tests": 0
+  },
+  "functions": [
+    {
+      "va": "0x2d9d1b18",
+      "name": "_ZN16MW_DTV_AVMonitor9GetAVInfoER13MW_DTV_AVInfo",
+      "bytes": 200,
+      "sha256": "fc2f9e047aec954f8b366529c6d59c9554639f45449b88159bdd3f141add1aca",
+      "new_focus": true
+    },
+    {
+      "va": "0x2d9d6c44",
+      "name": "_ZN16MW_DTV_AVMonitor9DoMonitorEv",
+      "bytes": 276,
+      "sha256": "ebd4c9f35289ef2b04a07c215c351c5e4c370e45767b9d4433746e80617a2611",
+      "new_focus": false
+    },
+    {
+      "va": "0x2d9d4c30",
+      "name": "_ZN16MW_DTV_AVMonitor16CheckVideoStatusEv",
+      "bytes": 388,
+      "sha256": "4eb36c79665f9587f64d7907a1f0d7ae280385d2a384f85007b6f14975764b7b",
+      "new_focus": false
+    },
+    {
+      "va": "0x2d9d4a90",
+      "name": "_ZN16MW_DTV_AVMonitor14SetVideoStatusE19EN_MVD_VIDEO_STATUS",
+      "bytes": 416,
+      "sha256": "9f75c289f7c5ff09f11cd316904da71fda7b481c9af6e8bda5b51b76f02f2ed2",
+      "new_focus": false
+    },
+    {
+      "va": "0x2d9d6270",
+      "name": "_ZN16MW_DTV_AVMonitor11DoVideoSyncEv",
+      "bytes": 2516,
+      "sha256": "93ee38ee5a5eb5050e43b32bdce2f51538b8981852928f463c43f77387215a25",
+      "new_focus": false
+    },
+    {
+      "va": "0x2d9d7e40",
+      "name": "_ZN16MW_DTV_AVMonitor7DoStartER13MW_DTV_AVInfo",
+      "bytes": 5700,
+      "sha256": "561eb6c81739a8dae1be3b859dea4ae814dabee9fa532eba0ca969e821a1e15c",
+      "new_focus": false
+    },
+    {
+      "va": "0x2d9d3e04",
+      "name": "_ZN16MW_DTV_AVMonitor11SetMuteFlagEhm",
+      "bytes": 1944,
+      "sha256": "bdf22f6987320ee1822dc1a9ef1fd73c551bb0d3668f27dc0ae73b9e9f1d8e1a",
+      "new_focus": false
+    },
+    {
+      "va": "0x2d9d1be0",
+      "name": "_ZN16MW_DTV_AVMonitor9IsMadLockEv",
+      "bytes": 60,
+      "sha256": "f866eac6163df466948c1881f0fff19f470fe789f83d040a1e0828a051f3f065",
+      "new_focus": false
+    }
+  ],
+  "proven": {
+    "GetAVInfo": {
+      "va": "0x2d9d1b18",
+      "normal_return_always": 1,
+      "copies_requested_info_from": "+0xd8",
+      "does_not_copy_applied_info": "+0xa0"
+    },
+    "DoMonitor": {
+      "va": "0x2d9d6c44",
+      "CheckAudioStatus_call": "0x2d9d6d34",
+      "skip_conditions": [
+        "requested AVInfo+0x26!=0 (monitor requested+0xfe)",
+        "video_started+0x110==0",
+        "audio_started+0x111==0"
+      ],
+      "no_audio_attempt_113_repeat_gate": true
+    },
+    "CheckVideoStatus": {
+      "va": "0x2d9d4c30",
+      "zero_frame_stalls_can_set_status2": true,
+      "SetVideoStatus_call": "0x2d9d4d44"
+    },
+    "SetVideoStatus": {
+      "va": "0x2d9d4a90",
+      "status2_sets_mute_reason": "0x20",
+      "set_call": "0x2d9d4b88",
+      "other_status_clears_mute_reason": "0x20",
+      "clear_call": "0x2d9d4af8",
+      "reason20_in_audio_mask": false
+    },
+    "DoStart": {
+      "timestamp_reset": "0x2d9d9028 writes GetTime0 to+0x84 when audio/video active",
+      "repeated_start_can_prevent_timeout": true,
+      "not_observed_on_TV": true
+    },
+    "DoVideoSync": {
+      "frame_count_zero_sets_local_bVar1": false,
+      "sync_pending_clear_requires_bVar1": true,
+      "no_frame_pending_can_block_fallback": true
+    }
+  },
+  "unproven_failure_cases": [
+    "helper entry never observed at runtime",
+    "requested/applied AVInfo may differ during updates",
+    "timeout continually reset by repeated DoStart",
+    "sync_pending+0x6e remains nonzero",
+    "ready92 nonzero takes unchanged native branch; no extended frame guard",
+    "codec/source/window/playback/demux/active/PID/codec guards reject",
+    "another audio mute bit in0x1a0cc causes intended refusal",
+    "native GetFrameCnt nonzero despite blank screen causes intended refusal",
+    "legacy IsMadLock0 prevents unmute even if another audio engine is ready",
+    "SetMuteFlag clears2 but other SDK/user/hardware mute remains",
+    "no compressed audio arrives or codec/DSP/PCR/PCM output is invalid"
+  ],
+  "diagnostic_proposal": {
+    "implemented": false,
+    "preferred": "Reuse existing local fprintf/printf log channel; do not change mute settings",
+    "minimum_markers": [
+      "helper-entry fingerprint/version",
+      "caller skip: requested mode/video-active/audio-active",
+      "first rejecting helper guard ID",
+      "native framecnt and legacy MAD result only when existing calls execute",
+      "mask before/after SetMuteFlag(0,2)",
+      "requested/applied codec+mode+audioPID snapshots"
+    ],
+    "existing_log_evidence": "SetMuteFlag0x2d9d3e04 has fprintf on _DAT_2c67c868; DoVideoSync0x2d9d6270 has AT/PIU/SYS and sync-done logs",
+    "constraints": [
+      "Rate-limit once per tune/changed reason; avoid per50ms flooding",
+      "No persistent-file/USB export path or user-readable log access has been proven",
+      "Do not call extra decoder routines solely for logging",
+      "No native UI injection proposed without proven event/widget lifetime path"
+    ]
+  },
+  "conclusion": "No-audio result does not prove helper reached or native mute cause; collect reachability/decoder evidence before any broader unmute patch",
+  "target_executed": false,
+  "originals_modified": false
+}

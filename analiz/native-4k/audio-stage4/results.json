@@ -1,0 +1,542 @@
+{
+  "schema_version": 1,
+  "offline_static_only": true,
+  "target_executed": false,
+  "patch_proposed": false,
+  "sources": {
+    "07_MSLIB/libMStarSDK.so": "00d147f752f92c9706e6496d0cda21de528e81f0c73cac54426b2618c17fe5fb",
+    "07_MSLIB/libMStarSDK_customer.so": "4ebd5fc038a843b26c03b6cb6b44b5e9052820bea388c5d4fc1913b840e83949",
+    "07_MSLIB/utopia/libapiAUDIO.so": "d55e76dd24baea83657739e4424982cb8c4b00d90a9144792c1c6b430fe46651"
+  },
+  "observation": {
+    "installed_audio_test": true,
+    "update_completed_100_percent": true,
+    "restarted": true,
+    "both_reported_tracks_silent": true,
+    "helper_executed": null,
+    "MAD_lock": null,
+    "live_PID_or_codec": null
+  },
+  "counts": {
+    "new_C_exports": 5,
+    "enum_dispatch_rows": 20,
+    "decoder_ID_host_cases": 7,
+    "selected_driver_blocks": 11
+  },
+  "evidence": [
+    {
+      "module": "07_MSLIB/libMStarSDK.so",
+      "va": "0x2caaa93c",
+      "bytes": 52,
+      "sha256": "6835a5e8ee607928d95694e3a0689405f5fe0d8d6f3adb6f52f296b9d3a1ba8e",
+      "kind": "new_C_export",
+      "assembly": "sdk-2caaa93c.asm.txt",
+      "name": "mapi_audio::IsMadLock"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc65c6c",
+      "bytes": 228,
+      "sha256": "efa5f8b80b72be62d5c95642f639c9a5d12ed7b952a34d79bed6a3b11d3f8834",
+      "kind": "new_C_export",
+      "assembly": "customer-2dc65c6c.asm.txt",
+      "name": "mapi_audio_customer::DECODER_SwitchAudioDSPSystem"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc6ac08",
+      "bytes": 412,
+      "sha256": "d00794a941c1e7a023c8fc773f6617783b3a7a093bd115a804c3a00c04d9b751",
+      "kind": "new_C_export",
+      "assembly": "customer-2dc6ac08.asm.txt",
+      "name": "mapi_audio_customer::SetAudioDec"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc65de0",
+      "bytes": 1148,
+      "sha256": "efcbcbaf162886c627ff9d0f9658f34594317898a48e33c08861e3c11698ff15",
+      "kind": "new_C_export",
+      "assembly": "customer-2dc65de0.asm.txt",
+      "name": "mapi_audio_customer::DECODER_SwitchAudioDSPSystem"
+    },
+    {
+      "module": "07_MSLIB/utopia/libapiAUDIO.so",
+      "va": "0x2d08ab00",
+      "bytes": 92,
+      "sha256": "82be2c772cc12b40ab55214d96f40ee898a3ef18fa5fdc7366fa7ef7f9b2c9dd",
+      "kind": "new_C_export",
+      "assembly": "api-2d08ab00.asm.txt",
+      "name": "MApi_AUDIO_IsMadLock"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc634d8",
+      "bytes": 120,
+      "sha256": "0ec08790084e2a047f915623872d323721b8df00c041f279c5e9aff765be84fb",
+      "kind": "decoder_ID_enum_helper_raw",
+      "assembly": "customer-2dc634d8.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc6625c",
+      "bytes": 88,
+      "sha256": "8e250263a5a45dba604c1c613192e2061da21ec78d8bb4ca53dbd2ab796e82e1",
+      "kind": "DSP_enum_dispatch_raw",
+      "assembly": "customer-2dc6625c.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc66284",
+      "bytes": 20,
+      "sha256": "ab4509c129c2d094b15d627c128bbd98ae89e71daf5ebbd1b0fcbe275ad7ad0c",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc66284.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc66354",
+      "bytes": 20,
+      "sha256": "647c34543569d2f1f4b86d32fc03fd4eb09210784c84ff54800486bbf7570ef8",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc66354.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc66354",
+      "bytes": 20,
+      "sha256": "647c34543569d2f1f4b86d32fc03fd4eb09210784c84ff54800486bbf7570ef8",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc66354.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc662dc",
+      "bytes": 20,
+      "sha256": "be71194eb8e0ede2290f3b0f9b76fa403779f442be82daeb9a48b28c55035315",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc662dc.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc662c8",
+      "bytes": 20,
+      "sha256": "a899897fb68308674ed32a4d68d5cfee14efb0f0458784f55e99382431b5fc20",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc662c8.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc66284",
+      "bytes": 20,
+      "sha256": "ab4509c129c2d094b15d627c128bbd98ae89e71daf5ebbd1b0fcbe275ad7ad0c",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc66284.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc66354",
+      "bytes": 20,
+      "sha256": "647c34543569d2f1f4b86d32fc03fd4eb09210784c84ff54800486bbf7570ef8",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc66354.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc66354",
+      "bytes": 20,
+      "sha256": "647c34543569d2f1f4b86d32fc03fd4eb09210784c84ff54800486bbf7570ef8",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc66354.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc662c8",
+      "bytes": 20,
+      "sha256": "a899897fb68308674ed32a4d68d5cfee14efb0f0458784f55e99382431b5fc20",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc662c8.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc66284",
+      "bytes": 20,
+      "sha256": "ab4509c129c2d094b15d627c128bbd98ae89e71daf5ebbd1b0fcbe275ad7ad0c",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc66284.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc66284",
+      "bytes": 20,
+      "sha256": "ab4509c129c2d094b15d627c128bbd98ae89e71daf5ebbd1b0fcbe275ad7ad0c",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc66284.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc66284",
+      "bytes": 20,
+      "sha256": "ab4509c129c2d094b15d627c128bbd98ae89e71daf5ebbd1b0fcbe275ad7ad0c",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc66284.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc66284",
+      "bytes": 20,
+      "sha256": "ab4509c129c2d094b15d627c128bbd98ae89e71daf5ebbd1b0fcbe275ad7ad0c",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc66284.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc66284",
+      "bytes": 20,
+      "sha256": "ab4509c129c2d094b15d627c128bbd98ae89e71daf5ebbd1b0fcbe275ad7ad0c",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc66284.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc66284",
+      "bytes": 20,
+      "sha256": "ab4509c129c2d094b15d627c128bbd98ae89e71daf5ebbd1b0fcbe275ad7ad0c",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc66284.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc66284",
+      "bytes": 20,
+      "sha256": "ab4509c129c2d094b15d627c128bbd98ae89e71daf5ebbd1b0fcbe275ad7ad0c",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc66284.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc66284",
+      "bytes": 20,
+      "sha256": "ab4509c129c2d094b15d627c128bbd98ae89e71daf5ebbd1b0fcbe275ad7ad0c",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc66284.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc66284",
+      "bytes": 20,
+      "sha256": "ab4509c129c2d094b15d627c128bbd98ae89e71daf5ebbd1b0fcbe275ad7ad0c",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc66284.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc662b4",
+      "bytes": 20,
+      "sha256": "9305b17eac13e302ff35854195b97d06b7ff26bf1d9c9bde08055a1a76c9f9b4",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc662b4.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/libMStarSDK_customer.so",
+      "va": "0x2dc662b4",
+      "bytes": 20,
+      "sha256": "9305b17eac13e302ff35854195b97d06b7ff26bf1d9c9bde08055a1a76c9f9b4",
+      "kind": "DSP_enum_selected_case",
+      "assembly": "customer-2dc662b4.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/utopia/libapiAUDIO.so",
+      "va": "0x2d08c7b8",
+      "bytes": 112,
+      "sha256": "d803cec88fbb63b968d27c675b16761cf8c822fd8a6076f668689bba1f3ba0d1",
+      "kind": "AUDIOIoctl_table_dispatch_prefix",
+      "assembly": "api-2d08c7b8.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/utopia/libapiAUDIO.so",
+      "va": "0x2d08cbe8",
+      "bytes": 32,
+      "sha256": "fede6fec3de831eec40b0b2d452fea0f4956dac5debd638e2868f199e33aac14",
+      "kind": "AUDIOIoctl_cmd3d_case",
+      "assembly": "api-2d08cbe8.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/utopia/libapiAUDIO.so",
+      "va": "0x2d08e7a0",
+      "bytes": 20,
+      "sha256": "407f60fcb9a005bb0bb9b5889cab7c5784eb457622c6c5c49abed44df9391ae0",
+      "kind": "AUDIOOpen_callback_assignment",
+      "assembly": "api-2d08e7a0.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/utopia/libapiAUDIO.so",
+      "va": "0x2d080820",
+      "bytes": 56,
+      "sha256": "aa93ca0be043d76a647c5f752071725bb514d7f1363d44dac796231a9ce4e16e",
+      "kind": "inner_IsMadLock_forwarder",
+      "assembly": "api-2d080820.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/utopia/libapiAUDIO.so",
+      "va": "0x2d0807b8",
+      "bytes": 52,
+      "sha256": "76a7807c546e6874f0ea98c47eac15cf95d95ff3c1329e79a8f46daea443e561",
+      "kind": "GetCommAudioInfo_forwarder",
+      "assembly": "api-2d0807b8.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/utopia/libapiAUDIO.so",
+      "va": "0x2d057c14",
+      "bytes": 52,
+      "sha256": "6aaf39d6a4de1692e0b708e5dfea923c770871d0244003e5f4be4c475cf800a0",
+      "kind": "MDrv_GetCommAudioInfo_forwarder",
+      "assembly": "api-2d057c14.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/utopia/libapiAUDIO.so",
+      "va": "0x2d074a14",
+      "bytes": 88,
+      "sha256": "cf965f5fa61821f4c34e76532ff075f21dae1a649c0bf0f03def1f094dfff2a2",
+      "kind": "HAL_GetCommInfo_type0_prefix",
+      "assembly": "api-2d074a14.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/utopia/libapiAUDIO.so",
+      "va": "0x2d074b7c",
+      "bytes": 16,
+      "sha256": "5c36b5728574c6a042c5238319b1b9885f8adc9bcd5c82943e3b9074fc39a44a",
+      "kind": "HAL_GetCommInfo_type0_branch",
+      "assembly": "api-2d074b7c.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/utopia/libapiAUDIO.so",
+      "va": "0x2d074da8",
+      "bytes": 36,
+      "sha256": "c29941513f00e81d73e87fac2af4bf3fae77a8145d5141f6abc14a20d31d6020",
+      "kind": "HAL_GetCommInfo_type0_branch",
+      "assembly": "api-2d074da8.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/utopia/libapiAUDIO.so",
+      "va": "0x2d075144",
+      "bytes": 8,
+      "sha256": "c33bab185deb5c2417eaf227cf1b7dff8999bc5b6027b11f14677d9764515a5a",
+      "kind": "HAL_GetCommInfo_type0_selector",
+      "assembly": "api-2d075144.asm.txt"
+    },
+    {
+      "module": "07_MSLIB/utopia/libapiAUDIO.so",
+      "va": "0x2d074bc8",
+      "bytes": 20,
+      "sha256": "436fae54ed15db7cc87631b4ed62dea11ea5f24ef935da65cbc6ee14cccaadb8",
+      "kind": "HAL_GetCommInfo_shared_SHM_call",
+      "assembly": "api-2d074bc8.asm.txt"
+    }
+  ],
+  "main_processor_route": {
+    "processor": 0,
+    "ID_field": "audio_object+0x12c",
+    "secondary_ID_field": "+0x130",
+    "DSP_status_field": "+0x140",
+    "virtual_slot": "0x58",
+    "target": "mapi_audio_customer::SetAudioDec=0x2dc6ac08",
+    "API_ID_mapping": {
+      "-1": -1,
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "other": -1
+    },
+    "live_initialized_ID": null
+  },
+  "DSP_enum_mapping": [
+    {
+      "input_DSP_enum": 0,
+      "target": "0x2dc66284",
+      "new_API_system_enum": 1,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 1,
+      "target": "0x2dc66354",
+      "new_API_system_enum": 3,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 2,
+      "target": "0x2dc66354",
+      "new_API_system_enum": 3,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 3,
+      "target": "0x2dc662dc",
+      "new_API_system_enum": null,
+      "basis": "analog SIF configuration-dependent branch; not reduced to a constant"
+    },
+    {
+      "input_DSP_enum": 4,
+      "target": "0x2dc662c8",
+      "new_API_system_enum": 4,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 5,
+      "target": "0x2dc66284",
+      "new_API_system_enum": 1,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 6,
+      "target": "0x2dc66354",
+      "new_API_system_enum": 3,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 7,
+      "target": "0x2dc66354",
+      "new_API_system_enum": 3,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 8,
+      "target": "0x2dc662c8",
+      "new_API_system_enum": 4,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 9,
+      "target": "0x2dc66284",
+      "new_API_system_enum": 1,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 10,
+      "target": "0x2dc66284",
+      "new_API_system_enum": 1,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 11,
+      "target": "0x2dc66284",
+      "new_API_system_enum": 1,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 12,
+      "target": "0x2dc66284",
+      "new_API_system_enum": 1,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 13,
+      "target": "0x2dc66284",
+      "new_API_system_enum": 1,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 14,
+      "target": "0x2dc66284",
+      "new_API_system_enum": 1,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 15,
+      "target": "0x2dc66284",
+      "new_API_system_enum": 1,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 16,
+      "target": "0x2dc66284",
+      "new_API_system_enum": 1,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 17,
+      "target": "0x2dc66284",
+      "new_API_system_enum": 1,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 18,
+      "target": "0x2dc662b4",
+      "new_API_system_enum": 20,
+      "basis": "constant from original case instructions"
+    },
+    {
+      "input_DSP_enum": 19,
+      "target": "0x2dc662b4",
+      "new_API_system_enum": 20,
+      "basis": "constant from original case instructions"
+    }
+  ],
+  "DSP_enum_table": "0x2dccb5c8",
+  "host_route_cases": [
+    {
+      "main_id": -1,
+      "secondary_id": -1,
+      "processor": 0,
+      "result": "legacy_one_argument_DSP_switch"
+    },
+    {
+      "main_id": 1,
+      "secondary_id": -1,
+      "processor": 0,
+      "result": "SetAudioDec_ID1"
+    },
+    {
+      "main_id": -1,
+      "secondary_id": 2,
+      "processor": 0,
+      "result": "no_DSP_switch"
+    },
+    {
+      "main_id": 1,
+      "secondary_id": 2,
+      "processor": 1,
+      "result": "SetAudioDec_ID2"
+    },
+    {
+      "main_id": 1,
+      "secondary_id": -1,
+      "processor": 1,
+      "result": "no_DSP_switch"
+    },
+    {
+      "main_id": 1,
+      "secondary_id": 2,
+      "processor": 2,
+      "result": "no_DSP_switch"
+    },
+    {
+      "main_id": 3,
+      "secondary_id": 2,
+      "processor": 0,
+      "result": "SetAudioDec_rejects_ID3"
+    }
+  ],
+  "IsMadLock_chain": {
+    "public": "mapi_audio::IsMadLock0x2caaa93c",
+    "API": "MApi_AUDIO_IsMadLock0x2d08ab00",
+    "ioctl_command": "0x3d",
+    "table": "0x2d09ff6c",
+    "case": "0x2d08cbe8",
+    "private_callback_slot": "0xfc",
+    "callback": "_MApi_AUDIO_IsMadLock0x2d080820",
+    "comm_info_type": 0,
+    "final_read": "HAL_DEC_R2_Get_SHM_INFO(info_type1,selector0)",
+    "decoder_ID_to_SHM_selector_equivalence_proven": false
+  },
+  "conclusion": "Main audio uses runtime decoder-ID APIs when initialized; MAD lock reads fixed SHM selector0. This API distinction does not prove a wrong lock or explain device silence.",
+  "next_boundary": "Map initialized main decoder ID to HAL SHM selector; establish actual per-decoder lock info enum/ABI before any A2 patch.",
+  "unresolved": [
+    "Live selected Dolby/HE-AAC PMT/DB enum, PIDs and DSP values are unavailable",
+    "Main decoder ID allocation/runtime value is not observed",
+    "SetAudioDec→SetDecodeSystem returns success1 without validating API return here; actual DSP result unknown",
+    "Decoder-ID to fixed SHM selector0 relationship unresolved",
+    "GetAudioDecStatus virtual+0x64 prototype known, but no proven hardware lock field or replacement ABI in this scope",
+    "No HEVC-specific audio DSP branch found in the selected switch; codec/source enum spaces remain distinct"
+  ]
+}

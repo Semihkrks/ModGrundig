@@ -1,0 +1,14 @@
+2d080820: 1c001c3c lui $gp, 0x1c
+2d080824: e0979c27 addiu $gp, $gp, -0x6820
+2d080828: 21e09903 addu $gp, $gp, $t9
+2d08082c: e0ffbd27 addiu $sp, $sp, -0x20
+2d080830: 1c00bfaf sw $ra, 0x1c($sp)
+2d080834: 1000bcaf sw $gp, 0x10($sp)
+2d080838: d888998f lw $t9, -0x7728($gp)
+2d08083c: 09f82003 jalr $t9
+2d080840: 21200000 move $a0, $zero
+2d080844: 1c00bf8f lw $ra, 0x1c($sp)
+2d080848: 1000bc8f lw $gp, 0x10($sp)
+2d08084c: ff004230 andi $v0, $v0, 0xff
+2d080850: 0800e003 jr $ra
+2d080854: 2000bd27 addiu $sp, $sp, 0x20

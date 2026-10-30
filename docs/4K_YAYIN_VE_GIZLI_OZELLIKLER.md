@@ -1,5 +1,30 @@
 # 4K yayın →1080p ve kayıp kanal araştırması
 
+## 30 Ekim: V7.9 ses testinin cihaz sonucu ve sonraki araştırma
+
+Kullanıcı HEVC ses testi güncellemesinin %100 tamamlanıp TV'nin yeniden
+başladığını, fakat iki ses seçeneğinde de ses gelmediğini bildirdi.
+[Cihaz kaydı](../analiz/native-ui-candidate/v7.9-audio-test/device-feedback.json).
+Bu aday ses hedefini sağlamadı. Helper'ın çalıştığı, hangi guard'ın engellediği
+ve gerçek DSP/PCM durumu bu gözlemden çıkarılmaz.
+
+[Erişim analizi](V79_SES_TESTI_ERISIM_ANALIZI.md) requested/applied AVInfo alanlarını,
+üst çağrı kapılarını, sync-pending ve yeniden başlayan süreyi ayırır. İncelenen
+video-status nedeni0x20 normal ses maskesinde değildir. Varsayılan launcher'da
+stdout/stderr `/dev/null`'a yönlenir; kullanıcıya açık DTV log aktarımı kanıtlanmadı.
+
+Yeni decoder incelemesi, kimlikli ses başlatma API'sini ve sabit SHM selector0
+okuyan eski MAD kilit API'sini ayırdı. **Bunların uyuşmadığı henüz kanıtlanmadı.**
+Decoder kimliği→SHM bankı ilişkisi ve cihazdaki seçili PID/codec/lock ölçümleri
+olmadan kilit sonucunu zorlayan ikinci paket hazırlanmadı.
+[Adresli inceleme verisi](../analiz/native-4k/audio-stage4/results.json).
+
+30 Ekim'de yeniden kontrol edilen [TRT'nin resmî SSS'si](https://www.trt.net.tr/corporate/faq/2),
+TRT4K'da ses yoksa uydu parametreleriyle taramanın yenilenmesini önerir.
+11767MHz / dikey /15000 /DVB-S2 /FEC3/4 bilgileri değişmemiştir. Bu genel öneri,
+bizim cihazda eski PID kaydı bulunduğunu veya yeniden taramanın decoder sorununu
+çözeceğini kanıtlamaz. Canlı sinyal kalitesi ve şifreli servis uyarısı kullanıcıya soruldu.
+
 ## 30 Ekim: görüntü hatası, ses mute koşulları ve dönüşüm deneyi
 
 Yeni odak tarama/listelenme değildir: kullanıcı kanalın V7.8'de bulunduğunu,
