@@ -4,7 +4,7 @@
 
 **Grundig GMGRMR firmware araştırması ve native televizyon arayüzü geliştirme projesi.**
 
-[Dokümantasyon](docs/README.md) · [Mimari ve bulgular](docs/TERSINE_MUHENDISLIK.md) · [Son aday: V7.10](docs/UI_NATIVE_V710_SEMIH_VE_HIZ.md) · [Katkıda bulun](#katkıda-bulunma)
+[Dokümantasyon](docs/README.md) · [Mimari ve bulgular](docs/TERSINE_MUHENDISLIK.md) · [Etkin taban: V7.9](docs/UI_NATIVE_V79_SEVIYELI_SES.md) · [Katkıda bulun](#katkıda-bulunma)
 
 Linux · MIPS32 · MUF / DirectFB · Python · Ghidra
 
@@ -30,11 +30,12 @@ Envanterin tamamlanması, bütün fonksiyonların çözüldüğü veya kaynak ko
 
 ## Güncel durum
 
-**Son belgelenen aday V7.10; fiziksel cihaz geri bildirimi bulunan temel sürüm V7.7’dir.**
+**Etkin çalışma tabanı V7.9’dur. V7.10, kullanıcının 30 Ekim 2026 talebiyle şimdilik devre dışı bırakılmıştır.** Fiziksel cihaz geri bildirimi bulunan temel sürüm V7.7’dir.
 
 | Sürüm / konu | Durum | Ayrıntı |
 |---|---|---|
-| **V7.10** | Çevrimdışı doğrulandı; TV testi yok | Native **SEMIH** menü logosu; V7.9 ses/kanal davranışları korunur. [Rapor →](docs/UI_NATIVE_V710_SEMIH_VE_HIZ.md) |
+| **V7.9 HEVC ses testi** | Deneysel native yama; TV sonucu bekleniyor | Görüntü karesi gelmediğinde, kilit almış ses decoder'ı için dar mute kurtarma yolu. [Test rehberi →](docs/V79_SES_TEST_REHBERI.md) |
+| **V7.10** | Şimdilik devre dışı; arşiv | SEMIH logo deneyi korunur, yeni testlere dahil edilmez. [Rapor →](docs/UI_NATIVE_V710_SEMIH_VE_HIZ.md) |
 | **V7.9** | Çevrimdışı doğrulandı; TV testi yok | Seviyeye göre ses ikonları ve azaltılmış sol kenar boşluğu. [Rapor →](docs/UI_NATIVE_V79_SEVIYELI_SES.md) |
 | **V7.7** | Kullanıcı cihaz geri bildirimi var | 27 Ekim 2026’da TV’de çalıştığı bildirildi; kapsamlı donanım testi değildir. [Rapor →](docs/UI_NATIVE_V77_PAKET.md) |
 | **4K / HEVC** | Araştırma sürüyor | Doğrulanmış 4K kilit açma çözümü yoktur. [Araştırma →](docs/4K_YAYIN_VE_GIZLI_OZELLIKLER.md) |

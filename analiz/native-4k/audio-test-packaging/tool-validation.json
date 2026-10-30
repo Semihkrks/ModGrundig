@@ -1,0 +1,30 @@
+{
+  "status": "TOOLS_READY_BUILD_NOT_RUN",
+  "sources": {
+    "mslib": "7d92780368b178854a46a8f2e2ee8b625d06c7292695929800e5ecbc56fb827b",
+    "library": "06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21",
+    "v79_app": "438caad4b1fed4a908d018e154da7939f21a20c4440eab5bc9c6238f104ee4c1"
+  },
+  "tests": [
+    "3 scripts compile in memory",
+    "stdlib-only imports",
+    "14-payload V7.9 independent baseline readback passed",
+    "outer corruption rejected",
+    "no-op library rejected",
+    "unchanged MSLIB header rewrite byte-identical",
+    "repacker rejects decoded-size0x1c00001 before compression",
+    "independent reader rejects decoded-size0x1c00001",
+    "all loader addresses remain fixed"
+  ],
+  "mslib_original_entries": 341,
+  "mslib_max_leb_count": 480,
+  "raw_regular_bytes": 55714175,
+  "build_executed": false,
+  "blockers": [
+    "Await validated native patch path/SHA; LZO-all decoded RAM and compressed-slot fit require actual host build"
+  ],
+  "firmware_executed": false,
+  "mslib_max_decoded_bytes": 29360128,
+  "filesystem_compressor": "lzo",
+  "raw_all_rejected_before_build": true
+}

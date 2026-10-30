@@ -1,0 +1,38 @@
+{
+  "status": "PASS_SOURCE_REVIEW_PENDING_PACKAGE_READBACK",
+  "candidate_sha256": "0136fed033cda36272a37584436d8732da5e0cd4a533cc2a41249075d3544ea0",
+  "findings": [],
+  "resolved_findings": [
+    {
+      "priority": "P1",
+      "title": "MSLIB decoded RAM overlap",
+      "resolution": "All-LZO UBIFS and independent0x1c00000 decoded-output cap; no address relocation; oversized fixture rejected"
+    },
+    {
+      "title": "Stale native artifact",
+      "resolution": "Regenerated retained bytes/proof equal current apply(); bounded cases pin same SHA"
+    }
+  ],
+  "checks_passed": [
+    "Packaging sources compile; outside-output and wrong-base guards pass",
+    "MSLIB source/APP hash pins, inode/symlink roundtrip and13 unchanged slots enforced",
+    "PIC trampoline and absolute-time arithmetic inspected",
+    "Same32-byte stack frame; RA/S0/GP handling, caller/callee registers and rebasing checked",
+    "Original ready92 recovery preserved differentially",
+    "6 native unittest methods pass;36 recorded bounded MIPS cases at review",
+    "Candidate bytes, proof and test SHA agree",
+    "Framecountzero/MADlock plus codec/source/window/playback/demux/audio masks guard fallback",
+    "DoMonitor has no+113 repeat gate on proven CheckAudioStatus caller"
+  ],
+  "native_helper_bytes": 372,
+  "limits": [
+    "No physicalTV/actualPCM/real decoder test",
+    "No helper FDE; exception/asynchronous unwind inside helper unsupported",
+    "Global UI mute not hardware-tested; existing per-reason SetMuteFlag(0,2) path reused and other native audio reasons preserved",
+    "Actual MSLIB decoded size/compressed-slot fit and independent package readback must pass before distribution"
+  ],
+  "packaging_build_may_start": true,
+  "distribution_approved": false,
+  "target_executed": false,
+  "firmware_written": false
+}

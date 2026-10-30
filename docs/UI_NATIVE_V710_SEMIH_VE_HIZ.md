@@ -1,5 +1,8 @@
 # V7.10 — SEMIH menü logosu ve hız ayarları
 
+**30 Ekim 2026:** Kullanıcı bu adayı şimdilik iptal etti. Etkin taban V7.9'dur;
+SEMIH değişikliği yeni HEVC ses testine taşınmaz. Aşağıdaki kayıt tarihsel kanıttır.
+
 29 Ekim 2026. Ayrı çalışma dalı: `codex/v710-fast-settings-semih`.
 `reverse-engineer-anything` ile üç bağımsız araştırma yürütüldü. Orijinal
 firmware ve önceki adaylar korunur; TV'ye veya USB'ye yazılmadı.

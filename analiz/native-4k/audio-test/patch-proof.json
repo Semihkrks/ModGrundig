@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "kind": "V7.9 HEVC live-TV audio recovery test",
+  "input_sha256": "06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21",
+  "output_sha256": "0136fed033cda36272a37584436d8732da5e0cd4a533cc2a41249075d3544ea0",
+  "base_app_sha256": "861d97c013c4d56e093a69cf779abfa6ea78e6c17233af5d6b2b3ba075b0b4ea",
+  "bytes": 1504024,
+  "helper_va": "0x2d957000",
+  "helper_size": 372,
+  "helper_sha256": "6c6924e95203ea1b6e76c88f72500df3deb624db3134f26cb0566ebac684c604",
+  "allowlist": [
+    {
+      "offset": 811300,
+      "size": 32,
+      "va": "0x2d9d6124",
+      "kind": "PIC entry trampoline"
+    },
+    {
+      "offset": 290816,
+      "size": 372,
+      "va": "0x2d957000",
+      "kind": "existing zero RX section gap"
+    }
+  ],
+  "old_entry_words": [
+    "0x3c1c000c",
+    "0x279cbe6c",
+    "0x399e021",
+    "0x27bdffe0",
+    "0xafbf001c",
+    "0xafb00018",
+    "0xafbc0010",
+    "0x8f9988a4"
+  ],
+  "new_entry_words": [
+    "0x3c1c000c",
+    "0x279cbe6c",
+    "0x399e021",
+    "0x3c19ffec",
+    "0x27395070",
+    "0x33cc821",
+    "0x3200008",
+    "0x0"
+  ],
+  "changed_byte_count": 250,
+  "elf_size_headers_sections_dynamic_metadata_unchanged": true,
+  "load_bias_independent": true,
+  "timeout": "original absolute delta >2000 ms",
+  "unchanged_native_gate": "sync_pending+0x6e ==0; ready92!=0 path remains original recovery",
+  "fallback_guards": [
+    "stored codec7",
+    "source0x1c",
+    "main window0",
+    "live/no PVR(+0x1be==0)",
+    "normal demux mode(+0xc6==0)",
+    "video_started and audio_started",
+    "valid audio PID and codec",
+    "mute2 present",
+    "no other native audio mask reason",
+    "non-null decoder",
+    "actual native GetFrameCnt()==0",
+    "actual native IsMadLock()!=0"
+  ],
+  "original_mute_call": {
+    "function": "MW_DTV_AVMonitor::SetMuteFlag",
+    "arguments": [
+      "this",
+      0,
+      2
+    ]
+  },
+  "mute_masks": {
+    "normal_audio": "0x1a0ce",
+    "alternative_audio": "0x15002",
+    "other_audio_guard": "0x1a0cc",
+    "removed_only": "0x2",
+    "preserved_examples": [
+      "video mute0x1",
+      "video status0x20",
+      "every other mask bit"
+    ]
+  },
+  "no_pcr_pid_rewrite": true,
+  "no_decoder_success_forcing": true,
+  "no_volume_or_user_mute_setting_write": true,
+  "source_field_evidence": {
+    "constructor": "0x2d9d4db4: window parameter stored+0x1c8; window0 sets input identifier+0xc=0x1c, window1=0x25",
+    "stored_info": "DoStart0x2d9d7e40 final copy: AVInfo+0 maps monitor+0xa0, audio PID+0x12 maps+0xb2, input mode+0x26 maps+0xc6",
+    "playback_flag": "Start0x2d9da078 stores incoming control to+0x1be; old1/new0 rejection prints Ignore live pmt change in PVR playback mode",
+    "monitor_mode_gate": "DoMonitor0x2d9d6d04 reads AVInfo+0x26 and skips CheckAudioStatus when nonzero",
+    "got_targets": {
+      "GetTime0": "gp-0x775c",
+      "mapi_vdec::GetFrameCnt": "gp-0x6228",
+      "MW_DTV_AVMonitor::IsMadLock": "gp-0x5090",
+      "MW_DTV_AVMonitor::SetMuteFlag": "gp-0x629c"
+    }
+  },
+  "abi": {
+    "stack_size": 32,
+    "saved": [
+      "ra",
+      "s0",
+      "gp"
+    ],
+    "callee_saved_untouched": [
+      "s1..s7",
+      "fp"
+    ],
+    "native_calls": "GOT t9, gp restored after each call",
+    "trampoline": "gp-relative PIC jr t9, no absolute J26"
+  },
+  "limits": [
+    "Test candidate, no physical TV success claim",
+    "Native helper external calls are mocked only in bounded tests",
+    "Existing FDE/unwind tables are unchanged; the added helper has no FDE. An exception or asynchronous unwind inside it is not supported",
+    "Audio MAD lock and zero video frames are native readiness tests, not measured PCM output or a UHD video fix",
+    "User mute setting is not written; physical remote mute/unmute and volume0 behavior still require the TV test",
+    "Fallback excludes PVR/file-in playback and sub-window; live HEVC test only"
+  ]
+}

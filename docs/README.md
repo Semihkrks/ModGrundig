@@ -6,7 +6,11 @@ ModGrundig araştırma raporları, uygulama kayıtları ve tarihsel deneyler.
 
 ## Güncel çalışma
 
-- [V7.10 — native SEMIH menü logosu ve doğrulama sınırları](UI_NATIVE_V710_SEMIH_VE_HIZ.md)
+- [Etkin taban V7.9 — HEVC ses testi ve cihaz deneme rehberi](V79_SES_TEST_REHBERI.md)
+- [Native ses yamasının koşulları, adresleri ve sınırları](V79_HEVC_SES_TESTI.md)
+- [MSLIB paketleme ve RAM sınırı doğrulaması](V79_SES_PAKETLEME.md)
+
+- [V7.10 — şimdilik devre dışı SEMIH logo deneyi](UI_NATIVE_V710_SEMIH_VE_HIZ.md)
 - [V7.9 — seviyeye bağlı ses ikonları ve kenar boşluğu](UI_NATIVE_V79_SEVIYELI_SES.md)
 - [V7.7 — cihaz geri bildirimi bulunan temel sürüm](UI_NATIVE_V77_PAKET.md)
 - [4K — yayın, decoder ve açık araştırma konuları](4K_YAYIN_VE_GIZLI_OZELLIKLER.md)
