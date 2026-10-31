@@ -1,5 +1,12 @@
 # V7.9 HEVC canlı tanı paketi
 
+1 Kasım USB hazırlığı: kullanıcı dosya oluşmadığını ve yalnız firmware'i
+yüklediğini bildirdi. D: FAT32 çıkarılabilir sürücüde17 paket dosyasının tamamı
+son adayla hash olarak eşleşti; etkinleştirme dosyası yoktu. USB köküne tam8
+bayt marker eklendi ve yeniden okundu. Firmware tekrar kopyalanmadı; cihazda
+hangi sürümün aktif olduğu ve tanı çıktısı henüz ölçülmedi.
+[USB hazırlık kaydı](../analiz/native-ui-candidate/v7.9-hevc-diag/usb-preparation-2026-11-01.json).
+
 31 Ekim 2026. **Bu paket 4K görüntüyü açan bir düzeltme değildir.** Önceki
 pakette ses gelmemesi tek başına hangi decoder kapısına takıldığımızı göstermedi.
 Bu aday, gerçek TV'de video başlangıcının sonucunu sayısal bir USB kaydına alır.

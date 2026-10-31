@@ -10,3 +10,4 @@
 - Sembolik bağlantıları host dosyalarına doğru izleme. Firmware kökü ve mount tablosuna göre anlamlandır. Anahtar, sertifika ve benzersiz cihaz kimliği içeriklerini raporlara/dış servislere taşıma.
 - İsim/string eşleşmesi, dosya hash eşleşmesi, statik xref ve cihazda gözlem farklı kanıt düzeyleridir. Bilinmeyen bağlantıları açıkça belirt.
 - Bağımsız büyük alt işlerde kullanıcı tarafından istenen alt ajan desteğini kullan; dosya sahipliğini belirt ve başkalarının değişikliklerini geri alma.
+- Kullanıcının 1 Kasım 2026 tercihi: yeni doğrulanmış test firmware paketi hazırlandığında D: USB sürücüsüne açılmış güncelleme düzenini ve gerekli tanı etkinleştirme dosyalarını da eşitle; dosyaları hash/readback ile doğrula. Sürücünün doğru çıkarılabilir USB olduğunu önce kontrol et, ilgisiz dosyaları silme. D:'ye paket kopyalama yetkisi TV'ye otomatik yazma yetkisi değildir.
