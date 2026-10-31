@@ -1,0 +1,92 @@
+{
+  "status": "PASS_CROSS_LINK_AND_OWN_COLLECTOR_QEMU_SMOKE",
+  "inputs": {
+    "native-diag/modgrundig_diag_sink.c": "5b0b1f4efe1dda648addce5b661a691360c557e9c0aa88b4aa11247ffeb96065",
+    "native-diag/glibc28_compat.c": "d08febb2577057202a35711f28d6061afe6a0f83facd6be925d82f545795f349",
+    "analiz/dosya-sistemleri-tam/06_RFS/lib/libc-2.8.so": "7c0e5900f24a19e374d81693dbb233cd9cf161b9da2f9707b79ed522b6bbad84",
+    "analiz/dosya-sistemleri-tam/06_RFS/lib/ld-2.8.so": "fe601ae62268ecc106ea09dcf91cf4843aeaff03a9b0955991ba58c0047dca4e",
+    "tools/mips-diag-sysroot/root/usr/mipsel-linux-gnu/lib/crt1.o": "c8a45324ee85371d31198f7d1897d7d255bb1769029ef20b03d68ee0300feda8"
+  },
+  "collector_sha256": "5347d3b3488a051624bca2c84ce44d5dfd8b7fbe98d3902928becdf406f9ec63",
+  "bytes": 15208,
+  "dynamic_dependencies": [
+    "libc.so.6"
+  ],
+  "required_glibc_versions": [
+    "GLIBC_2.0",
+    "GLIBC_2.2",
+    "GLIBC_2.4"
+  ],
+  "commands": [
+    [
+      "clang",
+      "--target=mipsel-linux-gnu",
+      "--sysroot=/mnt/c/Users/Semih/Desktop/grundig/tools/mips-diag-sysroot/root/usr/mipsel-linux-gnu",
+      "-march=mips32r2",
+      "-mabi=32",
+      "-mfp32",
+      "-fPIC",
+      "-fno-stack-protector",
+      "-U_FORTIFY_SOURCE",
+      "-O2",
+      "-std=c99",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "/mnt/c/Users/Semih/Desktop/grundig/native-diag/modgrundig_diag_sink.c",
+      "-o",
+      "/mnt/c/Users/Semih/Desktop/grundig/tools/diag-build/modgrundig_diag_sink.o"
+    ],
+    [
+      "clang",
+      "--target=mipsel-linux-gnu",
+      "--sysroot=/mnt/c/Users/Semih/Desktop/grundig/tools/mips-diag-sysroot/root/usr/mipsel-linux-gnu",
+      "-march=mips32r2",
+      "-mabi=32",
+      "-mfp32",
+      "-fPIC",
+      "-fno-stack-protector",
+      "-U_FORTIFY_SOURCE",
+      "-O2",
+      "-std=c99",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "/mnt/c/Users/Semih/Desktop/grundig/native-diag/glibc28_compat.c",
+      "-o",
+      "/mnt/c/Users/Semih/Desktop/grundig/tools/diag-build/glibc28_compat.o"
+    ],
+    [
+      "mipsel-linux-gnu-ld",
+      "--allow-shlib-undefined",
+      "-o",
+      "/mnt/c/Users/Semih/Desktop/grundig/tools/diag-build/modgrundig-diag-sink",
+      "--dynamic-linker=/lib/ld.so.1",
+      "/mnt/c/Users/Semih/Desktop/grundig/tools/mips-diag-sysroot/root/usr/mipsel-linux-gnu/lib/crt1.o",
+      "/mnt/c/Users/Semih/Desktop/grundig/tools/diag-build/modgrundig_diag_sink.o",
+      "/mnt/c/Users/Semih/Desktop/grundig/tools/diag-build/glibc28_compat.o",
+      "/mnt/c/Users/Semih/Desktop/grundig/analiz/dosya-sistemleri-tam/06_RFS/lib/libc-2.8.so"
+    ]
+  ],
+  "qemu_command": [
+    "qemu-mipsel",
+    "-L",
+    "/mnt/c/Users/Semih/Desktop/grundig/tools/diag-runtime",
+    "/mnt/c/Users/Semih/Desktop/grundig/tools/diag-build/modgrundig-diag-sink",
+    "--duration",
+    "1",
+    "--mounts",
+    "/mnt/c/Users/Semih/Desktop/grundig/tools/diag-build/empty-mounts",
+    "--fifo",
+    "/mnt/c/Users/Semih/Desktop/grundig/tools/diag-build/smoke-diag.fifo"
+  ],
+  "compiler": "Ubuntu clang version 21.1.8 (6ubuntu1)",
+  "vendor_program_executed": false,
+  "vendor_loader_and_libc_used": true,
+  "synthetic_mount_fixture": true,
+  "target_hardware_executed": false,
+  "TV_compatibility_verified": false,
+  "firmware_created": false
+}

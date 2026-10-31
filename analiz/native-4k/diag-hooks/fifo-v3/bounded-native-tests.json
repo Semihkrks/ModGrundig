@@ -1,0 +1,1083 @@
+{
+  "kind": "Actual SDK-call veneer instructions; every external function mocked",
+  "candidate_sha256": "6967d9da7c95b79664924aa8c308380e6d985d57c814aa5ff5dd37670f864f7a",
+  "case_count": 47,
+  "cases": [
+    {
+      "label": "open_error",
+      "inputs": {
+        "fd": -1
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 110
+      }
+    },
+    {
+      "label": "open_error",
+      "inputs": {
+        "fd": -13
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 110
+      }
+    },
+    {
+      "label": "bad_record_length",
+      "inputs": {
+        "snprintf_result": -1
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 185
+      }
+    },
+    {
+      "label": "bad_record_length",
+      "inputs": {
+        "snprintf_result": 0
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 185
+      }
+    },
+    {
+      "label": "bad_record_length",
+      "inputs": {
+        "snprintf_result": 192
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 188
+      }
+    },
+    {
+      "label": "bad_record_length",
+      "inputs": {
+        "snprintf_result": 199
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 188
+      }
+    },
+    {
+      "label": "bad_proc_length",
+      "inputs": {
+        "proc_format_result": -1
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 131
+      }
+    },
+    {
+      "label": "bad_proc_length",
+      "inputs": {
+        "proc_format_result": 0
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 131
+      }
+    },
+    {
+      "label": "bad_proc_length",
+      "inputs": {
+        "proc_format_result": 64
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 134
+      }
+    },
+    {
+      "label": "drop_without_retry",
+      "inputs": {
+        "write_result": -1
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 1 7 6 411 412 413 0 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "drop_without_retry",
+      "inputs": {
+        "write_result": 0
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 1 7 6 411 412 413 0 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "drop_without_retry",
+      "inputs": {
+        "write_result": 2
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 1 7 6 411 412 413 0 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "HD_fd0",
+      "inputs": {
+        "codec": 2,
+        "fd": 0
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 1 2 6 411 412 413 0 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "wrong_path_type",
+      "inputs": {
+        "path_mode": 33152
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 89
+      }
+    },
+    {
+      "label": "wrong_file_type",
+      "inputs": {
+        "file_mode": 33152
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 149
+      }
+    },
+    {
+      "label": "wrong_path_type",
+      "inputs": {
+        "path_mode": 41471
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 89
+      }
+    },
+    {
+      "label": "wrong_file_type",
+      "inputs": {
+        "file_mode": 41471
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 149
+      }
+    },
+    {
+      "label": "wrong_path_type",
+      "inputs": {
+        "path_mode": 8576
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 89
+      }
+    },
+    {
+      "label": "wrong_file_type",
+      "inputs": {
+        "file_mode": 8576
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 149
+      }
+    },
+    {
+      "label": "wrong_path_type",
+      "inputs": {
+        "path_mode": 49536
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 89
+      }
+    },
+    {
+      "label": "wrong_file_type",
+      "inputs": {
+        "file_mode": 49536
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 149
+      }
+    },
+    {
+      "label": "wrong_path_type",
+      "inputs": {
+        "path_mode": 0
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 89
+      }
+    },
+    {
+      "label": "wrong_file_type",
+      "inputs": {
+        "file_mode": 0
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 149
+      }
+    },
+    {
+      "label": "proc_or_stat_unavailable",
+      "inputs": {
+        "stat_result": -1
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 144
+      }
+    },
+    {
+      "label": "missing_or_denied_path",
+      "inputs": {
+        "path_stat_result": -1
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 84
+      }
+    },
+    {
+      "label": "return_bias_mode",
+      "inputs": {
+        "bias": 0,
+        "rc": 0,
+        "mode": 0
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 0 7 6 411 412 413 0 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 0,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "return_bias_mode",
+      "inputs": {
+        "bias": 0,
+        "rc": 0,
+        "mode": 1
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 0 7 6 411 412 413 1 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 0,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "return_bias_mode",
+      "inputs": {
+        "bias": 0,
+        "rc": 1,
+        "mode": 0
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 1 7 6 411 412 413 0 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "return_bias_mode",
+      "inputs": {
+        "bias": 0,
+        "rc": 1,
+        "mode": 1
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 1 7 6 411 412 413 1 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "return_bias_mode",
+      "inputs": {
+        "bias": 0,
+        "rc": 4294967295,
+        "mode": 0
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 4294967295 7 6 411 412 413 0 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 4294967295,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "return_bias_mode",
+      "inputs": {
+        "bias": 0,
+        "rc": 4294967295,
+        "mode": 1
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 4294967295 7 6 411 412 413 1 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 4294967295,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "return_bias_mode",
+      "inputs": {
+        "bias": 16777216,
+        "rc": 0,
+        "mode": 0
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 0 7 6 411 412 413 0 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 0,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "return_bias_mode",
+      "inputs": {
+        "bias": 16777216,
+        "rc": 0,
+        "mode": 1
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 0 7 6 411 412 413 1 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 0,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "return_bias_mode",
+      "inputs": {
+        "bias": 16777216,
+        "rc": 1,
+        "mode": 0
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 1 7 6 411 412 413 0 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "return_bias_mode",
+      "inputs": {
+        "bias": 16777216,
+        "rc": 1,
+        "mode": 1
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 1 7 6 411 412 413 1 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "return_bias_mode",
+      "inputs": {
+        "bias": 16777216,
+        "rc": 4294967295,
+        "mode": 0
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 4294967295 7 6 411 412 413 0 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 4294967295,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "return_bias_mode",
+      "inputs": {
+        "bias": 16777216,
+        "rc": 4294967295,
+        "mode": 1
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "snprintf",
+          "write",
+          "close"
+        ],
+        "lines": [
+          "MGDIAG 1 4294967295 7 6 411 412 413 1 35\n"
+        ],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 4294967295,
+        "executed_instruction_count": 196
+      }
+    },
+    {
+      "label": "unsafe_path_owner",
+      "inputs": {
+        "path_uid": 1
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 97
+      }
+    },
+    {
+      "label": "unsafe_descriptor_owner",
+      "inputs": {
+        "fd_uid": 1
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 157
+      }
+    },
+    {
+      "label": "unsafe_path_owner",
+      "inputs": {
+        "path_uid": 1000
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 97
+      }
+    },
+    {
+      "label": "unsafe_descriptor_owner",
+      "inputs": {
+        "fd_uid": 1000
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 157
+      }
+    },
+    {
+      "label": "unsafe_path_permissions",
+      "inputs": {
+        "path_mode": 4516
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 94
+      }
+    },
+    {
+      "label": "unsafe_descriptor_permissions",
+      "inputs": {
+        "file_mode": 4516
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 154
+      }
+    },
+    {
+      "label": "unsafe_path_permissions",
+      "inputs": {
+        "path_mode": 4607
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 94
+      }
+    },
+    {
+      "label": "unsafe_descriptor_permissions",
+      "inputs": {
+        "file_mode": 4607
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 154
+      }
+    },
+    {
+      "label": "unsafe_path_permissions",
+      "inputs": {
+        "path_mode": 6528
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 94
+      }
+    },
+    {
+      "label": "unsafe_descriptor_permissions",
+      "inputs": {
+        "file_mode": 6528
+      },
+      "result": {
+        "calls": [
+          "set_type",
+          "errno",
+          "lxstat64",
+          "open",
+          "snprintf",
+          "xstat",
+          "close"
+        ],
+        "lines": [],
+        "preserved_ABI": true,
+        "preserved_monitor_and_info": true,
+        "source_return": 1,
+        "executed_instruction_count": 154
+      }
+    }
+  ],
+  "physical_TV_executed": false,
+  "hardware_executed": false
+}

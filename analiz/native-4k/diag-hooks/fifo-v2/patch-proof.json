@@ -1,0 +1,87 @@
+{
+  "kind": "V7.9 numeric native video-init telemetry only",
+  "source_sha256": "06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21",
+  "candidate_sha256": "7a4b01a006ee5ba3be9fbac1911fe245e20ba1f36b20c27d0c992083105f0e58",
+  "base_APP_ELF_sha256": "861d97c013c4d56e093a69cf779abfa6ea78e6c17233af5d6b2b3ba075b0b4ea",
+  "helper_va": "0x2d957000",
+  "helper_bytes": 664,
+  "allowlist": [
+    {
+      "va": "0x2d9d92fc",
+      "offset": 824060,
+      "bytes": 20
+    },
+    {
+      "va": "0x2d957000",
+      "offset": 290816,
+      "bytes": 664
+    },
+    {
+      "va": "0x2d957600",
+      "offset": 292352,
+      "bytes": 34
+    },
+    {
+      "va": "0x2d957680",
+      "offset": 292480,
+      "bytes": 26
+    },
+    {
+      "va": "0x2d9576c0",
+      "offset": 292544,
+      "bytes": 17
+    }
+  ],
+  "schema": "MGDIAG 1 rc video_codec audio_codec video_pid audio_pid pcr_pid mode mute_mask",
+  "transport": {
+    "path": "/tmp/modgrundig-diag.fifo",
+    "open_flags": "0x20082",
+    "path_test": "__lxstat64(3,path,buffer); st_mode+0x18 & 0xf000 == 0x1000 before open",
+    "descriptor_test": "__xstat(3,/proc/self/fd/N,buffer); st_mode+0x14 & 0xf000 == 0x1000",
+    "syscall_flags_sources": [
+      "https://raw.githubusercontent.com/torvalds/linux/v3.1/arch/mips/include/asm/fcntl.h",
+      "https://raw.githubusercontent.com/torvalds/linux/v3.1/include/asm-generic/fcntl.h"
+    ],
+    "max_bytes": 191,
+    "write_attempts": 1,
+    "nonblocking": true,
+    "missing_fifo": "drop",
+    "fifo_full": "drop",
+    "regular_file": "reject before write",
+    "symlink": "O_NOFOLLOW rejects final component",
+    "proc_unavailable": "drop and close"
+  },
+  "native_ABI_evidence": {
+    "0x2da1cb34": "0x24040003",
+    "0x2da1cb38": "0x8f9993b0",
+    "0x2da1cb40": "0x27a60024",
+    "0x2da1cb68": "0x8fa20038",
+    "0x2da1cb70": "0x3042f000",
+    "0x2da0ac10": "0x27a20050",
+    "0x2da0ac18": "0xafa200f8",
+    "0x2da0acf0": "0x8f998144",
+    "0x2da0acf8": "0x8fa600f8",
+    "0x2da0acfc": "0x24040003",
+    "0x2da0ad38": "0x8fa20068",
+    "0x2da0ad40": "0x3042f000"
+  },
+  "preserved": [
+    "original SetVdecType args/return",
+    "post-call volatile registers",
+    "HI/LO",
+    "callee-saved registers except original s7=0",
+    "stack",
+    "errno",
+    "native video/audio/mute policy"
+  ],
+  "limits": [
+    "No physical TV execution",
+    "Native logging calls mocked in isolated tests",
+    "No new FDE/unwind information; exceptional/asynchronous unwind unsupported in helper",
+    "Records SDK init result only, not decoded frame or actual lower-level hardware success",
+    "FIFO/proc filesystem runtime integration still needs device verification"
+  ],
+  "firmware_container_modified": false,
+  "original_modified": false,
+  "load_bias_independent": true
+}

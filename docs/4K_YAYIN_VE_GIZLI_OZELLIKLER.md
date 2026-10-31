@@ -1,5 +1,16 @@
 # 4K yayın →1080p ve kayıp kanal araştırması
 
+## 31 Ekim: gerçek cihaz ölçümü için ayrı V7.9 tanı paketi
+
+[Yeni tanı RAR'ı ve kısa cihaz denemesi](V79_HEVC_CANLI_TANI.md) hazırlanıp
+çevrimdışı doğrulandı. Mevcut SDK çağrısının dönüşü ve AVInfo sayıları, USB'deki
+opt-in marker varsa RAM FIFO üzerinden sınırlı snapshot'a aktarılır.47 native
+mock vaka,13 host taşıma testi, kendi MIPS toplayıcımız için gerçek eski
+glibc2.8 ile10 QEMU testi ve6 paket testi geçti. TV uygulaması/güncelleyici
+çalıştırılmadı; orijinaller korundu. **Bu,4K düzeltmesi değildir; gerçek
+başlangıç sonucunu kullanıcıdan alabilmek için somut test adayıdır.**
+V7.9 APP byte byte aynı; yalnız MSLIB ve customer_update payload'ları değişir.
+
 ## 31 Ekim: görüntü odaklı aşama6
 
 [HEVC görüntü raporu](4K_VIDEO_ASAMA6.md),13 seçilmiş assembly gövdesini,

@@ -17,6 +17,7 @@ OUT = ROOT / 'analiz/native-ui-candidate/v7.9-audio-test'
 from inspect_vendor_rar import EXPECTED_SHA, RAR, wsl_path
 
 IMAGE_SHA = '47030a667035484512036be7f19437d37de18c6451ac33210332477607993bb4'
+IMAGE_NAME = 'GM_SWImage_UI_v7.9-audio-test_OFFLINE_UNVERIFIED.bin'
 MEMBER = 'Target_GM/image/GM_SWImage.bin'
 DEST = OUT / 'package/GMGRMR.-.-.-.-.V03.017.04_V7.9_HEVC_AUDIO_TEST.rar'
 EXTRACTED = OUT / 'vendor-rar-readback'
@@ -88,7 +89,7 @@ def prepare():
         source_description = 'Grundig_Tum_Proje_Devir_Paketi.zip!Kaynaklar/GMGRMR.-.-.-.-.V03.017.04.rar'
     if sha(original) != EXPECTED_SHA:
         raise ValueError('Original RAR identity check failed')
-    image = (OUT / 'package/GM_SWImage_UI_v7.9-audio-test_OFFLINE_UNVERIFIED.bin').read_bytes()
+    image = (OUT / 'package' / IMAGE_NAME).read_bytes()
     if sha(image) != IMAGE_SHA or len(image) != 42483736:
         raise ValueError('V7.9 image differs')
     readback = json.loads((OUT / 'package/independent-readback.json').read_text())

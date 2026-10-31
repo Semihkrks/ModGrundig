@@ -1,5 +1,11 @@
 # Grundig GMGRMR V03.017.04 — tersine mühendislik
 
+31 Ekim devamı: [V7.9 canlı HEVC tanı adayı](V79_HEVC_CANLI_TANI.md) ayrı RAR'da
+hazır. SDK init dönüşü/AVInfo sayıları, opt-in USB marker ile bounded RAM FIFO
+ve ayrı USB worker üzerinden toplanır.47 bounded native,13 host,10 kendi MIPS
+toplayıcı QEMU/glibc2.8 ve6 paket testi geçti. V7.9 APP aynı; cihaz kaydı ve4K
+başarısı henüz yok. Gömülü TV/güncelleme programı çalıştırılmadı.
+
 31 Ekim: [HEVC görüntü aşama6](4K_VIDEO_ASAMA6.md),13 seçili assembly gövdesi,
 4 C çıktısı,167 ELF import taraması ve25 sınırlı native vakayı kaydeder. Auth,
 medya hata yolu ve dynamic scaling ayrıldı; paket framebuffer alanını aynı

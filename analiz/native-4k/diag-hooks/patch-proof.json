@@ -1,0 +1,79 @@
+{
+  "kind": "V7.9 numeric native video-init telemetry only",
+  "source_sha256": "06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21",
+  "candidate_sha256": "9e80e68d5f535a12c6501380270777a4eb9d4bf07e49bd6b95b1f8706a493fdf",
+  "base_APP_ELF_sha256": "861d97c013c4d56e093a69cf779abfa6ea78e6c17233af5d6b2b3ba075b0b4ea",
+  "helper_va": "0x2d957000",
+  "helper_bytes": 600,
+  "allowlist": [
+    {
+      "va": "0x2d9d92fc",
+      "offset": 824060,
+      "bytes": 20
+    },
+    {
+      "va": "0x2d957000",
+      "offset": 290816,
+      "bytes": 600
+    },
+    {
+      "va": "0x2d957600",
+      "offset": 292352,
+      "bytes": 34
+    },
+    {
+      "va": "0x2d957680",
+      "offset": 292480,
+      "bytes": 26
+    },
+    {
+      "va": "0x2d9576c0",
+      "offset": 292544,
+      "bytes": 17
+    }
+  ],
+  "schema": "MGDIAG 1 rc video_codec audio_codec video_pid audio_pid pcr_pid mode mute_mask",
+  "transport": {
+    "path": "/tmp/modgrundig-diag.fifo",
+    "open_flags": "0x20082",
+    "descriptor_test": "__xstat(3,/proc/self/fd/N,buffer); st_mode+0x14 & 0xf000 == 0x1000",
+    "syscall_flags_sources": [
+      "https://raw.githubusercontent.com/torvalds/linux/v3.1/arch/mips/include/asm/fcntl.h",
+      "https://raw.githubusercontent.com/torvalds/linux/v3.1/include/asm-generic/fcntl.h"
+    ],
+    "max_bytes": 191,
+    "write_attempts": 1,
+    "nonblocking": true,
+    "missing_fifo": "drop",
+    "fifo_full": "drop",
+    "regular_file": "reject before write",
+    "symlink": "O_NOFOLLOW rejects final component",
+    "proc_unavailable": "drop and close"
+  },
+  "native_ABI_evidence": {
+    "0x2da1cb34": "0x24040003",
+    "0x2da1cb38": "0x8f9993b0",
+    "0x2da1cb40": "0x27a60024",
+    "0x2da1cb68": "0x8fa20038",
+    "0x2da1cb70": "0x3042f000"
+  },
+  "preserved": [
+    "original SetVdecType args/return",
+    "post-call volatile registers",
+    "HI/LO",
+    "callee-saved registers except original s7=0",
+    "stack",
+    "errno",
+    "native video/audio/mute policy"
+  ],
+  "limits": [
+    "No physical TV execution",
+    "Native logging calls mocked in isolated tests",
+    "No new FDE/unwind information; exceptional/asynchronous unwind unsupported in helper",
+    "Records SDK init result only, not decoded frame or actual lower-level hardware success",
+    "FIFO/proc filesystem runtime integration still needs device verification"
+  ],
+  "firmware_container_modified": false,
+  "original_modified": false,
+  "load_bias_independent": true
+}
