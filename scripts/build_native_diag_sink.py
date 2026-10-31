@@ -3,6 +3,7 @@
 Linux host compilers only. The optional QEMU test runs our new collector in a
 synthetic empty-mount fixture, with an isolated copy of the stock loader/libc.
 """
+import argparse
 import hashlib
 import json
 import os
@@ -102,4 +103,8 @@ def main():
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--revision', choices=['build-v2', 'build-v3'], default='build-v2')
+    args = parser.parse_args()
+    OUT = ROOT/'analiz/native-4k/diag-sink'/args.revision
     main()

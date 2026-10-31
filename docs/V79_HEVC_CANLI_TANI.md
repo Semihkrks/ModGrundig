@@ -1,5 +1,9 @@
 # V7.9 HEVC canlı tanı paketi
 
+**1 Kasım güncel devamı:** [FAT32 zincirinden kurtarılan gerçek SDK kayıtları,
+USB onarımı ve ayrı tanı2 paketi](V79_HEVC_CANLI_TANI_2.md). Aşağıdaki ilk
+paketin metni tarihsel kapsamıyla korunur; yeni paketle karıştırılmamalıdır.
+
 1 Kasım USB hazırlığı: kullanıcı dosya oluşmadığını ve yalnız firmware'i
 yüklediğini bildirdi. D: FAT32 çıkarılabilir sürücüde17 paket dosyasının tamamı
 son adayla hash olarak eşleşti; etkinleştirme dosyası yoktu. USB köküne tam8

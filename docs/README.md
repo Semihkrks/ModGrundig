@@ -6,6 +6,7 @@ ModGrundig araştırma raporları, uygulama kayıtları ve tarihsel deneyler.
 
 ## Güncel çalışma
 
+- [HEVC tanı2 — kurtarılan gerçek cihaz verisi, USB onarımı ve kare/MAD/sync ölçümü](V79_HEVC_CANLI_TANI_2.md)
 - [V7.9 HEVC — TV'den sayısal USB tanı kaydı alan ayrı test paketi](V79_HEVC_CANLI_TANI.md)
 - [HEVC görüntü — init, hata tüketicileri, dynamic scaling ve bellek sınırı](4K_VIDEO_ASAMA6.md)
 - [Ses HAL — eski/yeni kilit API'si ve native testler](4K_SES_HAL_ASAMA5.md)

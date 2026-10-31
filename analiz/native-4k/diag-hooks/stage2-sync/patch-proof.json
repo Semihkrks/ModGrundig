@@ -1,0 +1,103 @@
+{
+  "kind": "Post-native-DoVideoSync main live diagnostic snapshots; no decode policy change",
+  "input_sha256": "6967d9da7c95b79664924aa8c308380e6d985d57c814aa5ff5dd37670f864f7a",
+  "candidate_sha256": "5bea147b0052a031498571e7449228d1ae36307313dfadf292a7f065205a5811",
+  "helper_bytes": 1184,
+  "helper_va": "0x2d957800",
+  "allowlist": [
+    {
+      "va": "0x2d9d6cec",
+      "offset": 814316,
+      "bytes": 20
+    },
+    {
+      "va": "0x2d957800",
+      "offset": 292864,
+      "bytes": 1184
+    },
+    {
+      "va": "0x2d958400",
+      "offset": 295936,
+      "bytes": 43
+    }
+  ],
+  "writable_gap_and_RELRO_evidence": {
+    "regions": [
+      {
+        "start": "0x2d957800",
+        "end_exclusive": "0x2d958500",
+        "load_flags": 5,
+        "initialized": "file-backed zero",
+        "allocated_section_overlap": false,
+        "GNU_RELRO_overlap": false
+      },
+      {
+        "start": "0x2da89f94",
+        "end_exclusive": "0x2da89fa0",
+        "load_flags": 6,
+        "initialized": "file-backed zero",
+        "allocated_section_overlap": false,
+        "GNU_RELRO_overlap": false
+      },
+      {
+        "start": "0x2da8d0b4",
+        "end_exclusive": "0x2da8d0c0",
+        "load_flags": 6,
+        "initialized": "PT_LOAD implicit zero tail",
+        "allocated_section_overlap": false,
+        "GNU_RELRO_overlap": false
+      }
+    ],
+    "GNU_RELRO_program_header_count": 0
+  },
+  "schema": "MGDIAG 4 elapsed_ms video_codec video_pid audio_pid frames mad_lock ready92 sync_pending mute_mask video_started audio_started",
+  "state": {
+    "key_va": "0x2da89f94",
+    "key_bytes": 12,
+    "timer_va": "0x2da8d0b4",
+    "timer_bytes_used": 8,
+    "file_backed_key_zero": true,
+    "timer_LOAD_tail_implicit_zero": true,
+    "key": "monitor pointer, codec, packed video/audio PID",
+    "reset": "first matching monitor or any key change",
+    "thresholds_ms": [
+      2000,
+      4000,
+      6000
+    ],
+    "counter": "attempts advance before getters/I/O; no retries after drop"
+  },
+  "sentinels": {
+    "frames_no_decoder": 4294967295,
+    "mad_query_not_issued": 255
+  },
+  "original_branch": {
+    "call": "DoVideoSync",
+    "stored_ready92": "captured immediately after native call",
+    "zero": "0x2d9d6d00",
+    "nonzero": "0x2d9d6d44",
+    "original_call_ra": "0x2d9d6cf8"
+  },
+  "preserved": [
+    "old fifo-v3 init hook and helper bytes",
+    "native DoVideoSync call",
+    "ready92 branch",
+    "monitor AVInfo/flags",
+    "caller volatile values except AT scratch",
+    "callee-saved registers",
+    "errno",
+    "SP/GP/HI/LO"
+  ],
+  "limits": [
+    "Physical TV execution not performed",
+    "All native external services mocked in tests",
+    "GetTime0 delta starts at first DoMonitor seeing this key, not exact zap/SDK init timestamp",
+    "Late DoMonitor scheduling may deliver thresholds late; actual elapsed is recorded",
+    "Only source1c,window0,non-PVR monitors sampled",
+    "Native GetAVInfo failure before DoVideoSync still skips this checkpoint",
+    "Repeated init of identical monitor/codec/PIDs without a key change does not reset",
+    "Main monitor serialization assumed; no new mutex or atomic synchronization added",
+    "New helper lacks FDE; exceptional/asynchronous unwind not supported",
+    "Getter values are observations; no decoder success or mute state is forced"
+  ]
+}

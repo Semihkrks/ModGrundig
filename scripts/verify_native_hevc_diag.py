@@ -1,4 +1,5 @@
 """Independent stdlib envelope verifier for the V7.9 numeric diagnostic build."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -117,8 +118,11 @@ def verify(base, candidate, images):
 
 
 if __name__ == '__main__':
-    out = ROOT/'analiz/native-ui-candidate/v7.9-hevc-diag/package'
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--revision', choices=['v7.9-hevc-diag', 'v7.9-hevc-diag2'], default='v7.9-hevc-diag')
+    args = parser.parse_args()
+    out = ROOT/f'analiz/native-ui-candidate/{args.revision}/package'
     base = ROOT/'analiz/native-ui-candidate/v7.9-tv/package/GM_SWImage_UI_v7.9-tv_OFFLINE_UNVERIFIED.bin'
-    image = out/'GM_SWImage_UI_v7.9-hevc-diag_OFFLINE_UNVERIFIED.bin'
+    image = out/f'GM_SWImage_UI_{args.revision}_OFFLINE_UNVERIFIED.bin'
     proof = verify(base.read_bytes(), image.read_bytes(), {7: (out/'07_MSLIB.ubifs').read_bytes(), 11: (out/'11_customer_update.ubifs').read_bytes()})
     print(json.dumps({k: proof[k] for k in ['status', 'container_sha256', 'payloads_checked', 'changed_payloads']}))

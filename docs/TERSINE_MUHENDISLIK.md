@@ -1,5 +1,11 @@
 # Grundig GMGRMR V03.017.04 — tersine mühendislik
 
+1 Kasım: [gerçek HEVC SDK init kaydı ve tanı2](V79_HEVC_CANLI_TANI_2.md).
+FAT32 kayıp zincirinden HD/HEVC/HD üç olay kurtarıldı; HEVC init dönüşü1,
+PID4855/4955/4855. Mute3 HD'de de başlangıç anında vardır; kalıcı hata kanıtı
+değildir. Onaylı USB onarımı yapıldı. Ayrı yeni sampler2/4/6 saniyede
+frame/MAD/sync durumunu ölçer; yeni fiziksel kare veya4K başarı kaydı henüz yok.
+
 31 Ekim devamı: [V7.9 canlı HEVC tanı adayı](V79_HEVC_CANLI_TANI.md) ayrı RAR'da
 hazır. SDK init dönüşü/AVInfo sayıları, opt-in USB marker ile bounded RAM FIFO
 ve ayrı USB worker üzerinden toplanır.47 bounded native,13 host,10 kendi MIPS

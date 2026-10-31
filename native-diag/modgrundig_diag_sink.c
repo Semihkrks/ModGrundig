@@ -33,6 +33,14 @@ struct state {
     unsigned pos, count;
     uint32_t accepted, rejected, overlong;
 };
+struct snapshot_success {
+    uint32_t valid, accepted, rejected, overlong;
+    uint64_t device, directory_inode, marker_inode;
+};
+struct worker_report {
+    uint32_t enabled, exported;
+    struct snapshot_success success;
+};
 static volatile sig_atomic_t stopping;
 static void stop_handler(int sig) { (void)sig; stopping = 1; }
 static uint64_t now_ms(void) {
@@ -43,13 +51,13 @@ static uint64_t now_ms(void) {
 
 /* Canonical numeric schema only; arbitrary log messages/IDs never persist. */
 static int valid_record(const char *s, size_t len) {
-    uint32_t fields[10];
+    uint32_t fields[12];
     size_t at=7, n=0;
     if (len < 11 || len >= LINE_BYTES || memcmp(s,"MGDIAG ",7)) return 0;
     while (at < len) {
         uint32_t v=0;
         unsigned digits=0;
-        if (n == 10) return 0;
+        if (n == 12) return 0;
         while (at<len && s[at]>='0' && s[at]<='9') {
             unsigned d=(unsigned)(s[at++]-'0');
             if (++digits>10 || v>(UINT32_MAX-d)/10u) return 0;
@@ -65,6 +73,10 @@ static int valid_record(const char *s, size_t len) {
                fields[5]<=8191 && fields[6]<=8191 && fields[7]<=255;
     if (fields[0]==2 && n==3) return fields[1]<=255;
     if (fields[0]==3 && n==4) return fields[2]<=31;
+    if (fields[0]==4 && n==12)
+        return fields[2]<=255 && fields[3]<=8191 && fields[4]<=8191 &&
+               fields[6]<=255 && fields[7]<=255 && fields[8]<=255 &&
+               fields[10]<=255 && fields[11]<=255;
     return 0;
 }
 static void accept_line(struct state *s, const char *line, size_t len) {
@@ -85,6 +97,43 @@ static int write_all(int fd, const void *data, size_t len) {
         p+=n; len-=(size_t)n;
     }
     return 1;
+}
+static int valid_header(const char *buf, size_t len, const struct state *s) {
+    const uint32_t expected[4]={s->accepted,s->rejected,s->overlong,s->count};
+    size_t at=14;
+    unsigned field;
+    if (len<22 || memcmp(buf,"MGDIAG_META 1 ",14) || buf[len-1]!='\n') return 0;
+    for (field=0;field<4;field++) {
+        uint32_t value=0;
+        unsigned digits=0;
+        while (at<len && buf[at]>='0' && buf[at]<='9') {
+            unsigned d=(unsigned)(buf[at++]-'0');
+            if (++digits>10 || value>(UINT32_MAX-d)/10u) return 0;
+            value=value*10u+d;
+        }
+        if (!digits || value!=expected[field] || at>=len) return 0;
+        if (buf[at++]!=(field==3?'\n':' ')) return 0;
+    }
+    return at==len;
+}
+static int readback_equal(int fd, const char *expected, size_t length) {
+    char data[256];
+    size_t done=0;
+    if (lseek(fd,0,SEEK_SET)!=0) return 0;
+    while (done<length) {
+        size_t want=length-done;
+        ssize_t n;
+        if (want>sizeof(data)) want=sizeof(data);
+        n=read(fd,data,want);
+        if (n<0 && errno==EINTR) continue;
+        if (n<=0 || (size_t)n>want || memcmp(data,expected+done,(size_t)n)) return 0;
+        done+=(size_t)n;
+    }
+    for (;;) {
+        ssize_t n=read(fd,data,1);
+        if (n<0 && errno==EINTR) continue;
+        return n==0;
+    }
 }
 static int usb_device(const char *s) {
     size_t i=7;
@@ -128,7 +177,7 @@ static int mount_fields(const char *line, char *dev, char *point, char *fs, char
     }
     return 1;
 }
-static int marker_present(int dirfd) {
+static int marker_info(int dirfd, struct stat *info) {
     char text[10];
     struct stat st;
     int fd=openat(dirfd,MARKER,O_RDONLY|O_NONBLOCK|O_NOFOLLOW|O_CLOEXEC);
@@ -136,17 +185,19 @@ static int marker_present(int dirfd) {
     if (fd<0) return 0;
     if (fstat(fd,&st) || !S_ISREG(st.st_mode) || st.st_size!=8) { close(fd); return 0; }
     n=read(fd,text,sizeof(text)); close(fd);
-    return n==8 && !memcmp(text,"MGDIAG1\n",8);
+    if (n!=8 || memcmp(text,"MGDIAG1\n",8)) return 0;
+    if (info) *info=st;
+    return 1;
 }
 static int export_snapshot(int dirfd, const struct state *s) {
     char buf[SNAPSHOT_LIMIT];
-    struct stat st;
+    struct stat st, opened, final;
     size_t length;
     unsigned i;
     int fd, ok;
     int n=snprintf(buf,sizeof(buf),"MGDIAG_META 1 %u %u %u %u\n",
                    s->accepted,s->rejected,s->overlong,s->count);
-    if (n<0 || (size_t)n>=sizeof(buf)) return 0;
+    if (n<=0 || (size_t)n>=sizeof(buf) || !valid_header(buf,(size_t)n,s)) return 0;
     length=(size_t)n;
     for (i=0;i<s->count;i++) {
         const struct record *r=&s->ring[(s->pos+RING_COUNT-s->count+i)%RING_COUNT];
@@ -161,12 +212,21 @@ static int export_snapshot(int dirfd, const struct state *s) {
         if (!S_ISREG(st.st_mode) || st.st_uid!=geteuid() || st.st_nlink!=1 ||
             st.st_size>SNAPSHOT_LIMIT || unlinkat(dirfd,TEMP,0)) return 0;
     } else if (errno!=ENOENT) return 0;
-    fd=openat(dirfd,TEMP,O_WRONLY|O_CREAT|O_EXCL|O_NOFOLLOW|O_CLOEXEC,0600);
+    fd=openat(dirfd,TEMP,O_RDWR|O_CREAT|O_EXCL|O_NOFOLLOW|O_CLOEXEC,0600);
     if (fd<0) return 0;
-    ok=write_all(fd,buf,length);
+    ok=!fstat(fd,&opened) && S_ISREG(opened.st_mode) && opened.st_nlink==1;
+    if (ok) ok=write_all(fd,buf,length);
     if (ok && fsync(fd)) ok=0;
+    if (ok && (fstat(fd,&final) || !S_ISREG(final.st_mode) || final.st_nlink!=1 ||
+               final.st_dev!=opened.st_dev || final.st_ino!=opened.st_ino ||
+               final.st_size<0 || (uint64_t)final.st_size!=(uint64_t)length)) ok=0;
+    if (ok && !readback_equal(fd,buf,length)) ok=0;
     if (close(fd)) ok=0;
-    if (ok && !marker_present(dirfd)) ok=0;
+    if (ok && !marker_info(dirfd,0)) ok=0;
+    if (ok && (fstatat(dirfd,TEMP,&final,AT_SYMLINK_NOFOLLOW) ||
+               !S_ISREG(final.st_mode) || final.st_dev!=opened.st_dev ||
+               final.st_ino!=opened.st_ino || final.st_size<0 ||
+               (uint64_t)final.st_size!=(uint64_t)length)) ok=0;
     if (ok && renameat(dirfd,TEMP,dirfd,OUTPUT)) ok=0;
     /* Some removable filesystems do not support directory fsync. An EINVAL
      * result means rename durability is not proven, not that the export failed.
@@ -178,11 +238,13 @@ static int export_snapshot(int dirfd, const struct state *s) {
 /* All potentially blocking removable-filesystem operations stay in this child.
  * A held directory FD ensures unmount cannot redirect writes onto internal flash.
  */
-static int worker_snapshot(const char *mounts, const struct state *s) {
+static struct worker_report worker_snapshot(const char *mounts, const struct state *s,
+                                            const struct snapshot_success *previous) {
     FILE *f=fopen(mounts,"r");
     char line[4096],dev[256],mountpoint[2048],fs[64],opts[512];
-    int enabled=0;
-    if (!f) return 0;
+    struct worker_report report;
+    memset(&report,0,sizeof(report));
+    if (!f) return report;
     while (fgets(line,sizeof(line),f)) {
         int fd;
         if (!strchr(line,'\n')) continue;
@@ -193,16 +255,31 @@ static int worker_snapshot(const char *mounts, const struct state *s) {
         if (strncmp(opts,"rw,",3) && strcmp(opts,"rw")) continue;
         fd=open(mountpoint,O_RDONLY|O_DIRECTORY|O_NOFOLLOW|O_CLOEXEC);
         if (fd<0) continue;
-        if (marker_present(fd)) {
-            enabled=1;
-            (void)export_snapshot(fd,s);
+        {
+            struct stat directory, marker;
+            if (fstat(fd,&directory) || !S_ISDIR(directory.st_mode) || !marker_info(fd,&marker)) {
+                close(fd); continue;
+            }
+            report.enabled=1;
+            report.success.valid=1;
+            report.success.accepted=s->accepted;
+            report.success.rejected=s->rejected;
+            report.success.overlong=s->overlong;
+            report.success.device=(uint64_t)directory.st_dev;
+            report.success.directory_inode=(uint64_t)directory.st_ino;
+            report.success.marker_inode=(uint64_t)marker.st_ino;
+            if (!previous->valid || previous->accepted!=s->accepted ||
+                previous->rejected!=s->rejected || previous->overlong!=s->overlong ||
+                previous->device!=report.success.device ||
+                previous->directory_inode!=report.success.directory_inode ||
+                previous->marker_inode!=report.success.marker_inode)
+                report.exported=(uint32_t)export_snapshot(fd,s);
             close(fd);
             break; /* At most one opted-in volume; bounded data per interval. */
         }
-        close(fd);
     }
     fclose(f);
-    return enabled;
+    return report;
 }
 static void remove_fifo(const char *path, const struct stat *owned);
 static int create_fifo(const char *path, struct stat *owned) {
@@ -244,11 +321,13 @@ int main(int argc, char **argv) {
     pid_t worker=-1;
     int fifo_fd=-1,status_fd=-1,enabled=0,worker_killed=0;
     struct state state;
+    struct snapshot_success last_success;
     struct stat owned;
     char partial[LINE_BYTES];
     size_t partial_len=0;
     int discard=0,i,exit_code=0;
     memset(&state,0,sizeof(state)); memset(&owned,0,sizeof(owned));
+    memset(&last_success,0,sizeof(last_success));
     umask(077);
     for (i=1;i<argc;i++) {
         if (!strcmp(argv[i],"--fifo") && i+1<argc) fifo=argv[++i];
@@ -271,12 +350,12 @@ int main(int argc, char **argv) {
                 (void)fcntl(p[0],F_SETFL,flags|O_NONBLOCK);
                 worker=fork();
                 if (worker==0) {
-                    char result;
+                    struct worker_report result;
                     signal(SIGTERM,SIG_DFL); signal(SIGINT,SIG_DFL);
                     close(p[0]);
                     if (fifo_fd>=0) close(fifo_fd);
-                    result=worker_snapshot(mounts,&state)?'1':'0';
-                    if (write(p[1],&result,1)!=1) _exit(1);
+                    result=worker_snapshot(mounts,&state,&last_success);
+                    if (!write_all(p[1],&result,sizeof(result))) _exit(1);
                     close(p[1]); _exit(0);
                 }
                 close(p[1]);
@@ -293,9 +372,10 @@ int main(int argc, char **argv) {
         pfds[1].fd=status_fd; pfds[1].events=POLLIN; pfds[1].revents=0;
         (void)poll(pfds,2,50);
         if (status_fd>=0 && (pfds[1].revents&POLLIN)) {
-            char result;
-            if (read(status_fd,&result,1)==1) {
-                int wanted=result=='1';
+            struct worker_report result;
+            if (read(status_fd,&result,sizeof(result))==(ssize_t)sizeof(result) &&
+                result.enabled<=1 && result.exported<=1) {
+                int wanted=result.enabled!=0;
                 if (wanted && !enabled) {
                     fifo_fd=create_fifo(fifo,&owned);
                     if (fifo_fd<0) { exit_code=78; stopping=1; continue; }
@@ -303,6 +383,8 @@ int main(int argc, char **argv) {
                     close(fifo_fd); fifo_fd=-1; remove_fifo(fifo,&owned);
                     memset(&state,0,sizeof(state)); partial_len=0; discard=0;
                 }
+                if (!wanted) memset(&last_success,0,sizeof(last_success));
+                else if (result.exported && result.success.valid==1) last_success=result.success;
                 enabled=wanted;
                 close(status_fd); status_fd=-1;
             }

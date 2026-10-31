@@ -1,5 +1,6 @@
 """Read-only positive and tamper checks on the diagnostic container in RAM."""
 import lzma
+import os
 from pathlib import Path
 import struct
 import unittest
@@ -11,9 +12,12 @@ from verify_native_hevc_diag import verify, ROOT
 class PackageTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        out = ROOT/'analiz/native-ui-candidate/v7.9-hevc-diag/package'
+        revision = os.environ.get('HEVC_DIAG_PACKAGE_REVISION', 'v7.9-hevc-diag')
+        if revision not in ['v7.9-hevc-diag', 'v7.9-hevc-diag2']:
+            raise ValueError('Unknown diagnostic revision')
+        out = ROOT/f'analiz/native-ui-candidate/{revision}/package'
         cls.base = (ROOT/'analiz/native-ui-candidate/v7.9-tv/package/GM_SWImage_UI_v7.9-tv_OFFLINE_UNVERIFIED.bin').read_bytes()
-        cls.candidate = (out/'GM_SWImage_UI_v7.9-hevc-diag_OFFLINE_UNVERIFIED.bin').read_bytes()
+        cls.candidate = (out/f'GM_SWImage_UI_{revision}_OFFLINE_UNVERIFIED.bin').read_bytes()
         cls.images = {7: (out/'07_MSLIB.ubifs').read_bytes(), 11: (out/'11_customer_update.ubifs').read_bytes()}
 
     def repaired_crc(self, raw):

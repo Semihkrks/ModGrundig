@@ -1,5 +1,16 @@
 # 4K yayın →1080p ve kayıp kanal araştırması
 
+## 1 Kasım: gerçek başlatma sonucu kurtarıldı; tanı2 hazırlandı
+
+USB FAT32 kayıp zincirinden3 init olayı kurtarıldı: codec2 HD → codec7 HEVC →
+codec2 HD; üçünün SDK sonucu1, mode0, başlangıç mute maskesi3. HEVC kaydında
+video/audio/PCR PID4855/4955/4855 ve audio codec6 bulunur. Bu, çözülen UHD
+kareleri/PCM kanıtı değildir; başlangıç maskesi3 çalışan HD'de de vardır.
+Kullanıcı onaylı CHKDSK onarımı sonrası disk kontrolü temiz,20 yedek dosya
+değişmemiştir. Yeni ayrı tanı2, DoVideoSync sonrasında2/4/6 saniyede gerçek
+frame/MAD/ready/pending/mute durumunu örnekler; decode policy zorlanmaz.
+[Cihaz kanıtları, paket ve test sınırları](V79_HEVC_CANLI_TANI_2.md).
+
 ## 31 Ekim: gerçek cihaz ölçümü için ayrı V7.9 tanı paketi
 
 [Yeni tanı RAR'ı ve kısa cihaz denemesi](V79_HEVC_CANLI_TANI.md) hazırlanıp

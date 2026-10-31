@@ -43,6 +43,7 @@ class Simulation:
         self.marker = self.usb / 'MODGRUNDIG_DIAG_ENABLE'
         self.command = list(binary) if isinstance(binary, (tuple, list)) else [str(binary)]
         self.process = None
+        self.env = None
         self.mount_text = '/dev/sda1 ' + str(self.usb).replace(' ', r'\040') + ' vfat rw,nosuid,nodev 0 0\n'
         self.mounts.write_text(self.mount_text)
 
@@ -50,7 +51,7 @@ class Simulation:
         self.process = subprocess.Popen(self.command + [
             '--fifo', str(self.fifo), '--mounts', str(self.mounts),
             '--interval-ms', '100', '--worker-timeout-ms', '150',
-        ], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
+        ], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, env=self.env)
 
     def enable(self):
         self.marker.write_bytes(b'MGDIAG1\n')
@@ -162,6 +163,78 @@ int __wrap_mkfifo(const char *path, mode_t mode) {
         cls.startup_race = Path(cls.build.name) / 'sink-host-startup-race'
         subprocess.run([compiler, '-std=c99', '-Wall', '-Wextra', '-Werror', '-O2',
                         str(SOURCE), str(startup), '-Wl,--wrap=mkfifo', '-o', str(cls.startup_race)], check=True)
+        invariant = Path(cls.build.name) / 'invariant-host-fault.c'
+        invariant.write_text('''
+#define _GNU_SOURCE
+#include <sys/stat.h>
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdio.h>
+#include <string.h>
+#include <errno.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
+#if defined(FORMAT_ZERO) || defined(FORMAT_BAD) || defined(FORMAT_BAD_NUMBER)
+int __wrap_snprintf(char *buf,size_t size,const char *format,...) {
+    (void)format;
+    if (size<23) return -1;
+#if defined(FORMAT_ZERO)
+    buf[0]=0; return 0;
+#elif defined(FORMAT_BAD)
+    memset(buf,'X',22);buf[21]='\\n';buf[22]=0;return 22;
+#else
+    memcpy(buf,"MGDIAG_META 1 X 0 0 0\\n",23);return 22;
+#endif
+}
+#endif
+#ifdef WRITE_LIES
+ssize_t __real_write(int,const void *,size_t);
+ssize_t __wrap_write(int fd,const void *buf,size_t n) {
+    struct stat st;
+    if (!fstat(fd,&st) && S_ISREG(st.st_mode)) return (ssize_t)n;
+    return __real_write(fd,buf,n);
+}
+#endif
+#ifdef READ_CORRUPT
+ssize_t __real_read(int,void *,size_t);
+ssize_t __wrap_read(int fd,void *buf,size_t n) {
+    struct stat st;
+    ssize_t rc=__real_read(fd,buf,n);
+    if (rc>0 && !fstat(fd,&st) && S_ISREG(st.st_mode) && st.st_size>8) ((char *)buf)[0]^=1;
+    return rc;
+}
+#endif
+#ifdef COUNT_RENAME
+int __real_renameat(int,const char *,int,const char *);
+int __wrap_renameat(int a,const char *b,int c,const char *d) {
+    int rc=__real_renameat(a,b,c,d);
+    const char *path=getenv("MGDIAG_TEST_RENAME_COUNT");
+    if (!rc && path) {
+        int fd=open(path,O_WRONLY|O_CREAT|O_APPEND,0600);
+        if (fd>=0) { ssize_t n=write(fd,"1",1); (void)n; close(fd); }
+    }
+    return rc;
+}
+int __real_fsync(int);
+int __wrap_fsync(int fd) {
+    struct stat st;
+    const char *path=getenv("MGDIAG_TEST_FAIL_SYNC_WHILE_EXISTS");
+    if (path && !access(path,F_OK) && !fstat(fd,&st) && S_ISREG(st.st_mode)) {errno=EIO;return -1;}
+    return __real_fsync(fd);
+}
+#endif
+''')
+        cls.invariant_binaries = {}
+        for macro, wrappers in [('FORMAT_ZERO', ['snprintf']), ('FORMAT_BAD', ['snprintf']),
+                                ('FORMAT_BAD_NUMBER', ['snprintf']), ('WRITE_LIES', ['write']),
+                                ('READ_CORRUPT', ['read']), ('COUNT_RENAME', ['renameat', 'fsync'])]:
+            output = Path(cls.build.name) / ('sink-host-'+macro.lower())
+            subprocess.run([compiler, '-std=c99', '-Wall', '-Wextra', '-Werror', '-O2', '-D'+macro,
+                            '-fno-builtin-snprintf', '-U_FORTIFY_SOURCE',
+                            str(SOURCE), str(invariant), *['-Wl,--wrap='+w for w in wrappers],
+                            '-o', str(output)], check=True)
+            cls.invariant_binaries[macro] = output
 
     @classmethod
     def tearDownClass(cls):
@@ -343,6 +416,99 @@ int __wrap_mkfifo(const char *path, mode_t mode) {
             # No delay/FD hold workaround: write+close immediately at publication.
             s.send(GOOD)
             wait_for(lambda: GOOD.decode() in s.text())
+
+    def test_zero_and_malformed_headers_do_not_replace_previous_snapshot(self):
+        if self.external_command is not None:
+            self.skipTest('host-only formatter fault shim; not a target test')
+        for macro in ['FORMAT_ZERO', 'FORMAT_BAD', 'FORMAT_BAD_NUMBER']:
+            with self.subTest(fault=macro), Simulation(self.invariant_binaries[macro]) as s:
+                s.output.write_text('previous snapshot')
+                s.enable()
+                s.send(GOOD)
+                time.sleep(.25)
+                self.assertEqual(s.text(), 'previous snapshot')
+                self.assertFalse((s.usb / '.MODGRUNDIG_DIAG.tmp').exists())
+
+    def test_falsely_successful_write_and_corrupt_readback_cannot_publish(self):
+        if self.external_command is not None:
+            self.skipTest('host-only file I/O fault shims; not a target test')
+        for macro in ['WRITE_LIES', 'READ_CORRUPT']:
+            with self.subTest(fault=macro), Simulation(self.invariant_binaries[macro]) as s:
+                s.output.write_text('previous snapshot')
+                s.enable()
+                s.send(GOOD)
+                time.sleep(.25)
+                self.assertEqual(s.text(), 'previous snapshot')
+                self.assertFalse((s.usb / '.MODGRUNDIG_DIAG.tmp').exists())
+
+    def test_unchanged_snapshot_metadata_is_idle_until_new_event(self):
+        with Simulation(self.binary) as s:
+            s.enable()
+            before = s.output.stat()
+            content = s.output.read_bytes()
+            time.sleep(.45)  # Four mount/marker intervals, without another rename/write.
+            after = s.output.stat()
+            self.assertEqual((after.st_ino, after.st_mtime_ns, after.st_size),
+                             (before.st_ino, before.st_mtime_ns, before.st_size))
+            self.assertEqual(s.output.read_bytes(), content)
+            s.send(GOOD)
+            wait_for(lambda: GOOD.decode() in s.text())
+            self.assertNotEqual(s.output.read_bytes(), content)
+
+    def test_export_failure_retries_success_ipc_stops_renames_and_reoptin_exports(self):
+        if self.external_command is not None:
+            self.skipTest('host-only rename/fsync instrumentation; not a target test')
+        with Simulation(self.invariant_binaries['COUNT_RENAME']) as s:
+            count = s.root / 'rename-count'
+            failure = s.root / 'fail-sync'
+            failure.write_text('test fault')
+            s.env = dict(os.environ, MGDIAG_TEST_RENAME_COUNT=str(count),
+                         MGDIAG_TEST_FAIL_SYNC_WHILE_EXISTS=str(failure))
+            s.output.write_text('previous snapshot')
+            s.enable()
+            time.sleep(.25)
+            self.assertEqual(s.text(), 'previous snapshot')
+            self.assertFalse(count.exists())
+            failure.unlink()
+            wait_for(lambda: s.text().startswith('MGDIAG_META'))
+            wait_for(lambda: count.exists() and len(count.read_bytes()) == 1)
+            time.sleep(.35)
+            self.assertEqual(count.read_bytes(), b'1')
+            s.send(GOOD)
+            wait_for(lambda: GOOD.decode() in s.text())
+            wait_for(lambda: len(count.read_bytes()) == 2)
+            time.sleep(.35)
+            self.assertEqual(count.read_bytes(), b'11')
+            s.marker.unlink()
+            wait_for(lambda: not s.fifo.exists())
+            s.enable()
+            wait_for(lambda: len(count.read_bytes()) == 3)
+            self.assertNotIn(GOOD.decode(), s.text())
+
+    def test_postmonitor_three_samples_and_strict_numeric_schema(self):
+        with Simulation(self.binary) as s:
+            s.enable()
+            base = [4, 2500, 7, 4855, 4955, 0, 1, 0, 0, 3, 1, 1]
+            invalid = []
+            for field, value in [(2, 256), (3, 8192), (4, 8192), (6, 256),
+                                 (7, 256), (8, 256), (10, 256), (11, 256)]:
+                values = list(base)
+                values[field] = value
+                invalid.append(('MGDIAG '+' '.join(map(str, values))+'\n').encode())
+            line = ('MGDIAG '+' '.join(map(str, base))).encode()
+            invalid += [line.rsplit(b' ', 1)[0]+b'\n', line+b' 1\n', line+b' SECRET=hidden\n']
+            for value in invalid:
+                s.send(value)
+            expected = []
+            for elapsed, frames in [(2500, 0), (3500, 1), (4500, 4294967295)]:
+                values = list(base)
+                values[1], values[5] = elapsed, frames
+                value = ('MGDIAG '+' '.join(map(str, values))+'\n').encode()
+                expected.append(value.decode().strip())
+                s.send(value)
+            wait_for(lambda: expected[-1] in s.text())
+            self.assertEqual(s.text().splitlines()[1:], expected)
+            self.assertEqual(s.text().splitlines()[0].split()[2:], ['3', str(len(invalid)), '0', '3'])
 
 
 if __name__ == '__main__':

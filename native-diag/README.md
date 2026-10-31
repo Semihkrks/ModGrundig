@@ -1,10 +1,16 @@
 # Native tanı taşıması — FIFO / sınırlı USB çıktısı
 
+**1 Kasım güncellemesi:** İlk toplayıcının gerçek kaydı FAT32 kayıp zincirinden
+kurtarıldı. Güncel kaynak event4 örneklerini de kabul eder, TEMP readback'i
+doğrular ve değişmeyen snapshot'ı tekrar yazmaz.18 host testi ve12 MIPS/QEMU
+yaşam döngüsü testi geçti;6 host-only fault shim hedefte açıkça atlandı.
+[Güncel kanıtlar ve tanı2 sınırları](../docs/V79_HEVC_CANLI_TANI_2.md).
+
 Bu klasör tanı verisini taşır; HEVC çözücü veya 4K düzeltmesi içermez. Firmware
 kodunun gerçek olaylara ekleyeceği sayısal kayıtlar ayrı kancalar gerektirir.
-`modgrundig_diag_sink.c` şu anda Linux **host** derleme ve sentetik entegrasyon
-testlerinden geçmiştir. MIPS derleme, loader/libc uyumu, başlatıcı entegrasyonu
-ve fiziksel TV testi ayrıca doğrulanmalıdır; host başarısı cihaz başarısı değildir.
+Güncel kaynak Linux host ve kendi MIPS toplayıcımızın stock glibc2.8/QEMU
+testlerinden geçmiştir. Yeni sampler/toplayıcı revizyonunun fiziksel TV testi
+ayrıca gerekir; önceki cihaz kaydı bu yeni kodun başarısı sayılmaz.
 
 ## Opt-in ve dosyalar
 
@@ -48,8 +54,9 @@ gerektirir. Normal çıkışta yalnız aynı inode temizlenir.
 
 Firmware helper her kayıtta şu sırayı uygular:
 
-1. FIFO'yu `O_RDWR | O_NONBLOCK | O_NOFOLLOW` ile açar; `O_CREAT` kullanmaz.
-2. Final v3 hook path `__lxstat64` ve açılan FD için proc-fd `__xstat`
+1. Önce path `__lxstat64` kontrolünü yapar, sonra FIFO'yu
+   `O_RDWR | O_NONBLOCK | O_NOFOLLOW` ile açar; `O_CREAT` kullanmaz.
+2. Açılan FD için proc-fd `__xstat`
    üzerinden FIFO tipi, root owner0 ve special bit içermeyen tam0600 iznini
    iki aşamada doğrular. Tarihsel v2 yalnız FIFO tipini kontrol ediyordu;
    owner/mode güvencesi v2 için geçerli değildir. Collector da oluşturduğu
@@ -72,9 +79,11 @@ metin veya tanınmayan event reddedilir. Her satır `\n` ile biter.
 MGDIAG 1 rc video_codec audio_codec video_pid audio_pid pcr_pid mode mute_mask
 MGDIAG 2 query ret
 MGDIAG 3 ret kind framebuffer_bytes
+MGDIAG 4 elapsed_ms video_codec video_pid audio_pid frames mad_lock ready92 sync_pending mute_mask video_started audio_started
 ```
 
 Event1'de codec/mode<=255, PID'ler<=8191; event2 query<=255; event3 kind<=31.
+Event4 tam12 unsigned sayı taşır; codec/MAD/byte bayrakları<=255 vePID'ler<=8191.
 `MGDIAG_META 1 accepted rejected overlong retained` snapshot başlığıdır.
 Yalnız son64 geçerli satır RAM ring'inde kalır; dosya uzayıp gitmez.
 
@@ -82,7 +91,9 @@ Yalnız son64 geçerli satır RAM ring'inde kalır; dosya uzayıp gitmez.
 
 Ana collector yalnız RAM FIFO okuma, poll, child durum takibi yapar. USB marker
 okuma, mount dizinini açma ve dosya yazma **ayrı child worker** içindedir.
-Varsayılan snapshot aralığı2000ms, worker deadline1500ms'dir. Aşan child'a
+Varsayılan marker kontrol aralığı2000ms, worker deadline1500ms'dir. Snapshot
+yalnız yeni veri veya yeniden opt-in/USB kimliği olduğunda yazılır; başarılı
+snapshot parent IPC'sinde cache'lenir, başarısız yazı yeniden denenir. Aşan child'a
 SIGKILL gönderilir; önceki reaped olmadan yeni child açılmaz. Böylece takılmış
 USB yazısı producer'ın TV thread'ine bağlanmaz ve sınırsız child oluşmaz.
 Kernel'de kesilemeyen D-state I/O child'ı SIGKILL ile hemen durmayabilir; bu
@@ -110,7 +121,7 @@ zinciri doğrulanmadan bu yönerge hazır bir TV tanı paketi sayılmaz.
 wsl -d Ubuntu --exec python3 /mnt/c/Users/Semih/Desktop/grundig/scripts/test_modgrundig_diag_sink.py
 ```
 
-13 sentetik test geçti: marker-yok, strict numeric filtre,64 satır sınırı,
+18 sentetik test geçti: marker-yok, strict numeric filtre,64 satır sınırı,
 partial/overlong input, marker kaldırma/yeniden etkinleştirme, kapanmış sink'e
 RDWR producer/EAGAIN, FIFO/marker symlink reddi, output symlink hedefini koruma,
 FAT-benzeri0777 stale temp ve takılmış child sırasında1000 kayıt okuma/iyileşme.
@@ -119,6 +130,9 @@ korunmasını ve directory `fsync=EINVAL` durumunda export yapılmasını sınar
 Üçüncü host-only shim, mkfifo sonrasında150ms gecikme ekleyerek eski
 publish-before-open yarışını zorlar; final görünür olur olmaz write+close yapılan
 ilk kaydın korunmasını sınar.
+Diğer fault kontrolleri sıfır/bozuk formatter başlığı, yalancı write ve bozuk
+readback'i reddeder; başarılı IPC cache sonrası idle inode/mtime korunmasını,
+başarısız export retry'sini ve event4 sayısal şemasını sınar.
 Kontrol deneyi aynı gecikmeyle eski doğrudan-final `create_fifo` gövdesinde ilk
 kaydın kaybolduğunu yeniden üretti; atomik-publish sürümünde bu test geçti.
 Host derleme `gcc -std=c99 -Wall -Wextra -Werror -O2` ile yapılır. Bütün mount'lar
@@ -128,7 +142,7 @@ firmware/MIPS programı, updater veya donanım komutu çalıştırılmaz.
 Test runner ayrıca `MGDIAG_TEST_COMMAND` ortam değişkeninde shell komutu değil,
 JSON string listesi kabul eder. Örneğin `["qemu-mipsel","-L","/absolute/runtime",
 "/absolute/newly-built-collector"]` verilirse host derlemesi atlanır ve aynı
-10 lifecycle testi sağlanan komut prefix'iyle çalışır. Üç host-only fault
+12 lifecycle testi sağlanan komut prefix'iyle çalışır. Altı host-only fault
 shim testi bu modda açıkça SKIP olur. Bu destek, belirtilen emülasyon testlerinin
 çalıştırıldığı veya fiziksel TV'de doğrulandığı anlamına gelmez; koşum kaydı ayrı
 raporlanmalıdır. Ortam override'ı yalnız yeni collector binary'sini hedeflemeli,
