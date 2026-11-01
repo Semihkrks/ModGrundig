@@ -1,5 +1,13 @@
 # 4K yayın →1080p ve kayıp kanal araştırması
 
+## 1 Kasım: tanı2 gerçek cihaz sonucu
+
+[18 olaylık yeni kayıt](V79_HEVC_TANI2_CIHAZ_SONUCU.md) kurtarıldı. HEVC'nin
+2/4/6 saniye örneklerinde MAD kilidi1; ready92=0, mute3. Uzun HD örneklerinde
+ready92=1/mute0. GetFrameCnt=5/9/13 artışı, ekrana basılmış kare veya başarılı
+UHD decode kanıtı değildir. FAT sorunu tekrarlandı; bu tur yalnız salt okunur
+kurtarma yapıldı. Yeni firmware veya 4K düzeltmesi hazırlanmadı.
+
 ## 1 Kasım: gerçek başlatma sonucu kurtarıldı; tanı2 hazırlandı
 
 USB FAT32 kayıp zincirinden3 init olayı kurtarıldı: codec2 HD → codec7 HEVC →

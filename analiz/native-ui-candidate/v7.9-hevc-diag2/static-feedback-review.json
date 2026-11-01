@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-01",
+  "method": "Read-only direct MIPS ELF disassembly and existing cached Ghidra; not REA Evidence, not target execution",
+  "sources": {
+    "SDK": {
+      "path": "analiz\\dosya-sistemleri-tam\\07_MSLIB\\libMStarSDK.so",
+      "sha256": "00d147f752f92c9706e6496d0cda21de528e81f0c73cac54426b2618c17fe5fb"
+    },
+    "Common": {
+      "path": "analiz\\dosya-sistemleri-tam\\07_MSLIB\\libmsrv_common.so",
+      "sha256": "06bc6252713a159d5a41849f476503b0c60b035954f0c82909750223e1077d21"
+    },
+    "VDEC": {
+      "path": "analiz\\dosya-sistemleri-tam\\07_MSLIB\\utopia\\libapiVDEC.so",
+      "sha256": "215c0a86cdd9fd579655da4752e0a5c7822eb3210e768ca63b86859683c9c02b"
+    }
+  },
+  "counter_chain": [
+    "SDK mapi_vdec::GetFrameCnt 0x2cba739c",
+    "VDEC MApi_VDEC_GetFrameCnt 0x2d6604bc",
+    "VDEC EX GetFrameCnt 0x2d63f994",
+    "VDEC V2 GetFrameCnt 0x2d64ae28",
+    "VDEC HVD branch 0x2d64af98..0x2d64afc0: DecodeCnt + GetData(stream,1)"
+  ],
+  "counter_semantics": {
+    "decode_selector": "HAL_GetData 0x1202; MDrv_HVD_EX_GetDecodeCnt 0x2d5f9810",
+    "skip_selector": "HAL_GetData 0x1400; V2 GetSkipCnt 0x2d64acb8 uses GetData(stream,1) at 0x2d64adf4..0x2d64ae08; jump table entry 0x2d6648a0 -> 0x2d5f81b0",
+    "display_selector": "Separate GetDispCnt uses GetData(stream,0), HAL selector 0x1402",
+    "limits": [
+      "Legacy SDK GetFrameCnt does not use the object argument to choose a per-object counter",
+      "Captured event4 cannot separate decode from skip; all observed increases could be skips"
+    ]
+  },
+  "readiness": {
+    "entry": "Common DoSetMode 0x2d9d6d58",
+    "started_guard": "Common 0x2d9d6db8: object+0x110 must be nonzero",
+    "display_info_call": "Common 0x2d9d6df8; false branch 0x2d9d6e00",
+    "display_info_SDK": "0x2cba7994; non-success API result, zero dimensions or unrecognized codec can fail; HEVC16 is accepted in this function; no explicit 1920/1080 maximum here",
+    "last_info": "Common 0x2d9d02c4 copies 28 bytes and returns1 for a valid output pointer",
+    "active_codec_call": "Common 0x2d9d6e98; false branch 0x2d9d6ea0",
+    "active_codec_SDK": "0x2cba7ed0 includes VDEC16->DTV7 mapping",
+    "positive_ready_store": "Common 0x2d9d6fbc: object+0x92 = 1 after video/timing virtual calls",
+    "meaning": "Display setup reached this store; not successful final output or decoded frame proof",
+    "unknowns": [
+      "Whether DoSetMode was entered during the HEVC test",
+      "GetDispInfo and GetActiveVdecType runtime results",
+      "Video/timing virtual call runtime effects",
+      "Decoder width,height,fps,decode/skip/display/error values"
+    ]
+  },
+  "monitor": {
+    "DoMonitor": "Common 0x2d9d6c44; ready1 AFD path rejoins CheckVideoStatus via 0x2d9d6d50",
+    "CheckVideoStatus": "Common 0x2d9d4c30 checks aggregate frame counter progress at approximately 1-second intervals; skip-only progress can pass this part"
+  },
+  "new_decompiled_functions": 0,
+  "vendor_code_executed": false,
+  "firmware_modified": false
+}

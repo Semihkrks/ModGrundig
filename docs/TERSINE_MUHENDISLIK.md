@@ -1,5 +1,10 @@
 # Grundig GMGRMR V03.017.04 — tersine mühendislik
 
+1 Kasım yeni cihaz kontrolü: [tanı2 sonucu](V79_HEVC_TANI2_CIHAZ_SONUCU.md).
+7 init ve11 monitor olayı kurtarıldı. HEVC'de ready92=0/mute3 sürerken uzun
+HD örneklerinde ready92=1/mute0 ölçüldü. GetFrameCnt display sayacı değildir;
+4K çözümü yoktur. FAT kayıp zinciri tekrar oluştu; bu tur onarım yapılmadı.
+
 1 Kasım: [gerçek HEVC SDK init kaydı ve tanı2](V79_HEVC_CANLI_TANI_2.md).
 FAT32 kayıp zincirinden HD/HEVC/HD üç olay kurtarıldı; HEVC init dönüşü1,
 PID4855/4955/4855. Mute3 HD'de de başlangıç anında vardır; kalıcı hata kanıtı

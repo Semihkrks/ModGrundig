@@ -194,7 +194,7 @@ static int export_snapshot(int dirfd, const struct state *s) {
     struct stat st, opened, final;
     size_t length;
     unsigned i;
-    int fd, ok;
+    int fd, ok, renamed=0;
     int n=snprintf(buf,sizeof(buf),"MGDIAG_META 1 %u %u %u %u\n",
                    s->accepted,s->rejected,s->overlong,s->count);
     if (n<=0 || (size_t)n>=sizeof(buf) || !valid_header(buf,(size_t)n,s)) return 0;
@@ -221,18 +221,35 @@ static int export_snapshot(int dirfd, const struct state *s) {
                final.st_dev!=opened.st_dev || final.st_ino!=opened.st_ino ||
                final.st_size<0 || (uint64_t)final.st_size!=(uint64_t)length)) ok=0;
     if (ok && !readback_equal(fd,buf,length)) ok=0;
-    if (close(fd)) ok=0;
     if (ok && !marker_info(dirfd,0)) ok=0;
     if (ok && (fstatat(dirfd,TEMP,&final,AT_SYMLINK_NOFOLLOW) ||
                !S_ISREG(final.st_mode) || final.st_dev!=opened.st_dev ||
                final.st_ino!=opened.st_ino || final.st_size<0 ||
                (uint64_t)final.st_size!=(uint64_t)length)) ok=0;
-    if (ok && renameat(dirfd,TEMP,dirfd,OUTPUT)) ok=0;
+    if (ok) {
+        if (renameat(dirfd,TEMP,dirfd,OUTPUT)) ok=0;
+        else renamed=1;
+    }
+    /* FAT rename reattaches this inode to a different directory entry and may
+     * dirty its size/start-cluster metadata again. Sync the SAME open file
+     * after rename; directory fsync alone need not flush a child file inode. */
+    if (ok && fsync(fd)) ok=0;
+    if (ok && (fstat(fd,&final) || !S_ISREG(final.st_mode) || final.st_nlink!=1 ||
+               final.st_dev!=opened.st_dev || final.st_ino!=opened.st_ino ||
+               final.st_size<0 || (uint64_t)final.st_size!=(uint64_t)length)) ok=0;
+    if (ok && (fstatat(dirfd,OUTPUT,&final,AT_SYMLINK_NOFOLLOW) ||
+               !S_ISREG(final.st_mode) || final.st_dev!=opened.st_dev ||
+               final.st_ino!=opened.st_ino || final.st_size<0 ||
+               (uint64_t)final.st_size!=(uint64_t)length)) ok=0;
+    if (ok && !readback_equal(fd,buf,length)) ok=0;
     /* Some removable filesystems do not support directory fsync. An EINVAL
      * result means rename durability is not proven, not that the export failed.
      * All sync I/O remains in the worker protected by the parent deadline. */
     if (ok && fsync(dirfd) && errno!=EINVAL) ok=0;
-    if (!ok) unlinkat(dirfd,TEMP,0);
+    if (close(fd)) ok=0;
+    /* A post-publication error is reported for retry; do not delete/truncate
+     * OUTPUT or claim that the previous snapshot can still be rolled back. */
+    if (!ok && !renamed) unlinkat(dirfd,TEMP,0);
     return ok;
 }
 /* All potentially blocking removable-filesystem operations stay in this child.

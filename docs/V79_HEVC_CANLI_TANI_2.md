@@ -1,5 +1,10 @@
 # V7.9 HEVC tanı2 — kurtarılan cihaz kaydı ve sonraki ölçüm
 
+**Yeni cihaz sonucu:** [tanı2 kaydı kurtarıldı](V79_HEVC_TANI2_CIHAZ_SONUCU.md).
+18 olay var; HEVC'de ready92=0/mute3, uzun HD örneklerinde ready92=1/mute0.
+GetFrameCnt artışı display başarısı değildir. FAT kayıp zinciri tekrar oluştu.
+Aşağıdaki hazırlık/test metni paket üretim anını anlatır.
+
 1 Kasım2026. **4K görüntü/ses henüz çözülmedi.** Bu aşamada ilk gerçek SDK
 başlatma kayıtları USB'nin kayıp FAT32 zincirinden kurtarıldı. Ardından kare,
 ses kilidi ve sync durumunu ölçmek için ayrı tanı2 adayı hazırlandı. V7.9 APP/UI

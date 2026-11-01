@@ -1,5 +1,13 @@
 # Native tanı taşıması — FIFO / sınırlı USB çıktısı
 
+**Sonraki cihaz kontrolü:** Tanı2'nin18 olayı kurtarıldı; FAT kayıp zinciri
+tekrarlandı. Güncel kaynak aynı file FD'yi rename sonrasına kadar açık tutup
+yeniden fsync, inode/path ve readback doğrulaması yapar.20 host testi ve12
+MIPS/QEMU testi geçti;8 host-only test SKIP. Bu son kaynak düzeltmesi **henüz
+firmware'e paketlenmedi veya TV'de denenmedi**; D:'de önceki tanı2 vardır.
+[Yeni cihaz sonucu ve kaynak doğrulaması](../docs/V79_HEVC_TANI2_CIHAZ_SONUCU.md).
+Aşağıdaki18/12/6 sayıları paketlenen önceki revizyona aittir.
+
 **1 Kasım güncellemesi:** İlk toplayıcının gerçek kaydı FAT32 kayıp zincirinden
 kurtarıldı. Güncel kaynak event4 örneklerini de kabul eder, TEMP readback'i
 doğrular ve değişmeyen snapshot'ı tekrar yazmaz.18 host testi ve12 MIPS/QEMU

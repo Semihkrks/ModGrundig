@@ -1,7 +1,7 @@
 {
   "date": "2026-11-01",
   "revision": "v7.9-hevc-diag2",
-  "status": "OFFLINE_VERIFIED_USB_SYNCED_AWAITING_NEW_DEVICE_SAMPLE",
+  "status": "DEVICE_SAMPLE_RECOVERED_HEVC_NOT_READY_NO_OUTPUT_FIX",
   "purpose": "Post-sync frame/MAD/flags telemetry; not a 4K decoding fix",
   "archive_sha256": "76980d3bf635be86b0668fa7de7aa46bc53602b6736f0b3dc35917886d4c4601",
   "container_sha256": "7247e876541261d745dd4d3ff7920c0c964af46aab20be846b95d25bba458a61",
@@ -32,7 +32,7 @@
   "D_files_verified": 17,
   "D_marker_exact": true,
   "firmware_TV_written_by_agent": false,
-  "new_sampler_TV_verified": false,
+  "new_sampler_TV_verified": true,
   "video_or_PCM_fixed": false,
   "previous_real_device_observation": {
     "init_returns": [
@@ -61,7 +61,20 @@
     "followup_disk_check_clean": true
   },
   "review": "Main-agent source/ABI/package review; no claim of complete independent second release review",
-  "required_next_evidence": "D:/MODGRUNDIG_DIAG.txt after upgrading to DIAG2 and HD10s -> HEVC15s -> HD15s",
+  "required_next_evidence": "Identify CheckVideoStatus/DoSetMode readiness gate using decoder display/error information; increasing GetFrameCnt is not displayed-frame proof",
   "final_USB_FAT_orphan_count": 0,
-  "final_readonly_CHKDSK_exit_code": 0
+  "final_readonly_CHKDSK_exit_code": 0,
+  "latest_device_feedback": "recovered-device-feedback-2026-11-01.json",
+  "latest_USB_state": {
+    "date": "2026-11-01",
+    "orphan_clusters": 1,
+    "visible_log_bytes": 0,
+    "recovered_events": 18,
+    "package_files_verified": 17,
+    "marker_exact": true,
+    "repair_performed": false,
+    "firmware_changed": false
+  },
+  "final_USB_FAT_orphan_count_note": "Historical post-copy count before this TV test; latest_USB_state supersedes current USB health",
+  "final_readonly_CHKDSK_exit_code_note": "Historical clean check before this TV test; current read-only check reports one lost chain"
 }

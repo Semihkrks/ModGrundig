@@ -39,7 +39,7 @@ Envanterin tamamlanması, bütün fonksiyonların çözüldüğü veya kaynak ko
 | **V7.9** | Çevrimdışı doğrulandı; TV testi yok | Seviyeye göre ses ikonları ve azaltılmış sol kenar boşluğu. [Rapor →](docs/UI_NATIVE_V79_SEVIYELI_SES.md) |
 | **V7.7** | Kullanıcı cihaz geri bildirimi var | 27 Ekim 2026’da TV’de çalıştığı bildirildi; kapsamlı donanım testi değildir. [Rapor →](docs/UI_NATIVE_V77_PAKET.md) |
 | **4K / HEVC** | Araştırma sürüyor | Doğrulanmış 4K kilit açma çözümü yoktur. [Araştırma →](docs/4K_YAYIN_VE_GIZLI_OZELLIKLER.md) |
-| **HEVC canlı tanı2** | İlk cihaz init kaydı kurtarıldı; sonraki ölçüm hazır | HEVC başlangıç sonucu1 ölçüldü. Yeni paket kare/MAD/sync durumlarını örnekler; PCM henüz ölçülmedi. [Rapor →](docs/V79_HEVC_CANLI_TANI_2.md) |
+| **HEVC canlı tanı2** | 18 cihaz olayı kurtarıldı; 4K hedefi sağlanmadı | HEVC'de ses kilidi1, hazır durumu0/mute3; uzun HD örneklerinde hazır1/mute0. Sayaç artışı görüntü başarısı değildir; FAT sorunu tekrarlandı. [Rapor →](docs/V79_HEVC_TANI2_CIHAZ_SONUCU.md) |
 
 > **Kapsam notu:** V7.10 yeni hızlı kanal geçişi veya hızlı açılış özelliği eklemez. Hızlı kanal geçişi mevcut native ayardır; hızlı açılış için güvenilir ek hızlandırma yaması çıkarılmamıştır. **V7.3, cihazda donma bildirimi nedeniyle reddedilmiştir.** Eski çalışmalar [sürüm arşivinde](docs/README.md) tutulur.
 

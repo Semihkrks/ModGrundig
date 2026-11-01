@@ -235,6 +235,79 @@ int __wrap_fsync(int fd) {
                             str(SOURCE), str(invariant), *['-Wl,--wrap='+w for w in wrappers],
                             '-o', str(output)], check=True)
             cls.invariant_binaries[macro] = output
+        post = Path(cls.build.name) / 'postrename-host-fault.c'
+        post.write_text('''
+#define _GNU_SOURCE
+#include <sys/stat.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <errno.h>
+int __real_fsync(int);
+int __real_renameat(int,const char *,int,const char *);
+int __real_close(int);
+int __real_fstat(int,struct stat *);
+int __real_fstatat(int,const char *,struct stat *,int);
+ssize_t __real_read(int,void *,size_t);
+static int published,temp_fd=-1;
+static int fault(const char *name) {
+    const char *value=getenv("MGDIAG_TEST_POST_FAULT");
+    return value && !strcmp(value,name);
+}
+static void trace(char kind,int object) {
+    const char *path=getenv("MGDIAG_TEST_POST_TRACE");
+    char line[32]; int fd,n;
+    if (!path) return;
+    n=snprintf(line,sizeof(line),"%c %d\\n",kind,object);
+    fd=open(path,O_WRONLY|O_CREAT|O_APPEND,0600);
+    if (fd>=0) { ssize_t written=write(fd,line,(size_t)n); (void)written; __real_close(fd); }
+}
+int __wrap_fsync(int fd) {
+    struct stat st;
+    if (!__real_fstat(fd,&st) && S_ISREG(st.st_mode)) {
+        temp_fd=fd; trace('F',fd);
+        if (published && fault("sync")) {errno=EIO;return -1;}
+    } else trace('D',fd);
+    return __real_fsync(fd);
+}
+int __wrap_renameat(int a,const char *b,int c,const char *d) {
+    int rc=__real_renameat(a,b,c,d);
+    if (!rc) { published=1; trace('R',temp_fd); }
+    return rc;
+}
+int __wrap_close(int fd) { trace('C',fd); return __real_close(fd); }
+int __wrap_fstat(int fd,struct stat *st) {
+    int rc=__real_fstat(fd,st);
+    if (!rc && published && fd==temp_fd) {
+        trace('S',fd);
+        if (fault("stat")) st->st_size++;
+    }
+    return rc;
+}
+int __wrap_fstatat(int dirfd,const char *path,struct stat *st,int flags) {
+    int rc=__real_fstatat(dirfd,path,st,flags);
+    if (!rc && published && !strcmp(path,"MODGRUNDIG_DIAG.txt")) {
+        trace('P',temp_fd);
+        if (fault("path")) st->st_ino++;
+    }
+    return rc;
+}
+ssize_t __wrap_read(int fd,void *buf,size_t size) {
+    ssize_t n=__real_read(fd,buf,size);
+    if (published && fd==temp_fd) {
+        trace('B',fd);
+        if (n>0 && fault("read")) ((char *)buf)[0]^=1;
+    }
+    return n;
+}
+''')
+        cls.postrename_fault = Path(cls.build.name) / 'sink-host-postrename-fault'
+        subprocess.run([compiler, '-std=c99', '-Wall', '-Wextra', '-Werror', '-O2',
+                        str(SOURCE), str(post),
+                        *['-Wl,--wrap='+name for name in ['fsync', 'renameat', 'close', 'fstat', 'fstatat', 'read']],
+                        '-o', str(cls.postrename_fault)], check=True)
 
     @classmethod
     def tearDownClass(cls):
@@ -509,6 +582,41 @@ int __wrap_fsync(int fd) {
             wait_for(lambda: expected[-1] in s.text())
             self.assertEqual(s.text().splitlines()[1:], expected)
             self.assertEqual(s.text().splitlines()[0].split()[2:], ['3', str(len(invalid)), '0', '3'])
+
+    def test_same_file_fd_is_synced_and_checked_after_rename_before_directory_and_close(self):
+        if self.external_command is not None:
+            self.skipTest('host-only syscall-order instrumentation; not a target test')
+        with Simulation(self.postrename_fault) as s:
+            trace = s.root / 'trace'
+            s.env = dict(os.environ, MGDIAG_TEST_POST_TRACE=str(trace))
+            s.enable()
+            events = [line.split() for line in trace.read_text().splitlines()]
+            rename = next(i for i, event in enumerate(events) if event[0] == 'R')
+            fd = events[rename][1]
+            before = max(i for i, event in enumerate(events[:rename]) if event == ['F', fd])
+            after = next(i for i, event in enumerate(events[rename+1:], rename+1) if event == ['F', fd])
+            closed = next(i for i, event in enumerate(events[after+1:], after+1) if event == ['C', fd])
+            self.assertNotIn(['C', fd], events[before:after])
+            checked = events[after+1:closed]
+            for kind in ['S', 'P', 'B']:
+                self.assertIn([kind, fd], checked)
+            self.assertTrue(any(event[0] == 'D' for event in checked))
+            self.assertTrue(s.text().startswith('MGDIAG_META'))
+
+    def test_postrename_sync_inode_path_or_readback_failure_retries_without_deleting_output(self):
+        if self.external_command is not None:
+            self.skipTest('host-only post-rename fault shims; not a target test')
+        for failure in ['sync', 'stat', 'path', 'read']:
+            with self.subTest(failure=failure), Simulation(self.postrename_fault) as s:
+                trace = s.root / 'trace'
+                s.env = dict(os.environ, MGDIAG_TEST_POST_TRACE=str(trace), MGDIAG_TEST_POST_FAULT=failure)
+                s.enable()
+                wait_for(lambda: trace.exists() and sum(line.startswith('R ') for line in trace.read_text().splitlines()) >= 2)
+                self.assertTrue(s.output.is_file())
+                self.assertGreater(s.output.stat().st_size, 0)
+                self.assertTrue(s.text().startswith('MGDIAG_META'))
+                self.assertFalse((s.usb / '.MODGRUNDIG_DIAG.tmp').exists())
+                self.assertIsNone(s.process.poll())
 
 
 if __name__ == '__main__':
